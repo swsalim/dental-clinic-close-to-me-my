@@ -1,4 +1,5 @@
 import { type ClassValue, clsx } from 'clsx';
+import crypto from 'crypto-js';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
@@ -35,3 +36,75 @@ export function imageKitLoader({
 
   return `${urlEndpoint}/${src}?tr=${paramsString}`;
 }
+
+export function isValidUrl(url: string): boolean {
+  try {
+    new URL(url);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+export function getUrlFromString(str: string): string | null {
+  if (isValidUrl(str)) return str;
+  try {
+    if (str.includes('.') && !str.includes(' ')) {
+      return new URL(`https://${str}`).toString();
+    }
+  } catch (e) {
+    return null;
+  }
+  return null;
+}
+
+const normalizeSrc = (src: string): string => {
+  return src.startsWith('/') ? src.slice(1) : src;
+};
+
+interface CloudinaryLoaderParams {
+  src: string;
+  width: number;
+  quality?: number;
+}
+
+export const cloudinaryLoader = ({ src, width, quality }: CloudinaryLoaderParams): string => {
+  const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`];
+
+  return `https://res.cloudinary.com/${
+    process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME
+  }/image/upload/${params.join(',')}/${normalizeSrc(src)}`;
+};
+
+export const bypassCloudinaryLoader = ({ src, quality }: CloudinaryLoaderParams): string => {
+  const publicId = getCloudinaryPublicId(src);
+  const params = ['f_auto', 'c_limit', 'w_1000', `q_${quality || 'auto'}`];
+
+  return `https://res.cloudinary.com/${
+    process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME
+  }/image/upload/${params.join(',')}/${publicId}`;
+};
+
+export function getCloudinaryPublicId(url: string): string | null {
+  try {
+    // Use a regular expression to match 'dental-clinics-my/' and everything after it
+    const match = url.match(/dental-clinics-my\/(.+?)(\.[a-zA-Z]+(\?.*)?)?$/);
+    if (match) {
+      return 'dental-clinics-my/' + match[1];
+    }
+  } catch (error) {
+    // Handle any errors gracefully
+    console.error('Error extracting info:', error);
+  }
+  return null;
+}
+
+export const generateSHA1 = (data: string): string => {
+  const hash = crypto.SHA1(data);
+  return hash.toString(crypto.enc.Hex);
+};
+
+export const generateSignature = (publicId: string, apiSecret: string): string => {
+  const timestamp = new Date().getTime();
+  return `public_id=${publicId}&timestamp=${timestamp}${apiSecret}`;
+};
