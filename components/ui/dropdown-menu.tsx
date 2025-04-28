@@ -42,12 +42,9 @@ const DropdownMenuSubTrigger = React.forwardRef<
 ));
 DropdownMenuSubTrigger.displayName = DropdownMenuPrimitive.SubTrigger.displayName;
 
-interface DropdownMenuSubContentProps
-  extends React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent> {}
-
 const DropdownMenuSubContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,
-  DropdownMenuSubContentProps
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.SubContent
     ref={ref}
@@ -131,12 +128,9 @@ const DropdownMenuCheckboxItem = React.forwardRef<
 ));
 DropdownMenuCheckboxItem.displayName = DropdownMenuPrimitive.CheckboxItem.displayName;
 
-interface DropdownMenuRadioItemProps
-  extends React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem> {}
-
 const DropdownMenuRadioItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,
-  DropdownMenuRadioItemProps
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>
 >(({ className, children, ...props }, ref) => (
   <DropdownMenuPrimitive.RadioItem
     ref={ref}
@@ -172,12 +166,9 @@ const DropdownMenuLabel = React.forwardRef<
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 
-interface DropdownMenuSeparatorProps
-  extends React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> {}
-
 const DropdownMenuSeparator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
-  DropdownMenuSeparatorProps
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
@@ -187,9 +178,7 @@ const DropdownMenuSeparator = React.forwardRef<
 ));
 DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName;
 
-interface DropdownMenuShortcutProps extends React.HTMLAttributes<HTMLSpanElement> {}
-
-const DropdownMenuShortcut = ({ className, ...props }: DropdownMenuShortcutProps) => {
+const DropdownMenuShortcut = ({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span className={cn('ml-auto text-xs tracking-widest opacity-60', className)} {...props} />
   );

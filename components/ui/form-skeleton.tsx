@@ -4,9 +4,7 @@ import { cn } from '@/lib/utils';
 
 import { Skeleton } from '@/components/ui/skeleton';
 
-interface FormSkeletonProps extends HTMLAttributes<HTMLDivElement> {}
-
-export function FormSkeleton({ className, ...props }: FormSkeletonProps) {
+export function FormSkeleton({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn('space-y-6', className)} {...props}>
       {/* Form field skeletons */}
