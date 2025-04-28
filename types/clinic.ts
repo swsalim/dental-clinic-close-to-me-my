@@ -107,10 +107,10 @@ export interface Clinic {
   place_id: string;
   rating: number | null;
   review_count: number | null;
-  is_active: boolean;
-  is_featured: boolean;
-  is_permanently_closed: boolean;
-  open_on_public_holidays: boolean;
+  is_active: boolean | null;
+  is_featured: boolean | null;
+  is_permanently_closed: boolean | null;
+  open_on_public_holidays: boolean | null;
   images: string[] | null;
   source: string | null;
   facebook_url: string | null;

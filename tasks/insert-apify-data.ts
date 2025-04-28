@@ -61,7 +61,6 @@ interface ProcessingStats {
 
 class ClinicDataProcessor {
   private supabase: SupabaseClient<Database>;
-  // private imagekit: ImageKit;
   private stats: ProcessingStats = {
     total: 0,
     processed: 0,
@@ -84,19 +83,6 @@ class ClinicDataProcessor {
       },
     });
 
-    // const imagekitPublicKey = process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY;
-    // const imagekitPrivateKey = process.env.IMAGEKIT_PRIVATE_KEY;
-
-    // if (!imagekitPublicKey || !imagekitPrivateKey) {
-    //   throw new Error('Missing ImageKit credentials');
-    // }
-
-    // this.imagekit = new ImageKit({
-    //   publicKey: imagekitPublicKey,
-    //   privateKey: imagekitPrivateKey,
-    //   urlEndpoint: process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT as string,
-    // });
-
     this.initializeCloudinary();
 
     const cloudinaryApiKey = process.env.CLOUDINARY_API_KEY;
@@ -113,25 +99,6 @@ class ClinicDataProcessor {
       api_key: process.env.CLOUDINARY_API_KEY,
       api_secret: process.env.CLOUDINARY_API_SECRET,
     });
-  }
-
-  private async uploadImage(imageUrl: string, folderPath: string): Promise<string> {
-    try {
-      // Generate a unique file name
-      const fileName = `clinic_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-
-      // Upload image using URL
-      const result = await this.imagekit.upload({
-        file: imageUrl,
-        fileName: fileName,
-        folder: folderPath,
-      });
-
-      return result.url;
-    } catch (error) {
-      console.error(`Failed to upload image ${imageUrl}:`, error);
-      throw error;
-    }
   }
 
   private async uploadImageCloudinary(imageUrl: string, uploadPreset: string): Promise<string> {
@@ -244,11 +211,6 @@ class ClinicDataProcessor {
           typeof listing.images === 'string' ? listing.images.split(',') : listing.images;
 
         const uploadPromises = imageUrlArray.map((imageUrl) =>
-          // this.uploadImage(
-          //   imageUrl.trim(),
-          //   process.env.NEXT_PUBLIC_IMAGEKIT_CLINIC_FOLDER_PATH || 'dental-clinics-my/places',
-          // ),
-
           this.uploadImageCloudinary(
             imageUrl.trim(),
             process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET_PLACE as string,

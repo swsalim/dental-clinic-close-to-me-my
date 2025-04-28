@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Database } from '@/types/database.types';
 import { createServerClient } from '@supabase/ssr';
 
-import { CookieOptions, MiddlewareClientResult, SupabaseCredentialsError } from './types';
+import { MiddlewareClientResult, SupabaseCredentialsError } from './types';
 
 /**
  * Creates a Supabase client for middleware environments
@@ -28,44 +28,16 @@ export const createClient = (request: NextRequest): MiddlewareClientResult => {
 
   const supabase = createServerClient<Database>(supabaseUrl, supabaseAnonKey, {
     cookies: {
-      get(name: string) {
-        return request.cookies.get(name)?.value;
+      get: (name) => request.cookies.get(name)?.value,
+      set: (name, value, options) => {
+        request.cookies.set({ name, value, ...options });
+        response = NextResponse.next({ request: { headers: request.headers } });
+        response.cookies.set({ name, value, ...options });
       },
-      set(name: string, value: string, options: CookieOptions) {
-        // If the cookie is updated, update the cookies for the request and response
-        request.cookies.set({
-          name,
-          value,
-          ...options,
-        });
-        response = NextResponse.next({
-          request: {
-            headers: request.headers,
-          },
-        });
-        response.cookies.set({
-          name,
-          value,
-          ...options,
-        });
-      },
-      remove(name: string, options: Pick<CookieOptions, 'path' | 'domain'>) {
-        // If the cookie is removed, update the cookies for the request and response
-        request.cookies.set({
-          name,
-          value: '',
-          ...options,
-        });
-        response = NextResponse.next({
-          request: {
-            headers: request.headers,
-          },
-        });
-        response.cookies.set({
-          name,
-          value: '',
-          ...options,
-        });
+      remove: (name, options) => {
+        request.cookies.set({ name, value: '', ...options });
+        response = NextResponse.next({ request: { headers: request.headers } });
+        response.cookies.set({ name, value: '', ...options });
       },
     },
   });

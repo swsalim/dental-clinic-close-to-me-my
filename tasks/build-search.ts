@@ -14,11 +14,10 @@ interface Clinic {
   zipcode: string;
   phone: string;
   area_id: number;
-  town_id: number;
+  state_id: number;
   category_id: number;
   area: { name: string };
-  town: { name: string };
-  category: { name: string };
+  state: { name: string };
 }
 
 interface SearchObject {
@@ -26,11 +25,9 @@ interface SearchObject {
   name: string;
   slug: string;
   address: string;
-  zipcode: string;
   phone: string;
   area: string;
-  town: string;
-  category: string;
+  state: string;
 }
 
 interface ProcessingStats {
@@ -41,9 +38,9 @@ interface ProcessingStats {
 }
 
 class SearchIndexBuilder {
-  private supabase: SupabaseClient;
-  private algoliaClient: ReturnType<typeof algoliasearch>;
-  private algoliaIndex: SearchIndex;
+  private supabase!: SupabaseClient;
+  private algoliaClient!: ReturnType<typeof algoliasearch>;
+  private algoliaIndex!: SearchIndex;
   private stats: ProcessingStats = {
     total: 0,
     processed: 0,
@@ -95,14 +92,10 @@ class SearchIndexBuilder {
         name,
         slug,
         address,
-        zipcode,
-        phone,
         area_id,
-        town_id,
-        category_id,
+        state_id,
         area:area_id(name),
-        town:town_id(name),
-        category:category_id(name)
+        state:state_id(name),
       `,
       )
       .eq('is_active', true)
@@ -125,11 +118,9 @@ class SearchIndexBuilder {
       name: clinic.name,
       slug: clinic.slug,
       address: clinic.address,
-      zipcode: clinic.zipcode,
       phone: clinic.phone,
       area: clinic.area.name,
-      town: clinic.town.name,
-      category: clinic.category.name,
+      state: clinic.state.name,
     }));
   }
 

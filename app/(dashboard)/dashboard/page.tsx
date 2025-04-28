@@ -73,7 +73,7 @@ export default async function Dashboard() {
 
   const [clinicsResponse] = await Promise.all([
     supabase
-      .from('to_be_reviewed_clinics')
+      .from('clinics')
       .select(
         `id,
         name,

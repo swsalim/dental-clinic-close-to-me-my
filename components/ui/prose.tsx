@@ -1,17 +1,15 @@
-import { ComponentPropsWithoutRef, ElementType } from 'react';
+import { ElementType } from 'react';
 
 import { cn } from '@/lib/utils';
 
-interface ProseProps<T extends ElementType = 'div'> {
-  as?: T;
-  className?: string;
-}
-
-export default function Prose<T extends ElementType = 'div'>({
-  as: Component = 'div' as T,
+export default function Prose({
+  as,
   className,
   ...props
-}: ProseProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof ProseProps<T>>) {
+}: React.HTMLAttributes<HTMLDivElement> & {
+  as?: ElementType;
+}) {
+  const Component = as || 'div';
   return (
     <Component
       className={cn(
@@ -29,7 +27,7 @@ export default function Prose<T extends ElementType = 'div'>({
         'prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg',
         'break-words',
       )}
-      {...(props as any)}
+      {...props}
     />
   );
 }

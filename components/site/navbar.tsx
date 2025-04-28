@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 import { navBlog, navCategories, navSpecialities } from '@/config/routes';
 
-import { useScroll } from '@/lib/hooks/use-scroll';
+import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '@/components/ui/button';
