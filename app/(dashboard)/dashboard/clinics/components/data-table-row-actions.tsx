@@ -152,7 +152,8 @@ export function DataTableRowActions<TData extends ClinicTableData>({
             <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
             <AlertDialogDescription>
               This action cannot be undone. This will permanently delete{' '}
-              <span className="font-medium text-gray-900">"{clinic.name}"</span> from our database.
+              <span className="font-medium text-gray-900">&quot;{clinic.name}&quot;</span> from our
+              database.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

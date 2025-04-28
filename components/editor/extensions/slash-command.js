@@ -323,7 +323,7 @@ const renderItems = () => {
         editor: props.editor,
       });
 
-      // @ts-ignore
+      // @ts-expect-error - tippy type issue
       popup = tippy('body', {
         getReferenceClientRect: props.clientRect,
         appendTo: () => document.body,
@@ -337,10 +337,11 @@ const renderItems = () => {
     onUpdate: (props) => {
       component?.updateProps(props);
 
-      popup &&
+      if (popup) {
         popup[0].setProps({
           getReferenceClientRect: props.clientRect,
         });
+      }
     },
     onKeyDown: (props) => {
       if (props.event.key === 'Escape') {
@@ -349,7 +350,7 @@ const renderItems = () => {
         return true;
       }
 
-      // @ts-ignore
+      // @ts-expect-error - component ref type issue
       return component?.ref?.onKeyDown(props);
     },
     onExit: () => {

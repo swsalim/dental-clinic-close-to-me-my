@@ -9,7 +9,9 @@ export const LinkSelector = ({ editor, isOpen, setIsOpen }) => {
 
   // Autofocus on input by default
   useEffect(() => {
-    inputRef.current && inputRef.current?.focus();
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   }, [isOpen]);
 
   const handleLinkSubmission = () => {
@@ -23,21 +25,21 @@ export const LinkSelector = ({ editor, isOpen, setIsOpen }) => {
   return (
     <div className="relative">
       <button
-        className="flex h-full items-center space-x-2 px-3 py-1.5 text-sm font-medium text-gray-600 hover:bg-stone-100 active:bg-stone-200"
+        className="hover:bg-stone-100 active:bg-stone-200 flex h-full items-center space-x-2 px-3 py-1.5 text-sm font-medium text-gray-600"
         onClick={() => {
           setIsOpen(!isOpen);
         }}
         type="button">
         <p className="text-base">↗</p>
         <p
-          className={cn('underline decoration-stone-400 underline-offset-4', {
+          className={cn('decoration-stone-400 underline underline-offset-4', {
             'text-blue-500': editor.isActive('link'),
           })}>
           Link
         </p>
       </button>
       {isOpen && (
-        <div className="fixed top-full z-[99999] mt-1 flex w-60 overflow-hidden rounded border border-stone-200 bg-white p-1 shadow-xl animate-in fade-in slide-in-from-top-1">
+        <div className="border-stone-200 fixed top-full z-[99999] mt-1 flex w-60 overflow-hidden rounded border bg-white p-1 shadow-xl animate-in fade-in slide-in-from-top-1">
           <input
             ref={inputRef}
             type="url"
@@ -57,7 +59,7 @@ export const LinkSelector = ({ editor, isOpen, setIsOpen }) => {
             </button>
           ) : (
             <button
-              className="flex items-center rounded-sm p-1 text-gray-600 transition-all hover:bg-stone-100"
+              className="hover:bg-stone-100 flex items-center rounded-sm p-1 text-gray-600 transition-all"
               onClick={handleLinkSubmission}
               type="button">
               <Check className="h-4 w-4" />

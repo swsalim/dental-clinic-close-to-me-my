@@ -88,7 +88,7 @@ export const ColorSelector = ({ editor, isOpen, setIsOpen }) => {
   return (
     <div className="relative h-full">
       <button
-        className="flex h-full items-center gap-1 p-2 text-sm font-medium text-gray-600 hover:bg-stone-100 active:bg-stone-200"
+        className="hover:bg-stone-100 active:bg-stone-200 flex h-full items-center gap-1 p-2 text-sm font-medium text-gray-600"
         onClick={() => setIsOpen(!isOpen)}
         type="button">
         <span
@@ -104,21 +104,23 @@ export const ColorSelector = ({ editor, isOpen, setIsOpen }) => {
       </button>
 
       {isOpen && (
-        <section className="fixed top-full z-[99999] mt-1 flex w-48 flex-col overflow-hidden rounded border border-stone-200 bg-white p-1 shadow-xl animate-in fade-in slide-in-from-top-1">
+        <section className="border-stone-200 fixed top-full z-[99999] mt-1 flex w-48 flex-col overflow-hidden rounded border bg-white p-1 shadow-xl animate-in fade-in slide-in-from-top-1">
           <div className="my-1 px-2 text-sm text-gray-500">Color</div>
           {TEXT_COLORS.map(({ name, color }, index) => (
             <button
               key={index}
               onClick={() => {
                 editor.commands.unsetColor();
-                name !== 'Default' && editor.chain().focus().setColor(color).run();
+                if (name !== 'Default') {
+                  editor.chain().focus().setColor(color).run();
+                }
                 setIsOpen(false);
               }}
-              className="flex items-center justify-between rounded-sm px-2 py-1 text-sm text-gray-600 hover:bg-stone-100"
+              className="hover:bg-stone-100 flex items-center justify-between rounded-sm px-2 py-1 text-sm text-gray-600"
               type="button">
               <div className="flex items-center space-x-2">
                 <div
-                  className="rounded-sm border border-stone-200 px-1 py-px font-medium"
+                  className="border-stone-200 rounded-sm border px-1 py-px font-medium"
                   style={{ color }}>
                   A
                 </div>
@@ -135,14 +137,16 @@ export const ColorSelector = ({ editor, isOpen, setIsOpen }) => {
               key={index}
               onClick={() => {
                 editor.commands.unsetHighlight();
-                name !== 'Default' && editor.commands.setHighlight({ color });
+                if (name !== 'Default') {
+                  editor.commands.setHighlight({ color });
+                }
                 setIsOpen(false);
               }}
-              className="flex items-center justify-between rounded-sm px-2 py-1 text-sm text-gray-600 hover:bg-stone-100"
+              className="hover:bg-stone-100 flex items-center justify-between rounded-sm px-2 py-1 text-sm text-gray-600"
               type="button">
               <div className="flex items-center space-x-2">
                 <div
-                  className="rounded-sm border border-stone-200 px-1 py-px font-medium"
+                  className="border-stone-200 rounded-sm border px-1 py-px font-medium"
                   style={{ backgroundColor: color }}>
                   A
                 </div>

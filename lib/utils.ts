@@ -41,7 +41,8 @@ export function isValidUrl(url: string): boolean {
   try {
     new URL(url);
     return true;
-  } catch (e) {
+  } catch (error: unknown) {
+    console.error('Invalid URL:', error);
     return false;
   }
 }
@@ -52,7 +53,8 @@ export function getUrlFromString(str: string): string | null {
     if (str.includes('.') && !str.includes(' ')) {
       return new URL(`https://${str}`).toString();
     }
-  } catch (e) {
+  } catch (error: unknown) {
+    console.error('Failed to parse URL:', error);
     return null;
   }
   return null;
