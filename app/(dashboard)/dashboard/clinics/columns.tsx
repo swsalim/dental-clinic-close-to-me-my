@@ -146,7 +146,7 @@ export const columns: ColumnDef<ClinicTableData>[] = [
             Dev
           </Link>
           <Link
-            href={`https://www.clinicgeek.com/place/${row.original.slug}`}
+            href={`https://www.dentalclinicclosetome.my/place/${row.original.slug}`}
             target="_blank"
             className="ml-4">
             Prod

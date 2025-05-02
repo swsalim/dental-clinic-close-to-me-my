@@ -1,6 +1,9 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { ClinicService, ClinicServiceRelation, ClinicStateArea } from '@/types/clinic';
+import { ClinicArea, ClinicService, ClinicServiceRelation, ClinicState } from '@/types/clinic';
+
+import { siteConfig } from '@/config/site';
 
 import { createClient } from '@/lib/supabase/server';
 
@@ -8,6 +11,49 @@ import { Separator } from '@/components/ui/separator';
 import { SidebarNav } from '@/components/ui/sidebar-nav';
 
 import FormEditClinic from '../../../components/form-edit-clinic';
+
+const config = {
+  title: 'Edit Clinic Detail',
+  description: 'Edit a clinic detail',
+  url: '/dashboard/clinics/review/edit',
+};
+
+export const metadata: Metadata = {
+  title: config.title,
+  description: config.description,
+  alternates: {
+    canonical: config.url,
+  },
+  openGraph: {
+    title: config.title,
+    description: config.description,
+    url: config.url,
+    images: [
+      {
+        url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${config.title}`),
+        width: siteConfig.openGraph.width,
+        height: siteConfig.openGraph.height,
+        alt: config.title,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    title: config.title,
+    description: config.description,
+    card: 'summary_large_image',
+    creator: siteConfig.creator,
+    images: [
+      {
+        url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${config.title}`),
+        width: siteConfig.openGraph.width,
+        height: siteConfig.openGraph.height,
+        alt: config.title,
+      },
+    ],
+  },
+};
 
 export default async function EditClinicToBeReviewedPage({
   params,
@@ -17,7 +63,6 @@ export default async function EditClinicToBeReviewedPage({
   const supabase = await createClient();
   const { id } = await params;
 
-  console.log('id', id);
   const { data: clinic } = await supabase.from('clinics').select().match({ id }).single();
 
   if (!clinic) {
@@ -60,8 +105,8 @@ export default async function EditClinicToBeReviewedPage({
   // Ensure we have arrays even if data is null
   const services = (servicesData || []) as ClinicService[];
   const servicesRelations = (servicesRelationsData || []) as ClinicServiceRelation[];
-  const states = (statesData || []) as ClinicStateArea[];
-  const areas = (areasData || []) as ClinicStateArea[];
+  const states = (statesData || []) as ClinicState[];
+  const areas = (areasData || []) as ClinicArea[];
   const hours = hoursData || [];
 
   return (

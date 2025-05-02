@@ -17,13 +17,33 @@ export interface ClinicServiceRelation {
   modified_at: string | null;
 }
 
-export interface ClinicStateArea {
+export interface ClinicArea {
   id: string;
   name: string;
   slug: string;
+  short_description: string | null;
+  description: string | null;
+  thumbnail_image: string | null;
+  banner_image: string | null;
   state_id: string | null;
   created_at: string | null;
   modified_at: string | null;
+  states?: { id: string; name: string } | null;
+  clinics?: { count: number }[] | null;
+}
+
+export interface ClinicState {
+  id: string;
+  name: string;
+  slug: string;
+  short_description: string | null;
+  description: string | null;
+  thumbnail_image: string | null;
+  banner_image: string | null;
+  created_at: string | null;
+  modified_at: string | null;
+  clinics?: { count: number }[] | null;
+  areas?: { id: string; name: string }[] | null;
 }
 
 export type ClinicServiceInsert = Omit<ClinicService, 'id' | 'created_at' | 'modified_at'>;
@@ -32,15 +52,35 @@ export type ClinicServiceUpdate = Partial<ClinicServiceInsert>;
 export interface ClinicDoctor {
   id: string;
   name: string;
+  slug: string;
   bio: string | null;
   specialty: string | null;
-  clinic_id: string;
+  status: string | null;
+  image: string | null;
+  featured_video: string | null;
+  is_active: boolean | null;
+  is_featured: boolean | null;
   created_at: string | null;
   modified_at: string | null;
+  clinics?: { id: string; name: string; slug: string }[] | null;
 }
 
 export type ClinicDoctorInsert = Omit<ClinicDoctor, 'id' | 'created_at' | 'modified_at'>;
 export type ClinicDoctorUpdate = Partial<ClinicDoctorInsert>;
+
+export interface ClinicDoctorRelation {
+  id: string;
+  clinic_id: string;
+  doctor_id: string;
+  created_at: string | null;
+  modified_at: string | null;
+}
+
+export type ClinicDoctorRelationInsert = Omit<
+  ClinicDoctorRelation,
+  'id' | 'created_at' | 'modified_at'
+>;
+export type ClinicDoctorRelationUpdate = Partial<ClinicDoctorRelationInsert>;
 
 export interface ClinicHours {
   id: string;

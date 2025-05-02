@@ -1,18 +1,24 @@
 import { Metadata } from 'next';
 
+import { Clinic, ClinicDoctor } from '@/types/clinic';
+
 import { siteConfig } from '@/config/site';
 
 import { createServerClient } from '@/lib/supabase';
 
-import { ClinicTableData, columns } from './columns';
+import { columns } from './columns';
 import { DataTable } from './components/data-table';
 
 export const dynamic = 'force-dynamic';
 
+interface DoctorWithRelations extends Partial<ClinicDoctor> {
+  clinic_doctor_relations?: { clinics: Clinic }[];
+}
+
 const config = {
-  title: 'Clinics',
-  description: 'List all clinics',
-  url: '/dashboard/clinics',
+  title: 'Doctors',
+  description: 'List all doctors',
+  url: '/dashboard/doctors',
 };
 
 export const metadata: Metadata = {
@@ -52,33 +58,40 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function DashboardClinicsPage() {
+export default async function DashboardDoctorsPage() {
   const supabase = await createServerClient();
   const { data, error } = await supabase
-    .from('clinics')
+    .from('clinic_doctors')
     .select(
       `id,
       name,
-      slug,
-      website,
-      images,
-      area:area_id(name, slug),
-      state:state_id(name, slug),
-      is_active`,
+      bio,
+      specialty,
+      status,
+      image,
+      featured_video,
+      is_active,
+      is_featured,
+      clinic_doctor_relations (
+          clinic_id,
+          clinics (id, name, slug)
+      )`,
     )
-    .eq('status', 'approved')
     .order('created_at', { ascending: false });
 
+  // Transform nested clinic_doctor_relations to flat clinics array
+  const doctors =
+    (data as DoctorWithRelations[] | null)?.map((doctor) => {
+      const relations = doctor.clinic_doctor_relations || [];
+      return {
+        ...doctor,
+        clinics: relations.map((rel) => rel.clinics).filter(Boolean),
+      };
+    }) || [];
+
   if (error) {
-    console.error('Error fetching clinics:', error);
+    console.error('Error fetching doctors:', error);
   }
 
-  // Convert Supabase data to our expected format
-  return (
-    <DataTable
-      columns={columns}
-      data={(data as unknown as ClinicTableData[]) || []}
-      type="clinic"
-    />
-  );
+  return <DataTable columns={columns} data={doctors} type="doctor" />;
 }

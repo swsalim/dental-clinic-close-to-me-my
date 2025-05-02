@@ -11,28 +11,40 @@ export type Database = {
     Tables: {
       areas: {
         Row: {
+          banner_image: string | null
           created_at: string | null
+          description: string | null
           id: string
           modified_at: string | null
           name: string
+          short_description: string | null
           slug: string
           state_id: string | null
+          thumbnail_image: string | null
         }
         Insert: {
+          banner_image?: string | null
           created_at?: string | null
+          description?: string | null
           id?: string
           modified_at?: string | null
           name: string
+          short_description?: string | null
           slug: string
           state_id?: string | null
+          thumbnail_image?: string | null
         }
         Update: {
+          banner_image?: string | null
           created_at?: string | null
+          description?: string | null
           id?: string
           modified_at?: string | null
           name?: string
+          short_description?: string | null
           slug?: string
           state_id?: string | null
+          thumbnail_image?: string | null
         }
         Relationships: [
           {
@@ -44,43 +56,89 @@ export type Database = {
           },
         ]
       }
-      clinic_doctors: {
+      clinic_doctor_relations: {
         Row: {
-          bio: string | null
           clinic_id: string
           created_at: string | null
+          doctor_id: string
           id: string
           modified_at: string | null
-          name: string
-          specialty: string | null
         }
         Insert: {
-          bio?: string | null
           clinic_id: string
           created_at?: string | null
+          doctor_id: string
           id?: string
           modified_at?: string | null
-          name: string
-          specialty?: string | null
         }
         Update: {
-          bio?: string | null
           clinic_id?: string
           created_at?: string | null
+          doctor_id?: string
           id?: string
           modified_at?: string | null
-          name?: string
-          specialty?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "clinic_doctors_clinic_id_fkey"
+            foreignKeyName: "clinic_doctor_relations_clinic_id_fkey"
             columns: ["clinic_id"]
             isOneToOne: false
             referencedRelation: "clinics"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "clinic_doctor_relations_doctor_id_fkey"
+            columns: ["doctor_id"]
+            isOneToOne: false
+            referencedRelation: "clinic_doctors"
+            referencedColumns: ["id"]
+          },
         ]
+      }
+      clinic_doctors: {
+        Row: {
+          bio: string | null
+          created_at: string | null
+          featured_video: string | null
+          id: string
+          image: string | null
+          is_active: boolean | null
+          is_featured: boolean | null
+          modified_at: string | null
+          name: string
+          slug: string
+          specialty: string | null
+          status: string | null
+        }
+        Insert: {
+          bio?: string | null
+          created_at?: string | null
+          featured_video?: string | null
+          id?: string
+          image?: string | null
+          is_active?: boolean | null
+          is_featured?: boolean | null
+          modified_at?: string | null
+          name: string
+          slug: string
+          specialty?: string | null
+          status?: string | null
+        }
+        Update: {
+          bio?: string | null
+          created_at?: string | null
+          featured_video?: string | null
+          id?: string
+          image?: string | null
+          is_active?: boolean | null
+          is_featured?: boolean | null
+          modified_at?: string | null
+          name?: string
+          slug?: string
+          specialty?: string | null
+          status?: string | null
+        }
+        Relationships: []
       }
       clinic_hours: {
         Row: {
@@ -396,25 +454,37 @@ export type Database = {
       }
       states: {
         Row: {
+          banner_image: string | null
           created_at: string | null
+          description: string | null
           id: string
           modified_at: string | null
           name: string
+          short_description: string | null
           slug: string
+          thumbnail_image: string | null
         }
         Insert: {
+          banner_image?: string | null
           created_at?: string | null
+          description?: string | null
           id?: string
           modified_at?: string | null
           name: string
+          short_description?: string | null
           slug: string
+          thumbnail_image?: string | null
         }
         Update: {
+          banner_image?: string | null
           created_at?: string | null
+          description?: string | null
           id?: string
           modified_at?: string | null
           name?: string
+          short_description?: string | null
           slug?: string
+          thumbnail_image?: string | null
         }
         Relationships: []
       }

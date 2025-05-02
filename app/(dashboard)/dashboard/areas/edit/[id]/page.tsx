@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { ClinicArea, ClinicService, ClinicServiceRelation, ClinicState } from '@/types/clinic';
-
 import { siteConfig } from '@/config/site';
 
 import { createClient } from '@/lib/supabase/server';
@@ -10,12 +8,12 @@ import { createClient } from '@/lib/supabase/server';
 import { Separator } from '@/components/ui/separator';
 import { SidebarNav } from '@/components/ui/sidebar-nav';
 
-import FormEditClinic from '../../components/form-edit-clinic';
+import FormEditArea from '../../components/form-edit-area';
 
 const config = {
-  title: 'Edit Clinic Detail',
-  description: 'Edit a clinic detail',
-  url: '/dashboard/clinics/edit',
+  title: 'Edit Area Detail',
+  description: 'Edit a area detail',
+  url: '/dashboard/areas/edit',
 };
 
 export const metadata: Metadata = {
@@ -55,55 +53,42 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function EditClinicPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function EditAreaPage({ params }: { params: Promise<{ id: string }> }) {
   const supabase = await createClient();
   const { id } = await params;
 
-  const { data: clinic } = await supabase.from('clinics').select().match({ id }).single();
+  const { data: area } = await supabase
+    .from('areas')
+    .select(
+      'id, name, slug, short_description, description, thumbnail_image, banner_image, states(id, name)',
+    )
+    .match({ id })
+    .single();
 
-  if (!clinic) {
+  console.log(area);
+
+  if (!area) {
     notFound();
   }
 
   const sidebarNavItems = [
     {
       title: 'Profile',
-      href: `/dashboard/clinics/edit/${id}`,
+      href: `/dashboard/areas/edit/${id}`,
     },
     {
       title: 'Location',
-      href: `/dashboard/clinics/edit/location/${id}`,
+      href: `/dashboard/areas/edit/location/${id}`,
     },
     {
       title: 'Social',
-      href: `/dashboard/clinics/edit/social/${id}`,
+      href: `/dashboard/areas/edit/social/${id}`,
     },
     {
       title: 'Images',
-      href: `/dashboard/clinics/edit/images/${id}`,
+      href: `/dashboard/areas/edit/images/${id}`,
     },
   ];
-
-  const [
-    { data: servicesData },
-    { data: servicesRelationsData },
-    { data: statesData },
-    { data: areasData },
-    { data: hoursData },
-  ] = await Promise.all([
-    supabase.from('clinic_services').select('*', { count: 'exact' }),
-    supabase.from('clinic_service_relations').select('*', { count: 'exact' }).eq('clinic_id', id),
-    supabase.from('states').select('*', { count: 'exact' }),
-    supabase.from('areas').select('*', { count: 'exact' }),
-    supabase.from('clinic_hours').select('*', { count: 'exact' }).eq('clinic_id', id),
-  ]);
-
-  // Ensure we have arrays even if data is null
-  const services = (servicesData || []) as ClinicService[];
-  const servicesRelations = (servicesRelationsData || []) as ClinicServiceRelation[];
-  const states = (statesData || []) as ClinicState[];
-  const areas = (areasData || []) as ClinicArea[];
-  const hours = hoursData || [];
 
   return (
     <div className="flex flex-row gap-6">
@@ -113,20 +98,13 @@ export default async function EditClinicPage({ params }: { params: Promise<{ id:
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-medium">{clinic.name}</h3>
+            <h3 className="text-lg font-medium">{area.name}</h3>
             <p className="text-sm text-gray-500">
               This is how others will see this listing on the site.
             </p>
           </div>
           <Separator />
-          <FormEditClinic
-            clinic={clinic}
-            services={services}
-            areas={areas}
-            states={states}
-            hours={hours}
-            selectedServices={servicesRelations}
-          />
+          <FormEditArea area={area} />
         </div>
       </div>
     </div>

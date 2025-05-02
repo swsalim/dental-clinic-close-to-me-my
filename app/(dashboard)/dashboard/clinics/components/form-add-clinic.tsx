@@ -7,14 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-import type {
-  ClinicArea,
-  ClinicHours,
-  ClinicInsert,
-  ClinicService,
-  ClinicServiceRelation,
-  ClinicState,
-} from '@/types/clinic';
+import type { ClinicArea, ClinicHours, ClinicService, ClinicState } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckIcon, ChevronsUpDown, RefreshCwIcon, XIcon } from 'lucide-react';
 import * as z from 'zod';
@@ -92,13 +85,10 @@ const STATUS_OPTIONS = [
   { label: 'Suspended', value: 'suspended' },
 ];
 
-interface ClinicReviewFormProps {
-  clinic: ClinicInsert & { id: string };
+interface AddClinicFormProps {
   states: ClinicState[];
   areas: ClinicArea[];
-  hours: ClinicHours[];
   services: ClinicService[];
-  selectedServices: ClinicServiceRelation[];
 }
 
 const clinicProfileSchema = z.object({
@@ -181,18 +171,11 @@ function mapClinicHoursToBusinessHours(hours: ClinicHours[]): BusinessHours {
   }, {} as BusinessHours);
 }
 
-export default function FormEditClinic({
-  clinic,
-  states,
-  areas,
-  hours: _hours,
-  services,
-  selectedServices,
-}: ClinicReviewFormProps) {
+export default function FormAddClinic({ services, areas, states }: AddClinicFormProps) {
   const router = useRouter();
   const supabase = createClient();
 
-  const [currentImages, setCurrentImages] = useState<string[]>(clinic.images || []);
+  const [currentImages, setCurrentImages] = useState<string[]>([]);
   const [imagesToRemove, setImagesToRemove] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [cloudinaryUploadUrl] = useState(
@@ -265,39 +248,39 @@ export default function FormEditClinic({
   const form = useForm<FormData>({
     resolver: zodResolver(clinicProfileSchema),
     defaultValues: {
-      name: clinic.name || '',
-      address: clinic.address || '',
-      neighborhood: clinic.neighborhood || '',
-      city: clinic.city || '',
-      postal_code: clinic.postal_code || '',
-      slug: clinic.slug,
-      description: clinic.description || undefined,
-      website: clinic.website || undefined,
-      email: clinic.email || undefined,
-      phone: clinic.phone || undefined,
-      latitude: clinic.latitude || undefined,
-      longitude: clinic.longitude || undefined,
-      location: clinic.location,
-      place_id: clinic.place_id,
-      rating: clinic.rating,
-      review_count: clinic.review_count,
-      is_active: clinic.is_active ?? false,
-      is_featured: clinic.is_featured ?? false,
-      is_permanently_closed: clinic.is_permanently_closed ?? false,
-      open_on_public_holidays: clinic.open_on_public_holidays ?? false,
+      name: '',
+      address: '',
+      neighborhood: '',
+      city: '',
+      postal_code: '',
+      slug: '',
+      description: '',
+      website: '',
+      email: '',
+      phone: '',
+      latitude: 0,
+      longitude: 0,
+      location: '',
+      place_id: '',
+      rating: 0,
+      review_count: 0,
+      is_active: false,
+      is_featured: false,
+      is_permanently_closed: false,
+      open_on_public_holidays: false,
       images: [],
-      source: clinic.source || '',
-      facebook_url: clinic.facebook_url || undefined,
-      instagram_url: clinic.instagram_url || undefined,
-      featured_video: clinic.featured_video || undefined,
-      youtube_url: clinic.youtube_url || undefined,
-      area_id: clinic.area_id || undefined,
-      state_id: clinic.state_id || undefined,
-      status: clinic.status || 'pending',
-      businessHours: mapClinicHoursToBusinessHours(_hours),
+      source: 'manual',
+      facebook_url: '',
+      instagram_url: '',
+      featured_video: '',
+      youtube_url: '',
+      area_id: '',
+      state_id: '',
+      status: 'pending',
+      businessHours: mapClinicHoursToBusinessHours([]),
       services: services.reduce(
         (acc, service) => {
-          acc[service.id] = selectedServices.some((selected) => selected.service_id === service.id);
+          acc[service.id] = false;
           return acc;
         },
         {} as Record<string, boolean>,
@@ -306,7 +289,6 @@ export default function FormEditClinic({
     mode: 'onChange',
   });
 
-  const { reset } = form;
   const watchName = form.watch('name');
   const watchImages = form.watch('images');
 
@@ -461,10 +443,10 @@ export default function FormEditClinic({
       console.log('finalData');
       console.log(finalData);
 
-      // Update clinic information
-      const { data: updatedClinic, error: updateError } = await supabase
+      // Insert clinic information
+      const { data: newClinic, error: updateError } = await supabase
         .from('clinics')
-        .update({
+        .insert({
           // GENERAL
           name: finalData.name,
           description: finalData.description,
@@ -499,7 +481,6 @@ export default function FormEditClinic({
           open_on_public_holidays: finalData.open_on_public_holidays,
           status: finalData.status,
         })
-        .eq('id', clinic.id)
         .select()
         .single();
 
@@ -511,7 +492,7 @@ export default function FormEditClinic({
       const { error: deleteHoursError } = await supabase
         .from('clinic_hours')
         .delete()
-        .eq('clinic_id', clinic.id);
+        .eq('clinic_id', newClinic.id);
 
       if (deleteHoursError) {
         throw deleteHoursError;
@@ -549,7 +530,7 @@ export default function FormEditClinic({
       const closedDaysHours: HoursToInsert[] = businessHoursEntries
         .filter(([, dayData]) => dayData.isClosed)
         .map(([day]) => ({
-          clinic_id: clinic.id,
+          clinic_id: newClinic.id,
           day_of_week: dayMap[day],
           open_time: null,
           close_time: null,
@@ -560,7 +541,7 @@ export default function FormEditClinic({
         .filter(([, dayData]) => !dayData.isClosed)
         .flatMap(([day, dayData]) =>
           dayData.shifts.map((shift) => ({
-            clinic_id: clinic.id,
+            clinic_id: newClinic.id,
             day_of_week: dayMap[day],
             open_time: shift.openTime,
             close_time: shift.closeTime,
@@ -579,7 +560,7 @@ export default function FormEditClinic({
       const { error: deleteServicesError } = await supabase
         .from('clinic_service_relations')
         .delete()
-        .eq('clinic_id', clinic.id);
+        .eq('clinic_id', newClinic.id);
 
       if (deleteServicesError) {
         throw deleteServicesError;
@@ -589,7 +570,7 @@ export default function FormEditClinic({
       const servicesToInsert = Object.entries(finalData.services)
         .filter(([, isSelected]) => isSelected)
         .map(([serviceId]) => ({
-          clinic_id: clinic.id,
+          clinic_id: newClinic.id,
           service_id: serviceId,
         }));
 
@@ -601,98 +582,13 @@ export default function FormEditClinic({
         throw insertServicesError;
       }
 
-      if (updatedClinic) {
-        // Get the updated hours from the database
-        const { data: updatedHours } = await supabase
-          .from('clinic_hours')
-          .select('*')
-          .eq('clinic_id', clinic.id);
-
-        // Map the hours back to the businessHours format
-        const updatedBusinessHours = daysOfWeek.reduce((acc, day) => {
-          const dayHours =
-            updatedHours?.filter((h) => h.day_of_week === daysOfWeek.indexOf(day)) || [];
-
-          if (
-            dayHours.length === 0 ||
-            (dayHours[0].open_time === null && dayHours[0].close_time === null)
-          ) {
-            acc[day] = {
-              isClosed: true,
-              shifts: [],
-            };
-          } else {
-            acc[day] = {
-              isClosed: false,
-              shifts: dayHours.map((h) => ({
-                openTime: h.open_time as string,
-                closeTime: h.close_time as string,
-              })),
-            };
-          }
-          return acc;
-        }, {} as BusinessHours);
-
-        // Get the updated services from the database
-        const { data: updatedServices } = await supabase
-          .from('clinic_service_relations')
-          .select('*')
-          .eq('clinic_id', clinic.id);
-
-        const updatedServicesMap = updatedServices?.reduce(
-          (acc, service) => {
-            acc[service.service_id] = true;
-            return acc;
-          },
-          {} as Record<string, boolean>,
-        );
-
-        // Update the form with the new data
-        reset({
-          name: updatedClinic.name || '',
-          address: updatedClinic.address || '',
-          neighborhood: updatedClinic.neighborhood || '',
-          city: updatedClinic.city || '',
-          postal_code: updatedClinic.postal_code || '',
-          slug: updatedClinic.slug,
-          description: updatedClinic.description || undefined,
-          website: updatedClinic.website || undefined,
-          email: updatedClinic.email || undefined,
-          phone: updatedClinic.phone || undefined,
-          latitude: updatedClinic.latitude,
-          longitude: updatedClinic.longitude,
-          location: updatedClinic.location,
-          place_id: updatedClinic.place_id,
-          rating: updatedClinic.rating,
-          review_count: updatedClinic.review_count,
-          is_active: updatedClinic.is_active,
-          is_featured: updatedClinic.is_featured,
-          is_permanently_closed: updatedClinic.is_permanently_closed,
-          open_on_public_holidays: updatedClinic.open_on_public_holidays,
-          images: [],
-          source: updatedClinic.source || '',
-          facebook_url: updatedClinic.facebook_url || undefined,
-          instagram_url: updatedClinic.instagram_url || undefined,
-          featured_video: updatedClinic.featured_video || undefined,
-          youtube_url: updatedClinic.youtube_url || undefined,
-          area_id: updatedClinic.area_id,
-          state_id: updatedClinic.state_id,
-          status: updatedClinic.status,
-          businessHours: updatedBusinessHours,
-          services: updatedServicesMap,
-        });
-
-        // Update the current images state
-        setCurrentImages(updatedClinic.images || []);
-      }
-
       toast({
         title: 'Success',
         description: 'Clinic updated successfully',
       });
 
       setImagesToRemove([]);
-      router.refresh();
+      router.push('/dashboard/clinics');
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Failed to update clinic';
       console.error('Error updating clinic:', errorMessage);
@@ -706,54 +602,13 @@ export default function FormEditClinic({
     }
   };
 
-  // const handleApproval = async () => {
-  //   try {
-  //     setIsSubmitting(true);
-
-  //     // Update clinic information
-  //     const { data, error: updateError } = await supabase
-  //       .from('clinics')
-  //       .update({
-  //         status: 'approved',
-  //       })
-  //       .eq('id', clinic.id)
-  //       .select()
-  //       .single();
-
-  //     if (updateError) {
-  //       throw updateError;
-  //     }
-
-  //     if (!data) {
-  //       throw new Error('Failed to approve clinic - no data returned');
-  //     }
-
-  //     toast({
-  //       title: 'Successfully approved clinic',
-  //       description: 'The clinic has been moved to the main clinics table',
-  //     });
-
-  //     router.push('/dashboard/clinics/review');
-  //   } catch (error: unknown) {
-  //     console.error(error);
-  //     toast({
-  //       variant: 'destructive',
-  //       title: 'Error approving clinic',
-  //       description: error instanceof Error ? error.message : 'An unknown error occurred',
-  //       action: <ToastAction altText="Try again">Try again</ToastAction>,
-  //     });
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} aria-label="Clinic review form">
         <div className="space-y-6 divide-y divide-gray-200 shadow sm:overflow-hidden sm:rounded-md">
           <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Review Clinic</h3>
+              <h3 className="text-lg font-medium leading-6 text-gray-900">Add Clinic</h3>
               <p className="text-text-muted mt-1 text-sm">
                 This information will be displayed publicly so be careful what you share.
               </p>
@@ -1549,21 +1404,6 @@ export default function FormEditClinic({
               <span>Update</span>
             )}
           </Button>
-          {/* <Button
-            type="button"
-            onClick={form.handleSubmit(handleApproval)}
-            variant="secondary"
-            disabled={isSubmitting}
-            className="flex items-center space-x-2">
-            {isSubmitting ? (
-              <>
-                <RefreshCwIcon className="h-4 w-4 animate-spin" />
-                <span>Approving...</span>
-              </>
-            ) : (
-              <span>Approve</span>
-            )}
-          </Button> */}
         </div>
       </form>
     </Form>

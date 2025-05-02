@@ -4,15 +4,15 @@ import { siteConfig } from '@/config/site';
 
 import { createServerClient } from '@/lib/supabase';
 
-import { ClinicTableData, columns } from './columns';
+import { columns, StateTableData } from './columns';
 import { DataTable } from './components/data-table';
 
 export const dynamic = 'force-dynamic';
 
 const config = {
-  title: 'Clinics',
-  description: 'List all clinics',
-  url: '/dashboard/clinics',
+  title: 'States',
+  description: 'List all states',
+  url: '/dashboard/states',
 };
 
 export const metadata: Metadata = {
@@ -52,33 +52,28 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function DashboardClinicsPage() {
+export default async function DashboardStatesPage() {
   const supabase = await createServerClient();
   const { data, error } = await supabase
-    .from('clinics')
+    .from('states')
     .select(
       `id,
       name,
       slug,
-      website,
-      images,
-      area:area_id(name, slug),
-      state:state_id(name, slug),
-      is_active`,
+      short_description,
+      thumbnail_image,
+      banner_image,
+      areas(id, name, slug),
+      clinics(count)`,
     )
-    .eq('status', 'approved')
-    .order('created_at', { ascending: false });
+    .order('modified_at', { ascending: false });
+
+  console.log(data);
 
   if (error) {
-    console.error('Error fetching clinics:', error);
+    console.error('Error fetching states:', error);
   }
 
   // Convert Supabase data to our expected format
-  return (
-    <DataTable
-      columns={columns}
-      data={(data as unknown as ClinicTableData[]) || []}
-      type="clinic"
-    />
-  );
+  return <DataTable columns={columns} data={(data as unknown as StateTableData[]) || []} />;
 }

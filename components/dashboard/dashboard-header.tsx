@@ -26,8 +26,10 @@ const DashboardHeader = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const links: NavLink[] = [
-    { label: 'Doctors', href: '/dashboard/doctors' },
+    { label: 'States', href: '/dashboard/states' },
+    { label: 'Areas', href: '/dashboard/areas' },
     { label: 'Clinics', href: '/dashboard/clinics' },
+    { label: 'Doctors', href: '/dashboard/doctors' },
     { label: 'Review Clinics', href: '/dashboard/clinics/review' },
   ];
 

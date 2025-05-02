@@ -3,6 +3,10 @@ create table if not exists states (
   id uuid primary key default gen_random_uuid(),
   name text not null,
   slug text not null unique,
+  short_description text,
+  description text,
+  thumbnail_image text,
+  banner_image text,
   created_at timestamp with time zone default timezone('utc', now()),
   modified_at timestamp with time zone default timezone('utc', now())
 );
@@ -23,6 +27,10 @@ create table if not exists areas (
   state_id uuid references states(id) on delete cascade,
   name text not null,
   slug text not null,
+  short_description text,
+  description text,
+  thumbnail_image text,
+  banner_image text,
   created_at timestamp with time zone default timezone('utc', now()),
   modified_at timestamp with time zone default timezone('utc', now()),
   unique(state_id, slug)
@@ -168,16 +176,20 @@ alter table clinic_reviews enable row level security;
 -- Clinic Doctors Table
 create table if not exists clinic_doctors (
   id uuid primary key default gen_random_uuid(),
-  clinic_id uuid not null references clinics(id) on delete set null,
   name text not null,
+  slug text not null unique,
   specialty text,
   bio text,
+  image text,
+  featured_video text,
+  is_featured boolean default false,
+  is_active boolean default false,
+  status text constraint doctor_status_check check (status in ('approved', 'pending', 'rejected', 'suspended')) default 'pending',
   created_at timestamp with time zone default timezone('utc', now()),
   modified_at timestamp with time zone default timezone('utc', now())
 );
 
 -- Add indexes for clinic_doctors table
-create index if not exists idx_clinic_doctors_clinic_id on clinic_doctors using btree (clinic_id);
 create index if not exists idx_clinic_doctors_name on clinic_doctors using btree (name);
 create index if not exists idx_clinic_doctors_specialty on clinic_doctors using btree (specialty);
 
@@ -187,6 +199,27 @@ execute FUNCTION extensions.moddatetime ('modified_at');
 
 -- Auth policies for clinic_doctors table
 alter table clinic_doctors enable row level security;
+
+-- Clinic Doctor Relations Table
+create table if not exists clinic_doctor_relations (
+  id uuid primary key default gen_random_uuid(),
+  clinic_id uuid not null references clinics(id) on delete cascade,
+  doctor_id uuid not null references clinic_doctors(id) on delete cascade,
+  created_at timestamp with time zone default timezone('utc', now()),
+  modified_at timestamp with time zone default timezone('utc', now())
+);
+
+-- Indexes
+create index if not exists idx_clinic_doctor_relations_clinic_id on clinic_doctor_relations (clinic_id);
+create index if not exists idx_clinic_doctor_relations_doctor_id on clinic_doctor_relations (doctor_id);
+create unique index if not exists idx_clinic_doctor_relations_unique on clinic_doctor_relations (clinic_id, doctor_id);
+
+create or replace trigger handle_modified_clinic_doctor_relations BEFORE
+update on clinic_doctor_relations for EACH row
+execute FUNCTION extensions.moddatetime ('modified_at');
+
+-- Auth policies for clinic_doctor_relations table
+alter table clinic_doctor_relations enable row level security;
 
 -- Clinic Services Table
 create table if not exists clinic_services (
