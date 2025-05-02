@@ -34,7 +34,6 @@ import { DataTableToolbar } from './data-table-toolbar';
 interface DataTableClientProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  type?: string;
   states: { name: string; slug: string }[];
 }
 
@@ -55,7 +54,6 @@ const MemoizedTableRow = <TData,>({ row }: TableRowProps<TData>) => (
 export function DataTableClient<TData, TValue>({
   columns,
   data,
-  type,
   states,
 }: DataTableClientProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -86,7 +84,7 @@ export function DataTableClient<TData, TValue>({
 
   return (
     <div className="space-y-4">
-      <DataTableToolbar table={table} type={type} states={states} />
+      <DataTableToolbar table={table} states={states} />
       <div className="rounded-md border">
         <ShadcnTable>
           <TableHeader>

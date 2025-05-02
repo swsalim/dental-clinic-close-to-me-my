@@ -7,14 +7,9 @@ import { DataTableClient } from './data-table-client';
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  type?: string;
 }
 
-export async function DataTable<TData, TValue>({
-  columns,
-  data,
-  type,
-}: DataTableProps<TData, TValue>) {
+export async function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
   const supabase = await createServerClient();
   const { data: states, error } = await supabase
     .from('states')
@@ -30,7 +25,6 @@ export async function DataTable<TData, TValue>({
     <DataTableClient
       columns={columns}
       data={data}
-      type={type}
       states={states.map((state) => ({
         name: state.name,
         slug: state.slug,
