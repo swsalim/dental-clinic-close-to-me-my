@@ -197,19 +197,25 @@ export default async function StatePage({ params }: StatePageProps) {
       </Wrapper>
       <Wrapper>
         <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-            {stateData.clinics?.map((clinic) => (
-              <ClinicCard
-                key={clinic.slug}
-                slug={clinic.slug ?? ''}
-                name={clinic.name ?? ''}
-                address={clinic.address ?? ''}
-                phone={clinic.phone ?? ''}
-                image={clinic.images?.[0]}
-                rating={clinic.rating}
-              />
-            ))}
-          </div>
+          {stateData.clinics?.length > 0 ? (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+              {stateData.clinics?.map((clinic) => (
+                <ClinicCard
+                  key={clinic.slug}
+                  slug={clinic.slug ?? ''}
+                  name={clinic.name ?? ''}
+                  address={clinic.address ?? ''}
+                  phone={clinic.phone ?? ''}
+                  image={clinic.images?.[0]}
+                  rating={clinic.rating}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center">
+              <p className="text-balance text-lg">No dental clinics found in {stateData.name}.</p>
+            </div>
+          )}
         </Container>
       </Wrapper>
     </>

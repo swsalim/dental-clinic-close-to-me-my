@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>http://localhost:3000/services/braces</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/cosmetic-dentistry</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/dental-implants</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/dental-xrays</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/emergency-dentistry</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/endodontics</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/general-dentistry</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/invisalign</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/oral-surgery</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/orthodontics</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/pediatric-dentistry</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/periodontics</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/prosthodontics</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/root-canal</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/teeth-whitening</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/veneers</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://localhost:3000/services/wisdom-tooth-extraction</loc><lastmod>2025-05-06T15:46:00.004Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/braces</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/cosmetic-dentistry</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/dental-implants</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/dental-xrays</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/emergency-dentistry</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/endodontics</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/general-dentistry</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/invisalign</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/oral-surgery</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/orthodontics</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/pediatric-dentistry</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/periodontics</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/prosthodontics</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/root-canal</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/teeth-whitening</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/veneers</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/services/wisdom-tooth-extraction</loc><lastmod>2025-05-06T23:52:24.679Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

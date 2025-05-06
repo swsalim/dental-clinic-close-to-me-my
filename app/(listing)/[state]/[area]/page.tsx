@@ -183,30 +183,40 @@ export default async function AreaPage({ params }: AreaPageProps) {
         }}
         className="before:absolute before:inset-0 before:bg-black/50 before:content-['']">
         <Container className="relative z-10">
-          <Breadcrumb items={breadcrumbItems} theme="dark" />
-          <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
-          <p className="text-balance text-lg font-medium text-white">
-            Explore {areaData.clinics?.length} trusted dental clinics across cities in{' '}
-            <Link href={absoluteUrl(`/${areaData.state?.slug}`)}>{areaData.state?.name}</Link>. Find
-            services, reviews, and opening hours.
-          </p>
+          <div className="flex flex-col gap-4 py-12 md:py-24">
+            <Breadcrumb items={breadcrumbItems} theme="dark" />
+            <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
+            <p className="text-balance text-lg font-medium text-white">
+              Explore {areaData.clinics?.length} trusted dental clinics across cities in{' '}
+              <Link href={absoluteUrl(`/${areaData.state?.slug}`)}>{areaData.state?.name}</Link>.
+              Find services, reviews, and opening hours.
+            </p>
+          </div>
         </Container>
       </Wrapper>
       <Wrapper>
         <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-            {areaData.clinics?.map((clinic) => (
-              <ClinicCard
-                key={clinic.slug}
-                slug={clinic.slug ?? ''}
-                name={clinic.name ?? ''}
-                address={clinic.address ?? ''}
-                phone={clinic.phone ?? ''}
-                image={clinic.images?.[0]}
-                rating={clinic.rating}
-              />
-            ))}
-          </div>
+          {areaData.clinics?.length > 0 ? (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+              {areaData.clinics?.map((clinic) => (
+                <ClinicCard
+                  key={clinic.slug}
+                  slug={clinic.slug ?? ''}
+                  name={clinic.name ?? ''}
+                  address={clinic.address ?? ''}
+                  phone={clinic.phone ?? ''}
+                  image={clinic.images?.[0]}
+                  rating={clinic.rating}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center">
+              <p className="text-balance text-lg">
+                No dental clinics found in {areaData.name}, {areaData.state?.name}.
+              </p>
+            </div>
+          )}
         </Container>
       </Wrapper>
     </>
