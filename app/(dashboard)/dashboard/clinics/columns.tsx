@@ -26,7 +26,7 @@ const states: State[] = [
   { name: 'Kelantan', slug: 'kelantan' },
   { name: 'Malacca', slug: 'malacca' },
   { name: 'Negeri Sembilan', slug: 'negeri-sembilan' },
-  { name: 'Pahang', slug: 'pahang' },
+  { name: 'Pahang State', slug: 'pahang-state' },
   { name: 'Penang', slug: 'penang' },
   { name: 'Perak', slug: 'perak' },
   { name: 'Perlis', slug: 'perlis' },

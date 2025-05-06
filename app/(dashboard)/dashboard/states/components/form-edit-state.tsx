@@ -418,7 +418,7 @@ export default function FormEditState({ state }: EditStateFormProps) {
               <div className="col-span-6 space-y-4">
                 <h4 className="text-base font-medium text-gray-900">Number of Clinics</h4>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                  {state.clinics?.[0]?.count}
+                  {state.clinics?.length}
                 </div>
               </div>
 

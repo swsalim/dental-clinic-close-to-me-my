@@ -5,6 +5,8 @@ import { siteConfig } from '@/config/site';
 
 import { cn } from '@/lib/utils';
 
+import Footer from '@/components/site/footer';
+
 import './globals.css';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -83,7 +85,8 @@ export default function RootLayout({
           plusJakartaSans.variable,
         )}
         suppressHydrationWarning>
-        {children}
+        <div className="flex grow flex-col justify-center">{children}</div>
+        <Footer />
       </body>
     </html>
   );

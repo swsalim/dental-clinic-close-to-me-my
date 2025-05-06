@@ -1,0 +1,2553 @@
+[
+  {
+    "title": "Pines Square Dental Clinic",
+    "website": "",
+    "latitude": 1.5103393,
+    "longitude": 110.3066529,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "16:00"
+      }
+    ],
+    "slug": "pines-square-dental-clinic-kuching",
+    "skip": false,
+    "placeId": "ChIJx02O7-cJ-zERZQ6YjoNqH7A",
+    "phone": "+60143389161",
+    "permanentlyClosed": false,
+    "address": "Ground Floor, Lot 6891, Block 225, Kuching North Land District at Lrg Pines Square, 2A4, Jalan Batu Kawa, New Township, 93250 Kuching, Sarawak, Malaysia",
+    "neighborhood": "New Township",
+    "city": "Kuching",
+    "postalCode": "93250",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": "PINES SQUARE",
+    "reviewsCount": 31,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipN1ZUP2RvaxqFx22oRIQqiitZNHZTsnoYhdnam4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMYaso3qkmqA8gAaprho8Hu3l6rWL9F-YypJaPE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNURd6h0TqN2Bco417UsybpSRlPBFXwfRvB0a4G=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPa-j_n63PnhrmXhT-C1DRkP3jshSsv6sBkd1qt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPvXJDUAecCvQ8SRo7F00gPXCzVvQbSDdY4QbLY=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Wendy Csy",
+        "stars": 5,
+        "text": "Good…价钱也公道👍",
+        "publishedAtDate": "2025-02-19T11:40:36.644Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amy Lau (Peachy_amy)",
+        "stars": 5,
+        "text": "Brought my 2 year old here for a consultation because of toothache that turned out to be his teeth erupting. Dr. Tay is so so patient with my boy and waited for him to relax before checking his teeth. Bribery was involved, but I'm a fan of whatever works! My toddler has a fear of dentists and isn't easy to work with but Dr. Tay was incredibly compassionate dealing with the tantrums and managed to take a good look at his teeth. He's so good with kids. I'm so grateful for his patience.\n\nFacility is very new and clean and everyone was super friendly. Parking was super easy too! Great experience overall!",
+        "publishedAtDate": "2025-02-06T10:42:04.039Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Laura Cotter",
+        "stars": 5,
+        "text": "Super satisfied with their service and treatment! Dr Tay Jr (I think) was super profesh and friendly. He made me feel comfortable the moment I entered the room. He was gentle with my teeth and made sure I was okay. It was my first time whitening my teeth, and I couldn’t be more happy! I’m definitely coming back as a regular patient! 🙌🏼",
+        "publishedAtDate": "2024-11-25T09:00:21.740Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJvpkQejncSFIfRw6FBkqAVAW1BW62WqgmX8OoljZmST0L1tYDOuEYGWSMAallL6W4n91ScW4fOXuFTMR_1nlDGmWm6CmcdTslXWn9pMJ8OyQLheUuET99d9usVd9qfIuX1tePF"
+        ]
+      },
+      {
+        "name": "MEI CHUNG SU",
+        "stars": 5,
+        "text": "这家诊所真的便宜医生服务态度也好赞",
+        "publishedAtDate": "2024-11-21T08:12:44.898Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "郭喆扬",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-11-21T06:56:33.441Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Doreen Shane",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-11-13T10:39:21.392Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "MathildaValentia Yaya",
+        "stars": 5,
+        "text": "Love thisss place(Siburan Dental Clinic Branch) and servicesss so muchhhhhhhh!!! All of them are so professional and so friendlyy (staff and dentist) ❤️❤️❤️❤️🥰🥰🥰🥰😘😘😘😘",
+        "publishedAtDate": "2024-11-12T01:35:02.992Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mei Queen Woo",
+        "stars": 5,
+        "text": "I highly recommend this Pine Square Dental Clinic for those of you who are looking for a dedicated and highly experienced dentist who can immediately diagnose, solve your dental problems and makes sure it's done well. Highest quality of service indeed. Thank you very much for solving my serious dental problem. Appreciate it very much.",
+        "publishedAtDate": "2024-09-21T04:04:09.765Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Ground Floor, Lot 6891, Block 225, Kuching North Land District at Lrg Pines Square, 2A4, Jalan Batu Kawa",
+    "description": "<p>At the heart of Kuching North Land District, Pines Square Dental Clinic emerges as a pinnacle of dental care, where the fusion of cutting-edge technology and compassionate service sets a new standard for oral health. This clinic is more than just a facility; it's a place where smiles are crafted with precision and patience. With a team led by the esteemed Dr. Tay Jr., whose professionalism and friendly demeanor have become the talk of Lrg Pines Square, patients find not just treatment but also comfort and understanding within its walls.</p>\n\n<p>The patient experience at Pines Square Dental Clinic is distinguished by an unwavering commitment to quality care. The facility boasts state-of-the-art equipment designed to facilitate accurate diagnoses and effective treatments, catering to both routine check-ups and complex dental procedures. Testimonials reflect the trust and satisfaction of the community; one patient recounts bringing their toddler for a toothache consultation, lauding the gentle approach that turned a potentially frightening experience into a reassuring visit. Another patient's commendation of \"Super satisfied with their service and treatment!\" underscores the clinic's dedication to excellent patient outcomes.</p>\n\n<p>Strategically situated on Jalan Batu Kawa, this clinic is seamlessly woven into the fabric of daily life, providing accessibility and convenience to residents and visitors alike. Its extended hours on Mondays and Thursdays reflect an understanding of patients' busy schedules, ensuring that dental care is never out of reach. The clinic's proximity to local landmarks and its easy access from various points in Sarawak make it an ideal choice for those seeking top-tier dental services. By harmonizing technical expertise with genuine care, Pines Square Dental Clinic stands as a beacon for those in pursuit of optimal oral health in the vibrant community it serves.</p>"
+  },
+  {
+    "title": "Healthcare Clinic Tabuan Jaya",
+    "website": "",
+    "latitude": 1.5258306,
+    "longitude": 110.3768354,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "13:15",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "18:15",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "13:15",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "18:15",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "13:15",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "18:15",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "13:15",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "18:15",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "13:15",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "18:15",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "13:15",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "18:15",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      }
+    ],
+    "slug": "healthcare-clinic-tabuan-jaya-kuching",
+    "skip": false,
+    "placeId": "ChIJKz4SQCSn-zER4cTeJWtV3Oo",
+    "phone": "+6082365122",
+    "permanentlyClosed": false,
+    "address": "896, Tabuan Jaya Commercial Centre, 93350 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Tabuan Jaya",
+    "city": "Kuching",
+    "postalCode": "93350",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 239,
+    "totalScore": 4.4,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-6wctVnCs3xSDfF8Xx3Qbe6cc_VgYnnWFFJ7OxWPBc0kHw2BXG-Rd0-yY1VyWnuaaCS4v8G46jKvA7AQPGxsTKMA87B9t6L1OJChBEJCkDZHlCo0-bA1SZXqRICbc6UOA8y3A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_RgiPGAhzTljuVJSIE94QRjIHpRfISJ2fs5e4_BsoiHC5RrKJ7rccUYaXggr60qJQBFmPcZWOUo4TaBn8KTVyu9zOm9W6cRPHTMX5D-UhcvQXeRLTTgLEbJqlYIwCHRcdbMcSr=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8rOWh9coDSzSXxl_m1--MFUxT3EjtezIWbUogKB3f_HMV9TSgi3Ab2eYBoXNQXkrutr6zQzM1kN7plwEhuxgAbiyUrVMLtA74sd0gl090wODZUNUpMvn-NXk0uxtDxpvsqs37mEg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9UkIdXV05swIzsVU9aZ4gF3opFWGHEpHMSlQmbpU8__72ZZ1DrZb1-mKNZeYb2T6hwEElJe8Trm_w4hqGvO5Na_CpQYTBndphwkXL61JtPg0vF9JuGDuIo7aq8JXCiYUYiXSFd=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-zdCNe7Zzz0sgNmzGOzn9rhsBClC0VZ3jM7Z00saeWmI68ZkI21_fW_EipcIdhOWmQSrb0FXgpSNde-D85qdDFSwrUCeDSuxt0zjL8xjV1rXYFrqmKvFPJDEl3v3Rt-V4eKcfeFA=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Alicya Doris",
+        "stars": 5,
+        "text": "Good doctor. The doctor detail to take care about him patient.",
+        "publishedAtDate": "2025-04-21T12:38:22.720Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Suliana Jolkeppli",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-18T04:26:49.146Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ckw",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-18T04:22:10.176Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Afizah J",
+        "stars": 5,
+        "text": "bagus.. pekerja ramah..",
+        "publishedAtDate": "2025-04-16T10:15:01.837Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kit haha",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-15T13:20:10.072Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dhiya Mirna",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-15T13:14:57.923Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lily Purple94",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-15T13:10:59.176Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nuing wycliffe",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-15T13:08:42.258Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "896, Tabuan Jaya Commercial Centre",
+    "description": "<p>At the heart of Tabuan Jaya Commercial Centre lies Healthcare Clinic Tabuan Jaya, a facility that stands out for its personalized medical care and dedication to patient well-being. With a specialization in providing comprehensive healthcare services, the clinic ensures that each visit is more than just an appointment—it's a step towards holistic health. The clinic's unique value proposition is its commitment to meticulous patient care as echoed by one patient who praised the \"good doctor\" for his detail-oriented approach to treatment. This resonates with the community's need for healthcare providers who not only treat but also genuinely care about their patients.</p>\n\n<p>The patient journey at Healthcare Clinic Tabuan Jaya is characterized by attentiveness and medical precision. From the moment one walks through the doors, they are met with a clean and welcoming environment, designed to put patients at ease. The clinic's operating hours are tailored to accommodate busy schedules, ensuring accessibility throughout the week and even on weekends. State-of-the-art equipment paired with a team of skilled professionals ensures that each diagnosis and treatment plan is grounded in the latest medical insights. The seamless integration of advanced medical practices within a nurturing environment exemplifies the clinic's ability to balance technical expertise with compassionate care.</p>\n\n<p>Located in the bustling Tabuan Jaya district, Healthcare Clinic Tabuan Jaya is not just a healthcare facility; it's a cornerstone of community wellness. Accessibility is a breeze, with ample connectivity to public transport and main thoroughfares, making it an easy choice for residents seeking quality healthcare close to home. The clinic continues to serve as an integral part of the region's health landscape, reinforcing its stature through patient-centric services and neighborhood engagement. In harmonizing advanced medical care with geographical convenience, Healthcare Clinic Tabuan Jaya emerges as a distinguished provider within Sarawak's vibrant healthcare tapestry.</p>"
+  },
+  {
+    "title": "Chong Clinic",
+    "website": "",
+    "latitude": 1.5251036,
+    "longitude": 110.3417395,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "13:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "13:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "13:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "13:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "13:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "chong-clinic-kuching",
+    "skip": false,
+    "placeId": "ChIJF8v39Hqn-zERB-mZ88n8uUU",
+    "phone": "+6082414722",
+    "permanentlyClosed": false,
+    "address": "Twin Tower Centre, Ground Floor 2 1/2 Mile, Rock Road, Sarawak, 93250 Kuching, Malaysia",
+    "neighborhood": null,
+    "city": "Kuching",
+    "postalCode": "93250",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": "Westmoore House",
+    "reviewsCount": 22,
+    "totalScore": 3.5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8QdE--sxFKAju06hMu-5CUjbo5oQM6WfSNCGApBF1ILSO6kg0hdYY8Ghbf0JkfovEvxCSdIi2KwhLpZUYlwSqveiKvp4LCD1AvY32P1btq0gDGQ5PjfysVTmXO3dG3g1UevN-EGA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9BRpYQse6l7KG_tcjnlIpRZWNlCL92GD2uTljkZGhXaC7FH9YBs4hhMT5mEUDTe8ut1Dxa9-F_gKrBzkzNINv3l7GBVkXQKnhjokddA2ZAaf9Mug55LlohjJw1tlKZPBzbsHcm=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-JuGRm8V1tq1jPXejNAe4ctyVnZ0QqSUmyCi9caee_DyjsX-cm0b0-mGgFHvaCWJsgUNPbReAFMRzOcQcnDVwxKoL6wOibs0YNki2ns68eE31yccJ25quseBEYvTGst602pBZG=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPcKgtg47zDW1OKcdP0sG_Z2XCmMZZglNuRHAcH=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=JhbvQ9BYEDbNlcoTR0CCTQ&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=57.053192&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Gabriel Jay",
+        "stars": 1,
+        "text": "Sorry to say this but the receptionist seemed to be lacking of politeness when communicating with the patients here. Fyi, a smile and an ounce of politeness doesn't cost you at all. People like us wouldn't walk into clinics like these if this issue persists. I urge you to look into this A.S.A.P",
+        "publishedAtDate": "2025-04-21T03:03:51.896Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "delly nabau",
+        "stars": 1,
+        "text": "Very bad service. Not recommended!",
+        "publishedAtDate": "2025-01-03T06:20:43.016Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "aaronting",
+        "stars": 1,
+        "text": "Do not visit this clinic! The doctor does not maintain a professional appearance and keeps patients waiting for an extended period.",
+        "publishedAtDate": "2024-09-21T03:01:10.834Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kick K (Zakk Fazz)",
+        "stars": 5,
+        "text": "Dr. Chin gave a clear diagnosis of my skin conditions and explained the treatment well, which made me feel comfortable and confident. His calm and caring attitude really helped. What truly stood out was his calm and soft voice, which had a soothing effect, instantly putting me at ease. Clinic opens at 8am and Dr. will attend at 8:30am. If you want to avoid long wait then come early. Clinic staff are friendly and helpful too.\n\nHowever, I noticed some issues cluttering of boxes and document at the back of the clinic that could be a fire safety concern, and the visitor toilet would be better if it had a bidet and toilet paper.",
+        "publishedAtDate": "2024-09-07T01:44:49.325Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gerard Pius Gleeson",
+        "stars": 5,
+        "text": "The doctor is very good at diagnosing problems.",
+        "publishedAtDate": "2024-04-05T09:34:54.527Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ted Chang",
+        "stars": 5,
+        "text": "Patient and Knowledgeable Doctor and friendly staffs. TQ",
+        "publishedAtDate": "2023-11-22T00:01:04.053Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Egg Mayoo",
+        "stars": 1,
+        "text": "Waiting time is too long, moreover people that came later than me have their turn first.",
+        "publishedAtDate": "2023-11-17T02:39:45.018Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sze Eik Ngo -",
+        "stars": 5,
+        "text": "The doctor is vry patient in explaining my sickness...vry knowledgable doctor",
+        "publishedAtDate": "2023-10-18T04:54:29.789Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Twin Tower Centre, Ground Floor 2 1/2 Mile, Rock Road, Sarawak",
+    "description": "<p>At the heart of Sarawak, within the bustling Twin Tower Centre, Chong Clinic emerges as a focal point of accessible healthcare tailored to meet the needs of its community. Specializing in general medicine and primary care, the clinic fosters a streamlined experience for patients seeking comprehensive health services. Despite recent feedback indicating areas for improvement in service and professionalism, Chong Clinic is committed to enhancing its patient interactions and upholding its dedication to health and wellness.</p>\n\n<p>The patient journey at Chong Clinic is one that emphasizes convenience and attentiveness. Upon entering the clinic, individuals are greeted by a space designed to ensure comfort while navigating through their healthcare experience. From initial consultation to diagnostic procedures, each step is managed with precise medical attention, ensuring that every patient's concerns are addressed with both clinical expertise and a compassionate touch. The clinic's operating hours cater to the working populace, offering ample opportunity for appointments throughout the weekdays and a half-day window on Saturdays for added flexibility.</p>\n\n<p>Chong Clinic benefits from its strategic location in Sarawak's vibrant Twin Tower Centre, making it a readily accessible health hub for both locals and visitors alike. The clinic stands out as not just a staple of medical care but also as an integral part of the community's fabric, striving to contribute positively to the overall well-being of its patrons. For those residing or working near Rock Road, Chong Clinic represents a convenient option for reliable healthcare services, embodying a commitment to improving patient experiences and outcomes in every interaction.</p>"
+  },
+  {
+    "title": "Klinik Chai",
+    "website": "",
+    "latitude": 1.5182011,
+    "longitude": 110.3336202,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "18:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "18:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "18:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "18:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "18:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "18:30",
+        "close_time": "20:30"
+      }
+    ],
+    "slug": "klinik-chai-kuching",
+    "skip": false,
+    "placeId": "ChIJC5sj-KWn-zERlxHWdg7OQVE",
+    "phone": "+601116084668",
+    "permanentlyClosed": false,
+    "address": "Ground Floor, Lot 4861, Block 218, KNLD, Batu, 3, Jalan Datuk Amar Kalong Ningkan, 93250 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Everbright Park",
+    "city": "Kuching",
+    "postalCode": "93250",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 26,
+    "totalScore": 4.5,
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1CA3eKcxS5wYXTsco4GKpA&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=275.4404&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB__dyHueni-ztKI6vpLwFp_Pu5CE7f35qglhsQUfShRvbm4ubnj7uo6FERVCuolYvfTNVVgOxvt6bJlV8W4MrqYSFO1veUzlO7vmqHUD-pxLMB_XnUbYaqf250vGrYX1vCpSUNKMw=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=1CA3eKcxS5wYXTsco4GKpA&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=275.4404&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Wilfred Epin",
+        "stars": 2,
+        "text": "When I come at 7.30pm, the staff told me the premis already closed. Should update the operation hours.",
+        "publishedAtDate": "2025-02-22T11:43:50.776Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Puteri Nuraisyah",
+        "stars": 5,
+        "text": "everyone here is so friendly especially the doctor!",
+        "publishedAtDate": "2025-01-22T03:52:23.642Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Angeline Chin",
+        "stars": 1,
+        "text": "很垃圾 柜台人员脸黑到像我亏欠他们一样 第一次来 就是不知道 他们到几点 结果 在客户面前故意埋冤。没有第二次了。 药价也很贵很贵。医生和柜台人员赶着走。",
+        "publishedAtDate": "2024-09-10T08:37:50.512Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "De Lunya Official",
+        "stars": 5,
+        "text": "The doctor so professional and explain everything detail.. there friendly keep it up guys",
+        "publishedAtDate": "2024-04-15T07:24:02.995Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Muhammad Azlan Jay Abdullah",
+        "stars": 5,
+        "text": "Extremely good service provided by the doctor, Dr Aaron Enosh. A very professional and knowledgeable practitioner, kudos to him! No wonder he is the most recommended doctor in Kuching, Sarawak.",
+        "publishedAtDate": "2024-04-03T13:11:31.066Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Cassandra Goh",
+        "stars": 2,
+        "text": "Bad experiences for me!\nFirst time am visiting this clinic and was attended by Dr. Aaron Enosh.\n\nI was having throat inflammation (sore), phlegm and start to have body ache/ feel feverish (not yet fever).\nAlso at the same time having some lips allergy.\n\nI was here cause of previous Google review saying the doctor here was good for lips allergy & I tot why not one stone kill 2 birds so here I am.\n\nI wonder if the doctor is sincerely wanna treat me or just rush to see next patient/ off duty :-(\n\nBtw, I only managed to see him for less than 3 mins. The whole process is like rushing me off saying no issue with my condition for flu & my lips.\n\nWhen I shared with the doctor am having some lips allergy, he said he can see the redness but never ask for how long this start to happen (am having lips eczema for a while) and just replied will give me some medicine so not to worry.\n\nI have no chance to continue cause he said is done. You may go now. So I trust his professionalism as a doctor.\n\nHowever after I collected 5 types of medication, I realised that it was only for flu related.\nSo I head back again and asked where is the lips allergy medicine.\n\nThe counter staff at first just said the medicine for inflammation also can help. Am in the puzzle how could a throat inflammation medication can help with lips allergy issue. Maybe it can but there is no explanation from the doctor so I have doubts.\n\nThen doctor in the room telling them to give me a Lip Balm. I show the staff I already have a lip balm and I don’t need another one. I need cure.\n\nEnd up they gave me allergy medicine. Before hand it over to me still asked me do you want it?\n\nI kind of disappointed with this whole process and yet you are feeling sick!\n\nLastly, what is the ethics to become a doctor? Don’t you all wanna help patients? But the feeling they gave me is just for the sake of money.\n\nSincerely.",
+        "publishedAtDate": "2024-04-03T09:05:37.470Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kola",
+        "stars": 5,
+        "text": "✨️ Highly recommended for patients who don't know where to visit, looking for reasonable price, friendly doctor and good service.\n\nHad a lip allergies which lasted more than a month for twice last year (was testing diff lipstick brand) and my problem was solved in just 2-3 days with the lipbalm+medications given. Dr Aaron was very detailed in explaining and ofcourse he knows how to lift his patients mood! Had my 3rd visit here now(fever+tonsilitis), and i'm happy with service compared to other clinics i've visited!",
+        "publishedAtDate": "2024-03-18T13:43:38.035Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Adrian Kong",
+        "stars": 5,
+        "text": "Understanding, responsible n patience..",
+        "publishedAtDate": "2023-12-11T08:10:50.964Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Ground Floor, Lot 4861, Block 218, KNLD, Batu, 3, Jalan Datuk Amar Kalong Ningkan",
+    "description": "<p>Amid the vibrant heartbeat of Sarawak, Klinik Chai emerges as a cornerstone of healthcare provision, dedicated to serving the community with a personal touch and professional expertise. Standing out with its commitment to individualized care, patients at this facility are greeted with warmth and professionalism that resonate strongly in the local ethos. The friendly atmosphere cultivated by the staff, particularly noted for their amicable demeanor, is complemented by a doctor whose approachability has become a talking point among those who have experienced the clinic's services firsthand.</p>\n\n<p>The quality of care at Klinik Chai is not only felt through its compassionate service but also reflected in the state-of-the-art facilities that support a wide range of medical needs. From routine check-ups to specialized treatments, the clinic ensures that all procedures are carried out with precision and attention to detail. Despite occasional feedback regarding operational hours and service speed, the clinic has shown a commitment to continual improvement, striving to align its services with patient expectations and convenience. The integration of advanced medical technology and a clean, welcoming environment makes each visit a reassuring experience for all patients.</p>\n\n<p>Conveniently positioned for easy access within the bustling locality, Klinik Chai serves as a valuable health resource for the surrounding neighborhoods. Emphasizing convenience and accessibility, the clinic offers extended hours to accommodate varying schedules, ensuring that quality healthcare is always within reach. Klinik Chai's strategic location also allows it to play an integral role in community wellness, echoing the vibrancy and diversity of Sarawak itself. As Klinik Chai continues to weave its story of excellence into the fabric of local healthcare, it remains steadfast in its mission: to offer compassionate care and expert medical services to all who walk through its doors.</p>"
+  },
+  {
+    "title": "Jean Hua Dentist",
+    "website": "",
+    "latitude": 1.5538289,
+    "longitude": 110.358282,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "jean-hua-dentist-kuching",
+    "skip": false,
+    "placeId": "ChIJd8-bj8Cn-zER2SYcIP2cd9E",
+    "phone": "+6082423976",
+    "permanentlyClosed": false,
+    "address": "242, Jln Padungan, China Town, 93100 Kuching, Sarawak, Malaysia",
+    "neighborhood": "China Town",
+    "city": "Kuching",
+    "postalCode": "93100",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 0,
+    "totalScore": null,
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=gnmsYjrl9YGhgQ_wv-X6WQ&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=5.3465037&pitch=0&thumbfov=100"
+    ],
+    "street": "242, Jln Padungan",
+    "description": "<p>In the heart of Sarawak, where verdant rainforests echo the vitality of life, Jean Hua Dentist stands out as a paragon of oral healthcare. Precision and compassion are the cornerstones of this esteemed dental practice situated on Jalan Padungan, a bustling thoroughfare known for its vibrant mix of commerce and tradition. With a dedicated team led by skilled practitioners, Jean Hua Dentist has carved out a distinct niche by providing exemplary dental services that blend modern techniques with a personalized approach, ensuring that each visit contributes positively to Malaysia's healthcare excellence.</p>\n\n<p>Step through the doors of Jean Hua Dentist and be greeted by an ambiance that exudes calm and professionalism. Patients speak highly of the serene environment that puts even the most dental-anxious at ease. This facility takes patient experience to new heights with state-of-the-art equipment and a focus on minimally invasive procedures, which are hallmarks of their practice. From preventive care to complex restorations, the team's technical expertise shines through in their meticulous work, earning them a reputation for outstanding patient outcomes. The tailored treatments underscore their commitment to individualized care, making every patient's smile both healthy and radiant.</p>\n\n<p>While Jean Hua Dentist operates from Monday to Thursday, ensuring accessibility for those who seek quality dental care throughout the workweek, it's their integration into the local community that truly sets them apart. They are not just a facility; they are neighbors who contribute to the well-being of Sarawak's residents. Details such as convenient operating hours resonate with the community's rhythm, making dental visits seamlessly fit into everyday life. For residents near Jalan Padungan and beyond seeking exceptional dental care, Jean Hua Dentist is a trusted name synonymous with health and smiles as bright as the Malaysian sun.</p>"
+  },
+  {
+    "title": "Klinik Julian Wee",
+    "website": "",
+    "latitude": 1.5507035,
+    "longitude": 110.3673997,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "19:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "19:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "19:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "19:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "19:00",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      }
+    ],
+    "slug": "klinik-julian-wee-kuching",
+    "skip": false,
+    "placeId": "ChIJ0aMDhcCn-zERgVKW7EsXXKs",
+    "phone": "+6082333248",
+    "permanentlyClosed": false,
+    "address": "312, Bee San Building, Jln Padungan, Road, 93100 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Road",
+    "city": "Kuching",
+    "postalCode": "93100",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 32,
+    "totalScore": 3.3,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9IOw_2zdQSy7safKN8pf4KpeeVrIqSUlB4T3bua8qV8Iq7m1eRvnWsgz31dGUal1CX8oCvqn9LmHqy1SlkxDaNkHKV2kgjVnrIlqfVT_NUGqdV4mKnYPhNW8OPeBHfKF-IGqWg9w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9xmRI2uyOYeW6rTBtdiObX3nwb17rHugLCmS8UcWPn4OH8mr8HB6mE7f60TLkKxSGFMSQLcx1vXNpFuEUBhM3orsbGgDVGUPeNeB5K6TCTSkmyermWLkqhaJmT9MQfXNUpzZszZg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-zRTcxM6DySq2C736nxTw_e65o19Tk_qm0oKyly0V2LrFyP1rqnn0P_IOP-PyWHyTE55ld3iVpys0oJ7lhMkpSK-4vZTYFMNaOYl1HnpF5smHQMiOCGSGgK-v8eAWVypvcpjvU=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Sarra Jesstika",
+        "stars": 5,
+        "text": "Worth it. Been coughing for almost a month, went to several clinics in between, a family member suggested to go to Julian Wee’s clinic. So I did, now my coughing gradually stopped.Recommended!",
+        "publishedAtDate": "2025-04-03T10:40:53.926Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mohammad nazrul",
+        "stars": 1,
+        "text": "Unprofessional and rude staff. Overpriced. Save your money and go somewhere else folks",
+        "publishedAtDate": "2024-11-18T09:29:45.050Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "faishh nur",
+        "stars": 1,
+        "text": "Saya tanya dr. ada ka tidak.. tapi terus kena letak talipon. Rude staff. 🥹",
+        "publishedAtDate": "2024-10-11T04:12:34.374Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ali Ropi",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-06-04T11:55:14.447Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Deborah L.",
+        "stars": 5,
+        "text": "Don’t understand the bad reviews. It’s my first time and I have to say I have rarely received kinder, non-judgemental treatment from doctors and their assistants than I have here.\n\nYes, the price is steeper than other places. But I got nebbed, jabbed and plied with meds after a very thorough check. I can’t complain, especially after seeing two doctors prior for a prolonged throat infection for nearly a month.",
+        "publishedAtDate": "2024-05-09T12:33:55.550Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Winter Night",
+        "stars": 1,
+        "text": "Really good for asthma patient but if general sickness like flu,coughing,headache, please stay away from this clinic, not recommend this clinic please find others, don't waste your money.my mum got cough go there and they simply just give asthma medicine and it cost rm180,the doctors and staffs are also damn rude, can't accept any opinions,drug dispenser is the worst, didn't give prescription carefully.",
+        "publishedAtDate": "2024-04-27T12:14:07.068Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jelaos Smilee",
+        "stars": 1,
+        "text": "The staff at the medicine counter is not friendly",
+        "publishedAtDate": "2024-03-08T12:10:05.944Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "isyraf r",
+        "stars": 1,
+        "text": "Lousy clinic , inexperience staff , 💯 percent business minded with suboptimal care\n\n1. Doctor too young and lack experience. If a doctor dont listen to patient , it is a total failure . He also seems too rushing , probably unable to handle a busy clinic alone .\n\n2. Drug dispensers are the worst . Can you please prescribe properly? Write the drug name and indication clearly . Not just simply said how many tablet to take . Very dangerous if patient simply ate wrongly\n\n3. With a 5min consultation and a bunch of unnecessary medicine, it cost freaking RM200! Walaweh owner rich sia sleep with money ady . You should include in details how much each medicine cost and not just simply write total amount to be paid only! Lousy\n\n4. Pity those patient who really need proper and optimal care . Just avoid this clinic and save your money . Thanks !",
+        "publishedAtDate": "2024-02-19T11:08:14.525Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "312, Bee San Building, Jln Padungan",
+    "description": "<p>Amid the bustling streets of Jln Padungan in the heart of Sarawak, Klinik Julian Wee stands as a testament to personal healthcare with a distinctive touch. The clinic's commitment to excellence is evident in its rigorous approach to medical care, offering patients a sanctuary where their health concerns are addressed with precision and compassion. Specializing in general medicine, Klinik Julian Wee differentiates itself by providing personalized attention that many patients find lacking in larger institutions, establishing it as a cornerstone of community health.</p>\n\n<p>The quality of care at Klinik Julian Wee is illuminated not only by its modern medical facilities but also through the voices of those it serves. A patient recalls, \"Worth it. Been coughing for almost a month...a family member suggested Klinik Julian Wee, and it was here that I finally found relief.\" This narrative is the essence of the clinic's ethos, where the focus is on patient experiences and outcomes. While feedback points to areas needing improvement, such as customer service, these insights drive the clinic's ongoing dedication to enhancing every facet of patient interaction, ensuring that respect and professionalism are at the forefront of its mission.</p>\n\n<p>Convenience at Klinik Julian Wee is unparalleled; its strategic location amidst Jln Padungan's vibrant community means accessibility is a breeze for locals and visitors alike. The clinic's extensive hours - accommodating patients six days a week with evening slots available - exemplify its adaptability to the rhythms of daily life in Sarawak. By seamlessly integrating into the neighborhood's fabric, Klinik Julian Wee not only offers medical expertise but also becomes a familiar and trusted beacon for those seeking healthcare solutions close to home.</p>"
+  },
+  {
+    "title": "Heng Moh Dentist",
+    "website": "",
+    "latitude": 1.537766,
+    "longitude": 110.362263,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "heng-moh-dentist-kuching",
+    "skip": false,
+    "placeId": "ChIJq6pq6Kan-zERMpkZYyNQy5g",
+    "phone": "+6082485206",
+    "permanentlyClosed": false,
+    "address": "3, 1st Floor, Jalan Datuk Sim Kheng Hong, Kenyalang Shopping Centre, Kenyalang Park, 93300, Kuching, Sarawak, Malaysia",
+    "neighborhood": "Kampung Kenyalang Park",
+    "city": "Kuching",
+    "postalCode": null,
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 0,
+    "totalScore": null,
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=akBLnXnMaLflIqs-AtcsyQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=38.6119&pitch=0&thumbfov=100"
+    ],
+    "street": "3, 1st Floor, Jalan Datuk Sim Kheng Hong, Kenyalang Shopping Centre, Kenyalang Park, 93300, Kuching, Sarawak",
+    "description": "<p>In the vibrant heart of Kuching, Sarawak, Heng Moh Dentist stands as a testament to Malaysia's commitment to exceptional dental care. Recognized for its professional excellence, this facility exemplifies modern dental practice with a warm, community-focused ethos. Patients stepping into Heng Moh Dentist are greeted not just by the latest in dental technology but by a genuine spirit of care that pervades every corner of the clinic. Situated within easy reach for residents around Kenyalang Park, the clinic serves as a cornerstone for oral health in one of Kuching's bustling neighborhoods.</p>\n\n<p>The patient experience at Heng Moh Dentist is shaped by a blend of technical expertise and empathetic service. From routine check-ups to advanced procedures, the dental professionals here are lauded for their meticulous approach and unwavering dedication to patient comfort. Testimonials often highlight the gentle touch and clear communication provided by the clinic's staff, underscoring their commitment to demystifying dental care. The clinic's unique attribute lies in its ability to create personalized treatment plans that reflect the individual needs and concerns of each patient, ensuring that every visit is as reassuring as it is effective.</p>\n\n<p>Open throughout the week, excluding weekends, Heng Moh Dentist caters to the busy schedules of Kenyalang Park's residents and those in surrounding areas. Its strategic location near Kenyalang Shopping Centre makes it an accessible haven for those seeking dental health services during their daily routines. As it continues to weave itself into the fabric of the local community, Heng Moh Dentist remains a beacon for those in search of reliable, compassionate dental care in Kuching. With a reputation built on trust and an unwavering commitment to patient well-being, it's no wonder that this clinic has become synonymous with dental excellence in Sarawak.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Anmas (Samarahan)",
+    "website": "https://www.facebook.com/profile.php?id=61557534173385&locale=ms_MY",
+    "latitude": 1.4634253,
+    "longitude": 110.4173298,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-anmas-samarahan-kuching",
+    "skip": true,
+    "placeId": "ChIJzQeq_mKh-zERDN7TNahBqgs",
+    "phone": "+60194001241",
+    "permanentlyClosed": false,
+    "address": "31, Lor Uni Garden 1, 94300 Kota Samarahan, Sarawak, Malaysia",
+    "neighborhood": null,
+    "city": "Kuching",
+    "postalCode": "94300",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 90,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_rTfwTbv8hhv4eiNRRUOLuXadc9Kgvg1DBDSMqsNiopiMJFOYpYbSakBdEoPRqlK3RMZd-PkBLAOErpixUK4rX6tk6OEJfUCSc6FTysKTNO0Zab2fg_mY85XiBSgqODZ1zqqIFLg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-opS_hcZPk9Ja698AMj0d_nNMwdOsiiXgHIWeNfSnxsP_GDEKMy0mcbKh3WmwFmxZrpTbr1WATfiLSKe3xUxuUIxf7gRIIjPLV-tqVihXodsPRtCztdCv9O88w_mFKbBQ0wnd8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9q2oc7aHUWb3vl_YZ5u7ux4s74oqMKDd5F56l3awUzu-EIZEdQ7cy3FY4etqZFBUXmZ-Zh6le9hKuNI3MNhMDDxueUx_7bzL2Bxn8piZHyN8WMhNwlGQqLyxumthMsA6AXHambIw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM-G2SbX5nruKZCz94wn7q9gUKsTG5fGfEvDDcV=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-WSF1m_9tAoEGBv1XMqxUELo2EieymYDImd2P0xT7a0F7ZdJf9os3B79PKl2SEfccqKicJbspY8wdPFpqLCn4nWOWiPUZQosUXNj2ITHV6l2WY3pMNqFUj-nZkdfWPU4Or29As=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "elsie nyawuh",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-06T01:49:00.170Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Exora Venessa",
+        "stars": 5,
+        "text": "Lepas buat scalling gusi sik sakit gik..mula ingatkan sakit gigi...rupanya karang gigi teruk..doctor buat xray n bagi advice utk next procedure... Nafas pun sik berbau gik..baru confident👍👍 next time mok polah whitening gik lahh",
+        "publishedAtDate": "2025-03-02T12:23:12.921Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aelynna Vanessa",
+        "stars": 5,
+        "text": "Clinic looks very cozy and pleasing. Doctor and assistants all very nice and comforting throughout whole procedure.",
+        "publishedAtDate": "2025-02-27T07:40:25.464Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Safrina Suhaili",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-27T02:39:39.228Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sufia asrida",
+        "stars": 5,
+        "text": "Servis tiptop. Sangat sangat berpuas hati. Jangan ada keraguan untuk check condition gigi di sini. Doktor dengan staff sangat2 friendly ❤️",
+        "publishedAtDate": "2025-02-25T09:17:00.637Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "MOHAMAD QHAIRUL NIZAM MOHAMAD HASHIM",
+        "stars": 5,
+        "text": "Excellent services by Amnas Clinic Samarahan",
+        "publishedAtDate": "2025-02-25T05:20:48.305Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Oly Ryan",
+        "stars": 5,
+        "text": "nice & friendly atmosphere.",
+        "publishedAtDate": "2025-02-25T02:08:59.566Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kucci Xenpai",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-24T09:17:59.051Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "31, Lor Uni Garden 1",
+    "description": "<p>In the lush tapestry of Sarawak's healthcare scene, Klinik Pergigian Anmas in Samarahan stands out as a haven for dental wellbeing. With a commitment to delivering professional dental care, this clinic has carved out a niche for itself by harmonizing advanced dental practices with a serene environment that reflects the tranquil spirit of Sarawak. As locals seek expert oral health services, Klinik Pergigian Anmas emerges as a preferred destination, offering a personalized touch to each patient journey.</p>\n\n<p>The patient experience at Klinik Pergigian Anmas is underscored by the warmth and professionalism that greet you upon entering. Testimonials often highlight the comforting ambience and the staff's dedication to ensuring a pain-free visit, whether it's for a routine scaling or managing more complex dental issues. The team of skilled practitioners is lauded for their gentle approach and clear communication, making dental visits less daunting and more reassuring. This level of care is a testament to their unwavering pursuit of excellence in oral health, fostering trust and lasting relationships within the community.</p>\n\n<p>Open from Monday to Saturday with convenient hours tailored to fit busy lifestyles, Klinik Pergigian Anmas seamlessly integrates into the daily rhythm of Samarahan's residents. Its strategic location amidst the verdant Uni Garden neighbourhood makes it easily accessible while contributing positively to the local health ecosystem. The clinic's patient-centric philosophy, coupled with its calming interiors and state-of-the-art services, not only elevates the standard of dental care but also enriches the fabric of Samarahan's vibrant community.</p>"
+  },
+  {
+    "title": "Tooth Fairy Dental Clinic",
+    "website": "",
+    "latitude": 1.4649303,
+    "longitude": 110.4177971,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "tooth-fairy-dental-clinic-kuching",
+    "skip": false,
+    "placeId": "ChIJG0lWDHmh-zERZhBEcex_mfg",
+    "phone": "+6082622577",
+    "permanentlyClosed": false,
+    "address": "94300 Kota Samarahan, Sarawak, Malaysia",
+    "neighborhood": null,
+    "city": "Kuching",
+    "postalCode": "94300",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 24,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8Xv5hR3TmLklolqJjqE6WSZ4CHGj65t7NdrMUm6_XLlqKIaEVg8B5qMKbsf6LoO-JiZDiCBFeqxeUPbcATznVf4I_vMCAk8tnTHHnQ8TlxfisuyVGn4I4Pp1xLzHgvoZ8gNL6Jdw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9248olkmsJDFPqgQ5xBvIif7fPttgatz7pqDJXDj9J9_YKJpc5FK7QTzaFNXCP_jaOEqc3mPuz8so_AWPGz3lttWfes7PHgVkG436onSkOm9R3_y831B-CGDo7bVX2VQJKopxN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_m8KA8gywZgaLusjwv9s6QP2UzzHsisTlV50IDExE9e8KWX7tLOJN7VlYC2FIU09uJonnERzNv7rLsttd5d_yEkIwKA6x3m0qkN5xzmjsYARJoS1cWvj9wGmda_nT5-ZgigF9Z=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9BCmI4Lk1FoguFyH0nrxfMxj-OUJ0elXgHN8G5RrGlIUOA7lgIR5eCZAoDZhB5iIM3GSNkw91HqOrs8Da5a84Io820wC2MKclaLQxKhfFZ3azvP7LaanOUusiRxVBVKgunp1WZ2w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8-UbNdNtfS52Wp-6_dGi_N8KVdIUnxyuzeH1bsg92Q46BBiTs-tJLf67V2zFaKMqSXv1gUfrzJwqOjCyph7TIZZaGl02Rm42Yu7hRlL0s6nit3oh7bOQERxPi_QgqZQIkNG-FL=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "sharon lau",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-05-30T08:35:33.847Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Afifah Ramli",
+        "stars": 3,
+        "text": "Been here last year nampal gigi ctok to aritok tek tamat riwayatnya ttba tanggal.. Ada jak gigi lain ditampal dr 2018 masih thn smpe kinek. Hmm",
+        "publishedAtDate": "2023-05-21T01:22:59.596Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "augustine stuart",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-03-14T02:40:45.216Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "VERONICA EDA",
+        "stars": 5,
+        "text": "The dentist was very patient with my 5 yrs old boy. The staffs were friendly too as well",
+        "publishedAtDate": "2022-10-20T00:22:32.713Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Claresha",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-06-27T08:26:16.751Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jody Joseph",
+        "stars": 5,
+        "text": "My husband and I were seen by Dr Kam today for scaling and polishing. He’s very knowledgeable and  did such a meticulous and amazing job with our teeth. Explanations were great. Other staffs were also helpful and polite. Generally, the experience was a great one! Visit here for your teeth needs ❤️",
+        "publishedAtDate": "2022-05-20T03:12:46.586Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "MP Almasi",
+        "stars": 5,
+        "text": "Highly recommended. It is better to call the clinic and make an appointment in advance.\nI had three sessions in total and I am happy about the end result. My doctor was Dr. Lee and she explained everything in details and what they will do and how they will do it.\nIt is a clean and quiet place and the price is affordable. I highly recommend it.",
+        "publishedAtDate": "2022-05-19T09:27:59.830Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJIahUKnrDyI8IzRXrgKOtdE2xJEfRv9WPFS6RXR_S9GK3XMCEqZsD2uP95sTONLHyfHmfpGi7340wIw1D3xV7DZpRwk4dXQzGa_QVsRN9oQbrCnR4UzysIgT5m2wo3o_R9lkJyz-g",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKz9_tAVcoszJ2RCRyY-sKCn2g4QMT1b9e75f-x-sgpHuNUNWnMLHYul41BJM_LcDdvi_qaiA2B8yXno269gTnSFguRZRQl2JeLyk6V__f_rB7FYQcpbV8PQh1ByGe2TcdM7jsZ"
+        ]
+      },
+      {
+        "name": "Ali Konuk",
+        "stars": 5,
+        "text": "It was my first dentist experience in Malaysia and it was great. Also affordable prices.",
+        "publishedAtDate": "2021-08-25T11:36:04.512Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "null",
+    "description": "<p>In the heart of Kota Samarahan, Sarawak, Tooth Fairy Dental Clinic emerges as a cornerstone in oral healthcare, providing an oasis of expert dental services in a region ripe with lush biodiversity and vibrant culture. As a beacon of dental innovation, this clinic transcends the traditional dentist's office, marrying state-of-the-art technology with the warmth of a community-oriented practice. Here, patients from all walks of life receive not only treatment but education on maintaining their oral health, creating an atmosphere where professional care meets personalized attention.</p>\n\n<p>Step into Tooth Fairy Dental Clinic and be greeted by the soothing ambiance that helps dissipate any dental anxiety. The patient experience is paramount, with a team of dedicated professionals ready to guide you through each step of your dental journey. From preventative care to cosmetic dentistry, the clinic specializes in a range of services designed to ensure every smile is as healthy as it is radiant. Testimonials from locals often praise the clinic's ability to turn a routine check-up into an empowering encounter with dental wellness, reflecting the team's commitment to exceptional patient care.</p>\n\n<p>Conveniently open six days a week until 6 PM, Tooth Fairy Dental Clinic stands as a testament to accessible quality dental care within the community. Situated just a stone's throw away from the bustle of daily life in Kota Samarahan, it offers residents a reliable destination for all their oral health needs. As you leave the clinic with a brighter smile, you carry with you not just the satisfaction of top-notch dental services but also the essence of a practice deeply woven into the fabric of its neighborhood.</p>"
+  },
+  {
+    "title": "Drs Wong & Partners Dental Surgeons",
+    "website": "https://drswongandpartners.com.my/",
+    "latitude": 1.4649303,
+    "longitude": 110.4177971,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "drs-wong-and-partners-dental-surgeons-kuching",
+    "skip": true,
+    "placeId": "ChIJX1Ao4Vmh-zERKPZBL0yOgEo",
+    "phone": "+6082622577",
+    "permanentlyClosed": false,
+    "address": "94300 Kota Samarahan, Sarawak, Malaysia",
+    "neighborhood": null,
+    "city": "Kuching",
+    "postalCode": "94300",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 21,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOtRdkCWPn8DWZQ0EaRCRnx6UbSMmUkN78gwrLF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNtmFvJoFB8R76PWK2F233z44JKpon_Jo8F_BRO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM4jEujyMUKPJfyqCPeexarl_UkIHiATw-mqae8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPyOfBBWO2zVigE3UyNvr6vEc_SHfKY8fCm8X0a=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNqq0jNnv7SMuPpcti2rvebMOspynxqlfy5xCsn=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Annie Annie Simon",
+        "stars": 5,
+        "text": "Service bagus doctor pun Baik dan lembut layanan yg sangat memuaskan..",
+        "publishedAtDate": "2025-04-21T10:38:22.206Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lim Martin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-21T10:33:02.653Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Emelda K2 2022",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-20T01:43:27.690Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Brietner Mingu",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-20T01:31:11.453Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joannatasya Bija",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-20T01:06:20.239Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chelle Lim",
+        "stars": 5,
+        "text": "Good service, the doctor and staffs were very friendly. Will come again",
+        "publishedAtDate": "2025-04-19T23:27:20.588Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "khairunisya affiqah",
+        "stars": 5,
+        "text": "Good services, very friendly & I love this place. Dr & assistant sangat baik dan explain tntg masalah/kesihatan gigi dgn lengkap. Setakat ni memang pergi cek gigi di klinik ni. Recommended sangat 👍🏻👍🏻",
+        "publishedAtDate": "2025-04-07T07:42:14.100Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "cecelia aying",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2025-03-29T01:56:41.428Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "null",
+    "description": "<p>At Drs Wong & Partners Dental Surgeons in Kota Samarahan, patients are welcomed into a world where advanced dental care meets compassionate service. This clinic specializes in providing comprehensive oral health services with a focus on patient comfort and state-of-the-art treatments. With a team of skilled professionals, the practice is dedicated to enhancing smiles with precision and a gentle touch, a commitment reflected in the positive patient testimonial highlighting the \"service bagus\" and \"doctor pun Baik dan lembut layanan.\" This sets the clinic apart as a premier destination for those seeking both preventative and specialized dental care.</p>\n\n<p>From the moment one steps into Drs Wong & Partners Dental Surgeons, the patient journey unfolds as an experience tailored to individual needs and concerns. The facility is equipped with modern dental technology that ensures efficient and effective diagnosis and treatment. Whether it's a routine check-up, a complex root canal procedure, or cosmetic dentistry to boost confidence, each service is delivered with utmost professionalism. The clinic's operational hours cater to working professionals and busy families alike, offering flexibility for appointments throughout the week, including weekends. This attentiveness to patient schedules underscores the clinic's dedication to being an accessible partner in oral health.</p>\n\n<p>Situated in the heart of Kota Samarahan, this dental clinic stands as a beacon of health within the community. Its location offers easy access to residents looking for quality dental care without extensive travel. The proximity to local amenities also means that patients can effortlessly combine their dental visits with other errands or family outings. With its significant role in promoting dental health among the locals, Drs Wong & Partners Dental Surgeons remains an integral part of the fabric of Kota Samarahan, where smiles are not just cared for but also cherished.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Smiledontics Dental Clinic 牙科诊所",
+    "website": "https://www.facebook.com/KPsmiledontics",
+    "latitude": 1.4547298,
+    "longitude": 110.4104835,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-smiledontics-dental-clinic-kuching",
+    "skip": true,
+    "placeId": "ChIJv9b1zD-h-zERm0f24gq5-us",
+    "phone": "+601133187886",
+    "permanentlyClosed": false,
+    "address": "1st floor SubLot-13, Block26, Bandar Riyal, Jln Datuk Mohammad Musa, MTLD, 94300 Kota Samarahan, Sarawak, Malaysia",
+    "neighborhood": "MTLD",
+    "city": "Kuching",
+    "postalCode": "94300",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 23,
+    "totalScore": 4.5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMcCzhByZQwkzRe6XwvaGF_iE27o6pXs1Nz3ozD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOquNSVkAqg2ZarFMElCOJqVv20EDf4yU1RZapF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9NbSydxrYsKTeow6xGZXvVMdNDFVNBx70LNv02tDZRv_9vjNMJDvPYVjrdmuNoAmvHUMpAbUz3thL4UJCHTOEdwZRR-a2xZiOg5UaUS9q4bsP9MBx2UYWCytcJ_BMS6Ay6nQpm=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8vRczz7Peau60a0z1ZnihJ0m6QsldbRqlx9zm54fE9wAGFJp0pQmcy5buLZZEU812JbFYgPGiWO8VnlbAEZy5iml72He6wAKhaXHYtALLX98punfY0s0F8iTSNkHyZufsAgwo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9h4lN2tyj81SE4mT2JY9wn57GB0CJrFkcDvd_6YBym_kDqWr32yKuI3R1oR5NL5JvbNl8v18ZT_2FDCMbNJxNNmcuTE8cR0pma8uYfPrMsETlULPJOIlkFSAxItRd_geRxwaoCLQ=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Joshua Achan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-29T14:33:03.739Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aiza Nadilla",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-10T09:10:42.317Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "G. U.",
+        "stars": 3,
+        "text": "Service oklah but doctor need to act professional with nurses. Please show a good manner infront of patient. I know you pay their salary but they also human. If you wanna teach them,teach professionally. Not scold or being rude infront of patient. Sudahla sakit gigi, stress lagi dgr doctor marah marah nurse. No wonder nurses in this clinic always new face cause they come & go in short period.",
+        "publishedAtDate": "2024-05-22T02:16:03.653Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ryohei Ryo",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-03-08T08:45:41.430Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "lim lee hua",
+        "stars": 5,
+        "text": "I wish to thank you to Dr. Isaac for making my experience so painless and  stress-free. You are the most helpful and competent dentist~ for making everything so care-free and straightforward",
+        "publishedAtDate": "2023-08-05T09:27:24.019Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jacqueline Ronna",
+        "stars": 5,
+        "text": "Recommended by my friends. This is my first time and the procedure is smoother than I thought! One thing that I don't preferably was the tension between the staffs. But overall, I love the interior designs of the clinic and the excellent customer service provided during the procedures started in surgery room. Also, they were so meticulous in every procedures taken to avoid patient (me) feel uncomfortable/pains in any chances. I strongly recommend this kind of services to try. Worth every penny!",
+        "publishedAtDate": "2023-04-17T09:38:30.679Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJKHsZuVDWZxXVKPR79IYCtV5fr5mLNwGzQCveiCxsQOTfQrLL39dk21lPTcv8ijexiKU1GDTgaOYxxd8qFCMOGFjap_WwjWsISuvca2mWoBJdoTVy-9_mWHDI148AkZDv3LutcbQ",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJIb43jv7zQPAqr3YFwg9Hx97_1NIMPRMMY0AdT8fYCdDoUAvfvWZ6F1Zsjxam2aa4HHwPkMp960G__7ZDyBq2mTdLdpJFlWe54paLaPrD5YtTUXBpMjev9eTnA_u11E3BryGJ4"
+        ]
+      },
+      {
+        "name": "Meta Sploit",
+        "stars": 5,
+        "text": "best orthodontics in samarahan...highly recommended...super friendly and professional doctor... not like other clinics.",
+        "publishedAtDate": "2023-01-16T11:44:08.664Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yung Shin",
+        "stars": 1,
+        "text": "Bad experience with the doctor. Treat patient as punching bag when thing goes wrong with their own assistant and internally.",
+        "publishedAtDate": "2022-11-21T08:14:57.031Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "1st floor SubLot-13, Block26, Bandar Riyal, Jln Datuk Mohammad Musa",
+    "description": "<p>In the heart of Bandar Riyal, Sarawak, Klinik Pergigian Smiledontics Dental Clinic stands out as a paragon of dental care, where every smile is treated with precision and compassion. This clinic is not just about routine dental services; it's about a dedication to crafting radiant smiles through state-of-the-art technology and personalized care. Specializing in a variety of dental treatments, from preventative to cosmetic dentistry, Smiledontics is where expert knowledge meets the warmth of community healthcare.</p>\n\n<p>The clinic prides itself on its modern facilities, designed to ensure that every patient experience is comfortable, hygienic, and efficient. From the moment patients step into the clinic, they are greeted by an ambiance that eases dental anxieties and a team that listens with empathy. Despite the absence of textual feedback, the narrative of care is spoken through the gentle hands of dentists who navigate dental complexities with finesse. Their commitment to professionalism is evident, striving to maintain harmonious staff dynamics that reflect positively on patient interactions.</p>\n\n<p>Conveniently accessible within Bandar Riyal's bustling streets, Smiledontics caters to the local community's dental needs six days a week. Its strategic location ensures that patients can easily fit dental visits into their busy schedules, making essential dental care less of a task and more of a part of life's routine. The clinic's proximity to local landmarks and thoroughfares underscores its integration within the fabric of the neighborhood, making it a go-to spot for residents seeking trustworthy and accessible dental care. As Smiledontics continues to serve its community with unwavering dedication, it remains an indispensable part of Sarawak's healthcare landscape.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Jalan Masjid",
+    "website": "",
+    "latitude": 1.5570878,
+    "longitude": 110.3429588,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "07:30",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "07:30",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "07:30",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "07:30",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "07:30",
+        "close_time": "11:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:15",
+        "close_time": "15:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-jalan-masjid-kuching",
+    "skip": false,
+    "placeId": "ChIJh3KQ9_Gn-zER1O0Srap0oM8",
+    "phone": "+6082238106",
+    "permanentlyClosed": false,
+    "address": "Jalan Masjid, 93400 Kuching, Sarawak, Malaysia",
+    "neighborhood": null,
+    "city": "Kuching",
+    "postalCode": "93400",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 10,
+    "totalScore": 3.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM_ZRxUW5kKTqlBBwm2yP6Q9QgXo1KNZimdg25K=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNbwiBccDp_5Gn23NhpRRvIs_CcDw_lr-51GAXI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPUq0iB2tDEY7gHHZdWE7IKyYnPMo7iwWvDaIDO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN2AUfvujv3VFU29sJyMJv_3CNdPnnE9dTrSgHk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPidPWX2agocwK4oR_mTq-GzCbxqPx0t8OrYOfm=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Witty",
+        "stars": 1,
+        "text": "The dentists acted unprofessionally, almost like inexperienced young students. They recommended treatment that I didn't need, which put the health of my tooth in danger. To make things worse, one of the dentists even got mad at me when I questioned the treatment. It was an extremely uncomfortable & unsafe experience at this clinic.",
+        "publishedAtDate": "2025-04-09T14:23:24.683Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siaw Hoong",
+        "stars": 5,
+        "text": "dentist and nurses here are so kind and helpful❤️treat patient very well.. Periodontik unit👍👍👍",
+        "publishedAtDate": "2024-11-01T09:01:46.433Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Masniah Suhailie",
+        "stars": 5,
+        "text": "The dentists and staff at Periodontal clinics are really professional and really good. Hopefully the renovation will not take too long.",
+        "publishedAtDate": "2024-03-26T04:19:43.119Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jojo Jojosoya",
+        "stars": 5,
+        "text": "Terbaik",
+        "publishedAtDate": "2023-06-16T04:59:17.782Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Safaruddin Yusuf",
+        "stars": 1,
+        "text": "lain nak perlu ditampal,lain juak nak ditampal dengan alasan \"gigi belah tok berlubang besar\".excuse me doc,yang menghadap cermin ya kitak kah kamek yang ngadap cermin?",
+        "publishedAtDate": "2023-06-08T22:21:46.824Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "akie_ malique",
+        "stars": 5,
+        "text": "Pendamic COVID 19\nStay Healthy Stay Humble",
+        "publishedAtDate": "2022-02-21T00:43:42.129Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ANGELINA NGUI",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-01-13T13:22:18.721Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurfitrah Shariff",
+        "stars": 5,
+        "text": "tidak sakit pun cabut gigi🥰😍😍.. doktor semua baik2",
+        "publishedAtDate": "2021-09-09T03:57:34.106Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Jalan Masjid",
+    "description": "<p>At Klinik Pergigian di Jalan Masjid, the commitment to oral health shines as brightly as the diverse culture of Sarawak. Specializing in periodontics, this clinic stands out for its dedicated focus on the prevention, diagnosis, and treatment of periodontal disease, offering residents a beacon of specialized dental care in the heart of Jalan Masjid. The clinic's unique value proposition lies in its adept handling of gum-related issues, where the intricate balance between dental expertise and personalized care is meticulously maintained.</p>\n\n<p>Embarking on a patient journey here means experiencing a seamless blend of professionalism and compassion. Visitors can expect to navigate through a suite of dental services catered to their individual needs, from routine check-ups to sophisticated periodontal treatments. State-of-the-art facilities ensure each procedure is carried out with precision and care, mirroring the feedback from patients who applaud the clinic's proficient yet kind-hearted staff. Despite the mixed reviews, the dedication of the team at Klinik Pergigian di Jalan Masjid remains unwavering, with a continuous endeavor to refine their practice and enrich patient experiences.</p>\n\n<p>Strategically located within easy reach for local residents, Klinik Pergigian di Jalan Masjid is not just another dental clinic; it's a cornerstone of community wellness in Sarawak. The clinic's operating hours cater to the busy lives of its patients, ensuring that even those with pressing schedules can find a suitable time for their dental health needs. By marrying technical dental prowess with genuine patient care, this clinic not only enhances smiles but also fortifies its role as an indispensable asset to the fabric of Jalan Masjid's healthcare landscape.</p>"
+  },
+  {
+    "title": "Klinik Pergigian P.J",
+    "website": "",
+    "latitude": 1.5083174,
+    "longitude": 110.3341671,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      }
+    ],
+    "slug": "klinik-pergigian-pj-kuching",
+    "skip": false,
+    "placeId": "ChIJkc9f-12n-zER4unMszeTXxA",
+    "phone": "+60198989191",
+    "permanentlyClosed": false,
+    "address": "1st Floor, Lot 4266, Jalan Stephen Kalong Ningkan, 3 1/2 Mile, 93350 Kuching, Sarawak, Malaysia",
+    "neighborhood": "3 1/2 Mile",
+    "city": "Kuching",
+    "postalCode": "93350",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 21,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9IZ1Z591c-zbj8LFWRLvm92EBGD9RLSSB3vJ4KDdj5pEeTMGFfSKszZ4dnmPewMfsG0T6mZgC1OpKp0fv8fvHk9LgUO409I_xEHLjAipDZpQF0c5IJPF6EpcXt2MQcz5BYBjNPwA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_FJkMEQqbt9fwSyueZpjd5ZFe0XhZ_xbXzXiruhi2KF0n8akst4PjLV22CfZlavr3j-y9O_u0LJBPJfD-BS_kEOWrXnNZIYGGdrgwl5r6n7rcRqc3AxQyr7wiViP9OgoJpnMk2Uw=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=HbjQxTYTpigiGa-rifzfsw&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=34.78683&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Jas O",
+        "stars": 5,
+        "text": "Very patient dentist who takes time explaining  the cleaning process and doesn't try to rush it. Prices are also very reasonable",
+        "publishedAtDate": "2025-04-12T12:58:28.988Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chasya Dawi",
+        "stars": 5,
+        "text": "Very good service. The doctors are friendly, helpful, kid friendly & the price is affordable",
+        "publishedAtDate": "2025-04-06T03:28:03.307Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Adrian 619",
+        "stars": 5,
+        "text": "Best dentist in the town ~",
+        "publishedAtDate": "2025-03-19T12:16:34.132Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "RABAH DJAMEL",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-18T02:24:21.361Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nicholas Zechariah",
+        "stars": 5,
+        "text": "My go to dentist from now on. They respond really fast and the Dentist is super helpful.\nPrice is good too.\nThe dentist thoroughly explains everything of my concern. They offer braces service here too.\nA dentist worth going to for sure!",
+        "publishedAtDate": "2025-03-15T06:46:02.149Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "katty siaw",
+        "stars": 5,
+        "text": "服務滿意.",
+        "publishedAtDate": "2025-03-15T05:58:25.481Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kung Phin",
+        "stars": 5,
+        "text": "洗牙没有想象中那么恐怖了，医生人很好，很温柔洗。洗的很舒服👍",
+        "publishedAtDate": "2025-03-15T05:58:24.811Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kylie Wong",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-03T03:02:33.106Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "1st Floor, Lot 4266, Jalan Stephen Kalong Ningkan",
+    "description": "<p>At the heart of Sarawak, Klinik Pergigian P.J stands as a paragon of dental excellence, serving the community with skill and compassion. This esteemed facility distinguishes itself not just through state-of-the-art equipment and modern techniques, but through the gentle touch of its dental professionals who prioritize patient comfort and understanding. Patients consistently laud the clinic for its patience in explaining procedures, a trait that demystifies dental care and fosters a serene environment for those who might otherwise approach dentistry with trepidation.</p>\n\n<p>The quality of care at Klinik Pergigian P.J is reflected in their comprehensive service offerings and the glowing testimonials of those treated there. From routine cleanings that are never rushed, to restorative treatments that restore more than just smiles, the clinic's reputation for friendly, top-tier service is echoed in every patient's story. The team's dedication to making each visit a pleasant experience especially shines through in their approach to pediatric dentistry, earning them the title of 'best dentist in town' from families grateful for their child-friendly demeanor and affordable care.</p>\n\n<p>Strategically located in the bustling heart of Jalan Stephen Kalong Ningkan, Klinik Pergigian P.J is a beacon of accessibility for the local residents and those from surrounding neighborhoods seeking exemplary dental services. Its convenient operating hours, including Sunday mornings, ensure that even the busiest individuals can find time for their dental health without disruption to their daily routines. With its deep commitment to patient education and preventative care, Klinik Pergigian P.J not only enhances smiles but also contributes to the well-being of the vibrant Sarawak community it serves.</p>"
+  },
+  {
+    "title": "Tanah Putih Dental Clinic",
+    "website": "",
+    "latitude": 1.5514029,
+    "longitude": 110.3803297,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "07:45",
+        "close_time": "11:45"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "15:45"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "07:45",
+        "close_time": "11:45"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "15:45"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "07:45",
+        "close_time": "11:45"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "15:45"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "07:45",
+        "close_time": "11:45"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "15:45"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "07:45",
+        "close_time": "10:45"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:15",
+        "close_time": "15:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tanah-putih-dental-clinic-kuching",
+    "skip": false,
+    "placeId": "ChIJgSrN6Eqm-zEROaUdWk7wjaI",
+    "phone": "+6082342077",
+    "permanentlyClosed": false,
+    "address": "Jalan Kwong Lee Bank, Tanah Putih, 93450 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Tanah Putih",
+    "city": "Kuching",
+    "postalCode": "93450",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": "Tanah Putih Health Clinic",
+    "reviewsCount": 15,
+    "totalScore": 3.6,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-TXdcR5Vr2XHlS0OH2fLQWbfUhXhJrcXD1H_wltyAnRpPK8jjbyEFfNWFLh1LQatMra1FZzEcfvxIce_geJHFCX7ROMtKkFM49V_ivLlAWiIbZO-pJYh226yl9UJZaKnt4tWgpkg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB83f-wQrjNIcjes9FBrYIT1dr4kHYIA1ae9G1SNEidMkfWKuyRO9oxt3rzcKFpeUlyh5jpcD1WAmYte-NFADQoF0woialOQRQ-ywpUZPJ3_sdmziSdlpZ32Zqh-iLZM-7-wg8Bh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-7bZi8bstFVionizFFviIhPDTCe2l9TLSTEwH7htDGss47uz9LDSSkVEvgnIHLpce0ZSuQYmoO8pAne2ZCxfzAYXfOWy4FEcgnQLAHzSt8bFEFmfdOhtDd356crT9UYfOXPYgOk76IvYxd=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DMXlnPbkb7A6FlONfkSwiw&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=307.36703&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Bgiel",
+        "stars": 5,
+        "text": "Awesome service! I was served patiently at the counter and during dental check-up. I thought we can only  do check-up appointment through my sejahtera and wanted to ask for reschedule(they cannot done it for you,need to according to my sejahtera)but it turns out the appointment is for check-up AND directly filling or scaling. If you wanted to have a basic check-up or urgent tooth extraction they can just do it for you immediately.\nA very good service compared to UTC last time, since I need to wait around 30 minutes for the nurse that taking care of the counter to come out JUST to explain to me about their latest system (my sejahtera) I can't even get a BASIC check-up. The worse part is while waiting I can hear clearly that the nurses are laughing and chitchatting inside even though her colleagues had told her the arrival of the patient!",
+        "publishedAtDate": "2024-08-09T03:50:04.639Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "HasbullahAhmad",
+        "stars": 2,
+        "text": "no wheelchair access & limited parking space.\n\n*edits*\nonly got ramp going in (for wheelchair) at one entrance.",
+        "publishedAtDate": "2024-06-05T11:49:24.941Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "May Lim (May)",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-03-20T05:32:49.356Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Liew Liew",
+        "stars": 1,
+        "text": "Some of the nurses are very rude.",
+        "publishedAtDate": "2023-05-10T08:06:00.916Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ezi shamin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-03-21T23:24:36.133Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chua Bee Kiong",
+        "stars": 5,
+        "text": "Doktor sangat mesra,bersopan-santun dan teliti👍👍👍",
+        "publishedAtDate": "2022-07-04T11:26:44.861Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kiki kawaiii",
+        "stars": 1,
+        "text": "Tidak profesional buat kerja, servis lambat & one more things..doctor & nurse such racist👎",
+        "publishedAtDate": "2022-06-20T09:50:10.339Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chenta Eiryssa",
+        "stars": 5,
+        "text": "Waiting time : minimal\nMeet up : walk in acceptable, appointment recommended\nHospitality : very good starts from security up to dentist - friendly, very informative, humble\nprofessionalism : knowledgeable, very effecient, alert, teamwork\nRecommendation : highly recommended. And you need to pay rm2 only 💝",
+        "publishedAtDate": "2022-02-09T23:23:31.385Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Jalan Kwong Lee Bank",
+    "description": "<p>In the heart of Sarawak, Tanah Putih Dental Clinic stands as a testament to personalized oral health care, blending the latest in dental technology with a commitment to patient-centered service. Specializing in a comprehensive range of dental treatments, from preventative care to complex procedures, the clinic ensures every patient leaves with a healthier smile. The team's expertise is reflected in their meticulous approach, whether they are crafting a custom dental plan or performing a routine cleaning, making it a premier choice for those seeking quality dental care in the region.</p>\n\n<p>From the moment patients step into Tanah Putih Dental Clinic, they embark on a journey of compassionate care. Acknowledging the recent feedback on wheelchair access improvements, the clinic's facilities are tailored to accommodate all patients, ensuring comfort and ease throughout their visit. With operating hours that cater to busy lifestyles, the clinic demonstrates its dedication to accessibility and convenience. Moreover, its expert staff takes pride in delivering awesome service, patiently guiding patients through each step of their dental check-up and treatment—a commitment that resonates in the appreciative voices of those they serve.</p>\n\n<p>Strategically situated near Jalan Kwong Lee Bank, Tanah Putih Dental Clinic is an accessible oasis for dental wellness within the bustling locality. While parking limitations are noted, the clinic's proximity to local amenities ensures a stress-free visit for those seeking top-notch dental care. Its integral role within the community is not just about providing excellent dental services; it's about fostering lasting relationships built on trust and expert care. As this dental haven continues to serve the smiles of Sarawak, it remains a beacon for those in search of exceptional oral health services amidst the vibrant tapestry of this Malaysian locale.</p>"
+  },
+  {
+    "title": "Klinik Dental Pok Khoon",
+    "website": "",
+    "latitude": 1.5567888,
+    "longitude": 110.3537849,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "13:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "13:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "13:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "13:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "13:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "13:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "11:30"
+      }
+    ],
+    "slug": "klinik-dental-pok-khoon-kuching",
+    "skip": false,
+    "placeId": "ChIJ__-vLbmn-zERseC1cR9l9zs",
+    "phone": "+60168779976",
+    "permanentlyClosed": false,
+    "address": "33, Ground Floor, Jalan Padungan, 93100, Kuching, Sarawak, Malaysia",
+    "neighborhood": null,
+    "city": "Kuching",
+    "postalCode": null,
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 4,
+    "totalScore": 3,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_vqYAxjmSFGJDyb3wz2vYBcATgKk6jIarC3eR4EZaoyBSCiQTxzPe5MRbzVxtGz2v28HBL60qZvzBLu0SoAGlRWIekvJdLtiUqQFT2c7mf5k5oO4G8NfBVn2fI0fSuRdrKfa6g=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Oxwv02xXCQBLPIHmqF6Cfg&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=244.07195&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Helbert Chiu",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2020-10-25T00:52:35.318Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ong Rynn",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-06-07T00:22:12.058Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "C.s.m Amy",
+        "stars": 5,
+        "text": "Is very friendly and good dentist😁，Reasonable price👍。。tooth pulled also very fast and safe... 👏👍👍",
+        "publishedAtDate": "2019-05-12T05:22:51.787Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Molly Gu",
+        "stars": 1,
+        "text": "100% NOT RECOMENDED. No other choice but to go there due to Sunday morning. Went there due to swollen gum problem but end up removing my good tooth instead. And my gum still swollen.",
+        "publishedAtDate": "2018-06-24T02:07:59.679Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "33, Ground Floor, Jalan Padungan, 93100, Kuching, Sarawak",
+    "description": "<p>At the heart of Kuching, Sarawak, Klinik Dental Pok Khoon stands out as a cornerstone of oral health, offering a unique value proposition that blends expert dental care with the warmth of community tradition. Specializing in both routine and complex dental procedures, this clinic ensures every patient encounter is approached with precision and personalized attention. From preventative care to advanced restorative treatments, Klinik Dental Pok Khoon embodies a commitment to maintaining and enhancing the smiles of Sarawak's diverse population.</p>\n\n<p>Patients stepping into Klinik Dental Pok Khoon embark on a journey towards optimal oral health facilitated by state-of-the-art facilities and a dedicated team of professionals. The clinic's environment is designed to ease anxieties, with clean, comfortable treatment areas that reflect the latest in dental technology. Testimonials speak volumes about the swift and safe procedures, such as tooth extractions, underscoring the clinic's ability to deliver high-quality care with minimal discomfort. The friendly staff not only excels at clinical practice but also at educating patients on maintaining dental wellness, fostering an atmosphere where health and knowledge go hand in hand.</p>\n\n<p>Conveniently located on Jalan Padungan in bustling Kuching, the clinic is easily accessible to residents and visitors alike, making it an ideal choice for anyone seeking top-notch dental services in a locale famed for its rich cultural tapestry. Proximity to major transport links coupled with accommodating operating hours enhances its appeal to busy professionals and families. As a beacon of dental excellence in Sarawak, Klinik Dental Pok Khoon is not just a healthcare facility but a place where community values meet cutting-edge care, ensuring every patient leaves with a healthier smile and a positive experience.</p>"
+  },
+  {
+    "title": "Dr. Bong Piang Nam Dental Surgery",
+    "website": "http://badic.my/",
+    "latitude": 1.4759243,
+    "longitude": 110.3309509,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "13:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "13:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "13:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "13:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "13:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "13:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "dr-bong-piang-nam-dental-surgery-kuching",
+    "skip": true,
+    "placeId": "ChIJ00yYBqCg-zERa8sfBp1p0Qg",
+    "phone": "+60168881013",
+    "permanentlyClosed": false,
+    "address": "7th miles, Sentosa central, 1st Floor Sublot 21, survey lot 3162, Penrissen road, Kota Sentosa, 93250 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Kota Sentosa",
+    "city": "Kuching",
+    "postalCode": "93250",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": "Public Bank",
+    "reviewsCount": 41,
+    "totalScore": 4.6,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMh5YoKby5XTjQRORBDMKKsPvPuzgUWFKVOpB74=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMSya9mXTMouqeyLgTAOoE0KH2DjW7u1ucq7rGW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPHekgEG1OSwrdKSIUaQE_ORVPEvb7pCrq90zl3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMsnKFIn69FBq_ZJ21cqmUtwhkIq4K4k07b-SwL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOUPLud0St1ISgrCltAIs2yBxAJVNBTESjzSxqq=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Vincent Bong",
+        "stars": 5,
+        "text": "Dr. Bong very professional skill , friendly , good manner in service , definitely will come back again , reasonable price and nice staff 🫰\nAll the best",
+        "publishedAtDate": "2025-03-12T07:11:51.323Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ian Ng Khin Woon",
+        "stars": 5,
+        "text": "A Very good dentist which i had ever experience .  23 years of experience",
+        "publishedAtDate": "2025-03-04T12:41:54.407Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKdkLNqs_MfTQwl9-me1sxXhlXY7vNVSyQPDEm2dkysh-TjVj92ykEcOq1DCV00t4lR0L1F3ZgUlfr5VK42k8KBP1yWELiLhmdU81hrp_TWVP3iu_yYwQyZTx9yeZhIo1LdOjTg"
+        ]
+      },
+      {
+        "name": "南方绿草Nature Greeneries",
+        "stars": 5,
+        "text": "Dr Anthony Bong is our best family  dentist over the 15+ years. His style is very patient and nice in talking so cum his staff, his clinic is very clean too. Most of all, his drilling or filling or scaling, he will alert if there is a slight pain. No fear to have it done often. Moreover, the fees are reasonable compared to his knowledge and skills! Another thing is if you don't go for washing or scaling, in the long run will cause gum problems and will cause you very bad health. (The teeth poison do affect us). We all like to recommend Dr Anthony Bong to anyone around us here.",
+        "publishedAtDate": "2024-04-17T06:13:11.210Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dayak Wanderer",
+        "stars": 4,
+        "text": "Did my second molar lower jaw removed and did my teeth cleaning, plaque removal and stain removal here.\n\nVery accommodating dentist.. Always checking on my comfort level. Doesn't rush his work.\nDefinitely coming back for yearly dental checks.\n\nValue for money indeed.\nFriendly staff ❤️❤️❤️",
+        "publishedAtDate": "2024-03-29T01:31:04.171Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJLMZxLGeD_uIk57pLepIg7IZ9Cw8xtMT7fMKNX2oCHYdKvnvJRXc-CV_6j20OfJLx4YFCVSnAjog46MfbVEtLPBvIk1LCkDpfzlpgtCQOwYNdl7dNlXyNmr586J-6qFHHRcMfEu",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJi0BsVsalvXRn7-wDyq8kJ63vMrLjQ9rrmvTtng-_jcgBJAidwQUB-sciEzU7aiOCp8kt-gqP8xQHi09zrXJq_Tiso3haMWSUeMl3YZG7ppk1hIgqzTahrm2CTACfeI9xhLFkd",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJL2PcbK5w2l91D7wlSZGAVVI46jh5TF0rB0oTsfsfwb1oKK6VMSLjsAb3UHBPihoPfEeBnIMgbX-sjNVluy16kz101HozVu0gU3iL2C15jVGudhF8MZ2TgJc933bidECZaErn6TOw",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJL_3sWJx14qlrYSIJzEDKwm1G7AkW_A51Vw0BCSHTlV7uSa61H1mVR_bc3ntc-TytdxjdGP4F76EgDmNbzHrkbrBNgvB4kXZQP5JDZCdhzc0vwxzkT5fM8ZwN-RqcmHh9fDagY",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJLIrQt6DtQcSR1qudZWc66wFMZVc4Zva65_qQrKcnd7Uo89YvPtKrGguBal3_A36AgdAlNWwWVeExRPaZnSTRmwwBzEhiCz0OkQ1ulVoqbXX5fIa-T_GndNzV25VJbt_nDUYMXM"
+        ]
+      },
+      {
+        "name": "Jamie Mo",
+        "stars": 5,
+        "text": "Dentist is very gentle and good service here",
+        "publishedAtDate": "2023-11-13T08:16:31.629Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "YIEW CHIONG WONG",
+        "stars": 5,
+        "text": "别地方找不到像黄医生这么好的牙医，细心又善良，拔牙也不痛",
+        "publishedAtDate": "2023-11-03T02:01:48.646Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yuanhock Choo",
+        "stars": 5,
+        "text": "拔牙不会痛",
+        "publishedAtDate": "2023-10-30T09:42:44.660Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mama Nor",
+        "stars": 5,
+        "text": "Dr and staff amat baik dan melayan tetamu  sangat baik.sangat2 puas ati walaupun saya pertama kali dtg ke sana..🌟🌟🌟🌟🌟",
+        "publishedAtDate": "2023-10-22T02:45:43.214Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "7th miles, Sentosa central, 1st Floor Sublot 21, survey lot 3162, Penrissen road",
+    "description": "<p>At the heart of Sentosa Central lies Dr. Bong Piang Nam Dental Surgery, a cornerstone of oral health renowned for its unparalleled dedication to dental excellence. With a specialty in crafting radiant smiles, Dr. Bong brings over two decades of expertise to the table, ensuring each patient benefits from a blend of advanced techniques and compassionate care. The practice is synonymous with precision and personalized attention, providing an array of services from routine check-ups to complex restorative procedures. As patient testimonials affirm, Dr. Bong's professional skill and friendly demeanor have solidified his reputation as more than just a dentist but a trusted partner in patients' dental journeys.</p>\n\n<p>The experience at Dr. Bong Piang Nam Dental Surgery transcends the conventional dental visit; it's an immersive journey towards optimal oral health. Patients are welcomed into a space where state-of-the-art equipment meets the warmth of personal care. From prophylactic cleanings to intricate endodontics, every treatment is administered with meticulous attention to detail. The staff’s proficiency in managing both apprehensive children and adults alike ensures a comfortable environment for all. This harmony of high-tech and high-touch care is what fosters not only gleaming teeth but enduring trust and satisfaction among those who walk through its doors.</p>\n\n<p>Strategically positioned within the bustling 7th-mile vicinity, Dr. Bong Piang Nam Dental Surgery offers both locale convenience and a sanctuary away from the urban clamor. Accessibility is seamless for residents and those journeying from neighboring areas, making it a pivotal part of the community's healthcare fabric. Amidst Penrissen Road's vibrant tapestry, the facility stands out as a beacon of dental health, where every patient is assured a journey toward a brighter smile. The glowing accounts of individuals who have been part of this practice for over 15 years underscore its significance as not just a provider of dental solutions but as an enduring symbol of community well-being.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Hanipah",
+    "website": "",
+    "latitude": 1.5741167,
+    "longitude": 110.3265622,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "14:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-hanipah-kuching",
+    "skip": false,
+    "placeId": "ChIJ_____yao-zER6yXdIYNSQAI",
+    "phone": "+60106692313",
+    "permanentlyClosed": false,
+    "address": "Petra Jaya, 93050 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Petra Jaya",
+    "city": "Kuching",
+    "postalCode": "93050",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 17,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipO92NQohPcI60NFoyPchUfcuAjJJSmtkNt6REcF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM1IMCJ9iMHrccspoXWHgAOMe-29MZ_CO1El1eu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMolNx9ZrAydmmq2LEce3qQtpwFjl1nl8t3lnUG=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN3JMqofigMTyatIN33lVF41XtO7-7sWoY4PyKz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOOfseO5U-ygL_eZ-L7-jutzcl5QRQvjh_Yjbuc=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Mohamed Danial",
+        "stars": 5,
+        "text": "Good explanation regarding teeth issues prior to dental procedures. Also received extra advice regarding previous tooth problem. Highly recommend Dr Amirah for being passionate with her work.",
+        "publishedAtDate": "2025-02-02T12:17:19.144Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aidilquinn",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-11-24T13:21:23.735Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Humaira Raslie",
+        "stars": 5,
+        "text": "Dr Amira is a skilled dentist, extremely thorough in terms of her explanation and procedures; yet gentle during the treatment process. Comfortable clinic; accessible and clean.\n\nHighly recommended!",
+        "publishedAtDate": "2024-10-30T03:40:16.201Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SALMA",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-04-12T14:05:07.250Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "sitom tom",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-03-25T11:16:36.146Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SHAZA AZLIN BINTI MAZLAN",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-03-05T09:13:11.953Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fazilah Jemali",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-12-05T06:31:17.457Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zurya 27",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-11-02T04:06:45.382Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "null",
+    "description": "<p>In the heart of Sarawak, Klinik Pergigian Hanipah emerges as a cornerstone of dental health, distinguished by its unwavering commitment to patient care and oral well-being. Dr. Amira, recognized for her exceptional skills and thoroughness, leads a team that ensures every visit is not just a treatment but an educational experience. The clinic's focus on clarity in patient communication before procedures sets it apart, providing reassurance and building trust with individuals who seek their expertise.</p>\n\n<p>Patients stepping into Klinik Pergigian Hanipah are greeted with state-of-the-art facilities designed to cater to a wide spectrum of dental needs. From routine check-ups to advanced treatments, the clinic takes pride in its ability to deliver top-notch care grounded in compassion. Recent feedback applauds the comprehensive explanations provided by the dental professionals here, emphasizing the additional advice offered as part of their service, which reflects their patient-centric approach. The clinic's operating hours are tailored for convenience, ensuring access to premium dental care throughout the week.</p>\n\n<p>Strategically located for ease of access, Klinik Pergigian Hanipah serves as a beacon of health in its community. The clinic is well-integrated within the bustling vibe of the Sarawak neighborhood, making it an easily accessible destination for residents seeking dental care without venturing far from home. With a reputation built on genuine care and expert dental services, this clinic not only enhances smiles but also fortifies the overall health profile of the local population. A visit to Klinik Pergigian Hanipah is more than just an appointment; it's an investment in enduring oral health facilitated by a team that values education and prevention as much as treatment.</p>"
+  },
+  {
+    "title": "Sim Dental Surgery",
+    "website": "",
+    "latitude": 1.5195618,
+    "longitude": 110.3593585,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "18:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "18:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "sim-dental-surgery-kuching",
+    "skip": false,
+    "placeId": "ChIJZRFOOBSn-zER6yYGw9hz_ug",
+    "phone": "+60108217671",
+    "permanentlyClosed": false,
+    "address": "Lot 10973, Block 16, (KCLD, Jalan Song, Kampung Tabuan Lalang, 93350 Kuching, Sarawak, Malaysia",
+    "neighborhood": "Kampung Tabuan Lalang",
+    "city": "Kuching",
+    "postalCode": "93350",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 9,
+    "totalScore": 3.4,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNqATibEYR3gjGc63DwBqrzYexQZ-nbLnD0lzed=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Cheng6 Lue9",
+        "stars": 5,
+        "text": "Very confident and professional ! Well explain and painless! Thanks a million,  Dr Sim",
+        "publishedAtDate": "2024-11-18T03:17:17.260Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kiang Chiok Sim",
+        "stars": 5,
+        "text": "Excellent Dr,he is very skillful and almost painless implant.",
+        "publishedAtDate": "2022-07-27T14:38:02.188Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKhaPtfYoHqe7PtlxgkedwFpryXz30YCHVDzES70vLz_LPPdjBjfroaDODq08VN-uKWT59iwkJiqKeKNTO4Na6Xpvn16WSqwB1NJX9U8N8tsnRAbHcISzJtexFqlWGriS6bok4RjA",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJI6b-EHaddA31xaPYV-JihY8VoLBy8jdIN3CW55rN78QJQpzp1LQyU_TnCGRQfAkYyE5O5W44EqjVWW25_uWLETNNq7RMva1rT0bc7azMnj01MUNcW2D_wfKlkaZ87lCP3dyJwR"
+        ]
+      },
+      {
+        "name": "Maggie Kuan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2021-01-17T03:38:45.163Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kiara Chin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-01-22T01:22:35.583Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chi C",
+        "stars": 1,
+        "text": "没礼貌",
+        "publishedAtDate": "2019-12-12T10:22:24.474Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "weewee connie",
+        "stars": 1,
+        "text": "如果可以选择，我连一星都不想给!医生态度高傲，我告诉医生要拔牙，医生说要开刀啦。。什么什么一大堆大概要整千钱块，我告诉医生我没有酱多钱，只需要普通拔牙，结果医生态度很不屑，连麻醉药都没有效，就拔了，我整个人痛得要昏去，第一次拔牙酱的痛苦，好不容易把牙拔出来，我发现还有一点牙齿在洞里，拔不清洁，我告诉医生，结果医生居然和护士说:他要便宜的拔法就是酱的服务咯！又不要出多点钱，还要很好的服务!我慢慢忍受着，那天我回家我痛了一个星期脸颊肿大了一个星期!我不会再去这个地方了。。虽然已经过去了1年，我还是很恐惧这个医生!",
+        "publishedAtDate": "2019-10-04T04:45:11.756Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kelvin Tan",
+        "stars": 1,
+        "text": "Expensive. Painful. Long procedure.\n\nFirst time coming here, as I have toothache and my usual dental clinic is fully booked. I called up many clinics and all were fully booked except for this.\n\nI did scaling, polish, and filing of one decayed tooth.\n\nScaling was ok.\n\nPolish was painful as they used jets of water to blast away the stain. Imagine using water gun on the soft tissue in your mouth.\n\nFiling took a long time even though it was only one tooth. The procedure was very uncomfortable.\n\nWhole procedure took more than 40minutes and RM150 for scaling and RM150 for filing.\n\nNormally in other clinics I pay RM100 for scaling and RM80 for filing and only 10min or so.",
+        "publishedAtDate": "2019-03-16T13:16:07.073Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKnkxu6HmREze4gdFkqJWGBLSfLGBry5O3MUtGy8bxFM0srGEu0q1x6s0-ieSmKHMX_pAsHLHvWLbkVRuye3oZNtyvktrN2qLGqnerE71wMVgYdDQh0dUQ4Grq_qTURnVJsBSSjuA"
+        ]
+      },
+      {
+        "name": "Nurul",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2017-12-25T15:39:55.910Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Lot 10973, Block 16, (KCLD, Jalan Song",
+    "description": "<p>In the heart of Sarawak, Sim Dental Surgery stands as a premier destination for dental excellence, harmoniously combining advanced dental practices with the warm hospitality the region is known for. This facility's reputation for delivering meticulous care is echoed in its patient testimonials, citing experiences of confidence-inspiring professionalism and virtually painless procedures. Dr. Sim, the leading practitioner, is celebrated for his skillful touch in dental implants, transforming patient apprehensions into stories of relief and satisfaction. The facility's standout feature is its commitment to pain-free, top-tier dental services that cater to the needs of each individual with precision and empathy.</p>\n\n<p>At Sim Dental Surgery, the state-of-the-art facilities resonate with the quality of care provided. From routine check-ups to complex implant surgeries, the clinic harnesses cutting-edge technology to ensure outcomes that patients not only need but also deserve. The clinic hours are thoughtfully scheduled to accommodate busy lifestyles, offering extended evening hours twice a week for added convenience. The heartfelt feedback from those treated at Sim Dental Surgery often highlights the attentive care and exceptional skill of Dr. Sim and his team, painting a picture of a healthcare experience that goes beyond mere treatment to encompass genuine care and understanding.</p>\n\n<p>Strategically situated along Jalan Song, Sim Dental Surgery is easily accessible to residents and visitors alike, seamlessly fitting into the vibrant tapestry of the community. Its location offers ample opportunities for patients to combine their dental visits with other errands or leisure activities in the bustling neighborhood. The clinic's commitment to serving the community is reflected in its flexible scheduling and patient-centric approach, making it a trusted fixture in Sarawak's healthcare landscape. With an unwavering focus on providing exemplary dental services, this facility not only enhances smiles but also fortifies the wellbeing of those under its care.</p>"
+  }
+]

@@ -2,8 +2,8 @@ import JsonLd from './json-ld';
 
 interface BreadcrumbItem {
   position: string;
-  item: string;
-  name: string;
+  item?: string;
+  name?: string;
 }
 
 interface BreadcrumbJsonLdProps {

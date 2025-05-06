@@ -63,7 +63,7 @@ export const columns: ColumnDef<StateTableData>[] = [
   },
   {
     id: 'clinic',
-    accessorFn: (row) => row.clinics?.[0]?.count,
+    accessorFn: (row) => row.clinics?.length,
     header: ({ column }) => <DataTableColumnHeader column={column} title="Clinics" className="" />,
     cell: ({ row }) => {
       const clinicsCount = row.getValue('clinic') as number;

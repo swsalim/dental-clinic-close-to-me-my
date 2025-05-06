@@ -6,12 +6,12 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md duration-200 ease-in-out',
+  'inline-flex items-center justify-center rounded-md transition-colors duration-200 ease-in-out',
   {
     variants: {
       variant: {
         primary:
-          'border border-solid border-transparent bg-blue-600 text-white hover:bg-blue-800 hover:text-white focus:border-blue-800 focus:outline-none active:bg-blue-800',
+          'bg-brand hover:bg-brand/80 focus:border-brand/80 active:bg-brand/80 border border-solid border-transparent text-white hover:text-white focus:outline-none',
         secondary:
           'border border-solid border-gray-300 bg-white text-gray-500 hover:border-gray-700 hover:text-gray-800 focus:border-gray-700 active:border-gray-700 active:bg-gray-50 active:text-gray-800',
         outline:

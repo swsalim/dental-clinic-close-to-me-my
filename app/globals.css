@@ -8,3 +8,17 @@ html body[data-scroll-locked] {
   overflow-y: scroll !important;
   margin-right: 0 !important;
 }
+
+@layer base {
+  * {
+    @apply font-medium;
+  }
+
+  a {
+    @apply text-brand font-medium border-b-2 border-transparent no-underline duration-200;
+  }
+
+  a:hover {
+    @apply text-brand/80 border-brand/80;
+  }
+}

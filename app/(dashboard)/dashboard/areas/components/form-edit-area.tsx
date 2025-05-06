@@ -417,7 +417,7 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
               <div className="col-span-6 space-y-4">
                 <h4 className="text-base font-medium text-gray-900">State</h4>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                  {area.states?.name}
+                  {area.state?.name}
                 </div>
               </div>
 

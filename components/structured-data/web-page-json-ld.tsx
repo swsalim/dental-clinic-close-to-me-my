@@ -11,7 +11,7 @@ export default function WebPageJsonLd({
   id,
   description,
   lastReviewed = new Date().toISOString(),
-  reviewedBy = 'ClinicGeek',
+  reviewedBy = 'Dental Clinics Malaysia',
 }: WebPageJsonLdProps) {
   return (
     <JsonLd id="webpage-jsonld">

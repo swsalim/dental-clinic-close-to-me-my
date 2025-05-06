@@ -13,6 +13,30 @@ import { Checkbox } from '@/components/form-fields/checkbox';
 import { DataTableColumnHeader } from './components/data-table-column-header';
 import { DataTableRowActions } from './components/data-table-row-actions';
 
+interface State {
+  name: string;
+  slug: string;
+}
+
+const states: State[] = [
+  { name: 'Johor', slug: 'johor' },
+  { name: 'Kedah', slug: 'kedah' },
+  { name: 'Kelantan', slug: 'kelantan' },
+  { name: 'Malacca', slug: 'malacca' },
+  { name: 'Negeri Sembilan', slug: 'negeri-sembilan' },
+  { name: 'Pahang State', slug: 'pahang-state' },
+  { name: 'Penang', slug: 'penang' },
+  { name: 'Perak', slug: 'perak' },
+  { name: 'Perlis', slug: 'perlis' },
+  { name: 'Sabah', slug: 'sabah' },
+  { name: 'Sarawak', slug: 'sarawak' },
+  { name: 'Selangor', slug: 'selangor' },
+  { name: 'Terengganu', slug: 'terengganu' },
+  { name: 'Kuala Lumpur', slug: 'kuala-lumpur' },
+  { name: 'Labuan', slug: 'labuan' },
+  { name: 'Putrajaya', slug: 'putrajaya' },
+];
+
 export type AreaTableData = Partial<ClinicArea>;
 
 export const columns: ColumnDef<AreaTableData>[] = [
@@ -55,10 +79,13 @@ export const columns: ColumnDef<AreaTableData>[] = [
   },
   {
     accessorKey: 'state',
-    accessorFn: (row) => row.states?.name,
+    accessorFn: (row) => row.state?.slug,
     header: ({ column }) => <DataTableColumnHeader column={column} title="State" className="" />,
     cell: ({ row }) => {
-      return row.getValue('state');
+      const stateSlug = row.getValue('state') as string;
+      const state = states.find((state) => state.slug === stateSlug);
+      if (!state) return null;
+      return <span>{state.name}</span>;
     },
     filterFn: (row, id, value) => {
       const stateSlug = row.getValue('state') as string;
@@ -69,7 +96,7 @@ export const columns: ColumnDef<AreaTableData>[] = [
   },
   {
     id: 'clinic',
-    accessorFn: (row) => row.clinics?.[0]?.count,
+    accessorFn: (row) => row.clinics?.length,
     header: ({ column }) => <DataTableColumnHeader column={column} title="Clinics" className="" />,
     cell: ({ row }) => {
       const clinicsCount = row.getValue('clinic') as number;

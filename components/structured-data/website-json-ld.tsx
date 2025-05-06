@@ -1,8 +1,8 @@
 import JsonLd from './json-ld';
 
 interface WebsiteJsonLdProps {
-  company: string | undefined;
-  url: string | undefined;
+  company?: string;
+  url?: string;
 }
 
 export default function WebsiteJsonLd({

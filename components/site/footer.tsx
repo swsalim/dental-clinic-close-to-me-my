@@ -14,7 +14,7 @@ export default function Footer() {
           <span className="ml-2 mt-0 inline-block text-gray-100">
             Built by{' '}
             <a
-              href="https://www.yuurrific.com"
+              href="https://www.yuurrific.com?ref=dentalclinicclosetome.my"
               className="inline-block font-medium underline underline-offset-4 transition-colors duration-200 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-offset-2 focus:ring-offset-gray-900"
               target="_blank"
               rel="noopener noreferrer">

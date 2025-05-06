@@ -40,21 +40,7 @@ async function checkDuplicateClinicSlug(slug: string): Promise<{ count: number }
     throw clinicsError;
   }
 
-  // Check if slug exists in to_be_reviewed_clinics table
-  const { count: toBeReviewedCount, error: toBeReviewedError } = await supabase
-    .from('to_be_reviewed_clinics')
-    .select('name', { count: 'exact' })
-    .eq('slug', slug);
-
-  if (toBeReviewedError) {
-    console.error('Error checking slug in to_be_reviewed_clinics table:', toBeReviewedError);
-    throw toBeReviewedError;
-  }
-
-  // Total count from both tables
-  const totalCount = (clinicsCount || 0) + (toBeReviewedCount || 0);
-
-  return { count: totalCount };
+  return { count: clinicsCount || 0 };
 }
 
 async function filterData(jsonData: Place[]): Promise<Place[]> {

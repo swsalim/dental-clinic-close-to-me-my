@@ -16,7 +16,7 @@ function PartialStar({ fillPercentage, className = '' }: PartialStarProps) {
       <div
         className="absolute inset-0 overflow-hidden"
         style={{ width: `${fillPercentage * 100}%` }}>
-        <StarIcon className="h-5 w-5 fill-yellow stroke-transparent" />
+        <StarIcon className="fill-brand h-5 w-5 stroke-transparent" />
       </div>
     </div>
   );
@@ -42,7 +42,7 @@ export const StarRating = memo(function StarRating({
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => {
           if (star <= fullStars) {
-            return <StarIcon key={star} className="h-5 w-5 fill-yellow stroke-transparent" />;
+            return <StarIcon key={star} className="fill-brand h-5 w-5 stroke-transparent" />;
           }
           if (star === fullStars + 1 && partialStarFill > 0) {
             return <PartialStar key={star} fillPercentage={partialStarFill} />;
@@ -51,7 +51,7 @@ export const StarRating = memo(function StarRating({
         })}
       </div>
       {showValue && (
-        <span className="ml-1 text-sm font-medium text-gray-500">({ratingValue.toFixed(1)})</span>
+        <span className="ml-1 text-sm font-semibold text-gray-500">({ratingValue.toFixed(1)})</span>
       )}
     </div>
   );

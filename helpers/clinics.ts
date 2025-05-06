@@ -1,42 +1,117 @@
 import {
   Clinic,
+  ClinicArea,
   ClinicDoctor,
   ClinicHours,
   ClinicReview,
+  ClinicService,
   ClinicSpecialHours,
+  ClinicState,
 } from '@/types/clinic';
-import { Database } from '@/types/database.types';
-import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient<Database>(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-);
+import { createAdminClient, createServerClient } from '@/lib/supabase';
+
+export async function getClinicMetadataBySlug(slug: string, status: string = 'approved') {
+  const supabase = await createAdminClient();
+
+  const { data: clinicData } = (await supabase
+    .from('clinics')
+    .select(
+      `
+      id,
+      name,
+      slug,
+      description,
+      area:areas(name),
+      state:states(name)
+    `,
+    )
+    .match({ slug, status })
+    .single()) as {
+    data: {
+      id: string;
+      name: string;
+      slug: string;
+      description: string;
+      area: {
+        name: string;
+      };
+      state: {
+        name: string;
+      };
+    };
+  };
+
+  return clinicData ?? null;
+}
+
+export async function getClinicListings(status: string = 'approved') {
+  const supabase = await createAdminClient();
+
+  const { data: clinicData } = (await supabase
+    .from('clinics')
+    .select(
+      `
+      id,
+      name,
+      slug
+    `,
+    )
+    .match({ status })) as {
+    data: {
+      id: string;
+      name: string;
+      slug: string;
+    }[];
+  };
+
+  return clinicData ?? [];
+}
 
 /**
  * Fetches a clinic by its slug with all related data
  */
-export async function getClinicBySlug(slug: string) {
-  const { data: clinic, error } = await supabase
+export async function getClinicBySlug(slug: string, status: string = 'approved') {
+  const supabase = await createServerClient();
+
+  const { data: clinic } = await supabase
     .from('clinics')
     .select(
       `
-      *,
-      area:areas(*),
-      state:states(*),
-      doctors:clinic_doctors(*),
+      id,
+      name,
+      slug,
+      description,
+      postal_code,
+      address,
+      phone,
+      email,
+      latitude,
+      longitude,
+      rating,
+      review_count,
+      images,
+      featured_video,
+      youtube_url,
+      facebook_url,
+      instagram_url,
+      source,
+      is_permanently_closed,
+      open_on_public_holidays,
+      is_active,
+      is_featured,
+      area:areas(id, name, slug),
+      state:states(id, name, slug),
+      doctors:clinic_doctor_relations(doctor:clinic_doctors(id, name, slug)),
       hours:clinic_hours(*),
       special_hours:clinic_special_hours(*),
       reviews:clinic_reviews(*),
-      categories:clinic_category_relations(
-        category:clinic_categories(*)
-      )
+      services:clinic_service_relations(service:clinic_services(id, name, slug))
     `,
     )
-    .eq('slug', slug)
+    .match({ slug, status })
     .single();
 
-  if (error) throw error;
   return clinic;
 }
 
@@ -51,6 +126,7 @@ export async function getClinics(filters: {
   limit?: number;
   offset?: number;
 }) {
+  const supabase = await createServerClient();
   let query = supabase.from('clinics').select(
     `
       *,
@@ -102,6 +178,8 @@ export async function getClinicsNearLocation(
   radiusInKm: number,
   limit: number = 10,
 ) {
+  const supabase = await createServerClient();
+
   const { data, error } = await supabase
     .from('clinics')
     .select(
@@ -137,6 +215,8 @@ export async function getClinicsNearLocation(
  * Fetches clinic reviews with pagination
  */
 export async function getClinicReviews(clinicId: string, page: number = 1, pageSize: number = 10) {
+  const supabase = await createServerClient();
+
   const { data, error, count } = await supabase
     .from('clinic_reviews')
     .select('*', { count: 'exact' })
@@ -153,6 +233,8 @@ export async function getClinicReviews(clinicId: string, page: number = 1, pageS
  * Fetches clinic operating hours
  */
 export async function getClinicHours(clinicId: string) {
+  const supabase = await createServerClient();
+
   const { data, error } = await supabase
     .from('clinic_hours')
     .select('*')
@@ -167,6 +249,8 @@ export async function getClinicHours(clinicId: string) {
  * Fetches clinic special hours (holidays, etc.)
  */
 export async function getClinicSpecialHours(clinicId: string) {
+  const supabase = await createServerClient();
+
   const { data, error } = await supabase
     .from('clinic_special_hours')
     .select('*')
@@ -181,6 +265,8 @@ export async function getClinicSpecialHours(clinicId: string) {
  * Fetches clinic doctors
  */
 export async function getClinicDoctors(clinicId: string) {
+  const supabase = await createServerClient();
+
   const { data, error } = await supabase
     .from('clinic_doctors')
     .select('*')
@@ -312,4 +398,33 @@ export function getNextOpeningTime(
   }
 
   return null;
+}
+
+/**
+ * Parses and formats raw clinic data from Supabase
+ */
+export function parseClinicData(
+  clinic: Partial<Clinic> & {
+    services?: { service: Partial<ClinicService> }[] | null;
+    area?: Partial<ClinicArea> | null;
+    state?: Partial<ClinicState> | null;
+    doctors?: { doctor: Partial<ClinicDoctor> }[] | null;
+    hours?: Partial<ClinicHours>[] | null;
+    special_hours?: Partial<ClinicSpecialHours>[] | null;
+    reviews?: Partial<ClinicReview>[] | null;
+  },
+) {
+  return {
+    ...clinic,
+    services:
+      clinic.services?.map((item) => ({
+        name: item.service.name,
+        slug: item.service.slug,
+      })) ?? [],
+    doctors:
+      clinic.doctors?.map((item) => ({
+        name: item.doctor.name,
+        slug: item.doctor.slug,
+      })) ?? [],
+  };
 }

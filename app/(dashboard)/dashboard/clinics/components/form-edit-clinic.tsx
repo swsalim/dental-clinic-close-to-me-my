@@ -309,6 +309,7 @@ export default function FormEditClinic({
   const { reset } = form;
   const watchName = form.watch('name');
   const watchImages = form.watch('images');
+  const watchStateId = form.watch('state_id');
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const watchBusinessHours = form.watch('businessHours');
@@ -785,6 +786,23 @@ export default function FormEditClinic({
 
               <div className="col-span-6 sm:col-span-3"></div>
 
+              <div className="col-span-6 sm:col-span-5">
+                <FormField
+                  control={form.control}
+                  name="slug"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="block">Slug</FormLabel>
+                      <FormControl>
+                        <Input placeholder="url-slug" prefix="place" {...field} />
+                      </FormControl>
+                      <FormDescription>This is the url for the business profile.</FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
               <div className="col-span-6 sm:col-span-3">
                 <FormField
                   control={form.control}
@@ -876,22 +894,24 @@ export default function FormEditClinic({
                             <CommandInput placeholder="Search area..." />
                             <CommandEmpty>No area found.</CommandEmpty>
                             <CommandGroup className="max-h-[300px] overflow-auto">
-                              {areas.map((area) => (
-                                <CommandItem
-                                  key={area.id}
-                                  value={area.name}
-                                  onSelect={() => {
-                                    field.onChange(area.id);
-                                  }}>
-                                  <CheckIcon
-                                    className={cn(
-                                      'mr-2 h-4 w-4',
-                                      area.id === field.value ? 'opacity-100' : 'opacity-0',
-                                    )}
-                                  />
-                                  {area.name}
-                                </CommandItem>
-                              ))}
+                              {areas
+                                .filter((area) => !watchStateId || area.state_id === watchStateId)
+                                .map((area) => (
+                                  <CommandItem
+                                    key={area.id}
+                                    value={area.name}
+                                    onSelect={() => {
+                                      field.onChange(area.id);
+                                    }}>
+                                    <CheckIcon
+                                      className={cn(
+                                        'mr-2 h-4 w-4',
+                                        area.id === field.value ? 'opacity-100' : 'opacity-0',
+                                      )}
+                                    />
+                                    {area.name}
+                                  </CommandItem>
+                                ))}
                             </CommandGroup>
                           </Command>
                         </PopoverContent>
@@ -921,23 +941,6 @@ export default function FormEditClinic({
                           // onChange={field.onChange}
                         />
                       </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className="col-span-6 sm:col-span-5">
-                <FormField
-                  control={form.control}
-                  name="slug"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="block">Slug</FormLabel>
-                      <FormControl>
-                        <Input placeholder="url-slug" prefix="place" {...field} />
-                      </FormControl>
-                      <FormDescription>This is the url for the business profile.</FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}

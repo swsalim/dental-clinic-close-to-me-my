@@ -1,17 +1,20 @@
-import React from 'react';
+import type { ElementType } from 'react';
 
 import { cn } from '@/lib/utils';
 
-interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface ContainerProps extends React.HTMLAttributes<HTMLElement> {
+  as?: ElementType;
 }
 
-export default function Container({ className, children, ...props }: ContainerProps) {
+export default function Container({
+  as: Comp = 'div',
+  className,
+  children,
+  ...props
+}: ContainerProps) {
   return (
-    <div
-      className={cn('max-w-8xl relative mx-auto w-full px-6 py-8 sm:px-8', className)}
-      {...props}>
+    <Comp {...props} className={cn('mx-auto my-0 w-full max-w-7xl px-6 lg:px-8', className)}>
       {children}
-    </div>
+    </Comp>
   );
 }

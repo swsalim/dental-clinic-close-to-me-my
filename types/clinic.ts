@@ -1,5 +1,3 @@
-import { Database } from './database.types';
-
 export interface ClinicService {
   id: string;
   name: string;
@@ -28,7 +26,7 @@ export interface ClinicArea {
   state_id: string | null;
   created_at: string | null;
   modified_at: string | null;
-  states?: { id: string; name: string } | null;
+  state: { id: string; name: string; slug: string };
   clinics?: { count: number }[] | null;
 }
 
@@ -42,7 +40,7 @@ export interface ClinicState {
   banner_image: string | null;
   created_at: string | null;
   modified_at: string | null;
-  clinics?: { count: number }[] | null;
+  clinics?: Partial<ClinicInsert>[] | null;
   areas?: { id: string; name: string }[] | null;
 }
 
@@ -164,25 +162,15 @@ export interface Clinic {
   // Relationships
   area_id: string | null;
   state_id: string | null;
-  area?: Database['public']['Tables']['areas']['Row'] | null;
-  state?: Database['public']['Tables']['states']['Row'] | null;
-  doctors?: ClinicDoctor[] | null;
-  hours?: ClinicHours[] | null;
-  special_hours?: ClinicSpecialHours[] | null;
-  reviews?: ClinicReview[] | null;
+  area?: Partial<ClinicArea> | null;
+  state?: Partial<ClinicState> | null;
+  services?: { service: Partial<ClinicService> }[] | null;
+  doctors?: { doctor: Partial<ClinicDoctor> }[] | null;
+  hours?: Partial<ClinicHours>[] | null;
+  special_hours?: Partial<ClinicSpecialHours>[] | null;
+  reviews?: Partial<ClinicReview>[] | null;
 }
 
-export type ClinicInsert = Omit<
-  Clinic,
-  | 'id'
-  | 'created_at'
-  | 'modified_at'
-  | 'area'
-  | 'state'
-  | 'doctors'
-  | 'hours'
-  | 'special_hours'
-  | 'reviews'
->;
+export type ClinicInsert = Omit<Clinic, 'id' | 'created_at' | 'modified_at'>;
 
 export type ClinicUpdate = Partial<ClinicInsert>;

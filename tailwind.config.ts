@@ -32,6 +32,11 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        brand: '#FF4A52',
+      },
+      gridTemplateColumns: {
+        sidebar: '1fr 320px',
+        'sidebar-left': '320px 1fr',
       },
       keyframes: {
         'bounce-left': {

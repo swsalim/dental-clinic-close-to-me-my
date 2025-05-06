@@ -65,8 +65,6 @@ export default async function EditAreaPage({ params }: { params: Promise<{ id: s
     .match({ id })
     .single();
 
-  console.log(area);
-
   if (!area) {
     notFound();
   }

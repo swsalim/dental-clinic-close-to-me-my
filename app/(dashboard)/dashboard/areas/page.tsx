@@ -63,8 +63,8 @@ export default async function DashboardAreasPage() {
       short_description,
       thumbnail_image,
       banner_image,
-      clinics(count),
-      states(id, name)`,
+      clinics:clinics(name, slug),
+      state:states(id, name, slug)`,
     )
     .order('modified_at', { ascending: false });
 

@@ -64,11 +64,9 @@ export default async function DashboardStatesPage() {
       thumbnail_image,
       banner_image,
       areas(id, name, slug),
-      clinics(count)`,
+      clinics:clinics(name, slug)`,
     )
     .order('modified_at', { ascending: false });
-
-  console.log(data);
 
   if (error) {
     console.error('Error fetching states:', error);

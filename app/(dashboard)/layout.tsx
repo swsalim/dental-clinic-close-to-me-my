@@ -3,8 +3,6 @@ import { redirect } from 'next/navigation';
 import { createServerClient } from '@/lib/supabase';
 
 import DashboardHeader from '@/components/dashboard/dashboard-header';
-import Footer from '@/components/site/footer';
-import { Toaster } from '@/components/ui/toaster';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -25,8 +23,6 @@ export default async function DashboardLayout({ children }: DashboardLayoutProps
     <>
       <DashboardHeader />
       <main className="flex-grow">{children}</main>
-      <Footer />
-      <Toaster />
     </>
   );
 }
