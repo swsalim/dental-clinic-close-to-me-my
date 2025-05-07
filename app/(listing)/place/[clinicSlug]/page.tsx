@@ -127,9 +127,6 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
   const hasSocialAccounts =
     parsedClinic.facebook_url || parsedClinic.instagram_url || parsedClinic.youtube_url;
 
-  // console.log('parsedClinic');
-  // console.log(parsedClinic);
-
   return (
     <>
       <WebsiteJsonLd />

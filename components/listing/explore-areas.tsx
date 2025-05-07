@@ -9,7 +9,8 @@ export async function ExploreAreas() {
   const supabase = await createServerClient();
   const { data: areas } = await supabase
     .from('areas')
-    .select('id, name, slug, thumbnail_image, state:states (slug), clinics(count)');
+    .select('id, name, slug, thumbnail_image, state:states (slug), clinics(count)')
+    .eq('clinics.status', 'approved');
 
   const sortedAreas = areas
     ? [...areas].sort((a, b) => b.clinics[0].count - a.clinics[0].count).slice(0, 8)

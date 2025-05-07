@@ -1,6 +1,6 @@
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export async function getAreaMetadataBySlug(slug: string) {
+export async function getAreaMetadataBySlug(areaSlug: string) {
   const supabase = await createAdminClient();
 
   const { data: area } = (await supabase
@@ -14,7 +14,8 @@ export async function getAreaMetadataBySlug(slug: string) {
       clinics:clinics(slug)
     `,
     )
-    .eq('slug', slug)
+    .eq('clinics.status', 'approved')
+    .eq('slug', areaSlug)
     .single()) as {
     data: {
       id: string;
@@ -75,9 +76,10 @@ export async function getAreaBySlug(areaSlug: string) {
       thumbnail_image,
       banner_image,
       state:states(name, slug, thumbnail_image, banner_image),
-      clinics:clinics(name, slug, description, images, postal_code, address, phone, rating, area:areas(name), state:states(name))
+      clinics:clinics(name, slug, description, status,images, postal_code, address, phone, rating, area:areas(name), state:states(name))
     `,
     )
+    .eq('clinics.status', 'approved')
     .match({ slug: areaSlug })
     .single()) as {
     data: {
@@ -102,6 +104,7 @@ export async function getAreaBySlug(areaSlug: string) {
         address: string;
         phone: string;
         rating: number;
+        status: string;
         area: {
           name: string;
         };
