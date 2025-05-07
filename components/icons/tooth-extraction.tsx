@@ -21,7 +21,7 @@ export function ToothExtraction({
       className={className}
       aria-label={ariaLabel}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f1c48b" />
+      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
       <path
         d="M157.657 154.771c0 15.641-12.679 28.32-28.32 28.32h-2.674c-15.641 0-28.32-12.679-28.32-28.32H43.315v51.622h169.369v-51.622h-55.027z"
         fill="#fd919f"

@@ -22,7 +22,7 @@ export function DentalVeneer({
       aria-label={ariaLabel}
       className={className}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f1c48b" />
+      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
       <path fill="#d5e6f7" d="M169.622 209.008v-50.667l-19.509-14.193 9.754 22.683v42.177z" />
       <path
         fill="#504774"

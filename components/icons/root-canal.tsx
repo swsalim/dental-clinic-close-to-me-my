@@ -22,7 +22,7 @@ export function RootCanal({
       role="img"
       className={className}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f1c48b" />
+      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
       <path
         d="M113.277 58.107H92.093a3.482 3.482 0 0 1-3.482-3.482v-10.25a3.482 3.482 0 0 1 3.482-3.482h21.184a3.482 3.482 0 0 1 3.482 3.482v10.25a3.482 3.482 0 0 1-3.482 3.482z"
         fill="#a0d1f2"

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import {
-  CircleCheckBigIcon,
   FacebookIcon,
   InstagramIcon,
   MailIcon,
@@ -22,6 +21,7 @@ import {
   getClinicMetadataBySlug,
   parseClinicData,
 } from '@/helpers/clinics';
+import { getServiceIcon } from '@/helpers/services';
 
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
@@ -266,13 +266,18 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               {parsedClinic.services && (
                 <>
                   <h2>Services</h2>
-                  <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
-                    {parsedClinic.services.map((service) => (
+                  <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                    {parsedClinic.services.map((service, index) => (
                       <div
-                        key={service.slug}
-                        className="flex flex-row items-center justify-start gap-2">
-                        <CircleCheckBigIcon className="h-4 w-4 text-brand" />
-                        {service.name}
+                        key={service.slug ?? service.name ?? String(index)}
+                        tabIndex={0}
+                        aria-label={service.name}
+                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400"
+                        role="button">
+                        {getServiceIcon(service.slug ?? '')}
+                        <div className="mt-4 text-center text-base text-gray-900">
+                          {service.name}
+                        </div>
                       </div>
                     ))}
                   </div>

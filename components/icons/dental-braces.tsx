@@ -18,7 +18,7 @@ export function DentalBraces({
       role="img"
       aria-label={ariaLabel}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f1c48b" />
+      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
       <path fill="#fd919f" d="M37.934 115.659h180.133v68.812H37.934z" />
       <path fill="#e0667d" d="M202.125 115.659h15.941v68.812h-15.941z" />
       <path

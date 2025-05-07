@@ -18,7 +18,7 @@ export function DentalXrays({
       role="img"
       className={className}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f1c48b" />
+      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
       <path fill="#fd919f" d="M50.667 75h154.667v106H50.667z" />
       <path fill="#e0667d" d="M182 75h23.333v106H182z" />
       <path fill="#7babf3" d="M74 75h108v106H74z" />

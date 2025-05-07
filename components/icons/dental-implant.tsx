@@ -21,7 +21,7 @@ export function DentalImplant({
       className={className}
       aria-label={ariaLabel}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f1c48b" />
+      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
       <path
         fill="#d5e6f7"
         d="M149.255 82.499h-42.509c-5.485 0-9.932 4.447-9.932 9.932v20.878a5.435 5.435 0 0 0 5.435 5.435h51.504a5.434 5.434 0 0 0 5.434-5.435V92.432c-.001-5.486-4.447-9.933-9.932-9.933z"
