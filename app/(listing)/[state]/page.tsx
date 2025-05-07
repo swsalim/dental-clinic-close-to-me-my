@@ -2,17 +2,21 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ArrowRightIcon } from 'lucide-react';
+
 import { siteConfig } from '@/config/site';
 
-import { absoluteUrl } from '@/lib/utils';
+import { absoluteUrl, cn } from '@/lib/utils';
 
 import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/helpers/states';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
+import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
+import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Wrapper } from '@/components/ui/wrapper';
 
@@ -212,8 +216,26 @@ export default async function StatePage({ params }: StatePageProps) {
               ))}
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-y-4">
+              <div className="flex flex-col items-center justify-center">
+                <div className="relative size-64 md:size-96">
+                  <ImageCloudinary
+                    src="lost-boy.png"
+                    alt="No dental clinics found"
+                    width={500}
+                    height={500}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
               <p className="text-balance text-lg">No dental clinics found in {stateData.name}.</p>
+              <Link
+                href="/"
+                className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
+                Get back to homepage
+                <ArrowRightIcon className="size-4" />
+              </Link>
             </div>
           )}
         </Container>
