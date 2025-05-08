@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ClinicReview } from '@/types/clinic';
+import { formatDistanceToNow } from 'date-fns';
 import {
   FacebookIcon,
   InstagramIcon,
@@ -26,9 +28,11 @@ import { getServiceIcon } from '@/helpers/services';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Button, buttonVariants } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import Container from '@/components/ui/container';
 import Prose from '@/components/ui/prose';
 import { StarRating } from '@/components/ui/star-rating';
+import { TruncatedText } from '@/components/ui/truncated-text';
 import { Wrapper } from '@/components/ui/wrapper';
 
 type ClinicPageProps = {
@@ -36,6 +40,36 @@ type ClinicPageProps = {
     clinicSlug: string;
   }>;
 };
+
+function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
+  return (
+    <div>
+      <h2>Reviews</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {reviews.map(({ author_name, rating, text, review_time }) => (
+          <Card key={author_name}>
+            <CardHeader>
+              <StarRating rating={rating ?? 0} showValue={false} />
+            </CardHeader>
+            {text && (
+              <CardContent>
+                <TruncatedText text={text} />
+              </CardContent>
+            )}
+            <CardFooter className="flex flex-col items-start gap-1">
+              <span className="text-base font-semibold text-gray-700">{author_name}</span>
+              {review_time && (
+                <span className="text-sm text-gray-500">
+                  {formatDistanceToNow(new Date(review_time), { addSuffix: true })}
+                </span>
+              )}
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
@@ -282,6 +316,9 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     ))}
                   </div>
                 </>
+              )}
+              {parsedClinic.reviews && parsedClinic.reviews.length > 0 && (
+                <Reviews reviews={parsedClinic.reviews} />
               )}
             </Prose>
           </div>
