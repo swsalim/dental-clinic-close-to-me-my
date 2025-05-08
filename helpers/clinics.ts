@@ -26,7 +26,7 @@ export async function getClinicMetadataBySlug(slug: string, status: string = 'ap
       state:states(name)
     `,
     )
-    .match({ slug, status })
+    .match({ slug, is_active: true, status })
     .single()) as {
     data: {
       id: string;
@@ -57,7 +57,7 @@ export async function getClinicListings(status: string = 'approved') {
       slug
     `,
     )
-    .match({ status })) as {
+    .match({ is_active: true, status })) as {
     data: {
       id: string;
       name: string;
@@ -109,7 +109,7 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
       services:clinic_service_relations(service:clinic_services(id, name, slug))
     `,
     )
-    .match({ slug, status })
+    .match({ slug, is_active: true, status })
     .single();
 
   return clinic;
