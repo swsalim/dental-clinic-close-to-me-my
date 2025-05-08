@@ -358,7 +358,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <article>
                   <h2>Opening Hours</h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
-                    <ul className="divide-y divide-gray-200">
+                    <ul className="divide-y divide-gray-200 pl-0">
                       {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => {
                         const dayNames = [
                           'Monday',
@@ -399,7 +399,9 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                         };
 
                         return (
-                          <li key={dayIndex} className="flex items-center justify-between p-4">
+                          <li
+                            key={dayIndex}
+                            className="flex items-center justify-between gap-4 p-4">
                             <span className="font-medium text-gray-700">{dayNames[dayIndex]}</span>
                             <span className="text-gray-600">
                               {dayShifts && dayShifts.length > 0
