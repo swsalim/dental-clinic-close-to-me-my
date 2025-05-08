@@ -103,8 +103,8 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
       area:areas(id, name, slug),
       state:states(id, name, slug),
       doctors:clinic_doctor_relations(doctor:clinic_doctors(id, name, slug)),
-      hours:clinic_hours(*),
-      special_hours:clinic_special_hours(*),
+      hours:clinic_hours(day_of_week, open_time, close_time),
+      special_hours:clinic_special_hours(date, is_closed, open_time, close_time),
       reviews:clinic_reviews(*),
       services:clinic_service_relations(service:clinic_services(id, name, slug))
     `,
@@ -299,8 +299,8 @@ function toRad(degrees: number): number {
  * Checks if a clinic is currently open
  */
 export function isClinicOpen(
-  regularHours: ClinicHours[],
-  specialHours: ClinicSpecialHours[],
+  regularHours: Partial<ClinicHours>[],
+  specialHours: Partial<ClinicSpecialHours>[],
   date: Date = new Date(),
 ): boolean {
   const dayOfWeek = date.getDay();

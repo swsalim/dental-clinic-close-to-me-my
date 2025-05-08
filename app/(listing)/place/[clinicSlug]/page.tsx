@@ -25,6 +25,8 @@ import {
 } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
+import { ClinicStatus } from '@/components/clinic-status';
+import MapboxMap from '@/components/mapbox-map';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -43,7 +45,7 @@ type ClinicPageProps = {
 
 function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
   return (
-    <div>
+    <article>
       <h2>Reviews</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map(({ author_name, rating, text, review_time }) => (
@@ -67,7 +69,35 @@ function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
           </Card>
         ))}
       </div>
-    </div>
+    </article>
+  );
+}
+
+function Map({
+  latitude = 0,
+  longitude = 0,
+  name = '',
+}: {
+  latitude: number;
+  longitude: number;
+  name: string;
+}) {
+  return (
+    <article>
+      <h2>Map</h2>
+
+      <div className="mb-6 mt-2">
+        <MapboxMap
+          locations={[
+            {
+              lat: latitude,
+              long: longitude,
+              name,
+            },
+          ]}
+        />
+      </div>
+    </article>
   );
 }
 
@@ -202,6 +232,13 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   {parsedClinic.name}
                 </h1>
                 <StarRating rating={parsedClinic.rating ?? 0} />
+                {/* Open/Closed Status Badge */}
+                <div className="mt-2 lg:mt-0">
+                  <ClinicStatus
+                    hours={parsedClinic.hours ?? []}
+                    specialHours={parsedClinic.special_hours ?? []}
+                  />
+                </div>
               </div>
               <div className="flex flex-col gap-x-4 gap-y-2">
                 <div className="flex items-center gap-x-2">
@@ -292,15 +329,15 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
           <div className="py-8 md:gap-8 lg:grid lg:grid-cols-sidebar lg:gap-10">
             <Prose className="space-y-8">
               {parsedClinic.description && (
-                <>
+                <article>
                   <h2>Description</h2>
                   <div dangerouslySetInnerHTML={{ __html: parsedClinic.description }}></div>
-                </>
+                </article>
               )}
               {parsedClinic.services && (
-                <>
+                <article className="block lg:hidden">
                   <h2>Services</h2>
-                  <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
                     {parsedClinic.services.map((service, index) => (
                       <div
                         key={service.slug ?? service.name ?? String(index)}
@@ -315,12 +352,106 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       </div>
                     ))}
                   </div>
-                </>
+                </article>
               )}
+              {parsedClinic.hours && parsedClinic.hours.length > 0 && (
+                <article>
+                  <h2>Opening Hours</h2>
+                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
+                    <ul className="divide-y divide-gray-200">
+                      {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => {
+                        const dayNames = [
+                          'Monday',
+                          'Tuesday',
+                          'Wednesday',
+                          'Thursday',
+                          'Friday',
+                          'Saturday',
+                          'Sunday',
+                        ];
+                        const dayShifts = parsedClinic.hours?.filter(
+                          (h) => h.day_of_week === dayIndex,
+                        );
+
+                        const formatTime = (time: string) => {
+                          const [hours, minutes] = time.split(':');
+                          const hour = parseInt(hours, 10);
+                          const period = hour >= 12 ? 'PM' : 'AM';
+                          const displayHour = hour % 12 || 12;
+                          return `${displayHour}:${minutes} ${period}`;
+                        };
+
+                        const formatShift = (open: string, close: string) => {
+                          const openHour = parseInt(open.split(':')[0], 10);
+                          const closeHour = parseInt(close.split(':')[0], 10);
+                          const openPeriod = openHour >= 12 ? 'PM' : 'AM';
+                          const closePeriod = closeHour >= 12 ? 'PM' : 'AM';
+
+                          const formattedOpen = formatTime(open);
+                          const formattedClose = formatTime(close);
+
+                          // If both times are in the same period, only show AM/PM once
+                          if (openPeriod === closePeriod) {
+                            return `${formattedOpen.replace(` ${openPeriod}`, '')} - ${formattedClose}`;
+                          }
+
+                          return `${formattedOpen} - ${formattedClose}`;
+                        };
+
+                        return (
+                          <li key={dayIndex} className="flex items-center justify-between p-4">
+                            <span className="font-medium text-gray-700">{dayNames[dayIndex]}</span>
+                            <span className="text-gray-600">
+                              {dayShifts && dayShifts.length > 0
+                                ? dayShifts
+                                    .map((shift) =>
+                                      shift.open_time && shift.close_time
+                                        ? formatShift(shift.open_time, shift.close_time)
+                                        : 'Closed',
+                                    )
+                                    .join(', ')
+                                : 'Closed'}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </article>
+              )}
+              <Map
+                latitude={parsedClinic.latitude ?? 0}
+                longitude={parsedClinic.longitude ?? 0}
+                name={parsedClinic.name ?? ''}
+              />
               {parsedClinic.reviews && parsedClinic.reviews.length > 0 && (
                 <Reviews reviews={parsedClinic.reviews} />
               )}
             </Prose>
+            <aside>
+              <Prose>
+                {parsedClinic.services && (
+                  <div className="hidden lg:block">
+                    <h2>Services</h2>
+                    <div className="grid grid-cols-2 gap-4">
+                      {parsedClinic.services.map((service, index) => (
+                        <div
+                          key={service.slug ?? service.name ?? String(index)}
+                          tabIndex={0}
+                          aria-label={service.name}
+                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400"
+                          role="button">
+                          {getServiceIcon(service.slug ?? '')}
+                          <div className="mt-4 text-center text-sm text-gray-900">
+                            {service.name}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </Prose>
+            </aside>
           </div>
         </Container>
       </Wrapper>
