@@ -14,7 +14,7 @@ export default function Prose({
     <Component
       className={cn(
         className,
-        'prose prose-gray max-w-none font-medium',
+        'prose prose-invert prose-gray max-w-none font-medium',
         // headings
         'prose-headings:relative prose-headings:scroll-mt-[6rem] prose-headings:capitalize prose-h1:mb-4 prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-medium md:prose-h2:text-2xl md:prose-h3:text-xl',
         // lead

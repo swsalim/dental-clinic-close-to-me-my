@@ -51,7 +51,9 @@ export const StarRating = memo(function StarRating({
         })}
       </div>
       {showValue && (
-        <span className="ml-1 text-sm font-semibold text-gray-500">({ratingValue.toFixed(1)})</span>
+        <span className="ml-1 text-sm font-semibold text-gray-500 dark:text-gray-300">
+          ({ratingValue.toFixed(1)})
+        </span>
       )}
     </div>
   );

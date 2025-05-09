@@ -45,7 +45,7 @@ function Hero() {
               buttonVariants({
                 variant: 'ghost',
               }),
-              'w-full rounded-full',
+              'w-full rounded-full text-gray-900 dark:text-gray-50',
             )}
             href="#">
             List your clinic for FREE

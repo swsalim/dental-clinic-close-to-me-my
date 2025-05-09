@@ -72,7 +72,7 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
               )}
             </div>
             <h3 className="text-lg font-semibold">{state.name}</h3>
-            <p className="text-base font-medium text-gray-600">
+            <p className="text-base font-medium text-gray-600 dark:text-gray-300">
               {state.clinics?.[0].count} {pluralize('clinic', state.clinics?.[0].count)}
             </p>
           </Link>

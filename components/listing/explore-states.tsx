@@ -24,7 +24,7 @@ export async function ExploreStates() {
           <h2 className="text-balance text-3xl font-black">
             Explore dental clinics in popular states
           </h2>
-          <p className="text-base font-medium text-gray-700">
+          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
             We&apos;ve compiled a list of dental clinics in these locations.
           </p>
         </div>

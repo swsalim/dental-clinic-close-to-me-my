@@ -59,9 +59,11 @@ function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
               </CardContent>
             )}
             <CardFooter className="flex flex-col items-start gap-1">
-              <span className="text-base font-semibold text-gray-700">{author_name}</span>
+              <span className="text-base font-semibold text-gray-700 dark:text-gray-50">
+                {author_name}
+              </span>
               {review_time && (
-                <span className="text-sm text-gray-500">
+                <span className="text-sm text-gray-500 dark:text-gray-300">
                   {formatDistanceToNow(new Date(review_time), { addSuffix: true })}
                 </span>
               )}
@@ -228,7 +230,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             {/* left column */}
             <div className="flex min-w-0 flex-1 flex-col gap-y-4">
               <div className="flex flex-col flex-wrap items-start justify-between gap-x-2 gap-y-2 lg:flex-row lg:items-center lg:justify-normal">
-                <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9">
+                <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 dark:text-gray-50 sm:truncate sm:text-3xl sm:leading-9">
                   {parsedClinic.name}
                 </h1>
                 <StarRating rating={parsedClinic.rating ?? 0} />
@@ -243,7 +245,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               <div className="flex flex-col gap-x-4 gap-y-2">
                 <div className="flex items-center gap-x-2">
                   <MapPinIcon className="h-5 w-5 text-brand" />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     {parsedClinic.address}, {parsedClinic.postal_code}
                     {parsedClinic.area?.name && `${', '}${parsedClinic.area?.name},`}
                     {parsedClinic.state?.name && `${' '}${parsedClinic.state?.name}`}
@@ -343,10 +345,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                         key={service.slug ?? service.name ?? String(index)}
                         tabIndex={0}
                         aria-label={service.name}
-                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400"
+                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50 text-gray-900"
                         role="button">
                         {getServiceIcon(service.slug ?? '')}
-                        <div className="mt-4 text-center text-base text-gray-900">
+                        <div className="mt-4 text-center text-base">
                           {service.name}
                         </div>
                       </div>
@@ -357,8 +359,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
                   <h2>Opening Hours</h2>
-                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow">
-                    <ul className="divide-y divide-gray-200 pl-0">
+                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950">
+                    <ul className="divide-y divide-gray-200 pl-0 dark:divide-gray-700 my-0">
                       {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => {
                         const dayNames = [
                           'Monday',
@@ -402,8 +404,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           <li
                             key={dayIndex}
                             className="flex items-center justify-between gap-4 p-4">
-                            <span className="font-medium text-gray-700">{dayNames[dayIndex]}</span>
-                            <span className="text-gray-600">
+                            <span className="font-medium text-gray-700 dark:text-gray-50">
+                              {dayNames[dayIndex]}
+                            </span>
+                            <span className="text-gray-600 dark:text-gray-300">
                               {dayShifts && dayShifts.length > 0
                                 ? dayShifts
                                     .map((shift) =>
@@ -441,10 +445,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           key={service.slug ?? service.name ?? String(index)}
                           tabIndex={0}
                           aria-label={service.name}
-                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400"
+                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50 text-gray-900"
                           role="button">
                           {getServiceIcon(service.slug ?? '')}
-                          <div className="mt-4 text-center text-sm text-gray-900">
+                          <div className="mt-4 text-center text-sm ">
                             {service.name}
                           </div>
                         </div>

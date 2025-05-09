@@ -43,11 +43,11 @@ export function ClinicCard({ slug, name, address, phone, image, rating }: Clinic
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <MapPinIcon className="text-brand h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              <p className="line-clamp-2 text-sm text-gray-500">{address}</p>
+              <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-300">{address}</p>
             </div>
             <div className="flex items-center gap-2">
               <PhoneIcon className="text-brand h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              <p className="text-sm text-gray-500">{phone}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-300">{phone}</p>
             </div>
           </div>
         </CardContent>

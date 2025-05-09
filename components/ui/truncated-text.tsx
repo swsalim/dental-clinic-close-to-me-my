@@ -29,7 +29,7 @@ export function TruncatedText({ text, limit = 50 }: TruncatedTextProps) {
       <Button
         variant="ghost"
         onClick={() => setIsExpanded(!isExpanded)}
-        className="h-auto px-0 text-blue-800 hover:bg-transparent hover:text-blue-600">
+        className="transition-colors duration-200 h-auto px-0 text-blue-800 hover:bg-transparent hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-500">
         {isExpanded ? 'Show less' : 'Show more'}
       </Button>
     </div>
