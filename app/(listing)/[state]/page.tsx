@@ -55,10 +55,10 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
       url: absoluteUrl(`/${state}`),
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${stateData?.name}`),
+          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
-          alt: stateData?.name,
+          alt: title,
         },
       ],
       locale: 'en_US',
@@ -71,10 +71,10 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
       creator: siteConfig.creator,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${stateData?.name}`),
+          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
-          alt: stateData?.name,
+          alt: title,
         },
       ],
     },

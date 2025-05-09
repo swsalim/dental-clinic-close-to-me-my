@@ -57,10 +57,10 @@ export async function generateMetadata({ params }: AreaPageProps): Promise<Metad
       url: absoluteUrl(`/${state}/${area}`),
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${areaData.name}`),
+          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
-          alt: areaData?.name,
+          alt: title,
         },
       ],
       locale: 'en_US',
@@ -73,10 +73,10 @@ export async function generateMetadata({ params }: AreaPageProps): Promise<Metad
       creator: siteConfig.creator,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${areaData?.name}`),
+          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
-          alt: areaData?.name,
+          alt: title,
         },
       ],
     },

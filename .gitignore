@@ -44,3 +44,5 @@ service_account_google.json
 
 .cursorrules
 .cursor/mcp.json
+
+service_account.json
