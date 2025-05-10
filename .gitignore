@@ -46,3 +46,5 @@ service_account_google.json
 .cursor/mcp.json
 
 service_account.json
+
+sitemap*.xml
