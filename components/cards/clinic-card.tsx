@@ -20,6 +20,7 @@ interface ClinicCardProps {
   rating?: number | null;
   hours: Partial<ClinicHours>[];
   specialHours: Partial<ClinicSpecialHours>[];
+  openOnPublicHolidays: boolean;
 }
 
 export function ClinicCard({
@@ -31,6 +32,7 @@ export function ClinicCard({
   rating,
   hours,
   specialHours,
+  openOnPublicHolidays,
 }: ClinicCardProps) {
   return (
     <Link
@@ -48,11 +50,12 @@ export function ClinicCard({
               priority={false}
             />
           )}
-          <div className="absolute right-2 top-2 flex gap-2">
+          <div className="absolute right-2 top-2 flex flex-wrap justify-end gap-2">
             {hours.length === 7 && hours.every((hour) => hour.open_time && hour.close_time) && (
               <Badge variant="blue">Open everyday</Badge>
             )}
             <ClinicStatus hours={hours} specialHours={specialHours} />
+            {openOnPublicHolidays && <Badge variant="gray">Open on public holidays</Badge>}
           </div>
         </CardHeader>
         <CardContent className="p-6">

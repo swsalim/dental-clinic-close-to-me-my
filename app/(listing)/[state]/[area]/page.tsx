@@ -213,6 +213,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   rating={clinic.rating}
                   hours={clinic.hours ?? []}
                   specialHours={clinic.special_hours ?? []}
+                  openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
                 />
               ))}
             </div>

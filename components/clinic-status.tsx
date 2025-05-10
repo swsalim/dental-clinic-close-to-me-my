@@ -15,6 +15,10 @@ function getClinicStatus(
 ): ClinicStatus {
   const dayOfWeek = date.getDay() - 1;
   const currentTime = date.toTimeString().slice(0, 5); // HH:mm format
+  console.log('dayOfWeek');
+  console.log(dayOfWeek);
+  console.log('currentTime');
+  console.log(currentTime);
 
   // Helper function to check if current time is within 30 minutes of a target time
   const isWithin30Minutes = (targetTime: string): boolean => {
@@ -48,19 +52,27 @@ function getClinicStatus(
   }
 
   // Check regular hours
-  const regularHoursForDay = regularHours.find((h) => h.day_of_week === dayOfWeek);
-  if (!regularHoursForDay) return 'closed';
-  if (!regularHoursForDay.open_time || !regularHoursForDay.close_time) return 'closed';
+  const regularHoursForDay = regularHours.filter((h) => h.day_of_week === dayOfWeek);
+  if (!regularHoursForDay.length) return 'closed';
 
-  // Check if closing soon
-  if (isWithin30Minutes(regularHoursForDay.close_time)) return 'closing-soon';
+  // Check each shift for the day
+  for (const shift of regularHoursForDay) {
+    if (!shift.open_time || !shift.close_time) continue;
 
-  // Check if opening soon
-  if (isWithin30Minutes(regularHoursForDay.open_time)) return 'opening-soon';
+    // Check if closing soon
+    if (isWithin30Minutes(shift.close_time)) return 'closing-soon';
 
-  return currentTime >= regularHoursForDay.open_time && currentTime <= regularHoursForDay.close_time
-    ? 'open'
-    : 'closed';
+    // Check if opening soon
+    if (isWithin30Minutes(shift.open_time)) return 'opening-soon';
+
+    // Check if currently open in this shift
+    if (currentTime >= shift.open_time && currentTime <= shift.close_time) {
+      return 'open';
+    }
+  }
+
+  // If we get here, no shifts are currently active
+  return 'closed';
 }
 
 interface ClinicStatusProps {
@@ -69,7 +81,7 @@ interface ClinicStatusProps {
 }
 
 export function ClinicStatus({ hours, specialHours }: ClinicStatusProps) {
-  const [status, setStatus] = useState<ClinicStatus>('closed');
+  const [status, setStatus] = useState<ClinicStatus | null>(null);
 
   useEffect(() => {
     const checkStatus = () => {
@@ -104,5 +116,13 @@ export function ClinicStatus({ hours, specialHours }: ClinicStatusProps) {
     },
   };
 
-  return <Badge variant={statusConfig[status].variant}>{statusConfig[status].text}</Badge>;
+  return (
+    <>
+      {status && (
+        <Badge variant={statusConfig[status].variant} className="duration-150 animate-in fade-in">
+          {statusConfig[status].text}
+        </Badge>
+      )}
+    </>
+  );
 }

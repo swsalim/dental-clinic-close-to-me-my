@@ -12,6 +12,7 @@ import {
   PhoneIcon,
   YoutubeIcon,
 } from 'lucide-react';
+import { coolGray } from 'tailwindcss/colors';
 
 import { siteConfig } from '@/config/site';
 
@@ -165,6 +166,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
 
   const rawClinicData = await getClinicBySlug(clinicSlug);
+  console.log('rawClinicData');
+  console.log(rawClinicData?.hours);
 
   if (!rawClinicData) {
     notFound();
@@ -230,7 +233,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             {/* left column */}
             <div className="flex min-w-0 flex-1 flex-col gap-y-4">
               <div className="flex flex-col flex-wrap items-start justify-between gap-x-2 gap-y-2 lg:flex-row lg:items-center lg:justify-normal">
-                <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 dark:text-gray-50 sm:truncate sm:text-3xl sm:leading-9">
+                <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
                   {parsedClinic.name}
                 </h1>
                 <StarRating rating={parsedClinic.rating ?? 0} />
@@ -345,12 +348,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                         key={service.slug ?? service.name ?? String(index)}
                         tabIndex={0}
                         aria-label={service.name}
-                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50 text-gray-900"
+                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
                         role="button">
                         {getServiceIcon(service.slug ?? '')}
-                        <div className="mt-4 text-center text-base">
-                          {service.name}
-                        </div>
+                        <div className="mt-4 text-center text-base">{service.name}</div>
                       </div>
                     ))}
                   </div>
@@ -360,7 +361,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <article>
                   <h2>Opening Hours</h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950">
-                    <ul className="divide-y divide-gray-200 pl-0 dark:divide-gray-700 my-0">
+                    <ul className="my-0 divide-y divide-gray-200 pl-0 dark:divide-gray-700">
                       {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => {
                         const dayNames = [
                           'Monday',
@@ -445,12 +446,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           key={service.slug ?? service.name ?? String(index)}
                           tabIndex={0}
                           aria-label={service.name}
-                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50 text-gray-900"
+                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
                           role="button">
                           {getServiceIcon(service.slug ?? '')}
-                          <div className="mt-4 text-center text-sm ">
-                            {service.name}
-                          </div>
+                          <div className="mt-4 text-center text-sm">{service.name}</div>
                         </div>
                       ))}
                     </div>
