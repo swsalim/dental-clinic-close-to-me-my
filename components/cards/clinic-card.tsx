@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 
+import { ClinicHours, ClinicSpecialHours } from '@/types/clinic';
 import { MapPinIcon, PhoneIcon } from 'lucide-react';
 
+import { ClinicStatus } from '@/components/clinic-status';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { StarRating } from '@/components/ui/star-rating';
 
@@ -15,11 +18,24 @@ interface ClinicCardProps {
   phone: string;
   image?: string;
   rating?: number | null;
+  hours: Partial<ClinicHours>[];
+  specialHours: Partial<ClinicSpecialHours>[];
 }
 
-export function ClinicCard({ slug, name, address, phone, image, rating }: ClinicCardProps) {
+export function ClinicCard({
+  slug,
+  name,
+  address,
+  phone,
+  image,
+  rating,
+  hours,
+  specialHours,
+}: ClinicCardProps) {
   return (
-    <Link href={`/place/${slug}`} className="block transition-transform hover:scale-[1.02]">
+    <Link
+      href={`/place/${slug}`}
+      className="block transition-transform hover:scale-[1.02] hover:border-none">
       <Card className="h-full overflow-hidden rounded-2xl" role="article">
         <CardHeader className="relative h-48 overflow-hidden p-0">
           {image && (
@@ -32,6 +48,12 @@ export function ClinicCard({ slug, name, address, phone, image, rating }: Clinic
               priority={false}
             />
           )}
+          <div className="absolute right-2 top-2 flex gap-2">
+            {hours.length === 7 && hours.every((hour) => hour.open_time && hour.close_time) && (
+              <Badge variant="blue">Open everyday</Badge>
+            )}
+            <ClinicStatus hours={hours} specialHours={specialHours} />
+          </div>
         </CardHeader>
         <CardContent className="p-6">
           <CardTitle className="mb-2 text-lg leading-tight">{name}</CardTitle>
@@ -42,11 +64,11 @@ export function ClinicCard({ slug, name, address, phone, image, rating }: Clinic
           )}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <MapPinIcon className="text-brand h-4 w-4 flex-shrink-0" aria-hidden="true" />
+              <MapPinIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
               <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-300">{address}</p>
             </div>
             <div className="flex items-center gap-2">
-              <PhoneIcon className="text-brand h-4 w-4 flex-shrink-0" aria-hidden="true" />
+              <PhoneIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
               <p className="text-sm text-gray-500 dark:text-gray-300">{phone}</p>
             </div>
           </div>

@@ -88,7 +88,7 @@ export function ClinicStatus({ hours, specialHours }: ClinicStatusProps) {
   const statusConfig = {
     open: {
       variant: 'green' as const,
-      text: 'Open Now',
+      text: 'Open',
     },
     closed: {
       variant: 'red' as const,
@@ -104,9 +104,5 @@ export function ClinicStatus({ hours, specialHours }: ClinicStatusProps) {
     },
   };
 
-  return (
-    <Badge variant={statusConfig[status].variant} className="capitalize">
-      {statusConfig[status].text}
-    </Badge>
-  );
+  return <Badge variant={statusConfig[status].variant}>{statusConfig[status].text}</Badge>;
 }
