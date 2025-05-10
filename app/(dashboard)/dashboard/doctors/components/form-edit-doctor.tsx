@@ -360,7 +360,7 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
           <div className="space-y-6 bg-white">
             <div>
               <h3 className="text-lg font-medium leading-6 text-gray-900">Profile</h3>
-              <p className="text-text-muted mt-1 text-sm">
+              <p className="text-text-gray-500 mt-1 text-sm">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>

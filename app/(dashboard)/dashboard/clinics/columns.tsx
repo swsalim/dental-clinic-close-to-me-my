@@ -72,7 +72,9 @@ export const columns: ColumnDef<ClinicTableData>[] = [
   // },
   {
     accessorKey: 'name',
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Name" className="" />,
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Name" className="dark:text-gray-100" />
+    ),
     cell: ({ row }) => {
       const slug = row.original.slug;
       return (

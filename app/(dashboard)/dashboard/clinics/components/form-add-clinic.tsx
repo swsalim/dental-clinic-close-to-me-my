@@ -610,7 +610,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
           <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
             <div>
               <h3 className="text-lg font-medium leading-6 text-gray-900">Add Clinic</h3>
-              <p className="text-text-muted mt-1 text-sm">
+              <p className="mt-1 text-sm text-gray-500">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>

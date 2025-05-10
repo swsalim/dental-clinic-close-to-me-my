@@ -386,7 +386,7 @@ export default function FormEditState({ state }: EditStateFormProps) {
           <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
             <div>
               <h3 className="text-lg font-medium leading-6 text-gray-900">Edit State</h3>
-              <p className="text-text-muted mt-1 text-sm">
+              <p className="text-text-gray-500 mt-1 text-sm">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>

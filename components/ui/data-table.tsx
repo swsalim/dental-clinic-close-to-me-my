@@ -41,7 +41,7 @@ export function DataTable<T>({
 }: DataTableProps<T>) {
   return (
     <div className={cn('rounded-md shadow ring-1 ring-black ring-opacity-5', className)}>
-      <Table>
+      <Table className="dark:bg-gray-900">
         {caption && <TableCaption className="sr-only">{caption}</TableCaption>}
         <TableHeader>
           <TableRow>
@@ -58,7 +58,7 @@ export function DataTable<T>({
             ))}
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody className="dark:bg-gray-900">
           {data.map((row) => (
             <TableRow key={getRowId(row)}>
               {columns.map((column) => (

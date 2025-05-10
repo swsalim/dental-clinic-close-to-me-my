@@ -96,10 +96,12 @@ export default async function Dashboard() {
   return (
     <section className="max-w-8xl mx-auto px-4 py-8 sm:px-6">
       <div className="space-y-6 sm:px-6 lg:col-span-10 lg:px-0">
-        <h1 className="text-3xl font-bold leading-6 text-gray-900">Dashboard</h1>
+        <h1 className="text-3xl font-bold leading-6 text-gray-900 dark:text-gray-100">Dashboard</h1>
 
         <div>
-          <h2 className="text-xl font-semibold leading-6 text-gray-900">Last 7 days</h2>
+          <h2 className="text-xl font-semibold leading-6 text-gray-900 dark:text-gray-100">
+            Last 7 days
+          </h2>
 
           <div className={cn('grid gap-2', 'mt-2')}>
             <Popover>

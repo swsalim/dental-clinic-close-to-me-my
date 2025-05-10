@@ -36,7 +36,7 @@ export default function Login() {
         </p>
       </div>
 
-      <Card className="shadow-lg">
+      <Card className="shadow-lg dark:border-gray-200 dark:bg-white">
         <CardContent className="pt-6">
           <Suspense fallback={<LoginFormSkeleton />}>
             <LoginForm />
