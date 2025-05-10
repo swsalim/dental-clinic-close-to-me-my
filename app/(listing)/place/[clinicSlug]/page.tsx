@@ -12,7 +12,6 @@ import {
   PhoneIcon,
   YoutubeIcon,
 } from 'lucide-react';
-import { coolGray } from 'tailwindcss/colors';
 
 import { siteConfig } from '@/config/site';
 
@@ -166,8 +165,6 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
 
   const rawClinicData = await getClinicBySlug(clinicSlug);
-  console.log('rawClinicData');
-  console.log(rawClinicData?.hours);
 
   if (!rawClinicData) {
     notFound();
