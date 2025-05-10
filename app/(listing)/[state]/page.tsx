@@ -98,9 +98,6 @@ export default async function StatePage({ params }: StatePageProps) {
     notFound();
   }
 
-  console.log(stateData.clinics[0]);
-  console.log(stateData.clinics[1]);
-
   const nearbyAreas = stateData.areas
     ?.slice(0, 3)
     .map((area) => area.name)

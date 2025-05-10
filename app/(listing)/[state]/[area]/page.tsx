@@ -211,6 +211,8 @@ export default async function AreaPage({ params }: AreaPageProps) {
                   phone={clinic.phone ?? ''}
                   image={clinic.images?.[0]}
                   rating={clinic.rating}
+                  hours={clinic.hours ?? []}
+                  specialHours={clinic.special_hours ?? []}
                 />
               ))}
             </div>
