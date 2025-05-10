@@ -123,8 +123,8 @@ c58 -163 113 -304 122 -313 24 -24 80 -23 102 1 9 10 44 93 76 182 32 90 63
         ],
       },
     );
-  } catch (e: any) {
-    console.log(`${e.message}`);
+  } catch (e: unknown) {
+    console.log(e instanceof Error ? e.message : String(e));
     return new Response(`Failed to generate the image`, {
       status: 500,
     });
