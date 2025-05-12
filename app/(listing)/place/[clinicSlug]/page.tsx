@@ -112,7 +112,7 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
     notFound();
   }
 
-  const title = `${clinic.name} – Dental Clinic in ${clinic.area.name}, ${clinic.state.name}`;
+  const title = clinic.name;
   const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area.name}, ${clinic.state.name}. View services, hours, and contact info.`;
 
   return {
