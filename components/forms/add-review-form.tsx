@@ -10,7 +10,7 @@ import { StarIcon } from 'lucide-react';
 import * as z from 'zod';
 
 import { sendNewReviewNotification } from '@/lib/email';
-import { createAdminClient } from '@/lib/supabase';
+import { createClient } from '@/lib/supabase/client';
 
 import { Textarea } from '@/components/form-fields/textarea';
 import { Button } from '@/components/ui/button';
@@ -83,7 +83,7 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
         return;
       }
 
-      const supabase = createAdminClient();
+      const supabase = createClient();
 
       // Add review to the database
       const { error } = await supabase.from('clinic_reviews').insert({
