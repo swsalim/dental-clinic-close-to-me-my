@@ -15,10 +15,6 @@ function getClinicStatus(
 ): ClinicStatus {
   const dayOfWeek = date.getDay() - 1;
   const currentTime = date.toTimeString().slice(0, 5); // HH:mm format
-  console.log('dayOfWeek');
-  console.log(dayOfWeek);
-  console.log('currentTime');
-  console.log(currentTime);
 
   // Helper function to check if current time is within 30 minutes of a target time
   const isWithin30Minutes = (targetTime: string): boolean => {

@@ -26,6 +26,7 @@ import {
 import { getServiceIcon } from '@/helpers/services';
 
 import { ClinicStatus } from '@/components/clinic-status';
+import AddReviewForm from '@/components/forms/add-review-form';
 import MapboxMap from '@/components/mapbox-map';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
@@ -49,7 +50,7 @@ function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
       <h2>Reviews</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map(({ author_name, rating, text, review_time }) => (
-          <Card key={author_name}>
+          <Card key={`${author_name}-${review_time}`}>
             <CardHeader>
               <StarRating rating={rating ?? 0} showValue={false} />
             </CardHeader>
@@ -102,6 +103,62 @@ function Map({
     </article>
   );
 }
+
+const formatTime = (time: string) => {
+  const [hours, minutes] = time.split(':');
+  const hour = parseInt(hours, 10);
+  const period = hour >= 12 ? 'PM' : 'AM';
+  const displayHour = hour % 12 || 12;
+  return `${displayHour}:${minutes} ${period}`;
+};
+
+const formatShift = (open: string, close: string) => {
+  const openHour = parseInt(open.split(':')[0], 10);
+  const closeHour = parseInt(close.split(':')[0], 10);
+  const openPeriod = openHour >= 12 ? 'PM' : 'AM';
+  const closePeriod = closeHour >= 12 ? 'PM' : 'AM';
+
+  const formattedOpen = formatTime(open);
+  const formattedClose = formatTime(close);
+
+  // If both times are in the same period, only show AM/PM once
+  if (openPeriod === closePeriod) {
+    return `${formattedOpen.replace(` ${openPeriod}`, '')} - ${formattedClose}`;
+  }
+
+  return `${formattedOpen} - ${formattedClose}`;
+};
+
+const renderOpeningHours = (parsedClinic: ReturnType<typeof parseClinicData>) => {
+  const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+  return (
+    <ul className="my-0 divide-y divide-gray-200 pl-0 dark:divide-gray-700">
+      {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => {
+        const dayShifts = parsedClinic.hours?.filter((h) => h.day_of_week === dayIndex);
+
+        return (
+          <li key={dayIndex} className="flex items-center justify-between gap-4 p-4">
+            <span className="font-medium text-gray-700 dark:text-gray-50">
+              {dayNames[dayIndex]}
+            </span>
+            <span className="text-gray-600 dark:text-gray-300">
+              {dayShifts && dayShifts.length > 0
+                ? dayShifts
+                    .map((shift) =>
+                      shift.open_time && shift.close_time
+                        ? formatShift(shift.open_time, shift.close_time)
+                        : 'Closed',
+                    )
+                    .join(', ')
+                : 'Closed'}
+            </span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
@@ -358,68 +415,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <article>
                   <h2>Opening Hours</h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950">
-                    <ul className="my-0 divide-y divide-gray-200 pl-0 dark:divide-gray-700">
-                      {[0, 1, 2, 3, 4, 5, 6].map((dayIndex) => {
-                        const dayNames = [
-                          'Monday',
-                          'Tuesday',
-                          'Wednesday',
-                          'Thursday',
-                          'Friday',
-                          'Saturday',
-                          'Sunday',
-                        ];
-                        const dayShifts = parsedClinic.hours?.filter(
-                          (h) => h.day_of_week === dayIndex,
-                        );
-
-                        const formatTime = (time: string) => {
-                          const [hours, minutes] = time.split(':');
-                          const hour = parseInt(hours, 10);
-                          const period = hour >= 12 ? 'PM' : 'AM';
-                          const displayHour = hour % 12 || 12;
-                          return `${displayHour}:${minutes} ${period}`;
-                        };
-
-                        const formatShift = (open: string, close: string) => {
-                          const openHour = parseInt(open.split(':')[0], 10);
-                          const closeHour = parseInt(close.split(':')[0], 10);
-                          const openPeriod = openHour >= 12 ? 'PM' : 'AM';
-                          const closePeriod = closeHour >= 12 ? 'PM' : 'AM';
-
-                          const formattedOpen = formatTime(open);
-                          const formattedClose = formatTime(close);
-
-                          // If both times are in the same period, only show AM/PM once
-                          if (openPeriod === closePeriod) {
-                            return `${formattedOpen.replace(` ${openPeriod}`, '')} - ${formattedClose}`;
-                          }
-
-                          return `${formattedOpen} - ${formattedClose}`;
-                        };
-
-                        return (
-                          <li
-                            key={dayIndex}
-                            className="flex items-center justify-between gap-4 p-4">
-                            <span className="font-medium text-gray-700 dark:text-gray-50">
-                              {dayNames[dayIndex]}
-                            </span>
-                            <span className="text-gray-600 dark:text-gray-300">
-                              {dayShifts && dayShifts.length > 0
-                                ? dayShifts
-                                    .map((shift) =>
-                                      shift.open_time && shift.close_time
-                                        ? formatShift(shift.open_time, shift.close_time)
-                                        : 'Closed',
-                                    )
-                                    .join(', ')
-                                : 'Closed'}
-                            </span>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    {renderOpeningHours(parsedClinic)}
                   </div>
                 </article>
               )}
@@ -429,7 +425,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 name={parsedClinic.name ?? ''}
               />
               {parsedClinic.reviews && parsedClinic.reviews.length > 0 && (
-                <Reviews reviews={parsedClinic.reviews} />
+                <>
+                  {parsedClinic.id && <AddReviewForm clinicId={parsedClinic.id} />}
+                  <Reviews reviews={parsedClinic.reviews} />
+                </>
               )}
             </Prose>
             <aside>

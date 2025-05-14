@@ -105,11 +105,13 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
       doctors:clinic_doctor_relations(doctor:clinic_doctors(id, name, slug)),
       hours:clinic_hours(day_of_week, open_time, close_time),
       special_hours:clinic_special_hours(date, is_closed, open_time, close_time),
-      reviews:clinic_reviews(*),
+      reviews:clinic_reviews(author_name, review_time, rating, email, text, status),
       services:clinic_service_relations(service:clinic_services(id, name, slug))
     `,
     )
+    .eq('reviews.status', 'approved')
     .match({ slug, is_active: true, status })
+    .order('review_time', { referencedTable: 'clinic_reviews', ascending: false })
     .single();
 
   return clinic;

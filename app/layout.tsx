@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
 import Footer from '@/components/site/footer';
+import { Toaster } from '@/components/ui/toaster';
 
 import './globals.css';
 
@@ -87,6 +88,7 @@ export default function RootLayout({
         suppressHydrationWarning>
         <div className="flex grow flex-col justify-center">{children}</div>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
