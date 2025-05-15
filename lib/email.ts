@@ -1,3 +1,9 @@
+import { Resend } from 'resend';
+
+import { renderReviewNotificationEmail } from '@/components/email/review-notification';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 // Email template for new review notifications
 export const sendNewReviewNotification = async ({
   clinicName,
@@ -11,27 +17,27 @@ export const sendNewReviewNotification = async ({
   reviewText: string;
 }) => {
   try {
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        clinicName,
-        authorName,
-        rating,
-        reviewText,
-      }),
+    // Use our template to generate the HTML content
+    const html = renderReviewNotificationEmail({
+      clinicName,
+      authorName,
+      rating,
+      reviewText,
     });
 
-    const result = await response.json();
+    const { error } = await resend.emails.send({
+      from: process.env.EMAIL_FROM || 'support@dentalclinicclosetome.my',
+      to: process.env.NOTIFICATION_EMAIL || 'swsalim+dentalclinicclosetome@gmail.com',
+      subject: `New Review for ${clinicName}`,
+      html,
+    });
 
-    if (!response.ok) {
-      console.error('Error sending email notification:', result.error);
-      return { success: false, error: result.error };
+    if (error) {
+      console.error('Error sending email notification:', error);
+      return { success: false, error };
     }
 
-    return { success: true, data: result };
+    return { success: true };
   } catch (error) {
     console.error('Exception when sending email:', error);
     return { success: false, error };

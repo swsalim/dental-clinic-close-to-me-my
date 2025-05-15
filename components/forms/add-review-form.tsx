@@ -9,9 +9,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { StarIcon } from 'lucide-react';
 import * as z from 'zod';
 
-import { sendNewReviewNotification } from '@/lib/email';
-import { createClient } from '@/lib/supabase/client';
-
 import { Textarea } from '@/components/form-fields/textarea';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -83,37 +80,23 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
         return;
       }
 
-      const supabase = createClient();
-
-      // Add review to the database
-      const { error } = await supabase.from('clinic_reviews').insert({
-        clinic_id: clinicId,
-        author_name: data.author_name,
-        email: data.email,
-        text: data.text,
-        rating: data.rating,
-        review_time: new Date().toISOString(),
-        source: 'manual',
-        status: 'pending',
+      const response = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          clinic_id: clinicId,
+          author_name: data.author_name,
+          email: data.email,
+          text: data.text,
+          rating: data.rating,
+        }),
       });
 
-      if (error) throw error;
-
-      // Get clinic name for the email notification
-      const { data: clinicData, error: clinicError } = await supabase
-        .from('clinics')
-        .select('name')
-        .eq('id', clinicId)
-        .single();
-
-      if (!clinicError && clinicData) {
-        // Send email notification about the new review
-        await sendNewReviewNotification({
-          clinicName: clinicData.name,
-          authorName: data.author_name,
-          rating: data.rating,
-          reviewText: data.text,
-        });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit review');
       }
 
       // Reset form and refresh page
@@ -129,7 +112,10 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
       console.error('Error submitting review:', error);
       toast({
         title: 'Error',
-        description: 'There was an error submitting your review. Please try again later.',
+        description:
+          error instanceof Error
+            ? error.message
+            : 'Failed to submit review. Please try again later.',
         variant: 'destructive',
       });
     } finally {
