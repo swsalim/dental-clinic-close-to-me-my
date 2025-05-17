@@ -210,6 +210,9 @@ export default async function StatePage({ params }: StatePageProps) {
                   name={clinic.name ?? ''}
                   address={clinic.address ?? ''}
                   phone={clinic.phone ?? ''}
+                  postalCode={clinic.postal_code ?? ''}
+                  state={clinic.state?.name ?? ''}
+                  area={clinic.area?.name ?? ''}
                   image={clinic.images?.[0]}
                   rating={clinic.rating}
                   hours={clinic.hours ?? []}

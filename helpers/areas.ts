@@ -76,7 +76,7 @@ export async function getAreaBySlug(areaSlug: string) {
       thumbnail_image,
       banner_image,
       state:states(name, slug, thumbnail_image, banner_image),
-      clinics:clinics(name, slug, description, status,images, postal_code, address, phone, open_on_public_holidays, rating, area:areas(name), state:states(name), hours:clinic_hours(day_of_week, open_time, close_time), special_hours:clinic_special_hours(date, is_closed, open_time, close_time))
+      clinics:clinics(name, slug, description, status,images, postal_code, address, phone, postal_code, open_on_public_holidays, rating, area:areas(name), state:states(name), hours:clinic_hours(day_of_week, open_time, close_time), special_hours:clinic_special_hours(date, is_closed, open_time, close_time))
     `,
     )
     .eq('clinics.status', 'approved')
