@@ -49,16 +49,18 @@ export const sendNewReviewNotification = async ({
 // Email template for new clinic submissions
 export const sendNewClinicNotification = async ({
   name,
-  clinicName,
   email,
+  clinicName,
+  clinicEmail,
   phone,
   address,
   description,
   price,
 }: {
   name: string;
-  clinicName: string;
   email?: string;
+  clinicName: string;
+  clinicEmail?: string;
   phone: string;
   address: string;
   description: string;
@@ -76,8 +78,9 @@ export const sendNewClinicNotification = async ({
       subject: `New Clinic Submission: ${clinicName}`,
       react: ClinicNotificationEmail({
         name,
-        clinicName,
         email,
+        clinicName,
+        clinicEmail,
         phone,
         address,
         description,

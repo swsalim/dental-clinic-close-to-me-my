@@ -13,7 +13,7 @@ export async function ExploreStates() {
     .eq('clinics.status', 'approved');
 
   const sortedStates = states
-    ? [...states].sort((a, b) => b.clinics[0].count - a.clinics[0].count).slice(0, 10)
+    ? [...states].sort((a, b) => b.clinics[0].count - a.clinics[0].count).slice(0, 8)
     : [];
 
   return (

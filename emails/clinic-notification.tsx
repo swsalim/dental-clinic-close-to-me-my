@@ -8,6 +8,7 @@ interface ClinicNotificationEmailProps {
   name: string;
   clinicName: string;
   email?: string;
+  clinicEmail?: string;
   phone: string;
   address: string;
   description: string;
@@ -18,6 +19,7 @@ export const ClinicNotificationEmail = ({
   name,
   clinicName,
   email,
+  clinicEmail,
   phone,
   address,
   description,
@@ -32,11 +34,11 @@ export const ClinicNotificationEmail = ({
         </Text>
 
         <Text className="mt-4 text-base text-gray-700">
-          <strong>Submitted by:</strong> {name}
+          <strong>Submitted by:</strong> {name} {email && `(${email})`}
         </Text>
 
         <Text className="mt-2 text-base text-gray-700">
-          <strong>Email:</strong> {email}
+          <strong>Email:</strong> {clinicEmail}
         </Text>
 
         <Text className="mt-2 text-base text-gray-700">
@@ -53,7 +55,7 @@ export const ClinicNotificationEmail = ({
 
         <Text className="mt-2 text-base text-gray-700">
           <strong>Listing Type:</strong>{' '}
-          {price === 'instant' ? 'Instant Listing ($49)' : 'Free Listing ($0)'}
+          {price === 'instant' ? 'Instant Listing' : 'Free Listing ($0)'}
         </Text>
       </Section>
     </EmailLayout>

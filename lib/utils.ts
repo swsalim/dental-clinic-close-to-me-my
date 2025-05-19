@@ -111,6 +111,23 @@ export const generateSignature = (publicId: string, apiSecret: string): string =
   return `public_id=${publicId}&timestamp=${timestamp}${apiSecret}`;
 };
 
+export function slugify(str: string): string {
+  const from = 'àáãäâèéëêìíïîòóöôùúüûñç·/_,:;';
+  const to = 'aaaaaeeeeiiiioooouuuunc------';
+
+  return str
+    .split('')
+    .map((letter, i) => letter.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i)))
+    .join('')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/\/+/g, '-')
+    .replace(/&/g, '-and-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-');
+}
+
 export const formatFileSize = (bytes: number): string => {
   if (bytes === 0) return '0 Bytes';
 
