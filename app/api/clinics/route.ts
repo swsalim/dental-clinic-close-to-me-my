@@ -125,11 +125,6 @@ export async function POST(request: Request) {
       status: 'pending',
     });
 
-    console.log('--------------------------------');
-    console.log('clinic');
-    console.log(clinic);
-    console.log('--------------------------------');
-
     // Send notification email
     await sendNewClinicNotification({
       name: validatedData.name,

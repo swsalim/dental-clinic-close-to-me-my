@@ -26,9 +26,6 @@ export default async function SubmitSuccessPage({
   // Extract metadata
   const meta = session?.metadata || {};
 
-  console.log('meta');
-  console.log(meta);
-
   // Only submit if required metadata is present
   const canSubmit = Boolean(meta && meta.clinic_name && meta.name && meta.email);
 

@@ -621,7 +621,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                         </div>
                         <div className="basis-1/5 text-right">
                           <span className="text-xl font-semibold text-gray-700 dark:text-gray-300">
-                            $49
+                            MYR 199
                           </span>
                         </div>
                       </div>
