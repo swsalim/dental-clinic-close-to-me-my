@@ -414,7 +414,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
                   <h2>Opening Hours</h2>
-                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950">
+                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
                     {renderOpeningHours(parsedClinic)}
                   </div>
                 </article>
@@ -442,7 +442,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           key={service.slug ?? service.name ?? String(index)}
                           tabIndex={0}
                           aria-label={service.name}
-                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
+                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
                           role="button">
                           {getServiceIcon(service.slug ?? '')}
                           <div className="mt-4 text-center text-sm">{service.name}</div>

@@ -13,7 +13,7 @@ const buttonVariants = cva(
         primary:
           'border border-solid border-transparent bg-brand text-white hover:bg-brand/80 hover:text-white focus:border-brand/80 focus:outline-none active:bg-brand/80',
         secondary:
-          'border border-solid border-gray-300 bg-white text-gray-500 hover:border-gray-700 hover:text-gray-800 focus:border-gray-700 active:border-gray-700 active:bg-gray-50 active:text-gray-800',
+          'border border-solid border-gray-300 bg-white text-gray-500 hover:border-gray-700 hover:text-gray-800 focus:border-gray-700 active:border-gray-700 active:bg-gray-50 active:text-gray-800 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:text-gray-400 dark:focus:border-gray-700 dark:active:border-gray-700 dark:active:bg-gray-50 dark:active:text-gray-800',
         outline:
           'border border-gray-300/50 bg-white text-gray-500 hover:border-gray-300 hover:bg-gray-100 hover:text-gray-700 focus:border-blue-300 active:bg-gray-100 active:text-gray-700',
         ghost:

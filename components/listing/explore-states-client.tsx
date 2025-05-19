@@ -54,6 +54,7 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
         <div
           key={state.id}
           className={cn(
+            'overflow-hidden',
             (index === 0 || index === 6) && 'lg:col-span-3 lg:row-span-2',
             index === 2 && 'lg:col-span-2',
             index === 3 && 'lg:col-span-3',
@@ -86,7 +87,7 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
                 />
               )}
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-1/2 p-4 drop-shadow-lg after:absolute after:inset-0 after:z-10 after:bg-gradient-to-t after:from-gray-900/90 after:to-transparent"></div>
+            <div className="absolute -bottom-1 left-0 right-0 h-1/2 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 z-20 p-4 drop-shadow-lg">
               <h3 className="text-lg font-semibold">{state.name}</h3>
               <p className="text-base font-medium text-gray-100 dark:text-gray-100">

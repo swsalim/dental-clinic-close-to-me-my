@@ -479,7 +479,9 @@ export default function SubmitClinicForm({ states, areas }: Props) {
               <div
                 {...dropzone.getRootProps()}
                 className={`cursor-pointer rounded border-2 border-dashed p-4 text-center transition-colors ${
-                  dropzone.isDragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300 bg-white'
+                  dropzone.isDragActive
+                    ? 'border-blue-500 bg-blue-50 dark:border-blue-700 dark:bg-blue-900'
+                    : 'border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-900'
                 }`}>
                 <input {...dropzone.getInputProps()} onBlur={field.onBlur} />
                 <p className="text-gray-500">Drag and drop or click to select up to 5 images.</p>
@@ -604,35 +606,45 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                   onValueChange={field.onChange}
                   className="flex flex-col gap-2">
                   <FormItem>
-                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 [&:has([data-state=checked])>div]:text-blue-700">
+                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 [&:has([data-state=checked])>div]:text-blue-700 dark:[&:has([data-state=checked])>div]:border-gray-700 dark:[&:has([data-state=checked])>div]:bg-gray-800 dark:[&:has([data-state=checked])>div]:text-gray-200">
                       <FormControl>
                         <RadioGroupItem value="instant" className="sr-only" />
                       </FormControl>
-                      <div className="flex flex-row items-center gap-2 rounded border p-4">
+                      <div className="flex flex-row items-center gap-2 rounded border p-4 dark:border-gray-700">
                         <div className="basis-4/5">
-                          <div className="text-lg font-semibold text-gray-900">Instant Listing</div>
-                          <div className="text-sm text-gray-500">DoFollow backlink</div>
+                          <div className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                            Instant Listing
+                          </div>
+                          <div className="text-sm text-gray-500 dark:text-gray-400">
+                            DoFollow backlink
+                          </div>
                         </div>
                         <div className="basis-1/5 text-right">
-                          <span className="text-xl font-semibold text-gray-700">$49</span>
+                          <span className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+                            $49
+                          </span>
                         </div>
                       </div>
                     </FormLabel>
                   </FormItem>
                   <FormItem>
-                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 [&:has([data-state=checked])>div]:text-blue-700">
+                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 [&:has([data-state=checked])>div]:text-blue-700 dark:[&:has([data-state=checked])>div]:border-gray-700 dark:[&:has([data-state=checked])>div]:bg-gray-800 dark:[&:has([data-state=checked])>div]:text-gray-200">
                       <FormControl>
                         <RadioGroupItem value="free" className="sr-only" />
                       </FormControl>
-                      <div className="flex flex-row items-center gap-2 rounded border p-4">
+                      <div className="flex flex-row items-center gap-2 rounded border p-4 dark:border-gray-700">
                         <div className="basis-4/5">
-                          <div className="text-lg font-semibold text-gray-900">Free Listing</div>
-                          <div className="text-sm text-gray-500">
+                          <div className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                            Free Listing
+                          </div>
+                          <div className="text-sm text-gray-500 dark:text-gray-400">
                             Get listed within <strong>6 months</strong> with nofollow link.
                           </div>
                         </div>
                         <div className="basis-1/5 text-right">
-                          <span className="text-xl font-semibold text-gray-700">$0</span>
+                          <span className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+                            $0
+                          </span>
                         </div>
                       </div>
                     </FormLabel>

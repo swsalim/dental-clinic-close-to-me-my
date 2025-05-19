@@ -143,7 +143,7 @@ export function ClinicSubmit({
       <p className="mb-4">
         Thank you for your payment. Your clinic has been listed as an instant listing.
       </p>
-      <div className="mt-6 flex flex-col gap-4 rounded bg-green-50 p-4 text-left">
+      <div className="mt-6 flex flex-col gap-4 rounded-lg bg-gray-50 p-6 text-left dark:bg-gray-800">
         <h2 className="mb-2 text-lg font-semibold">Submission Details</h2>
         <ul>
           <li>
