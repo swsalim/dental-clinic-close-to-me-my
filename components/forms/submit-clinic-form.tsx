@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useForm } from 'react-hook-form';
 
+import Link from 'next/link';
+
 import { CloudinaryService } from '@/services/cloudinary.service';
 import type { ClinicArea, ClinicState } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -12,7 +14,6 @@ import * as z from 'zod';
 
 import { formatFileSize } from '@/lib/utils';
 
-import { File } from '@/components/form-fields/file';
 import { Input } from '@/components/form-fields/input';
 import { RadioGroup, RadioGroupItem } from '@/components/form-fields/radio';
 import {
@@ -293,6 +294,9 @@ export default function SubmitClinicForm({ states, areas }: Props) {
         <h2 className="mb-2 text-2xl font-bold text-green-700">Thank you!</h2>
         <p>Your listing submission was successful.</p>
         <p>We will review and get your submission listed in 6 months.</p>
+        <p>
+          <Link href="/">Return to Home</Link>
+        </p>
       </div>
     );
   }
