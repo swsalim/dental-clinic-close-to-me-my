@@ -23,19 +23,48 @@ export const sendNewReviewNotification = async ({
     return;
   }
 
+  console.log('email');
+  console.log(email);
+
   try {
-    const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
-      to: email,
-      bcc: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
-      subject: `New Review for ${clinicName}`,
-      react: ReviewNotificationEmail({
-        clinicName,
-        authorName,
-        rating,
-        reviewText,
-      }),
-    });
+    const { error } = await resend.batch.send([
+      {
+        from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+        to: email,
+        subject: `New Review for ${clinicName}`,
+        react: ReviewNotificationEmail({
+          clinicName,
+          authorName,
+          rating,
+          reviewText,
+        }),
+      },
+      {
+        from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+        to: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
+        subject: `New Review for ${clinicName}`,
+        react: ReviewNotificationEmail({
+          clinicName,
+          authorName,
+          rating,
+          reviewText,
+        }),
+      },
+    ]);
+
+    // const { error } = await resend.emails.send({
+    //   from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+    //   to: email,
+    //   //   bcc: [process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my'],
+    //   bcc: ['yuyu@clinicgeek.com'],
+    //   subject: `New Review for ${clinicName}`,
+    //   react: ReviewNotificationEmail({
+    //     clinicName,
+    //     authorName,
+    //     rating,
+    //     reviewText,
+    //   }),
+    // });
 
     if (error) {
       console.error('Error sending email notification:', error);
@@ -75,22 +104,38 @@ export const sendNewClinicNotification = async ({
   }
 
   try {
-    const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
-      to: email,
-      bcc: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
-      subject: `New Clinic Submission: ${clinicName}`,
-      react: ClinicNotificationEmail({
-        name,
-        email,
-        clinicName,
-        clinicEmail,
-        phone,
-        address,
-        description,
-        price,
-      }),
-    });
+    const { error } = await resend.batch.send([
+      {
+        from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+        to: email,
+        subject: `New Clinic Submission: ${clinicName}`,
+        react: ClinicNotificationEmail({
+          name,
+          email,
+          clinicName,
+          clinicEmail,
+          phone,
+          address,
+          description,
+          price,
+        }),
+      },
+      {
+        from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+        to: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
+        subject: `New Clinic Submission: ${clinicName}`,
+        react: ClinicNotificationEmail({
+          name,
+          email,
+          clinicName,
+          clinicEmail,
+          phone,
+          address,
+          description,
+          price,
+        }),
+      },
+    ]);
 
     if (error) {
       console.error('Error sending clinic notification:', error);

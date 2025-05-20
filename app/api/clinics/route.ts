@@ -11,7 +11,7 @@ import { slugify } from '@/lib/utils';
 // Types
 interface ClinicSubmissionData {
   name: string;
-  email?: string;
+  email: string;
   clinic_name: string;
   clinic_email?: string;
   description: string;
@@ -31,7 +31,7 @@ interface ClinicSubmissionData {
 // Validation schema
 const schema = z.object({
   name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Invalid email').optional(),
+  email: z.string().email('Invalid email'),
   clinic_name: z.string().min(1, 'Clinic name is required'),
   clinic_email: z.string().email('Invalid clinic email').optional().or(z.literal('')),
   description: z.string().min(10, 'Description must be at least 10 characters'),
