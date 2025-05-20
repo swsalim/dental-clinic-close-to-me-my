@@ -45,9 +45,6 @@ export function ClinicSubmit({
           return;
         }
 
-        console.log('clinicData');
-        console.log(clinicData);
-
         // Only update if status is 'pending_payment'
         if (clinicData?.status === 'pending_payment') {
           const { data: updatedClinic, error } = await supabase
@@ -62,9 +59,6 @@ export function ClinicSubmit({
             setError(error.message || 'Failed to update clinic record');
             return;
           }
-
-          console.log('updatedClinic');
-          console.log(updatedClinic);
 
           // Send notification email
           const response = await fetch('/api/send-email/clinic-notification', {

@@ -64,11 +64,6 @@ export async function POST(request: Request) {
       status: 'pending_payment',
     });
 
-    console.log('--------------------------------');
-    console.log('clinic');
-    console.log(clinic);
-    console.log('--------------------------------');
-
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       mode: 'payment',

@@ -8,11 +8,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendNewReviewNotification = async ({
   clinicName,
   authorName,
+  email,
   rating,
   reviewText,
 }: {
   clinicName: string;
   authorName: string;
+  email: string;
   rating: number;
   reviewText: string;
 }) => {
@@ -23,8 +25,9 @@ export const sendNewReviewNotification = async ({
 
   try {
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'support@dentalclinicclosetome.my',
-      to: process.env.NOTIFICATION_EMAIL || 'swsalim+dentalclinicclosetome@gmail.com',
+      from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+      to: email,
+      bcc: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
       subject: `New Review for ${clinicName}`,
       react: ReviewNotificationEmail({
         clinicName,
@@ -58,7 +61,7 @@ export const sendNewClinicNotification = async ({
   price,
 }: {
   name: string;
-  email?: string;
+  email: string;
   clinicName: string;
   clinicEmail?: string;
   phone: string;
@@ -73,8 +76,9 @@ export const sendNewClinicNotification = async ({
 
   try {
     const { error } = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'support@dentalclinicclosetome.my',
-      to: process.env.NOTIFICATION_EMAIL || 'swsalim+dentalclinicclosetome@gmail.com',
+      from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
+      to: email,
+      bcc: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
       subject: `New Clinic Submission: ${clinicName}`,
       react: ClinicNotificationEmail({
         name,

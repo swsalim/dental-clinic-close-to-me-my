@@ -37,7 +37,7 @@ import { useToast } from '@/components/ui/use-toast';
 
 const schema = z.object({
   name: z.string().min(2, 'Your name is required'),
-  email: z.string().email().optional().or(z.literal('')),
+  email: z.string().email(),
   clinic_name: z.string().min(2, 'Clinic name is required'),
   description: z.string().min(10, 'Description is required'),
   state_id: z.string().min(1, 'State is required'),
@@ -319,10 +319,14 @@ export default function SubmitClinicForm({ states, areas }: Props) {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Your Email</FormLabel>
+                <FormLabel>Your Email*</FormLabel>
                 <FormControl>
                   <Input placeholder="Enter your email address" {...field} />
                 </FormControl>
+                <FormDescription>
+                  We&apos;ll use this email to contact you if there&apos;s any issue with your
+                  submission.
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
