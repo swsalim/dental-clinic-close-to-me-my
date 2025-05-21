@@ -290,8 +290,8 @@ export default function SubmitClinicForm({ states, areas }: Props) {
 
   if (success) {
     return (
-      <div className="flex flex-col gap-4 rounded-lg bg-green-50 p-6 text-center">
-        <h2 className="mb-2 text-2xl font-bold text-green-700">Thank you!</h2>
+      <div className="flex flex-col gap-4 rounded-lg bg-gray-50 p-6 text-center text-gray-700 dark:bg-gray-800/50 dark:text-gray-300">
+        <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-gray-100">Thank you!</h2>
         <p>Your listing submission was successful.</p>
         <p>We will review and get your submission listed in 6 months.</p>
         <p>
