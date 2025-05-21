@@ -1,4 +1,5 @@
 import { ClinicNotificationEmail } from '@/emails/clinic-notification';
+import { ClinicSubmissionEmail } from '@/emails/clinic-submission';
 import { ReviewNotificationEmail } from '@/emails/review-notification';
 import { Resend } from 'resend';
 
@@ -104,26 +105,25 @@ export const sendNewClinicNotification = async ({
   }
 
   try {
+    const subject =
+      price === 'instant'
+        ? 'Your Premium Dental Clinic Listing: Live Within 24 Hours'
+        : 'Dental Clinic Listing Received - Processing Confirmation';
     const { error } = await resend.batch.send([
       {
         from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
         to: email,
-        subject: `New Clinic Submission: ${clinicName}`,
-        react: ClinicNotificationEmail({
-          name,
-          email,
+        subject,
+        react: ClinicSubmissionEmail({
+          recipientName: name,
           clinicName,
-          clinicEmail,
-          phone,
-          address,
-          description,
           price,
         }),
       },
       {
         from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
         to: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
-        subject: `New Clinic Submission: ${clinicName}`,
+        subject,
         react: ClinicNotificationEmail({
           name,
           email,
