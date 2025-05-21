@@ -62,11 +62,11 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
             index === 7 && 'lg:col-span-3',
             index === 8 && 'lg:col-span-2',
           )}>
-          <Link href={`/${state.slug}`} className="relative">
+          <Link href={`/${state.slug}`} className="relative overflow-hidden rounded-lg">
             <div
               className={cn(
                 'group relative h-56 w-full overflow-hidden rounded-lg transition md:h-52 lg:h-56',
-                (index === 0 || index === 6) && 'lg:h-full',
+                (index === 0 || index === 6) && 'lg:h-full lg:max-h-[480px]',
               )}>
               {state.thumbnail_image && (
                 <ImageCloudinary
@@ -87,8 +87,8 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
                 />
               )}
             </div>
-            <div className="absolute -bottom-1 left-0 right-0 h-1/2 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 z-20 p-4 drop-shadow-lg">
+            <div className="absolute -bottom-1 left-0 right-0 h-4/5 rounded-b-lg bg-gradient-to-t from-gray-900/100 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 z-20 p-4">
               <h3 className="text-lg font-semibold">{state.name}</h3>
               <p className="text-base font-medium text-gray-100 dark:text-gray-100">
                 {state.clinics?.[0].count} {pluralize('clinic', state.clinics?.[0].count)}
