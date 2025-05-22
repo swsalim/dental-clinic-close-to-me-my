@@ -83,7 +83,7 @@ type Props = {
 
 export default function SubmitClinicForm({ states, areas }: Props) {
   const { toast } = useToast();
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [selectedState, setSelectedState] = useState<string>('');
   const cloudinaryService = new CloudinaryService();
