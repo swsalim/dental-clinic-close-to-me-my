@@ -628,9 +628,14 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                           </div>
                         </div>
                         <div className="basis-1/5 text-right">
-                          <span className="text-xl font-semibold text-gray-700 dark:text-gray-300">
-                            MYR 199
-                          </span>
+                          <div className="flex flex-row items-baseline justify-end gap-1">
+                            <span className="text-xs font-bold uppercase text-gray-700 dark:text-gray-300">
+                              RM
+                            </span>
+                            <span className="text-3xl font-semibold text-gray-700 dark:text-gray-300">
+                              199
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </FormLabel>
@@ -650,9 +655,14 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                           </div>
                         </div>
                         <div className="basis-1/5 text-right">
-                          <span className="text-xl font-semibold text-gray-700 dark:text-gray-300">
-                            $0
-                          </span>
+                          <div className="flex flex-row items-baseline justify-end gap-1">
+                            <span className="text-xs font-bold uppercase text-gray-700 dark:text-gray-300">
+                              RM
+                            </span>
+                            <span className="text-3xl font-semibold text-gray-700 dark:text-gray-300">
+                              0
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </FormLabel>

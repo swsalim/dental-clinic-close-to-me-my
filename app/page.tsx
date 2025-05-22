@@ -35,7 +35,7 @@ function Hero() {
               buttonVariants({
                 variant: 'primary',
               }),
-              'w-full rounded-full',
+              'w-full rounded-full bg-[#FF4A52] text-white hover:bg-[#FF4A52]/95',
             )}
             href="/browse">
             Search
@@ -43,11 +43,11 @@ function Hero() {
           <Link
             className={cn(
               buttonVariants({
-                variant: 'secondary',
+                variant: 'ghost',
               }),
-              'w-full rounded-full',
+              'w-full rounded-full text-gray-900 dark:text-gray-50',
             )}
-            href="#">
+            href="/submit">
             List your clinic for FREE
           </Link>
         </div>
