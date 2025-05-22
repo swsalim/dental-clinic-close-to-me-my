@@ -4,7 +4,7 @@ import { DatabaseService } from '@/services/database.service';
 import { GoogleMapsService } from '@/services/google-maps.service';
 import Stripe from 'stripe';
 
-import { slugify } from '@/lib/utils';
+import { absoluteUrl, slugify } from '@/lib/utils';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -80,9 +80,12 @@ export async function POST(request: Request) {
           quantity: 1,
         },
       ],
+      customer_email: body.email,
       metadata,
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/submit/success?session_id={CHECKOUT_SESSION_ID}&clinic_id=${clinic.id}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/submit?canceled=1`,
+      success_url: absoluteUrl(
+        `/submit/success?session_id={CHECKOUT_SESSION_ID}&clinic_id=${clinic.id}`,
+      ),
+      cancel_url: absoluteUrl('/submit?canceled=1'),
     });
     return NextResponse.json({ checkoutUrl: session.url }, { status: 200 });
   } catch (error) {

@@ -42,7 +42,7 @@ export const sendNewReviewNotification = async ({
       },
       {
         from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
-        to: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
+        to: process.env.NOTIFICATION_EMAIL || 'admin@dentalclinicclosetome.my',
         subject: `New Review for ${clinicName}`,
         react: ReviewNotificationEmail({
           clinicName,
