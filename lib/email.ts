@@ -122,7 +122,7 @@ export const sendNewClinicNotification = async ({
       },
       {
         from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',
-        to: process.env.NOTIFICATION_EMAIL || 'hello@dentalclinicclosetome.my',
+        to: process.env.NOTIFICATION_EMAIL || 'admin@dentalclinicclosetome.my',
         subject,
         react: ClinicNotificationEmail({
           name,
