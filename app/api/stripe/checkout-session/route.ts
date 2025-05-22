@@ -130,7 +130,7 @@ export async function POST(request: Request) {
               name: 'Instant Listing',
               description: 'Get your clinic listed instantly with premium features.',
             },
-            unit_amount: 19900, // RM199.00
+            unit_amount: 500, // RM199.00
           },
           quantity: 1,
         },
