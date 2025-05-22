@@ -28,7 +28,7 @@ export async function BrowseServices() {
       <Container>
         <div className="flex w-full flex-col items-center justify-center md:flex-row">
           <div className="mb-10 w-full px-4 md:mb-0 md:w-5/12">
-            <h2 className="mb-4 text-3xl font-black text-black dark:text-gray-50 md:text-4xl">
+            <h2 className="mb-4 text-3xl font-black text-black md:text-4xl dark:text-gray-50">
               Browse a Variety of Dental Services
             </h2>
             <p className="mb-8 text-gray-500 dark:text-gray-300">
@@ -56,7 +56,7 @@ export async function BrowseServices() {
                 key={service.id}
                 tabIndex={0}
                 aria-label={service.name}
-                className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50 text-gray-900"
+                className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
                 role="button">
                 {getServiceIcon(service.slug)}
                 <div className="mt-4 text-center text-lg font-semibold text-black dark:text-gray-50">

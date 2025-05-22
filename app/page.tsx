@@ -35,17 +35,17 @@ function Hero() {
               buttonVariants({
                 variant: 'primary',
               }),
-              'w-full rounded-full bg-[#FF4A52] text-white hover:bg-[#FF4A52]/95',
+              'w-full rounded-full',
             )}
-            href="#">
+            href="/browse">
             Search
           </Link>
           <Link
             className={cn(
               buttonVariants({
-                variant: 'ghost',
+                variant: 'secondary',
               }),
-              'w-full rounded-full text-gray-900 dark:text-gray-50',
+              'w-full rounded-full',
             )}
             href="#">
             List your clinic for FREE

@@ -56,6 +56,7 @@ export async function POST(request: Request) {
         await sendNewReviewNotification({
           clinicName: clinicData.name,
           authorName: validatedData.author_name,
+          email: validatedData.email,
           rating: validatedData.rating,
           reviewText: validatedData.text,
         });

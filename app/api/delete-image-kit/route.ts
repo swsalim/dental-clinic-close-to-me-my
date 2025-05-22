@@ -15,12 +15,6 @@ if (!privateKey.startsWith('private_')) {
 const authString = `${privateKey}:`;
 const basicAuth = Buffer.from(authString).toString('base64');
 
-console.log('Auth Debug:', {
-  privateKey: privateKey.substring(0, 10) + '...', // Log only first 10 chars for security
-  authString,
-  basicAuth,
-});
-
 export async function POST(request: Request) {
   try {
     const { fileId } = await request.json();
@@ -28,15 +22,6 @@ export async function POST(request: Request) {
     if (!fileId) {
       return NextResponse.json({ error: 'File ID is required' }, { status: 400 });
     }
-
-    console.log('Request Debug:', {
-      fileId,
-      url: `https://api.imagekit.io/v1/files/${fileId}`,
-      headers: {
-        Authorization: `Basic ${basicAuth}`,
-        'Content-Type': 'application/json',
-      },
-    });
 
     // Delete file using ImageKit's REST API directly with Basic Auth
     const response = await fetch(`https://api.imagekit.io/v1/files/${fileId}`, {
@@ -46,9 +31,6 @@ export async function POST(request: Request) {
         'Content-Type': 'application/json',
       },
     });
-
-    console.log('Response Status:', response.status);
-    console.log('Response Headers:', Object.fromEntries(response.headers.entries()));
 
     if (!response.ok) {
       const error = await response.json();
