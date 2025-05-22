@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import { createClient } from '@/lib/supabase/client';
+import { createAdminClient } from '@/lib/supabase/admin';
 
 export function ClinicSubmit({
   meta,
@@ -29,7 +29,7 @@ export function ClinicSubmit({
     let submitted = false;
     if (!submitted) {
       submitted = true;
-      const supabase = createClient();
+      const supabase = createAdminClient();
 
       const updateData = async () => {
         // First, get the current status
