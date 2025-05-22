@@ -47,7 +47,7 @@ function Hero() {
               }),
               'w-full rounded-full',
             )}
-            href="/submit">
+            href="#">
             List your clinic for FREE
           </Link>
         </div>

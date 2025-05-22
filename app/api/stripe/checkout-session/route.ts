@@ -17,13 +17,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // Only store minimal data in metadata due to Stripe limits
-    const metadata: Record<string, string> = {
-      name: body.name || '',
-      clinic_name: body.clinic_name || '',
-      email: body.email || '',
-    };
-
     // Initialize services
     const googleMapsService = new GoogleMapsService();
     const databaseService = new DatabaseService();
@@ -64,9 +57,52 @@ export async function POST(request: Request) {
       status: 'pending_payment',
     });
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      mode: 'payment',
+    // Handle Stripe customer creation/retrieval
+    let stripeCustomerId = null;
+
+    try {
+      // Check if customer already exists
+      const existingCustomers = await stripe.customers.list({
+        email: body.email.toLowerCase().trim(),
+        limit: 1,
+      });
+
+      let customer;
+      if (existingCustomers.data.length > 0) {
+        // Use existing customer
+        customer = existingCustomers.data[0];
+        console.log(`Using existing customer: ${customer.id}`);
+      } else {
+        // Create new customer
+        customer = await stripe.customers.create({
+          email: body.email.toLowerCase().trim(),
+          name: body.name,
+          metadata: {
+            first_submission: new Date().toISOString(),
+            total_clinics: '1', // Will be updated via webhooks if needed
+          },
+        });
+        console.log(`Created new customer: ${customer.id}`);
+      }
+
+      stripeCustomerId = customer.id;
+    } catch (customerError) {
+      // If customer creation fails, proceed without customer (guest checkout)
+      console.warn('Customer creation failed, proceeding with guest checkout:', customerError);
+    }
+
+    // Prepare metadata for the session
+    const metadata: Record<string, string> = {
+      name: body.name || '',
+      clinic_name: body.clinic_name || '',
+      email: body.email || '',
+      clinic_id: clinic.id.toString(),
+    };
+
+    // Create checkout session
+    const sessionConfig = {
+      payment_method_types: ['card' as const],
+      mode: 'payment' as const,
       line_items: [
         {
           price_data: {
@@ -75,18 +111,23 @@ export async function POST(request: Request) {
               name: 'Instant Listing',
               description: 'Get your clinic listed instantly with premium features.',
             },
-            unit_amount: 19900, // RM199.00
+            unit_amount: 500, // RM199.00
           },
           quantity: 1,
         },
       ],
-      customer_email: body.email,
       metadata,
       success_url: absoluteUrl(
         `/submit/success?session_id={CHECKOUT_SESSION_ID}&clinic_id=${clinic.id}`,
       ),
       cancel_url: absoluteUrl('/submit?canceled=1'),
-    });
+      // Include customer email for receipt
+      customer_email: stripeCustomerId ? undefined : body.email, // Only set if no customer
+      ...(stripeCustomerId && { customer: stripeCustomerId }), // Include customer if available
+    };
+
+    const session = await stripe.checkout.sessions.create(sessionConfig);
+
     return NextResponse.json({ checkoutUrl: session.url }, { status: 200 });
   } catch (error) {
     console.error('Stripe session creation error:', error);
