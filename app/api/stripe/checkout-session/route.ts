@@ -72,6 +72,23 @@ export async function POST(request: Request) {
         // Use existing customer
         customer = existingCustomers.data[0];
         console.log(`Using existing customer: ${customer.id}`);
+
+        // Update metadata for repeat customer
+        const currentTotalClinics = parseInt(customer.metadata.total_clinics || '0');
+        const updatedMetadata = {
+          ...customer.metadata, // Keep existing metadata
+          total_clinics: (currentTotalClinics + 1).toString(),
+          last_submission: new Date().toISOString(),
+          last_clinic_name: body.clinic_name,
+        };
+
+        // Update the customer with new metadata
+        customer = await stripe.customers.update(customer.id, {
+          name: body.name, // Update name in case it changed
+          metadata: updatedMetadata,
+        });
+
+        console.log(`Updated customer metadata: ${customer.id}`);
       } else {
         // Create new customer
         customer = await stripe.customers.create({
@@ -79,7 +96,9 @@ export async function POST(request: Request) {
           name: body.name,
           metadata: {
             first_submission: new Date().toISOString(),
-            total_clinics: '1', // Will be updated via webhooks if needed
+            total_clinics: '1',
+            last_submission: new Date().toISOString(),
+            last_clinic_name: body.clinic_name,
           },
         });
         console.log(`Created new customer: ${customer.id}`);
@@ -111,7 +130,7 @@ export async function POST(request: Request) {
               name: 'Instant Listing',
               description: 'Get your clinic listed instantly with premium features.',
             },
-            unit_amount: 500, // RM199.00
+            unit_amount: 19900, // RM199.00
           },
           quantity: 1,
         },

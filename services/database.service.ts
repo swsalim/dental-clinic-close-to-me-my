@@ -49,4 +49,19 @@ export class DatabaseService {
 
     return clinic;
   }
+
+  async updateClinicStatus(clinicId: string, status: string) {
+    const { error, data } = await this.supabase
+      .from('clinics')
+      .update({ status })
+      .eq('id', clinicId)
+      .select()
+      .single();
+
+    if (error) {
+      throw new Error(`Failed to update clinic status: ${error.message}`);
+    }
+
+    return data;
+  }
 }

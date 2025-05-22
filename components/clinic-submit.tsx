@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import { createAdminClient } from '@/lib/supabase/admin';
+import { createClient } from '@/lib/supabase/client';
 
 export function ClinicSubmit({
   meta,
@@ -29,7 +29,7 @@ export function ClinicSubmit({
     let submitted = false;
     if (!submitted) {
       submitted = true;
-      const supabase = createAdminClient();
+      const supabase = createClient();
 
       const updateData = async () => {
         // First, get the current status
@@ -47,18 +47,17 @@ export function ClinicSubmit({
 
         // Only update if status is 'pending_payment'
         if (clinicData?.status === 'pending_payment') {
-          const { data: updatedClinic, error } = await supabase
-            .from('clinics')
-            .update({ status: 'pending' })
-            .eq('id', clinic_id)
-            .select()
-            .single();
+          const res = await fetch('/api/clinics/update-status', {
+            method: 'POST',
+            body: JSON.stringify({ clinicId: clinic_id, status: 'pending' }),
+          });
 
-          if (error) {
-            setStatus('error');
-            setError(error.message || 'Failed to update clinic record');
-            return;
+          if (!res.ok) {
+            const err = await res.json();
+            throw new Error(err.error || 'Failed to update clinic status');
           }
+
+          const { clinic: updatedClinic } = await res.json();
 
           // Send notification email
           const response = await fetch('/api/send-email/clinic-notification', {
