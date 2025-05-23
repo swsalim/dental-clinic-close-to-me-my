@@ -24,9 +24,6 @@ export const sendNewReviewNotification = async ({
     return;
   }
 
-  console.log('email');
-  console.log(email);
-
   try {
     const { error } = await resend.batch.send([
       {

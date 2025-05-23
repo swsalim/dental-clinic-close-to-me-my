@@ -128,7 +128,7 @@ export async function POST(request: Request) {
             currency: 'myr',
             product_data: {
               name: 'Instant Listing',
-              description: 'Get your clinic listed instantly with premium features.',
+              description: 'Get your clinic listed with a dofollow backlink in 24 hours.',
             },
             unit_amount: 19900, // RM199.00
           },
