@@ -1,8 +1,59 @@
+import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 
 import Stripe from 'stripe';
 
+import { siteConfig } from '@/config/site';
+
 import { ClinicSubmit } from '@/components/clinic-submit';
+
+const config = {
+  title: 'Thank you for your submission!',
+  description:
+    'We have received your submission and are processing your listing. You will be notified via email once your listing is live.',
+  url: '/submit/success',
+};
+
+export const metadata: Metadata = {
+  title: config.title,
+  description: config.description,
+  alternates: {
+    canonical: config.url,
+  },
+  openGraph: {
+    title: config.title,
+    description: config.description,
+    url: config.url,
+    images: [
+      {
+        url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${config.title}`),
+        width: siteConfig.openGraph.width,
+        height: siteConfig.openGraph.height,
+        alt: config.title,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    title: config.title,
+    description: config.description,
+    card: 'summary_large_image',
+    creator: siteConfig.creator,
+    images: [
+      {
+        url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${config.title}`),
+        width: siteConfig.openGraph.width,
+        height: siteConfig.openGraph.height,
+        alt: config.title,
+      },
+    ],
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function SubmitSuccessPage({
   searchParams,

@@ -47,7 +47,7 @@ function Hero() {
               }),
               'w-full rounded-full text-gray-900 dark:text-gray-50',
             )}
-            href="#">
+            href="/submit">
             List your clinic for FREE
           </Link>
         </div>

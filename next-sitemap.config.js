@@ -7,7 +7,7 @@ const NEXT_SSG_FILES = [
   '/*.js$',
 ];
 
-const exclude = ['/dashboard*', '/404', '/api*', '/login', '/server-sitemap.xml'];
+const exclude = ['/dashboard*', '/404', '/api*', '/login', '/server-sitemap.xml', '/submit/success'];
 
 const siteUrl =
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
