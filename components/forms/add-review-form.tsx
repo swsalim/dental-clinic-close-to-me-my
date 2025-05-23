@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { StarIcon } from 'lucide-react';
+import { Loader2, StarIcon } from 'lucide-react';
 import * as z from 'zod';
 
 import { Textarea } from '@/components/form-fields/textarea';
@@ -156,7 +156,7 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               {/* Honeypot field - hidden from users but visible to bots */}
-              {/* <div className="hidden" aria-hidden="true">
+              <div className="hidden" aria-hidden="true">
                 <FormField
                   control={form.control}
                   name="honeypot"
@@ -175,7 +175,7 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
                     </FormItem>
                   )}
                 />
-              </div> */}
+              </div>
 
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <FormField
@@ -260,7 +260,14 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
                 variant="primary"
                 className="w-full md:w-auto"
                 disabled={isSubmitting}>
-                {isSubmitting ? 'Submitting...' : 'Submit Review'}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  'Submit Review'
+                )}
               </Button>
             </form>
           </Form>

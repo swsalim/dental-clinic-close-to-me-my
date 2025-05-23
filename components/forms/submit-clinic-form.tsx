@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { CloudinaryService } from '@/services/cloudinary.service';
 import type { ClinicArea, ClinicState } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Trash2 } from 'lucide-react';
+import { Loader2, Trash2 } from 'lucide-react';
 import * as z from 'zod';
 
 import { formatFileSize } from '@/lib/utils';
@@ -53,6 +53,7 @@ const schema = z.object({
   instagram_url: z.string().url().optional().or(z.literal('')),
   featured_video: z.string().url().optional().or(z.literal('')),
   price: z.enum(['instant', 'free']),
+  honeypot: z.string().max(0, { message: 'This field should be empty' }),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -107,6 +108,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
       instagram_url: '',
       featured_video: '',
       price: 'free',
+      honeypot: '',
     },
     // defaultValues: dummyDefaultValues,
     mode: 'onChange',
@@ -189,6 +191,17 @@ export default function SubmitClinicForm({ states, areas }: Props) {
   });
 
   const onSubmit = async (formData: FormData) => {
+    // Check honeypot field - if it's filled, it's likely a bot
+    if (formData.honeypot) {
+      console.log('Honeypot detected, ignoring submission');
+      // Still pretend to submit the form to not alert the bot
+      setTimeout(() => {
+        form.reset();
+        setSubmitting(false);
+      }, 2000);
+      return;
+    }
+
     setSubmitting(true);
     try {
       // For "instant" price option:
@@ -304,6 +317,27 @@ export default function SubmitClinicForm({ states, areas }: Props) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        {/* Honeypot field - hidden from users but visible to bots */}
+        <div className="hidden" aria-hidden="true">
+          <FormField
+            control={form.control}
+            name="honeypot"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor={field.name}>Leave this empty</FormLabel>
+                <FormControl>
+                  <Input
+                    id={field.name}
+                    aria-hidden="true"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+        </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <FormField
             control={form.control}
@@ -673,7 +707,14 @@ export default function SubmitClinicForm({ states, areas }: Props) {
           />
         </div>
         <Button type="submit" disabled={submitting} className="w-full">
-          {submitting ? 'Submitting...' : 'Join List'}
+          {submitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Submitting...
+            </>
+          ) : (
+            'Join List'
+          )}
         </Button>
       </form>
     </Form>
