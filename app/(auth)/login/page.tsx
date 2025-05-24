@@ -5,6 +5,7 @@ import Link from 'next/link';
 import LoginForm from '@/components/forms/login-form';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import Logo from '@/components/ui/logo';
+import Prose from '@/components/ui/prose';
 import { Skeleton } from '@/components/ui/skeleton';
 
 function LoginFormSkeleton() {
@@ -21,22 +22,20 @@ function LoginFormSkeleton() {
 export default function Login() {
   return (
     <div className="w-full max-w-md">
-      <div className="mb-8 text-center">
+      <Prose className="mb-8 text-center">
         <Logo className="mx-auto h-12 w-12" aria-hidden="true" />
-        <h1 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
-          Sign in to your account
-        </h1>
-        <p className="mt-2 text-sm text-gray-600">
+        <h1 className="mt-6 text-3xl font-bold tracking-tight">Sign in to your account</h1>
+        <p className="mt-2 text-sm">
           Or{' '}
           <Link
             href="/register"
-            className="text-primary hover:text-primary/90 font-medium transition-colors">
+            className="text-primary hover:text-primary/90 ml-2 font-medium transition-colors">
             start your 14-day free trial
           </Link>
         </p>
-      </div>
+      </Prose>
 
-      <Card className="shadow-lg dark:border-gray-200 dark:bg-white">
+      <Card className="shadow-lg">
         <CardContent className="pt-6">
           <Suspense fallback={<LoginFormSkeleton />}>
             <LoginForm />

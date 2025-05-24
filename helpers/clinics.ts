@@ -86,6 +86,7 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
       address,
       phone,
       email,
+      website,
       latitude,
       longitude,
       rating,

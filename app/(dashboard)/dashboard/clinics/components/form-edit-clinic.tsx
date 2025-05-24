@@ -751,11 +751,11 @@ export default function FormEditClinic({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} aria-label="Clinic review form">
-        <div className="space-y-6 divide-y divide-gray-200 shadow sm:overflow-hidden sm:rounded-md">
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+        <div className="space-y-6 divide-y divide-gray-200 shadow sm:overflow-hidden sm:rounded-md dark:divide-gray-800">
+          <div className="space-y-6 bg-white px-4 py-6 sm:p-6 dark:bg-gray-950/40">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Review Clinic</h3>
-              <p className="text-text-gray-500 mt-1 text-sm">
+              <h3 className="text-lg font-medium leading-6">Review Clinic</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>
@@ -1033,16 +1033,16 @@ export default function FormEditClinic({
             </div>
           </div>
 
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+          <div className="space-y-6 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Location Information</h3>
-              <p className="mt-1 text-sm text-gray-500">Information related fields</p>
+              <h3 className="text-lg font-medium leading-6">Location Information</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                Information related fields
+              </p>
             </div>
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6">
-                <h3 className="mb-2 text-base font-medium leading-6 text-gray-900">
-                  Business Hours
-                </h3>
+                <h3 className="mb-2 text-base font-medium leading-6">Business Hours</h3>
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
                     <Button
@@ -1330,10 +1330,10 @@ export default function FormEditClinic({
             </div>
           </div>
 
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+          <div className="space-y-6 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Social Info</h3>
-              <p className="mt-1 text-sm text-gray-500">Social related fields</p>
+              <h3 className="text-lg font-medium leading-6">Social Info</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Social related fields</p>
             </div>
 
             <div className="grid grid-cols-6 gap-6">
@@ -1466,10 +1466,12 @@ export default function FormEditClinic({
               </div>
             </div>
           </div>
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+          <div className="space-y-6 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Listing Feature</h3>
-              <p className="mt-1 text-sm text-gray-500">Listing related fields</p>
+              <h3 className="text-lg font-medium leading-6">Listing Feature</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                Listing related fields
+              </p>
             </div>
 
             <div className="grid grid-cols-6 gap-6">

@@ -132,7 +132,7 @@ export default function LoginForm() {
 
       <div className="space-y-4">
         <div className="space-y-2">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-900">
+          <label htmlFor="email" className="block text-sm font-medium">
             Email address
           </label>
           <Input
@@ -149,7 +149,7 @@ export default function LoginForm() {
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-900">
+            <label htmlFor="password" className="block text-sm font-medium">
               Password
             </label>
             <div className="text-sm">
@@ -173,7 +173,7 @@ export default function LoginForm() {
         <div className="flex items-center">
           <div className="flex items-center space-x-2">
             <Checkbox id="remember-me" name="remember-me" />
-            <label htmlFor="remember-me" className="text-sm text-gray-900">
+            <label htmlFor="remember-me" className="text-sm">
               Remember me
             </label>
           </div>

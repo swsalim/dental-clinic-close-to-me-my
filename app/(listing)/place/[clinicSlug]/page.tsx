@@ -6,6 +6,7 @@ import { ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
 import {
   FacebookIcon,
+  GlobeIcon,
   InstagramIcon,
   MailIcon,
   MapPinIcon,
@@ -27,6 +28,7 @@ import { getServiceIcon } from '@/helpers/services';
 
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
+import { ImageGallery } from '@/components/image/image-gallery';
 import MapboxMap from '@/components/mapbox-map';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
@@ -270,7 +272,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
         memberOf={memberOf}
         openingHoursSpecification={openingHoursSpecification}
       />
-      {parsedClinic.images && parsedClinic.images?.length > 0 && (
+      {parsedClinic.images && parsedClinic.images.length > 0 && (
         <Wrapper
           style={{
             backgroundImage: `url('${parsedClinic.images?.[0]}')`,
@@ -313,6 +315,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     <MailIcon className="h-5 w-5 text-brand" />
                     <Link href={`mailto:${parsedClinic.email}`}>
                       <span className="text-sm">{parsedClinic.email}</span>
+                    </Link>
+                  </div>
+                )}
+                {parsedClinic.website && (
+                  <div className="flex items-center gap-x-2">
+                    <GlobeIcon className="h-5 w-5 text-brand" />
+                    <Link href={`${parsedClinic.website}`}>
+                      <span className="text-sm">{parsedClinic.website}</span>
                     </Link>
                   </div>
                 )}
@@ -409,6 +419,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       </div>
                     ))}
                   </div>
+                </article>
+              )}
+              {parsedClinic.images && parsedClinic.images.length > 1 && (
+                <article>
+                  <h2>Gallery</h2>
+                  <ImageGallery images={parsedClinic.images} title={parsedClinic.name || ''} />
                 </article>
               )}
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (

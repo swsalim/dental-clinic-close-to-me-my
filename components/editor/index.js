@@ -134,7 +134,7 @@ export default function Editor({ initialContent, onChange }) {
         onClick={() => {
           editor?.chain().focus().run();
         }}
-        className="border-stone-200 relative min-h-[500px] w-full max-w-screen-lg bg-white p-8 sm:mb-8 sm:rounded-lg sm:border sm:shadow-lg">
+        className="border-stone-200 relative min-h-[500px] w-full max-w-screen-lg bg-white p-8 sm:mb-8 sm:rounded-lg sm:border sm:shadow-lg dark:bg-gray-950/40">
         <div className="bg-stone-100 absolute right-5 top-5 mb-5 rounded-lg px-2 py-1 text-sm text-gray-400">
           {saveStatus}
         </div>
