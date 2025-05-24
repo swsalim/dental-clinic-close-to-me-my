@@ -32,6 +32,7 @@ import { ImageGallery } from '@/components/image/image-gallery';
 import MapboxMap from '@/components/mapbox-map';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
+import { Badge } from '@/components/ui/badge';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import Container from '@/components/ui/container';
@@ -295,10 +296,17 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <StarRating rating={parsedClinic.rating ?? 0} />
                 {/* Open/Closed Status Badge */}
                 <div className="mt-2 lg:mt-0">
-                  <ClinicStatus
-                    hours={parsedClinic.hours ?? []}
-                    specialHours={parsedClinic.special_hours ?? []}
-                  />
+                  <div className="flex items-center gap-x-2">
+                    {parsedClinic.hours &&
+                      parsedClinic.hours.length === 7 &&
+                      parsedClinic.hours.every((hour) => hour.open_time && hour.close_time) && (
+                        <Badge variant="blue">Open everyday</Badge>
+                      )}
+                    <ClinicStatus
+                      hours={parsedClinic.hours ?? []}
+                      specialHours={parsedClinic.special_hours ?? []}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col gap-x-4 gap-y-2">
