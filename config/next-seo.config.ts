@@ -11,20 +11,20 @@ interface SEOConfig {
 
 export const seo: SEOConfig = {
   site_url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-  site_name: 'clinicgeek.com',
-  title: 'Find the Best Healthcare Providers in Singapore',
+  site_name: 'dentalclinicclosetome.my',
+  title: 'Find Dental Clinics Near You in Malaysia',
   description:
-    'Looking for the best healthcare providers near you? Check out its opening hours and location!',
-  image: 'https://www.clinicgeek.com/images/clinic-geek-og.jpg',
+    'Explore top-rated dental clinics across Malaysia. Search by location, compare services and reviews, and book your dental appointment with ease.!',
+  image: 'https://www.dentalclinicclosetome.my/images/og-default.png',
   locale: 'en',
   lang: 'en',
-  twitterHandle: '@clinicgeek',
+  twitterHandle: '@dentalclinicclosetome',
 };
 
 export const config = {
   title: seo.title,
   defaultTitle: seo.title,
-  titleTemplate: '%s  - Clinic Geek',
+  titleTemplate: '%s  - DentalClinicCloseToMe',
   description: seo.description,
   canonical: seo.site_url,
   openGraph: {
@@ -42,11 +42,6 @@ export const config = {
         alt: seo.site_name,
       },
     ],
-  },
-  twitter: {
-    handle: seo.twitterHandle,
-    site: seo.twitterHandle,
-    cardType: 'summary_large_image',
   },
   robotsProps: {
     nosnippet: false,
