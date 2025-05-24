@@ -1059,6 +1059,36 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
               <div className="col-span-6 sm:col-span-3">
                 <FormField
                   control={form.control}
+                  name="neighborhood"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Neighborhood</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Kuala Lumpur" {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className="col-span-6 sm:col-span-3">
+                <FormField
+                  control={form.control}
+                  name="postal_code"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Postal Code</FormLabel>
+                      <FormControl>
+                        <Input placeholder="12345" {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <div className="col-span-6 sm:col-span-3">
+                <FormField
+                  control={form.control}
                   name="latitude"
                   render={({ field }) => (
                     <FormItem>

@@ -253,6 +253,15 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
   const hasSocialAccounts =
     parsedClinic.facebook_url || parsedClinic.instagram_url || parsedClinic.youtube_url;
 
+  const fullAddress = [
+    parsedClinic.address,
+    parsedClinic.neighborhood,
+    `${parsedClinic.postal_code} ${parsedClinic.area?.name}`,
+    parsedClinic.state?.name,
+  ]
+    .filter(Boolean)
+    .join(', ');
+
   return (
     <>
       <WebsiteJsonLd />
@@ -312,11 +321,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               <div className="flex flex-col gap-x-4 gap-y-2">
                 <div className="flex items-center gap-x-2">
                   <MapPinIcon className="h-5 w-5 text-brand" />
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    {parsedClinic.address}, {parsedClinic.postal_code}
-                    {parsedClinic.area?.name && `${', '}${parsedClinic.area?.name},`}
-                    {parsedClinic.state?.name && `${' '}${parsedClinic.state?.name}`}
-                  </span>
+                  <span className="text-sm text-gray-500 dark:text-gray-300">{fullAddress}</span>
                 </div>
                 {parsedClinic.email && (
                   <div className="flex items-center gap-x-2">

@@ -84,6 +84,7 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
       description,
       postal_code,
       address,
+      neighborhood,
       phone,
       email,
       website,
