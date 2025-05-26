@@ -45,7 +45,7 @@ export async function BrowseServices() {
               </span>
             </Button>
           </div>
-          <div className="grid w-full grid-cols-1 gap-6 px-4 sm:grid-cols-2 md:w-7/12 lg:grid-cols-3">
+          <div className="grid w-full grid-cols-2 gap-6 px-4 sm:grid-cols-3 md:w-7/12">
             {services.length === 0 && (
               <div className="col-span-full text-center text-gray-400 dark:text-gray-500">
                 No services found.

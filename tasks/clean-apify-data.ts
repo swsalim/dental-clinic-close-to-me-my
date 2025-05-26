@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import * as path from 'node:path';
 
+import { slugify } from '../lib/utils';
+
 // Types and Interfaces
 interface Location {
   lat: number;
@@ -140,23 +142,6 @@ const KEYS_TO_DELETE = [
 ] as const;
 
 // Utility Functions
-function slugify(str: string): string {
-  const from = 'àáãäâèéëêìíïîòóöôùúüûñç·/_,:;';
-  const to = 'aaaaaeeeeiiiioooouuuunc------';
-
-  return str
-    .split('')
-    .map((letter, i) => letter.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i)))
-    .join('')
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/\/+/g, '-')
-    .replace(/&/g, '-and-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-');
-}
-
 function parseTimeComponent(time: string): {
   hour: number;
   minute: string;
