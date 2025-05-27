@@ -4,20 +4,24 @@ import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 
-interface TruncatedTextProps {
-  text: string;
+interface TruncatedHtmlProps {
+  html: string;
   limit?: number;
 }
 
-export function TruncatedText({ text, limit = 50 }: TruncatedTextProps) {
+export function TruncatedHtml({ html, limit = 50 }: TruncatedHtmlProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  // Create a temporary div to get the text content
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = html;
+  const text = tempDiv.textContent || '';
   const words = text.split(' ');
   const isTextLong = words.length > limit;
   const displayText = words.slice(0, limit).join(' ');
 
   if (!isTextLong) {
-    return <p className="my-0">{text}</p>;
+    return <div dangerouslySetInnerHTML={{ __html: html }} />;
   }
 
   return (
@@ -25,9 +29,13 @@ export function TruncatedText({ text, limit = 50 }: TruncatedTextProps) {
       <div className="relative overflow-hidden">
         <div
           className={`transition-all duration-200 ${isExpanded ? 'max-h-[1000px]' : 'max-h-none'}`}>
-          <p className="my-0" aria-hidden={!isExpanded}>
-            {isExpanded ? text : `${displayText}...`}
-          </p>
+          {isExpanded ? (
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          ) : (
+            <div>
+              <p dangerouslySetInnerHTML={{ __html: `${displayText}...` }} />
+            </div>
+          )}
           {!isExpanded && <span className="sr-only">{text}</span>}
         </div>
       </div>

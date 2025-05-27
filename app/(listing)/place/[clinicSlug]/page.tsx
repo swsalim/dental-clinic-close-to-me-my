@@ -38,6 +38,7 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import Container from '@/components/ui/container';
 import Prose from '@/components/ui/prose';
 import { StarRating } from '@/components/ui/star-rating';
+import { TruncatedHtml } from '@/components/ui/truncated-html';
 import { TruncatedText } from '@/components/ui/truncated-text';
 import { Wrapper } from '@/components/ui/wrapper';
 
@@ -412,8 +413,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             <Prose className="space-y-8">
               {parsedClinic.description && (
                 <article>
-                  <h2>Description</h2>
-                  <div dangerouslySetInnerHTML={{ __html: parsedClinic.description }}></div>
+                  <h2 className="mb-0">Description</h2>
+                  <TruncatedHtml html={parsedClinic.description} limit={80} />
                 </article>
               )}
               {parsedClinic.services && (
