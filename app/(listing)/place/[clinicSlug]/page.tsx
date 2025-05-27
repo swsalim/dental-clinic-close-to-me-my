@@ -30,6 +30,7 @@ import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
 import MapboxMap from '@/components/mapbox-map';
+import { StickyBookButton } from '@/components/sticky-book-button';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Badge } from '@/components/ui/badge';
@@ -397,14 +398,18 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             {/* right column */}
             <div className="mt-5 flex flex-col-reverse justify-between gap-x-4 gap-y-4 sm:flex-row lg:mt-0">
               {!parsedClinic.is_permanently_closed && parsedClinic.phone && (
-                <Link
-                  href={`tel:${parsedClinic.phone}`}
-                  className={cn(
-                    buttonVariants({ variant: 'primary' }),
-                    'flex items-center gap-x-3',
-                  )}>
-                  <PhoneIcon className="h-5 w-5" /> Book Appointment
-                </Link>
+                <>
+                  <Link
+                    id="book-appointment-button"
+                    href={`tel:${parsedClinic.phone}`}
+                    className={cn(
+                      buttonVariants({ variant: 'primary' }),
+                      'flex items-center gap-x-3',
+                    )}>
+                    <PhoneIcon className="h-5 w-5" /> Book Appointment
+                  </Link>
+                  <StickyBookButton phone={parsedClinic.phone} />
+                </>
               )}
             </div>
           </div>
