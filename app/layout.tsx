@@ -89,6 +89,10 @@ export default function RootLayout({
         <div className="flex grow flex-col justify-center">{children}</div>
         <Footer />
         <Toaster />
+        <script
+          src="https://app.tinyadz.com/scripts/ads.js?siteId=6835de6cc1d791d83e38d6d1"
+          type="module"
+          async></script>
       </body>
     </html>
   );
