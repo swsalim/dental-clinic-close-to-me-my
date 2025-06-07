@@ -34,6 +34,7 @@ import { StickyBookButton } from '@/components/sticky-book-button';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Badge } from '@/components/ui/badge';
+import Breadcrumb from '@/components/ui/breadcrumb';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import Container from '@/components/ui/container';
@@ -264,6 +265,15 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
     .filter(Boolean)
     .join(', ');
 
+  const breadcrumbItems = [
+    { name: parsedClinic.state?.name, url: `/${parsedClinic.state?.slug}` },
+    {
+      name: parsedClinic.area?.name,
+      url: `/${parsedClinic.state?.slug}/${parsedClinic.area?.slug}`,
+    },
+    { name: parsedClinic.name },
+  ];
+
   return (
     <>
       <WebsiteJsonLd />
@@ -300,6 +310,9 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
           <div className="lg:flex lg:items-start lg:justify-between lg:gap-x-6">
             {/* left column */}
             <div className="flex min-w-0 flex-1 flex-col gap-y-4">
+              <div>
+                <Breadcrumb items={breadcrumbItems} />
+              </div>
               <div className="flex flex-col flex-wrap items-start justify-between gap-x-2 gap-y-2 lg:flex-row lg:items-center lg:justify-normal">
                 <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
                   {parsedClinic.name}
