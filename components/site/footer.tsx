@@ -8,6 +8,18 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
+      <div className="mx-auto max-w-7xl px-6 pt-8">
+        <a
+          href="https://productburst.com/product/dental-clinics-malaysia"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747782156422x193143061268857820/pB-Badge-dark.png"
+            alt="Featured on ProductBurst"
+            width="160"
+          />
+        </a>
+      </div>
       <div className="mx-auto max-w-7xl px-6 py-8">
         <p className="text-sm leading-5 text-gray-100">
           &copy; {currentYear} {seo.site_name}.
