@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 
@@ -11,14 +11,18 @@ interface TruncatedHtmlProps {
 
 export function TruncatedHtml({ html, limit = 50 }: TruncatedHtmlProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [displayText, setDisplayText] = useState('');
+  const [isTextLong, setIsTextLong] = useState(false);
 
-  // Create a temporary div to get the text content
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = html;
-  const text = tempDiv.textContent || '';
-  const words = text.split(' ');
-  const isTextLong = words.length > limit;
-  const displayText = words.slice(0, limit).join(' ');
+  useEffect(() => {
+    // Create a temporary div to get the text content
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    const text = tempDiv.textContent || '';
+    const words = text.split(' ');
+    setIsTextLong(words.length > limit);
+    setDisplayText(words.slice(0, limit).join(' '));
+  }, [html, limit]);
 
   if (!isTextLong) {
     return <div dangerouslySetInnerHTML={{ __html: html }} />;
@@ -36,7 +40,7 @@ export function TruncatedHtml({ html, limit = 50 }: TruncatedHtmlProps) {
               <p dangerouslySetInnerHTML={{ __html: `${displayText}...` }} />
             </div>
           )}
-          {!isExpanded && <span className="sr-only">{text}</span>}
+          {!isExpanded && <span className="sr-only">{html}</span>}
         </div>
       </div>
       <Button

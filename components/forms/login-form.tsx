@@ -30,7 +30,8 @@ export default function LoginForm() {
 
   // Creating URL safely with optional chaining to avoid null errors
   const redirectUrl = new URL(
-    `${typeof window !== 'undefined' ? window.location.origin : ''}/auth/callback`,
+    '/auth/callback',
+    typeof window !== 'undefined' ? window.location.origin : process.env.NEXT_PUBLIC_BASE_URL,
   );
   if (redirectedFrom) {
     redirectUrl.searchParams.set('redirectedFrom', redirectedFrom);

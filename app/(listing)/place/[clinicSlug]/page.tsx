@@ -29,7 +29,7 @@ import { getServiceIcon } from '@/helpers/services';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
-import MapboxMap from '@/components/mapbox-map';
+import MapWrapper from '@/components/mapbox-map/map-wrapper';
 import { StickyBookButton } from '@/components/sticky-book-button';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
@@ -96,7 +96,7 @@ function Map({
       <h2>Map</h2>
 
       <div className="mb-6 mt-2">
-        <MapboxMap
+        <MapWrapper
           locations={[
             {
               lat: latitude,
