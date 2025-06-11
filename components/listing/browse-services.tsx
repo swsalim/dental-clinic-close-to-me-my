@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 import { getAllServices, getServiceIcon } from '@/helpers/services';
 
 import { Button } from '@/components/ui/button';
@@ -37,12 +39,17 @@ export async function BrowseServices() {
               offer for kids, teens, and adults alike!
             </p>
             <Button
-              className="flex items-center gap-2 rounded-full bg-red-500 px-8 py-3 font-semibold text-white hover:bg-red-600"
-              aria-label="Browse Services">
-              Browse Services
-              <span className="ml-2" aria-hidden="true">
-                →
-              </span>
+              asChild
+              variant="primary"
+              aria-label="Browse Services"
+              className="rounded-full"
+              size="large">
+              <Link href="/browse">
+                Browse Services
+                <span className="ml-2" aria-hidden="true">
+                  →
+                </span>
+              </Link>
             </Button>
           </div>
           <div className="grid w-full grid-cols-2 gap-6 px-4 sm:grid-cols-3 md:w-7/12">
