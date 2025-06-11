@@ -17,7 +17,7 @@ export async function ExploreStates() {
     : [];
 
   return (
-    <Wrapper>
+    <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
       <Container>
         <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
           <span className="text-base font-semibold uppercase text-red-500">Popular States</span>

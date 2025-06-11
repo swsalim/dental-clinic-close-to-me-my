@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 
 import BrowseServices from '@/components/listing/browse-services';
 import { ExploreStates } from '@/components/listing/explore-states';
+import { RecentClinics } from '@/components/listing/recent-clinics';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { buttonVariants } from '@/components/ui/button';
 
@@ -62,6 +63,7 @@ export default function Home() {
       <WebsiteJsonLd company="Dental Clinics Malaysia" url={process.env.NEXT_PUBLIC_BASE_URL} />
       <Hero />
       <BrowseServices />
+      <RecentClinics />
       <ExploreStates />
     </main>
   );
