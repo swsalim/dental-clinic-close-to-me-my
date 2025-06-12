@@ -71,6 +71,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="//scripts.simpleanalyticscdn.com" />
+        <link rel="preconnect" href="//analytics.ahrefs.com" />
+        <link rel="preconnect" href="//app.tinyadz.com" />
+        <link rel="dns-prefetch" href="//app.tinyadz.com" />
+        <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
+        <link rel="dns-prefetch" href="//scripts.simpleanalyticscdn.com" />
         <script
           src="https://beamanalytics.b-cdn.net/beam.min.js"
           data-token="c2fbac7b-0b09-48f0-b925-7a5a61de2a3b"
@@ -93,6 +99,7 @@ export default function RootLayout({
           src="https://app.tinyadz.com/scripts/ads.js?siteId=6835de6cc1d791d83e38d6d1"
           type="module"
           async></script>
+        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       </body>
     </html>
   );
