@@ -349,7 +349,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 {parsedClinic.website && (
                   <div className="flex items-center gap-x-2">
                     <GlobeIcon className="h-5 w-5 text-brand" />
-                    <Link href={`${parsedClinic.website}`}>
+                    <Link href={`${parsedClinic.website}?utm_source=dentalclinicclosetome.my`}>
                       <span className="text-sm">{parsedClinic.website}</span>
                     </Link>
                   </div>
