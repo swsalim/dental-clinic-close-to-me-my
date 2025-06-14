@@ -1,3 +1,5 @@
+import { ClinicReview } from '@/types/clinic';
+
 import JsonLd from './json-ld';
 
 interface Location {
@@ -33,6 +35,7 @@ interface BusinessJsonLdProps {
     opens: string;
     closes: string;
   }[];
+  reviews?: Partial<ClinicReview>[];
 }
 
 export default function BusinessJsonLd({
@@ -46,7 +49,20 @@ export default function BusinessJsonLd({
   rating = { value: 0, count: 0 },
   memberOf = undefined,
   openingHoursSpecification = [],
+  reviews = [],
 }: BusinessJsonLdProps) {
+  const reviewSchema = reviews.map((review) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: review.author_name },
+    datePublished: review.review_time,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: String(review.rating),
+      bestRating: '5',
+    },
+    reviewBody: review.text,
+  }));
+
   return (
     <JsonLd id="business-jsonld">
       {{
@@ -69,8 +85,8 @@ export default function BusinessJsonLd({
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: coordinate.lat,
-          longitude: coordinate.long,
+          latitude: String(coordinate.lat),
+          longitude: String(coordinate.long),
         },
         aggregateRating: {
           '@type': 'AggregateRating',
@@ -84,6 +100,7 @@ export default function BusinessJsonLd({
         medicalSpecialty: 'Dentistry',
         ...(memberOf && { memberOf }),
         ...(openingHoursSpecification.length > 0 && { openingHoursSpecification }),
+        ...(reviewSchema.length > 0 && { review: reviewSchema }),
       }}
     </JsonLd>
   );

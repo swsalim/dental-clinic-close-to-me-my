@@ -1,14 +1,17 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import { ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
 
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicMetadataBySlug } from '@/helpers/clinics';
+import { getClinicBySlug, getClinicMetadataBySlug, parseClinicData } from '@/helpers/clinics';
 
+import BusinessJsonLd from '@/components/structured-data/business-json-ld';
+import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import { Card, CardContent } from '@/components/ui/card';
 import Container from '@/components/ui/container';
@@ -74,61 +77,101 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
 export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const { clinicSlug } = await params;
 
-  const clinic = await getClinicBySlug(clinicSlug);
+  const rawClinicData = await getClinicBySlug(clinicSlug);
 
-  if (!clinic) {
+  if (!rawClinicData) {
     notFound();
   }
 
+  const memberOf: { '@type': string; '@id': string } | null = null;
+
+  // Format opening hours for JSON-LD using OpeningHoursSpecification
+  const openingHoursSpecification =
+    rawClinicData.hours?.map((hour) => {
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const day = days[hour.day_of_week];
+      const openTime = hour.open_time?.slice(0, 5) || '';
+      const closeTime = hour.close_time?.slice(0, 5) || '';
+
+      return {
+        '@type': 'OpeningHoursSpecification' as const,
+        dayOfWeek: day,
+        opens: openTime,
+        closes: closeTime,
+      };
+    }) || [];
+
+  const parsedClinic = parseClinicData(rawClinicData);
+
   const breadcrumbItems = [
-    { name: clinic.state?.name, url: `/${clinic.state?.slug}` },
+    { name: parsedClinic.state?.name, url: `/${parsedClinic.state?.slug}` },
     {
-      name: clinic.area?.name,
-      url: `/${clinic.state?.slug}/${clinic.area?.slug}`,
+      name: parsedClinic.area?.name,
+      url: `/${parsedClinic.state?.slug}/${parsedClinic.area?.slug}`,
     },
-    { name: clinic.name, url: `/place/${clinicSlug}` },
-    { name: 'Reviews' },
+    { name: parsedClinic.name },
   ];
 
   return (
-    <Container>
-      <div className="py-8">
-        <Breadcrumb items={breadcrumbItems} />
+    <>
+      <WebsiteJsonLd />
+      <BusinessJsonLd
+        name={parsedClinic.name}
+        url={absoluteUrl(`/place/${parsedClinic.slug}`)}
+        image={absoluteUrl(`/api/og?title=${parsedClinic.name}`)}
+        phone={parsedClinic.phone}
+        email={parsedClinic.email}
+        location={{
+          address: parsedClinic.address ?? '',
+          postal_code: parsedClinic.postal_code ?? '',
+          area: parsedClinic.area?.name ?? '',
+          state: parsedClinic.state?.name ?? '',
+        }}
+        coordinate={{ lat: parsedClinic.latitude ?? 0, long: parsedClinic.longitude ?? 0 }}
+        rating={{ value: parsedClinic.rating || 0, count: parsedClinic.review_count || 0 }}
+        memberOf={memberOf}
+        openingHoursSpecification={openingHoursSpecification}
+        reviews={parsedClinic.reviews?.slice(0, 5) ?? []}
+      />
+      <Container>
+        <div className="py-8">
+          <Breadcrumb items={breadcrumbItems} />
 
-        <div className="mt-8">
-          <h1 className="text-3xl font-bold">Reviews for {clinic.name}</h1>
-          <p className="text-muted-foreground mt-2">
-            {clinic.review_count} reviews • {clinic.rating?.toFixed(1)} average rating
-          </p>
-        </div>
+          <div className="mt-8">
+            <h1 className="text-3xl font-bold">Reviews for {parsedClinic.name}</h1>
+            <p className="mt-2 text-gray-500 dark:text-gray-400">
+              {parsedClinic.review_count} reviews • {parsedClinic.rating?.toFixed(1)} average rating
+            </p>
+          </div>
 
-        <div className="mt-8 space-y-6">
-          {clinic.reviews?.map((review) => (
-            <Card key={`${review.author_name}-${review.review_time}`}>
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex flex-col">
-                      <span className="font-medium">{review.author_name}</span>
-                      <span className="text-muted-foreground text-sm">
-                        {review.review_time &&
-                          formatDistanceToNow(new Date(review.review_time), { addSuffix: true })}
-                      </span>
+          <div className="mt-8 space-y-6">
+            {parsedClinic.reviews?.map((review: Partial<ClinicReview>) => (
+              <Card key={`${review.author_name}-${review.review_time}`}>
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex flex-col">
+                        <span className="font-medium">{review.author_name}</span>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {review.review_time &&
+                            formatDistanceToNow(new Date(review.review_time), { addSuffix: true })}
+                        </span>
+                      </div>
                     </div>
+                    <StarRating rating={review.rating || 0} />
                   </div>
-                  <StarRating rating={review.rating || 0} />
-                </div>
-                {review.text && (
-                  <>
-                    <Separator className="my-4" />
-                    <p className="text-muted-foreground">{review.text}</p>
-                  </>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+                  {review.text && (
+                    <>
+                      <Separator className="my-4" />
+                      <p className="text-gray-500 dark:text-gray-400">{review.text}</p>
+                    </>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 }

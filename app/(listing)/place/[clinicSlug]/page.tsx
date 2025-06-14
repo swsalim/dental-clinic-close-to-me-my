@@ -308,6 +308,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
         rating={{ value: parsedClinic.rating || 0, count: parsedClinic.review_count || 0 }}
         memberOf={memberOf}
         openingHoursSpecification={openingHoursSpecification}
+        reviews={parsedClinic.reviews?.slice(0, 5) ?? []}
       />
       {parsedClinic.images && parsedClinic.images.length > 0 && (
         <Wrapper

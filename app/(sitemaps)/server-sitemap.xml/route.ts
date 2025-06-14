@@ -23,6 +23,10 @@ export async function GET() {
       loc: absoluteUrl(`/place/${clinic.slug}`),
       lastmod: new Date().toISOString(),
     });
+    fields.push({
+      loc: absoluteUrl(`/place/${clinic.slug}/reviews`),
+      lastmod: new Date().toISOString(),
+    });
   });
 
   states.forEach((state) => {
