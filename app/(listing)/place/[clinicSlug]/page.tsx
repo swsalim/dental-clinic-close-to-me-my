@@ -11,13 +11,11 @@ import {
   InstagramIcon,
   MailIcon,
   MapPinIcon,
-  PhoneIcon,
   YoutubeIcon,
 } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
-import { saEvent } from '@/lib/analytics';
 import { absoluteUrl, cn } from '@/lib/utils';
 
 import {
@@ -31,6 +29,7 @@ import { getServiceIcon } from '@/helpers/services';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
+import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
 import { StickyBookButton } from '@/components/sticky-book-button';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
@@ -429,20 +428,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             <div className="mt-5 flex flex-col-reverse justify-between gap-x-4 gap-y-4 sm:flex-row lg:mt-0">
               {!parsedClinic.is_permanently_closed && parsedClinic.phone && (
                 <>
-                  <Link
-                    id="book-appointment-button"
-                    href={`tel:${parsedClinic.phone}`}
-                    onClick={() =>
-                      saEvent(
-                        `book_appointment_click_${parsedClinic.state?.slug}_${parsedClinic.area?.slug}_${clinicSlug}`,
-                      )
-                    }
-                    className={cn(
-                      buttonVariants({ variant: 'primary' }),
-                      'flex items-center gap-x-3',
-                    )}>
-                    <PhoneIcon className="h-5 w-5" /> Book Appointment
-                  </Link>
+                  <BookAppointmentButton
+                    phone={parsedClinic.phone}
+                    stateSlug={parsedClinic.state?.slug ?? ''}
+                    areaSlug={parsedClinic.area?.slug ?? ''}
+                    clinicSlug={clinicSlug}
+                  />
                   <StickyBookButton
                     phone={parsedClinic.phone}
                     stateSlug={parsedClinic.state?.slug ?? ''}

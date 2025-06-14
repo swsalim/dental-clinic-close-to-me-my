@@ -94,6 +94,10 @@ export default function RootLayout({
             __html: `window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};`,
           }}
         />
+        <Script
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={cn(
@@ -110,7 +114,6 @@ export default function RootLayout({
           src="https://app.tinyadz.com/scripts/ads.js?siteId=6835de6cc1d791d83e38d6d1"
           type="module"
           async></script>
-        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       </body>
     </html>
   );

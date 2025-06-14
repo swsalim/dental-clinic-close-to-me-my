@@ -2,16 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
-import Link from 'next/link';
-
-import { PhoneIcon } from 'lucide-react';
-
-import { saEvent } from '@/lib/analytics';
 import { useMediaQuery } from '@/lib/hooks/use-media-query';
 import { cn } from '@/lib/utils';
 
-import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
+
+import { BookAppointmentButton } from './listing/book-appointment-button';
 
 export function StickyBookButton({
   phone,
@@ -61,15 +57,12 @@ export function StickyBookButton({
         isVisible ? 'translate-y-0' : 'translate-y-full',
       )}>
       <Container>
-        <Link
-          href={`tel:${phone}`}
-          onClick={() => saEvent(`book_appointment_click_${stateSlug}_${areaSlug}_${clinicSlug}`)}
-          className={cn(
-            buttonVariants({ variant: 'primary' }),
-            'flex w-full items-center justify-center gap-x-3',
-          )}>
-          <PhoneIcon className="h-5 w-5" /> Book Appointment
-        </Link>
+        <BookAppointmentButton
+          phone={phone}
+          stateSlug={stateSlug}
+          areaSlug={areaSlug}
+          clinicSlug={clinicSlug}
+        />
       </Container>
     </div>
   );
