@@ -109,7 +109,8 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
       name: parsedClinic.area?.name,
       url: `/${parsedClinic.state?.slug}/${parsedClinic.area?.slug}`,
     },
-    { name: parsedClinic.name },
+    { name: parsedClinic.name, url: `/place/${parsedClinic.slug}` },
+    { name: 'Reviews' },
   ];
 
   return (
