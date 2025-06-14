@@ -202,23 +202,26 @@ export default async function AreaPage({ params }: AreaPageProps) {
         <Container>
           {areaData.clinics?.length > 0 ? (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {areaData.clinics?.map((clinic) => (
-                <ClinicCard
-                  key={clinic.slug}
-                  slug={clinic.slug ?? ''}
-                  name={clinic.name ?? ''}
-                  address={clinic.address ?? ''}
-                  phone={clinic.phone ?? ''}
-                  image={clinic.images?.[0]}
-                  postalCode={clinic.postal_code ?? ''}
-                  state={areaData.state?.name ?? ''}
-                  area={areaData.name ?? ''}
-                  rating={clinic.rating}
-                  hours={clinic.hours ?? []}
-                  specialHours={clinic.special_hours ?? []}
-                  openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                />
-              ))}
+              {areaData.clinics
+                ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
+                .map((clinic) => (
+                  <ClinicCard
+                    key={clinic.slug}
+                    slug={clinic.slug ?? ''}
+                    name={clinic.name ?? ''}
+                    address={clinic.address ?? ''}
+                    phone={clinic.phone ?? ''}
+                    image={clinic.images?.[0]}
+                    postalCode={clinic.postal_code ?? ''}
+                    state={areaData.state?.name ?? ''}
+                    area={areaData.name ?? ''}
+                    rating={clinic.rating}
+                    isFeatured={clinic.is_featured}
+                    hours={clinic.hours ?? []}
+                    specialHours={clinic.special_hours ?? []}
+                    openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                  />
+                ))}
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center gap-y-4">

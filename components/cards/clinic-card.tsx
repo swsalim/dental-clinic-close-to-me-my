@@ -20,6 +20,7 @@ interface ClinicCardProps {
   state: string;
   area: string;
   image?: string;
+  isFeatured?: boolean;
   rating?: number | null;
   hours: Partial<ClinicHours>[];
   specialHours: Partial<ClinicSpecialHours>[];
@@ -35,6 +36,7 @@ export function ClinicCard({
   state,
   area,
   image,
+  isFeatured,
   rating,
   hours,
   specialHours,
@@ -57,6 +59,7 @@ export function ClinicCard({
             />
           )}
           <div className="absolute right-2 top-2 flex flex-wrap justify-end gap-2">
+            {isFeatured && <Badge variant="brand">Featured</Badge>}
             {hours.length === 7 && hours.every((hour) => hour.open_time && hour.close_time) && (
               <Badge variant="blue">Open everyday</Badge>
             )}
