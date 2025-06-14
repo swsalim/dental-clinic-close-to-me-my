@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
 import {
+  ArrowRightIcon,
   FacebookIcon,
   GlobeIcon,
   InstagramIcon,
@@ -50,12 +51,18 @@ type ClinicPageProps = {
   }>;
 };
 
-function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
+function Reviews({
+  reviews,
+  clinicSlug,
+}: {
+  reviews: Partial<ClinicReview>[];
+  clinicSlug: string;
+}) {
   return (
     <article>
       <h2>Reviews</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {reviews.map(({ author_name, rating, text, review_time }) => (
+        {reviews.slice(0, 6).map(({ author_name, rating, text, review_time }) => (
           <Card key={`${author_name}-${review_time}`}>
             <CardHeader>
               <StarRating rating={rating ?? 0} showValue={false} />
@@ -77,6 +84,14 @@ function Reviews({ reviews }: { reviews: Partial<ClinicReview>[] }) {
             </CardFooter>
           </Card>
         ))}
+      </div>
+      <div className="mt-4 flex flex-row gap-x-2 md:mt-6">
+        <Link
+          href={`/place/${clinicSlug}/reviews`}
+          className={cn(buttonVariants({ variant: 'primary' }), 'not-prose flex flex-row gap-x-2')}>
+          View all reviews
+          <ArrowRightIcon className="size-4" />
+        </Link>
       </div>
     </article>
   );
@@ -475,7 +490,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               {parsedClinic.reviews && parsedClinic.reviews.length > 0 && (
                 <>
                   {parsedClinic.id && <AddReviewForm clinicId={parsedClinic.id} />}
-                  <Reviews reviews={parsedClinic.reviews} />
+                  <Reviews reviews={parsedClinic.reviews} clinicSlug={clinicSlug} />
                 </>
               )}
             </Prose>
