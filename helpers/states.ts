@@ -70,11 +70,12 @@ export async function getStateBySlug(stateSlug: string) {
       thumbnail_image,
       banner_image,
       areas:areas(name, slug, state:states(name, slug)),
-      clinics:clinics(name, slug, description, status,images, postal_code, address, postal_code, phone, rating, is_featured, open_on_public_holidays, area:areas(name), state:states(name), hours:clinic_hours(day_of_week, open_time, close_time), special_hours:clinic_special_hours(date, is_closed, open_time, close_time))
+      clinics:clinics(name, slug, description, status, images, postal_code, address, postal_code, phone, rating, is_featured, open_on_public_holidays, modified_at, area:areas(name), state:states(name), hours:clinic_hours(day_of_week, open_time, close_time), special_hours:clinic_special_hours(date, is_closed, open_time, close_time))
     `,
     )
     .eq('clinics.status', 'approved')
     .match({ slug: stateSlug })
+    .order('modified_at', { foreignTable: 'clinics', ascending: false })
     .single()) as {
     data: {
       id: string;
@@ -103,6 +104,7 @@ export async function getStateBySlug(stateSlug: string) {
         status: string;
         is_featured: boolean;
         open_on_public_holidays: boolean;
+        modified_at: string;
         area: {
           name: string;
         };

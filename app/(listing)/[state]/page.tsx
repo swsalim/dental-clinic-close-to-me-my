@@ -199,8 +199,31 @@ export default async function StatePage({ params }: StatePageProps) {
           </div>
         </Container>
       </Wrapper>
+      <Wrapper size="sm">
+        <Container>
+          <div className="flex flex-col gap-y-6">
+            <h2 className="text-balance text-xl font-bold md:text-2xl">
+              Other Areas in {stateData.name}
+            </h2>
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+              {stateData.areas?.map((area) => (
+                <h3 className="text-balance text-base font-medium md:text-lg" key={area.slug}>
+                  <Link
+                    href={absoluteUrl(`/${state}/${area.slug}`)}
+                    className="py-1 hover:border-transparent">
+                    {area.name}
+                  </Link>
+                </h3>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
       <Wrapper>
         <Container>
+          <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+            All Dental Clinics in {stateData.name}
+          </h2>
           {stateData.clinics?.length > 0 ? (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
               {stateData.clinics
@@ -239,12 +262,20 @@ export default async function StatePage({ params }: StatePageProps) {
               </div>
               <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
               <p className="text-balance text-lg">No dental clinics found in {stateData.name}.</p>
-              <Link
-                href="/"
-                className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
-                Get back to homepage
-                <ArrowRightIcon className="size-4" />
-              </Link>
+              <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                <Link
+                  href="/submit"
+                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
+                  Add a clinic
+                  <ArrowRightIcon className="size-4" />
+                </Link>
+                <Link
+                  href="/"
+                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}>
+                  Get back to homepage
+                  <ArrowRightIcon className="size-4" />
+                </Link>
+              </div>
             </div>
           )}
         </Container>

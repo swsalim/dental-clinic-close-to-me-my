@@ -240,12 +240,20 @@ export default async function AreaPage({ params }: AreaPageProps) {
               <p className="text-balance text-lg">
                 We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
               </p>
-              <Link
-                href="/"
-                className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
-                Get back to homepage
-                <ArrowRightIcon className="size-4" />
-              </Link>
+              <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                <Link
+                  href="/submit"
+                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
+                  Add a clinic
+                  <ArrowRightIcon className="size-4" />
+                </Link>
+                <Link
+                  href="/"
+                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}>
+                  Get back to homepage
+                  <ArrowRightIcon className="size-4" />
+                </Link>
+              </div>
             </div>
           )}
         </Container>
