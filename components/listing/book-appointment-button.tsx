@@ -37,7 +37,7 @@ export function BookAppointmentButton({
       }}
       variant="primary"
       className={cn('flex items-center gap-x-3')}>
-      <PhoneIcon className="h-5 w-5" /> Book Appointment 123
+      <PhoneIcon className="h-5 w-5" /> Book Appointment
     </Button>
   );
 }
