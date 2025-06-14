@@ -28,20 +28,20 @@ export default function NavMobile() {
       <button
         onClick={() => setOpen(!open)}
         className={cn(
-          'fixed right-3 top-3 isolate z-50 rounded-full p-2 transition-colors duration-200 hover:bg-gray-50 focus:outline-none active:bg-gray-100 lg:hidden',
+          'fixed right-3 top-3 isolate z-50 rounded-full p-2 transition-colors duration-200 hover:bg-gray-50 focus:outline-none active:bg-gray-100 lg:hidden dark:hover:bg-gray-800',
         )}>
         {open ? (
-          <X className="h-5 w-5 text-gray-600" />
+          <X className="h-5 w-5 text-gray-600 dark:text-gray-300" />
         ) : (
-          <Menu className="h-5 w-5 text-gray-600" />
+          <Menu className="h-5 w-5 text-gray-600 dark:text-gray-300" />
         )}
       </button>
       <nav
         className={cn(
-          'fixed inset-0 z-30 hidden max-h-screen w-full overflow-y-auto bg-white px-5 py-16 lg:hidden',
+          'fixed inset-0 z-30 hidden max-h-screen w-full overflow-y-auto bg-white px-5 py-16 lg:hidden dark:bg-gray-900',
           open && 'block',
         )}>
-        <ul className="grid divide-y divide-gray-100">
+        <ul className="grid divide-y divide-gray-100 dark:divide-gray-800">
           {navItems.map(({ name, href, childItems }, idx) => (
             <MobileNavItem
               key={idx}
@@ -79,12 +79,15 @@ const MobileNavItem = ({
 
   if (childItems && childItems.length > 0) {
     return (
-      <li className="py-3">
+      <li>
         <Collapsible open={expanded} onOpenChange={setExpanded}>
-          <CollapsibleTrigger className="flex w-full items-center justify-between">
-            <p className="font-semibold">{name}</p>
+          <CollapsibleTrigger className="flex w-full items-center justify-between py-3">
+            <p className="font-semibold text-gray-900 dark:text-gray-300">{name}</p>
             <ChevronDown
-              className={cn('h-5 w-5 text-gray-500 transition-all', expanded && 'rotate-180')}
+              className={cn(
+                'h-5 w-5 text-gray-500 transition-all dark:text-gray-400',
+                expanded && 'rotate-180',
+              )}
             />
           </CollapsibleTrigger>
           <CollapsibleContent
@@ -93,13 +96,13 @@ const MobileNavItem = ({
               'data-[state=closed]:animate-slide-up',
               'data-[state=open]:animate-slide-down',
             )}>
-            <div className="grid gap-4 overflow-hidden py-4">
+            <div className="grid gap-1 overflow-hidden pb-4">
               {childItems.map(({ title, href, icon: Icon, description }) => (
                 <Link
                   key={href}
                   href={href}
                   onClick={() => setOpen(false)}
-                  className="flex w-full gap-3">
+                  className="group flex w-full gap-3 py-2">
                   {Icon && (
                     <div className="flex size-10 items-center justify-center rounded-lg border border-gray-200 bg-gradient-to-t from-gray-100">
                       <Icon className="size-5 text-gray-700" />
@@ -107,9 +110,11 @@ const MobileNavItem = ({
                   )}
                   <div>
                     <div className="flex items-center gap-2">
-                      <h2 className="text-sm font-medium text-gray-900">{title}</h2>
+                      <h2 className="text-sm font-medium text-gray-900 group-hover:text-brand dark:text-gray-300">
+                        {title}
+                      </h2>
                     </div>
-                    <p className="text-sm text-gray-500">{description}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{description}</p>
                   </div>
                 </Link>
               ))}
@@ -125,11 +130,11 @@ const MobileNavItem = ({
   }
 
   return (
-    <li className="py-3">
+    <li>
       <Link
         href={href}
         onClick={() => setOpen(false)}
-        className="flex w-full font-semibold capitalize">
+        className="flex w-full py-3 font-semibold capitalize">
         {name}
       </Link>
     </li>

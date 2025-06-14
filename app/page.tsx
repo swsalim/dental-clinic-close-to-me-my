@@ -59,12 +59,12 @@ function Hero() {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <WebsiteJsonLd company="Dental Clinics Malaysia" url={process.env.NEXT_PUBLIC_BASE_URL} />
       <Hero />
       <BrowseServices />
       <RecentClinics />
       <ExploreStates />
-    </main>
+    </>
   );
 }

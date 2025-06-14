@@ -6,8 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { navBlog, navCategories, navSpecialities } from '@/config/routes';
-
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
@@ -37,7 +35,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-900 focus:bg-blue-50 focus:text-blue-900',
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:border-transparent hover:bg-brand/5 hover:text-brand focus:border-transparent focus:bg-brand/5 focus:text-brand',
             className,
           )}
           target={isExternal ? '_blank' : '_self'}
@@ -79,20 +77,8 @@ export const navItems: {
   }[];
 }[] = [
   {
-    name: navSpecialities.title,
-    childItems: navSpecialities.items,
-  },
-  {
-    name: navCategories.title,
-    childItems: navCategories.items,
-  },
-  {
-    name: 'Browse Location',
+    name: 'Browse',
     href: '/browse',
-  },
-  {
-    name: navBlog.title,
-    childItems: navBlog.items,
   },
 ];
 
@@ -109,8 +95,8 @@ export default function Navbar() {
             : 'bg-white/0'
         } z-40 transition-all`}>
         <Container className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-x-2 text-xl">
-            <Logo className="h-8 w-auto fill-blue-600" />
+          <Link href="/" className="flex items-center gap-x-2 text-xl hover:border-transparent">
+            <Logo className="h-8 w-auto fill-brand" />
           </Link>
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
@@ -124,7 +110,7 @@ export default function Navbar() {
                         <Link href={href} legacyBehavior passHref>
                           <NavigationMenuLink
                             className={cn(
-                              'font-regular group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:bg-blue-50 hover:text-blue-700 focus:bg-blue-50 focus:text-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:bg-blue-50/50 data-[state=open]:bg-blue-50/50 data-[active=true]:text-blue-700 data-[state=open]:text-blue-700 data-[active=true]:hover:bg-blue-50 data-[state=open]:hover:bg-blue-50 data-[active=true]:focus:bg-blue-50 data-[state=open]:focus:bg-blue-50',
+                              'font-regular focus:bg-brand/hover:bg-brand/5 data-[active=true]:bg-brand/hover:bg-brand/5 data-[state=open]:bg-brand/hover:bg-brand/5 data-[active=true]:focus:bg-brand/hover:bg-brand/5 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-brand/5 hover:text-brand focus:text-brand focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-brand data-[state=open]:text-brand data-[active=true]:hover:bg-brand/5 data-[state=open]:hover:bg-brand/5 data-[state=open]:focus:bg-brand/5 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
                             )}>
                             {name}
                           </NavigationMenuLink>
@@ -147,7 +133,7 @@ export default function Navbar() {
                                     isExternal={item.isExternal}
                                     data-active={pathname === item.href}
                                     className={cn(
-                                      pathname === item.href && 'bg-blue-50 text-blue-900',
+                                      pathname === item.href && 'bg-brand/5 text-brand',
                                     )}>
                                     {item.description}
                                   </ListItem>
@@ -171,7 +157,8 @@ export default function Navbar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="hidden w-[180] md:block"></div>
+          {/* Hide as we only have 2 items in the menu */}
+          {/* <div className="hidden w-[180] md:block"></div> */}
         </Container>
       </div>
     </>

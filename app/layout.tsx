@@ -6,6 +6,8 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
 import Footer from '@/components/site/footer';
+import NavMobile from '@/components/site/nav-mobile';
+import Navbar from '@/components/site/navbar';
 import { Toaster } from '@/components/ui/toaster';
 
 import './globals.css';
@@ -92,7 +94,9 @@ export default function RootLayout({
           plusJakartaSans.variable,
         )}
         suppressHydrationWarning>
-        <div className="flex grow flex-col justify-center">{children}</div>
+        <NavMobile />
+        <Navbar />
+        <main className="flex grow flex-col justify-center">{children}</main>
         <Footer />
         <Toaster />
         <script
