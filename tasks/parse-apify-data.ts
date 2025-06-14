@@ -68,12 +68,16 @@ const PROMPT_TEMPLATES: PromptTemplate[] = [
     structure: [
       "Begin with an attention-grabbing introduction that positions the facility in Malaysia's healthcare landscape",
       'Develop a narrative around the patient experience and professional excellence',
+      'Acknowledge patient sentiment—whether positive, mixed, or critical—based on available feedback',
+      'Balance strengths with constructive transparency where appropriate',
       "Conclude with practical details while highlighting the facility's integration with the local community",
     ],
     style: [
       'Use vibrant, professional language',
       'Focus on creating a welcoming, trustworthy tone',
       'Emphasize the unique aspects of the facility',
+      'Maintain a neutral and professional tone—highlight positives without overstating, and be honest where needed',
+      'Avoid marketing fluff; aim for fact-based, trustworthy writing',
     ],
   },
   {
@@ -81,12 +85,16 @@ const PROMPT_TEMPLATES: PromptTemplate[] = [
     structure: [
       "Open with the facility's unique value proposition and specialization",
       'Explore the patient journey through facilities and services',
+      'Acknowledge patient sentiment—whether positive, mixed, or critical—based on available feedback',
+      'Balance strengths with constructive transparency where appropriate',
       'Round off with location benefits and accessibility advantages',
     ],
     style: [
       'Employ descriptive, yet precise medical terminology',
       'Maintain an authoritative but approachable voice',
       "Highlight the facility's role in the community",
+      'Maintain a neutral and professional tone—highlight positives without overstating, and be honest where needed',
+      'Avoid marketing fluff; aim for fact-based, trustworthy writing',
     ],
   },
   {
@@ -94,12 +102,16 @@ const PROMPT_TEMPLATES: PromptTemplate[] = [
     structure: [
       'Start with what makes this healthcare facility stand out',
       'Illustrate the quality of care through facilities and patient experiences',
+      'Acknowledge patient sentiment—whether positive, mixed, or critical—based on available feedback',
+      'Balance strengths with constructive transparency where appropriate',
       'Connect the practical aspects with the surrounding neighborhood',
     ],
     style: [
       'Balance technical expertise with readable content',
       'Create a narrative that builds trust',
       'Emphasize convenience and accessibility',
+      'Maintain a neutral and professional tone—highlight positives without overstating, and be honest where needed',
+      'Avoid marketing fluff; aim for fact-based, trustworthy writing',
     ],
   },
 ];
@@ -219,17 +231,21 @@ Writing Focus:
 1. ${template.structure[0]}
 2. ${template.structure[1]}
 3. ${template.structure[2]}
-4. ${template.style[0]}
-5. ${template.style[1]}
-6. ${template.style[2]}
-7. Incorporate location details and neighborhood details naturally but avoid displaying full address and country
-8. Include distinctive features and specializations
-9. Optimize for local SEO with creative location mentions
-10. If available, integrate patient feedback in a narrative style and be neutral and objective
+4. ${template.structure[3]}
+5. ${template.structure[4]}
+6. ${template.style[0]}
+7. ${template.style[1]}
+8. ${template.style[2]}
+9. ${template.style[3]}
+10. ${template.style[4]}
+11. Incorporate location details and neighborhood details naturally but avoid displaying full address and country
+12. Include distinctive features and specializations
+13. Optimize for local SEO with creative location mentions
+14. If available, integrate patient feedback in a narrative style and be neutral and objective
 
 Location Context: ${place.street}, ${place.postalCode}, ${place.state} Malaysia`;
 
-  const systemMessage = `You are an expert medical content writer and SEO specialist with deep knowledge of Malaysia's healthcare system. Your task is to create unique, engaging, and SEO-optimized descriptions for medical facilities.
+  const systemMessage = `You are an expert medical content writer and SEO specialist with deep knowledge of Malaysia's healthcare system. Your task is to create unique, engaging, objective and SEO-optimized descriptions for medical facilities.
 
 Writing Guidelines:
 - Write distinctive narratives that highlight each facility's unique attributes
@@ -246,12 +262,12 @@ Writing Guidelines:
 - Match tone to facility type (e.g., authoritative for hospitals, personable for family clinics)
 
 Output Format:
-- Three distinct, well-flowing paragraphs
+- Three short, natural-sounding paragraphs (2–3 sentences each)
+- Total length under 150 words
 - Wrap each paragraph with <p></p> tags
-- No additional formatting or line breaks
-- Natural integration of key information
-- Varied paragraph structures
-- Engaging transitions between paragraphs`;
+- Avoid filler or overly long sentences
+- No extra formatting or line breaks
+- Vary sentence structure to keep it engaging`;
 
   return retryOperation(
     async () => {

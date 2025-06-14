@@ -1,0 +1,329 @@
+[
+  {
+    "title": "Jalan Macalister Dental Clinic",
+    "website": "https://m.facebook.com/pages/Klinik-Pergigian-Jalan-Macalister/192532120845296?nr",
+    "latitude": 5.4149505,
+    "longitude": 100.326012,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "11:45"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:45",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "jalan-macalister-dental-clinic",
+    "skip": true,
+    "placeId": "ChIJZQvH5rrDSjARYtf0SIHsjzk",
+    "phone": "+6042289479",
+    "permanentlyClosed": false,
+    "address": "Jalan Macalister",
+    "neighborhood": null,
+    "city": "George Town",
+    "postalCode": "10400",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 23,
+    "totalScore": 4.2,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-BDyKOqX7DARxbMwr2mwisqQCd0zXYUGy_gj_J6hxpYmI4ew5j9PH7rHrpVamY8sRXfbcRij3J0jdKyxDxf5xytDGOOaVUth2uO2jvz0TAaiW2ldtthX8YOUeu0jT4_V96PC9x=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB--tvGmZy1qw8qADYfP_fyVdBPHqk7wNtNMxmVj9cBRC3bLNdxuxnUX_-wmMhz2cZBUFoMHYiVCp5MjGDArVbPQc31Fy2k3VzEZQrnRsiO72a_Gp3FuA-1Bvqr67UyBxqggOf3yYA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9v63p90Tg6rVxhIPuiWTv-BVL7V_8PPaiUoyewvQtgbv8xIQ03bXIGqeL48bTLFeSzrZIuUHsL_GSoAwEUfw-DfOL4pELIWX_6MuDbcFKd4vOu9gC5TUaEyecBaRugNwRpSpQXpA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-NpsNoMrft0ChUfKZAzl7Alm_XomZWIm88eAbVD8TYeVn-r2M4iikQxDkeK_WyDd--gPl7J-ZBDuBpMvAeRPXjNxcOO2n02zRKIs-d-xZBprVONIk9DUc64-dtqMtPHCNHreL5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-wUynukZRE4aGRu_s1AhcKHFsTGdWVeQtQL7xD-Fj3Xi3A7PEroIT9FE8XfsGJTq_diEcfDpJ4xvY4olHFsK5_TN_Y_YpK3b6qK2G67v7yMv1xcCaw-LhEtUq9IvbcabyzXbIDKg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Chan Soon Hock",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2024-11-25T08:02:39.848Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lyli Adilla",
+        "stars": 5,
+        "text": "Cabut gigi and cuci karang gigi walk in or kena buat appointment yea?",
+        "publishedAtDate": "2024-11-05T03:27:20.261Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Darren Yap",
+        "stars": 5,
+        "text": "The male dentist very careful n doing his professional job. Keep it up!",
+        "publishedAtDate": "2023-10-03T10:44:38.222Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Encik Anif",
+        "stars": 5,
+        "text": "Located on the first floor of Klinik Kesihatan Jalan Macalister. The registration process is fast and easy. Appointments can be conveniently made through MySejahtera, and the service provided is excellent.",
+        "publishedAtDate": "2023-08-03T07:07:29.895Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJMRMZBYC9FPWke-wyfn5m0Iqp2PjVkDYoRc38Aw2XoyoIH8Xdi9yl9g9ZCd2kD5_4l-EkjIGdPkjCN-iD3BZEAlmPSUN_N08GecYho2CB9DC97LCIr3DikwVIx-alKFa7rDZQt"
+        ]
+      },
+      {
+        "name": "Wayne Ng",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-07-04T06:51:50.580Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Asury's",
+        "stars": 3,
+        "text": "Dah book apointment by MySejahtera, nurse yg register mintak surat beranak anak, duk pertikai boleh ingat ka no ic anak. Habis tu dlm MySejahtera tu xdak ka details? Suruh usung surat beranak anak merata. Dengan muka x mesra pelanggan langsung mintak penampaq. Nasib la doc layan elok, treatment pun okay xdak masalah. Staff depan kena train lg supaya lebih mesra pelanggan x kisah la dlm kepala tu dah set 'x lama nk balik dah'.",
+        "publishedAtDate": "2023-06-27T08:11:50.885Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nurul umairah",
+        "stars": 5,
+        "text": "Registration was pretty fast and everyone was friendly & attentive. This is my first time coming here and the treatment took only about half an hour. Do make appointment first through MySejahtera to avoid waiting for too long. All in all, it was perfect for me.",
+        "publishedAtDate": "2023-06-09T02:25:26.175Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Azuwa Abdullah",
+        "stars": 1,
+        "text": "Kecewa sangat dgn rawatan yg diberikan, tau la bayar rm1 ja tapi pesakit kena la buat elok2.. tisu pun tak lapik dkt saya. Then, doktor cabut gigi saya dan langsung tidak memberi ubat, sekarang gigi/gusi saya pun dah bengkak.. Sangat mengecewakan.. first and last ..",
+        "publishedAtDate": "2023-04-05T10:32:12.228Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Klinik Pergigian Jln. Macalister, d/a Klinik Kesihatan Jalan Macalister, Pulau Pinang"
+  },
+  {
+    "title": "Ewe Dental Surgery",
+    "website": "",
+    "latitude": 5.4041999,
+    "longitude": 100.2861586,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "ewe-dental-surgery-ayer-itam",
+    "skip": false,
+    "placeId": "ChIJA8km8rbDSjARD5N4-K9em_A",
+    "phone": "+6048289384",
+    "permanentlyClosed": false,
+    "address": "29-G, MK. 13, Ayer Itam, Penang",
+    "neighborhood": null,
+    "city": "Air Itam",
+    "postalCode": "10460",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 102,
+    "totalScore": 4.6,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_4LWtw8VFicYN9WKTIrVNH6Ag74L5Y-HAJQ3sgpahUV8kaN0KWHUmqC_MrVi-1fKjPjv1TTrHdYsZxsuNukLk797oO1nus2tud_2IleT7o0QsXheT_XWv8la-pbBE4tWUWvM_1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9iCQy_TXepMkHuCr2aNWTx6fIfLtsgEXOfLTJ82rJZU52N893iRZdrDs2c7FrzGciOoIIYjM7WlJf3u7XUQRH9ykbZbXgyTJJ6SDFMCMSRdGQfBVnELqjv3fAY-Qy1QfxVNoA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_ImP747GqXE6VXBKRaxeqBNl5CBCAs69SkO6dKYwKjmsUESUzh2FLQbqbFjS1jlpl38C-W4k5OEQxSuNJgx4rJYli2ijc8OdTWN9nfu4BQNsAWjNsBkLE-HxO3J4_EH6m6-jo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9HD3oITRkUvXu9rt_gQs7e4dcGxdEt0ILN-50I5QugLXV1LcDPCyhuRXkDRQqHLlzD5bZVBT0YGa7WrWfI5bMliVdlOXLyiSOuhfIoCCfYZnbVbLMkn8u47DjFtRzCIMhpeTTMxA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8ZOGsOVCrXositaofbri46QYLDfgV7qSM-71sVIjGRTBGhsJdHEqK3XUaJwjbVmnBwiHW39Zbsb9PvO6GfZTh_jwZXppHKABvuHBQF4CaoI63FYYaANINhEKKevRAXcALvAVE=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Shirley Yeoh",
+        "stars": 5,
+        "text": "Had my wisdom tooth removed. I was initially scared of the process but it turns out painless and the dentist assured me all the time when my tooth is being extracted . It was challenging for the dentist to remove as my tooth is slightly slanted but he did it well. Nurses are friendly as well, they kept contact with me after my tooth removed and checkup on me. The stitches also well removed after 1 week. I would definitely recommend anyone to come here.",
+        "publishedAtDate": "2025-03-14T14:40:50.568Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJL7cv3hi3kvUf4yqooufStSHBO-jcB2kCDAMRMBrGou6nn8lRSgIDrtKOYHtT958xbXOEJF-_KxFuwD9Ab3zzVs695wRaUWN-_P-v6mnJkEw3jlKYchyCn86rPoAW6d8GUGG0o4ww"
+        ]
+      },
+      {
+        "name": "Terry Chai",
+        "stars": 5,
+        "text": "I went to get two wisdom tooth extraction from this dentist and i would DEFINITELY recommend here. The Doctor and nurse was very patient with me and give a lot of advice and heads up during the process. The counter was kind as well and give me a call after the surgery to check my with condition.\n\nThe entire procedure was super quick and painless too and it was done very professionally and not scary at all. Explanation was given as well ! 😀\n\n10/10 would recommend this dentist 👍",
+        "publishedAtDate": "2025-01-19T08:47:15.775Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJLWYBVqYbbUplLBORqKHBU1lvyAUYKjAIGVbcrAa8H0gSuGe1tBuBqO_iAFKRkFGzRCt2hmxEqtR_MGD6jvdCsK4yyM36UyDaTgqN1nbHFMdVEngSV442Ngt4WFGekOCvsqD5U"
+        ]
+      },
+      {
+        "name": "Yen Lyn",
+        "stars": 5,
+        "text": "Recently visited Ewe Dental for a wisdom tooth extraction and had a great experience.\n\nDr. Ong took the time to thoroughly explain my situation, showing how clode my wisdom tooth was to the nerve as seen on the Xray.\nHe provided clear and honest information about the risks and offered treatment options.\n\nThe surgery went smoothly, and the pain was much less than I expected. I also appreciated the follow-up call from the nurse the next day to check on my recovery.\n\nOverall, I’m very satisfied with the care and professionalism at Ewe Dental. Highly recommended!",
+        "publishedAtDate": "2024-12-23T15:14:17.258Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJK8Nwb8-JCr6N9VzAZm19zHNNHpfql3Xb8JSzmvG8wLOFJ-H4kF278itGx993jXDc8bDlH0WuqHV4TPZdWZ9bKOUggIn6KU-qcuPuvPkyQOeLJu8RRkIYhGn8bVt4rO6j0OhzZiuA"
+        ]
+      },
+      {
+        "name": "ling loke",
+        "stars": 5,
+        "text": "我是在这里拔智慧牙🦷的 ，我是很怕牙医的人 ，但这里的牙医和护士都很有耐心 细心 会给予很多方式让你放松和不紧张 。如果想拔智慧牙的 ，我蛮推荐来这一家哟 。🥰",
+        "publishedAtDate": "2024-12-18T23:25:48.291Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJvKBAlsQkSACVsKfSPldJ5dln8VYzo7j1x5BG4olURHIWuzPMFqVjB8TlBYcb0HVQpI_nVXj2UHGSNYgwYt0Y5PvajbUxarbRBTAWL-1BBEpo58eVEhSKDW827_4hmwecloHSrAA"
+        ]
+      },
+      {
+        "name": "Yeap Hong Kheng",
+        "stars": 5,
+        "text": "I recently visited the ewe dental surgery for a wisdom tooth extraction. Despite initial concerns about the size of the tooth, the procedure was remarkably painless. I only felt slight pressure as the dentist carefully extracted the tooth. The dentist's thorough explanation of the process and the nurse's follow-up call demonstrated the clinic's dedication to patient well-being. I'm so impressed that the Dr.Ong reached out three weeks later to inquire about my recovery. I wholeheartedly recommend this clinic for anyone seeking exceptional dental care.",
+        "publishedAtDate": "2024-12-17T11:23:27.483Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "radika rama",
+        "stars": 5,
+        "text": "Very friendly staff and doctor, good and fast service.",
+        "publishedAtDate": "2024-12-05T06:25:43.602Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Service Team AP",
+        "stars": 5,
+        "text": "Excellent Care for Periodontal Treatment\n\n\"I cannot thank Dr. Ong enough for the exceptional care and expertise in treating my periodontal disease. From the very first consultation, Dr. Ong thoroughly explained the condition, available treatment options, and a clear long-term care plan.\n\nThe deep cleaning (scaling and root planing) procedure was performed with great precision, and Dr. Ong ensured I was comfortable throughout the process. I especially appreciated the clear post-treatment care instructions, which made managing my recovery much easier.\n\nWhat truly sets Ewe Dental apart is their commitment to patient education. Dr. Ong not only emphasized the importance of maintaining good oral hygiene to prevent future issues but also provided practical tips tailored specifically to my needs.\n\nThe improvement in my gum health has been remarkable, and I am incredibly relieved to have found such a dedicated and knowledgeable dental professional. I highly recommend Ewe Dental to anyone dealing with periodontal issues. They genuinely care about their patients’ well-being and consistently deliver outstanding results.\"",
+        "publishedAtDate": "2024-11-30T13:15:53.696Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Angel Lim Hui Yi",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-22T08:17:39.792Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "29-G, MK. 13, Ayer Itam, Penang, 11500, Ayer Itam, Pulau Pinang"
+  }
+]

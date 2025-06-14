@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
+import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
 
@@ -87,6 +88,12 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="oV+XGa0KW37ngKhI81Btzg"
           async></script>
+        <Script
+          id="simple-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};`,
+          }}
+        />
       </head>
       <body
         className={cn(

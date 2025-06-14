@@ -1,0 +1,2686 @@
+[
+  {
+    "title": "Tiew Dental",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.100968,
+    "longitude": 101.7416812,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental",
+    "skip": true,
+    "placeId": "ChIJX3bfR141zDERdZu4VGxwONw",
+    "phone": "+60391338424",
+    "permanentlyClosed": false,
+    "address": "35, Tingkat, 1, Jalan Kaskas 2, Taman Cheras, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Cheras",
+    "city": "Cheras",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 144,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPeXhWOU1JGxDq7YD8WYKgTxw67_D9YTLF5QVVh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMqz-CCGqUBgqny80PTy0Am-gL4OGznFwmnZg-d=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPTy_qBRYR1UL44mzG2Mh_S6sxghQTduPp0Alcv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPMbsjhbLD1Jm_BPTZQPea1nVv3TXhUxuo2eUo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOofV8mObcJWwXxMfZpcbJT6chE4TPCL5w5M7U=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Wei Jia",
+        "stars": 1,
+        "text": "I have experienced repeated issues with appointment scheduling, responsiveness, and clinic management, which have caused me significant inconvenience.\nFirstly, scheduling an appointment has been unnecessarily difficult. Despite my efforts to book in advance, I frequently face long waiting times and delays. The front desk staff assured me they would inform me of my appointment time, but after waiting for three weeks without any update, I had to follow up myself. This lack of communication is highly unprofessional and frustrating. I schedule appointments for my convenience, not for the convenience of your clinic, and I expect better service.\nSecondly, when I have an issue with my braces, I am required to wait for my assigned doctor to return, even though I have explicitly stated that any available doctor could assist me. This rigid system leads to unnecessary delays in my treatment, which is unacceptable.\nMoreover, I do not understand how such a large and well-established dental clinic lacks the necessary tools for treatment. On multiple occasions, I have been told that certain tools were unavailable, causing further delays. This is highly concerning and raises questions about the clinic’s preparedness and efficiency.",
+        "publishedAtDate": "2025-03-03T04:34:06.850Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Koey Thung",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-09-15T03:25:31.481Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Leng Looi Tan",
+        "stars": 5,
+        "text": "Okay good service",
+        "publishedAtDate": "2024-08-24T01:50:49.719Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ysk Dwg",
+        "stars": 5,
+        "text": "Best services",
+        "publishedAtDate": "2024-08-24T01:25:31.708Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jimmy Yap",
+        "stars": 5,
+        "text": "i like here...",
+        "publishedAtDate": "2024-08-22T05:14:48.446Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Abdullah hakim Junaidi",
+        "stars": 5,
+        "text": "Good job kelinik bersih layanan ramah memang mantap huhui",
+        "publishedAtDate": "2024-08-13T05:09:52.034Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "KONWONG LOW",
+        "stars": 5,
+        "text": "Doctor very professional and price is reasonable",
+        "publishedAtDate": "2024-08-13T02:12:30.778Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tracy Kwah",
+        "stars": 5,
+        "text": "Dr. Chong is professional. Her attention to detail, thorough explanations, and friendly demeanor make my visit a comfortable and reassuring experience. The staff at the counter is also friendly and helpful!",
+        "publishedAtDate": "2024-08-01T05:28:00.898Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "35, Tingkat, 1, Jalan Kaskas 2"
+  },
+  {
+    "title": "Hello Dental Clinic (Sunway Velocity)",
+    "website": "https://www.facebook.com/hellodentalvelocity/",
+    "latitude": 3.1294432,
+    "longitude": 101.7218326,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "hello-dental-clinic-sunway-velocity",
+    "skip": true,
+    "placeId": "ChIJt8bVCwQ3zDERmI5JXRDW2oc",
+    "phone": "+60168282373",
+    "permanentlyClosed": false,
+    "address": "V06-02-05, Signature Retail Lot Lingkaran SV, Sunway Velocity, Jalan Shelley, 55100 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Maluri",
+    "city": "Cheras",
+    "postalCode": "55100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 586,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOxXc7LG80prSKKlCAKzsIFMH3ntH7xHQY6um2n=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-w0nSGZ13HGYTUwFMWui42I3DghI86i38EID8LDwznaF-5W35e4wUslN8IQPOIHOIUGJtljyA2CVGwJdJDL9KP6MNk9N5BlyjLhGgdQH-JsP1xfJEThhjfDmaKm3ah9idmjuNh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOxOBAzCo4opZkUPV2iD1YJYtS4MlCz16GQP39D=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMt6ljOHy9rCPw0klYF4jocpYcCXW2r_WGm_zpu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOufAV0RXOA_K-WHoTGOSJprWyYA-x5ypm5FhSY=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Marcel Barlang",
+        "stars": 5,
+        "text": "The treatment was amazing. I lost my filling and they replaced it with a new one. I had no pain at all. On top an xray where we find another decay. Glad to know that. Will be filled next time. Thank you for the good treatment. Good service. Recommend!",
+        "publishedAtDate": "2025-04-14T10:27:42.304Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jacie Lee",
+        "stars": 5,
+        "text": "Dr Sapphire is very patient to explain all my enquiry! My 5years old daughter love her so much and she is willing to come back next time😙😙",
+        "publishedAtDate": "2025-04-13T08:10:12.354Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Doann Lee",
+        "stars": 5,
+        "text": "Dentist was kind and friendly. Good environment and comfortable.",
+        "publishedAtDate": "2025-04-13T06:43:57.996Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJvsCkje8IHpSTqcvLXAo2fTF3_R0PpQ8Yuu3_FP3D731_usHVET4RvtEnutxfntePAlK8Hmk5TIwXioc_bEVcLdxu20sXTVtx70DdsuQWQoz2K611VhyG3m1C-th074CZ5csDl"
+        ]
+      },
+      {
+        "name": "Lim Ai Leng",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2025-04-05T03:45:34.516Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "William Lim",
+        "stars": 5,
+        "text": "good service",
+        "publishedAtDate": "2025-04-05T03:09:38.924Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lim Chai Hsia",
+        "stars": 5,
+        "text": "Good service, my kid love to see Dr Khei very much.",
+        "publishedAtDate": "2025-03-16T04:08:47.753Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJIF9vAj1ODSIiXer73S6nE2CH_f8fGciUHn_CmjoXVOqLvZMx0wnskCXUDztOGbqcyGK8DDkLkwPWggnwItrgVIQkgPuH-ZacXxg_j7KKtmHu_hHWwyO8Cn8UFpeNmSeW0Z5YCr"
+        ]
+      },
+      {
+        "name": "Jasmine GWQ",
+        "stars": 5,
+        "text": "15/3 i'm back! Dr. Beatrix fixed my second veneers quickly and precisely, aligning them just as i wanted. she even offered a previous veneers touch-up to match my request. the entire procedure was painless—i almost dozed off... they also did a 3D scan for my retainers, which was impressive. overall, a great experience with excellent customer service at the front desk too!\n\n8/3 Doctor Beatrix is amazing. she recommended me to do veneers instead aligners, which saved me a ton of money. she recommended me the right and suitable treatment without pressuring, i even said i can do the other service with my other dentist and she’s totally okay with it. the consultation includes a mock up demo, she answers all my questions and explained carefully. to my surprise their consultation fee was so affordable?? i decided on the spot.\n\nthe whole experience was very pleasant and it finished on time as promised. once my veneers was fixed, i was very satisfied with the results, exactly as i wanted. i paid happily and am already thinking for another veneer fix there soon!\n\nnot to mentioned that i am also so pleased with their service, right at my first contact point. their customer service is top notched, from enquiring on whatsapp, to fixing an appointment, they are so helpful and attentive. i’ve never been this pleased about a dental visit before! 😆",
+        "publishedAtDate": "2025-03-15T11:06:19.505Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joshua Jacob",
+        "stars": 5,
+        "text": "Very friendly environment and staff, Atika & Wani we're very helpful and kind",
+        "publishedAtDate": "2025-03-04T04:45:34.441Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "V06-02-05, Signature Retail Lot Lingkaran SV, Sunway Velocity, Jalan Shelley"
+  },
+  {
+    "title": "Klinik Pergigian i-RIA Cheras",
+    "website": "",
+    "latitude": 3.0574547,
+    "longitude": 101.7482012,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      }
+    ],
+    "slug": "klinik-pergigian-i-ria-cheras",
+    "skip": false,
+    "placeId": "ChIJr3hVwE41zDERDbDZSvW_7D4",
+    "phone": "+601126159761",
+    "permanentlyClosed": false,
+    "address": "W.P, 77, Jalan 34/154, Taman Dahlia, 56000 Cheras, Taman Dahlia, 56000 Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Dahlia",
+    "city": "Kuala Lumpur",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 178,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9FBvC0udFqA8a0uI0SucF4t4ARDWYU3O8i9MwOPvtK79m48MB48yTZT1RtXJfzWNjJiczhl_mBjvM1XL4yjQZr9joUXyUjFZPMixRO1uTiMeK-c5-dVE5AAge8q34UAIwjDaKVvg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPObGh1mTYoUVzc77T8XDUr4fVJvNerWtUF4qCH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_GNeHNvzO8A7as70rCyA7vESOvDE7Cq7RiVcE3YmQJVgamp-ZizTJ3JNzzYYU_CK0YHZpEoxNRn3wpc8mKE7H_8Cln1X6w916ugROwbYBBM7NS_rvuVelgaBrdoHXc_ymjBd3B=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM22VH6IwiOwwIOXaf4bx4wcv5AyRB0e7QC4Wxp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOOEgPbCujjzM9sonIqnowEU70pB5sAUz0SJTp0=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Azli Azizan",
+        "stars": 5,
+        "text": "Klinik yang sangat terbaik👍👍👍! Doktor dan staf sangat profesional serta mengambil berat tentang keselesaan pesakit. Proses rawatan berjalan lancar dan suasana klinik sangat selesa..",
+        "publishedAtDate": "2025-04-21T03:42:17.224Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "The One",
+        "stars": 5,
+        "text": "Alhamdulilah , Semasa saya mendapatkan rawatan gigi di klinik ini , Dr yang sangat ramah , prihatin dan memberikan info info rawatan yang mudah dan senang pesakit faham dan harga rawatan pun berpatutan",
+        "publishedAtDate": "2025-04-14T23:31:27.901Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Leek Sun Yap",
+        "stars": 1,
+        "text": "Bad experience. First time coming here. For scaling. It was so much pain. Dr Renu like she wants to finish it ASAP. The feeling was so uncomfortably . She always like to say that I never follow her instructions. Thats why it was painful and  the way she gives instructions like she got attitude problem.",
+        "publishedAtDate": "2025-04-14T13:46:40.291Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chloe Chin",
+        "stars": 5,
+        "text": "Never b4 I did my dental procedures so pleasant! Dr Kavin is so gentle n professional. He is a gem. Good nurses too. Will recommend him to my friends n family.",
+        "publishedAtDate": "2025-04-05T04:27:33.620Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Abigail Kuha",
+        "stars": 5,
+        "text": "Dr Renu is really a kind and attentive doctor. She’s very skilled and professional in delivering the best oral care for her patients. Highly recommended.",
+        "publishedAtDate": "2025-03-27T09:44:55.627Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nurraffiqqah roslan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-11T07:25:16.064Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jake ng",
+        "stars": 5,
+        "text": "Good service , highly recommended 👍",
+        "publishedAtDate": "2025-03-10T04:07:33.830Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zahirah Amran",
+        "stars": 5,
+        "text": "Klinik ni best, doctor dan staf semua baik dan friendly. Buat minor oral surgery so far ni klinik paling murah dan services terbaik. Doctor explain A-Z bagi penjagaan gigi lepas buat surgery. So far ni the best klinik! 😄",
+        "publishedAtDate": "2025-02-25T05:20:04.473Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "W.P, 77, Jalan 34/154, Taman Dahlia, 56000 Cheras"
+  },
+  {
+    "title": "KLINIK PERGIGIAN DENTALANE",
+    "website": "https://dentalane.com.my/",
+    "latitude": 3.0636627,
+    "longitude": 101.7440953,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "21:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "21:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "21:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "21:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dentalane",
+    "skip": true,
+    "placeId": "ChIJL5dnIvc1zDERMylLjsxapv4",
+    "phone": "+60122388567",
+    "permanentlyClosed": false,
+    "address": "60, Jln Damai Raya 2, Alam Damai, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Alam Damai",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 437,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNiqKI7RhSDsWxAN59QuaNmEkL0hkUHrRdN3T0l=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB95mD_k6kt9dOg-6Yez7SYYrLRwPAyT0Q6CKo-NG8RHNVbmOF9emDb0mXMkwZD_XYSx7l1LYyl4dxbmY_2IX11I9v-Q2VNCLyaGUbm765Ir1p7V5hk6rYpztHrjS1Yudc5jfGx4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPcmZqxGK2i0UgJ3DOwb4QCHS0e9gzVtQYktJqz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-KGQwbTR0uqkmofBIwMyOWZlkgwgI9HyFXccdViDeU8x8BF3tMYZyKWDVTn5t0e-IGiCKkHvXFIV5eY3wq8LJGpJG12HWGq_KxpxkuCLMi1Hagffs21GFxjSPX2jmNd339B4BX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPH6QtvIW_zXlmvJ-56HfzSFT2h1uGlPz_pXUXl=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "hafilah Ismail",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-21T06:23:20.639Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Nabilah",
+        "stars": 5,
+        "text": "My experience of getting my wisdom tooth extracted with Dr. Najihah was really great.Very quick and painless. Thnks Dr Najihah",
+        "publishedAtDate": "2025-04-20T11:11:38.354Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Helina Helmi",
+        "stars": 5,
+        "text": "Thank you dr nurul! Great service 🤍🤍 i love my teeth 😬😬",
+        "publishedAtDate": "2025-04-19T05:22:37.439Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Afedy",
+        "stars": 5,
+        "text": "Anak-anak suka layanan dan nasihat yang baik dari Doktor Nurul.. sehinggakan asal sakit gigi je mesti nk ke Klinik Dentalane nk jumpa Doktor Nurul.. 🤩🤩🤩🤩🤩",
+        "publishedAtDate": "2025-04-17T08:33:28.106Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "AHMAD KHALIS HALIMI",
+        "stars": 5,
+        "text": "Sangat berpuas hati dengan perkhidmatan yang diberikan (Dr Aistah), harga pun berpatutan, staff klinik pergigian dentalane mesra & bekerja dgn profesional.",
+        "publishedAtDate": "2025-04-17T07:22:59.271Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Khairiyatul Azmin Akhiruddin",
+        "stars": 5,
+        "text": "Treatment was detailed and quick. The dentist has gentle hands. Overall service was great and highly recommended.",
+        "publishedAtDate": "2025-04-17T06:58:31.719Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "lyna Rezza",
+        "stars": 5,
+        "text": "Layanan yg sangat mesra & Doctor yg sgt peramah. Terima kasih Dr Nurul♥️",
+        "publishedAtDate": "2025-04-16T09:52:30.497Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "fida yusof",
+        "stars": 5,
+        "text": "Doctor superb.. Terbaikk 👍👍sangat puas hati dengan servis yang diberi",
+        "publishedAtDate": "2025-03-19T06:24:41.716Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "60, Jln Damai Raya 2"
+  },
+  {
+    "title": "Lumia Dental Cheras 雪亮牙科诊所",
+    "website": "https://www.lumiadentalclinic.com.my/",
+    "latitude": 3.1204787,
+    "longitude": 101.7281746,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      }
+    ],
+    "slug": "lumia-dental-cheras-",
+    "skip": true,
+    "placeId": "ChIJjYqTQ7w3zDERdP7ELlbyS9o",
+    "phone": "+60129327948",
+    "permanentlyClosed": false,
+    "address": "15-1, Level 1, Wisma Low Siew Eng, Jalan 1/92C, Jln Cheras, Batu 3 1/4, 56100 Kuala Lumpur, Malaysia",
+    "neighborhood": "Batu 3 1/4",
+    "city": "Kuala Lumpur",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 58,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNd8s5Bvas-zw89D2_K9NCX2p9AkXAZm94CWWJF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMBdheu0AIF-ozzaAPJsrUy2ji59-H88BokJwc0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNsg07RW-m8wfq5Z98dWIXgc-VLzzGLuchywniq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNmTFjqIJNIgcR4casmNM5cG4NMgm8oM1F_uGlB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO6A5E3Wiw3qhKd_SJLIlicZdxE_r262aUZj568=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "kim caraig",
+        "stars": 5,
+        "text": "The doctor’s and staff are very accommodating and nice. Will definitely return to clean my tooth",
+        "publishedAtDate": "2025-03-30T05:11:19.899Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "H Ahmed",
+        "stars": 5,
+        "text": "I had multiple procedures done with them over the course of two weeks and no joke it has been the best dentist experience of my life. The dentist explained everything in a patient and simple manner and made sure I understood everything before moving on. There was clear patient centred care and very good communication on next steps and general advice after procedures. I had two rounds of whitening with them and I am extremely happy with my results. I also had a filling fitted where the dentist made sure I wasn’t experiencing pain and helped me through the whole process especially as I was slightly distressed. Would highly recommend if you’re ever looking for a dentist in KL.",
+        "publishedAtDate": "2025-03-19T05:47:17.773Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yong tze qing",
+        "stars": 5,
+        "text": "Had a great experience at Lumia Dental. The clinic is clean and modern, creating a comfortable atmosphere. The staff are friendly and professional, and the service is excellent. Highly recommend!",
+        "publishedAtDate": "2025-03-08T08:25:17.188Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nikki Soos",
+        "stars": 5,
+        "text": "Friendly, helpful, and clean!",
+        "publishedAtDate": "2025-01-20T10:41:32.706Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hannah Pereira",
+        "stars": 5,
+        "text": "Dr Olivia is very excellent and patient. Also very gentle. I didnt cry at this dentist and its very nice inside. Very warm vibes. They also giving xray glasses to block out the bright white lights so you can be more relaxed and dont have to squint all the time. Love this place!",
+        "publishedAtDate": "2025-01-12T10:15:34.379Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lao Yao",
+        "stars": 5,
+        "text": "The dentist is incredibly patient and chill, providing a relaxed and stress-free experience in a clean and beautiful clinic – highly recommended to visit!",
+        "publishedAtDate": "2025-01-02T06:45:11.780Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJK6m18ISVRaXZY7e8KUfCCIuR3Ze6NgA41GYnKT1bFCOnM71XpdNUt1YlY6Zye0oS9fxsNoBgqO-lByT0GgQnUDOicssP0xOZaxlzeM623q2ENmRbUuxK_dL2giXgNzQoj-F20"
+        ]
+      },
+      {
+        "name": "Nur Adina Ammyza Yuswadi",
+        "stars": 5,
+        "text": "My husband went to this dental clinic and told me glowing recommendation. I went today and I can see why; I received my treatment from Dr Vanessa and she was as gentle yet thorough with the process! She explained in detail about my teeth condition and what are the next steps I'm able to do.\n\nWe have been trying out different dental clinics and safe to say we've found the one we really like with Lumia Dental!",
+        "publishedAtDate": "2024-12-29T04:20:38.051Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Putri Nor Rozira",
+        "stars": 5,
+        "text": "Good services, well explained and friendly staffs. Recommended 👍🏻",
+        "publishedAtDate": "2024-12-21T13:57:30.743Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "15-1, Level 1, Wisma Low Siew Eng, Jalan 1/92C, Jln Cheras"
+  },
+  {
+    "title": "Dr Moshi Dental",
+    "website": "https://moshidental.com/",
+    "latitude": 3.10021,
+    "longitude": 101.7116137,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "dr-moshi-dental",
+    "skip": true,
+    "placeId": "ChIJH7H2SKU1zDER6KubP6hMakE",
+    "phone": "+60176212356",
+    "permanentlyClosed": false,
+    "address": "Level 1 Unit No. 5, Queensville, Jalan Sri Permaisuri, Bandar Sri Permaisuri, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Bandar Sri Permaisuri",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 209,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMCoo7XRGmSZmuymRvTwbVx_VCpUX6R5iiOvl57=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOhSy_-kD1HzfvKkcN7yEqu0T1GQlKG4J3O7OEL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9P4RRdhU-LyFhSnwdIOncJCw2oct4jP9Ocb6TW_f0Dt_CJdSLC_H91xsGgOfcRwB6BJqZQgEXf29H-5gsk0wnJZA72RLVUgmBpsssf3a91cC4ne_FDE964Rbsnewq9k0-pawQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPKFRwwQPmb7uU5GBm510n6wz5zG_ZkZ2Ktv7mK=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM_0YmV51bidiXIhO2rWEYlpm8TknDpXorax5hI=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ainin Sofia",
+        "stars": 4,
+        "text": "So far staff semua peramah..alhamdulillah ok la buat kat sini..servis pun laju..best laa..",
+        "publishedAtDate": "2025-04-17T20:09:14.109Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "asya zara",
+        "stars": 5,
+        "text": "Best Clinic. Staff friendly, Dr anisah explain details. Cozy environment. Overall good service. Thanks 😊",
+        "publishedAtDate": "2025-03-25T04:50:19.110Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJgQOul3n8bszMDUhkWIDISYvYM5pNCOI0Uus5Fm3cG_Egx5yOJqXIAIGyXxxHTX1-3a5dCeJQhG4XRhz2FQsNQt4-6JOvHvDvPphwd3I7rPx8a1ZZYlmTzqeIKtfx1b24TtN_s"
+        ]
+      },
+      {
+        "name": "Nur Nazurah",
+        "stars": 5,
+        "text": "First time buat whitening , bestt & tak sakit sangat, staff semua friendly & sporting!! thank youuu",
+        "publishedAtDate": "2025-03-23T08:24:51.791Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dettë Ryn",
+        "stars": 5,
+        "text": "Klinik sangat bersih ❤️\nProses Scaling + Polishing pun pantas !\nHarga pun sangat affordable.\nRasa ngilu 1/10 je. Tak sakit sangat.\n\nThank you to all the staff. Semua bagus & friendly 👍🏻",
+        "publishedAtDate": "2025-03-09T02:35:28.331Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Nisa'",
+        "stars": 5,
+        "text": "Best treatment received so far. Doctor and nurse are very kind and gentle during scaling and tooth extraction process. Great job Dr Moshi & team 👍🏻",
+        "publishedAtDate": "2025-02-23T05:47:05.380Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nuraini Sulaiman",
+        "stars": 5,
+        "text": "Buat scaling semalam, puas hati sangat rasa bersih gigi. Thankyou Dr Masyitah 👍",
+        "publishedAtDate": "2025-02-05T12:05:45.541Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Sarina",
+        "stars": 5,
+        "text": "Clinic terbaik. Staff and doctor sangat helpfull and friendly. 1 day before tca whtapp clinic tanya macam2 soalan tentang treatment staff respond sangat baik🤍 will come again",
+        "publishedAtDate": "2024-12-30T06:46:07.449Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "riana",
+        "stars": 5,
+        "text": "Done my scaling and whitening here, the staff, doctor and nurse very friendly and all the services was nice and the ambience really cool ✨",
+        "publishedAtDate": "2024-12-29T08:50:59.616Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Level 1 Unit No. 5, Queensville, Jalan Sri Permaisuri"
+  },
+  {
+    "title": "Lumiere Dental",
+    "website": "https://m.facebook.com/lumieredentalcheras",
+    "latitude": 3.0995414,
+    "longitude": 101.7347657,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "lumiere-dental",
+    "skip": true,
+    "placeId": "ChIJ01HqrcE1zDERRal1x2Q4iE0",
+    "phone": "+60162153188",
+    "permanentlyClosed": false,
+    "address": "1st Floor, Inside Tesco/Lotus Extra Cheras, F40B, 2, Jalan Midah 2, Taman Midah, 56000 Cheras, Federal Territory of Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Midah",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 1123,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPoWrJ1TkUreapQu-KiVivOKVpmOZCDYODfTU-W=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOdl3hk3KJz84ZrTEl5oDDYgDj3X63bQMlfHEeb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNLG-oNYXVrpSjX5b7l71UBtI359v_GSpn0ib7Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOPwKY1HepKLj3GO5lfi8v-QeDMgrhnhNn0n3Z9=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOQ7ELLMTrBuGd4o6SDZkwifDyUu3ekduU6yoPk=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Steffi W",
+        "stars": 5,
+        "text": "Was so good 😍",
+        "publishedAtDate": "2025-04-19T12:43:14.160Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chai Yoon lin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-17T09:17:50.320Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "pei sze chang",
+        "stars": 5,
+        "text": "年轻的帅哥医生，手艺很好，人又友善，动作快不罗嗦，是我一直都在寻找的医生，这里又是lotus,停车很方便，我们一家人都是这里的客户，5星评价",
+        "publishedAtDate": "2025-04-17T07:44:55.166Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joan Yeo",
+        "stars": 5,
+        "text": "The staff is very friendly and the dentist will be very attentive to you about your dental condition. Reasonable price, highly recommended👍👍🥰",
+        "publishedAtDate": "2025-04-16T02:50:46.315Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "CHONG YI LI",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-16T02:03:45.196Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "foo126 Foo",
+        "stars": 5,
+        "text": "Good, professional",
+        "publishedAtDate": "2025-04-15T10:00:57.394Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tan Sheng Yew",
+        "stars": 5,
+        "text": "Staff very friendly and helpful. Doctor also very professional. highly recommended.",
+        "publishedAtDate": "2025-04-14T09:40:28.085Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kj t",
+        "stars": 5,
+        "text": "Good service by Dr. Tyo",
+        "publishedAtDate": "2025-04-12T10:34:22.217Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "1st Floor, Inside Tesco/Lotus Extra Cheras, F40B, 2, Jalan Midah 2"
+  },
+  {
+    "title": "Primecare Dental Clinic Cheras",
+    "website": "https://web.facebook.com/primecaredentalcheras",
+    "latitude": 3.0579616,
+    "longitude": 101.7482235,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "primecare-dental-clinic-cheras",
+    "skip": true,
+    "placeId": "ChIJjVlRIhw1zDERIygPp8lxnVs",
+    "phone": "+60182742898",
+    "permanentlyClosed": false,
+    "address": "12-1, Jalan 34/154, Taman Bukit Anggerik, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Bukit Anggerik",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 115,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-ncvwJhjw9_ZC_9d_NltieRjc5FIhS6fBc4NVaDUCew6A26wZ8mY-Z609gmRUnKxBbhZKxH7zu62Ay3Uy-OK8BMuXQ_Z1m2wy8-VBFr_vKdZu5F3GUfmYq38xrlRM6M-cBeekS5Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-6FLVLH9aBxqrUNJQGHVDHU_bQXo1K-1Ua83c6hmAt0jWIfeqC1Y6N_cul-PvreZpgxjRWiyvNMVfc2gazVZVBqJYkCkk3soUMj5UfEKPGjLmFllsCz1r7pcW1kV0pzfXFRbSp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB89pytqQ4uWqj7gof3DywPyHMR_CV8zhYF1kYrfIIGdlgNSZ2ldRLJB1_QFPnyrWmOfBEpUhUNbiwUmBz_ywi1TwQK7zQi1iD11dMFSJuk9JaAE9QHyYJiSnDjjS7USP2oA42U=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8BkfJ9YJoOn4BfeaKk4iMEuXt0B96-166BmaWmBDgvgueAqNfK6W1o8UigVK1k-2oXgNqh0oARZCM2JxzNMnFR93fbTZdmvJNxB2S_pCKGseKKPSeM5LGa-B1uQDQ-1NFohbHdoA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8QAaMTqNbFBlv-ggWB_FoSu17_qeiaDiJfOpJWTKIXbBpHcmzjxmr1cpqskqPkBm3JdwBcNEKeXysE-gNeminVNWx22YVVfEdvrYe3WVyZ5yzv3fv7hiavujyuwM1bvfr6FiUc=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Lim yong lin",
+        "stars": 5,
+        "text": "There are a few things the clinic has took from me, and one of them is my trust. I’ve already started recommending my friends to visit. I had a severe toothache in the lower left wisdom tooth area and consulted Dr. Loh for her expert opinion. I had recently done an X-ray at T*** Dental (don’t quite like the service provided, wait no service were provided only treatment), but Dr. Loh pointed out that the results were unclear and kindly offered to perform another X-ray at no additional cost. It’s evident that the doctors here genuinely care about their patients rather than focusing solely on profit. I asked many questions, and Dr. Loh was attentive and answered them all in a friendly and reassuring manner. Because of the trust I have in them, I confidently placed myself in their care.\n\nProud to announced that I am now one tooth lesser!",
+        "publishedAtDate": "2025-04-15T08:44:08.495Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rkan",
+        "stars": 5,
+        "text": "دكتور جدا ممتاز سويت اسناني كلها عنده يجمع مابين خفة اليد والمهارة والسرعة أوصي فيه لأي شخص يريد العلاج وبسعر مناسب\n\nA very excellent doctor. I had all my teeth done by him. He combines sleight of hand, skill and speed. I recommend him to anyone who wants treatment at a reasonable price.",
+        "publishedAtDate": "2025-02-06T12:43:11.914Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fadzrul Nazmee",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-01-23T03:00:01.033Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kw Poon",
+        "stars": 5,
+        "text": "Appreciate to Dr Thew for being professional, skillful, patience and friendly for the entire dental care session, will definitely come back again in the future for dental checkup.",
+        "publishedAtDate": "2025-01-06T11:37:18.111Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJI4JCowMLpVXAIyoLoWaUSBGEhfFezvurxgfWP4GHdqxnN7EtcWCeIDjd_HsyY0gdTkJGLL5DDlBma8x8OTZBqocnIaaf9hUBGCVhSpFd3VMcbO25s-EQSOhqZRf1iOVMpmCyLB"
+        ]
+      },
+      {
+        "name": "JC",
+        "stars": 5,
+        "text": "Dr Teng is very patient in clarifying all the questions I have and professional as well. Strongly recommend to come here for any dental needs 👍🏻 Thank you for the good service",
+        "publishedAtDate": "2024-12-25T11:09:39.813Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amy Aj",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-12-16T01:08:05.708Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "samsung J7",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-11-06T08:09:49.202Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shin Rou Lim",
+        "stars": 5,
+        "text": "Dr Teng is indeed a very patient dentist. He will first explain the patient's dental condition and then provide the most feasible suggestions.\nI like the service here very much and can trust the dentist here to take care of my teeth. Thank you very much.",
+        "publishedAtDate": "2024-08-15T03:18:44.838Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "12-1, Jalan 34/154"
+  },
+  {
+    "title": "Premier Dental",
+    "website": "https://kppremier.aoikumo.com/webstore#/BookAppointment",
+    "latitude": 3.1019732,
+    "longitude": 101.7129125,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      }
+    ],
+    "slug": "premier-dental",
+    "skip": true,
+    "placeId": "ChIJ64XEvdQ1zDERa_HMQtFyjAY",
+    "phone": "+601155869565",
+    "permanentlyClosed": false,
+    "address": "91-1, Jalan Dwitasik 1, Bandar Sri Permaisuri, 56000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Bandar Sri Permaisuri",
+    "city": "Kuala Lumpur",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": "PPC Glomac Sdn Bhd",
+    "reviewsCount": 128,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-aQnAf99BhxFKsg1O907GxZLp7lcPjR_vPloXpqKN5M0EuHG_iZHb3Jwwk2Sh3miNT_DNSGZyOqZDVou2QkqS8d6FbKeLVHuMq43_S6Vt2iOPhXJMkdUsga7Nr-vHsh-osw5cx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-Y4tZMS7ImMFrcYGbCW3J-24s81gVf3wbDOEMWQ5bILQqpksQFIwoAYWhxxeumpUfoNQivLIONW8TDpe6cfHTxq6lUSP_uZQUHzP2ofTep4xm8iZHz6wuLp4UWS6iQJBD3bMPyng=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9PvzAnxR9WNMdWxTk6vsRcaM0TL_BNpzmyyUutKYMGfOAGfi4DzyhH5BwL7kvM3LTbsLRNUEIqZWFSY5DTxXbimOQNxicKsK4tE_ISwgfQ6FfmrNlQR8hOsxHnhAXhTKfYFTRnGQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-r7mPTXul2Xzq7QpTJED_nXwdGlcKemHnH_7uetnmIiuqGTIX-hV7g6bzmUCiNtHvaMzt_Tc1ECM7CBiFHlVetLkCboFVJ-DFEiB-BjZbqJqhyttNvQwvpe_PP3QZR-QXh9jS4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8EScEuCoHH-18gv7p_T-rmILg3B9mDrhtGConD9cYkBBpktMEN1M1TLAEj6ucEMPHAdbBOnzDVIpzrOGIhLhKy-ca7xM1m2mDTa4o7n5Q81r7MNZ_Ud-Bua8JixjcjTgKEsa8t=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ckla Ckdin",
+        "stars": 5,
+        "text": "Explanation dari dr sangat jelas dan bagus. servis terbaik. Insyallah kami akn dtg lg utk rawatan @ khidmat seterusnya",
+        "publishedAtDate": "2025-04-19T06:25:55.160Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mieza Sidek",
+        "stars": 5,
+        "text": "So far doktor sgt² friendly dan membantu sehabis baik. Harga berpatutan. Staff pun memberi layanan yg baik. Murah dgn senyuman.",
+        "publishedAtDate": "2025-04-09T04:05:34.087Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Qoiril Aril",
+        "stars": 5,
+        "text": "Alhamdulillah....\nKelinix kat sini ok, layanan bagus...\nAlhamdulillah puas hati.",
+        "publishedAtDate": "2025-04-06T05:30:11.812Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aalya Hae",
+        "stars": 5,
+        "text": "Nice welcoming staff and good consultation experience!!",
+        "publishedAtDate": "2025-04-06T03:51:27.405Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "farah razak",
+        "stars": 5,
+        "text": "Perkhidmatan yg bgs",
+        "publishedAtDate": "2025-04-03T08:45:52.974Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ash Fendy Li",
+        "stars": 5,
+        "text": "Dentist is very friendly. Explanation very clear and most import the charges are quite reasonable.",
+        "publishedAtDate": "2025-03-28T05:18:57.157Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Syarafana",
+        "stars": 5,
+        "text": "Services yang bagus dari staff dan doctor😍",
+        "publishedAtDate": "2025-03-27T05:51:20.548Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKp-_BVDmEZGvLNrXTDE2kYXSd82cXWxJFHg-3uZ-RUyODyFOa0IAGrbv6cig5sARreO4IlSoWZXUtNTfQgvfKCInRjxuDg8zt6jjAN7KrZeuvvWe9VI5HIKHyrfdfmBrBudh_8SA"
+        ]
+      },
+      {
+        "name": "Rayyandino Rayyandino",
+        "stars": 5,
+        "text": "Datang nak buat gigi palsu utk pakai raya tapi doctor kata x sempat sedih my husband last2 doctor buat juga gigi temporary at same time. Tqsm Doctor LEE & Nurses buat suami saya tersenyum semula 😘😘😘😘",
+        "publishedAtDate": "2025-03-27T04:40:19.583Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "91-1, Jalan Dwitasik 1"
+  },
+  {
+    "title": "Lok Dental Clinic (Cheras) | Invisalign Provider",
+    "website": "https://www.lokdental.my/",
+    "latitude": 3.0953225,
+    "longitude": 101.7395355,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      }
+    ],
+    "slug": "lok-dental-clinic-cheras-invisalign-provider",
+    "skip": true,
+    "placeId": "ChIJidG2NaY1zDERKfbSy7A1paE",
+    "phone": "+60169078688",
+    "permanentlyClosed": false,
+    "address": "02-13, 2nd Floor, Wisma Aman Elite, 3, Jalan Desa Aman 1, Desa Aman Cheras, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Desa Aman Cheras",
+    "city": "Cheras",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": "Wisma Aman Elite",
+    "reviewsCount": 247,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNygtoHnqOSkphDskcaEzSBpGY_1ni-xK-UNXTH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8jLN3OXvwP0YRbvllVrOBe9JLuxQ-YM23vreiBHQNFTb4Z6-jHt2PM3HchxSmmlQPFCeHBTgumuPuzKNfyPgsklEfT0Ef9tbwwdkgeht1LFS65DJaYbn382GcR9KQBIcy9j6kanw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMlkVFePMTuYFGLrNrCJxTFYA9rYsQD4xnEsAMJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_Gu1t9BZl8sYNigvadJPfljGNUziwyTJmQczW-R3TxUZRlVkLR7mBCQg0HT1SxWBklCqOKI71vIweBxoJ537XXAxFikaqlTHBxZnXWeUDGZVkRmuFP6lLQUBLIC88utPH2bKgL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipObUygbRh7mbPKNhXl--wc-7m51tVDU0gVpQcwc=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Nabilah",
+        "stars": 5,
+        "text": "Great service and they tried their best to accommodate to my timing as I was only going to be in KL for a few days! Came for the ICON resin infiltration treatment for my white spots and am amazed by the results. Was a bit skeptical regarding the effectiveness of the treatment but it was really successful in removing the white spots that I’ve had my whole life. I think it’s due to the Dr being very meticulous 👍🏽 He also explained the procedure well. Thank you to the Dr and the assistant for being so patient and trying their best to achieve the best results. Especially to the assistant for being kind and helping me feel comfortable! Whole treatment lasted around 3 hours for 6 teeth including consultation and scaling.\n\nHowever I felt that the team could have better prepared me for the post treatment implications of wearing a mouth opener for too long, it was okay for the first two hours but the last hour it started to feel very uncomfortable. Although the team constantly checked in with me on my comfort level, and encouraged me to relax and bite/close my mouth the issue for me was how hard it was pressing against my gums. Ended the treatment having really painful and sore gums due to the prolonged pressure and irritated and bumpy skin around the corners of my mouth (I also have sensitive skin). Just a note to those who are thinking of doing the treatment close to any special event they have.",
+        "publishedAtDate": "2025-04-19T06:39:53.069Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Paulyn Eng",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-15T05:52:12.755Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Catherine Lim",
+        "stars": 4,
+        "text": "Friendly & helpful, explained very clear to patient",
+        "publishedAtDate": "2025-04-10T07:50:20.021Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Evonne",
+        "stars": 5,
+        "text": "After braces must do white spot treatment.\nJust did my white spot treatment & whitening my teeth here😊 The result was surprised me like I wear the teeth veneer😍super affordable price!!! And this result Dr told me can last for whole life.\n\nDr was so gentle treat my teeth. They also free scaling n polishing. I need to visit Dr another second round for check up I’m very satisfied!\n这里诊所做的所有服务真的不贵👍我建议大家来尝试，过程不痛，医生会讲解全部过程，包括理解你的过程感受。\n\n很害怕疼痛的我，牙医非常友善以及温柔对待我的牙齿，也很体贴，我很喜欢 真心谢谢！",
+        "publishedAtDate": "2025-04-07T08:41:29.362Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKLKUO8V-nUi2R5OuqAupYNkqMsqN5TNN0kRffA7C0uLSh9puFzqCjMJNJKkxLxQETlyWIUeXPaTsMdlRejL9d-shTJSMuN4jSDMa9JPfSG_XkR2EEcwZjAGFWSnJ54earqjDA"
+        ]
+      },
+      {
+        "name": "yichen niu",
+        "stars": 5,
+        "text": "I always wanted veneers to fix my slightly uneven & discoloured teeth, and Primecare Dental made my dream come true! From the consultation to the final application, the process was on point, quick easy and smooth. The doctors carefully designed veneers that looked natural and suited my faceshape “i got shocked and dint know actually have theory behind it”. The\nattention to detail was impressive!\nAfter treatment my teeth look whiter, straighter, and absolutely stunning. I feel so much more confident when I smile. If you’re considering cosmetic dentistry, I highly highly recommend this clinic for their expertise and friendly service.",
+        "publishedAtDate": "2025-04-05T12:11:24.038Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ZS Heng",
+        "stars": 5,
+        "text": "Love how gentle is Dr Lok while providing excellent care and service. She is also very attention to detail, constantly checking if I’m doing ok during the treatment.\n\nBasement parking is available if street parking is full.\n\nWouldn’t hesitate to recommend them to anyone else!! :)",
+        "publishedAtDate": "2025-04-05T10:01:01.854Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJBcO3f_w5d74FqgXsXAFcTluEN_O_tMPsvw0WGbfH-f3skq_Q4biMlGqn8qRAYOE0RSYBy4BxRhPh8N3J7M9rtBYbI15uwF2QY3_nQaf1HRUrVN2vR3bnx2dArr8uKxqiLgLPZEA"
+        ]
+      },
+      {
+        "name": "Maddy Lsh",
+        "stars": 5,
+        "text": "Professional doctor and friendly nurses. Kids-friendly, gentle and very patient. Comfy ambience with modern equipments. It has been a year, my kid’s underbite issue has briefly improved with the help of Dr. Lok.",
+        "publishedAtDate": "2025-04-03T04:19:11.224Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJTqGd9Zc_FjxDy0M5Pbp5Fa9PM79K-BjGsP3bwNnBRh8kVzBfs7KTu4bWd2S3c7AAolK0_P6Y6hFQ4dXDc1RJaps2NQGdth2yFyUZ9gwDoViyD3Oitb2lGS6gH7cRLcF2HOayk",
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJIBimBZ2fLc3UTDSZ7G6dtk8y3H-gtCeD01UWQnZOAHwAYuM_30RFRk6B3ZeGWVJ6BlcVPFIFNeFeBWIBM4ffqvR0HOUQ2ndTOwHoqK-SxjV-JAZaA84MS-cPYq0eRWlbehxQvb"
+        ]
+      },
+      {
+        "name": "Chi Enz",
+        "stars": 4,
+        "text": "Both doctors and staffs are friendly and provide detail explanations.",
+        "publishedAtDate": "2025-03-30T03:27:54.492Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "02-13, 2nd Floor, Wisma Aman Elite, 3, Jalan Desa Aman 1"
+  },
+  {
+    "title": "Klinik Gigi Dr Feeliz LRT Cheras",
+    "website": "http://drfeeliz.com/",
+    "latitude": 3.1126724,
+    "longitude": 101.7155825,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-gigi-dr-feeliz-lrt-cheras",
+    "skip": true,
+    "placeId": "ChIJLc9XsaE3zDERop_B7S8aOSc",
+    "phone": "+60184749077",
+    "permanentlyClosed": false,
+    "address": "85, Amber Business Plaza, 1, Jalan Jelawat 1, Batu 3 ½, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Batu 3 ½",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": "Amber Business Plaza",
+    "reviewsCount": 160,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPGLV9WEUpMXxtjLq285YrSXLF97LGbOIkmOOUW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNGeNDzMYD4KO9LdGSI5ofWUxhwNpN_5gZgHkMw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9PqY6IJ1tYMFHOpv5DNFtKNTbyZJEWzcQLQGBg643DNEJERbGnj-LDt3WJcrxAShHTztla1bFfWQQj8C-DVk3wbQ5M36ZLKw6z0yMi7Uk6I7LNU-rt1NSybBZtUwmesfuXwC1HyA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP8RttG985f-KYimWB52_Rt2clPnvrmrK6PlMDW=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMNYcMl0zwko_55w-7wp-clGfezFsEePN0MRlm7=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Eyraa Elyana",
+        "stars": 5,
+        "text": "good service ! so recommend to come here 🫶🏻",
+        "publishedAtDate": "2025-03-19T02:45:49.576Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kaka Moaram",
+        "stars": 5,
+        "text": "Good service with great result. Recomended 👍🏽",
+        "publishedAtDate": "2025-03-10T07:16:48.103Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syafiqah Azhab",
+        "stars": 5,
+        "text": "good service",
+        "publishedAtDate": "2025-03-02T05:08:34.055Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Neskay",
+        "stars": 5,
+        "text": "Almost 3 years having my teeth cared by this clinic. Never went to other clinic ever since then! 2 doctors were taken good care of my teeth. Good services! Very gentle for those who afraid of dentist haha! Thank you doctor syafeqa for work done and proper planning to get my teeth beautiful! Great job 👏🏻",
+        "publishedAtDate": "2025-03-01T04:40:17.291Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Atikah Yusof",
+        "stars": 5,
+        "text": "Best whitening service from Klinik Pergigian Dr Feeliz! The results are always amazing. Highly recommended! 👍😍",
+        "publishedAtDate": "2025-02-23T03:06:59.762Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Syasya Zulkifli",
+        "stars": 5,
+        "text": "the environment is so clean. the doctor and nurses so friendly and informative for all my questions. Did my braces with them for 2 years and it was a great experience",
+        "publishedAtDate": "2025-02-18T02:52:42.394Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fatin Nursabrina Mohd Helmi",
+        "stars": 5,
+        "text": "The treatment was great and the doctor explain everything sufficiently for my understanding. The staff was friendly and the atmosphere was rely great and calming for someone who's afraid of dentist like me. Highly recommend.",
+        "publishedAtDate": "2025-02-06T07:11:32.705Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "syazwani hassan",
+        "stars": 5,
+        "text": "fast service",
+        "publishedAtDate": "2025-02-06T03:57:22.027Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "85, Amber Business Plaza, 1, Jalan Jelawat 1"
+  },
+  {
+    "title": "White Perfect Dental Clinic",
+    "website": "https://www.whiteperfectdental.com.my/",
+    "latitude": 3.1010591,
+    "longitude": 101.7399899,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "white-perfect-dental-clinic",
+    "skip": true,
+    "placeId": "ChIJwd5FRMU1zDERBn0HkXxoYvY",
+    "phone": "+60391339068",
+    "permanentlyClosed": false,
+    "address": "34-5, Jalan 5/101C, Off, Jln Kaskas, Jalan Cheras, 56100 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+    "neighborhood": "Jalan Cheras",
+    "city": "Kuala Lumpur",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 179,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipO8XIF2dDfPRhymiJVLBv9retlVTYWbQyzvmDy0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB99u-jWGjwLkAaFLDuGx_UBaeoE395r6PNr609IMhWrGfk3a-baVLNqL57aV1MSpjvDMK7vVL0hN3ek3HLE--m0oiNgkcmKRa_uPi_coUJlp9Nj1ba4AlbFhqy8osirpPXDqNgA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8P2zoG_0JWN2xDreZfcp28wtU00owUxwpKk0DKWP-95ALmsSlEvomWNFxdMO8stkTQPKkjy_GoLbozpNd46N4EKKyHndqD4VxMEhon_zl0K74sGgZA0IOxGtq9SdUigNlZNjw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNFhy9Acs1nDnXPiHFUX2NY7-rq_CK5L4eRX7W1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8wCScQNM4UkN136u-q_wyBFa_S1zPnWRiBTUKuBlq6fWS0al6W8kqxe4wz4Om82ICO3eRYBCkC7NUyRn2EJeHF6w5tRyI8kjJr9iyRxuvx4EPiZFqq4x_qLXZWacv_kZ5iywek6g=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Yue Sheng Huey",
+        "stars": 5,
+        "text": "Dr.chong and the staff are very friendly. Good service here.",
+        "publishedAtDate": "2025-04-22T08:07:37.301Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yi Lynn",
+        "stars": 5,
+        "text": "The doctors and nurses here are patient and helpful. I am satisfied with their services and  treatments. I wore my braces for about 2 years and is satisfied with the outcome 🥰",
+        "publishedAtDate": "2025-04-19T07:10:57.643Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Katherine Yap",
+        "stars": 5,
+        "text": "This dental clinic is nice and spacious. Drs are gentle and kind to children. They offer myobrace at affordable price and also conduct labial frenectomy here. Overall very satisfied with service here.",
+        "publishedAtDate": "2025-04-19T06:18:09.284Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Desmond Low",
+        "stars": 5,
+        "text": "Good dentist and environment",
+        "publishedAtDate": "2025-04-19T04:24:39.488Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKFQavpgD_nyM2Eu7UhZ-n5hX-H1MxwZEAU0RlWkcuLgmgTe3dC2ws_s_TKz0CZKzx8kqILg20qADcy7uK6IbBGdBavW1tGUkOOqGHy0GT46JLB1udoEDVCq95RFbhGJaZTHwB9"
+        ]
+      },
+      {
+        "name": "Yvonne On",
+        "stars": 3,
+        "text": "TL;DR We will only either come back for Dr Chee's service next time or just find another dental clinic.\n\nStory:\nEvery time we visited the dental clinic, we always ask for Dr Chee as our experience with her so far had been nothing but the best. However, it's getting harder and harder to book her now as in we have to wait for 2-3 months in order to book her. Thus, I decided to give it a try to have other Dr in this clinic to work on our teeth. I booked for my mum and myself. Two weeks after the treatment, my mum told me that her teeth didn't feel comfortable. It’s not that it only happened after two weeks, but it’s because she gave it some time to see if it would go away. Honestly, I've been feeling the same as well and i thought it was just me. We feel that our teeth have become more sensitive than ever especially when we eat (not even cold drinks or food, just normal food). Disappointed experience.",
+        "publishedAtDate": "2025-04-16T10:13:44.828Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bron Chen",
+        "stars": 5,
+        "text": "A big thank you to Dr. Chee for completing my braces treatment in just 1.5 years! Her meticulous attention to detail, efficiency, and experience made the entire journey seamless—I never had a single issue in my braces journey. Most importantly, I’m very happy with the results. 😊",
+        "publishedAtDate": "2025-03-26T16:46:53.177Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Wong Pooi Yan",
+        "stars": 5,
+        "text": "Dr chee很细心，很有耐心应付小孩子。我小孩一点都不怕，谢谢Dr Chee",
+        "publishedAtDate": "2025-03-26T07:16:46.943Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chloe Tan",
+        "stars": 5,
+        "text": "The clinic environment is very homey and relaxing. Dr Chee is very patient and gentle. She explained everything very clearly. Will definitely recommend this place to anyone who finds dental visits daunting!",
+        "publishedAtDate": "2025-03-09T05:20:12.431Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "34-5, Jalan 5/101C, Off, Jln Kaskas"
+  },
+  {
+    "title": "J&G Dental Clinic",
+    "website": "",
+    "latitude": 3.1018401,
+    "longitude": 101.7334567,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "j-and-g-dental-clinic",
+    "skip": false,
+    "placeId": "ChIJw-V5hqQ1zDERHbM5njxLYfk",
+    "phone": "+601120808585",
+    "permanentlyClosed": false,
+    "address": "19, Jalan Medan Midah, Taman Midah, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Midah",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 116,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMAo5I7GalndsFfD74SSUyARC_ac4sKKvQrVlcg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB__wd9Y3xpAeM1Q1NMwTv13iOKq0jp49V9i76nxhMPj8W_wORHdX6EsbtardQ1tDrpSo_PqRIsIIE-BcOqAjRi-6NYowwaGDNBsH9jXU1JO7Pap-7MQwgO29XOtl24d8GlFCzM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMovVjtST6OKKmnZGAlYA_Tc5tUwv8c-HDOpE6N=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-NLE-PtDRvtFklY22Yb2H9Kx5_ZSSg_kFvPlIyMzwW3lMtKsgafJSgw4usmaNJkzopUjsTLodj9T4_wWenDy2SYoXYGt6FBKp6xFXUHx7XtbpqOFmZmVDyoVwUmCWlxggQaVh-lw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMlAI8ZwjsHFkyRrl1bevjgIS9JDrdCaYIDcemz=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Paul Artraides",
+        "stars": 5,
+        "text": "Лечили зубы детям. Все прошло отлично.",
+        "publishedAtDate": "2025-04-14T02:54:26.162Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "William Chiang",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-14T01:03:29.208Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Waisin Loi",
+        "stars": 4,
+        "text": "我妈妈昨天去了J&G Dental Clinic,回来后就说那里的牙医很细心讲解,赞👍",
+        "publishedAtDate": "2025-04-12T03:02:35.213Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Julie Wong",
+        "stars": 5,
+        "text": "This is by far my best dental experience. I requested a full checkup and Dr Genia recommended 2 fillings and scaling to remove plaque buildup. The entire hour or so procedure was painless and even pleasant—which I think speaks of the precision and care of the dentist. Soothing music played in the background and you couldn’t wish for a dentist with a kinder, more gentle or compassionate demeanor than Dr Genia. With the aid of a mirror the doc showed me the problem areas and laid out the remedies. The old oxidized black amalgam filling was replaced with natural white composite filling. I also noticed that the clinic was so clean some patients walked around barefoot and staff were extremely kind. There’s also free espresso you can help yourself to in a corner. I am happy to say that this is the first time that I had enjoyed a dentist visit or felt more at ease: most experiences left me with an ouch in the mouth and an ouch in the pocket. Finally I found a dentist who shares my belief that a dentist visit shouldn’t be painful nor something to be feared. Kudos to J&G clinic for being a new age dental clinic with a heart. 🙏😍🥰😘🌹",
+        "publishedAtDate": "2025-03-30T23:11:15.593Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Thomas Wong",
+        "stars": 5,
+        "text": "Thank you so much Dr Genia Leong for taking my misery away. I had a very bad swollen gum. Extremely painful. She was very patient to explain my condition and how she'll resolve it. Best part is she did not just extract the tooth, the easy way out, like other dentist do. Overall, my experience was nice and pleasant. Many thanks again. Recommended dental clinic to go for. 👍",
+        "publishedAtDate": "2025-03-12T03:38:14.619Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lian KZ",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-10T14:23:38.283Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "M L",
+        "stars": 5,
+        "text": "On a trip through KL, needed someone to fix a dental job done in my home country that wasn’t done right and Dr Genia fixed it perfectly. Very considerate of the patient, felt zero pain or discomfort, the clinic itself is beautiful and peaceful and my teeth are like new! I can now enjoy the rest of my trip, thank you to all the staff at J & G! I highly recommend this clinic, even as a tourist, and especially if you’re uncomfortable with going to the dentist. All staff speak English btw. 👍",
+        "publishedAtDate": "2025-03-05T12:48:50.210Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "wxb",
+        "stars": 5,
+        "text": "This is hands down the best dental clinic I have ever visited. For the first time in my life, a dentist actually explained in details what is the issue, what options do I have, what is the procedure of the treatment, how the treatment can help address the issue, the limit of such treatment, and what I should do to avoid exacerbating the condition. What's more, the doctor was gentle and professional, and the treatment wasn't as painful as I initially expected, in fact I almost felt nothing. For someone who had visited a lot of dental clinics before, this is a very new and reassuring experience. If I had met the doctor sooner, my teeth would be in a much better condition. Highly recommend.",
+        "publishedAtDate": "2025-02-27T15:43:06.962Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "19, Jalan Medan Midah"
+  },
+  {
+    "title": "Hi-Dentist Cheras | Dental Clinic Alam Damai, Cheras",
+    "website": "https://hidentist.com.my/",
+    "latitude": 3.0742023,
+    "longitude": 101.7379062,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "hi-dentist-cheras-dental-clinic-alam-damai-cheras",
+    "skip": true,
+    "placeId": "ChIJgSx7i-I1zDERXQrOC4gWGjQ",
+    "phone": "+60182396678",
+    "permanentlyClosed": false,
+    "address": "45, Jalan Damai Niaga 1, Alam Damai, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Alam Damai",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 214,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOzQMgA6SWmpx2ZOrE4d9Tj7PqF1AXvvuPAqTFo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP7jhlJudmutyVvhsuMjoMUrQmwi_t1sQUGj7gb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMdoOm8JQalbM0WqZqzqVJ1oftRpqqIKya9FMtI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMxS4_kp9YWIcWn2vujHL8vawG2jNVtWcI4ECYk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNHNdM-O4a6Rb0yfGGnrTsOAGAQehdeJwSLT8W5=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "asyraf razin",
+        "stars": 5,
+        "text": "Great experience. Really good service by staff and convenient place",
+        "publishedAtDate": "2025-03-22T03:38:07.422Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Grace Chan",
+        "stars": 5,
+        "text": "Staffs and doctor are very professional and good service. Will definitely visit again..",
+        "publishedAtDate": "2025-03-21T07:22:55.865Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "WanHan Chow",
+        "stars": 5,
+        "text": "I have been visiting Hi-Dentist for the past 2 years. Doctor is very patent in answering and explaining to all my queries. A very pleasant visit for me and thank you doctor for all the advises on dental care.",
+        "publishedAtDate": "2025-03-05T04:24:43.398Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "waffa farhanah",
+        "stars": 5,
+        "text": "good dentist with affordable packages and friendly staff :)",
+        "publishedAtDate": "2025-03-03T06:21:37.731Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "JINNIE FOREVER",
+        "stars": 5,
+        "text": "I did my scaling for the first time today and I like how the doctor gives explanations and teach how to floss.",
+        "publishedAtDate": "2024-10-13T03:45:30.314Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Michelle Lim",
+        "stars": 5,
+        "text": "Wonderful experience Dr is very patience and well done!",
+        "publishedAtDate": "2024-08-19T07:54:56.482Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sam Eddy",
+        "stars": 5,
+        "text": "The Hi Dental Dr.Sriya and her staff were excellent and gave good service. Thank you.",
+        "publishedAtDate": "2024-08-09T07:51:04.487Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ji-Ling Kwan",
+        "stars": 5,
+        "text": "I've been here for scaling twice. Dr Sriya was very professional, friendly and patient on my first visit. I was satisfied with the locum doctor on my second visit too. Good neighbourhood dentist. 👍🏻",
+        "publishedAtDate": "2024-06-23T06:46:58.391Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "45, Jalan Damai Niaga 1"
+  },
+  {
+    "title": "DCA Pergigian & Dental Clinic",
+    "website": "https://www.drclearaligners.my/en/dental-treatments/",
+    "latitude": 3.0677877,
+    "longitude": 101.7422768,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      }
+    ],
+    "slug": "dca-pergigian-and-dental-clinic",
+    "skip": true,
+    "placeId": "ChIJw4WPzXA1zDER0dRuyTIhxEU",
+    "phone": "+60177522133",
+    "permanentlyClosed": false,
+    "address": "142, Jln Damai Raya 2, Alam Damai, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Alam Damai",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 1027,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPBEC36Mch3i_9ca25ZMyPhnoU5MAahidX3eNZx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-3qwz3wKE2rsHfFyLsMjN5f2YpgI8AZxdx3P37UsxWIxViQgvKA5CxKAzrzCv0Ei9yhN8WgUFBslItVQ25OLe1MsAhHhyAO76FPNbhUL3pP7qx7u7mIHcNBZsQcqJHiKuvCMwL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNPtnchhXFHWRWW_Ic8MVMLEFJu7X9bWeHODPYe=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP-_Q1ZBtOfcquxgbtppLI8RwqBz_QQHcGzbDCY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOj8LIylHAKBIIzcSYkcGy1hT81TESCshLo0zzV=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "B Jones",
+        "stars": 5,
+        "text": "They provide good service and good result",
+        "publishedAtDate": "2025-04-22T06:31:14.423Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "che mazlan che daud",
+        "stars": 5,
+        "text": "Good sevicep",
+        "publishedAtDate": "2025-04-22T03:15:02.665Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hyuna Hui",
+        "stars": 5,
+        "text": "Nice service",
+        "publishedAtDate": "2025-04-18T08:08:56.590Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "JANICE LIU",
+        "stars": 5,
+        "text": "医生耐心",
+        "publishedAtDate": "2025-04-17T10:02:07.508Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joeann",
+        "stars": 5,
+        "text": "Was attended to by Kenn for the initial online consult, he is very knowledgeable on DCA (having gone through the process himself) and attended patiently to my queries. Responses were super prompt as well, all in all it was a great experience! :)",
+        "publishedAtDate": "2025-04-14T10:23:50.010Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hui peng",
+        "stars": 1,
+        "text": "I have been wearing clear aligners from DCA Clinic for three years now, and the result has been extremely disappointing and distressing.\n\nFrom the very beginning, the clinic never mentioned that I needed extractions. They simply pushed me into wearing aligners and forcibly moved my teeth outward. As a result, my teeth are still misaligned, and I now have severe protrusion (buck teeth), with my bite completely off and my facial profile noticeably altered. This has caused me immense anxiety and loss of confidence over the years. I’ve wasted not only a significant amount of money but also three precious years of my life.\n\nLater on, I consulted several professional dental clinics, and every single one of them told me that I needed to have at least four teeth extracted before starting orthodontic treatment. DCA completely overlooked this and failed to give me a proper diagnosis or treatment plan. They just pushed forward with the aligners without truly considering what was best for my dental health.\n\nI deeply regret choosing DCA. I’m sharing my experience to warn others: always consult multiple professional orthodontists and confirm whether extractions are necessary before starting treatment. Don’t blindly believe promises like “fast results” or “no need for extractions.” You may end up like me—paying a high price not just financially, but physically and emotionally as well.\n\nI hope DCA will take responsibility for my case and offer a formal response. And to anyone considering clear aligners: please do your research carefully.",
+        "publishedAtDate": "2025-04-10T06:42:15.836Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ranesse Wong",
+        "stars": 5,
+        "text": "Good services, friendly staff, did my teeth scanning here for new aligners",
+        "publishedAtDate": "2025-04-08T08:00:40.036Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJL62RUgRXrR9LiOTKB4iW5mSjdpfIhPh-yapvG4wtR0WiZPGbSbKhBCxswuadasLu92iIzNnkwLKcl0ujJZJJwsV0ugbrD5tIvPOy0Vy4NcJejah8Z_cQJD9keg58_96WRPq2cZBA"
+        ]
+      },
+      {
+        "name": "Zhi Lin",
+        "stars": 5,
+        "text": "I was so nervous about getting a root canal, but the dr at Primecare Dental\nmade the entire procedure painless! She explained everything beforehand,\nwhich helped ease my anxiety. The x-rays were done to show me the precise\nview of whats doing on underneath my teeth. The treatment was smooth,\nand I barely felt anything thanks to their gentle approach.\nNow, my tooth feels as good as new, most importantly no pain. Yes!",
+        "publishedAtDate": "2025-04-08T07:21:30.367Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "142, Jln Damai Raya 2"
+  },
+  {
+    "title": "Klinik Pergigian Koo (Koo Dental Clinic)- Cheras Dentist",
+    "website": "https://koodentalclinic.com/",
+    "latitude": 3.082243,
+    "longitude": 101.735505,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-koo-koo-dental-clinic-cheras-dentist",
+    "skip": true,
+    "placeId": "ChIJp9E9Vbs1zDERPsaGyI6obaA",
+    "phone": "+60176800961",
+    "permanentlyClosed": false,
+    "address": "177, Jalan Sarjana, Taman Connaught, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Connaught",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 240,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOVq0gqaUBGUy62G2tO0a6SrxFyt6LIFJA5XQpU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM-y3W0Il79DQHJuT7Yj1pOIMkBmXc58FAbFfe3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNY4WbyyHY5Mdl-jVpv1urpLXJ2Y0M434BnuHoO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMt0pDBRBiwqdzn4O41KLrb9g8c-CKYW5KgJbuz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMjTI1-5R3C5reuK-kZ1l-BM-GrAOeOKmKPiCAB=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Mc Ng",
+        "stars": 5,
+        "text": "这边的护士和医生都很友善,Dr oon也很细心解释..诊所环境干净很舒服👍非常推荐👍👍👍",
+        "publishedAtDate": "2025-04-17T13:54:36.048Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bubble",
+        "stars": 5,
+        "text": "My 2nd time visit for filling, Dr Mandy is patient and very professional to explain everything in detail and always prep me for whats upcoming. Staff is friendly and did follow ups on whatsapp to check my condition after treatment. Easy appointment booking via whatsapp as well. Very recommend!🩵",
+        "publishedAtDate": "2025-04-14T15:41:39.131Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chang Hui Yi",
+        "stars": 5,
+        "text": "The dentist is very professional and patient. I come here every few months for a cleaning, and the technique is excellent. Always a reassuring experience.",
+        "publishedAtDate": "2025-04-14T11:36:46.190Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mmazlan.N",
+        "stars": 5,
+        "text": "The best doctor ✅✅✅✅✅.. sy cabut gigi belakang atas ... Tak sakit.. 🕺🕺🕺",
+        "publishedAtDate": "2025-04-12T10:47:49.736Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "yeoh anna",
+        "stars": 5,
+        "text": "very good service (doctor onn)",
+        "publishedAtDate": "2025-03-09T01:49:52.000Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "amanda tw1018",
+        "stars": 5,
+        "text": "been a returning customer for years, doctor are professional and nurse are helpful. you get what you paid, highly recommend if you are considering to have your teeth checked",
+        "publishedAtDate": "2025-03-06T03:05:48.978Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kuah Ch",
+        "stars": 5,
+        "text": "I have been to this clinic for few years already and is attended by Dr Koo. He is skillful and patience dr..\nIs a good and pro dental..\n\nOverall the clinic is always clean and comfort with friendly staffs.",
+        "publishedAtDate": "2025-03-06T02:55:08.414Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Samantha Melody",
+        "stars": 5,
+        "text": "I like this Klinik  Perigean Koo,place very clean & doctor Oon good,I’m new but I already second time😄",
+        "publishedAtDate": "2025-03-06T02:28:53.487Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "177, Jalan Sarjana"
+  },
+  {
+    "title": "Bunny Dental Clinic - Cheras Dentist",
+    "website": "https://bunnydentalclinic.com/",
+    "latitude": 3.1009586,
+    "longitude": 101.7411219,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "bunny-dental-clinic-cheras-dentist",
+    "skip": true,
+    "placeId": "ChIJkxA3kUU1zDERkkS3auGgYWQ",
+    "phone": "+60169319008",
+    "permanentlyClosed": false,
+    "address": "4, Jln Kaskas, Taman Cheras, 56100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Cheras",
+    "city": "Kuala Lumpur",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 148,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPT54mjiA5vIvs_dMkcvZe36v5-tydRTh5OsS_u=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipML6-3YYaKmeWi7X7aR9ZCbsex4f9yVg53rftL6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNHcfII4Dj6HBOlt0cvL6dMQ9L1MBFkeVtnKppn=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM_mpwGfX39CU8LcBmzS5PETN3-2UF8AbzScnam=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP1KjQhql9YvtjxGDwpJZUXQ9zKKAs-d41B1txX=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Vee Thon",
+        "stars": 1,
+        "text": "Got appointment still need to wait. What’s the point for making appointment?!",
+        "publishedAtDate": "2025-04-07T06:17:15.409Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJKlqvdytCLC7RpzwVV6MtfuWRORqJ33KBE43C_UxKTbVU2BRtfKn-sHknmv9UXcVe9_MQ9ihGJtoYEKARIZidcK_Ff85fUzLr7jFwBDAtoGanYgQFuvBZUof8rnhx9k-yiOJ46PtA"
+        ]
+      },
+      {
+        "name": "翁纬彬Oscar Ong Wei Bin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-24T14:28:51.511Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gregory Kan Mun Hoong",
+        "stars": 5,
+        "text": "I always have a pleasant and reassuring experience when I visit Bunny Dental Clinic at Taman Yulek. Dr. Oon takes great care in treating my teeth and meticulously explains the various solutions for any issues I may have. She and her team of nurses work well together and are very friendly. I highly recommend this clinic.",
+        "publishedAtDate": "2025-03-18T04:48:40.647Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "chai chin soh",
+        "stars": 5,
+        "text": "clinic very nice",
+        "publishedAtDate": "2025-03-11T07:41:54.929Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Firdaus Epy",
+        "stars": 5,
+        "text": "Easy to make appt.. my 2nd visit everything consistently good..thanks",
+        "publishedAtDate": "2025-03-11T04:41:08.038Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vincent Lim",
+        "stars": 5,
+        "text": "Great dental experience with Dr. Jasmine. No fuss and throughout check up went really well and fast.",
+        "publishedAtDate": "2025-03-11T02:41:17.877Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jason Tham",
+        "stars": 5,
+        "text": "Dr. Mandy Kii is detail-oriented, willing to listen to your dental concerns, and committed to helping you identify the root cause while guiding you toward better oral health.",
+        "publishedAtDate": "2025-03-11T01:53:13.045Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nikki low",
+        "stars": 5,
+        "text": "Clinic is clean, staff are all very friendly & doctors are all females. Dr Joanne is the most friendly & gentle dentist I have come across. Scaling is so comfortable yet she can do such a good job! My recent denture needed some adjustment (which is expected on the lower jaw) and Dr Joanne was so kind & accommodating.\nI definitely recommend this dental clinic to anyone.",
+        "publishedAtDate": "2025-03-04T05:37:54.243Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "4, Jln Kaskas"
+  },
+  {
+    "title": "Ardent Care Dental Clinic - Braces & Implant",
+    "website": "https://www.facebook.com/Ardent-Care-Dental-Clinic-Taman-Midah-100870512697448/",
+    "latitude": 3.1022454,
+    "longitude": 101.7326661,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "ardent-care-dental-clinic-braces-and-implant",
+    "skip": true,
+    "placeId": "ChIJifytXfw1zDER1xuGFi0NpcY",
+    "phone": "+60176009639",
+    "permanentlyClosed": false,
+    "address": "8, Jalan Midah 3, Taman Midah, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Midah",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 220,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNuTBieri-WFaD9sUVt4TMcpNDINP4cnwPE2t0Z=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP_9amSp16HXBSV_8iO-EAddylLTzJetKH-q0CI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPQO7j8pwGQPuLYjlNjWnYVfqAx5wezSkyUFP66=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMz1Q-j-8lozdsSFLv6htSkC1smduPUJi9idiGo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO4AUlCqZmbFMGcOp9B7tZqLstJMVgIX7yzZaqB=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Muhie",
+        "stars": 5,
+        "text": "Great experience and Dr explained before the treatment what is needed. Adviced on how to take proper care. Price is good, affordable",
+        "publishedAtDate": "2025-04-21T03:20:07.063Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Wong Hau Yue",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-05T08:59:12.026Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chrishaad Gibson",
+        "stars": 5,
+        "text": "I saw Dr. Lim to get a checkup and to get some fillings done. She took the time to explain all of the options to me which allowed me to make the best decisions for the health of my teeth. Her staff were also amazing and very accommodating. I have a few more appointments remaining to complete all of the work, but I am very pleased with the results. 10/10 quality and service.",
+        "publishedAtDate": "2025-03-24T13:20:40.114Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "CheeSam LEE",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-09T06:13:28.046Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ivy Saw",
+        "stars": 5,
+        "text": "Very clear explaination, and good service",
+        "publishedAtDate": "2025-03-05T07:52:04.473Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jac yue",
+        "stars": 5,
+        "text": "There are many dentist nearby but i prefer to see Dr Lim because she is professional and explain in details to me. I even brought my young kid for examination. My kid first time seeing dentist and need a filling done, Dr Lim was so patient and even explain 1 by 1 the tools that she will use and count 1-10 with my kid, luckily my kid understand and patiently let Dr Lim do her job. She show my kid the picture, before & after cleaning, then after filling so that my kid is comfortable with it, it was a great and relief experience.\n\nI also continue to see Dr Lim as she is gentle and patient, she will try her best to save the decay tooth if possible. Their price is also reasonable. Trusted and I am a satisfied customer.",
+        "publishedAtDate": "2025-03-03T02:20:37.449Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Jia le",
+        "stars": 5,
+        "text": "fast and good services",
+        "publishedAtDate": "2025-02-27T02:30:25.697Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "陳思遠",
+        "stars": 1,
+        "text": "女牙醫不專業，我的牙雖然蛀了，但並沒有疼痛，牙醫一來就說沒得補，需要拔掉。\n但拔完牙后發現牙根仍完好無損，而牙醫卻隨便就拔掉顧客的牙，沒考慮顧客的利益。\n拔牙后要種回一顆牙，可要RM6000。\n我認為牙醫沒有正確的治療，而且拔牙后還引發周邊牙齦發炎，留下手尾。",
+        "publishedAtDate": "2025-02-14T13:05:57.444Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "8, Jalan Midah 3"
+  },
+  {
+    "title": "Ideal Dental Clinic (Alam Damai)",
+    "website": "https://www.facebook.com/pages/category/Dentist---Dental-Office/Ideal-Dental-Clinic-1428418630612974/",
+    "latitude": 3.0702938,
+    "longitude": 101.7428583,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "ideal-dental-clinic-alam-damai",
+    "skip": true,
+    "placeId": "ChIJv6vCsAc1zDEREl3xdOCvhxM",
+    "phone": "+601136062525",
+    "permanentlyClosed": false,
+    "address": "52-G, Jln Alam Damai 1, Alam Damai, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Alam Damai",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 332,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNRe5nTqUol_J2J8c8pPAlFFbwWhAkULyBrAdAt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_CWekvsv_63z478G5Jd8KQCqftcEg_YQJ408YB-yfz88oz5hBftwSsstyKRVRooVRKax_c3Ebk71Fkn2ZqJNBXaNUjI2x2bYBhn_vIZN1zt9CKYzK_Y0lzCUaOvFKvjXd6gEg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMG_LeddEdWWBD1CWwZ0aCK8P-COPT0Z9LtT5Ss=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-nLBWOvniEQ5g3jJE_551TqaKs8Nl53sgJxY4QP0VD1XDqOzKEsfmvMRtH-ftVQEE8FiU29LNKz9fr1zD4_W_zAJLCr1mVXQcCLG-vXrILKzX499wQnjMLNoRywQi9nQ1wJsI6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-8nPIwajmcV-YfOdJSEXvt4OeWxqswaIIIiosRNdSe1p3mHlkWZx20KjOfyrmvfoTQuV1RgVeCVoAqShL_gf92h5qDO-xNQ7eEX3BXlUMsQH-Pu6XAnfj5YhMV5j1bQjkWR3s=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "sally love",
+        "stars": 5,
+        "text": "洗牙完全不痛 dr chan很细心 也很有耐心 谢谢美女牙医🥰 体验感很好！",
+        "publishedAtDate": "2025-04-13T11:49:13.827Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "weliketodrive",
+        "stars": 5,
+        "text": "A good neighborhood clinic serving Alam Damai.",
+        "publishedAtDate": "2025-04-11T04:54:01.502Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nida Maisarah Binti M Mazali",
+        "stars": 5,
+        "text": "dr teoh is the best!",
+        "publishedAtDate": "2025-03-28T06:35:31.781Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jin Rui Kiew",
+        "stars": 5,
+        "text": "Friendly Doctor and Friendly Staff at front desk",
+        "publishedAtDate": "2025-03-27T10:11:40.829Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joshua Chua",
+        "stars": 5,
+        "text": "Very detail explanation and quick good service",
+        "publishedAtDate": "2025-03-19T03:06:03.628Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJIC3iUJTgFFXpsC9Kss8NFk5IZ4bdOFzkzhwTDITTGSr9hrGZQWtDNk7uY8lbHZkpdeGLuA5LduaG0RhwUPFUfElobN7NykJpXwZ0w0h0myo7C0sgQnM-TsWoO6f8wSKORw5XE"
+        ]
+      },
+      {
+        "name": "Nur Izzah Shabirin",
+        "stars": 5,
+        "text": "Dr explains very well and overall satisfy with the service",
+        "publishedAtDate": "2025-03-17T09:21:48.884Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ng Chunye",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-15T03:04:06.006Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jason Wong",
+        "stars": 5,
+        "text": "Doctor is very patient and polite, overall good service👍🏻",
+        "publishedAtDate": "2025-03-10T02:23:19.045Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "52-G, Jln Alam Damai 1"
+  },
+  {
+    "title": "Eko Dental Clinic (Cheras)",
+    "website": "https://ekodentalclinic.com/",
+    "latitude": 3.0948799,
+    "longitude": 101.7396732,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      }
+    ],
+    "slug": "eko-dental-clinic-cheras",
+    "skip": true,
+    "placeId": "ChIJMbh5mdY1zDERERJxf3Jdxys",
+    "phone": "+60102727709",
+    "permanentlyClosed": false,
+    "address": "02-07, Wisma Aman Elite, Jalan Desa Aman 1, Desa Aman, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Desa Aman",
+    "city": "Cheras",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 966,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_sW6lc7Ud_cVb1xeFn3GrbldHiaXTCEe1JeXQcb5_byBXs6n6cpC2xdNA93SbbTxbzD5unEyduLwL_oG9-Dm2xgipl4iWU50nqquL75j1qJpKInodHbOT4aOYhWG7FQ-KoUaw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8ysGVmg6JztCa0WYlxJdoWyeS7TZbXnqly8zSaZp1QsHVYxZxmL79MRFVIdwiOjUbbiKt76_9ADkv1Mq6bMha12w9hP6MtK0nmg4Dm3yu41scE7XHs0SfmScy7gwNXJjM_aVZehg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8DIpuz5vosiE12M0rg9ESo6jvE_wonfVqXLcbyB9UClgDgSSSMg64hhNy2MxwWpqRhwq9EjnsL7sa5aa7_MlyDbbVK9auFkR8mb1e_Pf_cdutB8OiJbH2ZrcMzdAx3NpT-H22q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB9umE1p2X9bb1FvrZCBhjPjQpbbuu-WGwe9G73_qEC2Whxg6_NnJEAuW4eLzi19hxGLLhvd9U1lFh9tdj6dKItCBCXGjwPYR85mJMEOrpOq0L0aakXIi4ZyzYh-SL3ldDSO_N4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB_AWyw_bSYZTHY7WmKvO905D37sqBojbKG2jXFf0VTZLqweIhjBSJykMFmevhZZ2sYzxw8ob-vclfu5H_Yujh8B-ev1oVEjJ6my9WWGEXpgPMlL7BKt8M5HJCg5Yu4CoDEYt8Zu=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Al Hadid",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2025-04-21T09:14:00.815Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nor Nur",
+        "stars": 5,
+        "text": "Klinik sangat cantik.Service pun bagus.Doktor bg explanation yg teliti.Tq Doktor",
+        "publishedAtDate": "2025-04-20T04:09:45.206Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Masum",
+        "stars": 5,
+        "text": "Doctor very good, best dental clinic 🥰 i will ask my friend come",
+        "publishedAtDate": "2025-04-20T02:28:09.800Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Irfan Maher",
+        "stars": 5,
+        "text": "Service is excellent! Doctor very good...I'm satisfy. I did my tooth filling here 😊 will come back again",
+        "publishedAtDate": "2025-04-19T12:06:05.076Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Loke Jia Li",
+        "stars": 5,
+        "text": "Doctor is quite approachable and willing to share on the teeth caring info",
+        "publishedAtDate": "2025-04-19T07:37:04.398Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shahella Aziera",
+        "stars": 5,
+        "text": "Great service , very fast treatment.\nThanks to the staff & doc ✨👍🏻",
+        "publishedAtDate": "2025-04-18T08:47:24.423Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AIHozJJElPlzv7oesSxKlxLG5jW4T10BY-ZGDGsy-VDwmVlolO0kmqeOg-3IrpPRN7ndNWCDLtnEKuOr-MPb2m3SASEQZGIuEZ7fG8teGnFT_0Kx41wseXLBWWFM9IhQvEXSOyXzX95X"
+        ]
+      },
+      {
+        "name": "Kai Wen Lew",
+        "stars": 5,
+        "text": "Came here for my annual teeth check up & scaling. Dr Goh is very friendly and very patience while giving advice. Price is reasonable too.\nRecommended place.",
+        "publishedAtDate": "2025-04-18T06:31:30.893Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "NazR",
+        "stars": 5,
+        "text": "Best clinic in cheras!",
+        "publishedAtDate": "2025-04-17T10:43:33.921Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "02-07, Wisma Aman Elite, Jalan Desa Aman 1"
+  }
+]

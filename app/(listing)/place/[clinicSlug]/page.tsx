@@ -17,6 +17,7 @@ import {
 
 import { siteConfig } from '@/config/site';
 
+import { saEvent } from '@/lib/analytics';
 import { absoluteUrl, cn } from '@/lib/utils';
 
 import {
@@ -431,13 +432,23 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   <Link
                     id="book-appointment-button"
                     href={`tel:${parsedClinic.phone}`}
+                    onClick={() =>
+                      saEvent(
+                        `book_appointment_click_${parsedClinic.state?.slug}_${parsedClinic.area?.slug}_${clinicSlug}`,
+                      )
+                    }
                     className={cn(
                       buttonVariants({ variant: 'primary' }),
                       'flex items-center gap-x-3',
                     )}>
                     <PhoneIcon className="h-5 w-5" /> Book Appointment
                   </Link>
-                  <StickyBookButton phone={parsedClinic.phone} />
+                  <StickyBookButton
+                    phone={parsedClinic.phone}
+                    stateSlug={parsedClinic.state?.slug ?? ''}
+                    areaSlug={parsedClinic.area?.slug ?? ''}
+                    clinicSlug={clinicSlug}
+                  />
                 </>
               )}
             </div>

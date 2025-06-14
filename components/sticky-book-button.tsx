@@ -6,13 +6,24 @@ import Link from 'next/link';
 
 import { PhoneIcon } from 'lucide-react';
 
+import { saEvent } from '@/lib/analytics';
 import { useMediaQuery } from '@/lib/hooks/use-media-query';
 import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 
-export function StickyBookButton({ phone }: { phone: string }) {
+export function StickyBookButton({
+  phone,
+  stateSlug,
+  areaSlug,
+  clinicSlug,
+}: {
+  phone: string;
+  stateSlug: string;
+  areaSlug: string;
+  clinicSlug: string;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const { isMobile } = useMediaQuery();
 
@@ -52,6 +63,7 @@ export function StickyBookButton({ phone }: { phone: string }) {
       <Container>
         <Link
           href={`tel:${phone}`}
+          onClick={() => saEvent(`book_appointment_click_${stateSlug}_${areaSlug}_${clinicSlug}`)}
           className={cn(
             buttonVariants({ variant: 'primary' }),
             'flex w-full items-center justify-center gap-x-3',
