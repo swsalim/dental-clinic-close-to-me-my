@@ -127,7 +127,7 @@ export default async function StatePage({ params }: StatePageProps) {
     },
   ];
 
-  const JSONLDlistItems = stateData.clinics?.map((clinic, index) => ({
+  const JSONLDlistItems = stateData.clinics?.slice(0, 20).map((clinic, index) => ({
     '@type': 'ListItem',
     position: `${index + 1}`,
     item: {

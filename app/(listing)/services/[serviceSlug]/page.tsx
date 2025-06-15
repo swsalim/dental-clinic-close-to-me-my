@@ -126,7 +126,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     },
   ];
 
-  const JSONLDlistItems = clinics.map((clinic, index) => ({
+  const JSONLDlistItems = clinics.slice(0, 20).map((clinic, index) => ({
     '@type': 'ListItem',
     position: `${index + 1}`,
     item: {

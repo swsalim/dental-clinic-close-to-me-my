@@ -134,7 +134,7 @@ export default async function AreaPage({ params }: AreaPageProps) {
     },
   ];
 
-  const JSONLDlistItems = areaData.clinics?.map((clinic, index) => ({
+  const JSONLDlistItems = areaData.clinics?.slice(0, 20).map((clinic, index) => ({
     '@type': 'ListItem',
     position: `${index + 1}`,
     item: {
