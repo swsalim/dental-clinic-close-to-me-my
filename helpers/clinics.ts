@@ -119,14 +119,36 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
   return clinic;
 }
 
-export async function getClinicByServiceId(id: string, status: string = 'approved') {
+export async function getClinicByServiceMetadataId(id: string) {
+  const supabase = await createServerClient();
+
+  // TODO: get approved clinics
+  const { data: clinicIds } = await supabase
+    .from('clinic_service_relations')
+    .select('clinic_id')
+    .eq('service_id', id);
+
+  if (!clinicIds || clinicIds.length === 0) {
+    return [];
+  }
+
+  return clinicIds.length;
+}
+
+export async function getClinicByServiceId(
+  id: string,
+  from: number,
+  to: number,
+  status: string = 'approved',
+) {
   const supabase = await createServerClient();
 
   // First get clinic IDs that have this service
   const { data: clinicIds } = await supabase
     .from('clinic_service_relations')
     .select('clinic_id')
-    .eq('service_id', id);
+    .eq('service_id', id)
+    .range(from, to);
 
   if (!clinicIds || clinicIds.length === 0) {
     return [];

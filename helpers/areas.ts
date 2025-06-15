@@ -62,7 +62,7 @@ export async function getAreaListings() {
 /**
  * Fetches a clinic by its state with all related data
  */
-export async function getAreaBySlug(areaSlug: string) {
+export async function getAreaBySlug(areaSlug: string, from: number, to: number) {
   const supabase = await createServerClient();
 
   const { data: area } = (await supabase
@@ -75,13 +75,10 @@ export async function getAreaBySlug(areaSlug: string) {
       short_description,
       thumbnail_image,
       banner_image,
-      state:states(name, slug, thumbnail_image, banner_image),
-      clinics:clinics(name, slug, description, status,images, postal_code, address, phone, postal_code, open_on_public_holidays, rating, is_featured, modified_at, area:areas(name), state:states(name), hours:clinic_hours(day_of_week, open_time, close_time), special_hours:clinic_special_hours(date, is_closed, open_time, close_time))
+      state:states(name, slug, thumbnail_image, banner_image)
     `,
     )
-    .eq('clinics.status', 'approved')
-    .match({ slug: areaSlug })
-    .order('modified_at', { foreignTable: 'clinics', ascending: false })
+    .eq('slug', areaSlug)
     .single()) as {
     data: {
       id: string;
@@ -96,39 +93,27 @@ export async function getAreaBySlug(areaSlug: string) {
         thumbnail_image: string;
         banner_image: string;
       };
-      clinics: {
-        name: string;
-        slug: string;
-        description: string;
-        images: string[];
-        postal_code: string;
-        address: string;
-        phone: string;
-        is_featured: boolean;
-        open_on_public_holidays: boolean;
-        rating: number;
-        status: string;
-        modified_at: string;
-        area: {
-          name: string;
-        };
-        state: {
-          name: string;
-        };
-        hours: {
-          day_of_week: number;
-          open_time: string;
-          close_time: string;
-        }[];
-        special_hours: {
-          date: string;
-          is_closed: boolean;
-          open_time: string;
-          close_time: string;
-        }[];
-      }[];
     };
   };
 
-  return area;
+  if (!area) {
+    return null;
+  }
+
+  const { data: clinics } = await supabase
+    .from('clinics')
+    .select(
+      `
+      name, slug, description, status,images, postal_code, address, phone, postal_code, open_on_public_holidays, rating, is_featured, modified_at, area:areas(name), state:states(name), hours:clinic_hours(day_of_week, open_time, close_time), special_hours:clinic_special_hours(date, is_closed, open_time, close_time)
+    `,
+    )
+    .eq('status', 'approved')
+    .eq('area_id', area.id)
+    .order('modified_at', { ascending: false })
+    .range(from, to);
+
+  return {
+    ...area,
+    clinics: clinics ?? [],
+  };
 }

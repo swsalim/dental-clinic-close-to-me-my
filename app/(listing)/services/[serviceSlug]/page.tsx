@@ -6,10 +6,10 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
-import { cn } from '@/lib/utils';
+import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicByServiceId } from '@/helpers/clinics';
+import { getClinicByServiceId, getClinicByServiceMetadataId } from '@/helpers/clinics';
 import { getAllServices, getServiceBySlug } from '@/helpers/services';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
@@ -19,16 +19,22 @@ import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import WebSiteJsonLd from '@/components/structured-data/website-json-ld';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
+import { Pagination } from '@/components/ui/pagination';
 import { Wrapper } from '@/components/ui/wrapper';
 
 type ServicePageProps = {
   params: Promise<{
     serviceSlug: string;
   }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+  searchParams,
+}: ServicePageProps): Promise<Metadata> {
   const { serviceSlug } = await params;
+  const { page } = await searchParams;
 
   const serviceData = await getServiceBySlug(serviceSlug);
 
@@ -41,17 +47,21 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
   const title = `${serviceName} - Find Top Dental Clinics`;
   const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;
+  const url =
+    page === '1'
+      ? absoluteUrl(`/services/${serviceSlug}`)
+      : absoluteUrl(`/services/${serviceSlug}?page=${page}`);
 
   return {
     title,
     description,
     alternates: {
-      canonical: absoluteUrl(`/services/${serviceSlug}`),
+      canonical: url,
     },
     openGraph: {
       title,
       description,
-      url: absoluteUrl(`/services/${serviceSlug}`),
+      url,
       images: [
         {
           url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
@@ -89,8 +99,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ServicePage({ params }: ServicePageProps) {
+export default async function ServicePage({ params, searchParams }: ServicePageProps) {
   const { serviceSlug } = await params;
+  const { page } = await searchParams;
+
+  const limit = 20;
+  const currentPage = page ? +page : 1;
+  const { from, to } = getPagination(currentPage, limit);
 
   const services = await getAllServices();
   const serviceData = await getServiceBySlug(serviceSlug);
@@ -99,8 +114,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const clinics = await getClinicByServiceId(serviceData.id);
-
+  const totalClinics = Number(await getClinicByServiceMetadataId(serviceData.id)) || 0;
+  const clinics = await getClinicByServiceId(serviceData.id, from, to);
+  const totalPages = Math.ceil(totalClinics / limit);
   const serviceName = serviceData.name;
   const serviceDescription = serviceData.description || serviceData.name;
 
@@ -195,31 +211,34 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <Wrapper>
         <Container>
           <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
-            All Dental Clinics that provides {serviceData.name}
+            {totalClinics} Dental Clinics that provides {serviceData.name}
           </h2>
           {clinics.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-              {clinics
-                ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                .map((clinic) => (
-                  <ClinicCard
-                    key={clinic.slug}
-                    slug={clinic.slug ?? ''}
-                    name={clinic.name ?? ''}
-                    address={clinic.address ?? ''}
-                    phone={clinic.phone ?? ''}
-                    postalCode={clinic.postal_code ?? ''}
-                    state={clinic.state?.name ?? ''}
-                    area={clinic.area?.name ?? ''}
-                    image={clinic.images?.[0]}
-                    rating={clinic.rating}
-                    isFeatured={clinic.is_featured ?? false}
-                    hours={clinic.hours ?? []}
-                    specialHours={clinic.special_hours ?? []}
-                    openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                  />
-                ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+                {clinics
+                  ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
+                  .map((clinic) => (
+                    <ClinicCard
+                      key={clinic.slug}
+                      slug={clinic.slug ?? ''}
+                      name={clinic.name ?? ''}
+                      address={clinic.address ?? ''}
+                      phone={clinic.phone ?? ''}
+                      postalCode={clinic.postal_code ?? ''}
+                      state={clinic.state?.name ?? ''}
+                      area={clinic.area?.name ?? ''}
+                      image={clinic.images?.[0]}
+                      rating={clinic.rating}
+                      isFeatured={clinic.is_featured ?? false}
+                      hours={clinic.hours ?? []}
+                      specialHours={clinic.special_hours ?? []}
+                      openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                    />
+                  ))}
+              </div>
+              <Pagination currentPage={currentPage} totalPages={totalPages} />
+            </>
           ) : (
             <div className="flex flex-col items-center justify-center gap-y-4">
               <div className="flex flex-col items-center justify-center">

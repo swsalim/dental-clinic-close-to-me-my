@@ -137,3 +137,16 @@ export const formatFileSize = (bytes: number): string => {
 
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(1))} ${sizes[i]}`;
 };
+
+interface PaginationResult {
+  from: number;
+  to: number;
+}
+
+export const getPagination = (page?: number, size?: number): PaginationResult => {
+  const limit = size ? +size : 3;
+  const from = page ? (page - 1) * limit : 0;
+  const to = page ? from + limit - 1 : limit - 1;
+
+  return { from, to };
+};
