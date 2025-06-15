@@ -165,7 +165,6 @@ export default async function StatePage({ params }: StatePageProps) {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             name: `Dental Clinics in ${stateData.name}`,
-            directory: `Directory of Dental Clinics in ${stateData.name}, Malaysia`,
             itemListElement: JSONLDlistItems,
           }),
         }}

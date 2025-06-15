@@ -172,7 +172,6 @@ export default async function AreaPage({ params }: AreaPageProps) {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             name: `Dental Clinics in ${areaData.name}, ${areaData.state?.name}`,
-            directory: `Directory of Dental Clinics in ${areaData.name}, ${areaData.state?.name}, Malaysia`,
             itemListElement: JSONLDlistItems,
           }),
         }}
