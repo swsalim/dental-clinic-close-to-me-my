@@ -47,8 +47,11 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
 
   const title = `Dental Clinic in ${areaData.name}, ${areaData.state.name}`;
   const description = `Explore trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
-  const url =
-    page === '1' ? absoluteUrl(`/${state}/${area}`) : absoluteUrl(`/${state}/${area}?page=${page}`);
+  const url = !page
+    ? absoluteUrl(`/${state}/${area}`)
+    : page === '1'
+      ? absoluteUrl(`/${state}/${area}`)
+      : absoluteUrl(`/${state}/${area}?page=${page}`);
 
   return {
     title,

@@ -47,8 +47,9 @@ export async function generateMetadata({
 
   const title = `${serviceName} - Find Top Dental Clinics`;
   const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;
-  const url =
-    page === '1'
+  const url = !page
+    ? absoluteUrl(`/services/${serviceSlug}`)
+    : page === '1'
       ? absoluteUrl(`/services/${serviceSlug}`)
       : absoluteUrl(`/services/${serviceSlug}?page=${page}`);
 

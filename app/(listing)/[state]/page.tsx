@@ -48,7 +48,11 @@ export async function generateMetadata({
 
   const title = `Find Dental Clinics in ${stateData.name}`;
   const description = `Explore ${stateData.clinics?.length} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
-  const url = page === '1' ? absoluteUrl(`/${state}`) : absoluteUrl(`/${state}?page=${page}`);
+  const url = !page
+    ? absoluteUrl(`/${state}`)
+    : page === '1'
+      ? absoluteUrl(`/${state}`)
+      : absoluteUrl(`/${state}?page=${page}`);
 
   return {
     title,
