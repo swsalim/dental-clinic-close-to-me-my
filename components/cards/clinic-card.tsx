@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { ClinicHours, ClinicSpecialHours } from '@/types/clinic';
-import { MapPinIcon, PhoneIcon } from 'lucide-react';
+import { AwardIcon, ClockIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 
 import { ClinicStatus } from '@/components/clinic-status';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
@@ -59,9 +59,17 @@ export function ClinicCard({
             />
           )}
           <div className="absolute right-2 top-2 flex flex-wrap justify-end gap-2">
-            {isFeatured && <Badge variant="brand">Featured</Badge>}
+            {isFeatured && (
+              <Badge variant="brand">
+                <AwardIcon className="me-1 h-4 w-4" aria-hidden="true" />
+                Featured
+              </Badge>
+            )}
             {hours.length === 7 && hours.every((hour) => hour.open_time && hour.close_time) && (
-              <Badge variant="blue">Open everyday</Badge>
+              <Badge variant="blue">
+                <ClockIcon className="me-1 h-4 w-4" aria-hidden="true" />
+                Open everyday
+              </Badge>
             )}
             <ClinicStatus hours={hours} specialHours={specialHours} />
             {openOnPublicHolidays && <Badge variant="gray">Open on public holidays</Badge>}

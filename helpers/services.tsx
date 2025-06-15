@@ -1,11 +1,11 @@
-import { createServerClient } from '@/lib/supabase';
+import { createAdminClient, createServerClient } from '@/lib/supabase';
 
 import * as Icons from '@/components/icons';
 
 export async function getAllServices() {
-  const supabase = await createServerClient();
+  const supabase = await createAdminClient();
 
-  const { data: services } = (await supabase
+  const { data: services } = await supabase
     .from('clinic_services')
     .select(
       `
@@ -15,16 +15,21 @@ export async function getAllServices() {
       description
     `,
     )
-    .order('modified_at', { ascending: false })) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-      description: string;
-    }[];
-  };
+    .order('modified_at', { ascending: false });
 
   return services ?? [];
+}
+
+export async function getServiceBySlug(slug: string) {
+  const supabase = await createServerClient();
+
+  const { data } = await supabase
+    .from('clinic_services')
+    .select('id, name, slug, description')
+    .eq('slug', slug)
+    .single();
+
+  return data;
 }
 
 const slugToIcon: Record<string, React.ReactNode> = {

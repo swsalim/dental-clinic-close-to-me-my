@@ -119,6 +119,57 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
   return clinic;
 }
 
+export async function getClinicByServiceId(id: string, status: string = 'approved') {
+  const supabase = await createServerClient();
+
+  // First get clinic IDs that have this service
+  const { data: clinicIds } = await supabase
+    .from('clinic_service_relations')
+    .select('clinic_id')
+    .eq('service_id', id);
+
+  if (!clinicIds || clinicIds.length === 0) {
+    return [];
+  }
+
+  const clinicIdList = clinicIds.map((item) => item.clinic_id);
+
+  // Then get full clinic details for those clinics only
+  const { data } = await supabase
+    .from('clinics')
+    .select(
+      `
+      id,
+      name,
+      slug,
+      postal_code,
+      address,
+      neighborhood,
+      phone,
+      latitude,
+      longitude,
+      rating,
+      review_count,
+      images,
+      is_permanently_closed,
+      open_on_public_holidays,
+      is_active,
+      is_featured,
+      modified_at,
+      area:areas(id, name, slug),
+      state:states(id, name, slug),
+      hours:clinic_hours(day_of_week, open_time, close_time),
+      special_hours:clinic_special_hours(date, is_closed, open_time, close_time),
+      services:clinic_service_relations(service:clinic_services(id, name, slug))
+      `,
+    )
+    .in('id', clinicIdList)
+    .match({ is_active: true, status })
+    .order('modified_at', { ascending: false });
+
+  return data || [];
+}
+
 /**
  * Fetches clinics with optional filters
  */
