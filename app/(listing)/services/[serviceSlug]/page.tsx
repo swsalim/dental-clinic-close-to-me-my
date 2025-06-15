@@ -1,7 +1,10 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ArrowRightIcon } from 'lucide-react';
+
+import { siteConfig } from '@/config/site';
 
 import { cn } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
@@ -11,6 +14,9 @@ import { getAllServices, getServiceBySlug } from '@/helpers/services';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
+import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
+import WebSiteJsonLd from '@/components/structured-data/website-json-ld';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Wrapper } from '@/components/ui/wrapper';
@@ -20,6 +26,59 @@ type ServicePageProps = {
     serviceSlug: string;
   }>;
 };
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const { serviceSlug } = await params;
+
+  const serviceData = await getServiceBySlug(serviceSlug);
+
+  if (!serviceData) {
+    notFound();
+  }
+
+  const serviceName = serviceData.name;
+  const serviceDescription = serviceData.description || serviceData.name;
+
+  const title = `${serviceName} - Find Top Dental Clinics`;
+  const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: absoluteUrl(`/services/${serviceSlug}`),
+    },
+    openGraph: {
+      title,
+      description,
+      url: absoluteUrl(`/services/${serviceSlug}`),
+      images: [
+        {
+          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          width: siteConfig.openGraph.width,
+          height: siteConfig.openGraph.height,
+          alt: title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      title,
+      description,
+      card: 'summary_large_image',
+      creator: siteConfig.creator,
+      images: [
+        {
+          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          width: siteConfig.openGraph.width,
+          height: siteConfig.openGraph.height,
+          alt: title,
+        },
+      ],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   // Get all services
@@ -35,7 +94,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const services = await getAllServices();
   const serviceData = await getServiceBySlug(serviceSlug);
-  console.log(serviceData);
 
   if (!serviceData) {
     notFound();
@@ -43,8 +101,73 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const clinics = await getClinicByServiceId(serviceData.id);
 
+  const serviceName = serviceData.name;
+  const serviceDescription = serviceData.description || serviceData.name;
+
+  const title = `${serviceName} - Find Top Dental Clinics`;
+  const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;
+
+  const JSONLDbreadcrumbs = [
+    {
+      item: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      name: 'Home',
+      position: '1',
+    },
+    {
+      // TODO: change to services
+      item: absoluteUrl(`/browse`),
+      name: 'Services',
+      position: '2',
+    },
+    {
+      item: absoluteUrl(`/services/${serviceSlug}`),
+      name: serviceData.name,
+      position: '3',
+    },
+  ];
+
+  const JSONLDlistItems = clinics.map((clinic, index) => ({
+    '@type': 'ListItem',
+    position: `${index + 1}`,
+    item: {
+      '@type': 'Dentist',
+      '@id': absoluteUrl(`/place/${clinic.slug}`),
+      name: clinic.name,
+      image: absoluteUrl(`/api/og?title=${clinic.name}`),
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: clinic.area?.name,
+        addressRegion: clinic.state?.name,
+        postalCode: clinic.postal_code,
+        streetAddress: clinic.address,
+        addressCountry: 'MY',
+      },
+      telephone: clinic.phone,
+      url: absoluteUrl(`/place/${clinic.slug}`),
+    },
+  }));
+
   return (
     <>
+      <WebSiteJsonLd />
+      <WebPageJsonLd
+        description={description}
+        id={`/services/${serviceSlug}`}
+        lastReviewed={new Date().toISOString()}
+        reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
+      />
+      <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: title,
+            itemListElement: JSONLDlistItems,
+          }),
+        }}
+      />
       <Wrapper>
         <Container>
           <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
