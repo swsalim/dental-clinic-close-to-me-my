@@ -206,7 +206,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
             <Breadcrumb items={breadcrumbItems} theme="dark" />
             <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
-              Explore {areaData.clinics?.length} trusted dental clinics across cities in{' '}
+              Explore {totalClinics} trusted dental clinics across cities in{' '}
               <Link href={absoluteUrl(`/${areaData.state?.slug}`)}>{areaData.state?.name}</Link>.
               Find services, reviews, and opening hours.
             </p>

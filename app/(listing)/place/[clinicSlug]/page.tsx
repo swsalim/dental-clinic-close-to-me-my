@@ -6,6 +6,7 @@ import { ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
 import {
   ArrowRightIcon,
+  AwardIcon,
   FacebookIcon,
   GlobeIcon,
   InstagramIcon,
@@ -337,6 +338,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 {/* Open/Closed Status Badge */}
                 <div className="mt-2 lg:mt-0">
                   <div className="flex items-center gap-x-2">
+                    {parsedClinic.is_featured && (
+                      <Badge variant="brand">
+                        <AwardIcon className="me-1 h-4 w-4" aria-hidden="true" />
+                        Featured
+                      </Badge>
+                    )}
                     {parsedClinic.hours &&
                       parsedClinic.hours.length === 7 &&
                       parsedClinic.hours.every((hour) => hour.open_time && hour.close_time) && (

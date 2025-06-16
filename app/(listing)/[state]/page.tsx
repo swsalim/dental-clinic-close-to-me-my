@@ -204,7 +204,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
             <Breadcrumb items={breadcrumbItems} theme="dark" />
             <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
-              Explore {stateData.clinics?.length} trusted dental clinics across cities like{' '}
+              Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
                 <>
                   <Link href={absoluteUrl(`/${area.state.slug}/${area.slug}`)} key={area.slug}>
