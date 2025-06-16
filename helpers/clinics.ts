@@ -253,7 +253,7 @@ export async function getClinicsNearLocation(
   latitude: number,
   longitude: number,
   radiusInKm: number,
-  limit: number = 4,
+  limit: number = 5,
 ) {
   const supabase = await createServerClient();
 

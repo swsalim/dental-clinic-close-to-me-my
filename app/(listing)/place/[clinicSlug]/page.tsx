@@ -556,7 +556,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <h2 className="mb-6">Nearby Clinics</h2>
               </Prose>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-                {nearbyClinics.map((clinic) => (
+                {nearbyClinics.slice(1, 5).map((clinic) => (
                   <ClinicCard
                     key={clinic.slug}
                     slug={clinic.slug ?? ''}
