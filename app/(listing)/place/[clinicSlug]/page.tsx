@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ClinicReview } from '@/types/clinic';
+import { ClinicHours, ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
 import {
   ArrowRightIcon,
@@ -23,10 +23,12 @@ import {
   getClinicBySlug,
   getClinicListings,
   getClinicMetadataBySlug,
+  getClinicsNearLocation,
   parseClinicData,
 } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
+import { ClinicCard } from '@/components/cards/clinic-card';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
@@ -108,7 +110,7 @@ function Map({
   name: string;
 }) {
   return (
-    <article>
+    <>
       <h2>Map</h2>
 
       <div className="mb-6 mt-2">
@@ -122,7 +124,7 @@ function Map({
           ]}
         />
       </div>
-    </article>
+    </>
   );
 }
 
@@ -281,6 +283,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
     .filter(Boolean)
     .join(', ');
 
+  const nearbyClinics = await getClinicsNearLocation(
+    parsedClinic.latitude ?? 0,
+    parsedClinic.longitude ?? 0,
+    10,
+  );
+
+  console.log(nearbyClinics);
+
   const breadcrumbItems = [
     { name: parsedClinic.state?.name, url: `/${parsedClinic.state?.slug}` },
     {
@@ -322,7 +332,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
           }}
           className="h-56 before:absolute before:inset-0 before:bg-black/50 before:content-[''] md:h-96"></Wrapper>
       )}
-      <Wrapper>
+      <Wrapper className={cn(nearbyClinics && nearbyClinics.length > 1 && 'pb-0 md:pb-0')}>
         <Container>
           <div className="lg:flex lg:items-start lg:justify-between lg:gap-x-6">
             {/* left column */}
@@ -492,11 +502,13 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   </div>
                 </article>
               )}
-              <Map
-                latitude={parsedClinic.latitude ?? 0}
-                longitude={parsedClinic.longitude ?? 0}
-                name={parsedClinic.name ?? ''}
-              />
+              <article className="block lg:hidden">
+                <Map
+                  latitude={parsedClinic.latitude ?? 0}
+                  longitude={parsedClinic.longitude ?? 0}
+                  name={parsedClinic.name ?? ''}
+                />
+              </article>
               {parsedClinic.reviews && parsedClinic.reviews.length > 0 && (
                 <>
                   {parsedClinic.id && <AddReviewForm clinicId={parsedClinic.id} />}
@@ -524,11 +536,52 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     </div>
                   </div>
                 )}
+                <article className="hidden lg:block">
+                  <Map
+                    latitude={parsedClinic.latitude ?? 0}
+                    longitude={parsedClinic.longitude ?? 0}
+                    name={parsedClinic.name ?? ''}
+                  />
+                </article>
               </Prose>
             </aside>
           </div>
         </Container>
       </Wrapper>
+      {nearbyClinics.length > 0 && (
+        <Wrapper size="lg" className="pt-12 md:pt-12">
+          <Container>
+            <article>
+              <Prose>
+                <h2 className="mb-6">Nearby Clinics</h2>
+              </Prose>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+                {nearbyClinics.map((clinic) => (
+                  <ClinicCard
+                    key={clinic.slug}
+                    slug={clinic.slug ?? ''}
+                    name={clinic.name ?? ''}
+                    address={clinic.address ?? ''}
+                    phone={clinic.phone ?? ''}
+                    image={clinic.images?.[0]}
+                    postalCode={clinic.postal_code ?? ''}
+                    state={clinic.state_name ?? ''}
+                    area={clinic.area_name ?? ''}
+                    rating={clinic.rating ?? 0}
+                    isFeatured={clinic.is_featured ?? false}
+                    hours={
+                      Array.isArray(clinic.hours) ? (clinic.hours as Partial<ClinicHours>[]) : []
+                    }
+                    specialHours={[]}
+                    openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                    distance={clinic.distance_km}
+                  />
+                ))}
+              </div>
+            </article>
+          </Container>
+        </Wrapper>
+      )}
     </>
   );
 }

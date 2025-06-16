@@ -510,6 +510,41 @@ export type Database = {
         Args: { to_be_reviewed_clinic_id_param: string }
         Returns: string
       }
+      get_nearby_clinics: {
+        Args: {
+          clinic_latitude: number
+          clinic_longitude: number
+          radius_km: number
+          result_limit?: number
+        }
+        Returns: {
+          id: string
+          name: string
+          slug: string
+          latitude: number
+          longitude: number
+          distance_km: number
+          area_id: string
+          area_name: string
+          area_slug: string
+          state_id: string
+          state_name: string
+          state_slug: string
+          images: string[]
+          address: string
+          neighborhood: string
+          city: string
+          postal_code: string
+          phone: string
+          rating: number
+          open_on_public_holidays: boolean
+          is_permanently_closed: boolean
+          is_featured: boolean
+          is_active: boolean
+          status: string
+          hours: Json
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never

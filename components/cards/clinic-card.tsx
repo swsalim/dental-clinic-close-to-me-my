@@ -25,6 +25,7 @@ interface ClinicCardProps {
   hours: Partial<ClinicHours>[];
   specialHours: Partial<ClinicSpecialHours>[];
   openOnPublicHolidays: boolean;
+  distance?: number;
 }
 
 export function ClinicCard({
@@ -41,6 +42,7 @@ export function ClinicCard({
   hours,
   specialHours,
   openOnPublicHolidays,
+  distance,
 }: ClinicCardProps) {
   return (
     <Link
@@ -73,6 +75,11 @@ export function ClinicCard({
             )}
             <ClinicStatus hours={hours} specialHours={specialHours} />
             {openOnPublicHolidays && <Badge variant="gray">Open on public holidays</Badge>}
+          </div>
+          <div className="absolute bottom-2 right-2 flex flex-wrap justify-end gap-2">
+            {distance && distance > 0 && (
+              <Badge variant="gray">Distance: {distance.toFixed(1)} km</Badge>
+            )}
           </div>
         </CardHeader>
         <CardContent className="p-6">
