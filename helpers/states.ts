@@ -1,57 +1,73 @@
+import { unstable_cache } from 'next/cache';
+
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export async function getStateMetadataBySlug(stateSlug: string) {
-  const supabase = await createAdminClient();
+export const getStateMetadataBySlug = unstable_cache(
+  async (stateSlug: string) => {
+    const supabase = await createAdminClient();
 
-  const { data: state } = (await supabase
-    .from('states')
-    .select(
-      `
+    const { data: state } = (await supabase
+      .from('states')
+      .select(
+        `
       id,
       name,
       slug,
       areas:areas(name),
       clinics:clinics(slug)
     `,
-    )
-    .eq('clinics.status', 'approved')
-    .match({ slug: stateSlug })
-    .single()) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-      areas: {
+      )
+      .eq('clinics.status', 'approved')
+      .match({ slug: stateSlug })
+      .single()) as {
+      data: {
+        id: string;
         name: string;
-      }[];
-      clinics: {
         slug: string;
-      }[];
+        areas: {
+          name: string;
+        }[];
+        clinics: {
+          slug: string;
+        }[];
+      };
     };
-  };
 
-  return state;
-}
+    return state;
+  },
+  ['state-metadata'],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['state-metadata'],
+  },
+);
 
-export async function getStateListings() {
-  const supabase = await createAdminClient();
+export const getStateListings = unstable_cache(
+  async () => {
+    const supabase = await createAdminClient();
 
-  const { data: stateData } = (await supabase.from('states').select(
-    `
+    const { data: stateData } = (await supabase.from('states').select(
+      `
       id,
       name,
       slug
     `,
-  )) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-    }[];
-  };
+    )) as {
+      data: {
+        id: string;
+        name: string;
+        slug: string;
+      }[];
+    };
 
-  return stateData ?? [];
-}
+    return stateData ?? [];
+  },
+  ['state-listings'],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['state-listings'],
+  },
+);
 
 /**
  * Fetches a clinic by its state with all related data
@@ -100,22 +116,22 @@ export async function getStateBySlug(stateSlug: string, from: number, to: number
     .from('clinics')
     .select(
       `
-        name,
-        slug,
-        description,
-        status,
-        images,
-        postal_code,
-        address,
-        phone,
-        rating,
-        is_featured,
-        open_on_public_holidays,
-        modified_at,
-        area:areas(name),
-        state:states(name),
-        hours:clinic_hours(day_of_week, open_time, close_time),
-        special_hours:clinic_special_hours(date, is_closed, open_time, close_time)
+      name,
+      slug,
+      description,
+      status,
+      images,
+      postal_code,
+      address,
+      phone,
+      rating,
+      is_featured,
+      open_on_public_holidays,
+      modified_at,
+      area:areas(name),
+      state:states(name),
+      hours:clinic_hours(day_of_week, open_time, close_time),
+      special_hours:clinic_special_hours(date, is_closed, open_time, close_time)
   `,
     )
     .eq('state_id', state.id)

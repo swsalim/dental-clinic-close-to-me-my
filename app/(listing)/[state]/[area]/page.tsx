@@ -108,16 +108,24 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
   const currentPage = page ? +page : 1;
   const { from, to } = getPagination(currentPage, limit);
 
-  const areaMeta = await getAreaMetadataBySlug(area);
-  const totalClinics = areaMeta?.clinics?.length || 0;
-  const totalPages = Math.ceil(totalClinics / limit);
+  // Fetch area metadata and clinics data in parallel
+  const [areaMeta, areaData] = await Promise.all([
+    getAreaMetadataBySlug(area),
+    getAreaBySlug(area, from, to),
+  ]);
 
-  const validState = areaMeta?.state?.slug === state;
-  const areaData = await getAreaBySlug(area, from, to);
-
-  if (!validState || !areaMeta || !areaData) {
+  // Early validation
+  if (!areaMeta || !areaData) {
     notFound();
   }
+
+  const validState = areaMeta.state?.slug === state;
+  if (!validState) {
+    notFound();
+  }
+
+  const totalClinics = areaMeta.clinics?.length || 0;
+  const totalPages = Math.ceil(totalClinics / limit);
 
   const title = `Find Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;

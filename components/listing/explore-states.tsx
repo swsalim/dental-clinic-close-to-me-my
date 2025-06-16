@@ -1,20 +1,32 @@
+import { unstable_cache } from 'next/cache';
+
 import { createServerClient } from '@/lib/supabase';
 
+import { ExploreStatesClient } from '@/components/listing/explore-states-client';
 import Container from '@/components/ui/container';
 import { Wrapper } from '@/components/ui/wrapper';
 
-import { ExploreStatesClient } from './explore-states-client';
+const getPopularStates = unstable_cache(
+  async (supabase: Awaited<ReturnType<typeof createServerClient>>) => {
+    const { data: states } = await supabase
+      .from('states')
+      .select('id, name, slug, thumbnail_image, clinics:clinics(count)')
+      .eq('clinics.status', 'approved');
+
+    return states
+      ? [...states].sort((a, b) => b.clinics[0].count - a.clinics[0].count).slice(0, 8)
+      : [];
+  },
+  ['popular-states'],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['popular-states'],
+  },
+);
 
 export async function ExploreStates() {
   const supabase = await createServerClient();
-  const { data: states } = await supabase
-    .from('states')
-    .select('id, name, slug, thumbnail_image, clinics:clinics(count)')
-    .eq('clinics.status', 'approved');
-
-  const sortedStates = states
-    ? [...states].sort((a, b) => b.clinics[0].count - a.clinics[0].count).slice(0, 8)
-    : [];
+  const sortedStates = await getPopularStates(supabase);
 
   return (
     <Wrapper className="bg-gray-50 dark:bg-gray-950/30">

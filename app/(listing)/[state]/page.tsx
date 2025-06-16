@@ -108,16 +108,18 @@ export default async function StatePage({ params, searchParams }: StatePageProps
   const currentPage = page ? +page : 1;
   const { from, to } = getPagination(currentPage, limit);
 
-  // Fetch total clinics for pagination
-  const stateMeta = await getStateMetadataBySlug(state);
-  const totalClinics = stateMeta?.clinics?.length || 0;
-  const totalPages = Math.ceil(totalClinics / limit);
+  // Fetch state metadata and clinics data in parallel
+  const [stateMeta, stateData] = await Promise.all([
+    getStateMetadataBySlug(state),
+    getStateBySlug(state, from, to),
+  ]);
 
-  const stateData = await getStateBySlug(state, from, to);
-
-  if (!stateData) {
+  if (!stateMeta || !stateData) {
     notFound();
   }
+
+  const totalClinics = stateMeta.clinics?.length || 0;
+  const totalPages = Math.ceil(totalClinics / limit);
 
   const nearbyAreas = stateData.areas
     ?.slice(0, 3)

@@ -108,18 +108,23 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
   const currentPage = page ? +page : 1;
   const { from, to } = getPagination(currentPage, limit);
 
-  const services = await getAllServices();
-  const serviceData = await getServiceBySlug(serviceSlug);
+  const [serviceData, services] = await Promise.all([
+    getServiceBySlug(serviceSlug),
+    getAllServices(),
+  ]);
 
   if (!serviceData) {
     notFound();
   }
 
-  const totalClinics = Number(await getClinicByServiceMetadataId(serviceData.id)) || 0;
-  const clinics = await getClinicByServiceId(serviceData.id, from, to);
+  const [totalClinics, clinics] = await Promise.all([
+    getClinicByServiceMetadataId(serviceData.id).then((count) => Number(count) || 0),
+    getClinicByServiceId(serviceData.id, from, to),
+  ]);
+
   const totalPages = Math.ceil(totalClinics / limit);
-  const serviceName = serviceData.name;
-  const serviceDescription = serviceData.description || serviceData.name;
+  const { name: serviceName } = serviceData;
+  const serviceDescription = serviceData.description ?? serviceData.name;
 
   const title = `${serviceName} - Find Top Dental Clinics`;
   const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;

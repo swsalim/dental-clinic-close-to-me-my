@@ -107,14 +107,13 @@ export default function Navbar() {
                   <NavigationMenuItem key={name}>
                     <>
                       {href && (
-                        <Link href={href} legacyBehavior passHref>
-                          <NavigationMenuLink
-                            className={cn(
-                              'font-regular focus:bg-brand/hover:bg-brand/5 data-[active=true]:bg-brand/hover:bg-brand/5 data-[state=open]:bg-brand/hover:bg-brand/5 data-[active=true]:focus:bg-brand/hover:bg-brand/5 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-brand/5 hover:text-brand focus:text-brand focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-brand data-[state=open]:text-brand data-[active=true]:hover:bg-brand/5 data-[state=open]:hover:bg-brand/5 data-[state=open]:focus:bg-brand/5 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
-                            )}>
-                            {name}
-                          </NavigationMenuLink>
-                        </Link>
+                        <NavigationMenuLink
+                          className={cn(
+                            'font-regular focus:bg-brand/hover:bg-brand/5 data-[active=true]:bg-brand/hover:bg-brand/5 data-[state=open]:bg-brand/hover:bg-brand/5 data-[active=true]:focus:bg-brand/hover:bg-brand/5 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-brand/5 hover:text-brand focus:text-brand focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-brand data-[state=open]:text-brand data-[active=true]:hover:bg-brand/5 data-[state=open]:hover:bg-brand/5 data-[state=open]:focus:bg-brand/5 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
+                          )}
+                          asChild>
+                          <Link href={href}>{name}</Link>
+                        </NavigationMenuLink>
                       )}
                       {!href && (
                         <>
