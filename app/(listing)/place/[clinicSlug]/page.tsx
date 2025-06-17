@@ -289,8 +289,6 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
     10,
   );
 
-  console.log(nearbyClinics);
-
   const breadcrumbItems = [
     { name: parsedClinic.state?.name, url: `/${parsedClinic.state?.slug}` },
     {
