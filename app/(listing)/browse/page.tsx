@@ -59,8 +59,8 @@ export default async function BrowsePage() {
   const supabase = await createServerClient();
 
   const [{ data: statesData }, { data: areasData }] = await Promise.all([
-    supabase.from('states').select('*', { count: 'exact' }),
-    supabase.from('areas').select('*', { count: 'exact' }),
+    supabase.from('states').select('id, name, slug', { count: 'exact' }),
+    supabase.from('areas').select('id, name, slug', { count: 'exact' }),
   ]);
 
   const states = (statesData || []) as ClinicState[];

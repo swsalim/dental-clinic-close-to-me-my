@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import { Database } from '@/types/database.types';
+import { Clinic } from '@/types/clinic';
 
 import { createClient } from '@/lib/supabase/client';
 
@@ -12,15 +12,8 @@ import { ClinicCard } from '@/components/cards/clinic-card';
 import { ClinicCardSkeleton } from '@/components/cards/clinic-card-skeleton';
 import { Button } from '@/components/ui/button';
 
-type Clinic = Database['public']['Tables']['clinics']['Row'] & {
-  hours: Database['public']['Tables']['clinic_hours']['Row'][];
-  special_hours: Database['public']['Tables']['clinic_special_hours']['Row'][];
-  area: { name: string } | null;
-  state: { name: string } | null;
-};
-
 export function RecentClinicsList() {
-  const [clinics, setClinics] = useState<Clinic[]>([]);
+  const [clinics, setClinics] = useState<Partial<Clinic>[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const supabase = createClient();
 
@@ -31,7 +24,15 @@ export function RecentClinicsList() {
           .from('clinics')
           .select(
             `
-            *,
+            id,
+            name,
+            slug,
+            address,
+            phone,
+            postal_code,
+            rating,
+            images,
+            open_on_public_holidays,
             hours:clinic_hours(*),
             special_hours:clinic_special_hours(*),
             area:areas(name),
@@ -43,7 +44,13 @@ export function RecentClinicsList() {
           .limit(12);
 
         if (error) throw error;
-        setClinics(data || []);
+        setClinics(
+          (data || []).map((clinic) => ({
+            ...clinic,
+            area: clinic.area?.[0] || null,
+            state: clinic.state?.[0] || null,
+          })),
+        );
       } catch (error) {
         console.error('Error fetching recent clinics:', error);
       } finally {
@@ -70,8 +77,8 @@ export function RecentClinicsList() {
         {clinics.map((clinic) => (
           <ClinicCard
             key={clinic.id}
-            slug={clinic.slug}
-            name={clinic.name}
+            slug={clinic.slug || ''}
+            name={clinic.name || ''}
             address={clinic.address || ''}
             phone={clinic.phone || ''}
             postalCode={clinic.postal_code || ''}
@@ -79,8 +86,8 @@ export function RecentClinicsList() {
             area={clinic.area?.name || ''}
             image={clinic.images?.[0]}
             rating={clinic.rating}
-            hours={clinic.hours}
-            specialHours={clinic.special_hours}
+            hours={clinic.hours || []}
+            specialHours={clinic.special_hours || []}
             openOnPublicHolidays={clinic.open_on_public_holidays || false}
           />
         ))}

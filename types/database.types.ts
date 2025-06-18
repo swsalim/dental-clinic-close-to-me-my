@@ -510,6 +510,10 @@ export type Database = {
         Args: { to_be_reviewed_clinic_id_param: string }
         Returns: string
       }
+      get_clinic_by_slug: {
+        Args: { slug_input: string; status_input: string; review_limit: number }
+        Returns: Json
+      }
       get_nearby_clinics: {
         Args: {
           clinic_latitude: number

@@ -2,10 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ClinicHours, ClinicReview } from '@/types/clinic';
-import { formatDistanceToNow } from 'date-fns';
+import { ClinicHours } from '@/types/clinic';
 import {
-  ArrowRightIcon,
   AwardIcon,
   FacebookIcon,
   GlobeIcon,
@@ -17,10 +15,11 @@ import {
 
 import { siteConfig } from '@/config/site';
 
-import { absoluteUrl, cn } from '@/lib/utils';
+import { absoluteUrl } from '@/lib/utils';
 
 import {
   getClinicBySlug,
+  getClinicBySlugRpc,
   getClinicListings,
   getClinicMetadataBySlug,
   parseClinicData,
@@ -32,19 +31,18 @@ import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import NearbyClinics from '@/components/listing/nearby-clinics';
+import Reviews from '@/components/listing/reviews';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
 import { StickyBookButton } from '@/components/sticky-book-button';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Badge } from '@/components/ui/badge';
 import Breadcrumb from '@/components/ui/breadcrumb';
-import { Button, buttonVariants } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import Prose from '@/components/ui/prose';
 import { StarRating } from '@/components/ui/star-rating';
 import { TruncatedHtml } from '@/components/ui/truncated-html';
-import { TruncatedText } from '@/components/ui/truncated-text';
 import { Wrapper } from '@/components/ui/wrapper';
 
 type ClinicPageProps = {
@@ -52,52 +50,6 @@ type ClinicPageProps = {
     clinicSlug: string;
   }>;
 };
-
-function Reviews({
-  reviews,
-  clinicSlug,
-}: {
-  reviews: Partial<ClinicReview>[];
-  clinicSlug: string;
-}) {
-  return (
-    <article>
-      <h2>Reviews</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {reviews.slice(0, 6).map(({ author_name, rating, text, review_time }) => (
-          <Card key={`${author_name}-${review_time}`}>
-            <CardHeader>
-              <StarRating rating={rating ?? 0} showValue={false} />
-            </CardHeader>
-            {text && (
-              <CardContent>
-                <TruncatedText text={text} />
-              </CardContent>
-            )}
-            <CardFooter className="flex flex-col items-start gap-1">
-              <span className="text-base font-semibold text-gray-700 dark:text-gray-50">
-                {author_name}
-              </span>
-              {review_time && (
-                <span className="text-sm text-gray-500 dark:text-gray-300">
-                  {formatDistanceToNow(new Date(review_time), { addSuffix: true })}
-                </span>
-              )}
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-4 flex flex-row gap-x-2 md:mt-6">
-        <Link
-          href={`/place/${clinicSlug}/reviews`}
-          className={cn(buttonVariants({ variant: 'primary' }), 'not-prose flex flex-row gap-x-2')}>
-          View all reviews
-          <ArrowRightIcon className="size-4" />
-        </Link>
-      </div>
-    </article>
-  );
-}
 
 function Map({
   latitude = 0,
@@ -280,38 +232,27 @@ export async function generateStaticParams() {
   }));
 }
 
-/**
- * Clinic Page Component
- *
- * Optimizations implemented:
- * 1. Extracted helper functions for better code organization and reusability
- * 2. Optimized opening hours formatting with dedicated function
- * 3. Improved address building with dedicated function
- * 4. Enhanced social accounts checking with dedicated function
- * 5. Added proper TypeScript type annotations for better type safety
- * 6. Extracted NearbyClinics into separate component with its own data fetching
- * 7. Implemented loading skeleton for nearby clinics section
- * 8. Used React Suspense for better loading UX
- *
- * Additional optimization opportunities:
- * 1. Consider implementing React.memo for child components
- * 2. Add error boundaries for better error handling
- * 3. Implement loading states for better UX
- * 4. Consider caching clinic data with React Query or SWR
- * 5. Optimize images with next/image for better performance
- * 6. Implement lazy loading for other heavy components
- */
-
 export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
 
   const rawClinicData = await getClinicBySlug(clinicSlug);
+
+  console.log('rawClinicData');
+  console.log(rawClinicData);
+
+  const rpcClinic = await getClinicBySlugRpc(clinicSlug, 'approved');
+
+  console.log('rpcClinic');
+  console.log(rpcClinic);
 
   if (!rawClinicData) {
     notFound();
   }
 
   const parsedClinic = parseClinicData(rawClinicData);
+
+  console.log('parsedClinic');
+  console.log(parsedClinic);
 
   const memberOf: { '@type': string; '@id': string } | null = null;
 
@@ -540,10 +481,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   name={parsedClinic.name ?? ''}
                 />
               </article>
-              {parsedClinic.reviews && parsedClinic.reviews.length > 0 && (
+              {parsedClinic.id && (
                 <>
-                  {parsedClinic.id && <AddReviewForm clinicId={parsedClinic.id} />}
-                  <Reviews reviews={parsedClinic.reviews} clinicSlug={clinicSlug} />
+                  <AddReviewForm clinicId={parsedClinic.id} />
+                  <Reviews clinicId={parsedClinic.id} clinicSlug={clinicSlug} />
                 </>
               )}
             </Prose>

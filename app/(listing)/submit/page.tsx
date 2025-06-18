@@ -56,8 +56,8 @@ export default async function SubmitClinicPage() {
   const supabase = await createClient();
 
   const [{ data: statesData }, { data: areasData }] = await Promise.all([
-    supabase.from('states').select('*', { count: 'exact' }),
-    supabase.from('areas').select('*', { count: 'exact' }),
+    supabase.from('states').select('id, name', { count: 'exact' }),
+    supabase.from('areas').select('id, name', { count: 'exact' }),
   ]);
 
   const states = (statesData || []) as ClinicState[];

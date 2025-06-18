@@ -107,16 +107,30 @@ export async function getClinicBySlug(slug: string, status: string = 'approved')
       doctors:clinic_doctor_relations(doctor:clinic_doctors(id, name, slug)),
       hours:clinic_hours(day_of_week, open_time, close_time),
       special_hours:clinic_special_hours(date, is_closed, open_time, close_time),
-      reviews:clinic_reviews(author_name, review_time, rating, email, text, status),
       services:clinic_service_relations(service:clinic_services(id, name, slug))
     `,
     )
-    .eq('reviews.status', 'approved')
     .match({ slug, is_active: true, status })
-    .order('review_time', { referencedTable: 'clinic_reviews', ascending: false })
     .single();
 
   return clinic;
+}
+
+export async function getClinicBySlugRpc(slug: string, status: string = 'approved') {
+  const supabase = await createServerClient();
+
+  const { data, error } = await supabase.rpc('get_clinic_by_slug', {
+    slug_input: slug,
+    status_input: status,
+    review_limit: 6,
+  });
+
+  if (error) {
+    console.error('Error fetching nearest clinics:', error);
+    return null;
+  }
+
+  return data;
 }
 
 export async function getClinicByServiceMetadataId(id: string) {
@@ -282,16 +296,16 @@ export async function getClinicsNearLocation(
 export async function getClinicReviews(clinicId: string, page: number = 1, pageSize: number = 10) {
   const supabase = await createServerClient();
 
-  const { data, error, count } = await supabase
+  const { data, error } = await supabase
     .from('clinic_reviews')
-    .select('*', { count: 'exact' })
+    .select('author_name, review_time, rating, email, text, status')
     .eq('clinic_id', clinicId)
     .order('review_time', { ascending: false })
     .range((page - 1) * pageSize, page * pageSize - 1);
 
   if (error) throw error;
 
-  return { data, count };
+  return data;
 }
 
 /**
