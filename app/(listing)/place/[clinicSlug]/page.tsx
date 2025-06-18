@@ -231,9 +231,6 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
   const parsedClinic = await getClinicBySlug(clinicSlug);
 
-  console.log('parsedClinic');
-  console.log(parsedClinic);
-
   if (!parsedClinic) {
     notFound();
   }
