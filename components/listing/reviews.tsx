@@ -1,5 +1,3 @@
-import { Suspense } from 'react';
-
 import Link from 'next/link';
 
 import { ClinicReview } from '@/types/clinic';
@@ -8,22 +6,17 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
-import { getClinicReviews } from '@/helpers/clinics';
-
 import { buttonVariants } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import { StarRating } from '../ui/star-rating';
 import { TruncatedText } from '../ui/truncated-text';
-import { ReviewSkeleton } from './review-skeleton';
 
 interface ReviewsProps {
-  clinicId: string;
+  reviews: Partial<ClinicReview>[];
   clinicSlug: string;
 }
 
-async function ReviewsContent({ clinicId, clinicSlug }: ReviewsProps) {
-  const reviews: Partial<ClinicReview>[] = await getClinicReviews(clinicId, 1, 6);
-
+export default function Reviews({ reviews, clinicSlug }: ReviewsProps) {
   if (!reviews || reviews.length === 0) {
     return null;
   }
@@ -64,13 +57,5 @@ async function ReviewsContent({ clinicId, clinicSlug }: ReviewsProps) {
         </Link>
       </div>
     </article>
-  );
-}
-
-export default function Reviews(props: ReviewsProps) {
-  return (
-    <Suspense fallback={<ReviewSkeleton />}>
-      <ReviewsContent {...props} />
-    </Suspense>
   );
 }

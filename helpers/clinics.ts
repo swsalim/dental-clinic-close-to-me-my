@@ -1,6 +1,7 @@
 import {
   Clinic,
   ClinicArea,
+  ClinicDetails,
   ClinicDoctor,
   ClinicHours,
   ClinicReview,
@@ -71,52 +72,11 @@ export async function getClinicListings(status: string = 'approved') {
 /**
  * Fetches a clinic by its slug with all related data
  */
-export async function getClinicBySlug(slug: string, status: string = 'approved') {
-  const supabase = await createServerClient();
 
-  const { data: clinic } = await supabase
-    .from('clinics')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      description,
-      postal_code,
-      address,
-      neighborhood,
-      phone,
-      email,
-      website,
-      latitude,
-      longitude,
-      rating,
-      review_count,
-      images,
-      featured_video,
-      youtube_url,
-      facebook_url,
-      instagram_url,
-      source,
-      is_permanently_closed,
-      open_on_public_holidays,
-      is_active,
-      is_featured,
-      area:areas(id, name, slug),
-      state:states(id, name, slug),
-      doctors:clinic_doctor_relations(doctor:clinic_doctors(id, name, slug)),
-      hours:clinic_hours(day_of_week, open_time, close_time),
-      special_hours:clinic_special_hours(date, is_closed, open_time, close_time),
-      services:clinic_service_relations(service:clinic_services(id, name, slug))
-    `,
-    )
-    .match({ slug, is_active: true, status })
-    .single();
-
-  return clinic;
-}
-
-export async function getClinicBySlugRpc(slug: string, status: string = 'approved') {
+export async function getClinicBySlug(
+  slug: string,
+  status: string = 'approved',
+): Promise<ClinicDetails | null> {
   const supabase = await createServerClient();
 
   const { data, error } = await supabase.rpc('get_clinic_by_slug', {
@@ -130,7 +90,7 @@ export async function getClinicBySlugRpc(slug: string, status: string = 'approve
     return null;
   }
 
-  return data;
+  return data as unknown as ClinicDetails;
 }
 
 export async function getClinicByServiceMetadataId(id: string) {

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ClinicHours } from '@/types/clinic';
+import { ClinicDetails, ClinicHours } from '@/types/clinic';
 import {
   AwardIcon,
   FacebookIcon,
@@ -17,13 +17,7 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import {
-  getClinicBySlug,
-  getClinicBySlugRpc,
-  getClinicListings,
-  getClinicMetadataBySlug,
-  parseClinicData,
-} from '@/helpers/clinics';
+import { getClinicBySlug, getClinicListings, getClinicMetadataBySlug } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
 import { ClinicStatus } from '@/components/clinic-status';
@@ -105,7 +99,7 @@ const formatShift = (open: string, close: string) => {
 };
 
 // Helper function to check if clinic has social accounts
-const checkSocialAccounts = (clinic: ReturnType<typeof parseClinicData>) => {
+const checkSocialAccounts = (clinic: ClinicDetails) => {
   return !!(clinic.facebook_url || clinic.instagram_url || clinic.youtube_url);
 };
 
@@ -130,7 +124,7 @@ const formatOpeningHoursForJsonLd = (hours: Partial<ClinicHours>[] | null) => {
 };
 
 // Helper function to build full address
-const buildFullAddress = (clinic: ReturnType<typeof parseClinicData>) => {
+const buildFullAddress = (clinic: ClinicDetails) => {
   return [
     clinic.address,
     clinic.neighborhood,
@@ -141,7 +135,7 @@ const buildFullAddress = (clinic: ReturnType<typeof parseClinicData>) => {
     .join(', ');
 };
 
-const renderOpeningHours = (parsedClinic: ReturnType<typeof parseClinicData>) => {
+const renderOpeningHours = (parsedClinic: ClinicDetails) => {
   const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
   return (
@@ -235,29 +229,19 @@ export async function generateStaticParams() {
 export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
 
-  const rawClinicData = await getClinicBySlug(clinicSlug);
-
-  console.log('rawClinicData');
-  console.log(rawClinicData);
-
-  const rpcClinic = await getClinicBySlugRpc(clinicSlug, 'approved');
-
-  console.log('rpcClinic');
-  console.log(rpcClinic);
-
-  if (!rawClinicData) {
-    notFound();
-  }
-
-  const parsedClinic = parseClinicData(rawClinicData);
+  const parsedClinic = await getClinicBySlug(clinicSlug);
 
   console.log('parsedClinic');
   console.log(parsedClinic);
 
+  if (!parsedClinic) {
+    notFound();
+  }
+
   const memberOf: { '@type': string; '@id': string } | null = null;
 
   // Format opening hours for JSON-LD using OpeningHoursSpecification
-  const openingHoursSpecification = formatOpeningHoursForJsonLd(rawClinicData.hours);
+  const openingHoursSpecification = formatOpeningHoursForJsonLd(parsedClinic.hours);
 
   const hasSocialAccounts = checkSocialAccounts(parsedClinic);
 
@@ -484,7 +468,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               {parsedClinic.id && (
                 <>
                   <AddReviewForm clinicId={parsedClinic.id} />
-                  <Reviews clinicId={parsedClinic.id} clinicSlug={clinicSlug} />
+                  <Reviews reviews={parsedClinic.reviews} clinicSlug={clinicSlug} />
                 </>
               )}
             </Prose>

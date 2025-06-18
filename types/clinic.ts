@@ -174,3 +174,72 @@ export interface Clinic {
 export type ClinicInsert = Omit<Clinic, 'id' | 'created_at' | 'modified_at'>;
 
 export type ClinicUpdate = Partial<ClinicInsert>;
+
+/**
+ * Type for the return value of getClinicBySlugRpc function
+ */
+export interface ClinicDetails {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  postal_code: string;
+  address: string;
+  neighborhood: string;
+  phone: string;
+  email: string;
+  website: string;
+  latitude: number;
+  longitude: number;
+  rating: number;
+  review_count: number;
+  images: string[];
+  featured_video: string;
+  youtube_url: string;
+  facebook_url: string;
+  instagram_url: string;
+  source: string;
+  is_permanently_closed: boolean;
+  open_on_public_holidays: boolean;
+  is_active: boolean;
+  is_featured: boolean;
+  area: {
+    id: string;
+    name: string;
+    slug: string;
+  };
+  state: {
+    id: string;
+    name: string;
+    slug: string;
+  };
+  doctors: null | Array<{
+    id: string;
+    name: string;
+    slug: string;
+  }>;
+  hours: Array<{
+    day_of_week: number;
+    open_time: string | null;
+    close_time: string | null;
+  }>;
+  special_hours: null | Array<{
+    date: string;
+    is_closed: boolean | null;
+    open_time: string | null;
+    close_time: string | null;
+  }>;
+  services: Array<{
+    id: string;
+    name: string;
+    slug: string;
+  }>;
+  reviews: Array<{
+    author_name: string;
+    rating: number;
+    email: string;
+    text: string;
+    review_time: string;
+    status: string;
+  }>;
+}
