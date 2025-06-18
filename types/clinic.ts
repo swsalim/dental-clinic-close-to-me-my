@@ -203,43 +203,11 @@ export interface ClinicDetails {
   open_on_public_holidays: boolean;
   is_active: boolean;
   is_featured: boolean;
-  area: {
-    id: string;
-    name: string;
-    slug: string;
-  };
-  state: {
-    id: string;
-    name: string;
-    slug: string;
-  };
-  doctors: null | Array<{
-    id: string;
-    name: string;
-    slug: string;
-  }>;
-  hours: Array<{
-    day_of_week: number;
-    open_time: string | null;
-    close_time: string | null;
-  }>;
-  special_hours: null | Array<{
-    date: string;
-    is_closed: boolean | null;
-    open_time: string | null;
-    close_time: string | null;
-  }>;
-  services: Array<{
-    id: string;
-    name: string;
-    slug: string;
-  }>;
-  reviews: Array<{
-    author_name: string;
-    rating: number;
-    email: string;
-    text: string;
-    review_time: string;
-    status: string;
-  }>;
+  area: Partial<ClinicArea>;
+  state: Partial<ClinicState>;
+  doctors: Partial<ClinicDoctor>[];
+  hours: Partial<ClinicHours>[];
+  special_hours: Partial<ClinicSpecialHours>[];
+  services: Partial<ClinicService>[];
+  reviews: Partial<ClinicReview>[];
 }

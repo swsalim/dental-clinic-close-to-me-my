@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { ClinicReview } from '@/types/clinic';
+import { ClinicHours, ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
 
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicMetadataBySlug, parseClinicData } from '@/helpers/clinics';
+import { getClinicBySlug, getClinicMetadataBySlug } from '@/helpers/clinics';
 
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
@@ -22,6 +22,25 @@ type ReviewsPageProps = {
   params: Promise<{
     clinicSlug: string;
   }>;
+};
+
+const formatOpeningHoursForJsonLd = (hours: Partial<ClinicHours>[] | null) => {
+  if (!hours) return [];
+
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  return hours.map((hour) => {
+    const day = days[hour.day_of_week ?? 0];
+    const openTime = hour.open_time?.slice(0, 5) || '';
+    const closeTime = hour.close_time?.slice(0, 5) || '';
+
+    return {
+      '@type': 'OpeningHoursSpecification' as const,
+      dayOfWeek: day,
+      opens: openTime,
+      closes: closeTime,
+    };
+  });
 };
 
 export async function generateMetadata({ params }: ReviewsPageProps): Promise<Metadata> {
@@ -77,31 +96,16 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
 export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const { clinicSlug } = await params;
 
-  const rawClinicData = await getClinicBySlug(clinicSlug);
+  const parsedClinic = await getClinicBySlug(clinicSlug);
 
-  if (!rawClinicData) {
+  if (!parsedClinic) {
     notFound();
   }
 
   const memberOf: { '@type': string; '@id': string } | null = null;
 
   // Format opening hours for JSON-LD using OpeningHoursSpecification
-  const openingHoursSpecification =
-    rawClinicData.hours?.map((hour) => {
-      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      const day = days[hour.day_of_week];
-      const openTime = hour.open_time?.slice(0, 5) || '';
-      const closeTime = hour.close_time?.slice(0, 5) || '';
-
-      return {
-        '@type': 'OpeningHoursSpecification' as const,
-        dayOfWeek: day,
-        opens: openTime,
-        closes: closeTime,
-      };
-    }) || [];
-
-  const parsedClinic = parseClinicData(rawClinicData);
+  const openingHoursSpecification = formatOpeningHoursForJsonLd(parsedClinic.hours);
 
   const breadcrumbItems = [
     { name: parsedClinic.state?.name, url: `/${parsedClinic.state?.slug}` },
