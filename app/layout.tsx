@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 
 import { cn } from '@/lib/utils';
 
+import { AnalyticsWrapper } from '@/components/analytics';
 import Footer from '@/components/site/footer';
 import NavMobile from '@/components/site/nav-mobile';
 import Navbar from '@/components/site/navbar';
@@ -108,6 +109,7 @@ export default function RootLayout({
         <NavMobile />
         <Navbar />
         <main className="flex grow flex-col justify-center">{children}</main>
+        <AnalyticsWrapper />
         <Footer />
         <Toaster />
         <script
