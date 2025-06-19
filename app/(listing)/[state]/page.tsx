@@ -46,7 +46,7 @@ export async function generateMetadata({
     .map((area) => area.name)
     .join(', ');
 
-  const title = `Find Dental Clinics in ${stateData.name}`;
+  const title = `Top Dental Clinics in ${stateData.name}`;
   const description = `Explore ${stateData.clinics?.length} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}`)
@@ -128,7 +128,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
 
   const nearbyAreasWithLinks = stateData.areas?.slice(0, 3);
 
-  const title = `Find Dental Clinics in ${stateData.name}`;
+  const title = `Top Dental Clinics in ${stateData.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
 
   const breadcrumbItems = [

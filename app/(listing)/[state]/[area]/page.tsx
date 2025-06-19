@@ -127,7 +127,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
   const totalClinics = areaMeta.clinics?.length || 0;
   const totalPages = Math.ceil(totalClinics / limit);
 
-  const title = `Find Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
+  const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
 
   const breadcrumbItems = [
