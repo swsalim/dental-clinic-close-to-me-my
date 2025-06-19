@@ -35,7 +35,7 @@ export async function generateMetadata({
   const { state } = await params;
   const { page } = await searchParams;
 
-  const stateData = await getStateMetadataBySlug(state);
+  const stateData = await getStateBySlug(state, 0, 1);
 
   if (!stateData) {
     notFound();
@@ -54,6 +54,13 @@ export async function generateMetadata({
       ? absoluteUrl(`/${state}`)
       : absoluteUrl(`/${state}?page=${page}`);
 
+  // Build the OG image URL with optional background image
+  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og-list`);
+  ogImageUrl.searchParams.set('title', title);
+  if (stateData.banner_image) {
+    ogImageUrl.searchParams.set('image', stateData.banner_image);
+  }
+
   return {
     title,
     description,
@@ -66,7 +73,7 @@ export async function generateMetadata({
       url,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          url: ogImageUrl,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,
@@ -82,7 +89,7 @@ export async function generateMetadata({
       creator: siteConfig.creator,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          url: ogImageUrl,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,

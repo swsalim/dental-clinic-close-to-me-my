@@ -34,13 +34,15 @@ export async function GET(req: NextRequest) {
       } catch (error) {
         console.log('Failed to fetch provided image, falling back to default:', error);
         // Fall back to default image
-        imageData = await fetch(new URL('../../../assets/images/og-listing.jpeg', import.meta.url))
+        imageData = await fetch(
+          new URL('../../../assets/images/og-background.jpeg', import.meta.url),
+        )
           .then((res) => res.arrayBuffer())
           .then((buf) => `data:image/jpeg;base64,${Buffer.from(buf).toString('base64')}`);
       }
     } else {
       // Use default image
-      imageData = await fetch(new URL('../../../assets/images/og-listing.jpeg', import.meta.url))
+      imageData = await fetch(new URL('../../../assets/images/og-background.jpeg', import.meta.url))
         .then((res) => res.arrayBuffer())
         .then((buf) => `data:image/jpeg;base64,${Buffer.from(buf).toString('base64')}`);
     }
@@ -49,7 +51,7 @@ export async function GET(req: NextRequest) {
       (
         <div tw="flex relative w-[1200px] h-[630px]">
           <div
-            tw="absolute inset-0"
+            tw="absolute inset-0 before:absolute before:inset-0 before:bg-black/50 before:content-['']"
             style={{
               backgroundImage: `url(${imageData})`,
               backgroundSize: '100% 100%',

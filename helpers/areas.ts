@@ -10,7 +10,9 @@ export async function getAreaMetadataBySlug(areaSlug: string) {
       id,
       name,
       slug,
-      state:states(name, slug),
+      thumbnail_image,
+      banner_image,
+      state:states(name, slug, thumbnail_image, banner_image),
       clinics:clinics(slug)
     `,
     )
@@ -21,9 +23,13 @@ export async function getAreaMetadataBySlug(areaSlug: string) {
       id: string;
       name: string;
       slug: string;
+      thumbnail_image: string;
+      banner_image: string;
       state: {
         name: string;
         slug: string;
+        thumbnail_image: string;
+        banner_image: string;
       };
       clinics: {
         slug: string;

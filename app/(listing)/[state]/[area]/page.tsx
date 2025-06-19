@@ -45,13 +45,23 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
     notFound();
   }
 
-  const title = `Dental Clinic in ${areaData.name}, ${areaData.state.name}`;
+  const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state.name}`;
   const description = `Explore trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}/${area}`)
     : page === '1'
       ? absoluteUrl(`/${state}/${area}`)
       : absoluteUrl(`/${state}/${area}?page=${page}`);
+
+  // Build the OG image URL with optional background image
+  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og-list`);
+  ogImageUrl.searchParams.set('title', title);
+  if (areaData.thumbnail_image || areaData.state?.thumbnail_image) {
+    ogImageUrl.searchParams.set(
+      'image',
+      areaData.thumbnail_image || areaData.state?.thumbnail_image,
+    );
+  }
 
   return {
     title,
@@ -65,7 +75,7 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
       url,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          url: ogImageUrl,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,

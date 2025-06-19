@@ -13,6 +13,8 @@ export const getStateMetadataBySlug = unstable_cache(
       id,
       name,
       slug,
+      thumbnail_image,
+      banner_image,
       areas:areas(name),
       clinics:clinics(slug)
     `,
@@ -24,6 +26,8 @@ export const getStateMetadataBySlug = unstable_cache(
         id: string;
         name: string;
         slug: string;
+        thumbnail_image: string;
+        banner_image: string;
         areas: {
           name: string;
         }[];

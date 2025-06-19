@@ -17,7 +17,7 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicListings, getClinicMetadataBySlug } from '@/helpers/clinics';
+import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
 import { ClinicStatus } from '@/components/clinic-status';
@@ -171,14 +171,21 @@ const renderOpeningHours = (parsedClinic: ClinicDetails) => {
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
 
-  const clinic = await getClinicMetadataBySlug(clinicSlug);
+  const clinic = await getClinicBySlug(clinicSlug);
 
   if (!clinic) {
     notFound();
   }
 
   const title = clinic.name;
-  const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area.name}, ${clinic.state.name}. View services, hours, and contact info.`;
+  const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}. View services, hours, and contact info.`;
+
+  // Build the OG image URL with optional background image
+  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
+  ogImageUrl.searchParams.set('title', title);
+  if (clinic.images && clinic.images.length > 0) {
+    ogImageUrl.searchParams.set('image', clinic.images[0]);
+  }
 
   return {
     title,
@@ -192,7 +199,7 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
       url: absoluteUrl(`/place/${clinicSlug}`),
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${clinic?.name}`),
+          url: ogImageUrl,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: clinic?.name,
@@ -208,7 +215,7 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
       creator: siteConfig.creator,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${clinic?.name}`),
+          url: ogImageUrl,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: clinic?.name,
