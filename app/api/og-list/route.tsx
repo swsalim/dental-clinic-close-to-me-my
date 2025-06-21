@@ -51,11 +51,11 @@ export async function GET(req: NextRequest) {
       (
         <div tw="flex relative w-[1200px] h-[630px]">
           <div
-            tw="absolute inset-0 before:absolute before:inset-0 before:bg-black/50 before:content-['']"
+            tw="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url(${imageData})`,
               backgroundSize: '100% 100%',
-              backgroundPosition: 'center center',
+              backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}></div>
           <div tw="absolute inset-0 bg-black/10 z-10"></div>

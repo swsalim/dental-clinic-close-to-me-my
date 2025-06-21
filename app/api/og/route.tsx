@@ -47,15 +47,16 @@ export async function GET(req: NextRequest) {
 
     return new ImageResponse(
       (
-        <div tw="flex relative w-[1200px] h-[630px]">
+        <div tw="flex relative w-[1200px] h-[630px] overflow-hidden">
           <div
-            tw="absolute inset-0"
+            tw="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url(${imageData})`,
-              backgroundSize: '100% 100%',
-              backgroundPosition: 'center center',
+              backgroundSize: '100% auto',
+              backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
-            }}></div>
+            }}
+          />
           <div tw="absolute inset-0 bg-black/10 z-10"></div>
           <div tw="relative z-20 flex items-end justify-end h-full">
             <div tw="flex flex-col items-start justify-end bg-black/70 w-full p-5">
