@@ -330,7 +330,8 @@ SELECT insert_areas_for_state('johor', '[
   {"name": "Kota Tinggi", "slug": "kota-tinggi"},
   {"name": "Tangkak", "slug": "tangkak"},
   {"name": "Iskandar Puteri", "slug": "iskandar-puteri"},
-  {"name": "Pasir Gudang", "slug": "pasir-gudang"}
+  {"name": "Pasir Gudang", "slug": "pasir-gudang"},
+  {"name": "Kulai", "slug": "kulai"}
 ]'::jsonb);
 
 SELECT insert_areas_for_state('kedah', '[
@@ -467,7 +468,8 @@ SELECT insert_areas_for_state('selangor', '[
   {"name": "Puchong", "slug": "puchong"},
   {"name": "Rawang", "slug": "rawang"},
   {"name": "Bangi", "slug": "bangi"},
-  {"name": "Cyberjaya", "slug": "cyberjaya"}
+  {"name": "Cyberjaya", "slug": "cyberjaya"},
+  {"name": "Seri Kembangan", "slug": "seri-kembangan"}
 ]'::jsonb);
 
 SELECT insert_areas_for_state('terengganu', '[
@@ -491,7 +493,9 @@ SELECT insert_areas_for_state('kuala-lumpur', '[
   {"name": "Wangsa Maju", "slug": "wangsa-maju"},
   {"name": "Kepong", "slug": "kepong"},
   {"name": "Sentul", "slug": "sentul"},
-  {"name": "Sri Hartamas", "slug": "sri-hartamas"}
+  {"name": "Sri Hartamas", "slug": "sri-hartamas"},
+  {"name": "Bukit Jalil", "slug": "bukit-jalil"},
+  {"name": "Sri Petaling", "slug": "sri-petaling"}
 ]'::jsonb);
 
 SELECT insert_areas_for_state('putrajaya', '[
@@ -602,4 +606,3 @@ BEGIN
   RETURN v_hours_ids;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-
