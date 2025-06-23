@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap && node scripts/fix-robots.js && npm run submit-indexnow",
+    "postbuild": "if [ \"$NODE_ENV\" = \"production\" ] || [ \"$NODE_ENV\" = \"preview\" ]; then next-sitemap && node scripts/fix-robots.js && npm run submit-indexnow; fi",
     "clean-data": "tsx ./tasks/clean-apify-data.ts",
     "filter-data": "tsx ./tasks/filter-apify-data.ts",
     "parse-data": "tsx ./tasks/parse-apify-data.ts",
