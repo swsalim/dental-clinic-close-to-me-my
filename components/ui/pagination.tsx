@@ -42,6 +42,10 @@ function getPageNumbers(current: number, total: number) {
   return rangeWithDots;
 }
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
   const pathname = usePathname();
   if (totalPages <= 1) return null;
@@ -65,6 +69,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
                   ? `${pathname}`
                   : `${pathname}?page=${currentPage - 1}`
             }
+            onClick={scrollToTop}
             className={cn(
               'flex items-center justify-center py-4',
               currentPage === 1 && 'pointer-events-none cursor-not-allowed opacity-50',
@@ -88,6 +93,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
                       ? '#'
                       : `${pathname}?page=${page}`
                 }
+                onClick={scrollToTop}
                 className={cn(
                   'flex size-12 items-center justify-center rounded-full py-4 font-semibold transition-colors',
                   page === currentPage ? '!bg-brand text-white hover:text-white' : 'text-gray-700',
@@ -110,6 +116,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
           aria-label="Next page">
           <Link
             href={`${pathname}?page=${currentPage + 1}`}
+            onClick={scrollToTop}
             className={cn(
               buttonVariants({ variant: 'outline' }),
               'flex items-center justify-center rounded-full py-4',
@@ -129,6 +136,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
           rounded>
           <Link
             href={`${pathname}?page=${currentPage - 1}`}
+            onClick={scrollToTop}
             className={cn(
               'flex items-center justify-center rounded-full py-4',
               currentPage === 1 && 'pointer-events-none cursor-not-allowed opacity-50',
@@ -147,6 +155,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
           aria-label="Next page">
           <Link
             href={`${pathname}?page=${currentPage + 1}`}
+            onClick={scrollToTop}
             className={cn(
               'flex items-center justify-center rounded-full py-4',
               currentPage === totalPages && 'pointer-events-none cursor-not-allowed opacity-50',
