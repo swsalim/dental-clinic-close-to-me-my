@@ -35,7 +35,7 @@ export async function generateMetadata({
   const { state } = await params;
   const { page } = await searchParams;
 
-  const stateData = await getStateBySlug(state, 0, 1);
+  const stateData = await getStateMetadataBySlug(state);
 
   if (!stateData) {
     notFound();
@@ -216,7 +216,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
               Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
                 <>
-                  <Link href={absoluteUrl(`/${area.state.slug}/${area.slug}`)} key={area.slug}>
+                  <Link href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)} key={area.slug}>
                     {area.name}
                   </Link>
                   {index < nearbyAreasWithLinks.length - 2 && ', '}

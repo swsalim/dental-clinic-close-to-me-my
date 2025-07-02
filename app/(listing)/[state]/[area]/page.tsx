@@ -46,7 +46,7 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   }
 
   const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state.name}`;
-  const description = `Explore trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
+  const description = `Explore ${areaData.clinics?.length} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}/${area}`)
     : page === '1'
@@ -59,7 +59,7 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   if (areaData.thumbnail_image || areaData.state?.thumbnail_image) {
     ogImageUrl.searchParams.set(
       'image',
-      areaData.thumbnail_image || areaData.state?.thumbnail_image,
+      areaData.thumbnail_image || areaData.state?.thumbnail_image || '',
     );
   }
 

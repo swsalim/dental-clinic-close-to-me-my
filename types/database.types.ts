@@ -510,6 +510,10 @@ export type Database = {
         Args: { to_be_reviewed_clinic_id_param: string }
         Returns: string
       }
+      get_area_metadata_by_slug: {
+        Args: { area_slug: string }
+        Returns: Json
+      }
       get_clinic_by_slug: {
         Args: { slug_input: string; status_input: string; review_limit: number }
         Returns: Json
@@ -548,6 +552,18 @@ export type Database = {
           status: string
           hours: Json
         }[]
+      }
+      get_ranged_area_metadata_by_slug: {
+        Args: { area_slug: string; from_index: number; to_index: number }
+        Returns: Json
+      }
+      get_ranged_state_metadata_by_slug: {
+        Args: { state_slug: string; from_index: number; to_index: number }
+        Returns: Json
+      }
+      get_state_metadata_by_slug: {
+        Args: { state_slug: string }
+        Returns: Json
       }
     }
     Enums: {
