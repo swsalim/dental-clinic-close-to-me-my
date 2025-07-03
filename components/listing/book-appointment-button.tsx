@@ -25,8 +25,6 @@ export function BookAppointmentButton({
       id="book-appointment-button"
       onClick={(e) => {
         e.preventDefault();
-        // console.log('hello');
-        // console.log('Button clicked, firing analytics event...');
         try {
           saEvent(`book_appointment_click_${stateSlug}_${areaSlug}_${clinicSlug}`);
           console.log('Analytics event fired successfully');

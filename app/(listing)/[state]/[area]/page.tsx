@@ -11,6 +11,7 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 import { getAreaBySlug, getAreaListings, getAreaMetadataBySlug } from '@/helpers/areas';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
+import AddBookingForm from '@/components/forms/add-booking-form';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
@@ -19,6 +20,7 @@ import Breadcrumb from '@/components/ui/breadcrumb';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
+import Prose from '@/components/ui/prose';
 import { Wrapper } from '@/components/ui/wrapper';
 
 type AreaPageProps = {
@@ -113,8 +115,9 @@ export async function generateStaticParams() {
 export default async function AreaPage({ params, searchParams }: AreaPageProps) {
   const { state, area } = await params;
   const { page } = await searchParams;
+  const isJohorBahru = state === 'johor' && area === 'johor-bahru';
 
-  const limit = 20;
+  const limit = isJohorBahru ? 21 : 20;
   const currentPage = page ? +page : 1;
   const { from, to } = getPagination(currentPage, limit);
 
@@ -233,32 +236,48 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       </Wrapper>
       <Wrapper>
         <Container>
+          {isJohorBahru && (
+            <Prose className="mb-12 block lg:hidden">
+              <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} />
+            </Prose>
+          )}
           <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
             {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
           </h2>
           {areaData.clinics?.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-                {areaData.clinics
-                  ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                  .map((clinic) => (
-                    <ClinicCard
-                      key={clinic.slug}
-                      slug={clinic.slug ?? ''}
-                      name={clinic.name ?? ''}
-                      address={clinic.address ?? ''}
-                      phone={clinic.phone ?? ''}
-                      image={clinic.images?.[0]}
-                      postalCode={clinic.postal_code ?? ''}
-                      state={areaData.state?.name ?? ''}
-                      area={areaData.name ?? ''}
-                      rating={clinic.rating}
-                      isFeatured={clinic.is_featured ?? false}
-                      hours={clinic.hours ?? []}
-                      specialHours={clinic.special_hours ?? []}
-                      openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                    />
-                  ))}
+              <div className={cn(isJohorBahru && 'grid grid-cols-1 gap-8 lg:grid-cols-sidebar')}>
+                <div
+                  className={cn(
+                    'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
+                    !isJohorBahru && 'lg:grid-cols-4',
+                  )}>
+                  {areaData.clinics
+                    ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
+                    .map((clinic) => (
+                      <ClinicCard
+                        key={clinic.slug}
+                        slug={clinic.slug ?? ''}
+                        name={clinic.name ?? ''}
+                        address={clinic.address ?? ''}
+                        phone={clinic.phone ?? ''}
+                        image={clinic.images?.[0]}
+                        postalCode={clinic.postal_code ?? ''}
+                        state={areaData.state?.name ?? ''}
+                        area={areaData.name ?? ''}
+                        rating={clinic.rating}
+                        isFeatured={clinic.is_featured ?? false}
+                        hours={clinic.hours ?? []}
+                        specialHours={clinic.special_hours ?? []}
+                        openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                      />
+                    ))}
+                </div>
+                {isJohorBahru && (
+                  <Prose className="hidden lg:block">
+                    <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} />
+                  </Prose>
+                )}
               </div>
               <Pagination currentPage={currentPage} totalPages={totalPages} />
             </>

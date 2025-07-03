@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -10,7 +12,9 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/helpers/states';
 
+import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
+import AddBookingForm from '@/components/forms/add-booking-form';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
@@ -19,6 +23,7 @@ import Breadcrumb from '@/components/ui/breadcrumb';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
+import Prose from '@/components/ui/prose';
 import { Wrapper } from '@/components/ui/wrapper';
 
 type StatePageProps = {
@@ -255,27 +260,35 @@ export default async function StatePage({ params, searchParams }: StatePageProps
           </h2>
           {stateData.clinics?.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+              <div
+                className={cn(
+                  'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4',
+                )}>
                 {stateData.clinics
                   ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                  .map((clinic) => (
-                    <ClinicCard
-                      key={clinic.slug}
-                      slug={clinic.slug ?? ''}
-                      name={clinic.name ?? ''}
-                      address={clinic.address ?? ''}
-                      phone={clinic.phone ?? ''}
-                      postalCode={clinic.postal_code ?? ''}
-                      state={clinic.state?.name ?? ''}
-                      area={clinic.area?.name ?? ''}
-                      image={clinic.images?.[0]}
-                      rating={clinic.rating}
-                      isFeatured={clinic.is_featured ?? false}
-                      hours={clinic.hours ?? []}
-                      specialHours={clinic.special_hours ?? []}
-                      openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                    />
-                  ))}
+                  .map((clinic, index) => {
+                    return (
+                      <React.Fragment key={clinic.slug}>
+                        {(index + 1) % 6 == 0 && <LazyAdsArticle />}
+                        <ClinicCard
+                          key={clinic.slug}
+                          slug={clinic.slug ?? ''}
+                          name={clinic.name ?? ''}
+                          address={clinic.address ?? ''}
+                          phone={clinic.phone ?? ''}
+                          postalCode={clinic.postal_code ?? ''}
+                          state={clinic.state?.name ?? ''}
+                          area={clinic.area?.name ?? ''}
+                          image={clinic.images?.[0]}
+                          rating={clinic.rating}
+                          isFeatured={clinic.is_featured ?? false}
+                          hours={clinic.hours ?? []}
+                          specialHours={clinic.special_hours ?? []}
+                          openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                        />
+                      </React.Fragment>
+                    );
+                  })}
               </div>
               <Pagination currentPage={currentPage} totalPages={totalPages} />
             </>
