@@ -14,7 +14,6 @@ import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/help
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
-import AddBookingForm from '@/components/forms/add-booking-form';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
@@ -23,7 +22,6 @@ import Breadcrumb from '@/components/ui/breadcrumb';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
-import Prose from '@/components/ui/prose';
 import { Wrapper } from '@/components/ui/wrapper';
 
 type StatePageProps = {
