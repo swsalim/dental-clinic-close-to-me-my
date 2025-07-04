@@ -20,6 +20,7 @@ import { absoluteUrl } from '@/lib/utils';
 import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
+import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
@@ -426,10 +427,15 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             <Prose className="space-y-8">
               {parsedClinic.description && (
                 <article>
-                  <h2 className="mb-0">Description</h2>
+                  <h2 className="my-0">Description</h2>
                   <TruncatedHtml html={parsedClinic.description} limit={80} />
                 </article>
               )}
+
+              <div>
+                <LazyAdsLeaderboard />
+              </div>
+
               {parsedClinic.services && (
                 <article className="block lg:hidden">
                   <h2>Services</h2>
@@ -480,7 +486,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               <Prose>
                 {parsedClinic.services && (
                   <div className="hidden lg:block">
-                    <h2>Services</h2>
+                    <h2 className="mt-0">Services</h2>
                     <div className="grid grid-cols-2 gap-4">
                       {parsedClinic.services.map((service, index) => (
                         <div
