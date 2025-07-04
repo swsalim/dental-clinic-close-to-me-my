@@ -35,8 +35,8 @@ export function RecentClinicsList() {
             open_on_public_holidays,
             hours:clinic_hours(*),
             special_hours:clinic_special_hours(*),
-            area:areas(name),
-            state:states(name)
+            area:areas!inner(name),
+            state:states!inner(name)
           `,
           )
           .eq('is_active', true)
@@ -44,13 +44,7 @@ export function RecentClinicsList() {
           .limit(12);
 
         if (error) throw error;
-        setClinics(
-          (data || []).map((clinic) => ({
-            ...clinic,
-            area: clinic.area?.[0] || null,
-            state: clinic.state?.[0] || null,
-          })),
-        );
+        setClinics((data as Partial<Clinic>[]) || []);
       } catch (error) {
         console.error('Error fetching recent clinics:', error);
       } finally {
@@ -74,23 +68,26 @@ export function RecentClinicsList() {
   return (
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
-        {clinics.map((clinic) => (
-          <ClinicCard
-            key={clinic.id}
-            slug={clinic.slug || ''}
-            name={clinic.name || ''}
-            address={clinic.address || ''}
-            phone={clinic.phone || ''}
-            postalCode={clinic.postal_code || ''}
-            state={clinic.state?.name || ''}
-            area={clinic.area?.name || ''}
-            image={clinic.images?.[0]}
-            rating={clinic.rating}
-            hours={clinic.hours || []}
-            specialHours={clinic.special_hours || []}
-            openOnPublicHolidays={clinic.open_on_public_holidays || false}
-          />
-        ))}
+        {clinics.map((clinic) => {
+          console.log(clinic);
+          return (
+            <ClinicCard
+              key={clinic.id}
+              slug={clinic.slug || ''}
+              name={clinic.name || ''}
+              address={clinic.address || ''}
+              phone={clinic.phone || ''}
+              postalCode={clinic.postal_code || ''}
+              state={clinic.state?.name || ''}
+              area={clinic.area?.name || ''}
+              image={clinic.images?.[0]}
+              rating={clinic.rating}
+              hours={clinic.hours || []}
+              specialHours={clinic.special_hours || []}
+              openOnPublicHolidays={clinic.open_on_public_holidays || false}
+            />
+          );
+        })}
       </div>
       <div className="mt-10 flex justify-center sm:mt-14">
         <Button variant="primary" size="large" asChild>
