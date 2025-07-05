@@ -238,7 +238,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
         <Container>
           {isJohorBahru && (
             <Prose className="mb-12 block lg:hidden">
-              <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} />
+              <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} area={areaData.name} />
             </Prose>
           )}
           <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
