@@ -275,7 +275,10 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                 </div>
                 {isJohorBahru && (
                   <Prose className="hidden lg:block">
-                    <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} />
+                    <AddBookingForm
+                      currentUrl={absoluteUrl(`/${state}/${area}`)}
+                      area={areaData.name}
+                    />
                   </Prose>
                 )}
               </div>
