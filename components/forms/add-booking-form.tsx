@@ -63,9 +63,10 @@ const TREATMENT_OPTIONS = [
 type Props = {
   clinicName?: string;
   currentUrl: string;
+  area?: string;
 };
 
-export default function AddBookingForm({ clinicName, currentUrl }: Props) {
+export default function AddBookingForm({ clinicName, currentUrl, area }: Props) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -141,7 +142,9 @@ export default function AddBookingForm({ clinicName, currentUrl }: Props) {
 
   return (
     <article className="mt-0">
-      <h2 className="mt-0">Book an Appointment {clinicName ? `with ${clinicName}` : ''}</h2>
+      <h2 className="mt-0">
+        Book an Appointment {clinicName ? `with ${clinicName}` : area ? `in ${area}` : ''}
+      </h2>
       <Card>
         <CardContent className="pt-6">
           <Form {...form}>
