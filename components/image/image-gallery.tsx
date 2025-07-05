@@ -99,13 +99,17 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
           <button
             onClick={handleClose}
-            className="absolute right-4 top-4 text-white hover:text-gray-300">
+            className="absolute right-4 top-4 z-10 text-white hover:text-gray-300">
             <X className="h-8 w-8" />
           </button>
-          <button onClick={handlePrev} className="absolute left-4 text-white hover:text-gray-300">
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 z-10 text-white hover:text-gray-300">
             <ChevronLeft className="h-12 w-12" />
           </button>
-          <button onClick={handleNext} className="absolute right-4 text-white hover:text-gray-300">
+          <button
+            onClick={handleNext}
+            className="absolute right-4 z-10 text-white hover:text-gray-300">
             <ChevronRight className="h-12 w-12" />
           </button>
           <div className="relative max-h-[90vh] max-w-[90vw]">

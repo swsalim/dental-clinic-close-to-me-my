@@ -9,6 +9,7 @@ import { siteConfig } from '@/config/site';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getAreaBySlug, getAreaListings, getAreaMetadataBySlug } from '@/helpers/areas';
+import { getStateMetadataBySlug } from '@/helpers/states';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
@@ -122,13 +123,14 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch area metadata and clinics data in parallel
-  const [areaMeta, areaData] = await Promise.all([
+  const [areaMeta, areaData, stateMeta] = await Promise.all([
     getAreaMetadataBySlug(area),
     getAreaBySlug(area, from, to),
+    getStateMetadataBySlug(state),
   ]);
 
   // Early validation
-  if (!areaMeta || !areaData) {
+  if (!areaMeta || !areaData || !stateMeta) {
     notFound();
   }
 
@@ -234,7 +236,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
           </div>
         </Container>
       </Wrapper>
-      <Wrapper>
+      <Wrapper size="sm">
         <Container>
           {isJohorBahru && (
             <Prose className="mb-12 block lg:hidden">
@@ -317,6 +319,27 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
               </div>
             </div>
           )}
+        </Container>
+      </Wrapper>
+
+      <Wrapper size="sm">
+        <Container>
+          <div className="flex flex-col gap-y-6">
+            <h2 className="text-balance text-xl font-bold md:text-2xl">
+              Dental Clinics near {areaData.name}, {areaData.state?.name}
+            </h2>
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+              {stateMeta.areas?.map((area) => (
+                <h3 className="text-balance text-base font-medium" key={area.slug}>
+                  <Link
+                    href={absoluteUrl(`/${state}/${area.slug}`)}
+                    className="py-1 hover:border-transparent">
+                    {area.name}, {area.state?.name}
+                  </Link>
+                </h3>
+              ))}
+            </div>
+          </div>
         </Container>
       </Wrapper>
     </>

@@ -291,7 +291,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             backgroundRepeat: 'no-repeat',
             position: 'relative',
           }}
-          className="h-56 before:absolute before:inset-0 before:bg-black/50 before:content-[''] md:h-96"></Wrapper>
+          className="h-56 md:h-96"></Wrapper>
       )}
       <Wrapper className="pb-0 md:pb-0">
         <Container>

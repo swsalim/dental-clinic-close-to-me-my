@@ -32,12 +32,12 @@ export async function ExploreStates() {
     <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
       <Container>
         <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
-          <span className="text-base font-semibold uppercase text-red-500">Popular States</span>
           <h2 className="text-balance text-3xl font-black">
-            Explore dental clinics in popular states
+            Top States for Dental Clinics in Malaysia
           </h2>
-          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-            We&apos;ve compiled a list of dental clinics in these locations.
+          <p className="text-lg font-medium text-gray-500 dark:text-gray-300">
+            Looking for dental care? Start by exploring the most popular states below, featuring
+            top-rated clinics.
           </p>
         </div>
         <ExploreStatesClient states={sortedStates} />

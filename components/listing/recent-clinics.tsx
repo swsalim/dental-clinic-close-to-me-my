@@ -7,12 +7,11 @@ export function RecentClinics() {
     <Wrapper>
       <Container>
         <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
-          <span className="text-base font-semibold uppercase text-red-500">Recent Clinics</span>
           <h2 className="text-balance text-3xl font-black">
-            Explore the latest dental clinics in Malaysia
+            Discover best dental clinics near you
           </h2>
-          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-            We&apos;ve compiled a list of the latest dental clinics in Malaysia.
+          <p className="text-lg font-medium text-gray-500 dark:text-gray-300">
+            Browse verified reviews, clinic hours, and contact details to book your visit.
           </p>
         </div>
         <RecentClinicsList />
