@@ -57,7 +57,7 @@ function Map({
 }) {
   return (
     <>
-      <h2>Map</h2>
+      <h2 className="mt-0">Map</h2>
 
       <div className="mb-6 mt-2">
         <MapWrapper
@@ -439,16 +439,16 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               {parsedClinic.services && (
                 <article className="block lg:hidden">
                   <h2>Services</h2>
-                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+                  <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 md:grid-cols-6">
                     {parsedClinic.services.map((service, index) => (
                       <div
                         key={service.slug ?? service.name ?? String(index)}
                         tabIndex={0}
                         aria-label={service.name}
-                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
+                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-3 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
                         role="button">
                         {getServiceIcon(service.slug ?? '')}
-                        <div className="mt-4 text-center text-base">{service.name}</div>
+                        <div className="mt-4 text-center text-xs">{service.name}</div>
                       </div>
                     ))}
                   </div>
@@ -484,24 +484,6 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             </Prose>
             <aside>
               <Prose>
-                {parsedClinic.services && (
-                  <div className="hidden lg:block">
-                    <h2 className="mt-0">Services</h2>
-                    <div className="grid grid-cols-2 gap-4">
-                      {parsedClinic.services.map((service, index) => (
-                        <div
-                          key={service.slug ?? service.name ?? String(index)}
-                          tabIndex={0}
-                          aria-label={service.name}
-                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
-                          role="button">
-                          {getServiceIcon(service.slug ?? '')}
-                          <div className="mt-4 text-center text-sm">{service.name}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
                 <article className="hidden lg:block">
                   <Map
                     latitude={parsedClinic.latitude ?? 0}
@@ -509,6 +491,25 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     name={parsedClinic.name ?? ''}
                   />
                 </article>
+
+                {parsedClinic.services && (
+                  <div className="hidden lg:block">
+                    <h2 className="">Services</h2>
+                    <div className="grid grid-cols-3 gap-4">
+                      {parsedClinic.services.map((service, index) => (
+                        <div
+                          key={service.slug ?? service.name ?? String(index)}
+                          tabIndex={0}
+                          aria-label={service.name}
+                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-3 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
+                          role="button">
+                          {getServiceIcon(service.slug ?? '')}
+                          <div className="mt-4 text-center text-xs">{service.name}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </Prose>
             </aside>
           </div>

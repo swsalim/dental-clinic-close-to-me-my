@@ -341,10 +341,12 @@ SELECT insert_areas_for_state('kedah', '[
   {"name": "Langkawi", "slug": "langkawi"},
   {"name": "Baling", "slug": "baling"},
   {"name": "Jitra", "slug": "jitra"},
+  {"name": "Gurun", "slug": "gurun"},
   {"name": "Yan", "slug": "yan"},
   {"name": "Pendang", "slug": "pendang"},
   {"name": "Kuala Kedah", "slug": "kuala-kedah"},
-  {"name": "Pokok Sena", "slug": "pokok-sena"}
+  {"name": "Pokok Sena", "slug": "pokok-sena"},
+  {"name": "Kuala Nerang", "slug": "kuala-nerang"}
 ]'::jsonb);
 
 SELECT insert_areas_for_state('kelantan', '[
@@ -410,7 +412,8 @@ SELECT insert_areas_for_state('penang', '[
   {"name": "Nibong Tebal", "slug": "nibong-tebal"},
   {"name": "Tanjung Bungah", "slug": "tanjung-bungah"},
   {"name": "Ayer Itam", "slug": "ayer-itam"},
-  {"name": "Balik Pulau", "slug": "balik-pulau"}
+  {"name": "Balik Pulau", "slug": "balik-pulau"},
+  {"name": "Seberang Perai Utara", "slug": "seberang-perai-utara"}
 ]'::jsonb);
 
 SELECT insert_areas_for_state('perak', '[

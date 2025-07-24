@@ -49,7 +49,10 @@ export async function generateMetadata({
     .map((area) => area.name)
     .join(', ');
 
-  const title = `Top Dental Clinics in ${stateData.name}`;
+  const currentDate = new Date();
+  const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
+  const currentYear = currentDate.getFullYear();
+  const title = `Top ${stateData.clinics?.length} Dental Clinics in ${stateData.name} [${currentMonth} ${currentYear}]`;
   const description = `Explore ${stateData.clinics?.length} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}`)

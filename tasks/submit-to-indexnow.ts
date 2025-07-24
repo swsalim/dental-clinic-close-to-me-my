@@ -28,6 +28,14 @@ class IndexNowSubmitter {
   private baseUrl: string;
   private publicDir: string;
 
+  // Configuration for streaming mode
+  private readonly STREAMING_CONFIG = {
+    batchSize: 1, // Submit one URL at a time for true streaming
+    delayBetweenSubmissions: 2000, // 2 seconds delay between submissions
+    maxRetries: 3, // Maximum retry attempts for failed submissions
+    retryDelay: 5000, // 5 seconds delay before retry
+  };
+
   constructor() {
     this.apiKey = this.loadApiKey();
     this.baseUrl = this.getBaseUrl();
@@ -102,69 +110,117 @@ class IndexNowSubmitter {
     return urls;
   }
 
+  private async submitSingleUrl(url: string, attempt: number = 1): Promise<boolean> {
+    try {
+      const response = await axios.post<IndexNowResponse>(
+        'https://api.indexnow.org/indexnow',
+        {
+          host: new URL(this.baseUrl).host,
+          key: this.apiKey,
+          keyLocation: 'https://www.dentalclinicclosetome.my/ac7d2e0216af47318d6a6ec99f3b5921.txt',
+          urlList: [url],
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        },
+      );
+
+      if (response.status === 200) {
+        return true;
+      } else {
+        console.log(`⚠️ Attempt ${attempt} returned status: ${response.status}`);
+        return false;
+      }
+    } catch (error) {
+      console.error(`❌ Attempt ${attempt} failed:`, error);
+      if (axios.isAxiosError(error)) {
+        console.error('Response data:', error.response?.data);
+      }
+      return false;
+    }
+  }
+
   private async submitToIndexNow(urls: string[]): Promise<void> {
     if (urls.length === 0) {
       console.log('No URLs to submit');
       return;
     }
 
-    // IndexNow has a limit of 10,000 URLs per submission
-    const batchSize = 10000;
+    // Streaming mode: Submit URLs individually or in very small batches
+    // Use a much smaller batch size to avoid server overload
+    const batchSize = this.STREAMING_CONFIG.batchSize;
     const batches = [];
 
     for (let i = 0; i < urls.length; i += batchSize) {
       batches.push(urls.slice(i, i + batchSize));
     }
 
-    console.log(`Submitting ${urls.length} URLs in ${batches.length} batch(es)`);
-    console.log(this.apiKey);
-    console.log(this.baseUrl);
-    console.log(new URL(this.baseUrl).host);
+    console.log(`🔄 Streaming ${urls.length} URLs individually (streaming mode)`);
+    console.log(`🔑 API Key: ${this.apiKey.substring(0, 8)}...`);
+    console.log(`🌐 Host: ${new URL(this.baseUrl).host}`);
+
+    let successCount = 0;
+    let errorCount = 0;
 
     for (let i = 0; i < batches.length; i++) {
       const batch = batches[i];
-      console.log(`Submitting batch ${i + 1}/${batches.length} with ${batch.length} URLs`);
+      const url = batch[0]; // Since batch size is 1
 
-      try {
-        const response = await axios.post<IndexNowResponse>(
-          'https://api.indexnow.org/indexnow',
-          {
-            host: new URL(this.baseUrl).host,
-            key: this.apiKey,
-            keyLocation:
-              'https://www.dentalclinicclosetome.my/ac7d2e0216af47318d6a6ec99f3b5921.txt',
-            urlList: batch,
-          },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          },
-        );
+      console.log(`📤 Submitting URL ${i + 1}/${urls.length}: ${url}`);
 
-        if (response.status === 200) {
-          console.log(`✅ Batch ${i + 1} submitted successfully`);
-        } else {
-          console.log(`⚠️ Batch ${i + 1} returned status: ${response.status}`);
-        }
-      } catch (error) {
-        console.error(`❌ Error submitting batch ${i + 1}:`, error);
-        if (axios.isAxiosError(error)) {
-          console.error('Response data:', error.response?.data);
+      let success = false;
+      let attempts = 0;
+
+      // Retry logic for failed submissions
+      while (!success && attempts < this.STREAMING_CONFIG.maxRetries) {
+        attempts++;
+        success = await this.submitSingleUrl(url, attempts);
+
+        if (!success && attempts < this.STREAMING_CONFIG.maxRetries) {
+          console.log(
+            `🔄 Retrying in ${this.STREAMING_CONFIG.retryDelay}ms... (attempt ${attempts + 1}/${this.STREAMING_CONFIG.maxRetries})`,
+          );
+          await new Promise((resolve) => setTimeout(resolve, this.STREAMING_CONFIG.retryDelay));
         }
       }
 
-      // Add a small delay between batches to be respectful to the API
+      if (success) {
+        successCount++;
+        console.log(
+          `✅ URL ${i + 1} submitted successfully${attempts > 1 ? ` (after ${attempts} attempts)` : ''}`,
+        );
+      } else {
+        errorCount++;
+        console.log(`❌ URL ${i + 1} failed after ${attempts} attempts`);
+      }
+
+      // Add a delay between each submission to be respectful to the API
+      // This is crucial for streaming mode to prevent server overload
       if (i < batches.length - 1) {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        const delay = this.STREAMING_CONFIG.delayBetweenSubmissions;
+        console.log(`⏳ Waiting ${delay}ms before next submission...`);
+        await new Promise((resolve) => setTimeout(resolve, delay));
       }
     }
+
+    console.log(`\n📊 Streaming Results:`);
+    console.log(`✅ Successful submissions: ${successCount}`);
+    console.log(`❌ Failed submissions: ${errorCount}`);
+    console.log(`📈 Success rate: ${((successCount / urls.length) * 100).toFixed(2)}%`);
   }
 
   public async submitAllUrls(): Promise<void> {
     console.log('🚀 Starting IndexNow submission process...');
     console.log(`📍 Base URL: ${this.baseUrl}`);
     console.log(`🔑 API Key: ${this.apiKey.substring(0, 8)}...`);
+    console.log(
+      `⚙️ Streaming Mode: Enabled (${this.STREAMING_CONFIG.batchSize} URL per submission)`,
+    );
+    console.log(`⏱️ Delay between submissions: ${this.STREAMING_CONFIG.delayBetweenSubmissions}ms`);
+    console.log(`🔄 Max retries per URL: ${this.STREAMING_CONFIG.maxRetries}`);
+    console.log('');
 
     const allUrls: string[] = [];
 
@@ -174,6 +230,9 @@ class IndexNowSubmitter {
       if (!mainSitemapContent) {
         throw new Error('Could not fetch main sitemap');
       }
+
+      console.log('mainSitemapContent');
+      console.log(mainSitemapContent);
 
       const sitemapIndex = this.parseSitemapIndex(mainSitemapContent);
       console.log(`📋 Found ${sitemapIndex.sitemap.length} sitemaps in index`);
@@ -202,6 +261,13 @@ class IndexNowSubmitter {
       // Remove duplicates
       const uniqueUrls = [...new Set(allUrls)];
       console.log(`\n📊 Total unique URLs found: ${uniqueUrls.length}`);
+
+      // Estimate total time
+      const estimatedTimeMinutes = Math.ceil(
+        (uniqueUrls.length * this.STREAMING_CONFIG.delayBetweenSubmissions) / 60000,
+      );
+      console.log(`⏰ Estimated completion time: ~${estimatedTimeMinutes} minutes`);
+      console.log('');
 
       // Submit to IndexNow
       await this.submitToIndexNow(uniqueUrls);

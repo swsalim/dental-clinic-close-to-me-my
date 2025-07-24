@@ -48,7 +48,10 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
     notFound();
   }
 
-  const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state.name}`;
+  const currentDate = new Date();
+  const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
+  const currentYear = currentDate.getFullYear();
+  const title = `Top ${areaData.clinics?.length} Dental Clinics in ${areaData.name}, ${areaData.state.name} [${currentMonth} ${currentYear}]`;
   const description = `Explore ${areaData.clinics?.length} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}/${area}`)
