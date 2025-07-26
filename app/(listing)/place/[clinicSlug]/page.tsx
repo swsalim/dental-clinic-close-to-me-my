@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { ClinicDetails, ClinicHours } from '@/types/clinic';
 import {
   AwardIcon,
+  CarIcon,
   FacebookIcon,
   GlobeIcon,
   InstagramIcon,
@@ -398,6 +399,19 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                         </a>
                       </Button>
                     )}
+                    {/* add a button with a map icon that opens the map in a new tab and show directions to the clinic */}
+                    <Button
+                      variant="outline"
+                      asChild
+                      className="flex-grow-0 justify-center p-3 text-brand hover:text-brand">
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${parsedClinic.name}`}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        aria-label="Visit business on Google Maps">
+                        <CarIcon className="h-5 w-5" />
+                      </a>
+                    </Button>
                   </div>
                 )}
               </div>
