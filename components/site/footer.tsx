@@ -18,7 +18,8 @@ export default function Footer() {
               <img
                 src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747782156422x193143061268857820/pB-Badge-dark.png"
                 alt="Featured on ProductBurst"
-                width="160"
+                width="147"
+                height="34"
               />
             </a>
           </div>
@@ -26,14 +27,15 @@ export default function Footer() {
             <a href="https://fazier.com/launches/www.dentalclinicclosetome.my" target="_blank">
               <img
                 src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
-                width="250"
+                width="170"
+                height="34"
                 alt="Fazier badge"
               />
             </a>
           </div>
           <div>
             <a href="https://liiinks.net" target="_blank">
-              <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+              <svg width="102" height="34" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
                 <rect width="120" height="40" rx="8" fill="#667eea" />
                 <text
                   x="60"
@@ -52,8 +54,21 @@ export default function Footer() {
               <img
                 src="https://theindiewall.net/indiewall.svg"
                 alt="IndieWall"
-                width="120"
-                height="60"
+                width="68"
+                height="34"
+              />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://turbo0.com/item/dental-clinics-malaysia"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                src="https://img.turbo0.com/badge-listed-light.svg"
+                alt="Listed on Turbo0"
+                height="34"
+                width="101"
               />
             </a>
           </div>
