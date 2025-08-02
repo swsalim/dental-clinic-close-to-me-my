@@ -68,7 +68,7 @@ export default async function DashboardDoctorsPage() {
       bio,
       specialty,
       status,
-      image,
+      images,
       featured_video,
       is_active,
       is_featured,
@@ -78,6 +78,8 @@ export default async function DashboardDoctorsPage() {
       )`,
     )
     .order('created_at', { ascending: false });
+
+  console.log('data', data);
 
   // Transform nested clinic_doctor_relations to flat clinics array
   const doctors =

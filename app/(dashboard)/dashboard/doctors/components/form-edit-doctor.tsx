@@ -79,12 +79,13 @@ const doctorProfileSchema = z.object({
   slug: z.string(),
   bio: z.string().optional(),
   specialty: z.string().optional(),
+  qualification: z.string().optional(),
   status: z.string().optional(),
-  image: z.any().optional(),
+  images: z.array(z.any()).optional(),
   featured_video: z.string().optional(),
   is_active: z.boolean(),
   is_featured: z.boolean(),
-  selectedClinics: z.array(z.object({ clinic_id: z.string() })),
+  selectedClinics: z.array(z.object({ clinic_id: z.string(), clinic_slug: z.string() })),
 });
 
 type FormData = z.infer<typeof doctorProfileSchema>;
@@ -93,8 +94,8 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
   const router = useRouter();
   const supabase = createClient();
 
-  const [currentImage, setCurrentImage] = useState<string>(doctor.image || '');
-  const [imageToRemove, setImageToRemove] = useState<string>('');
+  const [currentImages, setCurrentImages] = useState<string[]>(doctor.images || []);
+  const [imagesToRemove, setImagesToRemove] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [cloudinaryUploadUrl] = useState(
     `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME}/upload`,
@@ -107,30 +108,33 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
       slug: doctor.slug || '',
       bio: doctor.bio || '',
       specialty: doctor.specialty || '',
+      qualification: doctor.qualification || '',
       status: doctor.status || '',
-      image: '',
+      images: [],
       featured_video: doctor.featured_video || '',
       is_active: doctor.is_active || false,
       is_featured: doctor.is_featured || false,
       selectedClinics:
         doctor.clinics?.map((clinic) => ({
           clinic_id: clinic.id,
+          clinic_slug: clinic.slug,
         })) || [],
     },
     mode: 'onChange',
   });
 
   const { reset } = form;
-  const watchImage = form.watch('image');
+  const watchImages = form.watch('images');
 
-  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleImagesChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files?.length) return;
-    const files = Array.from(e.target.files)[0];
-    form.setValue('image', files);
+    const files = Array.from(e.target.files);
+    form.setValue('images', files);
   };
 
-  const handleImageRemove = () => {
-    form.setValue('image', '');
+  const handleImageRemove = (indexToRemove: number) => {
+    const updatedImages = (watchImages || []).filter((_, idx) => idx !== indexToRemove);
+    form.setValue('images', updatedImages);
   };
 
   const handleCloudinaryImageRemove = (e: React.MouseEvent, imageToRemove: string) => {
@@ -146,56 +150,62 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
       return;
     }
 
-    setCurrentImage('');
-    setImageToRemove(publicId);
+    const filterImages = currentImages.filter((image) => image !== imageToRemove);
+    setCurrentImages(filterImages);
+    setImagesToRemove((prev) => [...prev, publicId]);
   };
 
-  const renderImage = (image: string | File, isCurrentImage = false) => {
-    let imageSrc: string;
-    if (!isCurrentImage && typeof window !== 'undefined' && image instanceof window.File) {
-      imageSrc = URL.createObjectURL(image);
-    } else if (typeof image === 'string') {
-      imageSrc = image;
-    } else {
-      return null;
-    }
-
+  const renderImages = (images: (string | File)[], isCurrentImage = false) => {
     return (
-      <div>
-        <div className="aspect-h-3 aspect-w-4 relative w-fit overflow-hidden rounded-md shadow-md">
-          {!isCurrentImage && (
-            <button
-              type="button"
-              className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
-              onClick={() => handleImageRemove()}
-              aria-label="Remove image"
-              tabIndex={0}>
-              <XIcon className="mx-auto h-6 w-6" />
-            </button>
-          )}
-          {isCurrentImage && (
-            <button
-              type="button"
-              className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
-              onClick={(e) => handleCloudinaryImageRemove(e, imageSrc)}
-              aria-label="Remove image"
-              tabIndex={0}>
-              <XIcon className="mx-auto h-6 w-6" />
-            </button>
-          )}
-          {!isCurrentImage && (
-            <Image
-              src={imageSrc}
-              alt="Image preview"
-              width={600}
-              height={600}
-              className="object-cover"
-            />
-          )}
-          {isCurrentImage && (
-            <ImageCloudinary src={imageSrc} alt="Image preview" className="object-cover" />
-          )}
-        </div>
+      <div className="mt-4 grid grid-cols-4 gap-4">
+        {images.map((image, index) => {
+          let imageSrc: string;
+          if (!isCurrentImage && typeof window !== 'undefined' && image instanceof window.File) {
+            imageSrc = URL.createObjectURL(image);
+          } else if (typeof image === 'string') {
+            imageSrc = image;
+          } else {
+            return null;
+          }
+          return (
+            <div key={index}>
+              <div className="aspect-h-3 aspect-w-4 relative overflow-hidden rounded-md shadow-md">
+                {!isCurrentImage && (
+                  <button
+                    type="button"
+                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+                    onClick={() => handleImageRemove(index)}
+                    aria-label="Remove image"
+                    tabIndex={0}>
+                    <XIcon className="mx-auto h-6 w-6" />
+                  </button>
+                )}
+                {isCurrentImage && (
+                  <button
+                    type="button"
+                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+                    onClick={(e) => handleCloudinaryImageRemove(e, imageSrc)}
+                    aria-label="Remove image"
+                    tabIndex={0}>
+                    <XIcon className="mx-auto h-6 w-6" />
+                  </button>
+                )}
+                {!isCurrentImage && (
+                  <Image
+                    src={imageSrc}
+                    alt="Image preview"
+                    width={600}
+                    height={600}
+                    className="object-cover"
+                  />
+                )}
+                {isCurrentImage && (
+                  <ImageCloudinary src={imageSrc} alt="Image preview" className="object-cover" />
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
   };
@@ -208,13 +218,15 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
       } = await supabase.auth.getUser();
       if (!user) throw new Error('User not found');
 
+      console.log('imagesToRemove', imagesToRemove);
+
       // Delete removed images from Cloudinary
-      if (imageToRemove) {
+      for (const image of imagesToRemove) {
         try {
           await fetch('/api/delete-image', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ public_id: imageToRemove }),
+            body: JSON.stringify({ public_id: image }),
           });
         } catch (error) {
           console.error(error);
@@ -223,25 +235,28 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
       }
 
       // Upload new images
-      let newImage: string = '';
-      if (watchImage) {
-        if (typeof window !== 'undefined' && window.File && watchImage instanceof window.File) {
-          const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET_PERSON;
-          if (uploadPreset) {
-            const formData = new FormData();
-            formData.append('upload_preset', uploadPreset);
-            formData.append('file', watchImage);
-            try {
-              const response = await fetch(cloudinaryUploadUrl, {
-                method: 'POST',
-                body: formData,
-              });
-              const uploadData = await response.json();
-              const imageUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME}/image/upload/f_auto,q_auto/${uploadData.public_id}.${uploadData.format}`;
-              newImage = imageUrl;
-            } catch (error) {
-              console.error(error);
-              return null;
+      const newImages: string[] = [];
+      if (watchImages && watchImages.length > 0) {
+        for (let i = 0; i < watchImages.length; i++) {
+          const file = watchImages[i];
+          if (typeof window !== 'undefined' && window.File && file instanceof window.File) {
+            const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET_PERSON;
+            if (uploadPreset) {
+              const formData = new FormData();
+              formData.append('upload_preset', uploadPreset);
+              formData.append('file', file);
+              try {
+                const response = await fetch(cloudinaryUploadUrl, {
+                  method: 'POST',
+                  body: formData,
+                });
+                const uploadData = await response.json();
+                const imageUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME}/image/upload/f_auto,q_auto/${uploadData.public_id}.${uploadData.format}`;
+                newImages.push(imageUrl);
+              } catch (error) {
+                console.error(error);
+                return null;
+              }
             }
           }
         }
@@ -249,7 +264,7 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
 
       const finalData = {
         ...data,
-        image: newImage,
+        images: [...currentImages, ...newImages],
       };
 
       // Update doctor information
@@ -262,7 +277,8 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
           slug: finalData.slug,
           specialty: finalData.specialty,
           status: finalData.status,
-          image: finalData.image || currentImage,
+          qualification: finalData.qualification,
+          images: finalData.images || currentImages,
           featured_video: finalData.featured_video,
           is_active: finalData.is_active,
           is_featured: finalData.is_featured,
@@ -304,15 +320,15 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
         // Get the updated doctor's clinics from the database
         const { data: updatedSelectedClinicsData } = await supabase
           .from('clinic_doctor_relations')
-          .select('clinic_id')
+          .select('clinic:clinics(id, slug)')
           .eq('doctor_id', doctor.id);
 
         // Map the clinics back to the clinic format
-        const updatedSelectedClinics = updatedSelectedClinicsData?.map(
-          (c: { clinic_id: string }) => ({
-            clinic_id: c.clinic_id,
-          }),
-        );
+        const updatedSelectedClinics =
+          updatedSelectedClinicsData?.map((c) => ({
+            clinic_id: (c as unknown as { clinic: { id: string; slug: string } }).clinic.id,
+            clinic_slug: (c as unknown as { clinic: { id: string; slug: string } }).clinic.slug,
+          })) || [];
 
         // Update the form with the new data
         reset({
@@ -320,8 +336,9 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
           slug: updatedDoctor.slug || '',
           bio: updatedDoctor.bio || '',
           specialty: updatedDoctor.specialty || '',
+          qualification: updatedDoctor.qualification || '',
           status: updatedDoctor.status || '',
-          image: '',
+          images: [],
           featured_video: updatedDoctor.featured_video || '',
           is_active: updatedDoctor.is_active || false,
           is_featured: updatedDoctor.is_featured || false,
@@ -330,7 +347,7 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
         });
 
         // Update the current images state
-        setCurrentImage(updatedDoctor.image || '');
+        setCurrentImages(updatedDoctor.images || []);
       }
 
       toast({
@@ -338,7 +355,7 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
         description: 'Doctor updated successfully',
       });
 
-      setImageToRemove('');
+      setImagesToRemove([]);
       router.refresh();
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Failed to update doctor';
@@ -412,6 +429,30 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
                 />
               </div>
 
+              <div className="col-span-6">
+                <FormField
+                  control={form.control}
+                  name="qualification"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="block">Qualification</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          advanced
+                          placeholder="Type the doctor qualification here."
+                          rows={5}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormDescription>
+                        Enter the doctor&apos;s qualifications and certifications.
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
               <div className="col-span-6 sm:col-span-5">
                 <FormField
                   control={form.control}
@@ -470,26 +511,26 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
                 />
               </div>
 
-              {currentImage && (
+              {currentImages.length > 0 && (
                 <div className="col-span-6">
-                  <h3>Current Image</h3>
-                  {renderImage(currentImage, true)}
+                  <h3>Current Images</h3>
+                  {renderImages(currentImages, true)}
                 </div>
               )}
               <div className="col-span-6">
                 <FormField
                   control={form.control}
-                  name="image"
+                  name="images"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Image</FormLabel>
+                      <FormLabel>Images</FormLabel>
                       <FormControl>
                         <File
-                          id="image"
+                          id="images"
                           {...field}
                           value=""
                           onChange={(e) => {
-                            handleImageChange(e);
+                            handleImagesChange(e);
                           }}
                         />
                       </FormControl>
@@ -498,7 +539,7 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
                     </FormItem>
                   )}
                 />
-                {watchImage && renderImage(watchImage)}
+                {watchImages && renderImages(watchImages)}
               </div>
             </div>
           </div>
@@ -541,15 +582,19 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
                             <CommandGroup className="max-h-[250px] overflow-auto">
                               {clinics.map((clinic) => (
                                 <CommandItem
-                                  value={clinic.id}
+                                  value={clinic.slug}
                                   key={clinic.id}
                                   onSelect={() => {
+                                    const clinicSlug = clinic.slug;
                                     const clinicId = clinic.id;
                                     const newValue = field.value?.some(
                                       (item) => item.clinic_id === clinicId,
                                     )
                                       ? field.value.filter((item) => item.clinic_id !== clinicId)
-                                      : [...(field.value || []), { clinic_id: clinicId }];
+                                      : [
+                                          ...(field.value || []),
+                                          { clinic_id: clinicId, clinic_slug: clinicSlug },
+                                        ];
                                     field.onChange(newValue);
                                   }}>
                                   <CheckIcon
@@ -581,6 +626,7 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
                                   key={selectedClinic.clinic_id}
                                   className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
                                   <span>{clinic?.name}</span>
+                                  <pre>{JSON.stringify(selectedClinic, null, 2)}</pre>
                                   <Button
                                     type="button"
                                     variant="ghost"

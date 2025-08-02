@@ -62,30 +62,32 @@ export function DataTableRowActions<TData extends DoctorTableData>({
       if (error) throw error;
 
       // Only delete images after successful doctor deletion
-      if (doctor.image) {
-        try {
-          // Extract fileId from ImageKit URL
-          const public_id = getCloudinaryPublicId(doctor.image);
-          if (public_id) {
-            const response = await fetch('/api/delete-image', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                public_id,
-              }),
-            });
+      if (doctor.images && doctor.images.length > 0) {
+        for (const image of doctor.images) {
+          try {
+            // Extract fileId from ImageKit URL
+            const public_id = getCloudinaryPublicId(image);
+            if (public_id) {
+              const response = await fetch('/api/delete-image', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  public_id,
+                }),
+              });
 
-            if (!response.ok) {
-              const error = await response.json();
-              console.error('Delete image error:', error);
-              throw new Error(error.error || 'Failed to delete image');
+              if (!response.ok) {
+                const error = await response.json();
+                console.error('Delete image error:', error);
+                throw new Error(error.error || 'Failed to delete image');
+              }
             }
+          } catch (error) {
+            console.error('Error deleting image:', error);
+            // Continue with other images even if one fails
           }
-        } catch (error) {
-          console.error('Error deleting image:', error);
-          // Continue with other images even if one fails
         }
       }
 

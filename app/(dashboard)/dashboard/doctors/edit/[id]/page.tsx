@@ -61,7 +61,7 @@ export default async function EditDoctorPage({ params }: { params: Promise<{ id:
     supabase
       .from('clinic_doctors')
       .select(
-        'id, name, slug, bio, specialty, image, featured_video, is_active, is_featured, status, clinic_doctor_relations (clinic_id, clinics (id, name, slug))',
+        'id, name, slug, bio, specialty, images, qualification, featured_video, is_active, is_featured, status, clinic_doctor_relations (clinic_id, clinics (id, name, slug))',
       )
       .match({ id })
       .single(),
