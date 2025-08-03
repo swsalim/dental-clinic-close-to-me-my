@@ -70,6 +70,7 @@ export interface ClinicDoctor {
         neighborhood: string | null;
         postal_code: string | null;
         phone: string | null;
+        email: string | null;
         latitude: number | null;
         longitude: number | null;
         rating: number | null;

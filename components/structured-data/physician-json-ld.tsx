@@ -1,9 +1,10 @@
 import JsonLd from './json-ld';
 
 interface Location {
-  town: string;
+  area: string;
+  state: string;
   country: string;
-  zipcode: string;
+  postal_code: string;
   address: string;
 }
 
@@ -17,7 +18,7 @@ interface Clinic {
   url: string;
 }
 
-interface PhysicianJsonLdProps {
+interface DentistJsonLdProps {
   name: string;
   photo: string;
   clinic: Clinic;
@@ -29,7 +30,7 @@ interface PhysicianJsonLdProps {
   email: string | undefined | null;
 }
 
-export default function PhysicianJsonLd({
+export default function DentistJsonLd({
   name,
   photo,
   clinic,
@@ -39,28 +40,34 @@ export default function PhysicianJsonLd({
   coordinate,
   phone,
   email,
-}: PhysicianJsonLdProps) {
+}: DentistJsonLdProps) {
   return (
-    <JsonLd id="physician-jsonld">
+    <JsonLd id="dentist-jsonld">
       {{
         '@context': 'https://schema.org',
-        '@type': 'Physician',
+        '@type': 'Dentist',
         name,
         image: photo,
         url,
-        hospitalAffiliation: {
-          '@type': 'Hospital',
+        priceRange: '$$',
+        paymentAccepted: 'Cash, Credit Cards, PayNow',
+        telephone: phone,
+        email,
+        smokingAllowed: false,
+        memberOf: {
+          '@type': 'MedicalOrganization',
+          '@id': clinic.url,
           name: clinic.name,
           address: {
             '@type': 'PostalAddress',
-            addressLocality: location.town,
-            addressCountry: location.country,
-            postalCode: location.zipcode,
+            addressLocality: location.area,
+            addressRegion: location.state,
+            postalCode: location.postal_code,
             streetAddress: location.address,
-          },
-          areaServed: {
-            '@type': 'Place',
-            name: location.town,
+            addressCountry: {
+              '@type': 'Country',
+              name: location.country,
+            },
           },
           url: clinic.url,
         },
@@ -70,21 +77,20 @@ export default function PhysicianJsonLd({
         },
         address: {
           '@type': 'PostalAddress',
-          addressLocality: location.town,
-          addressCountry: location.country,
-          postalCode: location.zipcode,
+          addressLocality: location.area,
+          addressRegion: location.state,
+          postalCode: location.postal_code,
           streetAddress: location.address,
+          addressCountry: {
+            '@type': 'Country',
+            name: location.country,
+          },
         },
         geo: {
           '@type': 'GeoCoordinates',
           latitude: coordinate.lat,
           longitude: coordinate.long,
         },
-        priceRange: '$$',
-        paymentAccepted: 'Cash, Credit Cards, PayNow',
-        telephone: phone,
-        email,
-        smokingAllowed: false,
       }}
     </JsonLd>
   );

@@ -574,7 +574,6 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                                   key={selectedClinic.clinic_id}
                                   className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
                                   <span>{clinic?.name}</span>
-                                  <pre>{JSON.stringify(selectedClinic, null, 2)}</pre>
                                   <Button
                                     type="button"
                                     variant="ghost"

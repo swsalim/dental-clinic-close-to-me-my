@@ -22,10 +22,12 @@ import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
+import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
+import DoctorPractice from '@/components/listing/doctor-practice';
 import NearbyClinics from '@/components/listing/nearby-clinics';
 import Reviews from '@/components/listing/reviews';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
@@ -532,6 +534,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     name={parsedClinic.name ?? ''}
                   />
                 </article>
+
+                <DoctorPractice clinicSlug={clinicSlug} />
+
+                <div>
+                  <LazyAdsSquare />
+                </div>
 
                 {parsedClinic.services && (
                   <div className="hidden lg:block">

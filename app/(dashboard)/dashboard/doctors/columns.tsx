@@ -16,26 +16,7 @@ import { DataTableRowActions } from './components/data-table-row-actions';
 
 export type DoctorTableData = Partial<ClinicDoctor>;
 
-export type DoctorTableDataWithClinics = DoctorTableData & {
-  clinics: {
-    id: string;
-    name: string;
-    slug: string;
-    address: string | null;
-    neighborhood: string | null;
-    postal_code: string | null;
-    phone: string | null;
-    latitude: number | null;
-    longitude: number | null;
-    rating: number | null;
-    review_count: number | null;
-    images: string[] | null;
-    area?: { name: string } | null;
-    state?: { name: string } | null;
-  }[];
-};
-
-export const columns: ColumnDef<DoctorTableDataWithClinics>[] = [
+export const columns: ColumnDef<DoctorTableData>[] = [
   {
     id: 'select',
     header: ({ table }) => (

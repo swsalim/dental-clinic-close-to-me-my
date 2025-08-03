@@ -45,43 +45,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { toast } from '@/components/ui/use-toast';
 
 interface EditDoctorFormProps {
-  doctor: Partial<ClinicDoctor> & {
-    clinics: {
-      id: string;
-      name: string;
-      slug: string;
-      address: string | null;
-      neighborhood: string | null;
-      postal_code: string | null;
-      phone: string | null;
-      latitude: number | null;
-      longitude: number | null;
-      rating: number | null;
-      review_count: number | null;
-      images: string[] | null;
-      area?: { name: string } | null;
-      state?: { name: string } | null;
-    }[];
-    clinic_doctor_relations: {
-      clinic_id: string;
-      clinics: {
-        id: string;
-        name: string;
-        slug: string;
-        address: string | null;
-        neighborhood: string | null;
-        postal_code: string | null;
-        phone: string | null;
-        latitude: number | null;
-        longitude: number | null;
-        rating: number | null;
-        review_count: number | null;
-        images: string[] | null;
-        area?: { name: string } | null;
-        state?: { name: string } | null;
-      };
-    }[];
-  };
+  doctor: Partial<ClinicDoctor>;
   clinics: {
     id: string;
     name: string;
@@ -651,7 +615,6 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
                                   key={selectedClinic.clinic_id}
                                   className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
                                   <span>{clinic?.name}</span>
-                                  <pre>{JSON.stringify(selectedClinic, null, 2)}</pre>
                                   <Button
                                     type="button"
                                     variant="ghost"

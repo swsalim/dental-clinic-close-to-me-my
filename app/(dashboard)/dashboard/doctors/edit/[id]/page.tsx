@@ -5,6 +5,8 @@ import { siteConfig } from '@/config/site';
 
 import { createServerClient } from '@/lib/supabase';
 
+import { DOCTOR_WITH_CLINICS_SELECT, transformDoctorData } from '@/helpers/doctors';
+
 // Remove unused import
 import { Separator } from '@/components/ui/separator';
 import { SidebarNav } from '@/components/ui/sidebar-nav';
@@ -59,13 +61,7 @@ export default async function EditDoctorPage({ params }: { params: Promise<{ id:
   const supabase = await createServerClient();
 
   const [{ data: doctorData }, { data: clinicsData }] = await Promise.all([
-    supabase
-      .from('clinic_doctors')
-      .select(
-        'id, name, slug, bio, specialty, images, qualification, featured_video, is_active, is_featured, status, clinic_doctor_relations (clinic_id, clinics (id, name, slug, address, neighborhood, postal_code, phone, latitude, longitude, rating, review_count, images, area:areas(name), state:states(name)))',
-      )
-      .match({ id })
-      .single(),
+    supabase.from('clinic_doctors').select(DOCTOR_WITH_CLINICS_SELECT).match({ id }).single(),
     supabase.from('clinics').select('id, name, slug'),
   ]);
 
@@ -73,31 +69,7 @@ export default async function EditDoctorPage({ params }: { params: Promise<{ id:
     notFound();
   }
 
-  const doctor = {
-    ...doctorData,
-    clinics: doctorData?.clinic_doctor_relations
-      ?.map(
-        (relation: {
-          clinics: {
-            id: string;
-            name: string;
-            slug: string;
-            address: string | null;
-            neighborhood: string | null;
-            postal_code: string | null;
-            phone: string | null;
-            latitude: number | null;
-            longitude: number | null;
-            rating: number | null;
-            review_count: number | null;
-            images: string[] | null;
-            area?: { name: string } | null;
-            state?: { name: string } | null;
-          };
-        }) => relation.clinics,
-      )
-      .filter(Boolean),
-  };
+  const doctor = transformDoctorData(doctorData);
 
   const sidebarNavItems = [
     {

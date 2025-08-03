@@ -2,44 +2,109 @@ import { ClinicDoctor } from '@/types/clinic';
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
+// Reusable column selection for doctor queries with clinic relations
+export const DOCTOR_WITH_CLINICS_SELECT = `
+  id,
+  name,
+  slug,
+  bio,
+  specialty,
+  qualification,
+  images,
+  featured_video,
+  is_active,
+  is_featured,
+  status,
+  created_at,
+  modified_at,
+  clinic_doctor_relations(
+    clinic_id,
+    clinics(
+      id,
+      name,
+      slug,
+      address,
+      neighborhood,
+      postal_code,
+      phone,
+      email,
+      latitude,
+      longitude,
+      rating,
+      review_count,
+      images,
+      area:areas(name),
+      state:states(name)
+    )
+  )
+`;
+
+// Type for raw doctor data from Supabase with clinic relations
+type RawDoctorWithClinics = {
+  id: string;
+  name: string;
+  slug: string;
+  bio: string | null;
+  specialty: string | null;
+  qualification: string | null;
+  images: string[] | null;
+  featured_video: string | null;
+  is_active: boolean | null;
+  is_featured: boolean | null;
+  status: string | null;
+  created_at: string | null;
+  modified_at: string | null;
+  clinic_doctor_relations?: {
+    clinics: {
+      id: string;
+      name: string;
+      slug: string;
+      address: string | null;
+      neighborhood: string | null;
+      postal_code: string | null;
+      phone: string | null;
+      email: string | null;
+      latitude: number | null;
+      longitude: number | null;
+      rating: number | null;
+      review_count: number | null;
+      images: string[] | null;
+      area?: { name: string } | null;
+      state?: { name: string } | null;
+    };
+  }[];
+};
+
+// Helper function to transform raw doctor data to ClinicDoctor type
+export function transformDoctorData(doctorData: RawDoctorWithClinics): ClinicDoctor {
+  const { clinic_doctor_relations, ...doctorDataWithoutRelations } = doctorData;
+  return {
+    ...doctorDataWithoutRelations,
+    clinics: clinic_doctor_relations?.map((relation) => relation.clinics).filter(Boolean) || [],
+  };
+}
+
+// Helper function to transform array of raw doctor data
+function transformDoctorsData(doctorsData: RawDoctorWithClinics[]): ClinicDoctor[] {
+  return doctorsData.map(transformDoctorData);
+}
+
 export async function getDoctorMetadataBySlug(slug: string, status: string = 'approved') {
   const supabase = await createAdminClient();
 
   const { data: doctorData } = (await supabase
     .from('clinic_doctors')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      bio,
-      specialty,
-      qualification,
-      images,
-      featured_video,
-      is_active,
-      is_featured,
-      status
-    `,
-    )
+    .select(DOCTOR_WITH_CLINICS_SELECT)
     .match({ slug, is_active: true, status })
     .single()) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-      bio: string | null;
-      specialty: string | null;
-      qualification: string | null;
-      images: string[] | null;
-      featured_video: string | null;
-      is_active: boolean | null;
-      is_featured: boolean | null;
-      status: string | null;
-    };
+    data: RawDoctorWithClinics;
   };
 
-  return doctorData ?? null;
+  if (!doctorData) {
+    return null;
+  }
+
+  return transformDoctorData(doctorData);
 }
 
 export async function getDoctorListings(status: string = 'approved') {
@@ -52,11 +117,7 @@ export async function getDoctorListings(status: string = 'approved') {
       id,
       name,
       slug,
-      specialty,
-      qualification,
-      images,
       is_active,
-      is_featured,
       status
     `,
     )
@@ -65,11 +126,7 @@ export async function getDoctorListings(status: string = 'approved') {
       id: string;
       name: string;
       slug: string;
-      specialty: string | null;
-      qualification: string | null;
-      images: string[] | null;
       is_active: boolean | null;
-      is_featured: boolean | null;
       status: string | null;
     }[];
   };
@@ -88,42 +145,7 @@ export async function getDoctorBySlug(
 
   const { data, error } = await supabase
     .from('clinic_doctors')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      bio,
-      specialty,
-      qualification,
-      images,
-      featured_video,
-      is_active,
-      is_featured,
-      status,
-      created_at,
-      modified_at,
-      clinic_doctor_relations(
-        clinic_id,
-        clinics(
-          id,
-          name,
-          slug,
-          address,
-          neighborhood,
-          postal_code,
-          phone,
-          latitude,
-          longitude,
-          rating,
-          review_count,
-          images,
-          area:areas(name),
-          state:states(name)
-        )
-      )
-    `,
-    )
+    .select(DOCTOR_WITH_CLINICS_SELECT)
     .match({ slug, is_active: true, status })
     .single();
 
@@ -136,35 +158,7 @@ export async function getDoctorBySlug(
     return null;
   }
 
-  // Transform the data to match ClinicDoctor type
-  const doctor: ClinicDoctor = {
-    ...data,
-    clinics:
-      data.clinic_doctor_relations
-        ?.map(
-          (relation: {
-            clinics: {
-              id: string;
-              name: string;
-              slug: string;
-              address: string | null;
-              neighborhood: string | null;
-              postal_code: string | null;
-              phone: string | null;
-              latitude: number | null;
-              longitude: number | null;
-              rating: number | null;
-              review_count: number | null;
-              images: string[] | null;
-              area?: { name: string } | null;
-              state?: { name: string } | null;
-            };
-          }) => relation.clinics,
-        )
-        .filter(Boolean) || [],
-  };
-
-  return doctor;
+  return transformDoctorData(data);
 }
 
 /**
@@ -177,31 +171,11 @@ export async function getDoctors(filters: {
   offset?: number;
 }) {
   const supabase = await createServerClient();
-  let query = supabase.from('clinic_doctors').select(
-    `
-      *,
-      clinic_doctor_relations(
-        clinic_id,
-        clinics(
-          id,
-          name,
-          slug,
-          address,
-          neighborhood,
-          postal_code,
-          phone,
-          latitude,
-          longitude,
-          rating,
-          review_count,
-          images,
-          area:areas(name),
-          state:states(name)
-        )
-      )
-    `,
-    { count: 'exact' },
-  );
+  let query = supabase
+    .from('clinic_doctors')
+    .select(DOCTOR_WITH_CLINICS_SELECT, { count: 'exact' })
+    .eq('is_active', true)
+    .eq('status', 'approved');
 
   if (filters.specialty) {
     query = query.eq('specialty', filters.specialty);
@@ -220,48 +194,10 @@ export async function getDoctors(filters: {
   }
 
   const { data, error, count } = await query;
+
   if (error) throw error;
 
-  // Transform the data to include clinics
-  const doctors = (data || []).map(
-    (doctor: {
-      id: string;
-      name: string;
-      slug: string;
-      bio: string | null;
-      specialty: string | null;
-      qualification: string | null;
-      images: string[] | null;
-      featured_video: string | null;
-      is_active: boolean | null;
-      is_featured: boolean | null;
-      status: string | null;
-      created_at: string | null;
-      modified_at: string | null;
-      clinic_doctor_relations?: {
-        clinics: {
-          id: string;
-          name: string;
-          slug: string;
-          address: string | null;
-          neighborhood: string | null;
-          postal_code: string | null;
-          phone: string | null;
-          latitude: number | null;
-          longitude: number | null;
-          rating: number | null;
-          review_count: number | null;
-          images: string[] | null;
-          area?: { name: string } | null;
-          state?: { name: string } | null;
-        };
-      }[];
-    }) => ({
-      ...doctor,
-      clinics:
-        doctor.clinic_doctor_relations?.map((relation) => relation.clinics).filter(Boolean) || [],
-    }),
-  );
+  const doctors = transformDoctorsData(data || []);
 
   return { data: doctors, count };
 }
@@ -279,40 +215,7 @@ export async function getDoctorsBySpecialty(
 
   const { data, error } = await supabase
     .from('clinic_doctors')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      bio,
-      specialty,
-      qualification,
-      images,
-      featured_video,
-      is_active,
-      is_featured,
-      status,
-      clinic_doctor_relations(
-        clinic_id,
-        clinics(
-          id,
-          name,
-          slug,
-          address,
-          neighborhood,
-          postal_code,
-          phone,
-          latitude,
-          longitude,
-          rating,
-          review_count,
-          images,
-          area:areas(name),
-          state:states(name)
-        )
-      )
-    `,
-    )
+    .select(DOCTOR_WITH_CLINICS_SELECT)
     .eq('specialty', specialty)
     .match({ is_active: true, status })
     .range(offset, offset + limit - 1)
@@ -323,35 +226,7 @@ export async function getDoctorsBySpecialty(
     return [];
   }
 
-  // Transform the data to include clinics
-  const doctors = (data || []).map(
-    (doctor: {
-      clinic_doctor_relations?: {
-        clinics: {
-          id: string;
-          name: string;
-          slug: string;
-          address: string | null;
-          neighborhood: string | null;
-          postal_code: string | null;
-          phone: string | null;
-          latitude: number | null;
-          longitude: number | null;
-          rating: number | null;
-          review_count: number | null;
-          images: string[] | null;
-          area?: { name: string } | null;
-          state?: { name: string } | null;
-        };
-      }[];
-    }) => ({
-      ...doctor,
-      clinics:
-        doctor.clinic_doctor_relations?.map((relation) => relation.clinics).filter(Boolean) || [],
-    }),
-  );
-
-  return doctors;
+  return transformDoctorsData(data || []);
 }
 
 /**
@@ -385,8 +260,70 @@ export function parseDoctorData(
     clinic_doctor_relations?: { clinics: Partial<ClinicDoctor> }[] | null;
   },
 ) {
-  return {
-    ...doctor,
-    clinics: doctor.clinic_doctor_relations?.map((item) => item.clinics).filter(Boolean) ?? [],
-  };
+  return transformDoctorData(doctor as RawDoctorWithClinics);
+}
+
+/**
+ * Fetches all doctors in a specific clinic by clinic slug
+ */
+export async function getDoctorsByClinicSlug(
+  clinicSlug: string,
+  status: string = 'approved',
+): Promise<ClinicDoctor[]> {
+  const supabase = await createServerClient();
+
+  const { data, error } = await supabase
+    .from('clinic_doctors')
+    .select(
+      `
+      id,
+      name,
+      slug,
+      bio,
+      specialty,
+      qualification,
+      images,
+      featured_video,
+      is_active,
+      is_featured,
+      status,
+      created_at,
+      modified_at,
+      clinic_doctor_relations!inner(
+        clinic_id,
+        clinics!inner(
+          id,
+          name,
+          slug,
+          address,
+          neighborhood,
+          postal_code,
+          phone,
+          email,
+          latitude,
+          longitude,
+          rating,
+          review_count,
+          images,
+          area:areas(name),
+          state:states(name)
+        )
+      )
+    `,
+    )
+    .eq('is_active', true)
+    .eq('status', status)
+    .eq('clinic_doctor_relations.clinics.slug', clinicSlug)
+    .order('name', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching doctors by clinic slug:', error);
+    return [];
+  }
+
+  if (!data) {
+    return [];
+  }
+
+  return transformDoctorsData(data);
 }

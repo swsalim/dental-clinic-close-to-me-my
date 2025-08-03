@@ -4,12 +4,13 @@ import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
 
-import { cn } from '@/lib/utils';
+import { absoluteUrl, cn } from '@/lib/utils';
 
 import { AnalyticsWrapper } from '@/components/analytics';
 import Footer from '@/components/site/footer';
 import NavMobile from '@/components/site/nav-mobile';
 import Navbar from '@/components/site/navbar';
+import LogoJsonLd from '@/components/structured-data/logo-json-ld';
 import { Toaster } from '@/components/ui/toaster';
 
 import './globals.css';
@@ -101,6 +102,7 @@ export default function RootLayout({
           src="https://scripts.simpleanalyticscdn.com/latest.js"
           strategy="afterInteractive"
         />
+        <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
       </head>
       <body
         className={cn(

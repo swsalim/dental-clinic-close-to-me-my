@@ -11,7 +11,7 @@ export default function LogoJsonLd({ url, logo }: LogoJsonLdProps) {
       {{
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: 'ClinicGeek',
+        name: 'Dental Clinics Malaysia',
         logo,
         url,
       }}
