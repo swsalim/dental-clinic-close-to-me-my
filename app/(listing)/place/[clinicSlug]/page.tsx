@@ -30,6 +30,7 @@ import NearbyClinics from '@/components/listing/nearby-clinics';
 import Reviews from '@/components/listing/reviews';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
 import { StickyBookButton } from '@/components/sticky-book-button';
+import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Badge } from '@/components/ui/badge';
@@ -262,6 +263,29 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
     { name: parsedClinic.name },
   ];
 
+  const JSONLDbreadcrumbs = [
+    {
+      item: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      name: 'Home',
+      position: '1',
+    },
+    {
+      item: absoluteUrl(`/${parsedClinic.state?.slug}`),
+      name: parsedClinic.state?.name,
+      position: '2',
+    },
+    {
+      item: absoluteUrl(`/${parsedClinic.state?.slug}/${parsedClinic.area?.slug}`),
+      name: parsedClinic.area?.name,
+      position: '3',
+    },
+    {
+      item: absoluteUrl(`/place/${parsedClinic.slug}`),
+      name: parsedClinic.name,
+      position: '4',
+    },
+  ];
+
   return (
     <>
       <WebsiteJsonLd />
@@ -294,6 +318,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
           }}
           className="h-56 md:h-96"></Wrapper>
       )}
+      <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
       <Wrapper className="pb-0 md:pb-0">
         <Container>
           <div className="lg:flex lg:items-start lg:justify-between lg:gap-x-6">
