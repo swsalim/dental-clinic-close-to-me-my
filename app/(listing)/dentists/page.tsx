@@ -63,8 +63,6 @@ export default async function DentistsPage() {
 
   const doctors = doctorsResult.data;
 
-  // console.log(doctors);
-
   const featuredDoctors = doctors.filter((doctor) => doctor.is_featured);
 
   const JSONLDbreadcrumbs = [

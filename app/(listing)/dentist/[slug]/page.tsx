@@ -83,7 +83,6 @@ export async function generateMetadata({ params }: DentistPageProps): Promise<Me
 
 export async function generateStaticParams() {
   const doctors = await getDoctorListings();
-  console.log(doctors);
   return doctors.map((doctor) => ({
     slug: doctor.slug,
   }));
