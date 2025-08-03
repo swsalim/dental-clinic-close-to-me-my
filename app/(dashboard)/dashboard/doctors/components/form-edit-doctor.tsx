@@ -14,7 +14,7 @@ import * as z from 'zod';
 
 // Lib imports
 import { createClient } from '@/lib/supabase/client';
-import { cn, getCloudinaryPublicId } from '@/lib/utils';
+import { cn, getCloudinaryPublicId, sanitizeHtmlField } from '@/lib/utils';
 
 import {
   Command,
@@ -50,6 +50,17 @@ interface EditDoctorFormProps {
       id: string;
       name: string;
       slug: string;
+      address: string | null;
+      neighborhood: string | null;
+      postal_code: string | null;
+      phone: string | null;
+      latitude: number | null;
+      longitude: number | null;
+      rating: number | null;
+      review_count: number | null;
+      images: string[] | null;
+      area?: { name: string } | null;
+      state?: { name: string } | null;
     }[];
     clinic_doctor_relations: {
       clinic_id: string;
@@ -57,6 +68,17 @@ interface EditDoctorFormProps {
         id: string;
         name: string;
         slug: string;
+        address: string | null;
+        neighborhood: string | null;
+        postal_code: string | null;
+        phone: string | null;
+        latitude: number | null;
+        longitude: number | null;
+        rating: number | null;
+        review_count: number | null;
+        images: string[] | null;
+        area?: { name: string } | null;
+        state?: { name: string } | null;
       };
     }[];
   };
@@ -264,6 +286,9 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
 
       const finalData = {
         ...data,
+        bio: sanitizeHtmlField(data.bio),
+        qualification: sanitizeHtmlField(data.qualification),
+        specialty: sanitizeHtmlField(data.specialty),
         images: [...currentImages, ...newImages],
       };
 

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-import { Clinic, ClinicDoctor } from '@/types/clinic';
+import { ClinicDoctor } from '@/types/clinic';
 import { ColumnDef } from '@tanstack/react-table';
 import { BadgeCheckIcon, MedalIcon, XCircleIcon } from 'lucide-react';
 
@@ -17,7 +17,22 @@ import { DataTableRowActions } from './components/data-table-row-actions';
 export type DoctorTableData = Partial<ClinicDoctor>;
 
 export type DoctorTableDataWithClinics = DoctorTableData & {
-  clinics: Clinic[];
+  clinics: {
+    id: string;
+    name: string;
+    slug: string;
+    address: string | null;
+    neighborhood: string | null;
+    postal_code: string | null;
+    phone: string | null;
+    latitude: number | null;
+    longitude: number | null;
+    rating: number | null;
+    review_count: number | null;
+    images: string[] | null;
+    area?: { name: string } | null;
+    state?: { name: string } | null;
+  }[];
 };
 
 export const columns: ColumnDef<DoctorTableDataWithClinics>[] = [

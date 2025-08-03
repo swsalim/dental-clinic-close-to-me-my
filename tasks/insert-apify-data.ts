@@ -224,8 +224,8 @@ class ClinicDataProcessor {
 
       const listingData: ClinicInsert = {
         name: listing.title,
-        area_id: '7615cfab-9d8a-421a-a379-49ae87027428',
-        state_id: 'd2c57d0e-5be9-4468-94d9-0b621145917b',
+        area_id: '2375e689-801d-4736-8a26-3c7ffe69b08c',
+        state_id: '09419704-cc81-4f5d-9538-8ee72f86372e',
         is_active: false,
         is_featured: false,
         slug: listing.slug,

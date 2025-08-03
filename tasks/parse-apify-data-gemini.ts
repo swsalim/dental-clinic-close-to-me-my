@@ -5,6 +5,8 @@ import fs from 'node:fs';
 import * as path from 'node:path';
 import pLimit from 'p-limit';
 
+import { GoogleSearchService } from '../services/google-search.service';
+
 // Configure dotenv to load variables from .env.local
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
@@ -30,6 +32,8 @@ interface ProcessingOptions {
   temperature?: number;
   topK?: number;
   topP?: number;
+  enableGrounding?: boolean;
+  searchTimeout?: number;
 }
 
 interface PromptTemplate {
@@ -64,6 +68,8 @@ const DEFAULT_OPTIONS: Required<ProcessingOptions> = {
   temperature: 0.7,
   topK: 40,
   topP: 0.95,
+  enableGrounding: true,
+  searchTimeout: 5000,
 };
 
 const PROMPT_TEMPLATES: PromptTemplate[] = [
@@ -176,6 +182,38 @@ async function generateDescription(
   genAI: GoogleGenerativeAI,
   options: Required<ProcessingOptions>,
 ): Promise<string> {
+  // Initialize Google Search service if grounding is enabled
+  let searchService: GoogleSearchService | null = null;
+  let searchResults = '';
+
+  if (options.enableGrounding) {
+    try {
+      searchService = new GoogleSearchService();
+
+      // Search for clinic information with timeout
+      const searchPromise = Promise.all([
+        searchService.searchClinic(place.title, `${place.street}, ${place.postalCode}`),
+        searchService.searchClinicReviews(place.title, `${place.street}, ${place.postalCode}`),
+        searchService.searchClinicServices(place.title, `${place.street}, ${place.postalCode}`),
+      ]);
+
+      const [clinicResults, reviewResults, serviceResults] = await Promise.race([
+        searchPromise,
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('Search timeout')), options.searchTimeout),
+        ),
+      ]);
+
+      // Combine and format search results
+      const allResults = [...clinicResults, ...reviewResults, ...serviceResults];
+      searchResults = searchService.formatSearchResults(allResults);
+
+      console.log(`🔍 Found ${allResults.length} search results for: ${place.title}`);
+    } catch (error) {
+      console.warn(`⚠️ Google Search grounding failed for ${place.title}:`, error);
+      searchResults = 'No recent online information available.';
+    }
+  }
   // Calculate average rating if reviews exist
   const avgRating = place.reviews?.length
     ? (
@@ -218,6 +256,7 @@ Key Information:
 ${avgRating ? `★ Rating: ${avgRating}/5` : ''}
 ${formattedHours ? `⏰ Hours:\n${formattedHours}` : ''}
 ${recentReviews?.length ? `💬 Recent Feedback:${recentReviews.map((review) => `\n• "${(review.text ?? 'No text provided').slice(0, 100)}..."`).join('')}` : ''}
+${searchResults ? `🔍 Recent Online Information:\n${searchResults}` : ''}
 
 Writing Focus:
 1. ${template.structure[0]}
@@ -230,6 +269,7 @@ Writing Focus:
 8. Include distinctive features and specializations
 9. Optimize for local SEO with creative location mentions
 10. If available, integrate patient feedback in a narrative style and be neutral and objective
+11. Use the recent online information to enhance accuracy and relevance of the description
 
 Location Context: ${place.street}, ${place.postalCode}, ${place.state} Malaysia`;
 
@@ -248,6 +288,9 @@ Writing Guidelines:
 - Include patient testimonials strategically within the narrative
 - Adapt writing style to reflect medical specializations
 - Match tone to facility type (e.g., authoritative for hospitals, personable for family clinics)
+- When recent online information is provided, use it to enhance accuracy and provide current, relevant details
+- Integrate search results naturally without directly quoting them
+- Use search information to verify and supplement existing data
 
 Output Format:
 - Three distinct, well-flowing paragraphs
@@ -379,14 +422,30 @@ async function processFile(inputFilename: string, options: ProcessingOptions = {
 // CLI Handler
 function main(): void {
   const command = process.argv[2];
+  const args = process.argv.slice(3);
 
   if (!command) {
     console.error('Please provide a file name.');
+    console.error('Usage: npm run parse-data-gemini <filename> [--disable-grounding]');
     process.exit(1);
   }
 
+  // Parse command line arguments
+  const disableGrounding = args.includes('--disable-grounding');
+
   const filename = `filtered-processed-${command}.json`;
-  processFile(filename).catch((error) => {
+
+  const options: ProcessingOptions = {
+    enableGrounding: !disableGrounding,
+  };
+
+  if (disableGrounding) {
+    console.log('⚠️ Google Search grounding disabled');
+  } else {
+    console.log('🔍 Google Search grounding enabled');
+  }
+
+  processFile(filename, options).catch((error) => {
     console.error('Fatal error:', error);
     process.exit(1);
   });

@@ -150,3 +150,18 @@ export const getPagination = (page?: number, size?: number): PaginationResult =>
 
   return { from, to };
 };
+
+/**
+ * Converts empty HTML content to null
+ * @param value - The HTML string to sanitize
+ * @returns The original value if it has content, or null if empty
+ */
+export const sanitizeHtmlField = (value: string | undefined): string | null => {
+  if (!value) return null;
+
+  // Remove HTML tags and trim whitespace
+  const textContent = value.replace(/<[^>]*>/g, '').trim();
+
+  // If the result is empty, return null
+  return textContent === '' ? null : value;
+};

@@ -14,7 +14,7 @@ import * as z from 'zod';
 
 // Lib imports
 import { createClient } from '@/lib/supabase/client';
-import { cn, getCloudinaryPublicId } from '@/lib/utils';
+import { cn, getCloudinaryPublicId, sanitizeHtmlField } from '@/lib/utils';
 
 import {
   Command,
@@ -437,6 +437,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
 
       const finalData = {
         ...data,
+        description: sanitizeHtmlField(data.description),
         images: [...currentImages, ...newImages],
         location,
       };

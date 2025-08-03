@@ -53,14 +53,32 @@ export interface ClinicDoctor {
   slug: string;
   bio: string | null;
   specialty: string | null;
+  qualification: string | null;
   status: string | null;
-  image: string | null;
+  images: string[] | null;
   featured_video: string | null;
   is_active: boolean | null;
   is_featured: boolean | null;
   created_at: string | null;
   modified_at: string | null;
-  clinics?: { id: string; name: string; slug: string }[] | null;
+  clinics?:
+    | {
+        id: string;
+        name: string;
+        slug: string;
+        address: string | null;
+        neighborhood: string | null;
+        postal_code: string | null;
+        phone: string | null;
+        latitude: number | null;
+        longitude: number | null;
+        rating: number | null;
+        review_count: number | null;
+        images: string[] | null;
+        area?: { name: string } | null;
+        state?: { name: string } | null;
+      }[]
+    | null;
 }
 
 export type ClinicDoctorInsert = Omit<ClinicDoctor, 'id' | 'created_at' | 'modified_at'>;

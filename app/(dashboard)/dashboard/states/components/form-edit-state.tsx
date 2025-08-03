@@ -14,7 +14,7 @@ import * as z from 'zod';
 
 // Lib imports
 import { createClient } from '@/lib/supabase/client';
-import { getCloudinaryPublicId } from '@/lib/utils';
+import { getCloudinaryPublicId, sanitizeHtmlField } from '@/lib/utils';
 
 import { File } from '@/components/form-fields/file';
 import { Input } from '@/components/form-fields/input';
@@ -315,6 +315,8 @@ export default function FormEditState({ state }: EditStateFormProps) {
 
       const finalData = {
         ...data,
+        description: sanitizeHtmlField(data.description),
+        short_description: sanitizeHtmlField(data.short_description),
         thumbnail_image: newThumbnailImage,
         banner_image: newBannerImage,
       };

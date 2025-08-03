@@ -180,7 +180,8 @@ create table if not exists clinic_doctors (
   slug text not null unique,
   specialty text,
   bio text,
-  image text,
+  images text[],
+  qualification text,
   featured_video text,
   is_featured boolean default false,
   is_active boolean default false,
@@ -188,6 +189,19 @@ create table if not exists clinic_doctors (
   created_at timestamp with time zone default timezone('utc', now()),
   modified_at timestamp with time zone default timezone('utc', now())
 );
+
+-- ALTER TABLE statements for existing clinic_doctors table
+-- Run these if the table already exists and you need to modify it:
+
+-- 1. Rename 'image' column to 'images' and change type to text[]
+-- ALTER TABLE clinic_doctors RENAME COLUMN image TO images;
+-- ALTER TABLE clinic_doctors ALTER COLUMN images TYPE text[] USING images::text[];
+
+-- 2. Add qualification column
+-- ALTER TABLE clinic_doctors ADD COLUMN qualification text;
+
+-- Note: If you want to run these ALTER statements, uncomment them above
+-- The USING clause is needed when converting from text to text[] to handle existing data
 
 -- Add indexes for clinic_doctors table
 create index if not exists idx_clinic_doctors_name on clinic_doctors using btree (name);
