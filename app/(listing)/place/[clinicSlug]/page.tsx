@@ -21,7 +21,6 @@ import { absoluteUrl } from '@/lib/utils';
 import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
-import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
@@ -479,7 +478,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               <DoctorPracticeAvatar clinicSlug={clinicSlug} />
 
               <div>
-                <LazyAdsLeaderboard />
+                <div ta-ad-container=""></div>
               </div>
 
               {parsedClinic.services && (
