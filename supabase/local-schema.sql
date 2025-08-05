@@ -486,7 +486,11 @@ SELECT insert_areas_for_state('selangor', '[
   {"name": "Rawang", "slug": "rawang"},
   {"name": "Bangi", "slug": "bangi"},
   {"name": "Cyberjaya", "slug": "cyberjaya"},
-  {"name": "Seri Kembangan", "slug": "seri-kembangan"}
+  {"name": "Banting", "slug": "banting"},
+  {"name": "Semenyih", "slug": "semenyih"},
+  {"name": "Batu Caves", "slug": "batu-caves"},
+  {"name": "Seri Kembangan", "slug": "seri-kembangan"},
+  {"name": "Telok Panglima Garang", "slug": "telok-panglima-garang"}
 ]'::jsonb);
 
 SELECT insert_areas_for_state('terengganu', '[
@@ -512,6 +516,7 @@ SELECT insert_areas_for_state('kuala-lumpur', '[
   {"name": "Sentul", "slug": "sentul"},
   {"name": "Sri Hartamas", "slug": "sri-hartamas"},
   {"name": "Bukit Jalil", "slug": "bukit-jalil"},
+  {"name": "Overseas Union Garden", "slug": "overseas-union-garden"},
   {"name": "Sri Petaling", "slug": "sri-petaling"}
 ]'::jsonb);
 

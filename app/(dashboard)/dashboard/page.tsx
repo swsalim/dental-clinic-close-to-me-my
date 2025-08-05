@@ -1,3 +1,4 @@
+import { Clinic, ClinicDoctor } from '@/types/clinic';
 import { addDays, format, subDays } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 
@@ -14,23 +15,6 @@ interface StatProps {
   value: number | undefined;
   path: string;
   isLoading?: boolean;
-}
-
-interface Clinic {
-  id: string;
-  name: string;
-  slug: string;
-  website: string;
-  images: string[];
-  is_active: boolean;
-  area: {
-    name: string;
-    slug: string;
-  };
-  state: {
-    name: string;
-    slug: string;
-  };
 }
 
 function Stat({ name, value, path, isLoading = false }: StatProps) {
@@ -71,7 +55,7 @@ export default async function Dashboard() {
   const adjustedToDate = addDays(date.to, 1).toISOString();
   const adjustedFromDate = date.from.toISOString();
 
-  const [clinicsResponse] = await Promise.all([
+  const [clinicsResponse, doctorsResponse] = await Promise.all([
     supabase
       .from('clinics')
       .select(
@@ -87,11 +71,14 @@ export default async function Dashboard() {
       .lt('created_at', adjustedToDate)
       .gt('created_at', adjustedFromDate)
       .order('name', { ascending: true }),
+    supabase.from('clinic_doctors').select('*').order('name', { ascending: true }),
   ]);
 
   if (clinicsResponse.error) throw new Error(clinicsResponse.error.message);
 
-  const clinics = clinicsResponse.data as unknown as Clinic[];
+  const clinics = clinicsResponse.data as unknown as Partial<Clinic>[];
+
+  const doctors = doctorsResponse.data as unknown as Partial<ClinicDoctor>[];
 
   return (
     <section className="max-w-8xl mx-auto px-4 py-8 sm:px-6">
@@ -140,6 +127,7 @@ export default async function Dashboard() {
 
           <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <Stat name="clinics" value={clinics?.length} path="/dashboard/clinics" />
+            <Stat name="doctors" value={doctors?.length} path="/dashboard/doctors" />
           </dl>
         </div>
       </div>

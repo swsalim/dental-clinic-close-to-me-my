@@ -28,6 +28,7 @@ import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import DoctorPractice from '@/components/listing/doctor-practice';
+import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
 import NearbyClinics from '@/components/listing/nearby-clinics';
 import Reviews from '@/components/listing/reviews';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
@@ -474,6 +475,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   <TruncatedHtml html={parsedClinic.description} limit={80} />
                 </article>
               )}
+
+              <DoctorPracticeAvatar clinicSlug={clinicSlug} />
 
               <div>
                 <LazyAdsLeaderboard />

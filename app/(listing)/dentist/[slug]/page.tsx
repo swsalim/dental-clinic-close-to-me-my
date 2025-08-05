@@ -186,7 +186,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
               <Breadcrumb items={breadcrumbItems} />
               {/* Doctor Header */}
               <div className="flex flex-row items-start justify-end gap-6">
-                <div className="aspect-[2/3] w-full max-w-72">
+                <div className="aspect-[2/3] w-full max-w-48 lg:max-w-72">
                   <ImageCloudinary
                     src={profileImage}
                     alt={`${doctor.name} - Profile Image`}
