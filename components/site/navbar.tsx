@@ -77,8 +77,12 @@ export const navItems: {
   }[];
 }[] = [
   {
-    name: 'Browse',
+    name: 'Browse Location',
     href: '/browse',
+  },
+  {
+    name: 'Dentists',
+    href: '/dentists',
   },
 ];
 

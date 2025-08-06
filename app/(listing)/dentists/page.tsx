@@ -153,8 +153,8 @@ export default async function DentistsPage() {
             {/* All Dentists */}
             <section>
               <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">All Dentists</h2>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {doctors.slice(0, 12).map((doctor) => (
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {doctors.slice(0, 50).map((doctor) => (
                   <DoctorCard key={doctor.id} doctor={doctor} />
                 ))}
               </div>
