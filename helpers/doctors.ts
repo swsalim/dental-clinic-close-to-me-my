@@ -164,32 +164,35 @@ export async function getDoctorBySlug(
 /**
  * Fetches doctors with optional filters
  */
-export async function getDoctors(filters: {
-  specialty?: string;
-  isFeatured?: boolean;
-  limit?: number;
-  offset?: number;
-}) {
+export async function getDoctors(
+  filters: {
+    specialty?: string;
+    isFeatured?: boolean;
+    limit?: number;
+    offset?: number;
+  } | null = null,
+) {
   const supabase = await createServerClient();
   let query = supabase
     .from('clinic_doctors')
     .select(DOCTOR_WITH_CLINICS_SELECT, { count: 'exact' })
     .eq('is_active', true)
-    .eq('status', 'approved');
+    .eq('status', 'approved')
+    .order('modified_at', { ascending: false });
 
-  if (filters.specialty) {
+  if (filters?.specialty) {
     query = query.eq('specialty', filters.specialty);
   }
 
-  if (filters.isFeatured !== undefined) {
+  if (filters?.isFeatured !== undefined) {
     query = query.eq('is_featured', filters.isFeatured);
   }
 
-  if (filters.limit) {
+  if (filters?.limit) {
     query = query.limit(filters.limit);
   }
 
-  if (filters.offset) {
+  if (filters?.offset) {
     query = query.range(filters.offset, filters.offset + (filters.limit || 10) - 1);
   }
 

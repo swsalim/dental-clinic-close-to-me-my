@@ -59,7 +59,7 @@ export const columns: ColumnDef<DoctorTableData>[] = [
               key={clinic.id}
               href={absoluteUrl(`/place/${clinic.slug}`)}
               target="_blank"
-              className="hover:underline">
+              className="hover:border-none">
               {clinic.name}
             </Link>
           ))}
@@ -68,16 +68,17 @@ export const columns: ColumnDef<DoctorTableData>[] = [
     },
   },
   {
-    accessorKey: 'image',
+    accessorKey: 'images',
     header: ({ column }) => <DataTableColumnHeader column={column} title="Photo" className="" />,
     cell: ({ row }) => {
-      const image = row.getValue('image') as string | undefined;
-      return image ? (
-        <div className="aspect-h-4 aspect-w-2 relative rounded-md">
+      const images = row.getValue('images') as string[] | undefined;
+      const firstImage = images && images.length > 0 ? images[0] : undefined;
+      return firstImage ? (
+        <div className="relative size-24 overflow-hidden rounded-md">
           <ImageCloudinary
             width={150}
             height={150}
-            src={image}
+            src={firstImage}
             alt={row.original.name || 'Doctor photo'}
           />
         </div>

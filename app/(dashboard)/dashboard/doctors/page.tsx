@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export default async function DashboardDoctorsPage() {
-  const { data: doctors } = await getDoctors({ limit: 100 });
+  const { data: doctors } = await getDoctors();
 
   return <DataTable columns={columns} data={doctors} type="doctor" />;
 }
