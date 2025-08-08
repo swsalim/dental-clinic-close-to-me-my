@@ -63,49 +63,47 @@ const Breadcrumb = ({ items, theme = 'light', routerCallback }: BreadcrumbProps)
       <nav
         className={cn(routerCallback && 'hidden sm:flex', !routerCallback && 'flex')}
         aria-label="Breadcrumb">
-        <ol role="list" className="mb-2 flex flex-wrap items-center gap-y-2 space-x-4 sm:mb-0">
+        <ol
+          role="list"
+          className="flex-no-wrap mb-2 flex w-full items-center gap-y-2 space-x-4 overflow-x-auto sm:mb-0">
           <li>
-            <div className="flex">
-              <Link
-                href="/"
-                className={cn(
-                  'font-regular text-base capitalize drop-shadow-sm transition-colors',
-                  styles[theme].link,
-                )}>
-                Home
-              </Link>
-            </div>
+            <Link
+              href="/"
+              className={cn(
+                'font-regular text-base capitalize drop-shadow-sm transition-colors',
+                styles[theme].link,
+              )}>
+              Home
+            </Link>
           </li>
           {items.map((item, index) => (
-            <li key={`breadcrumb-item-${index}`}>
-              <div className="flex items-center">
-                <ChevronRightIcon
-                  className={cn(
-                    'h-5 w-5 flex-shrink-0 drop-shadow-sm transition-colors',
-                    styles[theme].icon,
-                  )}
-                  aria-hidden="true"
-                />
-                {item.url ? (
-                  <Link
-                    href={item.url}
-                    className={cn(
-                      'font-regular ml-4 text-base capitalize drop-shadow-sm transition-colors',
-                      styles[theme].link,
-                    )}>
-                    {item.name}
-                  </Link>
-                ) : (
-                  <span
-                    aria-current="page"
-                    className={cn(
-                      'font-regular ml-4 text-base capitalize drop-shadow-sm transition-colors',
-                      styles[theme].text,
-                    )}>
-                    {item.name}
-                  </span>
+            <li key={`breadcrumb-item-${index}`} className="flex shrink-0 items-center">
+              <ChevronRightIcon
+                className={cn(
+                  'h-5 w-5 flex-shrink-0 drop-shadow-sm transition-colors',
+                  styles[theme].icon,
                 )}
-              </div>
+                aria-hidden="true"
+              />
+              {item.url ? (
+                <Link
+                  href={item.url}
+                  className={cn(
+                    'font-regular ml-4 text-base capitalize drop-shadow-sm transition-colors',
+                    styles[theme].link,
+                  )}>
+                  {item.name}
+                </Link>
+              ) : (
+                <span
+                  aria-current="page"
+                  className={cn(
+                    'font-regular ml-4 text-base capitalize drop-shadow-sm transition-colors',
+                    styles[theme].text,
+                  )}>
+                  {item.name}
+                </span>
+              )}
             </li>
           ))}
         </ol>
