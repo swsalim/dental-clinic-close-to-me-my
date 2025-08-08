@@ -628,3 +628,96 @@ BEGIN
   RETURN v_hours_ids;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Function to get ranged doctor metadata by state slug
+CREATE OR REPLACE FUNCTION get_ranged_doctor_metadata_by_state_slug(
+  state_slug_param TEXT,
+  from_index_param INT,
+  to_index_param INT,
+  status_param TEXT DEFAULT 'approved'
+)
+RETURNS JSON AS $$
+DECLARE
+  result JSON;
+  doctor_count INT;
+BEGIN
+  -- Get total count of doctors in the state
+  SELECT COUNT(DISTINCT cd.id)
+  INTO doctor_count
+  FROM clinic_doctors cd
+  INNER JOIN clinic_doctor_relations cdr ON cd.id = cdr.doctor_id
+  INNER JOIN clinics c ON cdr.clinic_id = c.id
+  INNER JOIN states s ON c.state_id = s.id
+  WHERE cd.is_active = true
+    AND cd.status = status_param
+    AND s.slug = state_slug_param;
+
+  -- Get doctors with pagination
+  WITH doctor_data AS (
+    SELECT DISTINCT
+      cd.id,
+      cd.name,
+      cd.slug,
+      cd.bio,
+      cd.specialty,
+      cd.qualification,
+      cd.images,
+      cd.featured_video,
+      cd.is_active,
+      cd.is_featured,
+      cd.status,
+      cd.created_at,
+      cd.modified_at,
+      json_agg(
+        json_build_object(
+          'clinic_id', c.id,
+          'clinics', json_build_object(
+            'id', c.id,
+            'name', c.name,
+            'slug', c.slug,
+            'address', c.address,
+            'neighborhood', c.neighborhood,
+            'postal_code', c.postal_code,
+            'phone', c.phone,
+            'email', c.email,
+            'latitude', c.latitude,
+            'longitude', c.longitude,
+            'rating', c.rating,
+            'review_count', c.review_count,
+            'images', c.images,
+            'area', json_build_object(
+              'name', a.name,
+              'slug', a.slug
+            ),
+            'states', json_build_object(
+              'name', s.name,
+              'slug', s.slug
+            )
+          )
+        )
+      ) FILTER (WHERE c.id IS NOT NULL) AS clinic_doctor_relations
+    FROM clinic_doctors cd
+    INNER JOIN clinic_doctor_relations cdr ON cd.id = cdr.doctor_id
+    INNER JOIN clinics c ON cdr.clinic_id = c.id
+    INNER JOIN states s ON c.state_id = s.id
+    LEFT JOIN areas a ON c.area_id = a.id
+    WHERE cd.is_active = true
+      AND cd.status = status_param
+      AND s.slug = state_slug_param
+    GROUP BY cd.id, cd.name, cd.slug, cd.bio, cd.specialty, cd.qualification,
+             cd.images, cd.featured_video, cd.is_active, cd.is_featured, cd.status,
+             cd.created_at, cd.modified_at
+    ORDER BY cd.modified_at DESC
+    LIMIT (to_index_param - from_index_param + 1)
+    OFFSET from_index_param
+  )
+  SELECT json_build_object(
+    'data', json_agg(doctor_data.*),
+    'count', doctor_count
+  )
+  INTO result
+  FROM doctor_data;
+
+  RETURN result;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;

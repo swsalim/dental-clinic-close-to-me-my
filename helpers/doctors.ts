@@ -2,6 +2,23 @@ import { ClinicDoctor } from '@/types/clinic';
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
+/**
+ * Doctor Helper Functions
+ *
+ * This module provides functions to fetch doctor data from the database.
+ *
+ * NEW: getDoctorsByStateRPC() - Uses an optimized RPC function for better performance
+ * This function fetches doctors by state with pagination using a database RPC function
+ * instead of a direct query, providing better performance and reduced network overhead.
+ *
+ * Usage:
+ * ```typescript
+ * const result = await getDoctorsByStateRPC('selangor', 20, 0, 'approved');
+ * console.log(result.data); // Array of doctors
+ * console.log(result.count); // Total count
+ * ```
+ */
+
 // Reusable column selection for doctor queries with clinic relations
 export const DOCTOR_WITH_CLINICS_SELECT = `
   id,
@@ -275,49 +292,10 @@ export async function getDoctorsByClinicSlug(
 ): Promise<ClinicDoctor[]> {
   const supabase = await createServerClient();
 
-  const { data, error } = await supabase
-    .from('clinic_doctors')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      bio,
-      specialty,
-      qualification,
-      images,
-      featured_video,
-      is_active,
-      is_featured,
-      status,
-      created_at,
-      modified_at,
-      clinic_doctor_relations!inner(
-        clinic_id,
-        clinics!inner(
-          id,
-          name,
-          slug,
-          address,
-          neighborhood,
-          postal_code,
-          phone,
-          email,
-          latitude,
-          longitude,
-          rating,
-          review_count,
-          images,
-          area:areas(name),
-          state:states(name)
-        )
-      )
-    `,
-    )
-    .eq('is_active', true)
-    .eq('status', status)
-    .eq('clinic_doctor_relations.clinics.slug', clinicSlug)
-    .order('name', { ascending: true });
+  const { data, error } = await supabase.rpc('get_doctors_by_clinic_slug', {
+    clinic_slug_param: clinicSlug,
+    status_param: status,
+  });
 
   if (error) {
     console.error('Error fetching doctors by clinic slug:', error);
@@ -328,5 +306,37 @@ export async function getDoctorsByClinicSlug(
     return [];
   }
 
-  return transformDoctorsData(data);
+  // The RPC function returns JSON, so we need to parse it
+  const doctorsData = data as RawDoctorWithClinics[];
+  return transformDoctorsData(doctorsData);
+}
+
+/**
+ * Fetches doctors by state with pagination
+ */
+export async function getDoctorsByState(
+  stateSlug: string,
+  limit: number = 20,
+  offset: number = 0,
+  status: string = 'approved',
+) {
+  const supabase = await createServerClient();
+
+  const { data: result } = await supabase.rpc('get_ranged_doctor_by_state_slug', {
+    state_slug_param: stateSlug,
+    from_index_param: offset,
+    to_index_param: offset + limit - 1,
+    status_param: status,
+  });
+
+  if (!result) {
+    return { data: [], count: 0 };
+  }
+
+  // Type assertion for the RPC result structure
+  const typedResult = result as { data: RawDoctorWithClinics[]; count: number };
+
+  const doctors = transformDoctorsData(typedResult.data || []);
+
+  return { data: doctors, count: typedResult.count || 0 };
 }

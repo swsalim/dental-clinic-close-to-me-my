@@ -526,6 +526,10 @@ export type Database = {
         Args: { slug_input: string; status_input: string; review_limit: number }
         Returns: Json
       }
+      get_doctors_by_clinic_slug: {
+        Args: { clinic_slug_param: string; status_param?: string }
+        Returns: Json
+      }
       get_nearby_clinics: {
         Args: {
           clinic_latitude: number
@@ -564,6 +568,27 @@ export type Database = {
       get_ranged_area_metadata_by_slug: {
         Args: { area_slug: string; from_index: number; to_index: number }
         Returns: Json
+      }
+      get_ranged_doctor_by_state_slug: {
+        Args: {
+          state_slug_param: string
+          from_index_param: number
+          to_index_param: number
+          status_param?: string
+        }
+        Returns: Json
+      }
+      get_ranged_doctors_by_state: {
+        Args: {
+          state_slug: string
+          limit_count?: number
+          offset_count?: number
+          doctor_status?: string
+        }
+        Returns: {
+          data: Json
+          count: number
+        }[]
       }
       get_ranged_state_metadata_by_slug: {
         Args: { state_slug: string; from_index: number; to_index: number }

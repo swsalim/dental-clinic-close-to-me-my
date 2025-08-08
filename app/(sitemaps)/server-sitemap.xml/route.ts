@@ -38,6 +38,10 @@ export async function GET() {
       loc: absoluteUrl(`/${state.slug}`),
       lastmod: new Date().toISOString(),
     });
+    fields.push({
+      loc: absoluteUrl(`/${state.slug}/dentists`),
+      lastmod: new Date().toISOString(),
+    });
   });
 
   areas.forEach((area) => {
