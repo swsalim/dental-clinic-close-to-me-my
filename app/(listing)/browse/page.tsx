@@ -68,9 +68,6 @@ export default async function BrowsePage() {
   const states = (statesData || []) as ClinicState[];
   const areas = (areasData || []) as ClinicArea[];
 
-  console.log(states);
-  console.log(areas);
-
   return (
     <>
       <WebsiteJsonLd company="Dental Clinics Malaysia" url={process.env.NEXT_PUBLIC_BASE_URL} />
