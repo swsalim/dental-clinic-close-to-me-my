@@ -38,9 +38,9 @@ export async function generateMetadata({ searchParams }: DentistsPageProps): Pro
   const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
   const currentYear = currentDate.getFullYear();
 
-  const title = `Top ${totalDoctors} Dentists in Malaysia [${currentMonth} ${currentYear}]`;
+  const title = `Browse Top ${totalDoctors} Dentists in Malaysia [${currentMonth} ${currentYear}]`;
   const description =
-    'Discover dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details.';
+    'Find dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details.';
   const url = !page
     ? absoluteUrl('/dentists')
     : page === '1'
@@ -197,8 +197,15 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
                 Find the Best Dentists in Malaysia
               </h1>
               <p className="text-balance text-lg font-medium text-gray-600">
-                Browse dentists by state, city, or affiliated clinic. Helping you find dental
-                professionals near you, faster.
+                Browse dentists by{' '}
+                <Link href="/browse" className="text-brand hover:text-brand">
+                  state
+                </Link>
+                , or{' '}
+                <Link href="/browse" className="text-brand hover:text-brand">
+                  city
+                </Link>
+                . Helping you find dental professionals near you, faster.
               </p>
             </Prose>
 
