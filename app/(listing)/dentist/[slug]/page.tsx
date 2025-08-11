@@ -10,6 +10,7 @@ import { absoluteUrl, cn } from '@/lib/utils';
 
 import { getDoctorBySlug, getDoctorListings, getDoctorMetadataBySlug } from '@/helpers/doctors';
 
+import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
@@ -219,7 +220,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
               )}
 
               <div>
-                <div ta-ad-container=""></div>
+                <LazyAdsLeaderboard />
               </div>
 
               {/* Doctor Images */}
