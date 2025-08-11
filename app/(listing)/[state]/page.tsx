@@ -278,7 +278,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                     href={`/${state}/dentists`}
                     className={cn(
                       buttonVariants({ variant: 'secondary' }),
-                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 sm:w-auto',
+                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 sm:w-auto',
                     )}>
                     View All Dentists
                   </Link>

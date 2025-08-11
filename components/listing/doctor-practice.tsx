@@ -13,11 +13,7 @@ export default async function DoctorPractice({ clinicSlug, className }: DoctorPr
   const doctors = await getDoctorsByClinicSlug(clinicSlug);
 
   if (doctors.length === 0) {
-    return (
-      <div className={cn('rounded-lg bg-gray-50 p-4 text-center', className)}>
-        <p className="text-gray-600">No doctors found for this clinic.</p>
-      </div>
-    );
+    return null;
   }
 
   return (

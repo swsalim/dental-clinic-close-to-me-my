@@ -21,6 +21,7 @@ import { absoluteUrl } from '@/lib/utils';
 import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
+import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
@@ -465,6 +466,9 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               )}
             </div>
           </div>
+
+          <LazyAdsLeaderboard />
+
           {/* content */}
           <div className="py-8 md:gap-8 lg:grid lg:grid-cols-sidebar lg:gap-10">
             <Prose className="space-y-8">
@@ -499,12 +503,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   </div>
                 </article>
               )}
-              {parsedClinic.images && parsedClinic.images.length > 1 && (
-                <article>
-                  <h2>Gallery</h2>
-                  <ImageGallery images={parsedClinic.images} title={parsedClinic.name || ''} />
-                </article>
-              )}
+
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
                   <h2>Opening Hours</h2>
@@ -513,6 +512,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   </div>
                 </article>
               )}
+
+              {parsedClinic.images && parsedClinic.images.length > 1 && (
+                <article>
+                  <h2>Gallery</h2>
+                  <ImageGallery images={parsedClinic.images} title={parsedClinic.name || ''} />
+                </article>
+              )}
+
               <article className="block lg:hidden">
                 <Map
                   latitude={parsedClinic.latitude ?? 0}
