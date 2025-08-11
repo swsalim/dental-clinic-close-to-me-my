@@ -78,9 +78,9 @@ export const cloudinaryLoader = ({ src, width, quality }: CloudinaryLoaderParams
   }/image/upload/${params.join(',')}/${normalizeSrc(src)}`;
 };
 
-export const bypassCloudinaryLoader = ({ src, quality }: CloudinaryLoaderParams): string => {
+export const bypassCloudinaryLoader = ({ src, width, quality }: CloudinaryLoaderParams): string => {
   const publicId = getCloudinaryPublicId(src);
-  const params = ['f_auto', 'c_limit', 'w_1000', `q_${quality || 'auto'}`];
+  const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`];
 
   return `https://res.cloudinary.com/${
     process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME

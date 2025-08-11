@@ -4,12 +4,13 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRightIcon, PersonStandingIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
+import { getDoctorsByState } from '@/helpers/doctors';
 import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
@@ -131,6 +132,10 @@ export default async function StatePage({ params, searchParams }: StatePageProps
     notFound();
   }
 
+  const doctorsResult = await getDoctorsByState(state, 5, 0);
+  const doctors = doctorsResult.data;
+  const totalDoctors = doctorsResult.count || 0;
+
   const totalClinics = stateMeta.clinics?.length || 0;
   const totalPages = Math.ceil(totalClinics / limit);
 
@@ -237,74 +242,118 @@ export default async function StatePage({ params, searchParams }: StatePageProps
 
       <Wrapper size="sm">
         <Container>
-          <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
-            {totalClinics} Dental Clinics in {stateData.name}
-          </h2>
-          {stateData.clinics?.length > 0 ? (
-            <>
-              <div
-                className={cn(
-                  'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4',
-                )}>
-                {stateData.clinics
-                  ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                  .map((clinic, index) => {
-                    return (
-                      <React.Fragment key={clinic.slug}>
-                        {(index + 1) % 6 == 0 && <LazyAdsArticle />}
-                        <ClinicCard
-                          key={clinic.slug}
-                          slug={clinic.slug ?? ''}
-                          name={clinic.name ?? ''}
-                          address={clinic.address ?? ''}
-                          phone={clinic.phone ?? ''}
-                          postalCode={clinic.postal_code ?? ''}
-                          state={clinic.state?.name ?? ''}
-                          area={clinic.area?.name ?? ''}
-                          image={clinic.images?.[0]}
-                          rating={clinic.rating}
-                          isFeatured={clinic.is_featured ?? false}
-                          hours={clinic.hours ?? []}
-                          specialHours={clinic.special_hours ?? []}
-                          openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                        />
-                      </React.Fragment>
-                    );
-                  })}
-              </div>
-              <Pagination currentPage={currentPage} totalPages={totalPages} />
-            </>
-          ) : (
-            <div className="flex flex-col items-center justify-center gap-y-4">
-              <div className="flex flex-col items-center justify-center">
-                <div className="relative size-64 md:size-96">
-                  <ImageCloudinary
-                    src="lost-boy.png"
-                    alt="No dental clinics found"
-                    width={500}
-                    height={500}
-                    className="h-full w-full object-cover"
-                  />
+          <div className="flex flex-col gap-y-6">
+            {totalDoctors > 0 && (
+              <div className="flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900">
+                <h2 className="text-balance text-xl font-bold md:text-xl">
+                  Browse Dentists in {stateData.name}
+                </h2>
+                <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:justify-start">
+                  <div className="flex space-x-3 md:-space-x-1">
+                    {doctors.map((doctor, index) => (
+                      <Link
+                        href={`/dentist/${doctor.slug}`}
+                        className="relative size-16 overflow-hidden rounded-full outline -outline-offset-1 outline-blue-200 ring-2 ring-blue-300"
+                        key={`${doctor.id}-${index}`}>
+                        {doctor.images?.[0] && (
+                          <ImageCloudinary
+                            src={doctor.images?.[0]}
+                            alt={`Photo of ${doctor.name}`}
+                            width={100}
+                            height={100}
+                            directory="doctors"
+                            priority
+                            className="h-full w-full object-cover"
+                          />
+                        )}
+                        {!doctor.images?.[0] && (
+                          <div className="mx-auto mb-6 h-full w-full p-0 md:p-0">
+                            <PersonStandingIcon className="size-12" />
+                          </div>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href={`/${state}/dentists`}
+                    className={cn(
+                      buttonVariants({ variant: 'secondary' }),
+                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 sm:w-auto',
+                    )}>
+                    View All Dentists
+                  </Link>
                 </div>
               </div>
-              <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
-              <p className="text-balance text-lg">No dental clinics found in {stateData.name}.</p>
-              <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
-                <Link
-                  href="/submit"
-                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
-                  Add a clinic
-                  <ArrowRightIcon className="size-4" />
-                </Link>
-                <Link
-                  href="/"
-                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}>
-                  Get back to homepage
-                  <ArrowRightIcon className="size-4" />
-                </Link>
+            )}
+            <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+              {totalClinics} Dental Clinics in {stateData.name}
+            </h2>
+            {stateData.clinics?.length > 0 ? (
+              <>
+                <div
+                  className={cn(
+                    'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4',
+                  )}>
+                  {stateData.clinics
+                    ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
+                    .map((clinic, index) => {
+                      return (
+                        <React.Fragment key={clinic.slug}>
+                          {(index + 1) % 6 == 0 && <LazyAdsArticle />}
+                          <ClinicCard
+                            key={clinic.slug}
+                            slug={clinic.slug ?? ''}
+                            name={clinic.name ?? ''}
+                            address={clinic.address ?? ''}
+                            phone={clinic.phone ?? ''}
+                            postalCode={clinic.postal_code ?? ''}
+                            state={clinic.state?.name ?? ''}
+                            area={clinic.area?.name ?? ''}
+                            image={clinic.images?.[0]}
+                            rating={clinic.rating}
+                            isFeatured={clinic.is_featured ?? false}
+                            hours={clinic.hours ?? []}
+                            specialHours={clinic.special_hours ?? []}
+                            openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                          />
+                        </React.Fragment>
+                      );
+                    })}
+                </div>
+                <Pagination currentPage={currentPage} totalPages={totalPages} />
+              </>
+            ) : (
+              <div className="flex flex-col items-center justify-center gap-y-4">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="relative size-64 md:size-96">
+                    <ImageCloudinary
+                      src="lost-boy.png"
+                      alt="No dental clinics found"
+                      width={500}
+                      height={500}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+                <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
+                <p className="text-balance text-lg">No dental clinics found in {stateData.name}.</p>
+                <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                  <Link
+                    href="/submit"
+                    className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
+                    Add a clinic
+                    <ArrowRightIcon className="size-4" />
+                  </Link>
+                  <Link
+                    href="/"
+                    className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}>
+                    Get back to homepage
+                    <ArrowRightIcon className="size-4" />
+                  </Link>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </Container>
       </Wrapper>
 
