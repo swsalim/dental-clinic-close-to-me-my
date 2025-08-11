@@ -12,7 +12,6 @@ import { ImageCloudinary } from './image/image-cloudinary';
 
 export async function Hero() {
   const doctors = await getDoctors({ limit: 5 });
-  console.log(doctors);
   const doctorsData = doctors.data;
   const doctorsCount = doctors.count;
 
