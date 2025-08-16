@@ -43,21 +43,12 @@ export async function Hero() {
             className={cn(
               buttonVariants({
                 variant: 'primary',
+                size: 'large',
               }),
-              'w-full rounded-full bg-blue-500 text-white hover:bg-blue-600',
+              'w-full rounded-full bg-blue-500 capitalize text-white hover:bg-blue-600',
             )}
             href="/browse">
             Find a Clinic near you
-          </Link>
-          <Link
-            className={cn(
-              buttonVariants({
-                variant: 'ghost',
-              }),
-              'w-full rounded-full text-gray-900 dark:text-gray-50',
-            )}
-            href="/submit">
-            List your clinic for FREE
           </Link>
         </div>
         <div className="flex w-full flex-col items-center justify-center gap-6 text-center text-sm font-semibold text-gray-900 dark:text-gray-50">

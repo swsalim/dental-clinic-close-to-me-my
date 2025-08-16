@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { PlusIcon } from 'lucide-react';
+
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
@@ -66,6 +68,7 @@ export const navItems: {
   name: string;
   href?: string;
   segments?: string[];
+  icon?: React.ElementType;
   childItems?: {
     title: string;
     href: string;
@@ -83,6 +86,11 @@ export const navItems: {
   {
     name: 'Dentists',
     href: '/dentists',
+  },
+  {
+    name: 'Submit',
+    href: '/submit',
+    icon: PlusIcon,
   },
 ];
 
@@ -104,8 +112,9 @@ export default function Navbar() {
           </Link>
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
-              {navItems.map(({ name, href, segments, childItems }) => {
+              {navItems.map(({ name, href, segments, childItems, icon }) => {
                 const isActive = segments?.some((segment) => pathname?.startsWith(segment));
+                const Icon = icon;
 
                 return (
                   <NavigationMenuItem key={name}>
@@ -116,13 +125,17 @@ export default function Navbar() {
                             'font-regular focus:bg-blue-50/hover:bg-blue-50 data-[active=true]:bg-blue-50/hover:bg-blue-50 data-[state=open]:bg-blue-50/hover:bg-blue-50 data-[active=true]:focus:bg-blue-50/hover:bg-blue-50 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-blue-50 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-blue-600 data-[state=open]:text-blue-600 data-[active=true]:hover:bg-blue-50 data-[state=open]:hover:bg-blue-50 data-[state=open]:focus:bg-blue-50 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
                           )}
                           asChild>
-                          <Link href={href}>{name}</Link>
+                          <Link href={href}>
+                            <span>{name}</span>
+                            {Icon && <Icon className="ml-2 size-4" />}
+                          </Link>
                         </NavigationMenuLink>
                       )}
                       {!href && (
                         <>
                           <NavigationMenuTrigger data-active={isActive}>
-                            {name}
+                            <span>{name}</span>
+                            {Icon && <Icon className="ml-2 size-4" />}
                           </NavigationMenuTrigger>
                           <NavigationMenuContent>
                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -150,18 +163,8 @@ export default function Navbar() {
                   </NavigationMenuItem>
                 );
               })}
-              <NavigationMenuItem>
-                <Link
-                  href="https://www.buymeacoffee.com/yuyu"
-                  target="_blank"
-                  className={cn(buttonVariants({ variant: 'secondary' }))}>
-                  Support ❤️
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          {/* Hide as we only have 2 items in the menu */}
-          {/* <div className="hidden w-[180] md:block"></div> */}
         </Container>
       </div>
     </>
