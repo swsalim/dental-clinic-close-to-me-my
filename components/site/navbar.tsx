@@ -11,7 +11,6 @@ import { PlusIcon } from 'lucide-react';
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
-import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import Logo from '@/components/ui/logo';
 import {
