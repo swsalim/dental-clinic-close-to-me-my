@@ -233,8 +233,12 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
             <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities in{' '}
-              <Link href={absoluteUrl(`/${areaData.state?.slug}`)}>{areaData.state?.name}</Link>.
-              Find services, reviews, and opening hours.
+              <Link
+                href={absoluteUrl(`/${areaData.state?.slug}`)}
+                className="text-blue-300 hover:border-blue-300 hover:text-blue-300">
+                {areaData.state?.name}
+              </Link>
+              . Find services, reviews, and opening hours.
             </p>
           </div>
         </Container>

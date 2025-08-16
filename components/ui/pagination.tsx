@@ -71,10 +71,10 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
             }
             onClick={scrollToTop}
             className={cn(
-              'flex items-center justify-center py-4',
+              'flex items-center justify-center py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === 1 && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronLeftIcon className="h-5 w-5 text-brand" />
+            <ChevronLeftIcon className="h-5 w-5 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
         {pageNumbers.map((page, idx) =>
@@ -96,8 +96,10 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
                 onClick={scrollToTop}
                 className={cn(
                   'flex size-12 items-center justify-center rounded-full py-4 font-semibold transition-colors',
-                  page === currentPage ? '!bg-brand text-white hover:text-white' : 'text-gray-700',
-                  'focus:outline-none focus:ring-2 focus:ring-brand',
+                  page === currentPage
+                    ? '!bg-blue-500 text-white hover:text-white dark:!bg-blue-400 dark:text-white dark:hover:text-white'
+                    : 'text-gray-700',
+                  'focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-gray-300',
                 )}>
                 {page}
               </Link>
@@ -119,10 +121,10 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
             onClick={scrollToTop}
             className={cn(
               buttonVariants({ variant: 'outline' }),
-              'flex items-center justify-center rounded-full py-4',
+              'flex items-center justify-center rounded-full py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === totalPages && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronRightIcon className="h-5 w-5 text-brand" />
+            <ChevronRightIcon className="h-5 w-5 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
       </div>
@@ -138,13 +140,13 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
             href={`${pathname}?page=${currentPage - 1}`}
             onClick={scrollToTop}
             className={cn(
-              'flex items-center justify-center rounded-full py-4',
+              'flex items-center justify-center rounded-full py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === 1 && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronLeftIcon className="h-6 w-6 text-brand" />
+            <ChevronLeftIcon className="h-6 w-6 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
-        <span className="text-base font-semibold text-gray-700">
+        <span className="text-base font-semibold text-gray-700 dark:text-gray-300">
           {currentPage} / {totalPages}
         </span>
         <Button
@@ -157,10 +159,10 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
             href={`${pathname}?page=${currentPage + 1}`}
             onClick={scrollToTop}
             className={cn(
-              'flex items-center justify-center rounded-full py-4',
+              'flex items-center justify-center rounded-full py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === totalPages && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronRightIcon className="h-6 w-6 text-brand" />
+            <ChevronRightIcon className="h-6 w-6 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
       </div>

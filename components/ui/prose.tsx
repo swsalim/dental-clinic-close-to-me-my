@@ -21,7 +21,7 @@ export default function Prose({
         'prose-lead:text-gray-500',
         // 'prose-p:mt-2 prose-p:mb-2',
         // links
-        'prose-a:border-b-2 prose-a:border-transparent prose-a:font-normal prose-a:text-brand prose-a:no-underline prose-a:duration-200 hover:prose-a:border-brand/80',
+        'prose-a:border-b-2 prose-a:border-transparent prose-a:font-normal prose-a:text-blue-500 prose-a:no-underline prose-a:duration-200 hover:prose-a:border-blue-600 hover:prose-a:text-blue-600',
         // pre
         'prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg',
         'break-words',

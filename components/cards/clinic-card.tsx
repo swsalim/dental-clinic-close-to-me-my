@@ -91,13 +91,13 @@ export function ClinicCard({
           )}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <MapPinIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
+              <MapPinIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
               <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-300">
                 {address}, {postalCode}, {area}, {state}
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <PhoneIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
+              <PhoneIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
               <p className="text-sm text-gray-500 dark:text-gray-300">{phone}</p>
             </div>
           </div>

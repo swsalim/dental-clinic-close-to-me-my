@@ -110,7 +110,7 @@ const MobileNavItem = ({
                   )}
                   <div>
                     <div className="flex items-center gap-2">
-                      <h2 className="text-sm font-medium text-gray-900 group-hover:text-brand dark:text-gray-300">
+                      <h2 className="text-sm font-medium text-gray-900 group-hover:text-blue-400 dark:text-gray-300">
                         {title}
                       </h2>
                     </div>

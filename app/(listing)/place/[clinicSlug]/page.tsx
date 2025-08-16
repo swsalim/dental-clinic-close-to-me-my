@@ -358,12 +358,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               </div>
               <div className="flex flex-col gap-x-4 gap-y-2">
                 <div className="flex items-center gap-x-2">
-                  <MapPinIcon className="h-5 w-5 text-brand" />
+                  <MapPinIcon className="h-5 w-5 text-blue-300" />
                   <span className="text-sm text-gray-500 dark:text-gray-300">{fullAddress}</span>
                 </div>
                 {parsedClinic.email && (
                   <div className="flex items-center gap-x-2">
-                    <MailIcon className="h-5 w-5 text-brand" />
+                    <MailIcon className="h-5 w-5 text-blue-300" />
                     <Link href={`mailto:${parsedClinic.email}`}>
                       <span className="text-sm">{parsedClinic.email}</span>
                     </Link>
@@ -371,7 +371,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 )}
                 {parsedClinic.website && (
                   <div className="flex items-center gap-x-2">
-                    <GlobeIcon className="h-5 w-5 text-brand" />
+                    <GlobeIcon className="h-5 w-5 text-blue-300" />
                     <Link
                       href={`${parsedClinic.website}?utm_source=dentalclinicclosetome.my`}
                       rel="nofollow">
@@ -388,7 +388,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-[#1877f2] hover:text-[#1877f2]">
+                        className="flex-grow-0 justify-center p-3 text-[#1877f2] hover:text-[#1877f2] dark:text-[#1877f2] dark:hover:text-[#1877f2]">
                         <a
                           href={parsedClinic.facebook_url}
                           target="_blank"
@@ -403,7 +403,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-[#e1306c] hover:text-[#e1306c]">
+                        className="flex-grow-0 justify-center p-3 text-[#e1306c] hover:text-[#e1306c] dark:text-[#e1306c] dark:hover:text-[#e1306c]">
                         <a
                           href={parsedClinic.instagram_url}
                           target="_blank"
@@ -418,7 +418,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-[#ff0000] hover:text-[#ff0000]">
+                        className="flex-grow-0 justify-center p-3 text-[#ff0000] hover:text-[#ff0000] dark:text-[#ff0000] dark:hover:text-[#ff0000]">
                         <a
                           href={parsedClinic.youtube_url}
                           target="_blank"
@@ -433,7 +433,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     <Button
                       variant="outline"
                       asChild
-                      className="flex-grow-0 justify-center p-3 text-brand hover:text-brand">
+                      className="flex-grow-0 justify-center p-3 text-blue-500 hover:text-blue-400 dark:text-blue-300 dark:hover:text-blue-400">
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${parsedClinic.name}`}
                         target="_blank"

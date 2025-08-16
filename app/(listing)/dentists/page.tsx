@@ -198,11 +198,15 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
               </h1>
               <p className="text-balance text-lg font-medium text-gray-600">
                 Browse dentists by{' '}
-                <Link href="/browse" className="text-brand hover:text-brand">
+                <Link
+                  href="/browse"
+                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600">
                   state
                 </Link>
                 , or{' '}
-                <Link href="/browse" className="text-brand hover:text-brand">
+                <Link
+                  href="/browse"
+                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600">
                   city
                 </Link>
                 . Helping you find dental professionals near you, faster.

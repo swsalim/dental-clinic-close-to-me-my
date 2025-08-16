@@ -121,7 +121,7 @@ export function ClinicCardHorizontal({
                 {address && (
                   <div className="flex items-start gap-2">
                     <MapPinIcon
-                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand"
+                      className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-300"
                       aria-hidden="true"
                     />
                     <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -136,7 +136,7 @@ export function ClinicCardHorizontal({
                 {/* Phone */}
                 {phone && (
                   <div className="flex items-center gap-2">
-                    <PhoneIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
+                    <PhoneIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
                     <p className="text-sm text-gray-600 dark:text-gray-300">{phone}</p>
                   </div>
                 )}

@@ -16,7 +16,7 @@ const badgeVariants = cva(
         green: 'border border-green-300 bg-green-50 text-green-700',
         yellow: 'border border-yellow-300 bg-yellow-50 text-yellow-700',
         outline: 'bg-gray-50 capitalize text-gray-700',
-        brand: 'border border-brand bg-red-50 text-brand',
+        brand: 'border border-blue-400 bg-blue-700 text-blue-100',
       },
     },
     defaultVariants: {

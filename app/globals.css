@@ -15,10 +15,10 @@ html body[data-scroll-locked] {
   }
 
   a {
-    @apply text-brand font-medium border-b-2 border-transparent no-underline duration-200;
+    @apply border-b-2 border-transparent font-medium text-blue-500 no-underline duration-200 dark:text-blue-300;
   }
 
   a:hover {
-    @apply text-brand/80 border-brand/80;
+    @apply border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400;
   }
 }

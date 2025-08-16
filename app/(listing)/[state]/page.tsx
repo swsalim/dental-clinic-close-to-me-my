@@ -227,7 +227,10 @@ export default async function StatePage({ params, searchParams }: StatePageProps
               Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
                 <>
-                  <Link href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)} key={area.slug}>
+                  <Link
+                    href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)}
+                    key={area.slug}
+                    className="text-blue-300 hover:border-blue-300 hover:text-blue-300">
                     {area.name}
                   </Link>
                   {index < nearbyAreasWithLinks.length - 2 && ', '}

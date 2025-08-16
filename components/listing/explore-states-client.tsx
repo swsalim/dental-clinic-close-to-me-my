@@ -62,7 +62,9 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
             index === 7 && 'lg:col-span-3',
             index === 8 && 'lg:col-span-2',
           )}>
-          <Link href={`/${state.slug}`} className="relative overflow-hidden rounded-lg">
+          <Link
+            href={`/${state.slug}`}
+            className="relative overflow-hidden rounded-lg text-blue-300">
             <div
               className={cn(
                 'group relative h-56 w-full overflow-hidden rounded-lg transition md:h-52 lg:h-56',

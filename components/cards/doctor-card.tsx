@@ -51,13 +51,13 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
           {primaryClinic && (
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <HospitalIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
+                <HospitalIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
                 <p className="line-clamp-2 text-sm font-medium text-gray-700">
                   {primaryClinic.name}
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <MapPinIcon className="h-4 w-4 flex-shrink-0 text-brand" aria-hidden="true" />
+                <MapPinIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
                 <p className="line-clamp-2 text-sm text-gray-500">
                   {primaryClinic.address && `${primaryClinic.address}, `}
                   {primaryClinic.postal_code && `${primaryClinic.postal_code}, `}
