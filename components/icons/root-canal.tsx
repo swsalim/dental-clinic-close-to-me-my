@@ -22,7 +22,7 @@ export function RootCanal({
       role="img"
       className={className}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
+      <circle cx="128" cy="128" r="103.873" fill="currentColor" />
       <path
         d="M113.277 58.107H92.093a3.482 3.482 0 0 1-3.482-3.482v-10.25a3.482 3.482 0 0 1 3.482-3.482h21.184a3.482 3.482 0 0 1 3.482 3.482v10.25a3.482 3.482 0 0 1-3.482 3.482z"
         fill="#a0d1f2"
@@ -31,8 +31,8 @@ export function RootCanal({
         d="M113.277 58.107h-4.416V40.893h4.416a3.482 3.482 0 0 1 3.482 3.482v10.25a3.482 3.482 0 0 1-3.482 3.482z"
         fill="#7babf3"
       />
-      <path d="M43.25 130.357h169.5v84.75H43.25z" fill="#fd919f" />
-      <path d="M197.75 130.357h15v84.75h-15z" fill="#e0667d" />
+      <path d="M43.25 130.357h169.5v84.75H43.25z" fill="#7babf3" />
+      <path d="M197.75 130.357h15v84.75h-15z" fill="#a0d1f2" />
       <path
         className="st0"
         d="M212.75 218.107H43.25a3 3 0 0 1-3-3v-84.75a3 3 0 0 1 3-3h169.5a3 3 0 0 1 3 3v84.75a3 3 0 0 1-3 3zm-166.5-6h163.5v-78.75H46.25v78.75z"

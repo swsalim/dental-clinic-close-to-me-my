@@ -22,7 +22,7 @@ export function Invisalign({
       role="img"
       className={className}
       {...props}>
-      <circle cx="128" cy="128" r="103.873" fill="#f7686e" />
+      <circle cx="128" cy="128" r="103.873" fill="currentColor" />
       <path
         className="st2"
         d="M162.8 172.166c20.798-12.036 34.8-34.508 34.8-60.266h-34.8v60.266z"
