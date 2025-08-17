@@ -20,7 +20,9 @@ export function ImageCloudinary({
   height = 400,
   ...props
 }: ImageCloudinaryProps) {
-  const isOnCloudinary = src.startsWith('https://res.cloudinary.com/typeeighty');
+  const isOnCloudinary =
+    src.startsWith('https://res.cloudinary.com/typeeighty') ||
+    src.startsWith('https://res.cloudinary.com/dentalclinicsmalaysia');
   const imageSrc = isOnCloudinary
     ? src
     : directory
