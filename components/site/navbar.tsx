@@ -98,74 +98,73 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <>
-      <div
-        className={`sticky top-[-1px] w-full ${
-          scrolled
-            ? 'border-b border-gray-200 bg-white/50 backdrop-blur-xl dark:border-gray-700 dark:bg-gray-900/50'
-            : 'bg-white/0'
-        } z-40 transition-all`}>
-        <Container className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-x-2 text-xl hover:border-transparent">
-            <Logo className="h-8 w-auto fill-blue-500" />
-          </Link>
-          <NavigationMenu className="hidden lg:block">
-            <NavigationMenuList>
-              {navItems.map(({ name, href, segments, childItems, icon }) => {
-                const isActive = segments?.some((segment) => pathname?.startsWith(segment));
-                const Icon = icon;
+    <header
+      className={cn(
+        'sticky top-0 z-50 w-full border-b bg-white/50 backdrop-blur-md transition-all duration-75',
+        scrolled
+          ? 'dark:border-brand-600 border-gray-200 dark:bg-gray-900/50'
+          : 'border-transparent',
+      )}>
+      <Container className="flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center gap-x-2 text-xl hover:border-transparent">
+          <Logo className="h-8 w-auto fill-blue-500" />
+        </Link>
+        <NavigationMenu className="hidden lg:block">
+          <NavigationMenuList>
+            {navItems.map(({ name, href, segments, childItems, icon }) => {
+              const isActive = segments?.some((segment) => pathname?.startsWith(segment));
+              const Icon = icon;
 
-                return (
-                  <NavigationMenuItem key={name}>
-                    <>
-                      {href && (
-                        <NavigationMenuLink
-                          className={cn(
-                            'font-regular focus:bg-blue-50/hover:bg-blue-50 data-[active=true]:bg-blue-50/hover:bg-blue-50 data-[state=open]:bg-blue-50/hover:bg-blue-50 data-[active=true]:focus:bg-blue-50/hover:bg-blue-50 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-blue-50 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-blue-600 data-[state=open]:text-blue-600 data-[active=true]:hover:bg-blue-50 data-[state=open]:hover:bg-blue-50 data-[state=open]:focus:bg-blue-50 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
-                          )}
-                          asChild>
-                          <Link href={href}>
-                            <span>{name}</span>
-                            {Icon && <Icon className="ml-2 size-4" />}
-                          </Link>
-                        </NavigationMenuLink>
-                      )}
-                      {!href && (
-                        <>
-                          <NavigationMenuTrigger data-active={isActive}>
-                            <span>{name}</span>
-                            {Icon && <Icon className="ml-2 size-4" />}
-                          </NavigationMenuTrigger>
-                          <NavigationMenuContent>
-                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                              {childItems?.map((item) => {
-                                return (
-                                  <ListItem
-                                    key={item.title}
-                                    title={item.title}
-                                    href={item.href}
-                                    logo={item.logo}
-                                    isExternal={item.isExternal}
-                                    data-active={pathname === item.href}
-                                    className={cn(
-                                      pathname === item.href && 'bg-blue-50 text-blue-600',
-                                    )}>
-                                    {item.description}
-                                  </ListItem>
-                                );
-                              })}
-                            </ul>
-                          </NavigationMenuContent>
-                        </>
-                      )}
-                    </>
-                  </NavigationMenuItem>
-                );
-              })}
-            </NavigationMenuList>
-          </NavigationMenu>
-        </Container>
-      </div>
-    </>
+              return (
+                <NavigationMenuItem key={name}>
+                  <>
+                    {href && (
+                      <NavigationMenuLink
+                        className={cn(
+                          'font-regular focus:bg-blue-50/hover:bg-blue-50 data-[active=true]:bg-blue-50/hover:bg-blue-50 data-[state=open]:bg-blue-50/hover:bg-blue-50 data-[active=true]:focus:bg-blue-50/hover:bg-blue-50 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-blue-50 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-blue-600 data-[state=open]:text-blue-600 data-[active=true]:hover:bg-blue-50 data-[state=open]:hover:bg-blue-50 data-[state=open]:focus:bg-blue-50 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
+                        )}
+                        asChild>
+                        <Link href={href}>
+                          <span>{name}</span>
+                          {Icon && <Icon className="ml-2 size-4" />}
+                        </Link>
+                      </NavigationMenuLink>
+                    )}
+                    {!href && (
+                      <>
+                        <NavigationMenuTrigger data-active={isActive}>
+                          <span>{name}</span>
+                          {Icon && <Icon className="ml-2 size-4" />}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                            {childItems?.map((item) => {
+                              return (
+                                <ListItem
+                                  key={item.title}
+                                  title={item.title}
+                                  href={item.href}
+                                  logo={item.logo}
+                                  isExternal={item.isExternal}
+                                  data-active={pathname === item.href}
+                                  className={cn(
+                                    pathname === item.href && 'bg-blue-50 text-blue-600',
+                                  )}>
+                                  {item.description}
+                                </ListItem>
+                              );
+                            })}
+                          </ul>
+                        </NavigationMenuContent>
+                      </>
+                    )}
+                  </>
+                </NavigationMenuItem>
+              );
+            })}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </Container>
+    </header>
   );
 }
