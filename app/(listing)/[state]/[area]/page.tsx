@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -11,6 +13,7 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 import { getAreaBySlug, getAreaListings, getAreaMetadataBySlug } from '@/helpers/areas';
 import { getStateMetadataBySlug } from '@/helpers/states';
 
+import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
@@ -263,24 +266,29 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                   )}>
                   {areaData.clinics
                     ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                    .map((clinic) => (
-                      <ClinicCard
-                        key={clinic.slug}
-                        slug={clinic.slug ?? ''}
-                        name={clinic.name ?? ''}
-                        address={clinic.address ?? ''}
-                        phone={clinic.phone ?? ''}
-                        image={clinic.images?.[0]}
-                        postalCode={clinic.postal_code ?? ''}
-                        state={areaData.state?.name ?? ''}
-                        area={areaData.name ?? ''}
-                        rating={clinic.rating}
-                        isFeatured={clinic.is_featured ?? false}
-                        hours={clinic.hours ?? []}
-                        specialHours={clinic.special_hours ?? []}
-                        openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                      />
-                    ))}
+                    .map((clinic, index) => {
+                      return (
+                        <React.Fragment key={clinic.slug}>
+                          {(index + 1) % 6 == 0 && <LazyAdsArticle />}
+                          <ClinicCard
+                            key={clinic.slug}
+                            slug={clinic.slug ?? ''}
+                            name={clinic.name ?? ''}
+                            address={clinic.address ?? ''}
+                            phone={clinic.phone ?? ''}
+                            image={clinic.images?.[0]}
+                            postalCode={clinic.postal_code ?? ''}
+                            state={areaData.state?.name ?? ''}
+                            area={areaData.name ?? ''}
+                            rating={clinic.rating}
+                            isFeatured={clinic.is_featured ?? false}
+                            hours={clinic.hours ?? []}
+                            specialHours={clinic.special_hours ?? []}
+                            openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                          />
+                        </React.Fragment>
+                      );
+                    })}
                 </div>
                 {isJohorBahru && (
                   <Prose className="hidden lg:block">
