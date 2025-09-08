@@ -79,8 +79,6 @@ export default function FormEditDoctor({ doctor, clinics }: EditDoctorFormProps)
   const router = useRouter();
   const supabase = createClient();
 
-  console.log('doctor', doctor);
-
   const [currentImages, setCurrentImages] = useState<ClinicImage[]>(doctor.images || []);
   const [imagesToRemove, setImagesToRemove] = useState<string[]>([]);
 

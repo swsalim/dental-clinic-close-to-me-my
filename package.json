@@ -19,9 +19,7 @@
     "transfer-imagekit-area": "tsx ./tasks/transfer-imagekit-area.ts",
     "transfer-imagekit-state": "tsx ./tasks/transfer-imagekit-state.ts",
     "transfer-imagekit-doctor": "tsx ./tasks/transfer-imagekit-doctor.ts",
-    "transfer-imagekit-clinic": "tsx ./tasks/transfer-imagekit-clinic.ts",
-    "transfer-cloudinary": "tsx ./tasks/transfer-cloudinary.ts",
-    "update-cloudinary-data": "tsx ./tasks/update-cloudinary-data.ts"
+    "transfer-imagekit-clinic": "tsx ./tasks/transfer-imagekit-clinic.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

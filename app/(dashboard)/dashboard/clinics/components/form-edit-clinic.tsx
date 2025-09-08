@@ -205,7 +205,11 @@ export default function FormEditClinic({
   const router = useRouter();
   const supabase = createClient();
 
-  const [currentImages, setCurrentImages] = useState<ClinicImage[]>(clinic.images || []);
+  const [currentImages, setCurrentImages] = useState<ClinicImage[]>(
+    Array.isArray(clinic.images) && clinic.images.length > 0 && typeof clinic.images[0] === 'object'
+      ? (clinic.images as ClinicImage[])
+      : [],
+  );
   const [imagesToRemove, setImagesToRemove] = useState<string[]>([]);
 
   const handleTimeInput = async (days: readonly string[]) => {

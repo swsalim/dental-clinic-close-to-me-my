@@ -8,7 +8,6 @@ import { Row } from '@tanstack/react-table';
 import { MenuIcon } from 'lucide-react';
 
 import { createClient } from '@/lib/supabase/client';
-import { getCloudinaryPublicId } from '@/lib/utils';
 
 import {
   AlertDialog,
