@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 
-import { ClinicDoctor } from '@/types/clinic';
+import { ClinicDoctor, ClinicImage } from '@/types/clinic';
 import { AwardIcon, HospitalIcon, MapPinIcon, SquareUserRoundIcon } from 'lucide-react';
 
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -24,8 +24,8 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
       <Card className="h-full overflow-hidden rounded-2xl" role="article">
         <CardHeader className="relative h-72 overflow-hidden p-0">
           {firstImage ? (
-            <ImageCloudinary
-              src={firstImage}
+            <ImageKit
+              src={(firstImage as unknown as ClinicImage).image_url}
               alt={doctor.name}
               width={400}
               height={600}

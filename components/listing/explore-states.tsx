@@ -10,7 +10,7 @@ const getPopularStates = unstable_cache(
   async (supabase: Awaited<ReturnType<typeof createServerClient>>) => {
     const { data: states } = await supabase
       .from('states')
-      .select('id, name, slug, thumbnail_image, clinics:clinics(count)')
+      .select('id, name, slug, image, clinics:clinics(count)')
       .eq('clinics.status', 'approved');
 
     return states

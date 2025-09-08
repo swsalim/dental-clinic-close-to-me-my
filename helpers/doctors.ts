@@ -27,7 +27,7 @@ export const DOCTOR_WITH_CLINICS_SELECT = `
   bio,
   specialty,
   qualification,
-  images,
+  images:clinic_doctor_images(id,image_url, imagekit_file_id),
   featured_video,
   is_active,
   is_featured,
@@ -49,7 +49,7 @@ export const DOCTOR_WITH_CLINICS_SELECT = `
       longitude,
       rating,
       review_count,
-      images,
+      images:clinic_images(id,image_url, imagekit_file_id),
       area:areas(name),
       state:states(name)
     )
@@ -64,7 +64,7 @@ type RawDoctorWithClinics = {
   bio: string | null;
   specialty: string | null;
   qualification: string | null;
-  images: string[] | null;
+  images: { id: string; image_url: string; imagekit_file_id: string }[] | null;
   featured_video: string | null;
   is_active: boolean | null;
   is_featured: boolean | null;
@@ -85,7 +85,7 @@ type RawDoctorWithClinics = {
       longitude: number | null;
       rating: number | null;
       review_count: number | null;
-      images: string[] | null;
+      images: { id: string; image_url: string; imagekit_file_id: string }[] | null;
       area?: { name: string } | null;
       state?: { name: string } | null;
     };
@@ -193,8 +193,7 @@ export async function getDoctors(
   let query = supabase
     .from('clinic_doctors')
     .select(DOCTOR_WITH_CLINICS_SELECT, { count: 'exact' })
-    .eq('is_active', true)
-    .eq('status', 'approved')
+    // .eq('status', 'approved')
     .order('modified_at', { ascending: false });
 
   if (filters?.specialty) {

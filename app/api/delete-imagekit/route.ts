@@ -17,28 +17,25 @@ const basicAuth = Buffer.from(authString).toString('base64');
 
 export async function POST(request: Request) {
   try {
-    const { fileId } = await request.json();
-
-    if (!fileId) {
-      return NextResponse.json({ error: 'File ID is required' }, { status: 400 });
-    }
+    const { imagekit_file_id } = await request.json();
 
     // Delete file using ImageKit's REST API directly with Basic Auth
-    const response = await fetch(`https://api.imagekit.io/v1/files/${fileId}`, {
+    const response = await fetch(`https://api.imagekit.io/v1/files/${imagekit_file_id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Basic ${basicAuth}`,
-        'Content-Type': 'application/json',
       },
     });
 
-    if (!response.ok) {
-      const error = await response.json();
-      console.error('ImageKit Error:', error);
-      throw new Error(error.message || 'Failed to delete image');
+    if (response.ok) {
+      return new NextResponse(JSON.stringify({ message: 'Image deleted successfully' }), {
+        status: 200,
+      });
+    } else {
+      return new NextResponse(JSON.stringify({ message: 'Failed to delete image' }), {
+        status: 400,
+      });
     }
-
-    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error deleting image:', error);
     return NextResponse.json(

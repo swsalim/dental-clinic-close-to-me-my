@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ClinicDetails, ClinicHours } from '@/types/clinic';
+import { ClinicDetails, ClinicHours, ClinicImage } from '@/types/clinic';
 import {
   AwardIcon,
   CarIcon,
@@ -313,7 +313,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
       {parsedClinic.images && parsedClinic.images.length > 0 && (
         <Wrapper
           style={{
-            backgroundImage: `url('${parsedClinic.images?.[0]}')`,
+            backgroundImage: `url('${(parsedClinic.images?.[0] as unknown as ClinicImage).image_url}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

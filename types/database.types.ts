@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.3 (519615d)"
@@ -15,6 +15,59 @@ export type Database = {
   public: {
     Tables: {
       areas: {
+        Row: {
+          banner_image: string | null
+          created_at: string | null
+          description: string | null
+          id: string
+          image: string | null
+          imagekit_file_id: string | null
+          modified_at: string | null
+          name: string
+          short_description: string | null
+          slug: string
+          state_id: string | null
+          thumbnail_image: string | null
+        }
+        Insert: {
+          banner_image?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          image?: string | null
+          imagekit_file_id?: string | null
+          modified_at?: string | null
+          name: string
+          short_description?: string | null
+          slug: string
+          state_id?: string | null
+          thumbnail_image?: string | null
+        }
+        Update: {
+          banner_image?: string | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          image?: string | null
+          imagekit_file_id?: string | null
+          modified_at?: string | null
+          name?: string
+          short_description?: string | null
+          slug?: string
+          state_id?: string | null
+          thumbnail_image?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "areas_state_id_fkey"
+            columns: ["state_id"]
+            isOneToOne: false
+            referencedRelation: "states"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      areas_duplicate: {
         Row: {
           banner_image: string | null
           created_at: string | null
@@ -53,10 +106,51 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "areas_state_id_fkey"
+            foreignKeyName: "areas_duplicate_state_id_fkey"
             columns: ["state_id"]
             isOneToOne: false
             referencedRelation: "states"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      clinic_doctor_images: {
+        Row: {
+          created_at: string
+          display_order: number
+          doctor_id: string
+          id: string
+          image_url: string
+          imagekit_file_id: string
+          modified_at: string
+          original_cloudinary_url: string | null
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          doctor_id: string
+          id?: string
+          image_url: string
+          imagekit_file_id: string
+          modified_at?: string
+          original_cloudinary_url?: string | null
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          doctor_id?: string
+          id?: string
+          image_url?: string
+          imagekit_file_id?: string
+          modified_at?: string
+          original_cloudinary_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "clinic_doctor_images_doctor_id_fkey"
+            columns: ["doctor_id"]
+            isOneToOne: false
+            referencedRelation: "clinic_doctors"
             referencedColumns: ["id"]
           },
         ]
@@ -148,6 +242,54 @@ export type Database = {
         }
         Relationships: []
       }
+      clinic_doctors_duplicate: {
+        Row: {
+          bio: string | null
+          created_at: string | null
+          featured_video: string | null
+          id: string
+          images: string[] | null
+          is_active: boolean | null
+          is_featured: boolean | null
+          modified_at: string | null
+          name: string
+          qualification: string | null
+          slug: string
+          specialty: string | null
+          status: string | null
+        }
+        Insert: {
+          bio?: string | null
+          created_at?: string | null
+          featured_video?: string | null
+          id?: string
+          images?: string[] | null
+          is_active?: boolean | null
+          is_featured?: boolean | null
+          modified_at?: string | null
+          name: string
+          qualification?: string | null
+          slug: string
+          specialty?: string | null
+          status?: string | null
+        }
+        Update: {
+          bio?: string | null
+          created_at?: string | null
+          featured_video?: string | null
+          id?: string
+          images?: string[] | null
+          is_active?: boolean | null
+          is_featured?: boolean | null
+          modified_at?: string | null
+          name?: string
+          qualification?: string | null
+          slug?: string
+          specialty?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
       clinic_hours: {
         Row: {
           clinic_id: string
@@ -179,6 +321,47 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "clinic_hours_clinic_id_fkey"
+            columns: ["clinic_id"]
+            isOneToOne: false
+            referencedRelation: "clinics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      clinic_images: {
+        Row: {
+          clinic_id: string
+          created_at: string
+          display_order: number
+          id: string
+          image_url: string
+          imagekit_file_id: string
+          modified_at: string
+          original_cloudinary_url: string | null
+        }
+        Insert: {
+          clinic_id: string
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_url: string
+          imagekit_file_id: string
+          modified_at?: string
+          original_cloudinary_url?: string | null
+        }
+        Update: {
+          clinic_id?: string
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_url?: string
+          imagekit_file_id?: string
+          modified_at?: string
+          original_cloudinary_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "clinic_images_clinic_id_fkey"
             columns: ["clinic_id"]
             isOneToOne: false
             referencedRelation: "clinics"
@@ -460,12 +643,134 @@ export type Database = {
           },
         ]
       }
+      clinics_duplicate: {
+        Row: {
+          address: string | null
+          area_id: string | null
+          city: string | null
+          created_at: string | null
+          description: string | null
+          email: string | null
+          facebook_url: string | null
+          featured_video: string | null
+          id: string
+          images: string[] | null
+          instagram_url: string | null
+          is_active: boolean | null
+          is_featured: boolean | null
+          is_permanently_closed: boolean | null
+          latitude: number | null
+          location: unknown | null
+          longitude: number | null
+          modified_at: string | null
+          name: string
+          neighborhood: string | null
+          open_on_public_holidays: boolean | null
+          phone: string | null
+          place_id: string
+          postal_code: string | null
+          rating: number | null
+          review_count: number | null
+          slug: string
+          source: string | null
+          state_id: string | null
+          status: string | null
+          website: string | null
+          youtube_url: string | null
+        }
+        Insert: {
+          address?: string | null
+          area_id?: string | null
+          city?: string | null
+          created_at?: string | null
+          description?: string | null
+          email?: string | null
+          facebook_url?: string | null
+          featured_video?: string | null
+          id?: string
+          images?: string[] | null
+          instagram_url?: string | null
+          is_active?: boolean | null
+          is_featured?: boolean | null
+          is_permanently_closed?: boolean | null
+          latitude?: number | null
+          location?: unknown | null
+          longitude?: number | null
+          modified_at?: string | null
+          name: string
+          neighborhood?: string | null
+          open_on_public_holidays?: boolean | null
+          phone?: string | null
+          place_id: string
+          postal_code?: string | null
+          rating?: number | null
+          review_count?: number | null
+          slug: string
+          source?: string | null
+          state_id?: string | null
+          status?: string | null
+          website?: string | null
+          youtube_url?: string | null
+        }
+        Update: {
+          address?: string | null
+          area_id?: string | null
+          city?: string | null
+          created_at?: string | null
+          description?: string | null
+          email?: string | null
+          facebook_url?: string | null
+          featured_video?: string | null
+          id?: string
+          images?: string[] | null
+          instagram_url?: string | null
+          is_active?: boolean | null
+          is_featured?: boolean | null
+          is_permanently_closed?: boolean | null
+          latitude?: number | null
+          location?: unknown | null
+          longitude?: number | null
+          modified_at?: string | null
+          name?: string
+          neighborhood?: string | null
+          open_on_public_holidays?: boolean | null
+          phone?: string | null
+          place_id?: string
+          postal_code?: string | null
+          rating?: number | null
+          review_count?: number | null
+          slug?: string
+          source?: string | null
+          state_id?: string | null
+          status?: string | null
+          website?: string | null
+          youtube_url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "clinics_duplicate_area_id_fkey"
+            columns: ["area_id"]
+            isOneToOne: false
+            referencedRelation: "areas"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "clinics_duplicate_state_id_fkey"
+            columns: ["state_id"]
+            isOneToOne: false
+            referencedRelation: "states"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       states: {
         Row: {
           banner_image: string | null
           created_at: string | null
           description: string | null
           id: string
+          image: string | null
+          imagekit_file_id: string | null
           modified_at: string | null
           name: string
           short_description: string | null
@@ -477,6 +782,8 @@ export type Database = {
           created_at?: string | null
           description?: string | null
           id?: string
+          image?: string | null
+          imagekit_file_id?: string | null
           modified_at?: string | null
           name: string
           short_description?: string | null
@@ -488,6 +795,8 @@ export type Database = {
           created_at?: string | null
           description?: string | null
           id?: string
+          image?: string | null
+          imagekit_file_id?: string | null
           modified_at?: string | null
           name?: string
           short_description?: string | null
@@ -504,9 +813,9 @@ export type Database = {
       add_clinic_hours: {
         Args: {
           p_clinic_id: string
+          p_close_time: string
           p_day_of_week: number
           p_open_time: string
-          p_close_time: string
         }
         Returns: string
       }
@@ -523,7 +832,7 @@ export type Database = {
         Returns: Json
       }
       get_clinic_by_slug: {
-        Args: { slug_input: string; status_input: string; review_limit: number }
+        Args: { review_limit: number; slug_input: string; status_input: string }
         Returns: Json
       }
       get_doctors_by_clinic_slug: {
@@ -538,31 +847,31 @@ export type Database = {
           result_limit?: number
         }
         Returns: {
-          id: string
-          name: string
-          slug: string
-          latitude: number
-          longitude: number
-          distance_km: number
+          address: string
           area_id: string
           area_name: string
           area_slug: string
+          city: string
+          distance_km: number
+          hours: Json
+          id: string
+          images: string[]
+          is_active: boolean
+          is_featured: boolean
+          is_permanently_closed: boolean
+          latitude: number
+          longitude: number
+          name: string
+          neighborhood: string
+          open_on_public_holidays: boolean
+          phone: string
+          postal_code: string
+          rating: number
+          slug: string
           state_id: string
           state_name: string
           state_slug: string
-          images: string[]
-          address: string
-          neighborhood: string
-          city: string
-          postal_code: string
-          phone: string
-          rating: number
-          open_on_public_holidays: boolean
-          is_permanently_closed: boolean
-          is_featured: boolean
-          is_active: boolean
           status: string
-          hours: Json
         }[]
       }
       get_ranged_area_metadata_by_slug: {
@@ -571,27 +880,27 @@ export type Database = {
       }
       get_ranged_doctor_by_state_slug: {
         Args: {
-          state_slug_param: string
           from_index_param: number
-          to_index_param: number
+          state_slug_param: string
           status_param?: string
+          to_index_param: number
         }
         Returns: Json
       }
       get_ranged_doctors_by_state: {
         Args: {
-          state_slug: string
+          doctor_status?: string
           limit_count?: number
           offset_count?: number
-          doctor_status?: string
+          state_slug: string
         }
         Returns: {
-          data: Json
           count: number
+          data: Json
         }[]
       }
       get_ranged_state_metadata_by_slug: {
-        Args: { state_slug: string; from_index: number; to_index: number }
+        Args: { from_index: number; state_slug: string; to_index: number }
         Returns: Json
       }
       get_state_metadata_by_slug: {

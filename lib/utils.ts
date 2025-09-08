@@ -17,24 +17,56 @@ export function absoluteUrl(input = '') {
 export function imageKitLoader({
   src,
   width,
-  quality,
+  quality = 85,
 }: {
   src: string;
   width: number;
   quality?: number;
 }) {
+  const commonImageWidths = [200, 350, 600, 900, 1200, 1800];
+  const closestWidth = commonImageWidths.reduce((a, b) =>
+    Math.abs(b - width) < Math.abs(a - width) ? b : a,
+  );
+
   if (src[0] === '/') src = src.slice(1);
-  const params = [`w-${width}`];
-  if (quality) {
-    params.push(`q-${quality}`);
-  }
+
+  const params = [`w-${closestWidth}`];
+  if (quality) params.push(`q-${quality}`);
+  params.push('f-auto', 'c-at_max'); // Auto format and crop at max
   const paramsString = params.join(',');
+
   let urlEndpoint = `https://ik.imagekit.io/${process.env.NEXT_PUBLIC_IMAGEKIT_ID}`;
   if (urlEndpoint[urlEndpoint.length - 1] === '/') {
     urlEndpoint = urlEndpoint.substring(0, urlEndpoint.length - 1);
   }
-
   return `${urlEndpoint}/${src}?tr=${paramsString}`;
+}
+
+export function bypassImageKitLoader({
+  src,
+  width,
+  quality = 85,
+}: {
+  src: string;
+  width: number;
+  quality?: number;
+}) {
+  const commonImageWidths = [200, 350, 600, 900, 1200, 1800];
+  const closestWidth = commonImageWidths.reduce((a, b) =>
+    Math.abs(b - width) < Math.abs(a - width) ? b : a,
+  );
+
+  const url = new URL(src);
+  const transformations = [
+    `w-${closestWidth}`,
+    `q-${quality}`,
+    'f-auto', // Auto format
+    'c-at_max', // Crop at max (similar to Cloudinary's c_limit)
+  ];
+
+  url.searchParams.set('tr', transformations.join(','));
+
+  return url.toString();
 }
 
 export function isValidUrl(url: string): boolean {
@@ -164,4 +196,13 @@ export const sanitizeHtmlField = (value: string | undefined): string | null => {
 
   // If the result is empty, return null
   return textContent === '' ? null : value;
+};
+
+export const generateUniqueFilename = (originalFilename: string): string => {
+  const timestamp = Date.now();
+  const extension = originalFilename.split('.').pop();
+  const baseName = originalFilename.replace(/\.[^/.]+$/, '');
+  // Use slug for more readable filenames
+  const cleanSlug = baseName.replace(/[^a-zA-Z0-9-]/g, '');
+  return `${cleanSlug}_${timestamp}.${extension}`;
 };

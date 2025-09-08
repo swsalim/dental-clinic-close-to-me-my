@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ClinicImage } from '@/types/clinic';
 import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
@@ -234,7 +235,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
                       postalCode={clinic.postal_code ?? ''}
                       state={clinic.state?.name ?? ''}
                       area={clinic.area?.name ?? ''}
-                      image={clinic.images?.[0]}
+                      image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
                       rating={clinic.rating}
                       isFeatured={clinic.is_featured ?? false}
                       hours={clinic.hours ?? []}

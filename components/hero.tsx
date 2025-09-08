@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { ClinicImage } from '@/types/clinic';
 import { ArrowRightIcon, PersonStandingIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -8,7 +9,7 @@ import { getDoctors } from '@/helpers/doctors';
 
 import { buttonVariants } from '@/components/ui/button';
 
-import { ImageCloudinary } from './image/image-cloudinary';
+import { ImageKit } from './image/image-kit';
 
 export async function Hero() {
   const doctors = await getDoctors({ limit: 5 });
@@ -62,12 +63,11 @@ export async function Hero() {
                 className="relative size-16 overflow-hidden rounded-full outline -outline-offset-1 outline-blue-200 ring-2 ring-blue-300 hover:border-transparent hover:ring-blue-400"
                 key={`${doctor.id}-${index}`}>
                 {doctor.images?.[0] && (
-                  <ImageCloudinary
-                    src={doctor.images?.[0]}
+                  <ImageKit
+                    src={(doctor.images?.[0] as unknown as ClinicImage).image_url}
                     alt={`Photo of ${doctor.name}`}
                     width={100}
                     height={100}
-                    directory="doctors"
                     priority
                     className="h-full w-full object-cover"
                   />

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ClinicDoctor } from '@/types/clinic';
 import { AwardIcon, SquareUserRoundIcon } from 'lucide-react';
 
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 
@@ -25,8 +25,8 @@ export function DoctorCardSimple({ doctor }: DoctorCardProps) {
         <CardContent className="flex flex-row items-center gap-2 p-0">
           <div className="relative h-24 w-24">
             {firstImage ? (
-              <ImageCloudinary
-                src={firstImage}
+              <ImageKit
+                src={firstImage.image_url}
                 alt={doctor.name}
                 width={150}
                 height={300}

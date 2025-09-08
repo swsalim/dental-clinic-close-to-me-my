@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ClinicImage } from '@/types/clinic';
 import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
@@ -276,7 +277,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                             name={clinic.name ?? ''}
                             address={clinic.address ?? ''}
                             phone={clinic.phone ?? ''}
-                            image={clinic.images?.[0]}
+                            image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
                             postalCode={clinic.postal_code ?? ''}
                             state={areaData.state?.name ?? ''}
                             area={areaData.name ?? ''}
@@ -310,6 +311,8 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                     alt="No dental clinics found"
                     width={500}
                     height={500}
+                    sizes="(max-width: 600px) 100vw, 450px"
+                    quality={85}
                     className="h-full w-full object-cover"
                   />
                 </div>

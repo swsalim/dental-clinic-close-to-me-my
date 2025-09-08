@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 import { getDoctorsByClinicSlug } from '@/helpers/doctors';
 
-import { ImageCloudinary } from '../image/image-cloudinary';
+import { ImageKit } from '../image/image-kit';
 
 interface DoctorPracticeProps {
   clinicSlug: string;
@@ -35,8 +35,8 @@ export default async function DoctorPracticeAvatar({ clinicSlug, className }: Do
               className="relative h-24 w-24 transform overflow-hidden rounded-full transition-all duration-300 hover:scale-105 hover:border-none hover:opacity-90"
               title={`View ${doctor.name}'s profile`}>
               {firstImage ? (
-                <ImageCloudinary
-                  src={firstImage}
+                <ImageKit
+                  src={firstImage.image_url}
                   alt={doctor.name}
                   width={150}
                   height={150}

@@ -1,3 +1,8 @@
+export interface ClinicImage {
+  id: string;
+  image_url: string;
+  imagekit_file_id: string;
+}
 export interface ClinicService {
   id: string;
   name: string;
@@ -23,6 +28,8 @@ export interface ClinicArea {
   description: string | null;
   thumbnail_image: string | null;
   banner_image: string | null;
+  image: string | null;
+  imagekit_file_id: string | null;
   state_id: string | null;
   created_at: string | null;
   modified_at: string | null;
@@ -38,6 +45,8 @@ export interface ClinicState {
   description: string | null;
   thumbnail_image: string | null;
   banner_image: string | null;
+  image: string | null;
+  imagekit_file_id: string | null;
   created_at: string | null;
   modified_at: string | null;
   clinics?: Partial<ClinicInsert>[] | null;
@@ -55,7 +64,7 @@ export interface ClinicDoctor {
   specialty: string | null;
   qualification: string | null;
   status: string | null;
-  images: string[] | null;
+  images: { id: string; image_url: string; imagekit_file_id: string }[] | null;
   featured_video: string | null;
   is_active: boolean | null;
   is_featured: boolean | null;
@@ -75,7 +84,7 @@ export interface ClinicDoctor {
         longitude: number | null;
         rating: number | null;
         review_count: number | null;
-        images: string[] | null;
+        images: { id: string; image_url: string; imagekit_file_id: string }[] | null;
         area?: { name: string } | null;
         state?: { name: string } | null;
       }[]
@@ -168,7 +177,7 @@ export interface Clinic {
   is_featured: boolean | null;
   is_permanently_closed: boolean | null;
   open_on_public_holidays: boolean | null;
-  images: string[] | null;
+  images: string[] | ClinicImage[] | null;
   source: string | null;
   facebook_url: string | null;
   instagram_url: string | null;

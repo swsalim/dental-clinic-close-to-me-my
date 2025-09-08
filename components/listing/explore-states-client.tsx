@@ -8,13 +8,13 @@ import pluralize from 'pluralize';
 
 import { cn } from '@/lib/utils';
 
-import { ImageCloudinary } from '../image/image-cloudinary';
+import { ImageKit } from '../image/image-kit';
 
 interface StateWithCount {
   id: string;
   name: string;
   slug: string;
-  thumbnail_image: string | null;
+  image: string | null;
   clinics: { count: number }[];
 }
 
@@ -70,21 +70,23 @@ export function ExploreStatesClient({ states }: ExploreStatesClientProps) {
                 'group relative h-56 w-full overflow-hidden rounded-lg transition md:h-52 lg:h-56',
                 (index === 0 || index === 6) && 'lg:h-full lg:max-h-[480px]',
               )}>
-              {state.thumbnail_image && (
-                <ImageCloudinary
-                  src={state.thumbnail_image}
+              {state.image && (
+                <ImageKit
+                  src={state.image}
                   alt={state.name}
                   width={600}
                   height={600}
+                  sizes="(max-width: 600px) 100vw, 350px"
                   className="h-full w-full object-cover transition group-hover:scale-105"
                 />
               )}
-              {!state.thumbnail_image && (
-                <ImageCloudinary
+              {!state.image && (
+                <ImageKit
                   src="placeholder-location.jpg"
                   alt={state.name}
                   width={600}
                   height={600}
+                  sizes="(max-width: 600px) 100vw, 350px"
                   className="h-full w-full object-cover transition group-hover:scale-105"
                 />
               )}

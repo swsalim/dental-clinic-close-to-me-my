@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { ClinicHours } from '@/types/clinic';
+import { ClinicHours, ClinicImage } from '@/types/clinic';
 
 import { getClinicsNearLocation } from '@/helpers/clinics';
 
@@ -47,7 +47,7 @@ async function NearbyClinicsContent({
                 name={clinic.name ?? ''}
                 address={clinic.address ?? ''}
                 phone={clinic.phone ?? ''}
-                image={clinic.images?.[0]}
+                image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
                 postalCode={clinic.postal_code ?? ''}
                 state={clinic.state_name ?? ''}
                 area={clinic.area_name ?? ''}

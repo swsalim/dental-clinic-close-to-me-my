@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import type { ClinicDoctor } from '@/types/clinic';
+import type { ClinicDoctor, ClinicImage } from '@/types/clinic';
 
 import { siteConfig } from '@/config/site';
 
@@ -13,7 +13,7 @@ import { getDoctorBySlug, getDoctorListings, getDoctorMetadataBySlug } from '@/h
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicCard } from '@/components/cards/clinic-card';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import DentistJsonLd from '@/components/structured-data/physician-json-ld';
@@ -136,7 +136,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
         <BusinessJsonLd
           name={primaryClinic?.name}
           url={`${process.env.NEXT_PUBLIC_BASE_URL}/dentist/${slug}`}
-          image={doctorWithClinics.images?.[0] || ''}
+          image={(doctorWithClinics.images?.[0] as unknown as ClinicImage).image_url || ''}
           email={primaryClinic?.email || null}
           phone={primaryClinic?.phone || null}
           location={{
@@ -158,7 +158,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
       <DentistJsonLd
         name={doctor.name}
         url={absoluteUrl(`/dentist/${doctor.slug}`)}
-        photo={doctor.images?.[0] || ''}
+        photo={(doctor.images?.[0] as unknown as ClinicImage).image_url || ''}
         phone={primaryClinic?.phone || null}
         specialty="Dentistry"
         email={primaryClinic?.email || 'support@dentalclinicclosetome.my'}
@@ -187,9 +187,12 @@ export default async function DentistPage({ params }: DentistPageProps) {
               {/* Doctor Header */}
               <div className="flex flex-row items-start justify-end gap-6">
                 <div className="aspect-[2/3] w-full max-w-48 lg:min-w-48 lg:max-w-72">
-                  <ImageCloudinary
-                    src={profileImage}
+                  <ImageKit
+                    src={(profileImage as unknown as ClinicImage).image_url}
                     alt={`${doctor.name} - Profile Image`}
+                    width={600}
+                    height={600}
+                    sizes="(max-width: 600px) 100vw, 350px"
                     className="h-full w-full rounded-lg object-cover"
                   />
                 </div>
@@ -229,9 +232,12 @@ export default async function DentistPage({ params }: DentistPageProps) {
                   <h2 className="mb-4 text-xl font-semibold">Photos</h2>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {galleryImages.map((image, index) => (
-                      <ImageCloudinary
+                      <ImageKit
                         key={index}
-                        src={image}
+                        src={(image as unknown as ClinicImage).image_url}
+                        width={350}
+                        height={350}
+                        sizes="(max-width: 600px) 100vw, 350px"
                         alt={`${doctor.name} - Photo ${index + 1}`}
                         className="h-64 w-full rounded-lg object-cover"
                       />
@@ -270,7 +276,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
                         postalCode={clinic.postal_code ?? ''}
                         state={clinic.state?.name ?? ''}
                         area={clinic.area?.name ?? ''}
-                        image={clinic.images?.[0]}
+                        image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
                         isFeatured={false}
                         rating={clinic.rating}
                         hours={[]}

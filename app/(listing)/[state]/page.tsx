@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ClinicImage } from '@/types/clinic';
 import { ArrowRightIcon, PersonStandingIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
@@ -16,6 +17,7 @@ import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/help
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
@@ -259,11 +261,13 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                         className="relative size-16 overflow-hidden rounded-full outline -outline-offset-1 outline-blue-200 ring-2 ring-blue-300"
                         key={`${doctor.id}-${index}`}>
                         {doctor.images?.[0] && (
-                          <ImageCloudinary
-                            src={doctor.images?.[0]}
+                          <ImageKit
+                            src={doctor.images?.[0].image_url}
                             alt={`Photo of ${doctor.name}`}
                             width={100}
                             height={100}
+                            sizes="(max-width: 600px) 100vw, 350px"
+                            quality={85}
                             directory="doctors"
                             priority
                             className="h-full w-full object-cover"
@@ -312,7 +316,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                             postalCode={clinic.postal_code ?? ''}
                             state={clinic.state?.name ?? ''}
                             area={clinic.area?.name ?? ''}
-                            image={clinic.images?.[0]}
+                            image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
                             rating={clinic.rating}
                             isFeatured={clinic.is_featured ?? false}
                             hours={clinic.hours ?? []}
@@ -335,6 +339,8 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                       width={500}
                       height={500}
                       className="h-full w-full object-cover"
+                      sizes="(max-width: 600px) 100vw, 450px"
+                      quality={85}
                     />
                   </div>
                 </div>

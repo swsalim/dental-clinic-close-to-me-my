@@ -6,7 +6,7 @@ import { ClinicHours, ClinicSpecialHours } from '@/types/clinic';
 import { AwardIcon, ClockIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 
 import { ClinicStatus } from '@/components/clinic-status';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { StarRating } from '@/components/ui/star-rating';
@@ -51,11 +51,13 @@ export function ClinicCard({
       <Card className="h-full overflow-hidden rounded-2xl" role="article">
         <CardHeader className="relative h-48 overflow-hidden p-0">
           {image && (
-            <ImageCloudinary
+            <ImageKit
               src={image}
               alt={name}
               width={400}
               height={300}
+              sizes="(max-width: 600px) 100vw, 350px"
+              quality={85}
               className="h-full w-full object-cover"
               priority={false}
             />

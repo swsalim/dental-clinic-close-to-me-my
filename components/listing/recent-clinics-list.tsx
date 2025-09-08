@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import { Clinic } from '@/types/clinic';
+import { Clinic, ClinicImage } from '@/types/clinic';
 
 import { createClient } from '@/lib/supabase/client';
 
@@ -31,7 +31,7 @@ export function RecentClinicsList() {
             phone,
             postal_code,
             rating,
-            images,
+            images:clinic_images(image_url, imagekit_file_id),
             open_on_public_holidays,
             hours:clinic_hours(*),
             special_hours:clinic_special_hours(*),
@@ -44,7 +44,7 @@ export function RecentClinicsList() {
           .limit(8);
 
         if (error) throw error;
-        setClinics((data as Partial<Clinic>[]) || []);
+        setClinics((data as unknown as Partial<Clinic>[]) || []);
       } catch (error) {
         console.error('Error fetching recent clinics:', error);
       } finally {
@@ -79,7 +79,7 @@ export function RecentClinicsList() {
               postalCode={clinic.postal_code || ''}
               state={clinic.state?.name || ''}
               area={clinic.area?.name || ''}
-              image={clinic.images?.[0]}
+              image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
               rating={clinic.rating}
               hours={clinic.hours || []}
               specialHours={clinic.special_hours || []}

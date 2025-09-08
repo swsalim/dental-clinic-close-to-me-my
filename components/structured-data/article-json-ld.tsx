@@ -37,7 +37,7 @@ export default function ArticleJsonLd({
         ],
         publisher: {
           '@type': 'Organization',
-          name: 'ClinicGeek',
+          name: 'Dental Clinics Malaysia',
           logo: {
             '@type': 'ImageObject',
             url: absoluteUrl('/images/logo.png'),

@@ -2,14 +2,15 @@
 
 import { useEffect, useState } from 'react';
 
+import { ClinicImage } from '@/types/clinic';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
-import { ImageCloudinary } from './image-cloudinary';
+import { ImageKit } from './image-kit';
 
 interface ImageGalleryProps {
-  images: (string | undefined)[] | null;
+  images: (string | ClinicImage | undefined)[] | null;
   title: string;
   className?: string;
 }
@@ -18,7 +19,10 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   // Filter out undefined values
-  const validImages = (images ?? []).filter((img): img is string => typeof img === 'string');
+  const validImages = (images ?? []).filter(
+    (img): img is string | ClinicImage =>
+      typeof img === 'string' || (typeof img === 'object' && img !== null && 'image_url' in img),
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -68,12 +72,13 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
           <button
             onClick={() => handleImageClick(0)}
             className="relative h-full max-h-[500px] w-full overflow-hidden rounded-lg">
-            <ImageCloudinary
-              src={validImages[0]}
+            <ImageKit
+              src={(validImages[0] as unknown as ClinicImage).image_url}
               alt={`Main photo for ${title}`}
               priority={true}
-              width={800}
-              height={800}
+              width={600}
+              height={600}
+              sizes="(max-width: 600px) 100vw, 600px"
               className="h-full w-full transform object-cover object-center transition-transform hover:scale-105"
             />
           </button>
@@ -83,11 +88,12 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
             key={`${title}-image-${index + 1}`}
             onClick={() => handleImageClick(index + 1)}
             className="relative col-span-2 row-span-1 h-60 w-full overflow-hidden rounded-lg">
-            <ImageCloudinary
-              src={image}
+            <ImageKit
+              src={(image as unknown as ClinicImage).image_url}
               alt={`Photo ${index + 2} for ${title}`}
-              width={400}
-              height={400}
+              width={350}
+              height={350}
+              sizes="(max-width: 600px) 100vw, 350px"
               className="h-full w-full transform object-cover object-center transition-transform hover:scale-105"
             />
           </button>
@@ -113,11 +119,12 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
             <ChevronRight className="h-12 w-12" />
           </button>
           <div className="relative max-h-[90vh] max-w-[90vw]">
-            <ImageCloudinary
-              src={validImages[selectedImageIndex]}
+            <ImageKit
+              src={(validImages[selectedImageIndex] as unknown as ClinicImage).image_url}
               alt={`Photo ${selectedImageIndex + 1} for ${title}`}
-              width={1200}
-              height={1200}
+              width={1000}
+              height={1000}
+              sizes="(max-width: 1000px) 100vw, 1000px"
               className="max-h-[90vh] max-w-[90vw] object-contain"
             />
           </div>
