@@ -114,35 +114,13 @@ export const columns: ColumnDef<AreaTableData>[] = [
     enableHiding: true,
   },
   {
-    accessorKey: 'thumbnail_image',
+    accessorKey: 'image',
     header: ({ column }) => <DataTableColumnHeader column={column} title="📸" className="" />,
     cell: ({ row }) => {
-      const thumbnailImage = row.getValue('thumbnail_image') as string | undefined;
+      const image = row.getValue('image') as string | undefined;
       return (
         <div>
-          {thumbnailImage ? (
-            <Image unoptimized src={thumbnailImage} alt="Thumbnail" width={100} height={100} />
-          ) : (
-            '-'
-          )}
-        </div>
-      );
-    },
-    enableSorting: false,
-    enableHiding: true,
-  },
-  {
-    accessorKey: 'banner_image',
-    header: ({ column }) => <DataTableColumnHeader column={column} title="📸" className="" />,
-    cell: ({ row }) => {
-      const bannerImage = row.getValue('banner_image') as string | undefined;
-      return (
-        <div>
-          {bannerImage ? (
-            <Image unoptimized src={bannerImage} alt="Banner" width={100} height={100} />
-          ) : (
-            '-'
-          )}
+          {image ? <Image unoptimized src={image} alt="Thumbnail" width={100} height={100} /> : '-'}
         </div>
       );
     },

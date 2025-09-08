@@ -8,8 +8,8 @@ import { siteConfig } from '@/config/site';
 import { createClient } from '@/lib/supabase/server';
 
 import { Separator } from '@/components/ui/separator';
-import { SidebarNav } from '@/components/ui/sidebar-nav';
 
+// import { SidebarNav } from '@/components/ui/sidebar-nav';
 import FormEditClinic from '../../components/form-edit-clinic';
 
 const config = {
@@ -59,30 +59,34 @@ export default async function EditClinicPage({ params }: { params: Promise<{ id:
   const supabase = await createClient();
   const { id } = await params;
 
-  const { data: clinic } = await supabase.from('clinics').select().match({ id }).single();
+  const { data: clinic } = await supabase
+    .from('clinics')
+    .select('*, images:clinic_images(id,image_url, imagekit_file_id)')
+    .match({ id })
+    .single();
 
   if (!clinic) {
     notFound();
   }
 
-  const sidebarNavItems = [
-    {
-      title: 'Profile',
-      href: `/dashboard/clinics/edit/${id}`,
-    },
-    {
-      title: 'Location',
-      href: `/dashboard/clinics/edit/location/${id}`,
-    },
-    {
-      title: 'Social',
-      href: `/dashboard/clinics/edit/social/${id}`,
-    },
-    {
-      title: 'Images',
-      href: `/dashboard/clinics/edit/images/${id}`,
-    },
-  ];
+  // const sidebarNavItems = [
+  //   {
+  //     title: 'Profile',
+  //     href: `/dashboard/clinics/edit/${id}`,
+  //   },
+  //   {
+  //     title: 'Location',
+  //     href: `/dashboard/clinics/edit/location/${id}`,
+  //   },
+  //   {
+  //     title: 'Social',
+  //     href: `/dashboard/clinics/edit/social/${id}`,
+  //   },
+  //   {
+  //     title: 'Images',
+  //     href: `/dashboard/clinics/edit/images/${id}`,
+  //   },
+  // ];
 
   const [
     { data: servicesData },
@@ -107,9 +111,6 @@ export default async function EditClinicPage({ params }: { params: Promise<{ id:
 
   return (
     <div className="flex flex-row gap-6">
-      <aside className="lg:w-1/5">
-        <SidebarNav items={sidebarNavItems} />
-      </aside>
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>

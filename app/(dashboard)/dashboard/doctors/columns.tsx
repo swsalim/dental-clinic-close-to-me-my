@@ -9,7 +9,6 @@ import { BadgeCheckIcon, MedalIcon, XCircleIcon } from 'lucide-react';
 import { absoluteUrl } from '@/lib/utils';
 
 import { Checkbox } from '@/components/form-fields/checkbox';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
 
 import { DataTableColumnHeader } from './components/data-table-column-header';
 import { DataTableRowActions } from './components/data-table-row-actions';
@@ -72,19 +71,7 @@ export const columns: ColumnDef<DoctorTableData>[] = [
     header: ({ column }) => <DataTableColumnHeader column={column} title="Photo" className="" />,
     cell: ({ row }) => {
       const images = row.getValue('images') as string[] | undefined;
-      const firstImage = images && images.length > 0 ? images[0] : undefined;
-      return firstImage ? (
-        <div className="relative size-24 overflow-hidden rounded-md">
-          <ImageCloudinary
-            width={150}
-            height={150}
-            src={firstImage}
-            alt={row.original.name || 'Doctor photo'}
-          />
-        </div>
-      ) : (
-        <span>No photo uploaded</span>
-      );
+      return <div>{images?.length || 0}</div>;
     },
   },
   {

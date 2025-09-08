@@ -69,7 +69,6 @@ export default async function AddClinicPage() {
 
   return (
     <div className="flex flex-row gap-6">
-      <aside className="lg:w-1/5"></aside>
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>

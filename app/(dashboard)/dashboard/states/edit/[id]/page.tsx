@@ -60,10 +60,13 @@ export default async function EditStatePage({ params }: { params: Promise<{ id: 
   const { data: state } = await supabase
     .from('states')
     .select(
-      'id, name, slug, short_description, description, thumbnail_image, banner_image, created_at, modified_at, clinics:clinics(id, name, slug, description, postal_code, address, phone, neighborhood, city, website, email, latitude, longitude, location, place_id, rating, review_count, is_active, is_featured, is_permanently_closed, open_on_public_holidays, images, source, facebook_url, instagram_url, featured_video, youtube_url, area_id, state_id, status)',
+      'id, name, slug, short_description, description, image, imagekit_file_id, created_at, modified_at, clinics:clinics(id, name, slug, description, postal_code, address, phone, neighborhood, city, website, email, latitude, longitude, location, place_id, rating, review_count, is_active, is_featured, is_permanently_closed, open_on_public_holidays, images, source, facebook_url, instagram_url, featured_video, youtube_url, area_id, state_id, status)',
     )
     .match({ id })
     .single();
+
+  console.log('state');
+  console.log(state);
 
   if (!state) {
     notFound();

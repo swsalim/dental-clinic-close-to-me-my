@@ -60,7 +60,7 @@ export default async function EditAreaPage({ params }: { params: Promise<{ id: s
   const { data: area } = await supabase
     .from('areas')
     .select(
-      'id, name, slug, short_description, description, thumbnail_image, banner_image, states(id, name)',
+      'id, name, slug, short_description, description, image, imagekit_file_id, states(id, name)',
     )
     .match({ id })
     .single();

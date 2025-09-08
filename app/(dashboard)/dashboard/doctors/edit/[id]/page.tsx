@@ -9,7 +9,6 @@ import { DOCTOR_WITH_CLINICS_SELECT, transformDoctorData } from '@/helpers/docto
 
 // Remove unused import
 import { Separator } from '@/components/ui/separator';
-import { SidebarNav } from '@/components/ui/sidebar-nav';
 
 import FormEditDoctor from '../../components/form-edit-doctor';
 
@@ -71,30 +70,8 @@ export default async function EditDoctorPage({ params }: { params: Promise<{ id:
 
   const doctor = transformDoctorData(doctorData);
 
-  const sidebarNavItems = [
-    {
-      title: 'Profile',
-      href: `/dashboard/doctors/edit/${id}`,
-    },
-    {
-      title: 'Location',
-      href: `/dashboard/doctors/edit/location/${id}`,
-    },
-    {
-      title: 'Social',
-      href: `/dashboard/doctors/edit/social/${id}`,
-    },
-    {
-      title: 'Images',
-      href: `/dashboard/doctors/edit/images/${id}`,
-    },
-  ];
-
   return (
     <div className="flex flex-row gap-6">
-      <aside className="lg:w-1/5">
-        <SidebarNav items={sidebarNavItems} />
-      </aside>
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>

@@ -61,8 +61,7 @@ export default async function DashboardAreasPage() {
       name,
       slug,
       short_description,
-      thumbnail_image,
-      banner_image,
+      image,
       clinics:clinics(name, slug),
       state:states(id, name, slug)`,
     )

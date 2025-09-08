@@ -56,41 +56,55 @@ export function DataTableRowActions<TData extends DoctorTableData>({
     try {
       setIsDeleting(true);
 
+      // First, fetch images from clinic_images table
+      const { data: doctorImages, error: fetchError } = await supabase
+        .from('clinic_doctor_images')
+        .select('imagekit_file_id')
+        .eq('doctor_id', doctor.id);
+
+      if (fetchError) {
+        console.error('Error fetching doctor images:', fetchError);
+      }
+
       const tableName = 'clinic_doctors';
       const { error } = await supabase.from(tableName).delete().match({ id: doctor.id });
 
       if (error) throw error;
 
-      // Only delete images after successful doctor deletion
-      if (doctor.images && doctor.images.length > 0) {
-        for (const image of doctor.images) {
-          try {
-            // Extract fileId from ImageKit URL
-            const public_id = getCloudinaryPublicId(image);
-            if (public_id) {
-              const response = await fetch('/api/delete-image', {
+      // Delete images from ImageKit if they exist
+      if (doctorImages && doctorImages.length > 0) {
+        for (const imageRecord of doctorImages) {
+          if (imageRecord.imagekit_file_id) {
+            try {
+              const response = await fetch('/api/delete-imagekit', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                  public_id,
+                  imagekit_file_id: imageRecord.imagekit_file_id,
                 }),
               });
 
               if (!response.ok) {
-                const error = await response.json();
-                console.error('Delete image error:', error);
-                throw new Error(error.error || 'Failed to delete image');
+                console.warn('Failed to delete image from ImageKit:', imageRecord.imagekit_file_id);
               }
+            } catch (error) {
+              console.error('Error deleting image from ImageKit:', error);
             }
-          } catch (error) {
-            console.error('Error deleting image:', error);
-            // Continue with other images even if one fails
           }
         }
-      }
 
+        // Delete image records from clinic_images table
+        const { error: deleteImagesError } = await supabase
+          .from('clinic_doctor_images')
+          .delete()
+          .eq('doctor_id', doctor.id);
+
+        if (deleteImagesError) {
+          console.error('Error deleting clinic image records:', deleteImagesError);
+        }
+      }
       toast({
         title: 'You have deleted the listing successfully',
       });

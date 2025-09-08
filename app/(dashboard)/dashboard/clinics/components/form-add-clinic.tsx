@@ -7,14 +7,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-import type { ClinicArea, ClinicHours, ClinicService, ClinicState } from '@/types/clinic';
+import type {
+  ClinicArea,
+  ClinicHours,
+  ClinicImage,
+  ClinicService,
+  ClinicState,
+} from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckIcon, ChevronsUpDown, RefreshCwIcon, XIcon } from 'lucide-react';
 import * as z from 'zod';
 
 // Lib imports
 import { createClient } from '@/lib/supabase/client';
-import { cn, getCloudinaryPublicId, sanitizeHtmlField } from '@/lib/utils';
+import { cn, generateUniqueFilename, sanitizeHtmlField } from '@/lib/utils';
 
 import {
   Command,
@@ -24,7 +30,7 @@ import {
   CommandItem,
 } from '@/components/dashboard/command';
 import { Checkbox } from '@/components/form-fields/checkbox';
-import { File } from '@/components/form-fields/file';
+import { FileInput } from '@/components/form-fields/file';
 import { Input } from '@/components/form-fields/input';
 import { SelectItem } from '@/components/form-fields/select';
 import { SelectContent } from '@/components/form-fields/select';
@@ -32,7 +38,6 @@ import { SelectTrigger, SelectValue } from '@/components/form-fields/select';
 import { Select } from '@/components/form-fields/select';
 import { Switch } from '@/components/form-fields/switch';
 import { Textarea } from '@/components/form-fields/textarea';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -47,6 +52,17 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { toast } from '@/components/ui/use-toast';
 
 // Business Hours Types
+interface BusinessDayData {
+  isClosed: boolean;
+  shifts: { openTime: string; closeTime: string }[];
+}
+
+interface HoursToInsert {
+  clinic_id: string;
+  day_of_week: number;
+  open_time: string | null;
+  close_time: string | null;
+}
 interface BusinessShift {
   openTime: string;
   closeTime: string;
@@ -175,12 +191,8 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
   const router = useRouter();
   const supabase = createClient();
 
-  const [currentImages, setCurrentImages] = useState<string[]>([]);
+  const [currentImages, setCurrentImages] = useState<ClinicImage[]>([]);
   const [imagesToRemove, setImagesToRemove] = useState<string[]>([]);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [cloudinaryUploadUrl] = useState(
-    `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME}/upload`,
-  );
 
   const handleTimeInput = async (days: readonly string[]) => {
     const shifts: { openTime: string; closeTime: string }[] = [];
@@ -289,6 +301,8 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
     mode: 'onChange',
   });
 
+  const { reset } = form;
+  const { isSubmitting } = form.formState;
   const watchName = form.watch('name');
   const watchImages = form.watch('images');
   const watchStateId = form.watch('state_id');
@@ -300,65 +314,111 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
   const handleImagesChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files?.length) return;
     const files = Array.from(e.target.files);
-    form.setValue('images', files);
+    const newFiles = [...(watchImages || []), ...files];
+    form.setValue('images', newFiles);
   };
 
   const handleImageRemove = (indexToRemove: number) => {
-    const updatedImages = (watchImages || []).filter((_, idx) => idx !== indexToRemove);
+    if (!indexToRemove) return;
+
+    const updatedImages = (watchImages || []).filter((image, index) => index !== indexToRemove);
     form.setValue('images', updatedImages);
   };
 
-  const handleCloudinaryImageRemove = (e: React.MouseEvent, imageToRemove: string) => {
+  const handleImagekitImageRemove = (e: React.MouseEvent, imageToRemove: string) => {
     e.preventDefault();
 
-    const publicId = getCloudinaryPublicId(imageToRemove);
-    if (!publicId) {
-      toast({
-        variant: 'destructive',
-        title: 'Error removing image',
-        description: 'Could not get image ID',
-      });
-      return;
+    // Store the imagekit_file_id for removal during form submission
+    const imageToRemoveObj = currentImages.find((img) => img.image_url === imageToRemove);
+    if (imageToRemoveObj) {
+      setImagesToRemove((prev) => [...prev, imageToRemoveObj.imagekit_file_id]);
     }
 
-    const filterImages = currentImages.filter((image) => image !== imageToRemove);
+    // Remove from current images array (just visually, not from database yet)
+    const filterImages = currentImages.filter((image) => image.image_url !== imageToRemove);
     setCurrentImages(filterImages);
-    setImagesToRemove((prev) => [...prev, publicId]);
   };
 
-  const renderImages = (images: (string | File)[], isCurrentImage = false) => {
+  const uploadImageToImageKit = async (
+    imageFile: File,
+  ): Promise<{ url: string; fileId: string } | null> => {
+    try {
+      // Validate file size (max 3MB)
+      const maxSize = 3 * 1024 * 1024; // 3MB
+      if (imageFile.size > maxSize) {
+        throw new Error('Image file size must be less than 2MB');
+      }
+
+      // Validate file type
+      if (!imageFile.type.startsWith('image/')) {
+        throw new Error('Please select a valid image file');
+      }
+
+      const formData = new FormData();
+      formData.append('file', imageFile);
+      formData.append('folder', 'dental-clinics-my/places');
+      formData.append('fileName', generateUniqueFilename(imageFile.name));
+
+      const response = await fetch('/api/upload-imagekit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || `Upload failed with status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.success && data.imagekit_file_id) {
+        return {
+          url:
+            data.url ||
+            `https://ik.imagekit.io/yuurrific/dental-clinics-my/places/${data.imagekit_file_id}`,
+          fileId: data.imagekit_file_id,
+        };
+      } else {
+        throw new Error('Invalid response from image upload');
+      }
+    } catch (error) {
+      console.error('Image upload error:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Upload failed',
+        description: error instanceof Error ? error.message : 'Failed to upload image',
+      });
+      return null;
+    }
+  };
+
+  const renderImages = (images: (ClinicImage | File)[], isCurrentImage = false) => {
     return (
       <div className="mt-4 grid grid-cols-4 gap-4">
         {images.map((image, index) => {
-          let imageSrc: string;
-          if (!isCurrentImage && typeof window !== 'undefined' && image instanceof window.File) {
-            imageSrc = URL.createObjectURL(image);
-          } else if (typeof image === 'string') {
-            imageSrc = image;
+          let imageSrc;
+
+          if (!isCurrentImage) {
+            imageSrc = URL.createObjectURL(image as File);
           } else {
-            return null;
+            imageSrc = (image as ClinicImage).image_url;
           }
+
           return (
             <div key={index}>
-              <div className="aspect-h-3 aspect-w-4 relative overflow-hidden rounded-md shadow-md">
+              <div className="relative aspect-square overflow-hidden rounded-md shadow-md">
                 {!isCurrentImage && (
                   <button
-                    type="button"
                     className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
-                    onClick={() => handleImageRemove(index)}
-                    aria-label="Remove image"
-                    tabIndex={0}>
-                    <XIcon className="mx-auto h-6 w-6" />
+                    onClick={() => handleImageRemove(index)}>
+                    <XIcon className="mx-auto h-6 w-6"></XIcon>
                   </button>
                 )}
                 {isCurrentImage && (
                   <button
-                    type="button"
                     className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
-                    onClick={(e) => handleCloudinaryImageRemove(e, imageSrc)}
-                    aria-label="Remove image"
-                    tabIndex={0}>
-                    <XIcon className="mx-auto h-6 w-6" />
+                    onClick={(e) => handleImagekitImageRemove(e, (image as ClinicImage).image_url)}>
+                    <XIcon className="mx-auto h-6 w-6"></XIcon>
                   </button>
                 )}
                 {!isCurrentImage && (
@@ -370,8 +430,15 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                     className="object-cover"
                   />
                 )}
+
                 {isCurrentImage && (
-                  <ImageCloudinary src={imageSrc} alt="Image preview" className="object-cover" />
+                  <Image
+                    src={imageSrc}
+                    alt="Image preview"
+                    width={600}
+                    height={600}
+                    className="object-cover"
+                  />
                 )}
               </div>
             </div>
@@ -383,53 +450,51 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
 
   const onSubmit = async (data: FormData) => {
     console.log('onSubmit ~ data');
-    console.log(watchImages);
     console.log(data);
     try {
-      setIsSubmitting(true);
       const location = `POINT(${data.longitude} ${data.latitude})`;
       const {
         data: { user },
       } = await supabase.auth.getUser();
       if (!user) throw new Error('User not found');
 
-      // Delete removed images from Cloudinary
-      for (const image of imagesToRemove) {
+      for (const imagekitFileId of imagesToRemove) {
         try {
-          await fetch('/api/delete-image', {
+          // Delete from to_be_reviewed_clinic_images table
+          const { error: deleteError } = await supabase
+            .from('clinic_images')
+            .delete()
+            .eq('imagekit_file_id', imagekitFileId);
+
+          if (deleteError) {
+            console.error('Error deleting image record:', deleteError);
+          }
+
+          // Delete from ImageKit
+          const deleteResponse = await fetch('/api/delete-imagekit', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ public_id: image }),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ imagekit_file_id: imagekitFileId }),
           });
+
+          if (!deleteResponse.ok) {
+            console.error('Error deleting image from ImageKit:', imagekitFileId);
+          }
         } catch (error) {
-          console.error(error);
-          return null;
+          console.error('Error marking image for removal:', error);
         }
       }
 
-      // Upload new images
-      const newImages: string[] = [];
+      // Upload new images to ImageKit
+      const newImages: Array<{ url: string; fileId: string }> = [];
       if (watchImages && watchImages.length > 0) {
-        for (let i = 0; i < watchImages.length; i++) {
-          const file = watchImages[i];
-          if (typeof window !== 'undefined' && window.File && file instanceof window.File) {
-            const uploadPreset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET_PLACE;
-            if (uploadPreset) {
-              const formData = new FormData();
-              formData.append('upload_preset', uploadPreset);
-              formData.append('file', file);
-              try {
-                const response = await fetch(cloudinaryUploadUrl, {
-                  method: 'POST',
-                  body: formData,
-                });
-                const uploadData = await response.json();
-                const imageUrl = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME}/image/upload/f_auto,q_auto/${uploadData.public_id}.${uploadData.format}`;
-                newImages.push(imageUrl);
-              } catch (error) {
-                console.error(error);
-                return null;
-              }
+        for (const imageFile of watchImages) {
+          if (imageFile instanceof File) {
+            const imagekitResult = await uploadImageToImageKit(imageFile);
+            if (imagekitResult) {
+              newImages.push(imagekitResult);
             }
           }
         }
@@ -438,7 +503,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
       const finalData = {
         ...data,
         description: sanitizeHtmlField(data.description),
-        images: [...currentImages, ...newImages],
+        images: null,
         location,
       };
 
@@ -490,6 +555,32 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
         throw updateError;
       }
 
+      // Insert new images into clinic_images table if we have any
+      if (newImages.length > 0 && newClinic) {
+        const clinicImageRecords = newImages.map((image) => ({
+          clinic_id: newClinic.id,
+          image_url: image.url,
+          imagekit_file_id: image.fileId,
+        }));
+
+        const { data: insertedImages, error: imageInsertError } = await supabase
+          .from('clinic_images')
+          .insert(clinicImageRecords)
+          .select();
+
+        if (imageInsertError) {
+          console.error('Error inserting clinic images:', imageInsertError);
+          // Don't throw error here as the clinic was updated successfully
+          // Just log the error and continue
+        } else if (insertedImages) {
+          // Update current images state with new images
+          setCurrentImages((prev) => [
+            ...prev.filter((img) => !imagesToRemove.includes(img.imagekit_file_id)),
+            ...insertedImages,
+          ]);
+        }
+      }
+
       // Delete existing hours
       const { error: deleteHoursError } = await supabase
         .from('clinic_hours')
@@ -509,18 +600,6 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
         Friday: 4,
         Saturday: 5,
         Sunday: 6,
-      };
-
-      type BusinessDayData = {
-        isClosed: boolean;
-        shifts: { openTime: string; closeTime: string }[];
-      };
-
-      type HoursToInsert = {
-        clinic_id: string;
-        day_of_week: number;
-        open_time: string | null;
-        close_time: string | null;
       };
 
       const businessHoursEntries = Object.entries(finalData.businessHours) as [
@@ -584,6 +663,91 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
         throw insertServicesError;
       }
 
+      if (newClinic) {
+        // Get the updated hours from the database
+        const { data: updatedHours } = await supabase
+          .from('clinic_hours')
+          .select('*')
+          .eq('clinic_id', newClinic.id);
+
+        // Map the hours back to the businessHours format
+        const updatedBusinessHours = daysOfWeek.reduce((acc, day) => {
+          const dayHours =
+            updatedHours?.filter((h) => h.day_of_week === daysOfWeek.indexOf(day)) || [];
+
+          if (
+            dayHours.length === 0 ||
+            (dayHours[0].open_time === null && dayHours[0].close_time === null)
+          ) {
+            acc[day] = {
+              isClosed: true,
+              shifts: [],
+            };
+          } else {
+            acc[day] = {
+              isClosed: false,
+              shifts: dayHours.map((h) => ({
+                openTime: h.open_time as string,
+                closeTime: h.close_time as string,
+              })),
+            };
+          }
+          return acc;
+        }, {} as BusinessHours);
+
+        // Get the updated services from the database
+        const { data: updatedServices } = await supabase
+          .from('clinic_service_relations')
+          .select('*')
+          .eq('clinic_id', newClinic.id);
+
+        const updatedServicesMap = updatedServices?.reduce(
+          (acc, service) => {
+            acc[service.service_id] = true;
+            return acc;
+          },
+          {} as Record<string, boolean>,
+        );
+
+        // Update the form with the new data
+        reset({
+          name: newClinic.name || '',
+          address: newClinic.address || '',
+          neighborhood: newClinic.neighborhood || '',
+          city: newClinic.city || '',
+          postal_code: newClinic.postal_code || '',
+          slug: newClinic.slug,
+          description: newClinic.description || undefined,
+          website: newClinic.website || undefined,
+          email: newClinic.email || undefined,
+          phone: newClinic.phone || undefined,
+          latitude: newClinic.latitude,
+          longitude: newClinic.longitude,
+          location: newClinic.location,
+          place_id: newClinic.place_id,
+          rating: newClinic.rating,
+          review_count: newClinic.review_count,
+          is_active: newClinic.is_active,
+          is_featured: newClinic.is_featured,
+          is_permanently_closed: newClinic.is_permanently_closed,
+          open_on_public_holidays: newClinic.open_on_public_holidays,
+          images: [],
+          source: newClinic.source || '',
+          facebook_url: newClinic.facebook_url || undefined,
+          instagram_url: newClinic.instagram_url || undefined,
+          featured_video: newClinic.featured_video || undefined,
+          youtube_url: newClinic.youtube_url || undefined,
+          area_id: newClinic.area_id,
+          state_id: newClinic.state_id,
+          status: newClinic.status,
+          businessHours: updatedBusinessHours,
+          services: updatedServicesMap,
+        });
+
+        // Update the current images state
+        setCurrentImages(newClinic.images || []);
+      }
+
       toast({
         title: 'Success',
         description: 'Clinic updated successfully',
@@ -599,8 +763,6 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
         description: errorMessage,
         variant: 'destructive',
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -870,7 +1032,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                     <FormItem>
                       <FormLabel>Images</FormLabel>
                       <FormControl>
-                        <File
+                        <FileInput
                           id="images"
                           {...field}
                           value=""

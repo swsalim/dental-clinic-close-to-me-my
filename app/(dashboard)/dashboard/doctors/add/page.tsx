@@ -5,7 +5,6 @@ import { siteConfig } from '@/config/site';
 import { createClient } from '@/lib/supabase/server';
 
 import { Separator } from '@/components/ui/separator';
-import { SidebarNav } from '@/components/ui/sidebar-nav';
 
 import FormAddDoctor from '../components/form-add-doctor';
 
@@ -57,30 +56,8 @@ export default async function AddDoctorPage() {
 
   const { data: clinicsData } = await supabase.from('clinics').select('id, name, slug');
 
-  const sidebarNavItems = [
-    {
-      title: 'Profile',
-      href: '/dashboard/doctors/add',
-    },
-    {
-      title: 'Location',
-      href: '/dashboard/doctors/add/location',
-    },
-    {
-      title: 'Social',
-      href: '/dashboard/doctors/add/social',
-    },
-    {
-      title: 'Images',
-      href: '/dashboard/doctors/add/images',
-    },
-  ];
-
   return (
     <div className="flex flex-row gap-6">
-      <aside className="lg:w-1/5">
-        <SidebarNav items={sidebarNavItems} />
-      </aside>
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>

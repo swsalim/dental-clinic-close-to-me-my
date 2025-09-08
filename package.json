@@ -15,7 +15,13 @@
     "parse-data-gemini": "tsx ./tasks/parse-apify-data-gemini.ts",
     "insert-data": "tsx ./tasks/insert-apify-data.ts",
     "build-search": "tsx ./tasks/build-search.ts",
-    "submit-indexnow": "tsx ./tasks/submit-to-indexnow.ts"
+    "submit-indexnow": "tsx ./tasks/submit-to-indexnow.ts",
+    "transfer-imagekit-area": "tsx ./tasks/transfer-imagekit-area.ts",
+    "transfer-imagekit-state": "tsx ./tasks/transfer-imagekit-state.ts",
+    "transfer-imagekit-doctor": "tsx ./tasks/transfer-imagekit-doctor.ts",
+    "transfer-imagekit-clinic": "tsx ./tasks/transfer-imagekit-clinic.ts",
+    "transfer-cloudinary": "tsx ./tasks/transfer-cloudinary.ts",
+    "update-cloudinary-data": "tsx ./tasks/update-cloudinary-data.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
@@ -69,6 +75,7 @@
     "crypto-js": "^4.2.0",
     "date-fns": "^4.1.0",
     "dotenv": "^16.5.0",
+    "form-data": "^4.0.4",
     "imagekit": "^6.0.0",
     "lucide-react": "^0.488.0",
     "mapbox-gl": "^2.15.0",

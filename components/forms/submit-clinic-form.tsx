@@ -219,7 +219,11 @@ export default function SubmitClinicForm({ states, areas }: Props) {
             const file = watchImages[i];
             if (typeof window !== 'undefined' && window.File && file instanceof window.File) {
               try {
-                const imageUrl = await cloudinaryService.uploadImage(file, ['pending_payment']);
+                const imageUrl = await cloudinaryService.uploadImage(
+                  file,
+                  ['pending_payment'],
+                  'dental-clinics-my/places',
+                );
                 newImages.push(imageUrl);
               } catch (error) {
                 console.error(error);
