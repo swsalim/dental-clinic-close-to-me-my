@@ -10,7 +10,7 @@ export interface ClinicData {
   phone: string;
   postal_code: string;
   email?: string;
-  images: string[];
+  images: null; // Changed to null since images are now stored in clinic_images table
   neighborhood: string | null;
   city: string | null;
   latitude: number;
@@ -25,6 +25,11 @@ export interface ClinicData {
   status: string;
 }
 
+export interface ClinicImageData {
+  url: string;
+  fileId: string;
+}
+
 export class DatabaseService {
   private readonly supabase;
 
@@ -37,6 +42,7 @@ export class DatabaseService {
       .from('clinics')
       .insert({
         ...data,
+        images: null, // Always set images to null since they're stored in clinic_images table
         rating: 0,
         review_count: 0,
       })
@@ -48,6 +54,44 @@ export class DatabaseService {
     }
 
     return clinic;
+  }
+
+  async getClinicById(clinicId: string) {
+    const { data, error } = await this.supabase
+      .from('clinics')
+      .select('*')
+      .eq('id', clinicId)
+      .single();
+
+    if (error) {
+      throw new Error(`Failed to get clinic by id: ${error.message}`);
+    }
+
+    return data;
+  }
+
+  async insertClinicImages(clinicId: string, images: ClinicImageData[]) {
+    if (images.length === 0) {
+      return [];
+    }
+
+    const imageRecords = images.map((image, index) => ({
+      clinic_id: clinicId,
+      image_url: image.url,
+      imagekit_file_id: image.fileId,
+      display_order: index + 1,
+    }));
+
+    const { error, data: insertedImages } = await this.supabase
+      .from('clinic_images')
+      .insert(imageRecords)
+      .select();
+
+    if (error) {
+      throw new Error(`Failed to insert clinic images: ${error.message}`);
+    }
+
+    return insertedImages || [];
   }
 
   async updateClinicStatus(clinicId: string, status: string) {

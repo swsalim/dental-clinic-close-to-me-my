@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       phone: body.phone,
       postal_code: body.postal_code,
       email: body.clinic_email,
-      images: body.images,
+      images: null, // Set to null since images are stored in clinic_images table
       neighborhood,
       city,
       latitude: lat,
@@ -56,6 +56,11 @@ export async function POST(request: Request) {
       source: 'ugc_paid',
       status: 'pending_payment',
     });
+
+    // Insert images into clinic_images table if we have any
+    if (body.images && body.images.length > 0) {
+      await databaseService.insertClinicImages(clinic.id, body.images);
+    }
 
     // Handle Stripe customer creation/retrieval
     let stripeCustomerId = null;
@@ -130,7 +135,8 @@ export async function POST(request: Request) {
               name: 'Instant Listing',
               description: 'Get your clinic listed with a dofollow backlink in 24 hours.',
             },
-            unit_amount: 19900, // RM199.00
+            // unit_amount: 19900, // RM199.00
+            unit_amount: 300, // RM3.00
           },
           quantity: 1,
         },
