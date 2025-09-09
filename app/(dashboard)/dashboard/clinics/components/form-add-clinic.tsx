@@ -535,7 +535,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
           rating: finalData.rating,
           review_count: finalData.review_count,
           // IMAGE RELATED
-          images: finalData.images,
+          images: null, // Set to null since images are stored in clinic_images table
           // SOCIAL RELATED
           facebook_url: finalData.facebook_url,
           instagram_url: finalData.instagram_url,
