@@ -135,8 +135,7 @@ export async function POST(request: Request) {
               name: 'Instant Listing',
               description: 'Get your clinic listed with a dofollow backlink in 24 hours.',
             },
-            // unit_amount: 19900, // RM199.00
-            unit_amount: 300, // RM3.00
+            unit_amount: 19900, // RM199.00
           },
           quantity: 1,
         },

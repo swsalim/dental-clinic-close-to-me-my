@@ -88,7 +88,7 @@ export const navItems: {
   },
   {
     name: 'Submit',
-    href: '#',
+    href: '/submit',
     icon: PlusIcon,
   },
 ];
