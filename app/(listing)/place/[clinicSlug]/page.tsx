@@ -506,7 +506,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
-                  <h2>{parsedClinic.name}'s Opening Hours</h2>
+                  <h2>{parsedClinic.name}&apos;s Opening Hours</h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
                     {renderOpeningHours(parsedClinic)}
                   </div>
