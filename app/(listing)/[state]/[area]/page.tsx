@@ -66,11 +66,8 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   // Build the OG image URL with optional background image
   const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og-list`);
   ogImageUrl.searchParams.set('title', title);
-  if (areaData.thumbnail_image || areaData.state?.thumbnail_image) {
-    ogImageUrl.searchParams.set(
-      'image',
-      areaData.thumbnail_image || areaData.state?.thumbnail_image || '',
-    );
+  if (areaData.image || areaData.state?.image) {
+    ogImageUrl.searchParams.set('image', areaData.image || areaData.state?.image || '');
   }
 
   return {
@@ -224,7 +221,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       />
       <Wrapper
         style={{
-          backgroundImage: `url('${areaData.banner_image || areaData.thumbnail_image || areaData.state?.banner_image || areaData.state?.thumbnail_image}')`,
+          backgroundImage: `url('${areaData.image || areaData.state?.image}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
@@ -339,7 +336,6 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
           )}
         </Container>
       </Wrapper>
-
       <Wrapper size="sm">
         <Container>
           <div className="flex flex-col gap-y-6">

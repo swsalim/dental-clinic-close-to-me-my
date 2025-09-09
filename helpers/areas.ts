@@ -6,8 +6,7 @@ interface AreaData {
   id: string;
   name: string;
   slug: string;
-  thumbnail_image: string;
-  banner_image: string;
+  image: string;
   state: Partial<ClinicState>;
   clinics: Partial<Clinic>[];
 }

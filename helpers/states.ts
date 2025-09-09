@@ -10,7 +10,7 @@ interface StateData {
   id: string;
   name: string;
   slug: string;
-  banner_image: string | null;
+  image: string | null;
   areas: Partial<ClinicArea>[];
   clinics: Partial<Clinic>[];
 }

@@ -66,8 +66,8 @@ export async function generateMetadata({
   // Build the OG image URL with optional background image
   const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og-list`);
   ogImageUrl.searchParams.set('title', title);
-  if (stateData.banner_image) {
-    ogImageUrl.searchParams.set('image', stateData.banner_image);
+  if (stateData.image) {
+    ogImageUrl.searchParams.set('image', stateData.image);
   }
 
   return {
@@ -214,7 +214,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
       />
       <Wrapper
         style={{
-          backgroundImage: `url('${stateData.banner_image}')`,
+          backgroundImage: `url('${stateData.image}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
@@ -228,16 +228,15 @@ export default async function StatePage({ params, searchParams }: StatePageProps
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
-                <>
+                <React.Fragment key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)}
-                    key={area.slug}
                     className="text-blue-300 hover:border-blue-300 hover:text-blue-300">
                     {area.name}
                   </Link>
                   {index < nearbyAreasWithLinks.length - 2 && ', '}
                   {index === nearbyAreasWithLinks.length - 2 && ', and '}
-                </>
+                </React.Fragment>
               ))}{' '}
               in {stateData?.name}. Find services, reviews, and opening hours.
             </p>
@@ -268,7 +267,6 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                             height={100}
                             sizes="(max-width: 600px) 100vw, 350px"
                             quality={85}
-                            directory="doctors"
                             priority
                             className="h-full w-full object-cover"
                           />
