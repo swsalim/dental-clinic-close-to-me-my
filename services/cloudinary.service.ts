@@ -19,12 +19,15 @@ export class CloudinaryService {
     this.uploadPreset = uploadPreset;
   }
 
-  async uploadImage(file: File, tags?: string[]): Promise<string> {
+  async uploadImage(file: File, tags?: string[], folder?: string): Promise<string> {
     try {
       const url = `https://api.cloudinary.com/v1_1/${this.apiName}/upload`;
       const formData = new FormData();
       formData.append('upload_preset', this.uploadPreset);
       formData.append('file', file);
+      if (folder) {
+        formData.append('folder', folder);
+      }
       if (tags && tags.length > 0) {
         formData.append('tags', tags.join(','));
       }

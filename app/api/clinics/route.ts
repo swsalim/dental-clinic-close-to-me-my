@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 
-import { CloudinaryService } from '@/services/cloudinary.service';
 import { DatabaseService } from '@/services/database.service';
 import { GoogleMapsService } from '@/services/google-maps.service';
 import { z } from 'zod';
@@ -20,7 +19,7 @@ interface ClinicSubmissionData {
   address: string;
   phone: string;
   postal_code: string;
-  images?: File[];
+  images?: Array<{ url: string; fileId: string }>;
   youtube_url?: string;
   facebook_url?: string;
   instagram_url?: string;
@@ -40,7 +39,14 @@ const schema = z.object({
   address: z.string().min(5, 'Address must be at least 5 characters'),
   phone: z.string().min(8, 'Phone number must be at least 8 characters'),
   postal_code: z.string().min(5, 'Postal code must be at least 5 characters'),
-  images: z.array(z.any()).optional(),
+  images: z
+    .array(
+      z.object({
+        url: z.string().url(),
+        fileId: z.string(),
+      }),
+    )
+    .optional(),
   youtube_url: z.string().url('Invalid YouTube URL').optional().or(z.literal('')),
   facebook_url: z.string().url('Invalid Facebook URL').optional().or(z.literal('')),
   instagram_url: z.string().url('Invalid Instagram URL').optional().or(z.literal('')),
@@ -50,43 +56,18 @@ const schema = z.object({
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData();
-    const data: Partial<ClinicSubmissionData> = {};
-
-    // Convert FormData to object
-    for (const [key, value] of formData.entries()) {
-      if (key === 'images') {
-        if (!data.images) {
-          data.images = [];
-        }
-        data.images.push(value as File);
-      } else {
-        (data as Record<string, string>)[key] = value as string;
-      }
-    }
+    // Parse JSON data instead of FormData
+    const data: ClinicSubmissionData = await request.json();
 
     // Validate the data
     const validatedData = schema.parse(data);
 
     // Initialize services
-    const cloudinaryService = new CloudinaryService();
     const googleMapsService = new GoogleMapsService();
     const databaseService = new DatabaseService();
 
-    // Process images
-    const imageUrls: string[] = [];
-    if (validatedData.images?.length) {
-      await Promise.all(
-        validatedData.images.map(async (image) => {
-          try {
-            const imageUrl = await cloudinaryService.uploadImage(image, ['free_listing']);
-            imageUrls.push(imageUrl);
-          } catch (error) {
-            console.error('Failed to upload image:', error);
-          }
-        }),
-      );
-    }
+    // Images are already uploaded to ImageKit, so we can use them directly
+    const images: Array<{ url: string; fileId: string }> = validatedData.images || [];
 
     // Geocode address
     const { lat, lng, placeId, neighborhood, city } = await googleMapsService.geocodeAddress(
@@ -110,7 +91,7 @@ export async function POST(request: Request) {
       phone: validatedData.phone,
       postal_code: validatedData.postal_code,
       email: validatedData.clinic_email,
-      images: imageUrls,
+      images: null, // Set to null since images are stored in clinic_images table
       neighborhood,
       city,
       latitude: lat,
@@ -124,6 +105,11 @@ export async function POST(request: Request) {
       source: 'ugc_free',
       status: 'pending',
     });
+
+    // Insert images into clinic_images table
+    if (images.length > 0) {
+      await databaseService.insertClinicImages(clinic.id, images);
+    }
 
     // Send notification email
     await sendNewClinicNotification({
@@ -141,7 +127,7 @@ export async function POST(request: Request) {
       {
         success: true,
         clinic,
-        imageCount: imageUrls.length,
+        imageCount: images.length,
       },
       { status: 201 },
     );

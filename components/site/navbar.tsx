@@ -6,7 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// import { PlusIcon } from 'lucide-react';
+import { PlusIcon } from 'lucide-react';
+
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
@@ -85,11 +86,11 @@ export const navItems: {
     name: 'Dentists',
     href: '/dentists',
   },
-  // {
-  //   name: 'Submit',
-  //   href: '/submit',
-  //   icon: PlusIcon,
-  // },
+  {
+    name: 'Submit',
+    href: '/submit',
+    icon: PlusIcon,
+  },
 ];
 
 export default function Navbar() {

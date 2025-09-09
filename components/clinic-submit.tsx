@@ -5,153 +5,156 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import { createClient } from '@/lib/supabase/client';
+import { cn } from '@/lib/utils';
+
+import { buttonVariants } from './ui/button';
 
 export function ClinicSubmit({
   meta,
   canSubmit,
   clinic_id,
+  session_id,
 }: {
   meta: Record<string, string>;
   canSubmit: boolean;
   clinic_id?: string;
+  session_id?: string;
 }) {
-  const [status, setStatus] = useState<'loading' | 'success' | 'approved' | 'error'>('loading');
-  const [error, setError] = useState<string | null>(null);
+  const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
 
   useEffect(() => {
-    if (!canSubmit) {
+    if (!canSubmit || !clinic_id || !session_id) {
       setStatus('error');
-      setError('Missing required submission details.');
       return;
     }
 
-    // Only submit once
-    let submitted = false;
-    if (!submitted) {
-      submitted = true;
-      const supabase = createClient();
+    const checkStatus = async () => {
+      try {
+        const supabase = createClient();
 
-      const updateData = async () => {
-        // First, get the current status
-        const { data: clinicData, error: fetchError } = await supabase
-          .from('clinics')
-          .select('status')
-          .eq('id', clinic_id)
-          .single();
+        // Poll for status updates (webhook should update this)
+        let attempts = 0;
+        const maxAttempts = 10; // 30 seconds total (3s intervals)
 
-        if (fetchError) {
-          setStatus('error');
-          setError(fetchError.message || 'Failed to fetch clinic data');
-          return;
-        }
+        const pollStatus = async (): Promise<void> => {
+          const { data: clinic, error } = await supabase
+            .from('clinics')
+            .select('*')
+            .eq('id', clinic_id)
+            .single();
 
-        // Only update if status is 'pending_payment'
-        if (clinicData?.status === 'pending_payment') {
-          const res = await fetch('/api/clinics/update-status', {
-            method: 'POST',
-            body: JSON.stringify({ clinicId: clinic_id, status: 'pending' }),
-          });
-
-          if (!res.ok) {
-            const err = await res.json();
-            throw new Error(err.error || 'Failed to update clinic status');
+          if (error) {
+            throw new Error(error.message);
           }
 
-          const { clinic: updatedClinic } = await res.json();
-
-          // Send notification email
-          const response = await fetch('/api/send-email/clinic-notification', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: meta.name,
-              email: meta.email,
-              clinicName: updatedClinic.name,
-              clinicEmail: updatedClinic.email,
-              phone: updatedClinic.phone,
-              address: updatedClinic.address,
-              description: updatedClinic.description,
-              price: 'instant',
-            }),
-          });
-
-          if (!response.ok) {
-            throw new Error('Failed to send notification email');
+          if (clinic.status === 'pending') {
+            // Webhook has processed the payment
+            setStatus('success');
+            return;
           }
 
-          setStatus('success');
-        } else if (clinicData?.status === 'pending') {
-          setStatus('approved');
-        } else {
-          // Optionally handle the case when status is not 'pending_payment'
-          console.log('Status update skipped: Current status is not pending_payment');
-        }
-      };
+          if (clinic.status === 'pending_payment' && attempts < maxAttempts) {
+            // Still waiting for webhook
+            attempts++;
+            setTimeout(pollStatus, 3000);
+            return;
+          }
 
-      updateData();
-    }
-  }, [canSubmit, meta, clinic_id]);
+          if (attempts >= maxAttempts) {
+            // Webhook might have failed, but payment succeeded
+            // Show success anyway and let admin handle manually
+            setStatus('success');
+            return;
+          }
+        };
+
+        await pollStatus();
+      } catch (error) {
+        console.error('Error checking status:', error);
+        setStatus('error');
+      }
+    };
+
+    checkStatus();
+  }, [canSubmit, clinic_id, session_id]);
 
   if (status === 'loading') {
     return (
       <div className="mx-auto max-w-xl py-12 text-center">
+        <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"></div>
         <h1 className="mb-4 text-3xl font-bold">Payment Successful!</h1>
         <p className="mb-4">Processing your clinic submission...</p>
+        <p className="text-sm text-gray-600">This usually takes just a few seconds.</p>
       </div>
     );
   }
-  if (status === 'approved') {
-    return (
-      <div className="mx-auto max-w-xl py-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold">Payment Successful!</h1>
-        <p className="mb-4">
-          We have received your submission and are processing your listing. You will be notified via
-          email once your listing is live.
-        </p>
-        <p>
-          <Link href="/">Return to Home</Link>
-        </p>
-      </div>
-    );
-  }
+
   if (status === 'error') {
     return (
-      <div className="mx-auto max-w-xl py-12 text-center text-red-600">
-        <h1 className="mb-4 text-3xl font-bold">Payment Successful!</h1>
-        <p className="mb-4">There was an error processing your clinic submission.</p>
-        <p>{error}</p>
-        <p>
-          Drop us an email at{' '}
-          <a href="mailto:support@dentalclinicclosetome.my">support@dentalclinicclosetome.my</a> if
-          you need help.
+      <div className="mx-auto max-w-xl py-12 text-center">
+        <h1 className="mb-4 text-3xl font-bold text-red-600">Something went wrong</h1>
+        <p className="mb-4">
+          Your payment was successful, but we encountered an issue processing your submission.
         </p>
+        <p className="mb-4">
+          Don t worry - you won t be charged again. Our team will review your submission manually.
+        </p>
+        <p className="text-sm">
+          Contact us at{' '}
+          <a
+            href="mailto:support@dentalclinicclosetome.my"
+            className="text-blue-600 hover:underline">
+            support@dentalclinicclosetome.my
+          </a>{' '}
+          with your payment confirmation if you need immediate assistance.
+        </p>
+        <div className="mt-6">
+          <Link href="/" className="text-blue-600 hover:underline">
+            Return to Home
+          </Link>
+        </div>
       </div>
     );
   }
+
   return (
     <div className="mx-auto max-w-xl py-12 text-center">
-      <h1 className="mb-4 text-3xl font-bold">Submission Complete!</h1>
-      <p className="mb-4">
-        Thank you for your payment. Your clinic has been listed as an instant listing.
+      <div className="mb-4 text-4xl">✅</div>
+      <h1 className="mb-4 text-3xl font-bold text-green-600">Submission Complete!</h1>
+      <p className="mb-6 text-lg">
+        Thank you for your payment. Your clinic listing has been submitted for review.
       </p>
-      <div className="mt-6 flex flex-col gap-4 rounded-lg bg-gray-50 p-6 text-left dark:bg-gray-800">
-        <h2 className="mb-2 text-lg font-semibold">Submission Details</h2>
-        <ul>
-          <li>
-            <strong>Name:</strong> {meta.name}
-          </li>
-          <li>
-            <strong>Email:</strong> {meta.email}
-          </li>
-          <li>
-            <strong>Clinic Name:</strong> {meta.clinic_name}
-          </li>
+
+      <div className="mt-6 rounded-lg bg-green-50 p-6 text-left dark:bg-green-900/20">
+        <h2 className="mb-4 text-lg font-semibold text-green-800 dark:text-green-200">
+          What happens next?
+        </h2>
+        <ul className="mb-4 space-y-2 text-sm text-green-700 dark:text-green-300">
+          <li>• Our team will review your listing within 24 hours</li>
+          <li>• You&apos;ll receive an email confirmation when it goes live</li>
+          <li>• Your listing will include a DoFollow backlink</li>
         </ul>
-        <p>
-          <Link href="/">Return to Home</Link>
-        </p>
+
+        <div className="border-t border-green-200 pt-4 dark:border-green-800">
+          <h3 className="font-medium text-green-800 dark:text-green-200">Submission Details:</h3>
+          <ul className="mt-2 space-y-1 text-sm text-green-700 dark:text-green-300">
+            <li>
+              <strong>Name:</strong> {meta.name}
+            </li>
+            <li>
+              <strong>Email:</strong> {meta.email}
+            </li>
+            <li>
+              <strong>Clinic:</strong> {meta.clinic_name}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-6">
+        <Link href="/" className={cn(buttonVariants({ variant: 'primary' }))}>
+          Return to Home
+        </Link>
       </div>
     </div>
   );
