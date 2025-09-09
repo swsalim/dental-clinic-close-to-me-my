@@ -474,7 +474,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             <Prose className="space-y-8">
               {parsedClinic.description && (
                 <article>
-                  <h2 className="my-0">Description</h2>
+                  <h2 className="my-0">About {parsedClinic.name}</h2>
                   <TruncatedHtml html={parsedClinic.description} limit={80} />
                 </article>
               )}
@@ -487,7 +487,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.services && (
                 <article className="block lg:hidden">
-                  <h2>Services</h2>
+                  <h2>{parsedClinic.name} Services</h2>
                   <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 md:grid-cols-6">
                     {parsedClinic.services.map((service, index) => (
                       <div
@@ -506,7 +506,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
-                  <h2>Opening Hours</h2>
+                  <h2>{parsedClinic.name}'s Opening Hours</h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
                     {renderOpeningHours(parsedClinic)}
                   </div>
@@ -515,7 +515,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.images && parsedClinic.images.length > 1 && (
                 <article>
-                  <h2>Gallery</h2>
+                  <h2>Gallery of {parsedClinic.name}</h2>
                   <ImageGallery images={parsedClinic.images} title={parsedClinic.name || ''} />
                 </article>
               )}
@@ -552,7 +552,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
                 {parsedClinic.services && (
                   <div className="hidden lg:block">
-                    <h2 className="">Services</h2>
+                    <h2 className="">{parsedClinic.name} Services</h2>
                     <div className="grid grid-cols-3 gap-4">
                       {parsedClinic.services.map((service, index) => (
                         <div
