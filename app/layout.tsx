@@ -121,8 +121,8 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3799479098488751"
           crossOrigin="anonymous"></script>
         <script
-          src="https://app.tinyadz.com/scripts/v1.0/ads.js"
-          site-id="6835de6cc1d791d83e38d6d1"
+          src="https://cdn.apitiny.net/scripts/v2.0/main.js"
+          data-site-id="6835de6cc1d791d83e38d6d1"
           async></script>
       </body>
     </html>
