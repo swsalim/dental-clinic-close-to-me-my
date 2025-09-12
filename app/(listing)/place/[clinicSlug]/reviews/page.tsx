@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ClinicHours, ClinicReview } from '@/types/clinic';
 import { formatDistanceToNow } from 'date-fns';
+import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
@@ -146,6 +148,14 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
             <h1 className="text-3xl font-bold">Reviews for {parsedClinic.name}</h1>
             <p className="mt-2 text-gray-500 dark:text-gray-400">
               {parsedClinic.review_count} reviews • {parsedClinic.rating?.toFixed(1)} average rating
+            </p>
+            <p className="mt-2 gap-x-2 text-gray-500 dark:text-gray-400">
+              <Link
+                href={`/place/${parsedClinic.slug}`}
+                className="inline-flex items-center gap-x-2">
+                View clinic profile
+                <ArrowRightIcon className="size-4" />
+              </Link>
             </p>
           </div>
 
