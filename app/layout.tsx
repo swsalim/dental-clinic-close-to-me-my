@@ -102,6 +102,11 @@ export default function RootLayout({
           src="https://scripts.simpleanalyticscdn.com/latest.js"
           strategy="afterInteractive"
         />
+        <script
+          defer
+          data-website-id="68d7a5e7480eee25d4b69071"
+          data-domain="dentalclinicclosetome.my"
+          src="https://datafa.st/js/script.js"></script>
         <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
       </head>
       <body
