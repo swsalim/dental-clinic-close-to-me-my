@@ -107,6 +107,7 @@ export default function RootLayout({
           data-website-id="68d7a5e7480eee25d4b69071"
           data-domain="dentalclinicclosetome.my"
           src="https://datafa.st/js/script.js"></script>
+        <script async src="https://cdn.seline.com/seline.js" data-token="1b7852c8a82b878"></script>
         <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
       </head>
       <body
