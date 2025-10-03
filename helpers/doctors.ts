@@ -175,7 +175,7 @@ export async function getDoctorBySlug(
     return null;
   }
 
-  return transformDoctorData(data);
+  return transformDoctorData(data as unknown as RawDoctorWithClinics);
 }
 
 /**
@@ -202,7 +202,7 @@ export async function getDoctorBySlugStatic(
     return null;
   }
 
-  return transformDoctorData(data);
+  return transformDoctorData(data as unknown as RawDoctorWithClinics);
 }
 
 /**
