@@ -364,7 +364,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 {parsedClinic.email && (
                   <div className="flex items-center gap-x-2">
                     <MailIcon className="h-5 w-5 text-blue-300" />
-                    <Link href={`mailto:${parsedClinic.email}`}>
+                    <Link href={`mailto:${parsedClinic.email}`} prefetch={false}>
                       <span className="text-sm">{parsedClinic.email}</span>
                     </Link>
                   </div>
@@ -374,7 +374,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     <GlobeIcon className="h-5 w-5 text-blue-300" />
                     <Link
                       href={`${parsedClinic.website}?utm_source=dentalclinicclosetome.my`}
-                      rel="nofollow">
+                      rel="nofollow"
+                      prefetch={false}>
                       <span className="text-sm">{parsedClinic.website}</span>
                     </Link>
                   </div>

@@ -207,7 +207,8 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
               <Link
                 href={absoluteUrl(`/services/${service.slug}`)}
                 className="text-balance py-1 text-base font-medium hover:border-transparent md:text-lg"
-                key={service.slug}>
+                key={service.slug}
+                prefetch={false}>
                 {service.name}
               </Link>
             ))}
@@ -264,13 +265,15 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
               <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                 <Link
                   href="/submit"
-                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
+                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
+                  prefetch={false}>
                   Add a clinic
                   <ArrowRightIcon className="size-4" />
                 </Link>
                 <Link
                   href="/"
-                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}>
+                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
+                  prefetch={false}>
                   Get back to homepage
                   <ArrowRightIcon className="size-4" />
                 </Link>

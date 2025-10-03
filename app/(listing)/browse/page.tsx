@@ -85,7 +85,8 @@ export default async function BrowsePage() {
                     <h2 className="m-0 p-0 text-lg font-semibold">{state.name}</h2>
                     <Link
                       href={`/${state.slug}`}
-                      className="grid size-8 place-items-center rounded-full">
+                      className="grid size-8 place-items-center rounded-full"
+                      prefetch={false}>
                       <ExternalLinkIcon className="size-4" />
                     </Link>
                   </div>
@@ -96,7 +97,8 @@ export default async function BrowsePage() {
                         <Link
                           href={`/${state.slug}/${area.slug}`}
                           className="inline-block w-fit"
-                          key={area.id}>
+                          key={area.id}
+                          prefetch={false}>
                           {area.name}
                         </Link>
                       ))}

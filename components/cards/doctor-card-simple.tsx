@@ -20,7 +20,8 @@ export function DoctorCardSimple({ doctor }: DoctorCardProps) {
     <Link
       href={`/dentist/${doctor.slug}`}
       className="not-prose block w-full hover:border-none"
-      title={`View ${doctor.name}'s profile`}>
+      title={`View ${doctor.name}'s profile`}
+      prefetch={false}>
       <Card className="h-full w-full overflow-hidden rounded-2xl" role="article">
         <CardContent className="flex flex-row items-center gap-2 p-0">
           <div className="relative h-24 w-24">

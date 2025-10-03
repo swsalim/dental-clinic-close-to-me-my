@@ -20,7 +20,8 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
   return (
     <Link
       href={`/dentist/${doctor.slug}`}
-      className="block transition-transform hover:scale-[1.02] hover:border-none">
+      className="block transition-transform hover:scale-[1.02] hover:border-none"
+      prefetch={false}>
       <Card className="h-full overflow-hidden rounded-2xl" role="article">
         <CardHeader className="relative h-72 overflow-hidden p-0">
           {firstImage ? (

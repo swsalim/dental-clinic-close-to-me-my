@@ -265,7 +265,8 @@ export default async function DentistsByStatePage({
                         href="/dentists"
                         className={cn(
                           'inline-flex items-center gap-x-2 text-blue-600 hover:text-blue-800',
-                        )}>
+                        )}
+                        prefetch={false}>
                         Browse all dentists
                         <ArrowRightIcon className="h-4 w-4" />
                       </Link>

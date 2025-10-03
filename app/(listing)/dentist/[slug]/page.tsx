@@ -300,7 +300,8 @@ export default async function DentistPage({ params }: DentistPageProps) {
                       <Link
                         key={clinic.id}
                         href={`/place/${clinic.slug}`}
-                        className={cn(buttonVariants({ variant: 'primary' }))}>
+                        className={cn(buttonVariants({ variant: 'primary' }))}
+                        prefetch={false}>
                         Book at {clinic.name}
                       </Link>
                     ))}

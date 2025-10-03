@@ -102,7 +102,8 @@ const MobileNavItem = ({
                   key={href}
                   href={href}
                   onClick={() => setOpen(false)}
-                  className="group flex w-full gap-3 py-2">
+                  className="group flex w-full gap-3 py-2"
+                  prefetch={false}>
                   {Icon && (
                     <div className="flex size-10 items-center justify-center rounded-lg border border-gray-200 bg-gradient-to-t from-gray-100">
                       <Icon className="size-5 text-gray-700" />
@@ -134,7 +135,8 @@ const MobileNavItem = ({
       <Link
         href={href}
         onClick={() => setOpen(false)}
-        className="flex w-full py-3 font-semibold capitalize">
+        className="flex w-full py-3 font-semibold capitalize"
+        prefetch={false}>
         {name}
       </Link>
     </li>

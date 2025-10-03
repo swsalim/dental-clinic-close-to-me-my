@@ -152,7 +152,8 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
             <p className="mt-2 gap-x-2 text-gray-500 dark:text-gray-400">
               <Link
                 href={`/place/${parsedClinic.slug}`}
-                className="inline-flex items-center gap-x-2">
+                className="inline-flex items-center gap-x-2"
+                prefetch={false}>
                 View clinic profile
                 <ArrowRightIcon className="size-4" />
               </Link>

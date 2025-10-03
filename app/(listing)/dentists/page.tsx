@@ -200,13 +200,15 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
                 Browse dentists by{' '}
                 <Link
                   href="/browse"
-                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600">
+                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600"
+                  prefetch={false}>
                   state
                 </Link>
                 , or{' '}
                 <Link
                   href="/browse"
-                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600">
+                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600"
+                  prefetch={false}>
                   city
                 </Link>
                 . Helping you find dental professionals near you, faster.
@@ -220,7 +222,8 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={cn('flex w-fit flex-row items-center gap-2 text-start font-normal')}>
+                    className={cn('flex w-fit flex-row items-center gap-2 text-start font-normal')}
+                    prefetch={false}>
                     <span>
                       <span className="block font-medium">{link.title}</span>
                     </span>

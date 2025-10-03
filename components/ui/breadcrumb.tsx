@@ -41,6 +41,7 @@ const Breadcrumb = ({ items, theme = 'light', routerCallback }: BreadcrumbProps)
         <nav className="sm:hidden" aria-label="Back">
           <Link
             href="#"
+            prefetch={false}
             className={cn(
               'flex items-center text-sm font-medium transition-colors',
               styles[theme].link,
@@ -72,7 +73,8 @@ const Breadcrumb = ({ items, theme = 'light', routerCallback }: BreadcrumbProps)
               className={cn(
                 'font-regular text-base capitalize drop-shadow-sm transition-colors',
                 styles[theme].link,
-              )}>
+              )}
+              prefetch={false}>
               Home
             </Link>
           </li>
@@ -91,7 +93,8 @@ const Breadcrumb = ({ items, theme = 'light', routerCallback }: BreadcrumbProps)
                   className={cn(
                     'font-regular ml-4 text-base capitalize drop-shadow-sm transition-colors',
                     styles[theme].link,
-                  )}>
+                  )}
+                  prefetch={false}>
                   {item.name}
                 </Link>
               ) : (

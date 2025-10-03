@@ -236,7 +236,8 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
               Explore {totalClinics} trusted dental clinics across cities in{' '}
               <Link
                 href={absoluteUrl(`/${areaData.state?.slug}`)}
-                className="text-blue-300 hover:border-blue-300 hover:text-blue-300">
+                className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
+                prefetch={false}>
                 {areaData.state?.name}
               </Link>
               . Find services, reviews, and opening hours.
@@ -321,13 +322,15 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
               <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                 <Link
                   href="/submit"
-                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}>
+                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
+                  prefetch={false}>
                   Add a clinic
                   <ArrowRightIcon className="size-4" />
                 </Link>
                 <Link
                   href="/"
-                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}>
+                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
+                  prefetch={false}>
                   Get back to homepage
                   <ArrowRightIcon className="size-4" />
                 </Link>
@@ -347,7 +350,8 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                 <h3 className="text-balance text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
-                    className="py-1 hover:border-transparent">
+                    className="py-1 hover:border-transparent"
+                    prefetch={false}>
                     {area.name}, {area.state?.name}
                   </Link>
                 </h3>

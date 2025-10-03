@@ -65,7 +65,8 @@ export async function BrowseServices() {
                 tabIndex={0}
                 aria-label={service.name}
                 className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:border-transparent hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
-                role="button">
+                role="button"
+                prefetch={false}>
                 {getServiceIcon(service.slug)}
                 <div className="mt-4 text-center text-lg font-semibold text-black dark:text-gray-50">
                   {service.name}
