@@ -107,7 +107,7 @@ function transformDoctorsData(doctorsData: RawDoctorWithClinics[]): ClinicDoctor
 }
 
 export async function getDoctorMetadataBySlug(slug: string, status: string = 'approved') {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: doctorData } = (await supabase
     .from('clinic_doctors')
@@ -125,7 +125,7 @@ export async function getDoctorMetadataBySlug(slug: string, status: string = 'ap
 }
 
 export async function getDoctorListings(status: string = 'approved') {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: doctorData } = (await supabase
     .from('clinic_doctors')
@@ -168,6 +168,33 @@ export async function getDoctorBySlug(
 
   if (error) {
     console.error('Error fetching doctor:', error);
+    return null;
+  }
+
+  if (!data) {
+    return null;
+  }
+
+  return transformDoctorData(data);
+}
+
+/**
+ * Fetches a doctor by its slug with all related data using admin client for static generation
+ */
+export async function getDoctorBySlugStatic(
+  slug: string,
+  status: string = 'approved',
+): Promise<ClinicDoctor | null> {
+  const supabase = createAdminClient();
+
+  const { data, error } = await supabase
+    .from('clinic_doctors')
+    .select(DOCTOR_WITH_CLINICS_SELECT)
+    .match({ slug, is_active: true, status })
+    .single();
+
+  if (error) {
+    console.error('Error fetching doctor for static generation:', error);
     return null;
   }
 

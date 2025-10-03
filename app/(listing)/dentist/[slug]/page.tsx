@@ -8,7 +8,11 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl, cn } from '@/lib/utils';
 
-import { getDoctorBySlug, getDoctorListings, getDoctorMetadataBySlug } from '@/helpers/doctors';
+import {
+  getDoctorBySlugStatic,
+  getDoctorListings,
+  getDoctorMetadataBySlug,
+} from '@/helpers/doctors';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
@@ -88,9 +92,14 @@ export async function generateStaticParams() {
   }));
 }
 
+// Force static generation - this ensures the page is generated at build time
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+
 export default async function DentistPage({ params }: DentistPageProps) {
   const { slug } = await params;
-  const doctor = await getDoctorBySlug(slug);
+  // Use static generation function for build-time data fetching
+  const doctor = await getDoctorBySlugStatic(slug);
 
   if (!doctor) {
     notFound();

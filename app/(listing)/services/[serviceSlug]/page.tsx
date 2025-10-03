@@ -11,7 +11,7 @@ import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getClinicByServiceId, getClinicByServiceMetadataId } from '@/helpers/clinics';
-import { getAllServices, getServiceBySlug } from '@/helpers/services';
+import { getAllServices, getServiceBySlugStatic } from '@/helpers/services';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
@@ -37,7 +37,7 @@ export async function generateMetadata({
   const { serviceSlug } = await params;
   const { page } = await searchParams;
 
-  const serviceData = await getServiceBySlug(serviceSlug);
+  const serviceData = await getServiceBySlugStatic(serviceSlug);
 
   if (!serviceData) {
     notFound();
@@ -101,6 +101,10 @@ export async function generateStaticParams() {
   }));
 }
 
+// Force static generation - this ensures the page is generated at build time
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+
 export default async function ServicePage({ params, searchParams }: ServicePageProps) {
   const { serviceSlug } = await params;
   const { page } = await searchParams;
@@ -110,7 +114,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
   const { from, to } = getPagination(currentPage, limit);
 
   const [serviceData, services] = await Promise.all([
-    getServiceBySlug(serviceSlug),
+    getServiceBySlugStatic(serviceSlug),
     getAllServices(),
   ]);
 

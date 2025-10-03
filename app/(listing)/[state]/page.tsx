@@ -12,7 +12,7 @@ import { siteConfig } from '@/config/site';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getDoctorsByState } from '@/helpers/doctors';
-import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/helpers/states';
+import { getStateBySlugStatic, getStateListings, getStateMetadataBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
@@ -116,6 +116,10 @@ export async function generateStaticParams() {
   }));
 }
 
+// Force static generation - this ensures the page is generated at build time
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+
 export default async function StatePage({ params, searchParams }: StatePageProps) {
   const { state } = await params;
   const { page } = await searchParams;
@@ -127,7 +131,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
   // Fetch state metadata and clinics data in parallel
   const [stateMeta, stateData] = await Promise.all([
     getStateMetadataBySlug(state),
-    getStateBySlug(state, from, to),
+    getStateBySlugStatic(state, from, to),
   ]);
 
   if (!stateMeta || !stateData) {

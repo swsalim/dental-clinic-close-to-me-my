@@ -13,7 +13,7 @@ import {
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
 export async function getClinicMetadataBySlug(slug: string, status: string = 'approved') {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: clinicData } = (await supabase
     .from('clinics')
@@ -47,7 +47,7 @@ export async function getClinicMetadataBySlug(slug: string, status: string = 'ap
 }
 
 export async function getClinicListings(status: string = 'approved') {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: clinicData } = (await supabase
     .from('clinics')
@@ -87,6 +87,29 @@ export async function getClinicBySlug(
 
   if (error) {
     console.error('Error fetching nearest clinics:', error);
+    return null;
+  }
+
+  return data as unknown as ClinicDetails;
+}
+
+/**
+ * Fetches a clinic by its slug with all related data using admin client for static generation
+ */
+export async function getClinicBySlugStatic(
+  slug: string,
+  status: string = 'approved',
+): Promise<ClinicDetails | null> {
+  const supabase = createAdminClient();
+
+  const { data, error } = await supabase.rpc('get_clinic_by_slug', {
+    slug_input: slug,
+    status_input: status,
+    review_limit: 6,
+  });
+
+  if (error) {
+    console.error('Error fetching clinic for static generation:', error);
     return null;
   }
 
@@ -146,7 +169,7 @@ export async function getClinicByServiceId(
       longitude,
       rating,
       review_count,
-      images,
+      images:clinic_images(image_url, imagekit_file_id),
       is_permanently_closed,
       open_on_public_holidays,
       is_active,

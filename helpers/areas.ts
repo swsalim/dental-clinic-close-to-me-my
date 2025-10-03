@@ -12,7 +12,7 @@ interface AreaData {
 }
 
 export async function getAreaMetadataBySlug(areaSlug: string) {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: area } = await supabase.rpc('get_area_metadata_by_slug', {
     area_slug: areaSlug,
@@ -22,7 +22,7 @@ export async function getAreaMetadataBySlug(areaSlug: string) {
 }
 
 export async function getAreaListings() {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: areaData } = (await supabase.from('areas').select(
     `
@@ -51,6 +51,21 @@ export async function getAreaListings() {
  */
 export async function getAreaBySlug(areaSlug: string, from: number, to: number) {
   const supabase = await createServerClient();
+
+  const { data: area } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
+    area_slug: areaSlug,
+    from_index: from,
+    to_index: to,
+  });
+
+  return area as AreaData | null;
+}
+
+/**
+ * Fetches an area by its slug with all related data using admin client for static generation
+ */
+export async function getAreaBySlugStatic(areaSlug: string, from: number, to: number) {
+  const supabase = createAdminClient();
 
   const { data: area } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
     area_slug: areaSlug,

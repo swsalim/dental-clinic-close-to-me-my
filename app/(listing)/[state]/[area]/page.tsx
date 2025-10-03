@@ -11,7 +11,7 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
-import { getAreaBySlug, getAreaListings, getAreaMetadataBySlug } from '@/helpers/areas';
+import { getAreaBySlugStatic, getAreaListings, getAreaMetadataBySlug } from '@/helpers/areas';
 import { getStateMetadataBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
@@ -117,6 +117,10 @@ export async function generateStaticParams() {
   }));
 }
 
+// Force static generation - this ensures the page is generated at build time
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+
 export default async function AreaPage({ params, searchParams }: AreaPageProps) {
   const { state, area } = await params;
   const { page } = await searchParams;
@@ -129,7 +133,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
   // Fetch area metadata and clinics data in parallel
   const [areaMeta, areaData, stateMeta] = await Promise.all([
     getAreaMetadataBySlug(area),
-    getAreaBySlug(area, from, to),
+    getAreaBySlugStatic(area, from, to),
     getStateMetadataBySlug(state),
   ]);
 

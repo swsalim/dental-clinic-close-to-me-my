@@ -3,7 +3,7 @@ import { createAdminClient, createServerClient } from '@/lib/supabase';
 import * as Icons from '@/components/icons';
 
 export async function getAllServices() {
-  const supabase = await createAdminClient();
+  const supabase = createAdminClient();
 
   const { data: services } = await supabase
     .from('clinic_services')
@@ -22,6 +22,21 @@ export async function getAllServices() {
 
 export async function getServiceBySlug(slug: string) {
   const supabase = await createServerClient();
+
+  const { data } = await supabase
+    .from('clinic_services')
+    .select('id, name, slug, description')
+    .eq('slug', slug)
+    .single();
+
+  return data;
+}
+
+/**
+ * Fetches a service by its slug using admin client for static generation
+ */
+export async function getServiceBySlugStatic(slug: string) {
+  const supabase = createAdminClient();
 
   const { data } = await supabase
     .from('clinic_services')

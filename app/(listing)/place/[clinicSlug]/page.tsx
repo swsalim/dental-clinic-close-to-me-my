@@ -18,7 +18,11 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
+import {
+  getClinicBySlugStatic,
+  getClinicListings,
+  getClinicMetadataBySlug,
+} from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
@@ -177,7 +181,8 @@ const renderOpeningHours = (parsedClinic: ClinicDetails) => {
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
 
-  const clinic = await getClinicBySlug(clinicSlug);
+  // Use getClinicMetadataBySlug for build-time metadata generation
+  const clinic = await getClinicMetadataBySlug(clinicSlug);
 
   if (!clinic) {
     notFound();
@@ -189,9 +194,6 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
   // Build the OG image URL with optional background image
   const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
   ogImageUrl.searchParams.set('title', title);
-  if (clinic.images && clinic.images.length > 0) {
-    ogImageUrl.searchParams.set('image', clinic.images[0]);
-  }
 
   return {
     title,
@@ -239,10 +241,15 @@ export async function generateStaticParams() {
   }));
 }
 
+// Force static generation - this ensures the page is generated at build time
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+
 export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
 
-  const parsedClinic = await getClinicBySlug(clinicSlug);
+  // Use static generation function for build-time data fetching
+  const parsedClinic = await getClinicBySlugStatic(clinicSlug);
 
   if (!parsedClinic) {
     notFound();
@@ -556,15 +563,15 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     <h2 className="">{parsedClinic.name} Services</h2>
                     <div className="grid grid-cols-3 gap-4">
                       {parsedClinic.services.map((service, index) => (
-                        <div
+                        <Link
                           key={service.slug ?? service.name ?? String(index)}
-                          tabIndex={0}
+                          href={`/services/${service.slug}`}
                           aria-label={service.name}
                           className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-3 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
                           role="button">
                           {getServiceIcon(service.slug ?? '')}
                           <div className="mt-4 text-center text-xs">{service.name}</div>
-                        </div>
+                        </Link>
                       ))}
                     </div>
                   </div>
