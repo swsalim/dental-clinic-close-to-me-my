@@ -18,10 +18,11 @@ interface ImageGalleryProps {
 export function ImageGallery({ images, title, className }: ImageGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  // Filter out undefined values
+  // Filter out undefined values and ensure image_url exists
   const validImages = (images ?? []).filter(
     (img): img is string | ClinicImage =>
-      typeof img === 'string' || (typeof img === 'object' && img !== null && 'image_url' in img),
+      typeof img === 'string' ||
+      (typeof img === 'object' && img !== null && 'image_url' in img && !!img.image_url),
   );
 
   useEffect(() => {
@@ -73,7 +74,7 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
             onClick={() => handleImageClick(0)}
             className="relative h-full max-h-[500px] w-full overflow-hidden rounded-lg">
             <ImageKit
-              src={(validImages[0] as unknown as ClinicImage).image_url}
+              src={typeof validImages[0] === 'string' ? validImages[0] : validImages[0].image_url}
               alt={`Main photo for ${title}`}
               priority={true}
               width={600}
@@ -89,7 +90,7 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
             onClick={() => handleImageClick(index + 1)}
             className="relative col-span-2 row-span-1 h-60 w-full overflow-hidden rounded-lg">
             <ImageKit
-              src={(image as unknown as ClinicImage).image_url}
+              src={typeof image === 'string' ? image : image.image_url}
               alt={`Photo ${index + 2} for ${title}`}
               width={350}
               height={350}
@@ -120,7 +121,11 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
           </button>
           <div className="relative max-h-[90vh] max-w-[90vw]">
             <ImageKit
-              src={(validImages[selectedImageIndex] as unknown as ClinicImage).image_url}
+              src={
+                typeof validImages[selectedImageIndex] === 'string'
+                  ? validImages[selectedImageIndex]
+                  : validImages[selectedImageIndex].image_url
+              }
               alt={`Photo ${selectedImageIndex + 1} for ${title}`}
               width={1000}
               height={1000}

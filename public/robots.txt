@@ -1,13 +1,18 @@
-# *
+# All user agents
 User-agent: *
-Disallow: /*.json$
-Disallow: /*_buildManifest.js$
-Disallow: /*_middlewareManifest.js$
-Disallow: /*_ssgManifest.js$
-Disallow: /*.js$
+Disallow: /*.json
+Disallow: /*_buildManifest.js
+Disallow: /*_middlewareManifest.js
+Disallow: /*_ssgManifest.js
+Disallow: /*.js
+Disallow: /dashboard
+Disallow: /404
+Disallow: /api
+Disallow: /login
+Disallow: /submit/success
 
 # Host
-Host: http://localhost:3000
+Host: localhost:3000
 
 # Sitemaps
 Sitemap: http://localhost:3000/sitemap.xml

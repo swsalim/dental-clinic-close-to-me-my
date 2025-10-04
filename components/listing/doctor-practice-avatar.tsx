@@ -34,7 +34,7 @@ export default async function DoctorPracticeAvatar({ clinicSlug, className }: Do
               href={`/dentist/${doctor.slug}`}
               className="relative h-24 w-24 transform overflow-hidden rounded-full transition-all duration-300 hover:scale-105 hover:border-none hover:opacity-90"
               title={`View ${doctor.name}'s profile`}>
-              {firstImage ? (
+              {firstImage && firstImage.image_url ? (
                 <ImageKit
                   src={firstImage.image_url}
                   alt={doctor.name}

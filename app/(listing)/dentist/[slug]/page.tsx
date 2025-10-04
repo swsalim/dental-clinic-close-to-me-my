@@ -109,7 +109,8 @@ export default async function DentistPage({ params }: DentistPageProps) {
   const doctorWithClinics = doctor as ClinicDoctor;
 
   const images = doctor.images || [];
-  const [profileImage, ...galleryImages] = images;
+  // const [profileImage, ...galleryImages] = images;
+  const [profileImage] = images;
 
   const breadcrumbItems = [
     { name: 'Dentists', url: '/dentists' },
@@ -195,16 +196,18 @@ export default async function DentistPage({ params }: DentistPageProps) {
               <Breadcrumb items={breadcrumbItems} />
               {/* Doctor Header */}
               <div className="flex flex-row items-start justify-end gap-6">
-                <div className="aspect-[2/3] w-full max-w-48 lg:min-w-48 lg:max-w-72">
-                  <ImageKit
-                    src={(profileImage as unknown as ClinicImage).image_url}
-                    alt={`${doctor.name} - Profile Image`}
-                    width={600}
-                    height={600}
-                    sizes="(max-width: 600px) 100vw, 350px"
-                    className="h-full w-full rounded-lg object-cover"
-                  />
-                </div>
+                {profileImage && (
+                  <div className="aspect-[2/3] w-full max-w-48 lg:min-w-48 lg:max-w-72">
+                    <ImageKit
+                      src={(profileImage as unknown as ClinicImage).image_url}
+                      alt={`${doctor.name} - Profile Image`}
+                      width={600}
+                      height={600}
+                      sizes="(max-width: 600px) 100vw, 350px"
+                      className="h-full w-full rounded-lg object-cover"
+                    />
+                  </div>
+                )}
                 <div className="flex grow flex-col items-start justify-end gap-2">
                   <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
                     {doctor.name}
@@ -236,24 +239,27 @@ export default async function DentistPage({ params }: DentistPageProps) {
               </div>
 
               {/* Doctor Images */}
-              {galleryImages && galleryImages.length > 0 && (
+              {/* TODO: fix images */}
+              {/* {galleryImages && galleryImages.length > 0 && (
                 <Prose>
                   <h2 className="mb-4 text-xl font-semibold">Photos</h2>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    {galleryImages.map((image, index) => (
-                      <ImageKit
-                        key={index}
-                        src={(image as unknown as ClinicImage).image_url}
-                        width={350}
-                        height={350}
-                        sizes="(max-width: 600px) 100vw, 350px"
-                        alt={`${doctor.name} - Photo ${index + 1}`}
-                        className="h-64 w-full rounded-lg object-cover"
-                      />
-                    ))}
+                    {galleryImages.map((image, index) =>
+                      image ? (
+                        <ImageKit
+                          key={index}
+                          src={(image as unknown as ClinicImage).image_url}
+                          width={350}
+                          height={350}
+                          sizes="(max-width: 600px) 100vw, 350px"
+                          alt={`${doctor.name} - Photo ${index + 1}`}
+                          className="h-64 w-full rounded-lg object-cover"
+                        />
+                      ) : null,
+                    )}
                   </div>
                 </Prose>
-              )}
+              )} */}
 
               {/* Featured Video */}
               {doctor.featured_video && (
@@ -285,7 +291,11 @@ export default async function DentistPage({ params }: DentistPageProps) {
                         postalCode={clinic.postal_code ?? ''}
                         state={clinic.state?.name ?? ''}
                         area={clinic.area?.name ?? ''}
-                        image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
+                        image={
+                          clinic.images?.[0]
+                            ? (clinic.images[0] as unknown as ClinicImage).image_url
+                            : undefined
+                        }
                         isFeatured={false}
                         rating={clinic.rating}
                         hours={[]}

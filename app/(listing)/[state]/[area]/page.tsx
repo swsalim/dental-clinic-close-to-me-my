@@ -279,7 +279,11 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                             name={clinic.name ?? ''}
                             address={clinic.address ?? ''}
                             phone={clinic.phone ?? ''}
-                            image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
+                            image={
+                              clinic.images?.[0]
+                                ? (clinic.images[0] as unknown as ClinicImage).image_url
+                                : undefined
+                            }
                             postalCode={clinic.postal_code ?? ''}
                             state={areaData.state?.name ?? ''}
                             area={areaData.name ?? ''}

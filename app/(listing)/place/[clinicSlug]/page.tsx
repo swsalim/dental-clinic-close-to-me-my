@@ -317,10 +317,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
         openingHoursSpecification={openingHoursSpecification}
         reviews={parsedClinic.reviews?.slice(0, 5) ?? []}
       />
-      {parsedClinic.images && parsedClinic.images.length > 0 && (
+      {parsedClinic.images && parsedClinic.images.length > 0 && parsedClinic.images[0] && (
         <Wrapper
           style={{
-            backgroundImage: `url('${(parsedClinic.images?.[0] as unknown as ClinicImage).image_url}')`,
+            backgroundImage: `url('${(parsedClinic.images[0] as unknown as ClinicImage).image_url}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

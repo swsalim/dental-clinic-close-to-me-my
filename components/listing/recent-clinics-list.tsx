@@ -79,7 +79,11 @@ export function RecentClinicsList() {
               postalCode={clinic.postal_code || ''}
               state={clinic.state?.name || ''}
               area={clinic.area?.name || ''}
-              image={(clinic.images?.[0] as unknown as ClinicImage).image_url}
+              image={
+                clinic.images?.[0]
+                  ? (clinic.images[0] as unknown as ClinicImage).image_url
+                  : undefined
+              }
               rating={clinic.rating}
               hours={clinic.hours || []}
               specialHours={clinic.special_hours || []}

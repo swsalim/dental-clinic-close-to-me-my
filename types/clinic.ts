@@ -177,7 +177,7 @@ export interface Clinic {
   is_featured: boolean | null;
   is_permanently_closed: boolean | null;
   open_on_public_holidays: boolean | null;
-  images: ClinicImage[] | null; // Images are now stored in clinic_images table
+  images: ClinicImage[] | null; // Images are now stored in clinic_images tabl | e
   source: string | null;
   facebook_url: string | null;
   instagram_url: string | null;
@@ -221,7 +221,7 @@ export interface ClinicDetails {
   longitude: number;
   rating: number;
   review_count: number;
-  images: string[];
+  images: { id: string; image_url: string; imagekit_file_id: string }[] | null;
   featured_video: string;
   youtube_url: string;
   facebook_url: string;
