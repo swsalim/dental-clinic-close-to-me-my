@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
-import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
 
@@ -78,10 +77,11 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="" />
-        <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" />
+        <link rel="preconnect" href="//cdn.seline.com" />
         <link rel="preconnect" href="https://analytics.ahrefs.com" />
         <link rel="preconnect" href="https://app.tinyadz.com" />
         <link rel="dns-prefetch" href="//www.google.com" />
+        <link rel="dns-prefetch" href="//cdn.seline.com" />
         <link rel="dns-prefetch" href="//www.gstatic.com" />
         <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net" />
         <script
@@ -92,21 +92,6 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="oV+XGa0KW37ngKhI81Btzg"
           async></script>
-        <Script
-          id="simple-analytics"
-          dangerouslySetInnerHTML={{
-            __html: `window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};`,
-          }}
-        />
-        <Script
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-          strategy="afterInteractive"
-        />
-        <script
-          defer
-          data-website-id="68d7a5e7480eee25d4b69071"
-          data-domain="dentalclinicclosetome.my"
-          src="https://datafa.st/js/script.js"></script>
         <script async src="https://cdn.seline.com/seline.js" data-token="1b7852c8a82b878"></script>
         <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
       </head>
