@@ -93,7 +93,7 @@ export default function RootLayout({
           data-key="oV+XGa0KW37ngKhI81Btzg"
           async></script>
         <script
-          src="https://stats.dentalclinicclosetome.my/seline.js"
+          src="https://stats.dentalclinicclosetome.my/ennui.js"
           data-api-host="https://stats.dentalclinicclosetome.my"
           data-token="1b7852c8a82b878"
           async></script>
