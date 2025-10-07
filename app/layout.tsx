@@ -92,7 +92,11 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="oV+XGa0KW37ngKhI81Btzg"
           async></script>
-        <script async src="https://cdn.seline.com/seline.js" data-token="1b7852c8a82b878"></script>
+        <script
+          src="https://stats.dentalclinicclosetome.my/seline.js"
+          data-api-host="https://stats.dentalclinicclosetome.my"
+          data-token="1b7852c8a82b878"
+          async></script>
         <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
       </head>
       <body
