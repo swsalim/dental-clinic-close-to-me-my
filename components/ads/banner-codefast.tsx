@@ -5,7 +5,7 @@ import { ImageCloudinary } from '@/components/image/image-cloudinary';
 export default function BannerCodefast() {
   return (
     <a
-      href="https://codefa.st/?via=pfpresizer"
+      href="https://go.yuurrific.com/codefast"
       target="_blank"
       className="relative flex items-center px-6 py-4 text-left transition-all duration-150 ease-in-out md:flex-row"
       rel="noreferrer">
