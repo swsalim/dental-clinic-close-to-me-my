@@ -16,7 +16,6 @@ import { getStateBySlugStatic, getStateListings, getStateMetadataBySlug } from '
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
@@ -307,14 +306,13 @@ export default async function StatePage({ params, searchParams }: StatePageProps
               <div className="flex flex-col items-center justify-center gap-y-4">
                 <div className="flex flex-col items-center justify-center">
                   <div className="relative size-64 md:size-96">
-                    <ImageCloudinary
+                    <ImageKit
                       src="lost-boy.png"
+                      directory="dental-clinics-my"
                       alt="No dental clinics found"
                       width={500}
                       height={500}
                       className="h-full w-full object-cover"
-                      sizes="(max-width: 600px) 100vw, 450px"
-                      quality={85}
                     />
                   </div>
                 </div>

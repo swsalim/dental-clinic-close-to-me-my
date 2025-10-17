@@ -17,7 +17,7 @@ import { getStateMetadataBySlug } from '@/helpers/states';
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -278,8 +278,9 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
             <div className="flex flex-col items-center justify-center gap-y-4">
               <div className="flex flex-col items-center justify-center">
                 <div className="relative size-64 md:size-96">
-                  <ImageCloudinary
+                  <ImageKit
                     src="lost-boy.png"
+                    directory="dental-clinics-my"
                     alt="No dental clinics found"
                     width={500}
                     height={500}
