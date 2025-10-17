@@ -8,7 +8,6 @@ import { absoluteUrl, cn } from '@/lib/utils';
 import Footer from '@/components/site/footer';
 import NavMobile from '@/components/site/nav-mobile';
 import Navbar from '@/components/site/navbar';
-import LogoJsonLd from '@/components/structured-data/logo-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -102,7 +101,6 @@ export default function RootLayout({
           plusJakartaSans.variable,
         )}
         suppressHydrationWarning>
-        <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
         <WebsiteJsonLd company="Dental Clinics Malaysia" url={absoluteUrl('/')} />
         <NavMobile />
         <Navbar />
