@@ -13,7 +13,6 @@ import { absoluteUrl } from '@/lib/utils';
 import { getClinicBySlugStatic, getClinicMetadataBySlug } from '@/helpers/clinics';
 
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
-import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import { Card, CardContent } from '@/components/ui/card';
 import Container from '@/components/ui/container';
@@ -125,7 +124,6 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
 
   return (
     <>
-      <WebsiteJsonLd />
       <BusinessJsonLd
         name={parsedClinic.name}
         url={absoluteUrl(`/place/${parsedClinic.slug}`)}

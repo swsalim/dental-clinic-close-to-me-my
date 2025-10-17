@@ -18,7 +18,6 @@ import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { DoctorCard } from '@/components/cards/doctor-card';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
-import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
@@ -194,7 +193,6 @@ export default async function DentistsByStatePage({
 
   return (
     <>
-      <WebsiteJsonLd />
       <WebPageJsonLd
         description={description}
         id={`/${state}/dentists`}

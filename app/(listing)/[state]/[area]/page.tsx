@@ -19,8 +19,7 @@ import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
-import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
-import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
+import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
@@ -181,47 +180,14 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
     },
   ];
 
-  const JSONLDlistItems = areaData.clinics?.slice(0, 20).map((clinic, index) => ({
-    '@type': 'ListItem',
-    position: `${index + 1}`,
-    item: {
-      '@type': 'Dentist',
-      '@id': absoluteUrl(`/place/${clinic.slug}`),
-      name: clinic.name,
-      image: absoluteUrl(`/api/og?title=${clinic.name}`),
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: clinic.area?.name,
-        addressRegion: clinic.state?.name,
-        postalCode: clinic.postal_code,
-        streetAddress: clinic.address,
-        addressCountry: 'MY',
-      },
-      telephone: clinic.phone,
-      url: absoluteUrl(`/place/${clinic.slug}`),
-    },
-  }));
-
   return (
     <>
-      <WebsiteJsonLd />
-      <WebPageJsonLd
-        description={description}
-        id={`/${state}/${area}`}
-        lastReviewed={new Date().toISOString()}
-        reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
-      />
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            name: `Dental Clinics in ${areaData.name}, ${areaData.state?.name}`,
-            itemListElement: JSONLDlistItems,
-          }),
-        }}
+      <CollectionPageJsonLd
+        name={`Dental Clinics in ${areaData.name}, ${areaData.state?.name}`}
+        url={`/${state}/${area}`}
+        description={description}
+        clinics={areaData.clinics ?? []}
       />
       <Wrapper
         style={{

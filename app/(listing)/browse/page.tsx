@@ -9,7 +9,6 @@ import { siteConfig } from '@/config/site';
 
 import { createServerClient } from '@/lib/supabase';
 
-import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Container from '@/components/ui/container';
 import Prose from '@/components/ui/prose';
 import { Wrapper } from '@/components/ui/wrapper';
@@ -70,7 +69,6 @@ export default async function BrowsePage() {
 
   return (
     <>
-      <WebsiteJsonLd company="Dental Clinics Malaysia" url={process.env.NEXT_PUBLIC_BASE_URL} />
       <Wrapper>
         <Container>
           <Prose>

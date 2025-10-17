@@ -17,7 +17,6 @@ import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { DoctorCard } from '@/components/cards/doctor-card';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
-import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
 import Prose from '@/components/ui/prose';
@@ -176,7 +175,6 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
 
   return (
     <>
-      <WebsiteJsonLd />
       <WebPageJsonLd
         description="Discover dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details."
         id="/dentists"

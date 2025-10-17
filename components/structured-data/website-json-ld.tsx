@@ -17,6 +17,11 @@ export default function WebsiteJsonLd({
         name: company,
         url,
         inLanguage: 'en-US',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: `${url}search?q={search_term_string}`,
+          'query-input': 'required name=search_term_string',
+        },
       }}
     </JsonLd>
   );

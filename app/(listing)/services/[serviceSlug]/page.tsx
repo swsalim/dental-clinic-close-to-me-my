@@ -17,7 +17,6 @@ import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
-import WebSiteJsonLd from '@/components/structured-data/website-json-ld';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
@@ -176,7 +175,6 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
 
   return (
     <>
-      <WebSiteJsonLd />
       <WebPageJsonLd
         description={description}
         id={`/services/${serviceSlug}`}
