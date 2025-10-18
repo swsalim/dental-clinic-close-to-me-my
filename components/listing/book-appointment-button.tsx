@@ -2,7 +2,7 @@
 
 import { PhoneIcon } from 'lucide-react';
 
-import { saEvent } from '@/lib/analytics';
+import { selineTrack } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 
 import { Button } from '@/components/ui/button';
@@ -26,7 +26,7 @@ export function BookAppointmentButton({
       onClick={(e) => {
         e.preventDefault();
         try {
-          saEvent(`book_appointment_click_${stateSlug}_${areaSlug}_${clinicSlug}`);
+          selineTrack(`book_appointment_click_${stateSlug}_${areaSlug}_${clinicSlug}`);
           console.log('Analytics event fired successfully');
           window.location.href = `tel:${phone}`;
         } catch (error) {

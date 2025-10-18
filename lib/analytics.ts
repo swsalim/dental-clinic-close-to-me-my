@@ -1,11 +1,13 @@
 declare global {
   interface Window {
-    sa_event: (eventName: string) => void;
+    seline: {
+      track: (eventName: string, properties?: Record<string, unknown>) => void;
+    };
   }
 }
 
-export const saEvent = (eventName: string) => {
-  if (typeof window !== 'undefined' && window.sa_event) {
-    return window.sa_event(eventName);
+export const selineTrack = (eventName: string, properties?: Record<string, unknown>) => {
+  if (typeof window !== 'undefined' && window.seline) {
+    return window.seline.track(eventName, properties);
   }
 };
