@@ -133,8 +133,30 @@ export default function Footer() {
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div className="mt-10 md:mt-0"></div>
+            <div className="md:grid md:gap-8">
+              <div className="mt-10 md:mt-0">
+                <h3 className="font-semibold leading-6 text-gray-100">Other Health Directories</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  <li>
+                    <a
+                      className="leading-6 text-gray-300 transition-colors duration-200 hover:text-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-50/50 focus:ring-offset-2 focus:ring-offset-gray-900"
+                      href="https://www.clinicgeek.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Clinic Geek
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="leading-6 text-gray-300 transition-colors duration-200 hover:text-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-50/50 focus:ring-offset-2 focus:ring-offset-gray-900"
+                      href="https://www.aestheticclinics.my/"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Aesthetic Clinics Malaysia
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className="mt-10 md:mt-0"></div>
