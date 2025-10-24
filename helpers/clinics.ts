@@ -1,3 +1,5 @@
+import { unstable_cache } from 'next/cache';
+
 import {
   Clinic,
   ClinicArea,
@@ -12,38 +14,49 @@ import {
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export async function getClinicMetadataBySlug(slug: string, status: string = 'approved') {
-  const supabase = createAdminClient();
+export const getClinicMetadataBySlugCached = unstable_cache(
+  async (slug: string, status: string = 'approved') => {
+    const supabase = createAdminClient();
 
-  const { data: clinicData } = (await supabase
-    .from('clinics')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      description,
-      area:areas(name),
-      state:states(name)
-    `,
-    )
-    .match({ slug, is_active: true, status })
-    .single()) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-      description: string;
-      area: {
+    const { data: clinicData } = (await supabase
+      .from('clinics')
+      .select(
+        `
+        id,
+        name,
+        slug,
+        description,
+        area:areas(name),
+        state:states(name)
+      `,
+      )
+      .match({ slug, is_active: true, status })
+      .single()) as {
+      data: {
+        id: string;
         name: string;
-      };
-      state: {
-        name: string;
+        slug: string;
+        description: string;
+        area: {
+          name: string;
+        };
+        state: {
+          name: string;
+        };
       };
     };
-  };
 
-  return clinicData ?? null;
+    return clinicData ?? null;
+  },
+  ['clinic-metadata'],
+  {
+    revalidate: 1800, // Cache for 30 minutes
+    tags: ['clinic-metadata', 'clinics'],
+  },
+);
+
+export async function getClinicMetadataBySlug(slug: string, status: string = 'approved') {
+  return getClinicMetadataBySlugCached(slug, status);
 }
 
 export async function getClinicListings(status: string = 'approved') {
@@ -246,49 +259,71 @@ export async function getClinics(filters: {
 /**
  * Fetches clinics within a radius of a given location
  */
+export const getClinicsNearLocationCached = unstable_cache(
+  async (latitude: number, longitude: number, radiusInKm: number, limit: number = 5) => {
+    const supabase = createAdminClient();
+
+    const { data, error } = await supabase.rpc('get_nearby_clinics', {
+      clinic_latitude: latitude,
+      clinic_longitude: longitude,
+      radius_km: radiusInKm,
+      result_limit: limit,
+    });
+
+    if (error) {
+      console.error('Error fetching nearest clinics:', error);
+      return [];
+    }
+
+    if (!data || data.length === 0) {
+      return [];
+    }
+
+    return data;
+  },
+  ['clinics-near-location'],
+  {
+    revalidate: 600, // Cache for 10 minutes (location-based data changes frequently)
+    tags: ['clinics-near-location', 'clinics'],
+  },
+);
+
 export async function getClinicsNearLocation(
   latitude: number,
   longitude: number,
   radiusInKm: number,
   limit: number = 5,
 ) {
-  const supabase = await createServerClient();
-
-  const { data, error } = await supabase.rpc('get_nearby_clinics', {
-    clinic_latitude: latitude,
-    clinic_longitude: longitude,
-    radius_km: radiusInKm,
-    result_limit: limit,
-  });
-
-  if (error) {
-    console.error('Error fetching nearest clinics:', error);
-    return [];
-  }
-
-  if (!data || data.length === 0) {
-    return [];
-  }
-
-  return data;
+  return getClinicsNearLocationCached(latitude, longitude, radiusInKm, limit);
 }
 
 /**
  * Fetches clinic reviews with pagination
  */
+export const getClinicReviewsCached = unstable_cache(
+  async (clinicId: string, page: number = 1, pageSize: number = 10) => {
+    const supabase = createAdminClient();
+
+    const { data, error } = await supabase
+      .from('clinic_reviews')
+      .select('author_name, review_time, rating, email, text, status')
+      .eq('clinic_id', clinicId)
+      .order('review_time', { ascending: false })
+      .range((page - 1) * pageSize, page * pageSize - 1);
+
+    if (error) throw error;
+
+    return data;
+  },
+  ['clinic-reviews'],
+  {
+    revalidate: 300, // Cache for 5 minutes (reviews change frequently)
+    tags: ['clinic-reviews', 'clinics'],
+  },
+);
+
 export async function getClinicReviews(clinicId: string, page: number = 1, pageSize: number = 10) {
-  const supabase = await createServerClient();
-
-  const { data, error } = await supabase
-    .from('clinic_reviews')
-    .select('author_name, review_time, rating, email, text, status')
-    .eq('clinic_id', clinicId)
-    .order('review_time', { ascending: false })
-    .range((page - 1) * pageSize, page * pageSize - 1);
-
-  if (error) throw error;
-
-  return data;
+  return getClinicReviewsCached(clinicId, page, pageSize);
 }
 
 /**

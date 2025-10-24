@@ -116,8 +116,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// Force static generation - this ensures the page is generated at build time
-export const dynamic = 'force-static';
+// Allow dynamic rendering to handle pagination searchParams
 export const revalidate = 3600; // Revalidate every hour (3600 seconds)
 
 export default async function AreaPage({ params, searchParams }: AreaPageProps) {

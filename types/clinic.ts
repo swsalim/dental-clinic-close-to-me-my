@@ -197,6 +197,9 @@ export interface Clinic {
   hours?: Partial<ClinicHours>[] | null;
   special_hours?: Partial<ClinicSpecialHours>[] | null;
   reviews?: Partial<ClinicReview>[] | null;
+  state_name?: string | null;
+  area_name?: string | null;
+  distance_km?: number | null;
 }
 
 export type ClinicInsert = Omit<Clinic, 'id' | 'created_at' | 'modified_at'>;
