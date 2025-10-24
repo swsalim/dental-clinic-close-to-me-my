@@ -1,3 +1,5 @@
+import { unstable_cache } from 'next/cache';
+
 import { ClinicDoctor } from '@/types/clinic';
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
@@ -106,49 +108,71 @@ function transformDoctorsData(doctorsData: RawDoctorWithClinics[]): ClinicDoctor
   return doctorsData.map(transformDoctorData);
 }
 
+export const getDoctorMetadataBySlugCached = unstable_cache(
+  async (slug: string, status: string = 'approved') => {
+    const supabase = createAdminClient();
+
+    const { data: doctorData } = (await supabase
+      .from('clinic_doctors')
+      .select(DOCTOR_WITH_CLINICS_SELECT)
+      .match({ slug, is_active: true, status })
+      .single()) as {
+      data: RawDoctorWithClinics;
+    };
+
+    if (!doctorData) {
+      return null;
+    }
+
+    return transformDoctorData(doctorData);
+  },
+  ['doctor-metadata'],
+  {
+    revalidate: 1800, // Cache for 30 minutes
+    tags: ['doctor-metadata', 'doctors'],
+  },
+);
+
 export async function getDoctorMetadataBySlug(slug: string, status: string = 'approved') {
-  const supabase = createAdminClient();
-
-  const { data: doctorData } = (await supabase
-    .from('clinic_doctors')
-    .select(DOCTOR_WITH_CLINICS_SELECT)
-    .match({ slug, is_active: true, status })
-    .single()) as {
-    data: RawDoctorWithClinics;
-  };
-
-  if (!doctorData) {
-    return null;
-  }
-
-  return transformDoctorData(doctorData);
+  return getDoctorMetadataBySlugCached(slug, status);
 }
 
+export const getDoctorListingsCached = unstable_cache(
+  async (status: string = 'approved') => {
+    const supabase = createAdminClient();
+
+    const { data: doctorData } = (await supabase
+      .from('clinic_doctors')
+      .select(
+        `
+        id,
+        name,
+        slug,
+        is_active,
+        status
+      `,
+      )
+      .match({ is_active: true, status })) as {
+      data: {
+        id: string;
+        name: string;
+        slug: string;
+        is_active: boolean | null;
+        status: string | null;
+      }[];
+    };
+
+    return doctorData ?? [];
+  },
+  ['doctor-listings'],
+  {
+    revalidate: 1800, // Cache for 30 minutes
+    tags: ['doctor-listings', 'doctors'],
+  },
+);
+
 export async function getDoctorListings(status: string = 'approved') {
-  const supabase = createAdminClient();
-
-  const { data: doctorData } = (await supabase
-    .from('clinic_doctors')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      is_active,
-      status
-    `,
-    )
-    .match({ is_active: true, status })) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-      is_active: boolean | null;
-      status: string | null;
-    }[];
-  };
-
-  return doctorData ?? [];
+  return getDoctorListingsCached(status);
 }
 
 /**
@@ -340,29 +364,45 @@ export async function getDoctorsByClinicSlug(
 /**
  * Fetches doctors by state with pagination
  */
+export const getDoctorsByStateCached = unstable_cache(
+  async (
+    stateSlug: string,
+    limit: number = 20,
+    offset: number = 0,
+    status: string = 'approved',
+  ) => {
+    const supabase = createAdminClient();
+
+    const { data: result } = await supabase.rpc('get_ranged_doctor_by_state_slug', {
+      state_slug_param: stateSlug,
+      from_index_param: offset,
+      to_index_param: offset + limit - 1,
+      status_param: status,
+    });
+
+    if (!result) {
+      return { data: [], count: 0 };
+    }
+
+    // Type assertion for the RPC result structure
+    const typedResult = result as { data: RawDoctorWithClinics[]; count: number };
+
+    const doctors = transformDoctorsData(typedResult.data || []);
+
+    return { data: doctors, count: typedResult.count || 0 };
+  },
+  ['doctors-by-state'],
+  {
+    revalidate: 1800, // Cache for 30 minutes
+    tags: ['doctors-by-state', 'doctors'],
+  },
+);
+
 export async function getDoctorsByState(
   stateSlug: string,
   limit: number = 20,
   offset: number = 0,
   status: string = 'approved',
 ) {
-  const supabase = await createServerClient();
-
-  const { data: result } = await supabase.rpc('get_ranged_doctor_by_state_slug', {
-    state_slug_param: stateSlug,
-    from_index_param: offset,
-    to_index_param: offset + limit - 1,
-    status_param: status,
-  });
-
-  if (!result) {
-    return { data: [], count: 0 };
-  }
-
-  // Type assertion for the RPC result structure
-  const typedResult = result as { data: RawDoctorWithClinics[]; count: number };
-
-  const doctors = transformDoctorsData(typedResult.data || []);
-
-  return { data: doctors, count: typedResult.count || 0 };
+  return getDoctorsByStateCached(stateSlug, limit, offset, status);
 }

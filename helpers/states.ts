@@ -15,14 +15,25 @@ interface StateData {
   clinics: Partial<Clinic>[];
 }
 
+export const getStateMetadataBySlugCached = unstable_cache(
+  async (stateSlug: string) => {
+    const supabase = createAdminClient();
+
+    const { data: state } = await supabase.rpc('get_state_metadata_by_slug', {
+      state_slug: stateSlug,
+    });
+
+    return state as StateData | null;
+  },
+  ['state-metadata'],
+  {
+    revalidate: 1800, // Cache for 30 minutes
+    tags: ['state-metadata', 'states'],
+  },
+);
+
 export async function getStateMetadataBySlug(stateSlug: string) {
-  const supabase = createAdminClient();
-
-  const { data: state } = await supabase.rpc('get_state_metadata_by_slug', {
-    state_slug: stateSlug,
-  });
-
-  return state as StateData | null;
+  return getStateMetadataBySlugCached(stateSlug);
 }
 
 export const getStateListings = unstable_cache(
@@ -74,18 +85,29 @@ export async function getStateBySlug(
 /**
  * Fetches a state by its slug with all related data using admin client for static generation
  */
+export const getStateBySlugStaticCached = unstable_cache(
+  async (stateSlug: string, from: number, to: number) => {
+    const supabase = createAdminClient();
+
+    const { data: state } = await supabase.rpc('get_ranged_state_metadata_by_slug', {
+      state_slug: stateSlug,
+      from_index: from,
+      to_index: to,
+    });
+
+    return state as StateData | null;
+  },
+  ['state-by-slug-static'],
+  {
+    revalidate: 1800, // Cache for 30 minutes
+    tags: ['state-by-slug-static', 'states'],
+  },
+);
+
 export async function getStateBySlugStatic(
   stateSlug: string,
   from: number,
   to: number,
 ): Promise<StateData | null> {
-  const supabase = createAdminClient();
-
-  const { data: state } = await supabase.rpc('get_ranged_state_metadata_by_slug', {
-    state_slug: stateSlug,
-    from_index: from,
-    to_index: to,
-  });
-
-  return state as StateData | null;
+  return getStateBySlugStaticCached(stateSlug, from, to);
 }
