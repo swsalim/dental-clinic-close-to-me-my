@@ -5,9 +5,6 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl, cn } from '@/lib/utils';
 
-import Footer from '@/components/site/footer';
-import NavMobile from '@/components/site/nav-mobile';
-import Navbar from '@/components/site/navbar';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -102,10 +99,7 @@ export default function RootLayout({
         )}
         suppressHydrationWarning>
         <WebsiteJsonLd company="Dental Clinics Malaysia" url={absoluteUrl('/')} />
-        <NavMobile />
-        <Navbar />
-        <main className="flex grow flex-col justify-center">{children}</main>
-        <Footer />
+        {children}
         <Toaster />
         <script
           async

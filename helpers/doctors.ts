@@ -108,7 +108,7 @@ function transformDoctorsData(doctorsData: RawDoctorWithClinics[]): ClinicDoctor
   return doctorsData.map(transformDoctorData);
 }
 
-export const getDoctorMetadataBySlugCached = unstable_cache(
+export const getDoctorMetadataBySlug = unstable_cache(
   async (slug: string, status: string = 'approved') => {
     const supabase = createAdminClient();
 
@@ -126,18 +126,14 @@ export const getDoctorMetadataBySlugCached = unstable_cache(
 
     return transformDoctorData(doctorData);
   },
-  ['doctor-metadata'],
+  ['doctor-metadata-by-slug'],
   {
-    revalidate: 1800, // Cache for 30 minutes
-    tags: ['doctor-metadata', 'doctors'],
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['doctors'],
   },
 );
 
-export async function getDoctorMetadataBySlug(slug: string, status: string = 'approved') {
-  return getDoctorMetadataBySlugCached(slug, status);
-}
-
-export const getDoctorListingsCached = unstable_cache(
+export const getDoctorListings = unstable_cache(
   async (status: string = 'approved') => {
     const supabase = createAdminClient();
 
@@ -166,68 +162,41 @@ export const getDoctorListingsCached = unstable_cache(
   },
   ['doctor-listings'],
   {
-    revalidate: 1800, // Cache for 30 minutes
-    tags: ['doctor-listings', 'doctors'],
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['doctors'],
   },
 );
-
-export async function getDoctorListings(status: string = 'approved') {
-  return getDoctorListingsCached(status);
-}
-
-/**
- * Fetches a doctor by its slug with all related data
- */
-export async function getDoctorBySlug(
-  slug: string,
-  status: string = 'approved',
-): Promise<ClinicDoctor | null> {
-  const supabase = await createServerClient();
-
-  const { data, error } = await supabase
-    .from('clinic_doctors')
-    .select(DOCTOR_WITH_CLINICS_SELECT)
-    .match({ slug, is_active: true, status })
-    .single();
-
-  if (error) {
-    console.error('Error fetching doctor:', error);
-    return null;
-  }
-
-  if (!data) {
-    return null;
-  }
-
-  return transformDoctorData(data as unknown as RawDoctorWithClinics);
-}
 
 /**
  * Fetches a doctor by its slug with all related data using admin client for static generation
  */
-export async function getDoctorBySlugStatic(
-  slug: string,
-  status: string = 'approved',
-): Promise<ClinicDoctor | null> {
-  const supabase = createAdminClient();
+export const getDoctorBySlug = unstable_cache(
+  async (slug: string, status: string = 'approved'): Promise<ClinicDoctor | null> => {
+    const supabase = createAdminClient();
 
-  const { data, error } = await supabase
-    .from('clinic_doctors')
-    .select(DOCTOR_WITH_CLINICS_SELECT)
-    .match({ slug, is_active: true, status })
-    .single();
+    const { data, error } = await supabase
+      .from('clinic_doctors')
+      .select(DOCTOR_WITH_CLINICS_SELECT)
+      .match({ slug, is_active: true, status })
+      .single();
 
-  if (error) {
-    console.error('Error fetching doctor for static generation:', error);
-    return null;
-  }
+    if (error) {
+      console.error('Error fetching doctor for static generation:', error);
+      return null;
+    }
 
-  if (!data) {
-    return null;
-  }
+    if (!data) {
+      return null;
+    }
 
-  return transformDoctorData(data as unknown as RawDoctorWithClinics);
-}
+    return transformDoctorData(data as unknown as RawDoctorWithClinics);
+  },
+  ['doctor-by-slug'],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['doctors'],
+  },
+);
 
 /**
  * Fetches doctors with optional filters
@@ -364,7 +333,7 @@ export async function getDoctorsByClinicSlug(
 /**
  * Fetches doctors by state with pagination
  */
-export const getDoctorsByStateCached = unstable_cache(
+export const getDoctorsByState = unstable_cache(
   async (
     stateSlug: string,
     limit: number = 20,
@@ -393,16 +362,7 @@ export const getDoctorsByStateCached = unstable_cache(
   },
   ['doctors-by-state'],
   {
-    revalidate: 1800, // Cache for 30 minutes
-    tags: ['doctors-by-state', 'doctors'],
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['doctors'],
   },
 );
-
-export async function getDoctorsByState(
-  stateSlug: string,
-  limit: number = 20,
-  offset: number = 0,
-  status: string = 'approved',
-) {
-  return getDoctorsByStateCached(stateSlug, limit, offset, status);
-}

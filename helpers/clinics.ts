@@ -14,7 +14,7 @@ import {
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export const getClinicMetadataBySlugCached = unstable_cache(
+export const getClinicMetadataBySlug = unstable_cache(
   async (slug: string, status: string = 'approved') => {
     const supabase = createAdminClient();
 
@@ -50,14 +50,10 @@ export const getClinicMetadataBySlugCached = unstable_cache(
   },
   ['clinic-metadata'],
   {
-    revalidate: 1800, // Cache for 30 minutes
+    revalidate: 3600, // Cache for 1 hour
     tags: ['clinic-metadata', 'clinics'],
   },
 );
-
-export async function getClinicMetadataBySlug(slug: string, status: string = 'approved') {
-  return getClinicMetadataBySlugCached(slug, status);
-}
 
 export async function getClinicListings(status: string = 'approved') {
   const supabase = createAdminClient();
@@ -259,9 +255,9 @@ export async function getClinics(filters: {
 /**
  * Fetches clinics within a radius of a given location
  */
-export const getClinicsNearLocationCached = unstable_cache(
+export const getClinicsNearLocation = unstable_cache(
   async (latitude: number, longitude: number, radiusInKm: number, limit: number = 5) => {
-    const supabase = createAdminClient();
+    const supabase = await createAdminClient();
 
     const { data, error } = await supabase.rpc('get_nearby_clinics', {
       clinic_latitude: latitude,
@@ -281,28 +277,19 @@ export const getClinicsNearLocationCached = unstable_cache(
 
     return data;
   },
-  ['clinics-near-location'],
+  ['nearby-clinics'],
   {
-    revalidate: 600, // Cache for 10 minutes (location-based data changes frequently)
-    tags: ['clinics-near-location', 'clinics'],
+    revalidate: 600, // Cache for 10 minutes
+    tags: ['clinics'],
   },
 );
-
-export async function getClinicsNearLocation(
-  latitude: number,
-  longitude: number,
-  radiusInKm: number,
-  limit: number = 5,
-) {
-  return getClinicsNearLocationCached(latitude, longitude, radiusInKm, limit);
-}
 
 /**
  * Fetches clinic reviews with pagination
  */
-export const getClinicReviewsCached = unstable_cache(
+export const getClinicReviews = unstable_cache(
   async (clinicId: string, page: number = 1, pageSize: number = 10) => {
-    const supabase = createAdminClient();
+    const supabase = await createAdminClient();
 
     const { data, error } = await supabase
       .from('clinic_reviews')
@@ -317,14 +304,10 @@ export const getClinicReviewsCached = unstable_cache(
   },
   ['clinic-reviews'],
   {
-    revalidate: 300, // Cache for 5 minutes (reviews change frequently)
-    tags: ['clinic-reviews', 'clinics'],
+    revalidate: 600, // Cache for 10 minutes
+    tags: ['reviews', 'clinics'],
   },
 );
-
-export async function getClinicReviews(clinicId: string, page: number = 1, pageSize: number = 10) {
-  return getClinicReviewsCached(clinicId, page, pageSize);
-}
 
 /**
  * Fetches clinic operating hours

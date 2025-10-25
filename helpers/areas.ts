@@ -2,7 +2,7 @@ import { unstable_cache } from 'next/cache';
 
 import { Clinic, ClinicState } from '@/types/clinic';
 
-import { createAdminClient, createServerClient } from '@/lib/supabase';
+import { createAdminClient } from '@/lib/supabase';
 
 interface AreaData {
   id: string;
@@ -13,7 +13,7 @@ interface AreaData {
   clinics: Partial<Clinic>[];
 }
 
-export const getAreaMetadataBySlugCached = unstable_cache(
+export const getAreaMetadataBySlug = unstable_cache(
   async (areaSlug: string) => {
     const supabase = createAdminClient();
 
@@ -23,18 +23,14 @@ export const getAreaMetadataBySlugCached = unstable_cache(
 
     return area as AreaData | null;
   },
-  ['area-metadata'],
+  ['area-metadata-by-slug'],
   {
-    revalidate: 1800, // Cache for 30 minutes
-    tags: ['area-metadata', 'areas'],
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['areas'],
   },
 );
 
-export async function getAreaMetadataBySlug(areaSlug: string) {
-  return getAreaMetadataBySlugCached(areaSlug);
-}
-
-export const getAreaListingsCached = unstable_cache(
+export const getAreaListings = unstable_cache(
   async () => {
     const supabase = createAdminClient();
 
@@ -61,34 +57,15 @@ export const getAreaListingsCached = unstable_cache(
   },
   ['area-listings'],
   {
-    revalidate: 1800, // Cache for 30 minutes
-    tags: ['area-listings', 'areas'],
+    revalidate: 2592000, // Cache for 30 days
+    tags: ['areas'],
   },
 );
-
-export async function getAreaListings() {
-  return getAreaListingsCached();
-}
-
-/**
- * Fetches a clinic by its state with all related data
- */
-export async function getAreaBySlug(areaSlug: string, from: number, to: number) {
-  const supabase = await createServerClient();
-
-  const { data: area } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
-    area_slug: areaSlug,
-    from_index: from,
-    to_index: to,
-  });
-
-  return area as AreaData | null;
-}
 
 /**
  * Fetches an area by its slug with all related data using admin client for static generation
  */
-export const getAreaBySlugStaticCached = unstable_cache(
+export const getAreaBySlug = unstable_cache(
   async (areaSlug: string, from: number, to: number) => {
     const supabase = createAdminClient();
 
@@ -100,13 +77,9 @@ export const getAreaBySlugStaticCached = unstable_cache(
 
     return area as AreaData | null;
   },
-  ['area-by-slug-static'],
+  ['area-by-slug'],
   {
-    revalidate: 1800, // Cache for 30 minutes
-    tags: ['area-by-slug-static', 'areas'],
+    revalidate: 3600, // Cache for 1 hour
+    tags: ['areas'],
   },
 );
-
-export async function getAreaBySlugStatic(areaSlug: string, from: number, to: number) {
-  return getAreaBySlugStaticCached(areaSlug, from, to);
-}
