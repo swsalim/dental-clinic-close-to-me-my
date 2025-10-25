@@ -145,6 +145,7 @@ export async function POST(request: Request) {
         `/submit/success?session_id={CHECKOUT_SESSION_ID}&clinic_id=${clinic.id}`,
       ),
       cancel_url: absoluteUrl('/submit?canceled=1'),
+      allow_promotion_codes: true,
       // Include customer email for receipt
       customer_email: stripeCustomerId ? undefined : body.email, // Only set if no customer
       ...(stripeCustomerId && { customer: stripeCustomerId }), // Include customer if available
