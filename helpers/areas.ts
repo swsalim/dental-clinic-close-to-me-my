@@ -30,37 +30,30 @@ export const getAreaMetadataBySlug = unstable_cache(
   },
 );
 
-export const getAreaListings = unstable_cache(
-  async () => {
-    const supabase = createAdminClient();
+export const getAreaListings = async () => {
+  const supabase = createAdminClient();
 
-    const { data: areaData } = (await supabase.from('areas').select(
-      `
+  const { data: areaData } = (await supabase.from('areas').select(
+    `
         id,
         name,
         slug,
         state:states(name, slug)
       `,
-    )) as {
-      data: {
-        id: string;
+  )) as {
+    data: {
+      id: string;
+      name: string;
+      slug: string;
+      state: {
         name: string;
         slug: string;
-        state: {
-          name: string;
-          slug: string;
-        };
-      }[];
-    };
+      };
+    }[];
+  };
 
-    return areaData ?? [];
-  },
-  ['area-listings'],
-  {
-    revalidate: 2592000, // Cache for 30 days
-    tags: ['areas'],
-  },
-);
+  return areaData ?? [];
+};
 
 /**
  * Fetches an area by its slug with all related data using admin client for static generation

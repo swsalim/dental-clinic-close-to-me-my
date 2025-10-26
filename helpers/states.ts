@@ -32,22 +32,15 @@ export const getStateMetadataBySlug = unstable_cache(
   },
 );
 
-export const getStateListings = unstable_cache(
-  async () => {
-    const supabase = createAdminClient();
+export const getStateListings = async () => {
+  const supabase = createAdminClient();
 
-    const { data: statesData } = await supabase
-      .from('states')
-      .select('id, name, slug', { count: 'exact' });
+  const { data: statesData } = await supabase
+    .from('states')
+    .select('id, name, slug', { count: 'exact' });
 
-    return statesData || [];
-  },
-  ['states-for-browse'],
-  {
-    revalidate: 2592000, // Cache for 30 days
-    tags: ['states'],
-  },
-);
+  return statesData || [];
+};
 
 /**
  * Fetches a state by its slug with all related data using admin client for static generation
