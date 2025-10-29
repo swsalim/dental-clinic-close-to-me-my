@@ -115,7 +115,7 @@ export async function generateStaticParams() {
 }
 
 // Allow dynamic rendering to handle pagination searchParams
-export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
 
 export default async function StatePage({ params, searchParams }: StatePageProps) {
   const { state } = await params;
