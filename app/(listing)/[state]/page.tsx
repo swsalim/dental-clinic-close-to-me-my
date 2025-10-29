@@ -225,6 +225,24 @@ export default async function StatePage({ params, searchParams }: StatePageProps
 
       <Wrapper size="sm">
         <Container>
+          <div className="mx-auto mb-10 max-w-2xl">
+            <a href="https://dub.sh/watsons-bundle" className="hover:!border-b-transparent">
+              <ImageKit
+                src="watsons-bundle-deal.avif"
+                directory="images"
+                alt="Darlie toothpaste"
+                width={600}
+                height={600}
+                priority
+                quality={85}
+                sizes="100vw"
+                className="m-0 h-auto w-full object-cover"
+                style={{
+                  objectPosition: 'center center',
+                }}
+              />
+            </a>
+          </div>
           <div className="flex flex-col gap-y-6">
             {totalDoctors > 0 && (
               <div className="flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900">
@@ -270,7 +288,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                 </div>
               </div>
             )}
-            <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+            <h2 className="text-balance text-xl font-bold md:text-2xl">
               {totalClinics} Dental Clinics in {stateData.name}
             </h2>
             {stateData.clinics?.length > 0 ? (
@@ -284,7 +302,34 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                     .map((clinic, index) => {
                       return (
                         <React.Fragment key={clinic.slug}>
-                          {(index + 1) % 6 == 0 && <LazyAdsArticle />}
+                          {index === 5 && (
+                            <div className="flex flex-col items-center justify-center gap-2 text-center">
+                              <a
+                                href="https://dub.sh/darley-toothpaste"
+                                className="hover:!border-b-transparent">
+                                <ImageKit
+                                  src="watson-toothpaste-1-1.avif"
+                                  directory="images"
+                                  alt="Darlie toothpaste"
+                                  width={600}
+                                  height={600}
+                                  priority
+                                  quality={85}
+                                  sizes="100vw"
+                                  className="mb-0 h-auto w-full object-cover"
+                                  style={{
+                                    objectPosition: 'center center',
+                                  }}
+                                />
+                              </a>
+                              <a
+                                href="https://dub.sh/watsons-promo"
+                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400">
+                                Browse Watsons Promotions
+                              </a>
+                            </div>
+                          )}
+                          {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
                           <ClinicCard
                             key={clinic.slug}
                             slug={clinic.slug ?? ''}
@@ -317,7 +362,6 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                   <div className="relative size-64 md:size-96">
                     <ImageKit
                       src="lost-boy.png"
-                      directory="dental-clinics-my"
                       alt="No dental clinics found"
                       width={500}
                       height={500}

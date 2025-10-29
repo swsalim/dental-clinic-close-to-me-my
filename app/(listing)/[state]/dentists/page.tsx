@@ -16,6 +16,7 @@ import { getStateListings, getStateMetadataBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { DoctorCard } from '@/components/cards/doctor-card';
+import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -243,7 +244,34 @@ export default async function DentistsByStatePage({
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                       {doctors.map((doctor, index) => (
                         <React.Fragment key={doctor.id}>
-                          {(index + 1) % 6 == 0 && <LazyAdsArticle />}
+                          {index === 5 && (
+                            <div className="flex flex-col items-center justify-center gap-2 text-center">
+                              <a
+                                href="https://dub.sh/darley-toothpaste"
+                                className="hover:!border-b-transparent">
+                                <ImageKit
+                                  src="watson-toothpaste-1-1.avif"
+                                  directory="images"
+                                  alt="Darlie toothpaste"
+                                  width={600}
+                                  height={600}
+                                  priority
+                                  quality={85}
+                                  sizes="100vw"
+                                  className="mb-0 h-auto w-full object-cover"
+                                  style={{
+                                    objectPosition: 'center center',
+                                  }}
+                                />
+                              </a>
+                              <a
+                                href="https://dub.sh/watsons-promo"
+                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400">
+                                Browse Watsons Promotions
+                              </a>
+                            </div>
+                          )}
+                          {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
                           <DoctorCard doctor={doctor} />
                         </React.Fragment>
                       ))}

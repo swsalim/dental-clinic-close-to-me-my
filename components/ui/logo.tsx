@@ -16,8 +16,8 @@ const Logo: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
         aria-hidden="true"
         {...props}>
         <ImageKit
-          src="logos/dental-clinics-my-v2.png"
-          directory="dental-clinics-my"
+          src="dental-clinics-my-v2.png"
+          directory="logos"
           alt="Dental Clinics Malaysia"
           width={40}
           height={40}

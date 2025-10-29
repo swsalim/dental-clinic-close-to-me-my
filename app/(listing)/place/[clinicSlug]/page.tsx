@@ -26,10 +26,10 @@ import {
 import { getServiceIcon } from '@/helpers/services';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
-import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import { ImageGallery } from '@/components/image/image-gallery';
+import { ImageKit } from '@/components/image/image-kit';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import DoctorPractice from '@/components/listing/doctor-practice';
 import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
@@ -242,7 +242,7 @@ export async function generateStaticParams() {
 
 // Force static generation - this ensures the page is generated at build time
 export const dynamic = 'force-static';
-export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
 
 export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
@@ -487,8 +487,23 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               <DoctorPracticeAvatar clinicSlug={clinicSlug} />
 
-              <div>
-                <div ta-ad-container=""></div>
+              <div className="flex flex-col gap-2 text-center">
+                <a href="https://dub.sh/watsons-monthly" className="hover:!border-b-transparent">
+                  <ImageKit
+                    src="watson-cruise.avif"
+                    directory="images"
+                    alt="Watsons Club - Shop to Sail Pianoland Cruise"
+                    width={600}
+                    height={600}
+                    priority
+                    quality={85}
+                    sizes="100vw"
+                    className="m-0 h-auto w-full object-cover"
+                    style={{
+                      objectPosition: 'center center',
+                    }}
+                  />
+                </a>
               </div>
 
               {parsedClinic.services && (
@@ -552,8 +567,30 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
                 <DoctorPractice clinicSlug={clinicSlug} />
 
-                <div>
-                  <LazyAdsSquare />
+                <div className="flex flex-col gap-2 text-center">
+                  <a
+                    href="https://dub.sh/darley-toothpaste"
+                    className="hover:!border-b-transparent">
+                    <ImageKit
+                      src="watson-toothpaste-1-1.avif"
+                      directory="images"
+                      alt="Darlie toothpaste"
+                      width={600}
+                      height={600}
+                      priority
+                      quality={85}
+                      sizes="100vw"
+                      className="mb-0 h-auto w-full object-cover"
+                      style={{
+                        objectPosition: 'center center',
+                      }}
+                    />
+                  </a>
+                  <a
+                    href="https://dub.sh/watsons-promo"
+                    className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400">
+                    Browse Watsons Promotions
+                  </a>
                 </div>
 
                 {parsedClinic.services && (
