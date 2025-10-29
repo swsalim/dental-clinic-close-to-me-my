@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -13,8 +15,10 @@ import { absoluteUrl } from '@/lib/utils';
 import { getClinicByServiceId, getClinicByServiceMetadataId } from '@/helpers/clinics';
 import { getAllServices, getServiceBySlugStatic } from '@/helpers/services';
 
+import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageCloudinary } from '@/components/image/image-cloudinary';
+import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import { buttonVariants } from '@/components/ui/button';
@@ -227,28 +231,60 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
                 {clinics
                   ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                  .map((clinic) => (
-                    <ClinicCard
-                      key={clinic.slug}
-                      slug={clinic.slug ?? ''}
-                      name={clinic.name ?? ''}
-                      address={clinic.address ?? ''}
-                      phone={clinic.phone ?? ''}
-                      postalCode={clinic.postal_code ?? ''}
-                      state={clinic.state?.name ?? ''}
-                      area={clinic.area?.name ?? ''}
-                      image={
-                        clinic.images?.[0]
-                          ? (clinic.images[0] as unknown as ClinicImage).image_url
-                          : undefined
-                      }
-                      rating={clinic.rating}
-                      isFeatured={clinic.is_featured ?? false}
-                      hours={clinic.hours ?? []}
-                      specialHours={clinic.special_hours ?? []}
-                      openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                    />
-                  ))}
+                  .map((clinic, index) => {
+                    return (
+                      <React.Fragment key={clinic.slug}>
+                        {index === 5 && (
+                          <div className="flex flex-col items-center justify-center gap-2 text-center">
+                            <a
+                              href="https://dub.sh/darley-toothpaste"
+                              className="hover:!border-b-transparent">
+                              <ImageKit
+                                src="watson-toothpaste-1-1.avif"
+                                directory="images"
+                                alt="Darlie toothpaste"
+                                width={600}
+                                height={600}
+                                priority
+                                quality={85}
+                                sizes="100vw"
+                                className="mb-0 h-auto w-full object-cover"
+                                style={{
+                                  objectPosition: 'center center',
+                                }}
+                              />
+                            </a>
+                            <a
+                              href="https://dub.sh/watsons-promo"
+                              className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400">
+                              Browse Watsons Promotions
+                            </a>
+                          </div>
+                        )}
+                        {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
+                        <ClinicCard
+                          key={clinic.slug}
+                          slug={clinic.slug ?? ''}
+                          name={clinic.name ?? ''}
+                          address={clinic.address ?? ''}
+                          phone={clinic.phone ?? ''}
+                          postalCode={clinic.postal_code ?? ''}
+                          state={clinic.state?.name ?? ''}
+                          area={clinic.area?.name ?? ''}
+                          image={
+                            clinic.images?.[0]
+                              ? (clinic.images[0] as unknown as ClinicImage).image_url
+                              : undefined
+                          }
+                          rating={clinic.rating}
+                          isFeatured={clinic.is_featured ?? false}
+                          hours={clinic.hours ?? []}
+                          specialHours={clinic.special_hours ?? []}
+                          openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                        />
+                      </React.Fragment>
+                    );
+                  })}
               </div>
               <Pagination currentPage={currentPage} totalPages={totalPages} />
             </>

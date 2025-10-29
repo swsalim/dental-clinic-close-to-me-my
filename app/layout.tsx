@@ -73,8 +73,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="" />
-        <link rel="preconnect" href="https://analytics.ahrefs.com" />
         <link rel="preconnect" href="https://app.tinyadz.com" />
+        <link rel="preconnect" href="//ik.imagekit.io" />
+        <link rel="dns-prefetch" href="//ik.imagekit.io" />
         <link rel="dns-prefetch" href="//www.google.com" />
         <link rel="dns-prefetch" href="//www.gstatic.com" />
         <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net" />
