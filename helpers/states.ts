@@ -13,6 +13,7 @@ interface StateData {
   image: string | null;
   areas: Partial<ClinicArea>[];
   clinics: Partial<Clinic>[];
+  total_clinics?: number;
 }
 
 export const getStateMetadataBySlug = unstable_cache(

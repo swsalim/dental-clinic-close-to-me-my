@@ -12,7 +12,7 @@ import { siteConfig } from '@/config/site';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getDoctorsByState } from '@/helpers/doctors';
-import { getStateBySlug, getStateListings, getStateMetadataBySlug } from '@/helpers/states';
+import { getStateBySlug, getStateListings } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
@@ -39,7 +39,10 @@ export async function generateMetadata({
   const { state } = await params;
   const { page } = await searchParams;
 
-  const stateData = await getStateMetadataBySlug(state);
+  const limit = 20;
+  const currentPage = page ? +page : 1;
+  const { from, to } = getPagination(currentPage, limit);
+  const stateData = await getStateBySlug(state, from, to);
 
   if (!stateData) {
     notFound();
@@ -53,8 +56,8 @@ export async function generateMetadata({
   const currentDate = new Date();
   const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
   const currentYear = currentDate.getFullYear();
-  const title = `Top ${stateData.clinics?.length} Dental Clinics in ${stateData.name} [${currentMonth} ${currentYear}]`;
-  const description = `Explore ${stateData.clinics?.length} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
+  const title = `Top ${stateData.total_clinics} Dental Clinics in ${stateData.name} [${currentMonth} ${currentYear}]`;
+  const description = `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}`)
     : page === '1'
@@ -126,12 +129,9 @@ export default async function StatePage({ params, searchParams }: StatePageProps
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch state metadata and clinics data in parallel
-  const [stateMeta, stateData] = await Promise.all([
-    getStateMetadataBySlug(state),
-    getStateBySlug(state, from, to),
-  ]);
+  const stateData = await getStateBySlug(state, from, to);
 
-  if (!stateMeta || !stateData) {
+  if (!stateData) {
     notFound();
   }
 
@@ -139,7 +139,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
   const doctors = doctorsResult.data;
   const totalDoctors = doctorsResult.count || 0;
 
-  const totalClinics = stateMeta.clinics?.length || 0;
+  const totalClinics = stateData.total_clinics || 0;
   const totalPages = Math.ceil(totalClinics / limit);
 
   const nearbyAreas = stateData.areas
@@ -400,7 +400,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
               Dental Clinics near {stateData.name}
             </h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-              {stateMeta.areas?.map((area) => (
+              {stateData.areas?.map((area) => (
                 <h3 className="text-balance text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}

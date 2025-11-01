@@ -81,31 +81,7 @@ export async function getClinicListings(status: string = 'approved') {
 /**
  * Fetches a clinic by its slug with all related data
  */
-
 export async function getClinicBySlug(
-  slug: string,
-  status: string = 'approved',
-): Promise<ClinicDetails | null> {
-  const supabase = await createServerClient();
-
-  const { data, error } = await supabase.rpc('get_clinic_by_slug', {
-    slug_input: slug,
-    status_input: status,
-    review_limit: 6,
-  });
-
-  if (error) {
-    console.error('Error fetching nearest clinics:', error);
-    return null;
-  }
-
-  return data as unknown as ClinicDetails;
-}
-
-/**
- * Fetches a clinic by its slug with all related data using admin client for static generation
- */
-export async function getClinicBySlugStatic(
   slug: string,
   status: string = 'approved',
 ): Promise<ClinicDetails | null> {

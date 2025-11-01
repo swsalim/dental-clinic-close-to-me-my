@@ -13,7 +13,7 @@ import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getClinicByServiceId, getClinicByServiceMetadataId } from '@/helpers/clinics';
-import { getAllServices, getServiceBySlugStatic } from '@/helpers/services';
+import { getAllServices } from '@/helpers/services';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
@@ -40,7 +40,8 @@ export async function generateMetadata({
   const { serviceSlug } = await params;
   const { page } = await searchParams;
 
-  const serviceData = await getServiceBySlugStatic(serviceSlug);
+  const services = await getAllServices();
+  const serviceData = services.find((service) => service.slug === serviceSlug);
 
   if (!serviceData) {
     notFound();
@@ -115,10 +116,8 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
   const currentPage = page ? +page : 1;
   const { from, to } = getPagination(currentPage, limit);
 
-  const [serviceData, services] = await Promise.all([
-    getServiceBySlugStatic(serviceSlug),
-    getAllServices(),
-  ]);
+  const services = await getAllServices();
+  const serviceData = services.find((service) => service.slug === serviceSlug);
 
   if (!serviceData) {
     notFound();

@@ -11,6 +11,7 @@ interface AreaData {
   image: string;
   state: Partial<ClinicState>;
   clinics: Partial<Clinic>[];
+  total_clinics: number;
 }
 
 export const getAreaMetadataBySlug = unstable_cache(

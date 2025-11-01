@@ -540,7 +540,7 @@ export type Database = {
           is_featured: boolean | null
           is_permanently_closed: boolean | null
           latitude: number | null
-          location: unknown | null
+          location: unknown
           longitude: number | null
           modified_at: string | null
           name: string
@@ -574,7 +574,7 @@ export type Database = {
           is_featured?: boolean | null
           is_permanently_closed?: boolean | null
           latitude?: number | null
-          location?: unknown | null
+          location?: unknown
           longitude?: number | null
           modified_at?: string | null
           name: string
@@ -608,7 +608,7 @@ export type Database = {
           is_featured?: boolean | null
           is_permanently_closed?: boolean | null
           latitude?: number | null
-          location?: unknown | null
+          location?: unknown
           longitude?: number | null
           modified_at?: string | null
           name?: string
@@ -660,7 +660,7 @@ export type Database = {
           is_featured: boolean | null
           is_permanently_closed: boolean | null
           latitude: number | null
-          location: unknown | null
+          location: unknown
           longitude: number | null
           modified_at: string | null
           name: string
@@ -694,7 +694,7 @@ export type Database = {
           is_featured?: boolean | null
           is_permanently_closed?: boolean | null
           latitude?: number | null
-          location?: unknown | null
+          location?: unknown
           longitude?: number | null
           modified_at?: string | null
           name: string
@@ -728,7 +728,7 @@ export type Database = {
           is_featured?: boolean | null
           is_permanently_closed?: boolean | null
           latitude?: number | null
-          location?: unknown | null
+          location?: unknown
           longitude?: number | null
           modified_at?: string | null
           name?: string
@@ -827,10 +827,7 @@ export type Database = {
         Args: { to_be_reviewed_clinic_id_param: string }
         Returns: string
       }
-      get_area_metadata_by_slug: {
-        Args: { area_slug: string }
-        Returns: Json
-      }
+      get_area_metadata_by_slug: { Args: { area_slug: string }; Returns: Json }
       get_clinic_by_slug: {
         Args: { review_limit: number; slug_input: string; status_input: string }
         Returns: Json
@@ -855,7 +852,7 @@ export type Database = {
           distance_km: number
           hours: Json
           id: string
-          images: string[]
+          images: Json
           is_active: boolean
           is_featured: boolean
           is_permanently_closed: boolean

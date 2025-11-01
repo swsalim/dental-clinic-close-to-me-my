@@ -11,8 +11,8 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
-import { getAreaBySlug, getAreaListings, getAreaMetadataBySlug } from '@/helpers/areas';
-import { getStateMetadataBySlug } from '@/helpers/states';
+import { getAreaBySlug, getAreaListings } from '@/helpers/areas';
+import { getStateBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
@@ -39,23 +39,24 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   const { state, area } = await params;
   const { page } = await searchParams;
 
-  const areaData = await getAreaMetadataBySlug(area);
+  const isJohorBahru = state === 'johor' && area === 'johor-bahru';
+  const limit = isJohorBahru ? 21 : 20;
+  const currentPage = page ? +page : 1;
+  const { from, to } = getPagination(currentPage, limit);
+  const areaData = await getAreaBySlug(area, from, to);
 
   if (!areaData) {
     notFound();
   }
-
-  const validState = areaData?.state?.slug === state;
-
-  if (!validState || !areaData) {
+  const validState = areaData.state?.slug === state;
+  if (!validState) {
     notFound();
   }
-
   const currentDate = new Date();
   const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
   const currentYear = currentDate.getFullYear();
-  const title = `Top ${areaData.clinics?.length} Dental Clinics in ${areaData.name}, ${areaData.state.name} [${currentMonth} ${currentYear}]`;
-  const description = `Explore ${areaData.clinics?.length} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
+  const title = `Top ${areaData.total_clinics} Dental Clinics in ${areaData.name}, ${areaData.state.name} [${currentMonth} ${currentYear}]`;
+  const description = `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}/${area}`)
     : page === '1'
@@ -129,23 +130,22 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch area metadata and clinics data in parallel
-  const [areaMeta, areaData, stateMeta] = await Promise.all([
-    getAreaMetadataBySlug(area),
+  const [areaData, stateData] = await Promise.all([
     getAreaBySlug(area, from, to),
-    getStateMetadataBySlug(state),
+    getStateBySlug(state, from, to),
   ]);
 
   // Early validation
-  if (!areaMeta || !areaData || !stateMeta) {
+  if (!areaData || !stateData) {
     notFound();
   }
 
-  const validState = areaMeta.state?.slug === state;
+  const validState = areaData.state?.slug === state;
   if (!validState) {
     notFound();
   }
 
-  const totalClinics = areaMeta.clinics?.length || 0;
+  const totalClinics = areaData.total_clinics || 0;
   const totalPages = Math.ceil(totalClinics / limit);
 
   const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
@@ -375,7 +375,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
               Dental Clinics near {areaData.name}, {areaData.state?.name}
             </h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-              {stateMeta.areas?.map((area) => (
+              {stateData.areas?.map((area) => (
                 <h3 className="text-balance text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}

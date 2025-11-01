@@ -1,4 +1,4 @@
-import { createAdminClient, createServerClient } from '@/lib/supabase';
+import { createAdminClient } from '@/lib/supabase';
 
 import * as Icons from '@/components/icons';
 
@@ -20,22 +20,10 @@ export async function getAllServices() {
   return services ?? [];
 }
 
-export async function getServiceBySlug(slug: string) {
-  const supabase = await createServerClient();
-
-  const { data } = await supabase
-    .from('clinic_services')
-    .select('id, name, slug, description')
-    .eq('slug', slug)
-    .single();
-
-  return data;
-}
-
 /**
  * Fetches a service by its slug using admin client for static generation
  */
-export async function getServiceBySlugStatic(slug: string) {
+export async function getServiceBySlug(slug: string) {
   const supabase = createAdminClient();
 
   const { data } = await supabase

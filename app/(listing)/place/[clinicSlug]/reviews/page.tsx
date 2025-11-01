@@ -10,7 +10,7 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlugStatic, getClinicMetadataBySlug } from '@/helpers/clinics';
+import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -47,7 +47,7 @@ const formatOpeningHoursForJsonLd = (hours: Partial<ClinicHours>[] | null) => {
 export async function generateMetadata({ params }: ReviewsPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
 
-  const clinic = await getClinicMetadataBySlug(clinicSlug);
+  const clinic = await getClinicBySlug(clinicSlug);
 
   if (!clinic) {
     notFound();
@@ -94,14 +94,18 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
   };
 }
 
-// Force static generation - this ensures the page is generated at build time
-export const dynamic = 'force-static';
-// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
+export async function generateStaticParams() {
+  const clinics = await getClinicListings();
+
+  return clinics.map((clinic) => ({
+    clinicSlug: clinic.slug,
+  }));
+}
 
 export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const { clinicSlug } = await params;
 
-  const parsedClinic = await getClinicBySlugStatic(clinicSlug);
+  const parsedClinic = await getClinicBySlug(clinicSlug);
 
   if (!parsedClinic) {
     notFound();
