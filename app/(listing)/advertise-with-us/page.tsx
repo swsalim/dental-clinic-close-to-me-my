@@ -3,14 +3,6 @@ import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import Container from '@/components/ui/container';
 import Prose from '@/components/ui/prose';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 
 const seo = {
   title: 'Advertise with us',
@@ -70,7 +62,7 @@ export default async function AdvertisePage() {
             🦷 Advertise With Us
           </h2>
           <Prose>
-            <strong>Grow your clinic’s online visibility</strong>
+            <strong>Reach More Dental Patients in Malaysia</strong>
             <p>
               DentalClinicCloseToMe.my helps thousands of Malaysians find trusted dental clinics
               every month — with over <strong>7,000 visitors monthly</strong> and growing. If you’d
@@ -78,52 +70,47 @@ export default async function AdvertisePage() {
               <strong>Featured Listing</strong> is the best way to do it.
             </p>
             <p>
-              Featured Listings boost your clinic’s visibility, improve SEO through do-follow
-              backlinks, and help build stronger brand awareness in your local area.
-            </p>
-            <h2>🌟 Featured Listing Packages</h2>
-            <p>
-              Choose between <strong>area-level</strong> or <strong>state-level</strong> exposure
-              depending on your marketing goals.
+              Be seen first by local patients searching for dental clinics near them. Get a
+              do-follow backlink, higher visibility, and more leads — starting from just{' '}
+              <strong>RM59/month</strong>.
             </p>
 
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Tier</TableHead>
-                  <TableHead>Area-level (example: /kuala-lumpur/cheras)</TableHead>
-                  <TableHead>State-level (example: /kuala-lumpur)</TableHead>
-                  <TableHead>Listing Duration</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell>Standard</TableCell>
-                  <TableCell>RM180 / year</TableCell>
-                  <TableCell>RM480 / year</TableCell>
-                  <TableCell>12 months</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Premium</TableCell>
-                  <TableCell>RM280 / year</TableCell>
-                  <TableCell>RM680 / year</TableCell>
-                  <TableCell>12 months</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+            <h2>Why Get Featured?</h2>
+            <ul>
+              <li>
+                🚀 Top Placement: Your clinic appears at the top of your area page (e.g.
+                /kuala-lumpur/cheras) and parent state page (/kuala-lumpur).
+              </li>
+              <li>🏆 Featured Badge: Stand out with a gold “Featured Clinic” tag.</li>
+              <li>
+                🔗 Do-Follow Backlink: Improve your website SEO — our domain has DR 23+ and growing.
+              </li>
+              <li>
+                📰 Rich Listing Page: Show opening hours, doctors, gallery, reviews, and more.
+              </li>
+              <li>
+                🖼️ Promotional Images: Add up to 5 marketing visuals or before/after treatment
+                photos.
+              </li>
+              <li>📈 No Ads: Enjoy a clean, distraction-free page with no Google Ads.</li>
+              <li>
+                📊 Monthly Traffic: Your listing is visible to over 7,000 monthly visitors and
+                increasing.
+              </li>
+            </ul>
 
-            <h2>🩺 Featured Standard</h2>
+            <h2>🩺 Featured Basic</h2>
             <p>
               Perfect for smaller clinics looking to gain visibility and SEO value at an affordable
               rate.
             </p>
             <p>Includes:</p>
             <ul>
-              <li>🚫 Ad-free listing page (no Google Ads shown)</li>
+              <li>🚫 Ad-free listing page (no Ads shown)</li>
               <li>🔗 Do-follow backlink to your website</li>
               <li>📍 Priority placement above free listings</li>
               <li>🖼️ 1 promotional image (below clinic details)</li>
-              <li>🏅 “Featured Clinic” badge for extra credibility</li>
+              <li>🏅 &quot;Featured&quot; badge for extra credibility</li>
               <li>🌐 Appears on both area and state pages</li>
               <li>🏠 Eligible for homepage rotation</li>
             </ul>
@@ -133,7 +120,7 @@ export default async function AdvertisePage() {
               Best for clinics that want to showcase their space and services with richer visuals.
             </p>
             <p>
-              <strong>Includes everything in Standard, plus:</strong>
+              <strong>Includes everything in Basic, plus:</strong>
             </p>
             <ul>
               <li>
