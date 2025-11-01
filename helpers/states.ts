@@ -38,11 +38,16 @@ export const getStateBySlug = async (
     async () => {
       const supabase = createAdminClient();
 
-      const { data: state } = await supabase.rpc('get_ranged_state_metadata_by_slug', {
+      const { data: state, error } = await supabase.rpc('get_ranged_state_metadata_by_slug', {
         state_slug: stateSlug,
         from_index: from,
         to_index: to,
       });
+
+      if (error) {
+        console.error(`Error fetching state by slug "${stateSlug}":`, error);
+        return null;
+      }
 
       return state as StateData | null;
     },

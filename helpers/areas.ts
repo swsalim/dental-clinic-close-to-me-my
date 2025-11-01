@@ -51,11 +51,16 @@ export const getAreaBySlug = async (
     async () => {
       const supabase = createAdminClient();
 
-      const { data: area } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
+      const { data: area, error } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
         area_slug: areaSlug,
         from_index: from,
         to_index: to,
       });
+
+      if (error) {
+        console.error(`Error fetching area by slug "${areaSlug}":`, error);
+        return null;
+      }
 
       return area as AreaData | null;
     },
