@@ -135,6 +135,10 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
     getStateBySlug(state, from, to),
   ]);
 
+  console.log('debug');
+  console.log('areaData', areaData?.name, areaData?.clinics.length);
+  console.log('stateData', stateData?.name, stateData?.areas.length);
+
   // Early validation
   if (!areaData || !stateData) {
     notFound();
