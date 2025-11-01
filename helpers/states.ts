@@ -46,21 +46,27 @@ export const getStateListings = async () => {
 /**
  * Fetches a state by its slug with all related data using admin client for static generation
  */
-export const getStateBySlug = unstable_cache(
-  async (stateSlug: string, from: number, to: number): Promise<StateData | null> => {
-    const supabase = createAdminClient();
+export const getStateBySlug = async (
+  stateSlug: string,
+  from: number,
+  to: number,
+): Promise<StateData | null> => {
+  return unstable_cache(
+    async () => {
+      const supabase = createAdminClient();
 
-    const { data: state } = await supabase.rpc('get_ranged_state_metadata_by_slug', {
-      state_slug: stateSlug,
-      from_index: from,
-      to_index: to,
-    });
+      const { data: state } = await supabase.rpc('get_ranged_state_metadata_by_slug', {
+        state_slug: stateSlug,
+        from_index: from,
+        to_index: to,
+      });
 
-    return state as StateData | null;
-  },
-  ['state-by-slug'],
-  {
-    revalidate: 3600, // Cache for 1 hour
-    tags: ['states'],
-  },
-);
+      return state as StateData | null;
+    },
+    [`state-by-slug-${stateSlug}-${from}-${to}`],
+    {
+      revalidate: 3600,
+      tags: ['states', `state-${stateSlug}`],
+    },
+  )();
+};

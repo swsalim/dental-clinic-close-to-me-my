@@ -59,21 +59,29 @@ export const getAreaListings = async () => {
 /**
  * Fetches an area by its slug with all related data using admin client for static generation
  */
-export const getAreaBySlug = unstable_cache(
-  async (areaSlug: string, from: number, to: number) => {
-    const supabase = createAdminClient();
+export const getAreaBySlug = async (
+  areaSlug: string,
+  from: number,
+  to: number,
+): Promise<AreaData | null> => {
+  const getCachedArea = unstable_cache(
+    async () => {
+      const supabase = createAdminClient();
 
-    const { data: area } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
-      area_slug: areaSlug,
-      from_index: from,
-      to_index: to,
-    });
+      const { data: area } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
+        area_slug: areaSlug,
+        from_index: from,
+        to_index: to,
+      });
 
-    return area as AreaData | null;
-  },
-  ['area-by-slug'],
-  {
-    revalidate: 3600, // Cache for 1 hour
-    tags: ['areas'],
-  },
-);
+      return area as AreaData | null;
+    },
+    [`area-${areaSlug}-${from}-${to}`],
+    {
+      revalidate: 3600,
+      tags: ['areas', `area-${areaSlug}`],
+    },
+  );
+
+  return getCachedArea();
+};
