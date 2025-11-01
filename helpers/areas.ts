@@ -14,23 +14,6 @@ interface AreaData {
   total_clinics: number;
 }
 
-export const getAreaMetadataBySlug = unstable_cache(
-  async (areaSlug: string) => {
-    const supabase = createAdminClient();
-
-    const { data: area } = await supabase.rpc('get_area_metadata_by_slug', {
-      area_slug: areaSlug,
-    });
-
-    return area as AreaData | null;
-  },
-  ['area-metadata-by-slug'],
-  {
-    revalidate: 3600, // Cache for 1 hour
-    tags: ['areas'],
-  },
-);
-
 export const getAreaListings = async () => {
   const supabase = createAdminClient();
 

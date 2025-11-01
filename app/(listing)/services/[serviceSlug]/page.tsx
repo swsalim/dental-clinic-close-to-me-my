@@ -12,7 +12,7 @@ import { siteConfig } from '@/config/site';
 import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicByServiceId, getClinicByServiceMetadataId } from '@/helpers/clinics';
+import { getClinicByServiceId } from '@/helpers/clinics';
 import { getAllServices } from '@/helpers/services';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
@@ -123,11 +123,10 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
     notFound();
   }
 
-  const [totalClinics, clinics] = await Promise.all([
-    getClinicByServiceMetadataId(serviceData.id).then((count) => Number(count) || 0),
-    getClinicByServiceId(serviceData.id, from, to),
-  ]);
+  const clinicsResult = await getClinicByServiceId(serviceData.id, from, to);
 
+  const clinics = clinicsResult.clinics || [];
+  const totalClinics = clinicsResult.count || 0;
   const totalPages = Math.ceil(totalClinics / limit);
   const { name: serviceName } = serviceData;
   const serviceDescription = serviceData.description ?? serviceData.name;
@@ -154,6 +153,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
     },
   ];
 
+  console.log('totalClinics', totalClinics);
   const JSONLDlistItems = clinics.slice(0, 20).map((clinic, index) => ({
     '@type': 'ListItem',
     position: `${index + 1}`,

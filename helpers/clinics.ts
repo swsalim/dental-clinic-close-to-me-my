@@ -101,77 +101,45 @@ export async function getClinicBySlug(
   return data as unknown as ClinicDetails;
 }
 
-export async function getClinicByServiceMetadataId(id: string) {
-  const supabase = await createServerClient();
-
-  // TODO: get approved clinics
-  const { data: clinicIds } = await supabase
-    .from('clinic_service_relations')
-    .select('clinic_id')
-    .eq('service_id', id);
-
-  if (!clinicIds || clinicIds.length === 0) {
-    return [];
-  }
-
-  return clinicIds.length;
-}
-
 export async function getClinicByServiceId(
   id: string,
   from: number,
   to: number,
   status: string = 'approved',
-) {
-  const supabase = await createServerClient();
+): Promise<{ count: number; clinics: Partial<Clinic>[] | null }> {
+  const getCachedClinics = unstable_cache(
+    async () => {
+      const supabase = await createAdminClient();
 
-  // First get clinic IDs that have this service
-  const { data: clinicIds } = await supabase
-    .from('clinic_service_relations')
-    .select('clinic_id')
-    .eq('service_id', id)
-    .range(from, to);
+      const { data, error } = await supabase.rpc('get_clinics_by_service_id', {
+        service_id_param: id,
+        from_index: from,
+        to_index: to,
+        status_param: status,
+      });
 
-  if (!clinicIds || clinicIds.length === 0) {
-    return [];
-  }
+      if (error) {
+        console.error('Error fetching clinics by service:', error);
+        return { count: 0, clinics: [] };
+      }
 
-  const clinicIdList = clinicIds.map((item) => item.clinic_id);
+      if (!data) {
+        return { count: 0, clinics: [] };
+      }
 
-  // Then get full clinic details for those clinics only
-  const { data } = await supabase
-    .from('clinics')
-    .select(
-      `
-      id,
-      name,
-      slug,
-      postal_code,
-      address,
-      neighborhood,
-      phone,
-      latitude,
-      longitude,
-      rating,
-      review_count,
-      images:clinic_images(image_url, imagekit_file_id),
-      is_permanently_closed,
-      open_on_public_holidays,
-      is_active,
-      is_featured,
-      modified_at,
-      area:areas(id, name, slug),
-      state:states(id, name, slug),
-      hours:clinic_hours(day_of_week, open_time, close_time),
-      special_hours:clinic_special_hours(date, is_closed, open_time, close_time),
-      services:clinic_service_relations(service:clinic_services(id, name, slug))
-      `,
-    )
-    .in('id', clinicIdList)
-    .match({ is_active: true, status })
-    .order('modified_at', { ascending: false });
+      return {
+        count: Number((data as unknown as { count: number })?.count || 0),
+        clinics: (data as unknown as { clinics: Partial<Clinic>[] })?.clinics || [],
+      };
+    },
+    [`clinics-service-${id}-${from}-${to}-${status}`],
+    {
+      revalidate: 3600,
+      tags: ['clinics', `service-${id}`],
+    },
+  );
 
-  return data || [];
+  return getCachedClinics();
 }
 
 /**

@@ -832,6 +832,15 @@ export type Database = {
         Args: { review_limit: number; slug_input: string; status_input: string }
         Returns: Json
       }
+      get_clinics_by_service_id: {
+        Args: {
+          from_index: number
+          service_id_param: string
+          status_param?: string
+          to_index: number
+        }
+        Returns: Json
+      }
       get_doctors_by_clinic_slug: {
         Args: { clinic_slug_param: string; status_param?: string }
         Returns: Json

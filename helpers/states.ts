@@ -16,23 +16,6 @@ interface StateData {
   total_clinics?: number;
 }
 
-export const getStateMetadataBySlug = unstable_cache(
-  async (stateSlug: string) => {
-    const supabase = createAdminClient();
-
-    const { data: state } = await supabase.rpc('get_state_metadata_by_slug', {
-      state_slug: stateSlug,
-    });
-
-    return state as StateData | null;
-  },
-  ['state-metadata-by-slug'],
-  {
-    revalidate: 3600, // Cache for 1 hour
-    tags: ['states'],
-  },
-);
-
 export const getStateListings = async () => {
   const supabase = createAdminClient();
 

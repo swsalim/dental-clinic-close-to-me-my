@@ -20,21 +20,6 @@ export async function getAllServices() {
   return services ?? [];
 }
 
-/**
- * Fetches a service by its slug using admin client for static generation
- */
-export async function getServiceBySlug(slug: string) {
-  const supabase = createAdminClient();
-
-  const { data } = await supabase
-    .from('clinic_services')
-    .select('id, name, slug, description')
-    .eq('slug', slug)
-    .single();
-
-  return data;
-}
-
 const slugToIcon: Record<string, React.ReactNode> = {
   veneers: (
     <Icons.DentalVeneer className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Veneer" />
