@@ -28,7 +28,7 @@ export default function NavMobile() {
       <button
         onClick={() => setOpen(!open)}
         className={cn(
-          'fixed right-3 top-3 isolate z-50 rounded-full p-2 transition-colors duration-200 hover:bg-gray-50 focus:outline-none active:bg-gray-100 lg:hidden dark:hover:bg-gray-800',
+          'fixed right-3 top-16 isolate z-50 rounded-full p-2 transition-colors duration-200 hover:bg-gray-50 focus:outline-none active:bg-gray-100 lg:hidden dark:hover:bg-gray-800',
         )}>
         {open ? (
           <X className="h-5 w-5 text-gray-600 dark:text-gray-300" />

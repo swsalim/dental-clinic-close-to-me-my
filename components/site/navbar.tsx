@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { PlusIcon } from 'lucide-react';
+import { HospitalIcon, PlusIcon } from 'lucide-react';
 
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
@@ -105,6 +105,15 @@ export default function Navbar() {
           ? 'dark:border-brand-600 border-gray-200 dark:bg-gray-900/50'
           : 'border-transparent',
       )}>
+      <div className="flex items-center justify-center gap-x-1 bg-blue-500 px-4 py-3 text-white">
+        <HospitalIcon className="h-4 w-4" />
+        Own a dental clinic? Get{' '}
+        <Link
+          href="/advertise-with-us"
+          className="border-white font-bold text-white hover:border-white hover:text-white/80">
+          premium visibility.
+        </Link>
+      </div>
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-x-2 text-xl hover:border-transparent">
           <Logo className="h-8 w-auto fill-blue-500" />
