@@ -46,7 +46,8 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
 
   const isJohorBahru = state === 'johor' && area === 'johor-bahru';
   const limit = isJohorBahru ? 21 : 20;
-  const currentPage = page ? +page : 1;
+  const parsedPage = page ? Number(page) : 1;
+  const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
   const areaData = await getAreaBySlug(area, from, to);
 
@@ -137,7 +138,8 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
   const isJohorBahru = state === 'johor' && area === 'johor-bahru';
 
   const limit = isJohorBahru ? 21 : 20;
-  const currentPage = page ? +page : 1;
+  const parsedPage = page ? Number(page) : 1;
+  const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch area metadata and clinics data in parallel
