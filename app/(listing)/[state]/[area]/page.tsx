@@ -39,6 +39,11 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   const { state, area } = await params;
   const { page } = await searchParams;
 
+  // Log params for debugging production issues
+  if (process.env.NODE_ENV === 'production') {
+    console.log(`[generateMetadata] Processing: state="${state}", area="${area}"`);
+  }
+
   const isJohorBahru = state === 'johor' && area === 'johor-bahru';
   const limit = isJohorBahru ? 21 : 20;
   const currentPage = page ? +page : 1;
@@ -123,6 +128,12 @@ export async function generateStaticParams() {
 export default async function AreaPage({ params, searchParams }: AreaPageProps) {
   const { state, area } = await params;
   const { page } = await searchParams;
+
+  // Log params for debugging production issues
+  if (process.env.NODE_ENV === 'production') {
+    console.log(`[AreaPage] Processing: state="${state}", area="${area}"`);
+  }
+
   const isJohorBahru = state === 'johor' && area === 'johor-bahru';
 
   const limit = isJohorBahru ? 21 : 20;

@@ -330,23 +330,43 @@ export async function getDoctorsByClinicSlug(
 /**
  * Fetches doctors by state with pagination
  */
-// ✅ FIXED: Include all parameters in cache key
+// ✅ FIXED: Include all parameters in cache key and capture to avoid closure issues
 export const getDoctorsByState = async (
   stateSlug: string,
   limit: number = 20,
   offset: number = 0,
   status: string = 'approved',
 ) => {
-  const getCachedDoctors = unstable_cache(
+  // Capture parameters immediately to avoid closure issues in concurrent requests
+  const slug = stateSlug;
+  const limitCount = limit;
+  const offsetCount = offset;
+  const statusParam = status;
+
+  // Validate inputs
+  if (!slug || typeof slug !== 'string') {
+    console.error('Invalid stateSlug provided to getDoctorsByState:', stateSlug);
+    return { data: [], count: 0 };
+  }
+
+  return unstable_cache(
     async () => {
       const supabase = createAdminClient();
 
-      const { data: result } = await supabase.rpc('get_ranged_doctor_by_state_slug', {
-        state_slug_param: stateSlug,
-        from_index_param: offset,
-        to_index_param: offset + limit - 1,
-        status_param: status,
+      const { data: result, error } = await supabase.rpc('get_ranged_doctor_by_state_slug', {
+        state_slug_param: slug,
+        from_index_param: offsetCount,
+        to_index_param: offsetCount + limitCount - 1,
+        status_param: statusParam,
       });
+
+      if (error) {
+        console.error(
+          `Error fetching doctors by state "${slug}" (limit: ${limitCount}, offset: ${offsetCount}):`,
+          error,
+        );
+        return { data: [], count: 0 };
+      }
 
       if (!result) {
         return { data: [], count: 0 };
@@ -359,12 +379,10 @@ export const getDoctorsByState = async (
 
       return { data: doctors, count: typedResult.count || 0 };
     },
-    [`doctors-state-${stateSlug}-${limit}-${offset}-${status}`],
+    [`doctors-state-${slug}-${limitCount}-${offsetCount}-${statusParam}`],
     {
       revalidate: 3600,
-      tags: ['doctors', `doctors-state-${stateSlug}`],
+      tags: ['doctors', `doctors-state-${slug}`],
     },
-  );
-
-  return getCachedDoctors();
+  )();
 };

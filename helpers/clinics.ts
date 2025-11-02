@@ -14,14 +14,25 @@ import {
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export const getClinicMetadataBySlug = unstable_cache(
-  async (slug: string, status: string = 'approved') => {
-    const supabase = createAdminClient();
+export const getClinicMetadataBySlug = async (slug: string, status: string = 'approved') => {
+  // Capture parameters immediately to avoid closure issues in concurrent requests
+  const clinicSlug = slug;
+  const statusParam = status;
 
-    const { data: clinicData } = (await supabase
-      .from('clinics')
-      .select(
-        `
+  // Validate inputs
+  if (!clinicSlug || typeof clinicSlug !== 'string') {
+    console.error('Invalid slug provided to getClinicMetadataBySlug:', slug);
+    return null;
+  }
+
+  return unstable_cache(
+    async () => {
+      const supabase = createAdminClient();
+
+      const { data: clinicData } = (await supabase
+        .from('clinics')
+        .select(
+          `
         id,
         name,
         slug,
@@ -29,31 +40,32 @@ export const getClinicMetadataBySlug = unstable_cache(
         area:areas(name),
         state:states(name)
       `,
-      )
-      .match({ slug, is_active: true, status })
-      .single()) as {
-      data: {
-        id: string;
-        name: string;
-        slug: string;
-        description: string;
-        area: {
+        )
+        .match({ slug: clinicSlug, is_active: true, status: statusParam })
+        .single()) as {
+        data: {
+          id: string;
           name: string;
-        };
-        state: {
-          name: string;
+          slug: string;
+          description: string;
+          area: {
+            name: string;
+          };
+          state: {
+            name: string;
+          };
         };
       };
-    };
 
-    return clinicData ?? null;
-  },
-  ['clinic-metadata'],
-  {
-    revalidate: 3600, // Cache for 1 hour
-    tags: ['clinic-metadata', 'clinics'],
-  },
-);
+      return clinicData ?? null;
+    },
+    [`clinic-metadata-${clinicSlug}-${statusParam}`],
+    {
+      revalidate: 3600, // Cache for 1 hour
+      tags: ['clinic-metadata', 'clinics', `clinic-${clinicSlug}`],
+    },
+  )();
+};
 
 export async function getClinicListings(status: string = 'approved') {
   const supabase = createAdminClient();
@@ -107,19 +119,34 @@ export async function getClinicByServiceId(
   to: number,
   status: string = 'approved',
 ): Promise<{ count: number; clinics: Partial<Clinic>[] | null }> {
-  const getCachedClinics = unstable_cache(
+  // Capture parameters immediately to avoid closure issues in concurrent requests
+  const serviceId = id;
+  const fromIndex = from;
+  const toIndex = to;
+  const statusParam = status;
+
+  // Validate inputs
+  if (!serviceId || typeof serviceId !== 'string') {
+    console.error('Invalid service id provided to getClinicByServiceId:', id);
+    return { count: 0, clinics: [] };
+  }
+
+  return unstable_cache(
     async () => {
       const supabase = await createAdminClient();
 
       const { data, error } = await supabase.rpc('get_clinics_by_service_id', {
-        service_id_param: id,
-        from_index: from,
-        to_index: to,
-        status_param: status,
+        service_id_param: serviceId,
+        from_index: fromIndex,
+        to_index: toIndex,
+        status_param: statusParam,
       });
 
       if (error) {
-        console.error('Error fetching clinics by service:', error);
+        console.error(
+          `Error fetching clinics by service "${serviceId}" (from: ${fromIndex}, to: ${toIndex}):`,
+          error,
+        );
         return { count: 0, clinics: [] };
       }
 
@@ -132,14 +159,12 @@ export async function getClinicByServiceId(
         clinics: (data as unknown as { clinics: Partial<Clinic>[] })?.clinics || [],
       };
     },
-    [`clinics-service-${id}-${from}-${to}-${status}`],
+    [`clinics-service-${serviceId}-${fromIndex}-${toIndex}-${statusParam}`],
     {
       revalidate: 3600,
-      tags: ['clinics', `service-${id}`],
+      tags: ['clinics', `service-${serviceId}`],
     },
-  );
-
-  return getCachedClinics();
+  )();
 }
 
 /**
@@ -199,34 +224,62 @@ export async function getClinics(filters: {
 /**
  * Fetches clinics within a radius of a given location
  */
-export const getClinicsNearLocation = unstable_cache(
-  async (latitude: number, longitude: number, radiusInKm: number, limit: number = 5) => {
-    const supabase = await createAdminClient();
+export const getClinicsNearLocation = async (
+  latitude: number,
+  longitude: number,
+  radiusInKm: number,
+  limit: number = 5,
+) => {
+  // Capture parameters immediately to avoid closure issues in concurrent requests
+  const lat = latitude;
+  const lng = longitude;
+  const radius = radiusInKm;
+  const limitCount = limit;
 
-    const { data, error } = await supabase.rpc('get_nearby_clinics', {
-      clinic_latitude: latitude,
-      clinic_longitude: longitude,
-      radius_km: radiusInKm,
-      result_limit: limit,
+  // Validate inputs
+  if (typeof lat !== 'number' || typeof lng !== 'number' || isNaN(lat) || isNaN(lng)) {
+    console.error('Invalid coordinates provided to getClinicsNearLocation:', {
+      latitude,
+      longitude,
     });
+    return [];
+  }
 
-    if (error) {
-      console.error('Error fetching nearest clinics:', error);
-      return [];
-    }
+  // Create a unique cache key based on all parameters
+  const cacheKey = `nearby-clinics-${lat.toFixed(4)}-${lng.toFixed(4)}-${radius}-${limitCount}`;
 
-    if (!data || data.length === 0) {
-      return [];
-    }
+  return unstable_cache(
+    async () => {
+      const supabase = await createAdminClient();
 
-    return data;
-  },
-  ['nearby-clinics'],
-  {
-    revalidate: 600, // Cache for 10 minutes
-    tags: ['clinics'],
-  },
-);
+      const { data, error } = await supabase.rpc('get_nearby_clinics', {
+        clinic_latitude: lat,
+        clinic_longitude: lng,
+        radius_km: radius,
+        result_limit: limitCount,
+      });
+
+      if (error) {
+        console.error(
+          `Error fetching nearest clinics (lat: ${lat}, lng: ${lng}, radius: ${radius}km):`,
+          error,
+        );
+        return [];
+      }
+
+      if (!data || data.length === 0) {
+        return [];
+      }
+
+      return data;
+    },
+    [cacheKey],
+    {
+      revalidate: 600, // Cache for 10 minutes
+      tags: ['clinics', 'nearby-clinics'],
+    },
+  )();
+};
 
 /**
  * Fetches clinic reviews with pagination

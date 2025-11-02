@@ -39,6 +39,11 @@ export async function generateMetadata({
   const { state } = await params;
   const { page } = await searchParams;
 
+  // Log params for debugging production issues
+  if (process.env.NODE_ENV === 'production') {
+    console.log(`[generateMetadata] Processing: state="${state}"`);
+  }
+
   const limit = 20;
   const currentPage = page ? +page : 1;
   const { from, to } = getPagination(currentPage, limit);
@@ -123,6 +128,11 @@ export async function generateStaticParams() {
 export default async function StatePage({ params, searchParams }: StatePageProps) {
   const { state } = await params;
   const { page } = await searchParams;
+
+  // Log params for debugging production issues
+  if (process.env.NODE_ENV === 'production') {
+    console.log(`[StatePage] Processing: state="${state}"`);
+  }
 
   const limit = 20;
   const currentPage = page ? +page : 1;

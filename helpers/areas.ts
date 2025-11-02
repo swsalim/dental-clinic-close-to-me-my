@@ -47,29 +47,41 @@ export const getAreaBySlug = async (
   from: number,
   to: number,
 ): Promise<AreaData | null> => {
-  const getCachedArea = unstable_cache(
+  // Capture parameters immediately to avoid closure issues in concurrent requests
+  const slug = areaSlug;
+  const fromIndex = from;
+  const toIndex = to;
+
+  // Validate inputs
+  if (!slug || typeof slug !== 'string') {
+    console.error('Invalid areaSlug provided to getAreaBySlug:', areaSlug);
+    return null;
+  }
+
+  return unstable_cache(
     async () => {
       const supabase = createAdminClient();
 
       const { data: area, error } = await supabase.rpc('get_ranged_area_metadata_by_slug', {
-        area_slug: areaSlug,
-        from_index: from,
-        to_index: to,
+        area_slug: slug,
+        from_index: fromIndex,
+        to_index: toIndex,
       });
 
       if (error) {
-        console.error(`Error fetching area by slug "${areaSlug}":`, error);
+        console.error(
+          `Error fetching area by slug "${slug}" (from: ${fromIndex}, to: ${toIndex}):`,
+          error,
+        );
         return null;
       }
 
       return area as AreaData | null;
     },
-    [`area-${areaSlug}-${from}-${to}`],
+    [`area-${slug}-${fromIndex}-${toIndex}`],
     {
       revalidate: 3600,
-      tags: ['areas', `area-${areaSlug}`],
+      tags: ['areas', `area-${slug}`],
     },
-  );
-
-  return getCachedArea();
+  )();
 };
