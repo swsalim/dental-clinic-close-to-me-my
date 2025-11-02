@@ -45,6 +45,9 @@ export async function generateMetadata({
   const stateData = await getStateBySlug(state, from, to);
 
   if (!stateData) {
+    // Enhanced logging for production debugging
+    console.error(`[DentistsByStatePage] State not found: "${state}"`);
+    console.error(`[DentistsByStatePage] Pagination: from=${from}, to=${to}`);
     notFound();
   }
 
@@ -108,10 +111,21 @@ export async function generateMetadata({
 export async function generateStaticParams() {
   const states = await getStateListings();
 
+  // Log in production to debug build-time issues
+  if (process.env.NODE_ENV === 'production') {
+    console.log('[generateStaticParams] States found:', states.length);
+    const sarawakExists = states.some((s) => s.slug === 'sarawak');
+    console.log('[generateStaticParams] Sarawak exists:', sarawakExists);
+  }
+
   return states.map((state) => ({
     state: state.slug,
   }));
 }
+
+// CRITICAL: Allow dynamic params not in generateStaticParams to be generated on-demand
+// Without this, routes not pre-generated at build time will return 404 in production
+export const dynamicParams = true;
 
 export default async function DentistsByStatePage({
   params,
@@ -131,6 +145,9 @@ export default async function DentistsByStatePage({
   ]);
 
   if (!stateData) {
+    // Enhanced logging for production debugging
+    console.error(`[DentistsByStatePage] State not found at runtime: "${state}"`);
+    console.error(`[DentistsByStatePage] Pagination: from=${from}, to=${to}`);
     notFound();
   }
 

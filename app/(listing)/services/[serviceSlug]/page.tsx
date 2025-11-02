@@ -153,7 +153,6 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
     },
   ];
 
-  console.log('totalClinics', totalClinics);
   const JSONLDlistItems = clinics.slice(0, 20).map((clinic, index) => ({
     '@type': 'ListItem',
     position: `${index + 1}`,
