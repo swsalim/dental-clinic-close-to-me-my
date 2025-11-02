@@ -115,60 +115,6 @@ export async function getClinicByServiceId(
 }
 
 /**
- * Fetches clinics with optional filters
- */
-export async function getClinics(filters: {
-  stateId?: string;
-  areaId?: string;
-  categoryId?: string;
-  isFeatured?: boolean;
-  limit?: number;
-  offset?: number;
-}) {
-  const supabase = await createServerClient();
-  let query = supabase.from('clinics').select(
-    `
-      *,
-      area:areas(*),
-      state:states(*),
-      categories:clinic_category_relations(
-        category:clinic_categories(*)
-      )
-    `,
-    { count: 'exact' },
-  );
-
-  if (filters.stateId) {
-    query = query.eq('state_id', filters.stateId);
-  }
-
-  if (filters.areaId) {
-    query = query.eq('area_id', filters.areaId);
-  }
-
-  if (filters.categoryId) {
-    query = query.eq('clinic_category_relations.category_id', filters.categoryId);
-  }
-
-  if (filters.isFeatured !== undefined) {
-    query = query.eq('is_featured', filters.isFeatured);
-  }
-
-  if (filters.limit) {
-    query = query.limit(filters.limit);
-  }
-
-  if (filters.offset) {
-    query = query.range(filters.offset, filters.offset + (filters.limit || 10) - 1);
-  }
-
-  const { data, error, count } = await query;
-  if (error) throw error;
-
-  return { data, count };
-}
-
-/**
  * Fetches clinics within a radius of a given location
  */
 export const getClinicsNearLocation = async (
