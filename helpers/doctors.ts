@@ -306,25 +306,38 @@ export async function getDoctorsByClinicSlug(
   clinicSlug: string,
   status: string = 'approved',
 ): Promise<ClinicDoctor[]> {
-  const supabase = await createServerClient();
+  // Capture parameters immediately to avoid closure issues in concurrent requests
+  const slug = clinicSlug;
+  const statusParam = status;
 
-  const { data, error } = await supabase.rpc('get_doctors_by_clinic_slug', {
-    clinic_slug_param: clinicSlug,
-    status_param: status,
-  });
+  return unstable_cache(
+    async () => {
+      const supabase = createAdminClient();
 
-  if (error) {
-    console.error('Error fetching doctors by clinic slug:', error);
-    return [];
-  }
+      const { data, error } = await supabase.rpc('get_doctors_by_clinic_slug', {
+        clinic_slug_param: slug,
+        status_param: statusParam,
+      });
 
-  if (!data) {
-    return [];
-  }
+      if (error) {
+        console.error('Error fetching doctors by clinic slug:', error);
+        return [];
+      }
 
-  // The RPC function returns JSON, so we need to parse it
-  const doctorsData = data as RawDoctorWithClinics[];
-  return transformDoctorsData(doctorsData);
+      if (!data) {
+        return [];
+      }
+
+      // The RPC function returns JSON, so we need to parse it
+      const doctorsData = data as RawDoctorWithClinics[];
+      return transformDoctorsData(doctorsData);
+    },
+    [`doctors-clinic-${slug}-${statusParam}`],
+    {
+      revalidate: 3600,
+      tags: ['doctors', `doctors-clinic-${slug}`],
+    },
+  )();
 }
 
 /**
