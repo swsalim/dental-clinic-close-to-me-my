@@ -18,7 +18,7 @@ import { siteConfig } from '@/config/site';
 
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicListings, getClinicMetadataBySlug } from '@/helpers/clinics';
+import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
@@ -176,8 +176,7 @@ const renderOpeningHours = (parsedClinic: ClinicDetails) => {
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
 
-  // Use getClinicMetadataBySlug for build-time metadata generation
-  const clinic = await getClinicMetadataBySlug(clinicSlug);
+  const clinic = await getClinicBySlug(clinicSlug);
 
   if (!clinic) {
     notFound();
@@ -235,10 +234,6 @@ export async function generateStaticParams() {
     clinicSlug: clinic.slug,
   }));
 }
-
-// Force static generation - this ensures the page is generated at build time
-export const dynamic = 'force-static';
-// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
 
 export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;

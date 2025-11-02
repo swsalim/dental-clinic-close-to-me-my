@@ -14,59 +14,6 @@ import {
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export const getClinicMetadataBySlug = async (slug: string, status: string = 'approved') => {
-  // Capture parameters immediately to avoid closure issues in concurrent requests
-  const clinicSlug = slug;
-  const statusParam = status;
-
-  // Validate inputs
-  if (!clinicSlug || typeof clinicSlug !== 'string') {
-    console.error('Invalid slug provided to getClinicMetadataBySlug:', slug);
-    return null;
-  }
-
-  return unstable_cache(
-    async () => {
-      const supabase = createAdminClient();
-
-      const { data: clinicData } = (await supabase
-        .from('clinics')
-        .select(
-          `
-        id,
-        name,
-        slug,
-        description,
-        area:areas(name),
-        state:states(name)
-      `,
-        )
-        .match({ slug: clinicSlug, is_active: true, status: statusParam })
-        .single()) as {
-        data: {
-          id: string;
-          name: string;
-          slug: string;
-          description: string;
-          area: {
-            name: string;
-          };
-          state: {
-            name: string;
-          };
-        };
-      };
-
-      return clinicData ?? null;
-    },
-    [`clinic-metadata-${clinicSlug}-${statusParam}`],
-    {
-      revalidate: 3600, // Cache for 1 hour
-      tags: ['clinic-metadata', 'clinics', `clinic-${clinicSlug}`],
-    },
-  )();
-};
-
 export async function getClinicListings(status: string = 'approved') {
   const supabase = createAdminClient();
 
