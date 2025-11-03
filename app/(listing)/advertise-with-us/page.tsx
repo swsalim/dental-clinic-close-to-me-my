@@ -136,15 +136,15 @@ function AdvertiseHero() {
         </p>
         <div className="mx-auto mt-8">
           <ul className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-700">
               <CheckIcon className="h-6 w-6 text-violet-600" />
               <span>Over 7,000 Nationwide Audience</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-700">
               <CheckIcon className="h-6 w-6 text-violet-600" />
               <span>Verified Clinic Listings</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-700">
               <CheckIcon className="h-6 w-6 text-violet-600" />
               <span>Flexible Ad Packages</span>
             </li>
@@ -231,11 +231,11 @@ export default async function AdvertisePage() {
         </Container>
       </Wrapper>
 
-      <Container className="space-y-16">
-        <div>
+      <Wrapper size="default" className="bg-gray-50 dark:bg-gray-800/50">
+        <Container>
           <PricingPlan />
-        </div>
-      </Container>
+        </Container>
+      </Wrapper>
 
       <Wrapper size="default" className="">
         <Container className="max-w-4xl">

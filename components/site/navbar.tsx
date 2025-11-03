@@ -100,10 +100,8 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-10 w-full border-b bg-white/50 backdrop-blur-md transition-all duration-75',
-        scrolled
-          ? 'dark:border-brand-600 border-gray-200 dark:bg-gray-900/50'
-          : 'border-transparent',
+        'sticky top-0 z-10 w-full border-b bg-white/50 backdrop-blur-md transition-all duration-75 dark:bg-white',
+        scrolled ? 'dark:border-brand-600 border-gray-200 dark:bg-white/50' : 'border-transparent',
       )}>
       <div className="flex items-center justify-center gap-x-1 bg-blue-500 px-4 py-3 text-white">
         <HospitalIcon className="h-4 w-4" />
