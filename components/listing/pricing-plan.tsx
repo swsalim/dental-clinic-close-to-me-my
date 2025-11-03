@@ -21,14 +21,13 @@ export function PricingPlan() {
         price: 59,
         type: 'monthly',
         features: [
-          'Top placement on your preferred area',
-          'Ad-free listing page',
+          '<strong>Top placement</strong> on your preferred area',
+          '<strong>Ad-free listing page</strong>',
           '<strong>Do-follow</strong> backlink to your website',
-          'Add 1 promotional image',
-          '8x more visibility than free listings',
-          'Featured badge to stand out',
-          'Appears on your preferred area page and parent state page',
-          'Eligible for homepage rotation',
+          'Add <strong>1</strong> promotional image',
+          '<strong>8x more visibility</strong> than free listings',
+          '<strong>Featured badge</strong> to stand out',
+          'Eligible for <strong>homepage rotation</strong>',
         ],
         tag: 'most popular',
       },
@@ -37,14 +36,13 @@ export function PricingPlan() {
         price: 89,
         type: 'monthly',
         features: [
-          'Top placement on your preferred area',
-          'Ad-free listing page',
+          '<strong>Top placement</strong> on your preferred area',
+          '<strong>Ad-free listing page</strong>',
           '<strong>Do-follow</strong> backlink to your website',
-          'Add up to <strong>5</strong> promotional images',
-          '8x more visibility than free listings',
-          'Featured badge to stand out',
-          'Appears on your preferred area page and parent state page',
-          'Eligible for homepage rotation',
+          'Add <strong>up to 5</strong> promotional images',
+          '<strong>8x more visibility</strong> than free listings',
+          '<strong>Featured badge</strong> to stand out',
+          'Eligible for <strong>homepage rotation</strong>',
         ],
       },
     ],
@@ -54,14 +52,13 @@ export function PricingPlan() {
         price: 565,
         type: 'yearly',
         features: [
-          'Top placement on your preferred area',
-          'Ad-free listing page',
+          '<strong>Top placement</strong> on your preferred area',
+          '<strong>Ad-free listing page</strong>',
           '<strong>Do-follow</strong> backlink to your website',
-          'Add 1 promotional image',
-          '8x more visibility than free listings',
-          'Featured badge to stand out',
-          'Appears on your preferred area page and parent state page',
-          'Eligible for homepage rotation',
+          'Add <strong>1</strong> promotional image',
+          '<strong>8x more visibility</strong> than free listings',
+          '<strong>Featured badge</strong> to stand out',
+          'Eligible for <strong>homepage rotation</strong>',
         ],
         tag: 'save 20%',
       },
@@ -70,14 +67,13 @@ export function PricingPlan() {
         price: 855,
         type: 'yearly',
         features: [
-          'Top placement on your preferred area',
-          'Ad-free listing page',
+          '<strong>Top placement</strong> on your preferred area',
+          '<strong>Ad-free listing page</strong>',
           '<strong>Do-follow</strong> backlink to your website',
-          'Add up to <strong>5</strong> promotional images',
-          '8x more visibility than free listings',
-          'Featured badge to stand out',
-          'Appears on your preferred area page and parent state page',
-          'Eligible for homepage rotation',
+          'Add <strong>up to 5</strong> promotional images',
+          '<strong>8x more visibility</strong> than free listings',
+          '<strong>Featured badge</strong> to stand out',
+          'Eligible for <strong>homepage rotation</strong>',
         ],
         tag: 'save 20%',
       },
@@ -89,14 +85,16 @@ export function PricingPlan() {
       <div className="mt-16 flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <div className="flex flex-row items-center justify-between">
-            <h2 className="mb-0 mt-0 text-2xl font-bold">Simple Pricing</h2>
+            <h2 className="mb-0 mt-0 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+              Simple, Transparent Pricing
+            </h2>
             <div className="flex flex-row items-center gap-2">
-              <span className="text-sm font-medium text-gray-500">Monthly</span>
+              <span className="text-sm font-semibold text-gray-500">Monthly</span>
               <Switch
                 checked={type === 'yearly'}
                 onCheckedChange={(checked) => setType(checked ? 'yearly' : 'monthly')}
               />
-              <span className="text-sm font-medium text-gray-500">Yearly</span>
+              <span className="text-sm font-semibold text-gray-500">Yearly</span>
             </div>
           </div>
         </div>

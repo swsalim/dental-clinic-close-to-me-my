@@ -1,8 +1,22 @@
+import {
+  ChartNoAxesCombinedIcon,
+  CheckIcon,
+  HandCoinsIcon,
+  HeartHandshakeIcon,
+  MapPinIcon,
+  ShieldCheckIcon,
+  SproutIcon,
+} from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+
 import { PricingPlan } from '@/components/listing/pricing-plan';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
+import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import Prose from '@/components/ui/prose';
+import { Wrapper } from '@/components/ui/wrapper';
 
 const seo = {
   title: 'Advertise with us',
@@ -45,6 +59,156 @@ export const metadata = {
   },
 };
 
+const features = [
+  {
+    title: 'Boost Visibility',
+    description:
+      'Appear in top search results for <strong>“dental clinic near me”</strong>—connect with high-intent patients searching for care now.​ Our <strong>DR is 23</strong> and growing.',
+    icon: (
+      <div className="inline-block rounded-full bg-blue-100 p-4">
+        <MapPinIcon className="h-6 w-6 text-blue-500" />
+      </div>
+    ),
+  },
+
+  {
+    title: 'Strengthen Reputation',
+    description:
+      'Stand out with <strong>verified listings</strong>, <strong>genuine reviews</strong>, and a <strong>professionally presented profile</strong>.​',
+    icon: (
+      <div className="inline-block rounded-full bg-yellow-100 p-4">
+        <ShieldCheckIcon className="h-6 w-6 text-yellow-600" />
+      </div>
+    ),
+  },
+  {
+    title: 'Improve SEO',
+    description:
+      'Get authoritative citations and backlinks to your website, enhancing your Google rankings.​',
+    icon: (
+      <div className="inline-block rounded-full bg-green-100 p-4">
+        <ChartNoAxesCombinedIcon className="h-6 w-6 text-green-600" />
+      </div>
+    ),
+  },
+  {
+    title: 'Affordable Marketing',
+    description:
+      'Enjoy <strong>cost-effective packages</strong> and <strong>flexible upgrades</strong> that deliver lasting results—just one new patient can cover your ad spend.​',
+    icon: (
+      <div className="bg-orange-100 inline-block rounded-full p-4">
+        <HandCoinsIcon className="text-orange-600 h-6 w-6" />
+      </div>
+    ),
+  },
+
+  {
+    title: 'Dedicated Local Support',
+    description:
+      'Work with a <strong>responsive team</strong> ready to help you maximize your clinic’s exposure and tackle any questions—no complicated systems required.​',
+    icon: (
+      <div className="inline-block rounded-full bg-violet-100 p-4">
+        <HeartHandshakeIcon className="h-6 w-6 text-violet-600" />
+      </div>
+    ),
+  },
+  {
+    title: 'Grow Fast',
+    description:
+      'Clinics choosing premium placements consistently receive more enquiries and bookings compared to standard listings.',
+    icon: (
+      <div className="bg-cyan-100 inline-block rounded-full p-4">
+        <SproutIcon className="text-cyan-600 h-6 w-6" />
+      </div>
+    ),
+  },
+];
+
+function AdvertiseHero() {
+  return (
+    <>
+      <div className="mx-auto max-w-3xl text-center">
+        <h2 className="mb-4 mt-2 text-4xl font-bold leading-snug tracking-tight text-blue-900 sm:text-5xl sm:leading-snug">
+          Reach Malaysia&apos;s Dental Patients Directly—Advertise With Us
+        </h2>
+        <p className="text-lg font-medium text-blue-700">
+          Showcase your clinic, highlight your expertise, and connect with thousands searching for
+          dental care across Malaysia every month.
+        </p>
+        <div className="mx-auto mt-8">
+          <ul className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
+            <li className="flex items-center gap-2">
+              <CheckIcon className="h-6 w-6 text-violet-600" />
+              <span>Over 7,000 Nationwide Audience</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckIcon className="h-6 w-6 text-violet-600" />
+              <span>Verified Clinic Listings</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckIcon className="h-6 w-6 text-violet-600" />
+              <span>Flexible Ad Packages</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function AdvertiseWhyUs() {
+  return (
+    <>
+      <div className="mx-auto max-w-3xl text-center">
+        <h2 className="mb-4 mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          Why List Your Dental Clinic With Us?
+        </h2>
+        <p className="text-lg font-medium text-gray-600">
+          We offer a range of advertising options to help you reach more patients. Contact our team
+          for a free consultation today.
+        </p>
+      </div>
+      <div>
+        <ul className="mt-8 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-3 md:gap-8 lg:grid-cols-3">
+          {features.map((feature) => (
+            <li
+              key={feature.title}
+              className="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+              {feature.icon && <div className="">{feature.icon}</div>}
+              <h3 className="text-lg font-semibold leading-snug tracking-tight text-gray-900">
+                {feature.title}
+              </h3>
+              <p
+                className="text-base text-gray-700"
+                dangerouslySetInnerHTML={{ __html: feature.description }}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
+function AdvertiseFooter() {
+  return (
+    <div className="not-prose flex flex-col items-center justify-center gap-8 rounded-xl bg-blue-50 p-16 text-center shadow-lg">
+      <div className="flex flex-col items-center justify-center gap-2">
+        <h2 className="text-3xl font-bold text-blue-900">Ready to Grow Your Clinic’s Reach?</h2>
+        <p className="text-blue-700">
+          We offer a range of advertising options to help you reach more patients. Contact our team
+          for a free consultation today.
+        </p>
+      </div>
+      <a
+        href="mailto:hello@dentalclinicclosetome.my?subject=Advertise With Us Enquiry"
+        className={cn(buttonVariants({ variant: 'primary' }))}>
+        Contact us
+      </a>
+    </div>
+  );
+}
+
 export default async function AdvertisePage() {
   return (
     <>
@@ -56,114 +220,29 @@ export default async function AdvertisePage() {
         reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
       />
 
-      <div className="my-16">
-        <Container className="max-w-5xl">
-          <h2 className="mb-4 mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-800 sm:text-4xl sm:leading-10">
-            🦷 Advertise With Us
-          </h2>
-          <Prose>
-            <strong>Reach More Dental Patients in Malaysia</strong>
-            <p>
-              DentalClinicCloseToMe.my helps thousands of Malaysians find trusted dental clinics
-              every month — with over <strong>7,000 visitors monthly</strong> and growing. If you’d
-              like your clinic to stand out and attract more patients, our{' '}
-              <strong>Featured Listing</strong> is the best way to do it.
-            </p>
-            <p>
-              Be seen first by local patients searching for dental clinics near them. Get a
-              do-follow backlink, higher visibility, and more leads — starting from just{' '}
-              <strong>RM59/month</strong>.
-            </p>
-
-            <h2>Why Get Featured?</h2>
-            <ul>
-              <li>
-                🚀 Top Placement: Your clinic appears at the top of your area page (e.g.
-                /kuala-lumpur/cheras) and parent state page (/kuala-lumpur).
-              </li>
-              <li>🏆 Featured Badge: Stand out with a gold “Featured Clinic” tag.</li>
-              <li>
-                🔗 Do-Follow Backlink: Improve your website SEO — our domain has DR 23+ and growing.
-              </li>
-              <li>
-                📰 Rich Listing Page: Show opening hours, doctors, gallery, reviews, and more.
-              </li>
-              <li>
-                🖼️ Promotional Images: Add up to 5 marketing visuals or before/after treatment
-                photos.
-              </li>
-              <li>📈 No Ads: Enjoy a clean, distraction-free page with no Google Ads.</li>
-              <li>
-                📊 Monthly Traffic: Your listing is visible to over 7,000 monthly visitors and
-                increasing.
-              </li>
-            </ul>
-
-            <h2>🩺 Featured Basic</h2>
-            <p>
-              Perfect for smaller clinics looking to gain visibility and SEO value at an affordable
-              rate.
-            </p>
-            <p>Includes:</p>
-            <ul>
-              <li>🚫 Ad-free listing page (no Ads shown)</li>
-              <li>🔗 Do-follow backlink to your website</li>
-              <li>📍 Priority placement above free listings</li>
-              <li>🖼️ 1 promotional image (below clinic details)</li>
-              <li>🏅 &quot;Featured&quot; badge for extra credibility</li>
-              <li>🌐 Appears on both area and state pages</li>
-              <li>🏠 Eligible for homepage rotation</li>
-            </ul>
-
-            <h2>💎 Featured Premium</h2>
-            <p>
-              Best for clinics that want to showcase their space and services with richer visuals.
-            </p>
-            <p>
-              <strong>Includes everything in Basic, plus:</strong>
-            </p>
-            <ul>
-              <li>
-                📸 Up to 5 promotional images (gallery-style section) for marketing and branding
-              </li>
-            </ul>
-
-            <div>
-              <PricingPlan />
-            </div>
-
-            <h2>📈 Why Upgrade?</h2>
-
-            <ul>
-              <li>
-                <strong>Boost SEO:</strong> Gain a quality backlink from a growing domain (DR 23).
-              </li>
-              <li>
-                <strong>More visibility:</strong> Appear at the top of your area and state pages.
-              </li>
-              <li>
-                <strong>Build trust:</strong> Stand out with a clean, ad-free page and “Featured
-                Clinic” badge.
-              </li>
-              <li>
-                <strong>Attract patients:</strong> Add compelling visuals that convert visitors into
-                leads.
-              </li>
-            </ul>
-
-            <h2>💬 Get Featured Today</h2>
-
-            <p>
-              Interested in upgrading your listing? Contact us to reserve your Featured spot — we’ll
-              handle everything manually for now.
-            </p>
-            <p>
-              <strong>📧 Email:</strong>{' '}
-              <a href="mailto:hello@dentalclinicclosetome.my">hello@dentalclinicclosetome.my</a>
-            </p>
-          </Prose>
+      <Wrapper size="default" className="bg-blue-50">
+        <Container>
+          <AdvertiseHero />
         </Container>
-      </div>
+      </Wrapper>
+
+      <Wrapper size="default" className="bg-gray-50">
+        <Container>
+          <AdvertiseWhyUs />
+        </Container>
+      </Wrapper>
+
+      <Container className="space-y-16">
+        <div>
+          <PricingPlan />
+        </div>
+      </Container>
+
+      <Wrapper size="default" className="">
+        <Container className="max-w-4xl">
+          <AdvertiseFooter />
+        </Container>
+      </Wrapper>
     </>
   );
 }
