@@ -15,13 +15,12 @@ import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import WebsiteJsonLd from '@/components/structured-data/website-json-ld';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
-import Prose from '@/components/ui/prose';
 import { Wrapper } from '@/components/ui/wrapper';
 
 const seo = {
-  title: 'Advertise with us',
+  title: 'Grow Your Dental Clinic with Us - Get More Patients',
   description:
-    'Thanks for you visiting us and considering to advertise with us at dentalclinicclosetome.my! We welcome advertisers, sponsors and pitches.',
+    "Join Malaysia's trusted dental clinic directory. Get featured listings to grow your practice with targeted online visibility.",
   url: '/advertise-with-us',
   creator: '@swsalim',
   company: 'DentalClinicCloseToMe',
