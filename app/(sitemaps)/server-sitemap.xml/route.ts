@@ -66,7 +66,7 @@ export async function GET() {
   });
 
   // Add static pages
-  const staticPages = ['/', '/browse', '/dentists', '/submit'];
+  const staticPages = ['/', '/browse', '/dentists', '/submit', '/advertise-with-us'];
 
   staticPages.forEach((page) => {
     fields.push({
