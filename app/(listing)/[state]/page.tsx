@@ -59,10 +59,8 @@ export async function generateMetadata({
     .map((area) => area.name)
     .join(', ');
 
-  const currentDate = new Date();
-  const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
-  const currentYear = currentDate.getFullYear();
-  const title = `Top ${stateData.total_clinics} Dental Clinics in ${stateData.name} [${currentMonth} ${currentYear}]`;
+  const LAST_UPDATED = 'November 2025';
+  const title = `Top ${stateData.total_clinics} Dental Clinics in ${stateData.name} [${LAST_UPDATED}]`;
   const description = `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}`)
@@ -122,9 +120,6 @@ export async function generateStaticParams() {
     state: state.slug,
   }));
 }
-
-// Allow dynamic rendering to handle pagination searchParams
-// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
 
 export default async function StatePage({ params, searchParams }: StatePageProps) {
   const { state } = await params;

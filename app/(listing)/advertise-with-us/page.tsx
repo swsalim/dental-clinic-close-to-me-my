@@ -215,7 +215,6 @@ export default async function AdvertisePage() {
       <WebPageJsonLd
         description={seo.description}
         id={seo.url}
-        lastReviewed={new Date().toISOString()}
         reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
       />
 

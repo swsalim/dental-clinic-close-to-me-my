@@ -49,7 +49,7 @@ const getRecentClinics = unstable_cache(
   },
   ['recent-clinics'],
   {
-    revalidate: 3600, // Cache for 1 hour
+    revalidate: 1_209_600, // Cache for 2 weeks
     tags: ['recent-clinics'],
   },
 );

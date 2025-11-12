@@ -105,9 +105,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// Allow dynamic rendering to handle pagination searchParams
-// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
-
 export default async function ServicePage({ params, searchParams }: ServicePageProps) {
   const { serviceSlug } = await params;
   const { page } = await searchParams;
@@ -180,7 +177,6 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
       <WebPageJsonLd
         description={description}
         id={`/services/${serviceSlug}`}
-        lastReviewed={new Date().toISOString()}
         reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
       />
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />

@@ -56,13 +56,13 @@ const getPopularStatesWithRandomization = unstable_cache(
       .slice(0, 8);
 
     // Randomize the order for display (this will be cached for 1 hour)
-    const randomizedStates = filteredStates.sort(() => 0.5 - Math.random());
+    // const randomizedStates = filteredStates.sort(() => 0.5 - Math.random());
 
-    return randomizedStates;
+    return filteredStates;
   },
   ['popular-states-randomized'],
   {
-    revalidate: 3600, // Cache for 1 hour
+    revalidate: 1_209_600, // Cache for 2 weeks
     tags: ['states'],
   },
 );

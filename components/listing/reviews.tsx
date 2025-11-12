@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 import { ClinicReview } from '@/types/clinic';
-import { formatDistanceToNow } from 'date-fns';
 import { ArrowRightIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { RelativeTime } from '../ui/relative-time';
 import { StarRating } from '../ui/star-rating';
 import { TruncatedText } from '../ui/truncated-text';
 
@@ -40,9 +40,10 @@ export default function Reviews({ reviews, clinicSlug }: ReviewsProps) {
                 {author_name}
               </span>
               {review_time && (
-                <span className="text-sm text-gray-500 dark:text-gray-300">
-                  {formatDistanceToNow(new Date(review_time), { addSuffix: true })}
-                </span>
+                <RelativeTime
+                  date={review_time}
+                  className="text-sm text-gray-500 dark:text-gray-300"
+                />
               )}
             </CardFooter>
           </Card>

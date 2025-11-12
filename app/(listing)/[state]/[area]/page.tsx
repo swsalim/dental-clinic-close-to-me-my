@@ -58,10 +58,9 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   if (!validState) {
     notFound();
   }
-  const currentDate = new Date();
-  const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
-  const currentYear = currentDate.getFullYear();
-  const title = `Top ${areaData.total_clinics} Dental Clinics in ${areaData.name}, ${areaData.state.name} [${currentMonth} ${currentYear}]`;
+
+  const LAST_UPDATED = 'November 2025';
+  const title = `Top ${areaData.total_clinics} Dental Clinics in ${areaData.name}, ${areaData.state.name} [${LAST_UPDATED}]`;
   const description = `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
   const url = !page
     ? absoluteUrl(`/${state}/${area}`)
@@ -122,9 +121,6 @@ export async function generateStaticParams() {
     area: area.slug,
   }));
 }
-
-// Allow dynamic rendering to handle pagination searchParams
-// export const revalidate = 3600; // Revalidate every hour (3600 seconds)
 
 export default async function AreaPage({ params, searchParams }: AreaPageProps) {
   const { state, area } = await params;

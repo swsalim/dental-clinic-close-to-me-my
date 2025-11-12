@@ -33,11 +33,7 @@ export async function generateMetadata({ searchParams }: DentistsPageProps): Pro
 
   const totalDoctors = doctorsResult.count || 0;
 
-  const currentDate = new Date();
-  const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
-  const currentYear = currentDate.getFullYear();
-
-  const title = `Browse Top ${totalDoctors} Dentists in Malaysia [${currentMonth} ${currentYear}]`;
+  const title = `Browse Top ${totalDoctors} Dentists in Malaysia`;
   const description =
     'Find dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details.';
   const url = !page
@@ -179,7 +175,6 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
       <WebPageJsonLd
         description="Discover dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details."
         id="/dentists"
-        lastReviewed={new Date().toISOString()}
         reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
       />
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />

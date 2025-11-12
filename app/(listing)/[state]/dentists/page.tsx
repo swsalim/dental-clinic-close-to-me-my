@@ -55,11 +55,7 @@ export async function generateMetadata({
   const doctorsResult = await getDoctorsByState(state, 1, 0);
   const totalDoctors = doctorsResult.count || 0;
 
-  const currentDate = new Date();
-  const currentMonth = currentDate.toLocaleString('en-US', { month: 'long' });
-  const currentYear = currentDate.getFullYear();
-
-  const title = `Top ${totalDoctors} Dentists in ${stateData.name} [${currentMonth} ${currentYear}]`;
+  const title = `Top ${totalDoctors} Dentists in ${stateData.name}`;
   const description = `Discover ${totalDoctors} dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you. Information includes clinic locations and contact details.`;
   const url = !page
     ? absoluteUrl(`/${state}/dentists`)
@@ -219,7 +215,6 @@ export default async function DentistsByStatePage({
       <WebPageJsonLd
         description={description}
         id={`/${state}/dentists`}
-        lastReviewed={new Date().toISOString()}
         reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
       />
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
