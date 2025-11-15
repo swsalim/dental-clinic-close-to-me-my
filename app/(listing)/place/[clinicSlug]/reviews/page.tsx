@@ -11,11 +11,11 @@ import { absoluteUrl } from '@/lib/utils';
 
 import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
 
+import { RelativeTime } from '@/components/listing/relative-time';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import { Card, CardContent } from '@/components/ui/card';
 import Container from '@/components/ui/container';
-import { RelativeTime } from '@/components/ui/relative-time';
 import { Separator } from '@/components/ui/separator';
 import { StarRating } from '@/components/ui/star-rating';
 

@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
-import { RelativeTime } from '../ui/relative-time';
 import { StarRating } from '../ui/star-rating';
 import { TruncatedText } from '../ui/truncated-text';
+import { RelativeTime } from './relative-time';
 
 interface ReviewsProps {
   reviews: Partial<ClinicReview>[];

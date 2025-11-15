@@ -29,7 +29,6 @@ export function PricingPlan() {
           '<strong>Featured badge</strong> to stand out',
           'Eligible for <strong>homepage rotation</strong>',
         ],
-        tag: 'most popular',
       },
       {
         name: 'Featured Premium',
@@ -44,6 +43,7 @@ export function PricingPlan() {
           '<strong>Featured badge</strong> to stand out',
           'Eligible for <strong>homepage rotation</strong>',
         ],
+        tag: 'most popular',
       },
     ],
     yearly: [

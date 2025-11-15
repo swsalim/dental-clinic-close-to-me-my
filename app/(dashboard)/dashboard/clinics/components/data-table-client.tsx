@@ -76,6 +76,12 @@ export function DataTableClient<TData, TValue>({
     onRowSelectionChange: setRowSelection,
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
+    initialState: {
+      pagination: {
+        pageIndex: 0,
+        pageSize: 50,
+      },
+    },
     state: {
       sorting,
       columnFilters,
