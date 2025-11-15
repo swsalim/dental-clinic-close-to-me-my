@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { ClinicHours, ClinicSpecialHours } from '@/types/clinic';
 import { AwardIcon, ClockIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 
+import { cn } from '@/lib/utils';
+
 import { ClinicStatus } from '@/components/clinic-status';
 import { ImageKit } from '@/components/image/image-kit';
 import { Badge } from '@/components/ui/badge';
@@ -49,7 +51,12 @@ export function ClinicCard({
       href={`/place/${slug}`}
       className="block transition-transform hover:scale-[1.02] hover:border-none"
       prefetch={false}>
-      <Card className="h-full overflow-hidden rounded-2xl" role="article">
+      <Card
+        className={cn(
+          'h-full overflow-hidden rounded-2xl',
+          isFeatured && 'border-2 border-blue-400',
+        )}
+        role="article">
         <CardHeader className="relative h-48 overflow-hidden p-0">
           {image && (
             <ImageKit
