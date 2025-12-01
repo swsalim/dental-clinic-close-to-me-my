@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cache } from 'react';
 
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -35,6 +35,10 @@ type AreaPageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
+export const getAreaBySlugCached = cache(async (areaSlug: string, from: number, to: number) => {
+  return await getAreaBySlug(areaSlug, from, to);
+});
+
 export async function generateMetadata({ params, searchParams }: AreaPageProps): Promise<Metadata> {
   const { state, area } = await params;
   const { page } = await searchParams;
@@ -49,7 +53,7 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
   const parsedPage = page ? Number(page) : 1;
   const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
-  const areaData = await getAreaBySlug(area, from, to);
+  const areaData = await getAreaBySlugCached(area, from, to);
 
   if (!areaData) {
     notFound();
@@ -140,7 +144,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
 
   // Fetch area metadata and clinics data in parallel
   const [areaData, stateData] = await Promise.all([
-    getAreaBySlug(area, from, to),
+    getAreaBySlugCached(area, from, to),
     getStateBySlug(state, from, to),
   ]);
 

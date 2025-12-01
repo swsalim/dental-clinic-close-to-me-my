@@ -1,3 +1,5 @@
+import { cache } from 'react';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -27,9 +29,13 @@ interface DentistPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const getDoctorBySlugCached = cache(async (slug: string) => {
+  return await getDoctorBySlug(slug);
+});
+
 export async function generateMetadata({ params }: DentistPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const doctor = await getDoctorBySlug(slug);
+  const doctor = await getDoctorBySlugCached(slug);
 
   if (!doctor) {
     return {
@@ -94,7 +100,7 @@ export const dynamic = 'force-static';
 export default async function DentistPage({ params }: DentistPageProps) {
   const { slug } = await params;
   // Use static generation function for build-time data fetching
-  const doctor = await getDoctorBySlug(slug);
+  const doctor = await getDoctorBySlugCached(slug);
 
   if (!doctor) {
     notFound();

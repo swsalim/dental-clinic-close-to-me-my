@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cache } from 'react';
 
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -32,6 +32,10 @@ type StatePageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
+export const getStateBySlugCached = cache(async (stateSlug: string, from: number, to: number) => {
+  return await getStateBySlug(stateSlug, from, to);
+});
+
 export async function generateMetadata({
   params,
   searchParams,
@@ -48,7 +52,7 @@ export async function generateMetadata({
   const parsedPage = page ? Number(page) : 1;
   const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
-  const stateData = await getStateBySlug(state, from, to);
+  const stateData = await getStateBySlugCached(state, from, to);
 
   if (!stateData) {
     notFound();
@@ -136,7 +140,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch state metadata and clinics data in parallel
-  const stateData = await getStateBySlug(state, from, to);
+  const stateData = await getStateBySlugCached(state, from, to);
 
   if (!stateData) {
     notFound();

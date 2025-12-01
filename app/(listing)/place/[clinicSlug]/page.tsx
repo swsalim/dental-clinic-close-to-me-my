@@ -1,3 +1,5 @@
+import { cache } from 'react';
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -173,10 +175,14 @@ const renderOpeningHours = (parsedClinic: ClinicDetails) => {
   );
 };
 
+export const getClinicBySlugCached = cache(async (clinicSlug: string) => {
+  return await getClinicBySlug(clinicSlug);
+});
+
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
 
-  const clinic = await getClinicBySlug(clinicSlug);
+  const clinic = await getClinicBySlugCached(clinicSlug);
 
   if (!clinic) {
     notFound();
@@ -239,7 +245,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
   const { clinicSlug } = await params;
 
   // Use static generation function for build-time data fetching
-  const parsedClinic = await getClinicBySlug(clinicSlug);
+  const parsedClinic = await getClinicBySlugCached(clinicSlug);
 
   if (!parsedClinic) {
     notFound();
