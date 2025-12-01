@@ -9,6 +9,7 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
+import { getAllServicesCached } from '@/lib/data';
 import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
 
@@ -40,7 +41,7 @@ export async function generateMetadata({
   const { serviceSlug } = await params;
   const { page } = await searchParams;
 
-  const services = await getAllServices();
+  const services = await getAllServicesCached();
   const serviceData = services.find((service) => service.slug === serviceSlug);
 
   if (!serviceData) {
@@ -114,7 +115,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
   const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
 
-  const services = await getAllServices();
+  const services = await getAllServicesCached();
   const serviceData = services.find((service) => service.slug === serviceSlug);
 
   if (!serviceData) {

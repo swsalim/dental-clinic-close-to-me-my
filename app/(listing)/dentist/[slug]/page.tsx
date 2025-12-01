@@ -1,5 +1,3 @@
-import { cache } from 'react';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -8,9 +6,10 @@ import type { ClinicDoctor, ClinicImage } from '@/types/clinic';
 
 import { siteConfig } from '@/config/site';
 
+import { getDoctorBySlugCached } from '@/lib/data';
 import { absoluteUrl, cn } from '@/lib/utils';
 
-import { getDoctorBySlug, getDoctorListings } from '@/helpers/doctors';
+import { getDoctorListings } from '@/helpers/doctors';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
@@ -28,10 +27,6 @@ import { Wrapper } from '@/components/ui/wrapper';
 interface DentistPageProps {
   params: Promise<{ slug: string }>;
 }
-
-export const getDoctorBySlugCached = cache(async (slug: string) => {
-  return await getDoctorBySlug(slug);
-});
 
 export async function generateMetadata({ params }: DentistPageProps): Promise<Metadata> {
   const { slug } = await params;

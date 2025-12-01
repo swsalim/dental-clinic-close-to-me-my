@@ -1,5 +1,3 @@
-import { cache } from 'react';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -18,9 +16,10 @@ import {
 
 import { siteConfig } from '@/config/site';
 
+import { getClinicBySlugCached } from '@/lib/data';
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
+import { getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
@@ -174,10 +173,6 @@ const renderOpeningHours = (parsedClinic: ClinicDetails) => {
     </ul>
   );
 };
-
-export const getClinicBySlugCached = cache(async (clinicSlug: string) => {
-  return await getClinicBySlug(clinicSlug);
-});
 
 export async function generateMetadata({ params }: ClinicPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;

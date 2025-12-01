@@ -1,4 +1,4 @@
-import React, { cache } from 'react';
+import React from 'react';
 
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -8,11 +8,12 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
+import { getStateBySlugCached } from '@/lib/data';
 import { absoluteUrl, getPagination } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 
 import { getDoctorsByState } from '@/helpers/doctors';
-import { getStateBySlug, getStateListings } from '@/helpers/states';
+import { getStateListings } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { DoctorCard } from '@/components/cards/doctor-card';
@@ -31,10 +32,6 @@ type DentistsByStatePageProps = {
   }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
-
-export const getStateBySlugCached = cache(async (stateSlug: string, from: number, to: number) => {
-  return await getStateBySlug(stateSlug, from, to);
-});
 
 export async function generateMetadata({
   params,

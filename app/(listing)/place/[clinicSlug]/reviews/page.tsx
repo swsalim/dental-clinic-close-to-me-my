@@ -7,9 +7,10 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
+import { getClinicBySlugCached } from '@/lib/data';
 import { absoluteUrl } from '@/lib/utils';
 
-import { getClinicBySlug, getClinicListings } from '@/helpers/clinics';
+import { getClinicListings } from '@/helpers/clinics';
 
 import { RelativeTime } from '@/components/listing/relative-time';
 import BusinessJsonLd from '@/components/structured-data/business-json-ld';
@@ -47,7 +48,7 @@ const formatOpeningHoursForJsonLd = (hours: Partial<ClinicHours>[] | null) => {
 export async function generateMetadata({ params }: ReviewsPageProps): Promise<Metadata> {
   const { clinicSlug } = await params;
 
-  const clinic = await getClinicBySlug(clinicSlug);
+  const clinic = await getClinicBySlugCached(clinicSlug);
 
   if (!clinic) {
     notFound();
@@ -105,7 +106,7 @@ export async function generateStaticParams() {
 export default async function ReviewsPage({ params }: ReviewsPageProps) {
   const { clinicSlug } = await params;
 
-  const parsedClinic = await getClinicBySlug(clinicSlug);
+  const parsedClinic = await getClinicBySlugCached(clinicSlug);
 
   if (!parsedClinic) {
     notFound();

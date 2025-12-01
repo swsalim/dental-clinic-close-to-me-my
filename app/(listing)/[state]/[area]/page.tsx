@@ -1,4 +1,4 @@
-import React, { cache } from 'react';
+import React from 'react';
 
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -9,9 +9,10 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
+import { getAreaBySlugCached } from '@/lib/data';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
-import { getAreaBySlug, getAreaListings } from '@/helpers/areas';
+import { getAreaListings } from '@/helpers/areas';
 import { getStateBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
@@ -34,10 +35,6 @@ type AreaPageProps = {
   }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
-
-export const getAreaBySlugCached = cache(async (areaSlug: string, from: number, to: number) => {
-  return await getAreaBySlug(areaSlug, from, to);
-});
 
 export async function generateMetadata({ params, searchParams }: AreaPageProps): Promise<Metadata> {
   const { state, area } = await params;
