@@ -13,6 +13,8 @@ import './globals.css';
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -79,10 +81,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.google.com" />
         <link rel="dns-prefetch" href="//www.gstatic.com" />
         <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net" />
-        <script
-          src="https://beamanalytics.b-cdn.net/beam.min.js"
-          data-token="c2fbac7b-0b09-48f0-b925-7a5a61de2a3b"
-          async></script>
         <script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="oV+XGa0KW37ngKhI81Btzg"
