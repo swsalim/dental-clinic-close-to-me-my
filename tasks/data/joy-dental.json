@@ -1,0 +1,2099 @@
+[{
+  "title": "SmileCove Dental Clinic (Pauh Jaya)",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Dental clinic",
+  "address": "B2-1-23, Elevate @ Gravitas, Lrg Pauh Jaya 1/3, Taman Pauh Jaya, 13500 Permatang Pauh, Pulau Pinang, Malaysia",
+  "neighborhood": "Taman Pauh Jaya",
+  "street": "B2-1-23, Elevate @ Gravitas, Lrg Pauh Jaya 1/3",
+  "city": "Permatang Pauh",
+  "postalCode": "13500",
+  "state": "Penang",
+  "countryCode": "MY",
+  "website": "https://www.joydental.com.my/",
+  "phone": "+60 18-206 2360",
+  "phoneUnformatted": "+60182062360",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 5.369144,
+    "lng": 100.4173496
+  },
+  "locatedIn": null,
+  "plusCode": "9C98+MW Permatang Pauh, Penang, Malaysia",
+  "menu": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJb_eSbOfHSjARFncCCt6iFFY",
+  "categories": [
+    "Dental clinic",
+    "Cosmetic dentist",
+    "Dental implants provider",
+    "Dentist",
+    "Teeth whitening service"
+  ],
+  "fid": "0x304ac7e76c92f76f:0x5614a2de0a027716",
+  "cid": "6202761661330388758",
+  "reviewsCount": 711,
+  "reviewsDistribution": {
+    "oneStar": 1,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 1,
+    "fiveStar": 709
+  },
+  "imagesCount": 96,
+  "imageCategories": [
+    "All",
+    "Latest",
+    "Videos",
+    "By owner",
+    "Street View & 360°"
+  ],
+  "scrapedAt": "2025-11-15T09:27:11.732Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "10 AM to 5:30 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "10 AM to 5:30 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "10 AM to 5:30 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Closed"
+    },
+    {
+      "day": "Friday",
+      "hours": "10 AM to 5:30 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "10 AM to 6:30 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "10 AM to 6:30 PM"
+    }
+  ],
+  "additionalOpeningHours": null,
+  "openingHoursBusinessConfirmationText": "Updated by this business 1 week ago",
+  "peopleAlsoSearch": [
+    {
+      "category": "People also search for",
+      "title": "Union Dental Surgery (Pauh Jaya) / Klinik Pergigian Union",
+      "reviewsCount": 23,
+      "totalScore": 5
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian Shine",
+      "reviewsCount": 474,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian New Smile",
+      "reviewsCount": 77,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik pergigian eco dental",
+      "reviewsCount": 141,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Braces Orthodontist Dental Clinic",
+      "reviewsCount": 19,
+      "totalScore": 3.4
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "braces",
+      "count": 57
+    },
+    {
+      "title": "price",
+      "count": 28
+    },
+    {
+      "title": "environment",
+      "count": 13
+    },
+    {
+      "title": "service",
+      "count": 13
+    },
+    {
+      "title": "doctorate",
+      "count": 11
+    },
+    {
+      "title": "scaling",
+      "count": 10
+    },
+    {
+      "title": "illnesses",
+      "count": 9
+    },
+    {
+      "title": "explanation",
+      "count": 7
+    },
+    {
+      "title": "tooth extraction",
+      "count": 5
+    },
+    {
+      "title": "choice",
+      "count": 5
+    }
+  ],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible restroom": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Planning": [
+      {
+        "Appointments recommended": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Parking": [
+      {
+        "On-site parking": true
+      },
+      {
+        "Paid parking garage": true
+      },
+      {
+        "Paid parking lot": true
+      },
+      {
+        "Paid street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": [],
+  "updatesFromCustomers": null,
+  "url": "https://www.google.com/maps/search/?api=1&query=SmileCove%20Dental%20Clinic%20(Pauh%20Jaya)&query_place_id=ChIJb_eSbOfHSjARFncCCt6iFFY",
+  "searchString": "Direct Detail URL: https://www.google.com/maps/place/SmileCove+Dental+Clinic+(Pauh+Jaya)/@5.369144,100.4147693,17z/data=!3m1!4b1!4m6!3m5!1s0x304ac7e76c92f76f:0x5614a2de0a027716!8m2!3d5.369144!4d100.4173496!16s%2Fg%2F11vb5255tz?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D",
+  "language": "en",
+  "inputPlaceId": null,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipM7cENWF59ndQ0Wg3jAzAlDFyz9bSoxleHeT_35=w408-h272-k-no",
+  "kgmid": "/g/11vb5255tz",
+  "userPlaceNote": null,
+  "webResults": [],
+  "tableReservationLinks": [],
+  "bookingLinks": [
+    {
+      "name": "wa.link",
+      "url": "https://wa.link/5ettzk"
+    }
+  ],
+  "orderBy": [],
+  "restaurantData": {
+    "tableReservationProvider": null
+  },
+  "ownerUpdates": [
+    {
+      "text": "【🇲🇾 MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at SmileCove Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-22T02:40:29.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipN7d0lOG1P09pQTMg-afhBSEFKvzge1nI0MDFOt=h400-no"
+    },
+    {
+      "text": "【🇲🇾 MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at SmileCove Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-21T09:30:28.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNqb4d5IjkcyeNHe_5OOCDN5TtK162mGt8sf4-Z=h400-no"
+    },
+    {
+      "text": "【🇲🇾 MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at SmileCove Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-21T09:30:08.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipN5LmNTnAUUez_dc3JiFOgSwT18qbxPczBknUhi=h400-no"
+    },
+    {
+      "text": "🦷 Join Our Team at SmileCove Dental Clinic 🪥\n👩‍⚕️ Position: Senior Dental Assistant / Dental Assistant 🥰\n💛 Location:📍 Permatang Pauh\n.\n✨ We’re looking for someone who:\n✔️ Is passionate about dental care and patient service\n✔️ Has great teamwork and communication skills\n✔️ Is organized, proactive, and detail-oriented\n✔️ Experience is a plus, but training will be provided!\n.\n💡 What we offer:\n🌟 Friendly, joyful & supportive work environment\n📚 On-the-job training & career growth opportunities\n🎯 Competitive salary + comms & staff benefits",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-01T08:33:44.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMHBHIfzldfO5JfOjGr5tkEpijMmOhhxiEG0sMD=h400-no"
+    },
+    {
+      "text": "✨ Brighten Your Smile, Boost Your Confidence! ✨ Say goodbye to stains and hello to a radiant smile with our professional teeth whitening treatment at Joy Dental.\n✅ Safe, fast & effective ✅ Noticeable results in just one session ✅ Perfect for special events or everyday confidence",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-07-17T06:06:24.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipPoHeAgm9oqeR69vHZmwwRyTfH90RzH6Zlgspce=h400-no"
+    }
+  ],
+  "imageUrls": [
+    "https://lh3.googleusercontent.com/p/AF1QipM7cENWF59ndQ0Wg3jAzAlDFyz9bSoxleHeT_35=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw9hBW-EuO_ONOgmAEvDTfhVW1LkhSoCuw-8vPfOnIhWxCzb9wSBgwdKHs6wKnkhrqF9C9xnsTGLqUacdA6sWCqBh96FlFPDCJAVq-9nz7IC1EKNkiDTrt9gHWsmjRco7-hpHI=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMnvQD6TqtQw_9wL4_voZBfGpm0mNInOgHqKGqh=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSysEdsblbfOhAu1lyDSp03q9-hgA1Sspwbk3PvErkIh1Z9NOBNjrw5HlNMaGzkY5w4uWy9O3MOrvq8t7w-6yFu11AsJ7awaVDBFqgbuRfTf7a_h1nXSoeoSEGmYld6SDQT3a2rZ=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOgF-FkNcT9GDrNTrE7CZmMP_Pb-S2SAd6uz9-C=w1920-h1080-k-no"
+  ],
+  "images": null,
+  "reviews": [
+    {
+      "reviewerId": "104156108946424821448",
+      "reviewerUrl": "https://www.google.com/maps/contrib/104156108946424821448?hl=en",
+      "name": "Tyni_",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXImxp43-f-HFyBQ-50evuifemZ49cLKDzcUiVpe-oLI3Xekz8z=s1920-c-rp-mo-br100",
+      "text": "RECOMMENDED TAK SAKIT LANGSUNG AND CEPATT AND MURAHHH",
+      "textTranslated": "RECOMMENDED, NO PAIN, FAST AND CHEAP",
+      "publishAt": "4 hours ago",
+      "publishedAtDate": "2025-11-15T05:14:46.666Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2sxMmVrZ3dRVEYwTTNoa2FXZ3dkV05TUzFwUFkwRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2sxMmVrZ3dRVEYwTTNoa2FXZ3dkV05TUzFwUFkwRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOk12ekgwQTF0M3hkaWgwdWNSS1pPY0E%7C0d5-l5bhG27%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "ms",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "118411206698561158057",
+      "reviewerUrl": "https://www.google.com/maps/contrib/118411206698561158057?hl=en",
+      "name": "Shahrizalina 82",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJE89PfRMTRxRzcYJtfO9F03FRoH--BVCBWb0shds3p8qUyXA=s1920-c-rp-mo-br100",
+      "text": "Servis yang baik cepat dan mudah sangat berususan.staff yang mersa pelaggan dan harga yg berpatutan.",
+      "textTranslated": "Good service, fast and easy, very organized. Staff who are friendly to customers and reasonable prices.",
+      "publishAt": "a day ago",
+      "publishedAtDate": "2025-11-14T06:55:24.508Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT25aWGFWUkhTM0ZrUm1KemRrUndiVEphU1UwdE1VRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25aWGFWUkhTM0ZrUm1KemRrUndiVEphU1UwdE1VRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOnZXaVRHS3FkRmJzdkRwbTJaSU0tMUE%7C0d4h8RTK4MZ%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "ms",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "114569715134782265191",
+      "reviewerUrl": "https://www.google.com/maps/contrib/114569715134782265191?hl=en",
+      "name": "Nur Anessa Emylia",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIkBhL9FgvQ8dhdavXgVR0RIw6CMMpKv2-Yp97VDsrNtUDVkII=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "3 days ago",
+      "publishedAtDate": "2025-11-12T04:51:07.464Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2s1VmQycGhiemROVEROaGMxZDVaa2t5VDNWQ2QyYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s1VmQycGhiemROVEROaGMxZDVaa2t5VDNWQ2QyYxAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOk5Vd2phbzdNTDNhc1d5ZkkyT3VCd2c%7C0d407vQfGlY%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "110899014530600801262",
+      "reviewerUrl": "https://www.google.com/maps/contrib/110899014530600801262?hl=en",
+      "name": "Emily Ooi",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLy03rlj0Se0vmh4A7jBelJD7XIvTiFAa3BoAjaY3glItqzNA=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T08:41:09.919Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT214QlVuWjFOa0pLUTI5SU56ZEZaRUZvZFVKeFdrRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT214QlVuWjFOa0pLUTI5SU56ZEZaRUZvZFVKeFdrRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOmxBUnZ1NkJKQ29INzdFZEFodUJxWkE%7C0d3jP_qnr3G%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "115370062413868158538",
+      "reviewerUrl": "https://www.google.com/maps/contrib/115370062413868158538?hl=en",
+      "name": "Nur Dayana Batrisyia",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKpa3u6eiyf6HErG7yZnhaopUZsJTJbmCBaVuaxI8Ynp6AXOKs=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T03:07:00.085Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21SdFNuZEpjM1IzWW10clJVY3dWa040Vkc1WU1WRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21SdFNuZEpjM1IzWW10clJVY3dWa040Vkc1WU1WRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOmRtSndJc3R3YmtrRUcwVkN4VG5YMVE%7C0d3eWJ45Pvp%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "105666049083662056907",
+      "reviewerUrl": "https://www.google.com/maps/contrib/105666049083662056907?hl=en",
+      "name": "tasnim zamrie",
+      "reviewerNumberOfReviews": 4,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjUMCuIuwwjhg2gBd7ioVPRmv3H1iJ2RAq9NLknaigtSLXQ3X2cJ=s1920-c-rp-mo-br100",
+      "text": "Staf2 semua ramah mesar. Doktor membuat rawat sgt bagus dan tidak sakit.",
+      "textTranslated": "The staff were all very friendly. The doctor provided excellent care and was painless.",
+      "publishAt": "5 days ago",
+      "publishedAtDate": "2025-11-10T07:14:44.503Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2paeWJEVlFMVUZaV1RWRlZVc3dkRUpMU0dWbk4wRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2paeWJEVlFMVUZaV1RWRlZVc3dkRUpMU0dWbk4wRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOjZybDVQLUFZWTVFVUswdEJLSGVnN0E%7C0d3O2ZSyqq9%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "id",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "107392505200736341833",
+      "reviewerUrl": "https://www.google.com/maps/contrib/107392505200736341833?hl=en",
+      "name": "紫萱",
+      "reviewerNumberOfReviews": 3,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocK3ZYFJZ-l2GlxIpYcB0pz46VNVYNMo_Sz4gQyjPZzG7ByoYA=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "5 days ago",
+      "publishedAtDate": "2025-11-10T04:51:37.207Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2kxSlJuQmxUakJETmt0NFVITjZlRk52UzFGRE9GRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2kxSlJuQmxUakJETmt0NFVITjZlRk52UzFGRE9GRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOi1JRnBlTjBDNkt4UHN6eFNvS1FDOFE%7C0d3LxOBKiAa%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "117759508838011613950",
+      "reviewerUrl": "https://www.google.com/maps/contrib/117759508838011613950?hl=en",
+      "name": "Aleeeya Fea",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIiFSak1EzIkOmwqVZCrJHFkKnl4WVQBby7vB23v3YZ9v2WUw=s1920-c-rp-mo-br100",
+      "text": "Love the affordable price braces",
+      "textTranslated": null,
+      "publishAt": "5 days ago",
+      "publishedAtDate": "2025-11-09T09:35:32.906Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tKelJteHhVMVJMV1VKMFpHMTJPVVpNWDJnNU5sRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKelJteHhVMVJMV1VKMFpHMTJPVVpNWDJnNU5sRRAB!2m1!1s0x0:0x5614a2de0a027716!3m1!1s2@1:CAIQACodChtycF9oOkJzRmxxU1RLWUJ0ZG12OUZMX2g5NlE%7C0d350Zq-AvG%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    }
+  ],
+  "leadsEnrichment": []
+},
+{
+  "title": "Joy Dental Clinic (Tanjung Tokong)",
+  "price": null,
+  "categoryName": "Dental clinic",
+  "address": "125-A, Tanjong Tokong Rd, Tanjung Tokong, 10470 George Town, Penang, Malaysia",
+  "neighborhood": "Tanjung Tokong",
+  "street": "125-A, Tanjong Tokong Rd",
+  "city": "George Town",
+  "postalCode": "10470",
+  "state": "Penang",
+  "countryCode": "MY",
+  "website": "https://www.joydental.com.my/",
+  "phone": "+60 12-599 8150",
+  "phoneUnformatted": "+60125998150",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 5.4517708,
+    "lng": 100.3060702
+  },
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJc-cLR2vDSjARTW6_7g54VwM",
+  "categories": [
+    "Dental clinic",
+    "Dentist",
+    "Denture care center",
+    "Teeth whitening service"
+  ],
+  "fid": "0x304ac36b470be773:0x357780eeebf6e4d",
+  "cid": "240793110618009165",
+  "reviewsCount": 139,
+  "imagesCount": 31,
+  "imageCategories": [
+    "All",
+    "Latest",
+    "By owner",
+    "Street View & 360°"
+  ],
+  "scrapedAt": "2025-11-15T09:27:14.063Z",
+  "googleFoodUrl": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "People also search for",
+      "title": "KLINIK PERGIGIAN MY HOME",
+      "reviewsCount": 31,
+      "totalScore": 4.8
+    },
+    {
+      "category": "People also search for",
+      "title": "Trinity Dental Surgery",
+      "reviewsCount": 74,
+      "totalScore": 4.8
+    },
+    {
+      "category": "People also search for",
+      "title": "Family Dental Clinic: Best Dentist in Penang",
+      "reviewsCount": 219,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "SmileBay Dental Surgery (Island 88) | Crown & Bridge, Invisalign, Smile Makeover, Dental Implant, Sleep Dentistry",
+      "reviewsCount": 205,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Joy Dental Clinic (Pulau Tikus)",
+      "reviewsCount": 105,
+      "totalScore": 5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "scaling",
+      "count": 10
+    },
+    {
+      "title": "clean",
+      "count": 8
+    },
+    {
+      "title": "environment",
+      "count": 7
+    },
+    {
+      "title": "nurses",
+      "count": 6
+    },
+    {
+      "title": "price",
+      "count": 6
+    },
+    {
+      "title": "fear",
+      "count": 5
+    },
+    {
+      "title": "whitening",
+      "count": 4
+    },
+    {
+      "title": "explanation",
+      "count": 4
+    },
+    {
+      "title": "filling",
+      "count": 4
+    },
+    {
+      "title": "skills",
+      "count": 4
+    }
+  ],
+  "additionalInfo": {
+    "Planning": [
+      {
+        "Appointment required": true
+      },
+      {
+        "Appointments recommended": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Parking": [
+      {
+        "On-site parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Joy%20Dental%20Clinic%20(Tanjung%20Tokong)&query_place_id=ChIJc-cLR2vDSjARTW6_7g54VwM",
+  "searchPageUrl": "https://www.google.com/maps/search/joy+dental+in+penang/@5.3923375,100.2606678,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D&hl=en",
+  "searchString": "joy+dental+in+penang",
+  "language": "en",
+  "rank": 2,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipP4G3aHDC-TindzhmgL5wVfSmdrQwAV8D_q3ftx=w408-h510-k-no",
+  "kgmid": "/g/11rwpg2l0x",
+  "subTitle": null,
+  "description": null,
+  "locatedIn": null,
+  "plusCode": "F824+PC George Town, Penang, Malaysia",
+  "menu": "https://www.joydental.com.my/",
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 1,
+    "fourStar": 1,
+    "fiveStar": 137
+  },
+  "reserveTableUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "additionalOpeningHours": null,
+  "openingHoursBusinessConfirmationText": null,
+  "questionsAndAnswers": [],
+  "updatesFromCustomers": null,
+  "inputPlaceId": null,
+  "userPlaceNote": null,
+  "webResults": [],
+  "tableReservationLinks": [],
+  "bookingLinks": [
+    {
+      "name": "wa.me",
+      "url": "https://wa.me/60127298150"
+    }
+  ],
+  "orderBy": [],
+  "restaurantData": {
+    "tableReservationProvider": null
+  },
+  "ownerUpdates": [
+    {
+      "text": "🦷【TEETH WHITENING only RM111*】💖\nExclusive 11.11 Promo ✨ Happening Now! \nTime to treat your smile with more savings.\nEnjoy a joyful limited-time promo this month:\n💛 Teeth Whitening RM111* (1 Cycle) Promo",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-11-05T07:50:31.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOdIPn13dz4P-UjcD7Y1hVkjcHX6zOrxVUA1PKa=h400-no"
+    },
+    {
+      "text": "😍【GEORGETOWN NOVEMBER PROMO】💖\nTime to treat your smile with more savings.✨\nEnjoy a joyful limited-time promo this month:\n💛 Joy Dental Clinic Scaling RM99*\n💛 Joy Braces from RM130 /month\n💛 Whitening (1 Cycle) RM230 only\n💛 Whitening (3 Cycle) RM590 only",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-11-05T07:48:41.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMq3PZ9XvGHu82xx5nt71M1EKdoWo_c6eGN09dy=h400-no"
+    },
+    {
+      "text": "【NOVEMBER JOY BRACES PROMO!】\n💛🦷 Let's Wear Joy Dental Clinic Braces as low as RM130/ monthly only ✅ Reliable and effective, using metal brackets to give you that perfect smile! ✅ Low Deposit ✅ Included Braces Consultation ✨",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-11-05T07:40:02.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipODSj7kpdCpNPZszLn4kQLflEURXIh6v-VDfwT3=h400-no"
+    },
+    {
+      "text": "🦷【HELLO SEPTEMBER SAVINGS!】💖\nTime to treat your smile with BIG savings.✨\nEnjoy amazing promo discounts this month:\n💛 1 +1 Scaling - RM188* (2 pax)\n💛 Joy Braces from RM130/month\n💛 Whitening (1 Cycle) from RM230!\n.\nDon’t miss out — smiles are better shared! 😁\n📞 WhatsApp us to book an appointment now:\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n.\nT&C apply, 1+1 scaling only available on selected clinics*",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-22T04:21:38.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMVm-jpwnYyPo0xLYsaSn1ZaMgzrMmIs3TnqwG2=h400-no"
+    },
+    {
+      "text": "🦷【HELLO SEPTEMBER SAVINGS!】💖\nTime to treat your smile with BIG savings.✨\nEnjoy amazing promo discounts this month:\n💛 1 +1 Scaling - RM188* (2 pax)\n💛 Joy Braces from RM130/month\n💛 Whitening (1 Cycle) from RM230!\n.\nDon’t miss out — smiles are better shared! 😁\n📞 WhatsApp us to book an appointment now:\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n.\nT&C apply, 1+1 scaling only available on selected clinics*",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-22T04:20:54.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNewwpOemAas8MAT-U9q4f5oeooSgS7CVXRFm9z=h400-no"
+    },
+    {
+      "text": "🦷【JOY SEPTEMBER SAVINGS!】✨\nDon't miss out on the Special Promo:\n💛 1 +1 Scaling - RM188* (2 pax)\n💛 Joy Braces from RM130/month\n💛 Whitening (1 Cycle) from RM230!\n.\nDon’t miss out — smiles are better shared! 😁\n📞 WhatsApp us to book an appointment now:\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n.\nT&C apply, 1+1 scaling only available on selected clinics*",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-22T04:05:21.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOgaCk5SRtkO3CU05tp1VtimPUI2OENQ92MK6Vc=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MALAYSIA DAY SPECIAL! 🇲🇾】\n🦷 Special Happy Malaysia Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!\n.\n📢 DON’T MISS OUT! 🗓️ Promo valid until 15th September 2025 (Monday) 📍 Available at all Joy Dental Clinic branches in Pulau Tikus, Tanjung Tokong, Raja Uda & Bayan Lepas.\n.\n⚡ Limited slots available – book your treatment now! 😉",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-03T08:49:26.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNOxbgbw032yWkaGnNHVcYMM89iij0yqqRaQVik=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MALAYSIA DAY SPECIAL! 🇲🇾】\n🦷 Special Happy Malaysia Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!\n.\n📢 DON’T MISS OUT! 🗓️ Promo valid until 15th September 2025 (Monday) 📍 Available at all Joy Dental Clinic branches in Pulau Tikus, Tanjung Tokong, Raja Uda & Bayan Lepas.\n.\n⚡ Limited slots available – book your treatment now! 😉",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-03T08:49:03.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOw8cCEvelhk3FNUdt5T51Z_2p6jLyYXYxIS1yB=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-24T04:59:48.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMON49HSF8fwPdEaYIl5YeZlsbawR_MxyoRkMpk=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-23T04:16:22.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipPPrcZlFUpN0jIjkvyTsvg5UdRQbH6rzgsT0duk=h400-no"
+    }
+  ],
+  "imageUrls": [
+    "https://lh3.googleusercontent.com/p/AF1QipP4G3aHDC-TindzhmgL5wVfSmdrQwAV8D_q3ftx=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzNB1kpZEJqASoAoZVm-KVeL_i8vXuGVn-GRYHPgw0fvE29cpGXlP_Hdt9qun8KaYSU5tQydY9pRYGtFT0MnAi_I4XH5HKOjncLxjl4NX3kL73JCFRPayGYoPzvBIggFB7sSgEG4b_WlWy3=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPrLDZjJQKp8xaVTp09j_Jsm7BsbfF68F73s6xf=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyJkTFhO_J8jdtnXammYEuEnLkgOATfrtY4i1CEDOHqS-3Qt1dBIkHx5i45tJ1Vx3XkKdaYJCHB6Xw-lv2P5sxMHvyVAcnkABD79UCBjzX79EG8r5t-dje26WOgB0qg7nrKLj4Lyf1onQo=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwMkGdovBdcdiJ-sk94RAuRk5qeVA9O6WYJafkDeTN3NVC_7LofmNUhYRX7jRsTrBp6mv-Hrf_Q7NG7EOrcwGOHJ-Jy2pZIAzO6nHs-j2tqeestkJd70q5XwoNVh9wznkU_lcfryJS-Q9ic=w1920-h1080-k-no"
+  ],
+  "images": null,
+  "reviews": [
+    {
+      "reviewerId": "117218883688453904822",
+      "reviewerUrl": "https://www.google.com/maps/contrib/117218883688453904822?hl=en",
+      "name": "Eyssa Alia",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIBHFdMGGdHvM6bO7yTkwQlMMf1WT3vNcK2okkQ-K2kq4CMGw=s1920-c-rp-mo-br100",
+      "text": "I came here for scaling. Dr Jasmine was super friendly and not painful at all. My teeth was super clean after the treatment. I will definitely come here for check up!",
+      "textTranslated": null,
+      "publishAt": "an hour ago",
+      "publishedAtDate": "2025-11-15T07:37:34.803Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xreVpYSnVkVEZUY21vemFFTlphbGxFVkUwdFUyYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xreVpYSnVkVEZUY21vemFFTlphbGxFVkUwdFUyYxAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOlkyZXJudTFTcmozaENZallEVE0tU2c%7C0d51qyjuNvy%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "113854252396186551445",
+      "reviewerUrl": "https://www.google.com/maps/contrib/113854252396186551445?hl=en",
+      "name": "Lovely Manalo",
+      "reviewerNumberOfReviews": 4,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocImoLW-AJSNmXF-DML9lJh0bxjqyzmcNbOYB895Y0efKNtR=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "5 hours ago",
+      "publishedAtDate": "2025-11-15T03:32:33.017Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tjek4zaHVSVGRIUzNsMGNIVk9SUzF4YjFGUmMzYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tjek4zaHVSVGRIUzNsMGNIVk9SUzF4YjFGUmMzYxAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOkczN3huRTdHS3l0cHVORS1xb1FRc3c%7C0d4zGG02XNL%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "112171305368177475332",
+      "reviewerUrl": "https://www.google.com/maps/contrib/112171305368177475332?hl=en",
+      "name": "Afiq Cool",
+      "reviewerNumberOfReviews": 5,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWdOrnq0RWn2PbrxkhYkQBc6y1PeTmdFJkTGG65yOdrm4xUW6ev=s1920-c-rp-mo-br100",
+      "text": "Just come for scalling. Dr jasmine really good and make sure my teeth clean even tho i have sensitive tooth but she make sure I don't feel it. 100% recommend 👍🏻",
+      "textTranslated": null,
+      "publishAt": "a day ago",
+      "publishedAtDate": "2025-11-14T06:40:39.761Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xsUVprMTRkVmxCTmxWNlUwdzNiSEppYVRKQ00yYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsUVprMTRkVmxCTmxWNlUwdzNiSEppYVRKQ00yYxAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOllQZk14dVlBNlV6U0w3bHJiaTJCM2c%7C0d4gvbhP2zL%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "111866658438746140087",
+      "reviewerUrl": "https://www.google.com/maps/contrib/111866658438746140087?hl=en",
+      "name": "Chillz Cafe Ambience Yoga",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXytzbX0PpsxEHvI3a68H8qgjH92WL7JCe4ctOdog9jEZ8Xzns=s1920-c-rp-mo-br100",
+      "text": "My husband and myself had a recent teeth scaling by Dr Jasmine Hun. We really appreciated Dr Jasmine for her patience and thorough explanation during the process of scaling. She has made us feel comfortable throughout our 2nd visit with her.\nThank you and we will definitely be back for our routine dental check up.\nSincerely,\nIan and Lydia",
+      "textTranslated": null,
+      "publishAt": "a day ago",
+      "publishedAtDate": "2025-11-14T06:02:53.897Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT210VlIxbHBhRVpQVVV3M1kwaFNZMmQ1Tm5wTWFIYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT210VlIxbHBhRVpQVVV3M1kwaFNZMmQ1Tm5wTWFIYxAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOmtVR1lpaEZPUUw3Y0hSY2d5NnpMaHc%7C0d4gNCpUWcA%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "114530618708660664607",
+      "reviewerUrl": "https://www.google.com/maps/contrib/114530618708660664607?hl=en",
+      "name": "JustinTime",
+      "reviewerNumberOfReviews": 12,
+      "isLocalGuide": true,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjU5tQ7cWrQVw9bdWUGjDBovO87LMIXRM043XizrmnhkAxGn4O52=s1920-c-rp-mo-ba2-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "a day ago",
+      "publishedAtDate": "2025-11-14T03:44:31.107Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT25vd2NWZFVabEpaY1RGaVRWOTNOelpCU20xVVRGRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25vd2NWZFVabEpaY1RGaVRWOTNOelpCU20xVVRGRRAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOnowcVdUZlJZcTFiTV93NzZBSm1UTFE%7C0d4eLU5OpcN%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "106651915572740016900",
+      "reviewerUrl": "https://www.google.com/maps/contrib/106651915572740016900?hl=en",
+      "name": "go live",
+      "reviewerNumberOfReviews": 5,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKbNeEYfb-TS-pr3Vx3ZKHEAKAeu7m-o52ho8rikkeJPhG27A=s1920-c-rp-mo-br100",
+      "text": "Good environment , staff was helpful and polite. Dentist was friendly and explain clearly on the condition of teeth. Also, mentioned how to take care of teeth.",
+      "textTranslated": null,
+      "publishAt": "2 weeks ago",
+      "publishedAtDate": "2025-11-01T04:07:30.122Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xOQ1kwZDZUMFU0VmpONVprWldVVmxyVEhCS05XYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xOQ1kwZDZUMFU0VmpONVprWldVVmxyVEhCS05XYxAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOlNCY0d6T0U4VjN5ZkZWUVlrTHBKNWc%7C0d0NT16JEOT%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:59:02.000Z",
+      "responseFromOwnerText": "Thank you for your rating! We are committed to providing great service, and we truly appreciate your trust. Should you have any dental concerns or need care in the future, we are always here to help. ",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "110923553617037998966",
+      "reviewerUrl": "https://www.google.com/maps/contrib/110923553617037998966?hl=en",
+      "name": "BHOVITASINEE MUTHU KUMAR",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJ1ev9mH6kF998kNZcsVBiihl1U0h7v_Es0eWhHQ6iV2K8vZQ=s1920-c-rp-mo-br100",
+      "text": "I had a few treatments at Joy Dental Tanjung Tokong with Dr. Jasmine, and her hands are truly magical! I didn’t feel any pain after every treatment — even after an extraction, there was absolutely no discomfort. Yesterday, I had a root canal treatment, and it was completely smooth and painless.\n\nWhat I really appreciate is that the next day after every treatment, they always follow up to ask how I’m feeling and whether everything is okay. Dr. Jasmine and all the staff are very polite, caring, and professional. Highly recommended!",
+      "textTranslated": null,
+      "publishAt": "2 weeks ago",
+      "publishedAtDate": "2025-10-29T03:15:39.789Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xJeWVVZHBOekIzTUhSM2NUWk5OVkZKTWtkdlYwRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xJeWVVZHBOekIzTUhSM2NUWk5OVkZKTWtkdlYwRRAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOlIyeUdpNzB3MHR3cTZNNVFJMkdvV0E%7C0d-NQQj1Aqp%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T03:06:29.000Z",
+      "responseFromOwnerText": "Thank you for this incredible feedback! We are thrilled to hear that Dr. Jasmine’s treatments—even the extraction and root canal—were completely painless and smooth. We're especially proud of our team's commitment to follow-up care; ensuring your comfort and relief is our highest priority. We truly appreciate your high recommendation!",
+      "reviewImageUrls": [
+        "https://lh3.googleusercontent.com/geougc-cs/AMBA38uj8JFlFoIlOV7st-sacdF11wMT5QDsI1Ny6sffTl9HyMTIrI7uX5BDV-X8OAl8yRsvU63h7wJ8vShzbdFW1RQAlWKhj2-d23ZKwQgx3bto2dGSkmPYgpVx93UfSBlS3hyxA3-C2fVD24vv"
+      ],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "105272879909391774532",
+      "reviewerUrl": "https://www.google.com/maps/contrib/105272879909391774532?hl=en",
+      "name": "Diana Zaidi",
+      "reviewerNumberOfReviews": 3,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVENHqAKYbUGfz6sjKl2v44l8l7ITm-3eO7ozALfekXJx8xdUQzqw=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "2 weeks ago",
+      "publishedAtDate": "2025-10-29T03:02:47.393Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xZeE1XUnBOM2xGZEVaaGRWRjZVSEpWWDJsaU9XYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xZeE1XUnBOM2xGZEVaaGRWRjZVSEpWWDJsaU9XYxAB!2m1!1s0x0:0x357780eeebf6e4d!3m1!1s2@1:CAIQACodChtycF9oOlYxMWRpN3lFdEZhdVF6UHJVX2liOWc%7C0d-NEMMTwID%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:49:50.000Z",
+      "responseFromOwnerText": "Thank you for your rating! We are committed to providing great service, and we truly appreciate your trust. Should you have any dental concerns or need care in the future, we are always here to help. ",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    }
+  ],
+  "leadsEnrichment": []
+},
+{
+  "title": "Joy Dental Clinic (Pulau Tikus)",
+  "price": null,
+  "categoryName": "Dental clinic",
+  "address": "33-B, Jalan Cantonment, Pulau Tikus, 10350 George Town, Pulau Pinang, Malaysia",
+  "neighborhood": "Pulau Tikus",
+  "street": "33-B, Jalan Cantonment",
+  "city": "George Town",
+  "postalCode": "10350",
+  "state": "Penang",
+  "countryCode": "MY",
+  "website": "https://www.joydental.com.my/",
+  "phone": "+60 12-775 8150",
+  "phoneUnformatted": "+60127758150",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 5.431007,
+    "lng": 100.311189
+  },
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJgRUFvvnDSjAR36WXNcBfdbI",
+  "categories": [
+    "Dental clinic",
+    "Dentist",
+    "Denture care center",
+    "Teeth whitening service"
+  ],
+  "fid": "0x304ac3f9be051581:0xb2755fc03597a5df",
+  "cid": "12859289590163809759",
+  "reviewsCount": 105,
+  "imagesCount": 19,
+  "imageCategories": [
+    "All",
+    "Latest",
+    "By owner",
+    "Street View & 360°"
+  ],
+  "scrapedAt": "2025-11-15T09:27:14.497Z",
+  "googleFoodUrl": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "9 AM to 5 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "Closed"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "People also search for",
+      "title": "Joy Dental Clinic (Tanjung Tokong)",
+      "reviewsCount": 135,
+      "totalScore": 5
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian Joy Dental (I-avenue)",
+      "reviewsCount": 849,
+      "totalScore": 5
+    },
+    {
+      "category": "People also search for",
+      "title": "Wong & Sim Dental Clinic (Pulau Tikus)",
+      "reviewsCount": 233,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Peng Keong Lim Dental Surgery",
+      "reviewsCount": 3,
+      "totalScore": 5
+    },
+    {
+      "category": "People also search for",
+      "title": "Mah Chiou-Fen",
+      "reviewsCount": 3,
+      "totalScore": 3.7
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "scaling",
+      "count": 13
+    },
+    {
+      "title": "whitening",
+      "count": 9
+    },
+    {
+      "title": "dental care",
+      "count": 6
+    },
+    {
+      "title": "price",
+      "count": 6
+    },
+    {
+      "title": "skills",
+      "count": 4
+    },
+    {
+      "title": "environment",
+      "count": 3
+    },
+    {
+      "title": "explanation",
+      "count": 3
+    },
+    {
+      "title": "the visit",
+      "count": 2
+    },
+    {
+      "title": "pun",
+      "count": 2
+    },
+    {
+      "title": "personality",
+      "count": 2
+    }
+  ],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Planning": [
+      {
+        "Appointment required": true
+      },
+      {
+        "Appointments recommended": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Children": [
+      {
+        "Nursing room": true
+      }
+    ],
+    "Parking": [
+      {
+        "On-site parking": true
+      },
+      {
+        "Paid parking garage": true
+      },
+      {
+        "Paid parking lot": true
+      },
+      {
+        "Paid street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Joy%20Dental%20Clinic%20(Pulau%20Tikus)&query_place_id=ChIJgRUFvvnDSjAR36WXNcBfdbI",
+  "searchPageUrl": "https://www.google.com/maps/search/joy+dental+in+penang/@5.3923375,100.2606678,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D&hl=en",
+  "searchString": "joy+dental+in+penang",
+  "language": "en",
+  "rank": 3,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMmPXh4sqAmGG0BvdPc16okAw4XTtoJkhJDz_xe=w408-h510-k-no",
+  "kgmid": "/g/11lv1z0rj_",
+  "subTitle": null,
+  "description": null,
+  "locatedIn": null,
+  "plusCode": "C8J6+CF George Town, Penang, Malaysia",
+  "menu": null,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 1,
+    "fiveStar": 104
+  },
+  "reserveTableUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "additionalOpeningHours": null,
+  "openingHoursBusinessConfirmationText": null,
+  "questionsAndAnswers": [],
+  "updatesFromCustomers": null,
+  "inputPlaceId": null,
+  "userPlaceNote": null,
+  "webResults": [],
+  "tableReservationLinks": [],
+  "bookingLinks": [
+    {
+      "name": "wa.me",
+      "url": "https://wa.me/60127298150"
+    }
+  ],
+  "orderBy": [],
+  "restaurantData": {
+    "tableReservationProvider": null
+  },
+  "ownerUpdates": [
+    {
+      "text": "🦷【TEETH WHITENING only RM111*】💖\nExclusive 11.11 Promo ✨ Happening Now! \nTime to treat your smile with more savings.\nEnjoy a joyful limited-time promo this month:\n💛 Teeth Whitening RM111* (1 Cycle) Promo",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-11-05T07:50:34.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMV2gWzbNn3EBLdlCsP6r2R7pOXHTxLG7TziRws=h400-no"
+    },
+    {
+      "text": "😍【GEORGETOWN NOVEMBER PROMO】💖\nTime to treat your smile with more savings.✨\nEnjoy a joyful limited-time promo this month:\n💛 Joy Dental Clinic Scaling RM99*\n💛 Joy Braces from RM130 /month\n💛 Whitening (1 Cycle) RM230 only\n💛 Whitening (3 Cycle) RM590 only",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-11-05T07:48:47.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNab7OKw3l4W9Kw_tnbk-DV7uTSR75BGseL527t=h400-no"
+    },
+    {
+      "text": "【NOVEMBER JOY BRACES PROMO!】\n💛🦷 Let's Wear Joy Dental Clinic Braces as low as RM130/ monthly only ✅ Reliable and effective, using metal brackets to give you that perfect smile! ✅ Low Deposit ✅ Included Braces Consultation ✨",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-11-05T07:40:03.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipO9F4bEwGDdoOOGG21Sp7wA1XT7-zsMVicB8K2b=h400-no"
+    },
+    {
+      "text": "🦷【HELLO SEPTEMBER SAVINGS!】💖\nTime to treat your smile with BIG savings.✨\nEnjoy amazing promo discounts this month:\n💛 1 +1 Scaling - RM188* (2 pax)\n💛 Joy Braces from RM130/month\n💛 Whitening (1 Cycle) from RM230!\n.\nDon’t miss out — smiles are better shared! 😁\n📞 WhatsApp us to book an appointment now:\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n.\nT&C apply, 1+1 scaling only available on selected clinics*",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-22T04:21:39.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipPrOIZ4-nKeZ7y-xbIrXUBx4sGc0LpGl66Ru6sv=h400-no"
+    },
+    {
+      "text": "🦷【HELLO SEPTEMBER SAVINGS!】💖\nTime to treat your smile with BIG savings.✨\nEnjoy amazing promo discounts this month:\n💛 1 +1 Scaling - RM188* (2 pax)\n💛 Joy Braces from RM130/month\n💛 Whitening (1 Cycle) from RM230!\n.\nDon’t miss out — smiles are better shared! 😁\n📞 WhatsApp us to book an appointment now:\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n.\nT&C apply, 1+1 scaling only available on selected clinics*",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-22T04:20:58.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMTAHXCn29EJsQOIONqonnromGDAhyax2d3g5xt=h400-no"
+    },
+    {
+      "text": "🦷【JOY SEPTEMBER SAVINGS!】✨\nDon't miss out on the Special Promo:\n💛 1 +1 Scaling - RM188* (2 pax)\n💛 Joy Braces from RM130/month\n💛 Whitening (1 Cycle) from RM230!\n.\nDon’t miss out — smiles are better shared! 😁\n📞 WhatsApp us to book an appointment now:\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n.\nT&C apply, 1+1 scaling only available on selected clinics*",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-22T04:05:23.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNMuOOfEKAKaq6pzCKkidmSvx8gD3imtOl-h5uv=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MALAYSIA DAY SPECIAL! 🇲🇾】\n🦷 Special Happy Malaysia Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!\n.\n📢 DON’T MISS OUT! 🗓️ Promo valid until 15th September 2025 (Monday) 📍 Available at all Joy Dental Clinic branches in Pulau Tikus, Tanjung Tokong, Raja Uda & Bayan Lepas.\n.\n⚡ Limited slots available – book your treatment now! 😉",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-03T08:49:37.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipMT_W-ZesbvP_vpF2cwjyhqOyYsM1T5EaAKeNx9=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MALAYSIA DAY SPECIAL! 🇲🇾】\n🦷 Special Happy Malaysia Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!\n.\n📢 DON’T MISS OUT! 🗓️ Promo valid until 15th September 2025 (Monday) 📍 Available at all Joy Dental Clinic branches in Pulau Tikus, Tanjung Tokong, Raja Uda & Bayan Lepas.\n.\n⚡ Limited slots available – book your treatment now! 😉",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-03T08:49:07.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipN_7pFFPxLHqonj-1pgdTlcMEuiq8knukJZK5WZ=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-24T05:00:01.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipN-OdlR7U1YYQ2bvA6Hgb5a0t8zd5isgQN1q2sZ=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Joy Dental Clinic – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-23T04:16:17.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNLsQ3oxWqlHzy1cvt1lIxXdJ6fP6HtGd2UFQqr=h400-no"
+    }
+  ],
+  "imageUrls": [
+    "https://lh3.googleusercontent.com/p/AF1QipMmPXh4sqAmGG0BvdPc16okAw4XTtoJkhJDz_xe=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxQoMP3laI5cc5PAOnJegNEAS8lN4Xk4nk2YRTRDQQq388i-LX380fjMiNoz_XqSuvm5Jwz-YKxDnJ1Qa25mMCZP_rzS7HLdi337LADezly1xvv4GBSW0MAmxopWsHtNS-ZQH4=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwWmJhZTi3D4mHFLHduZ7ZCUqGIB6dA0rOUII7WoQxwRROYZ4pnpCo_VcO6HQ65rzJJ4XD9EtxUU91MF5ycR-fV5f7ALPWLABf8rk0GQbfPGg0hMCdW85FnEiSqck8Gi2aJrB0Z=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwyC5u8ohJpW9JaqdA_-VYpSGabtXFI5kI_hnm4eHuq85Zyh93_VgykTkzZgVryYJy0Kf7eQVlNYhQgJGFk1ygCLUcQ7rAkEUiKv-vYnoY1UCV0kJ4ynf8Ur3p-iNFHDonsWV6UuoZPCC7W=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxyH8mAotzkiG2Qasl_Y6_Hflzs1tvPIEC6CwQ9AxHIQFy5Yv8SIjpWtxqNWQ7O_MsQIEeaDZbj3-OexrMYt4emjY89Hq3yGgZ2cavrdiRTHRQVkgQfUGv22OqFEfHOXdGBhkKNtLW0FjA=w1920-h1080-k-no"
+  ],
+  "images": null,
+  "reviews": [
+    {
+      "reviewerId": "106645310082432491633",
+      "reviewerUrl": "https://www.google.com/maps/contrib/106645310082432491633?hl=en",
+      "name": "Sri Viswatharani",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXYfT-zgDuzAaTmvIvMSsZBjXn0ZiBoOV3eo2h7pag7ITn7KInW=s1920-c-rp-mo-br100",
+      "text": "I had a great experience at JoyDental I came in for a scaling service and was really impressed with the care and attention from the whole team. The staff were kind, gentle, and made me feel very comfortable throughout the visit. My teeth feel super clean, and I appreciate how professional and friendly everyone was. Highly recommend JoyDental for anyone looking for quality dental care!",
+      "textTranslated": null,
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T07:39:11.531Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tKb1JFRnhTRXRhWjI5bmJtSlRlRnAyZGpaMlNtYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKb1JFRnhTRXRhWjI5bmJtSlRlRnAyZGpaMlNtYxAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOkJoREFxSEtaZ29nbmJTeFp2djZ2Smc%7C0d3iVUUfeCz%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "117262456634836420928",
+      "reviewerUrl": "https://www.google.com/maps/contrib/117262456634836420928?hl=en",
+      "name": "Kaydee Toh",
+      "reviewerNumberOfReviews": 4,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXzhN_gvW1DGWJ-C2ehm5H3Io-YIYDRg5ajplLPFTgisdKSqJ4=s1920-c-rp-mo-br100",
+      "text": "The doctor is very attentive, and the nurses are very experienced.",
+      "textTranslated": null,
+      "publishAt": "a week ago",
+      "publishedAtDate": "2025-11-08T03:04:33.014Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21kNWJrcEpYMTlQVVZRM1ZrVmZhekU1Um1Kd1EyYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kNWJrcEpYMTlQVVZRM1ZrVmZhekU1Um1Kd1EyYxAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOmd5bkpJX19PUVQ3VkVfazE5RmJwQ2c%7C0d2fC0-t2kr%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "101133780452555727638",
+      "reviewerUrl": "https://www.google.com/maps/contrib/101133780452555727638?hl=en",
+      "name": "Megawati Tanjung",
+      "reviewerNumberOfReviews": 10,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjX9TSD2rpVOe9Osc63y0JzxHCy175aXP1lBRpFmD2lBNp6xtww=s1920-c-rp-mo-br100",
+      "text": "Great environment, nice music. Friendly service.",
+      "textTranslated": null,
+      "publishAt": "a week ago",
+      "publishedAtDate": "2025-11-08T02:26:55.027Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT205elFXaGliRmd4VGw4MlNtdFBabVExTFdkSmFXYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT205elFXaGliRmd4VGw4MlNtdFBabVExTFdkSmFXYxAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOm9zQWhibFgxTl82SmtPZmQ1LWdJaWc%7C0d2edj0dWV6%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:46:44.000Z",
+      "responseFromOwnerText": "Thank you for the wonderful feedback! We're thrilled to hear you enjoyed the great environment, music, and friendly service. We strive to make every visit comfortable and welcoming! Should you have any dental concerns or need care in the future, we are always here to help. ",
+      "reviewImageUrls": [
+        "https://lh3.googleusercontent.com/geougc-cs/AMBA38uTFSsZs9s_ZXQBjAvzn-jQo5gl-401vtKwBnhtfrJfkaVObKf5JJA0Bfvy0cFaH8H1UFRp6DfKQWiFGgdcgS4X3kgTGWSPUD4w8uez6sWe-VTYR8GGz41FWZHZP33Os2WAZY7oUFinNpY"
+      ],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "106306994590295767322",
+      "reviewerUrl": "https://www.google.com/maps/contrib/106306994590295767322?hl=en",
+      "name": "PY Teng",
+      "reviewerNumberOfReviews": 6,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVf-xnM6xeXxo1fM-YVRrMNKsEYVJWLX0MSeP0q_PdygsdrsknW=s1920-c-rp-mo-br100",
+      "text": "Had a wonderful experience at Joy Dental Clinic. Dr Gillian Tham was very detail-oriented. She explained every step of the procedure and all the questions I had from my first consultation, scaling, and lastly, the whitening treatment. It was an overall pleasant trip and the staffs were friendly and helpful too. Highly recommended!",
+      "textTranslated": null,
+      "publishAt": "a week ago",
+      "publishedAtDate": "2025-11-07T01:40:18.385Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2w5M2FsaHNOVTFRV0dwbkxYazJhMmd4T1VwMlkwRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2w5M2FsaHNOVTFRV0dwbkxYazJhMmd4T1VwMlkwRRAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOl93alhsNU1QWGpnLXk2a2gxOUp2Y0E%7C0d2Js1M-M8Y%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:41:46.000Z",
+      "responseFromOwnerText": "Thank you for your rating! We are committed to providing great service, and we truly appreciate your trust. Should you have any dental concerns or need care in the future, we are always here to help. ",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "111684553169746387529",
+      "reviewerUrl": "https://www.google.com/maps/contrib/111684553169746387529?hl=en",
+      "name": "Grace R.",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjWh-Q1DrIxKUfHU87fZagJg1xZnq0DWESzlZb0fjyACl1HoPHXe=s1920-c-rp-mo-br100",
+      "text": "At first my friend recommend me to go for this clinic its just beside the Bandar Baru, Pulau Tikus area. For me, the service was very good and there is a space for you to sit while waiting even the dentist was very thoroughly in explaining on how to take care of your mouth hygiene especially with braces and I'll come again.. For the new ones who would like to come its better to text them before to see if there is an open appointment.",
+      "textTranslated": null,
+      "publishAt": "a week ago",
+      "publishedAtDate": "2025-11-05T01:24:56.991Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2poSlV6Z3daVnBQZUVSaWVHTnZOeTFJTFZwemJGRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2poSlV6Z3daVnBQZUVSaWVHTnZOeTFJTFZwemJGRRAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOjhJUzgwZVpPeERieGNvNy1ILVpzbFE%7C0d1eScv4PbM%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:43:23.000Z",
+      "responseFromOwnerText": "Thank you for sharing your experience and the wonderful recommendation! We are thrilled that the service and the thorough hygiene explanations for your braces made such a positive impression. We also appreciate you sharing the tip about checking appointments—we look forward to welcoming you back!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "101494932882514243748",
+      "reviewerUrl": "https://www.google.com/maps/contrib/101494932882514243748?hl=en",
+      "name": "Nurul Aida",
+      "reviewerNumberOfReviews": 6,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXOEstTR--COs2g2RAgF-81WIWCmsdJsxzFM1siXh45QhcZcIJQ=s1920-c-rp-mo-br100",
+      "text": "appointment for scaling with my son 3y/o at Joy Dental Clinic was awesome. All staff was so friendly and polite, my son good 1st experience scaling because feel comfortable with clinic amenities and tool. The Doctor and staff also good experience handling toddlers.",
+      "textTranslated": null,
+      "publishAt": "a week ago",
+      "publishedAtDate": "2025-11-04T02:41:34.451Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tkTGNuQnlObXN6V0V4QmRUWnZjV3R6WWtGV2FHYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tkTGNuQnlObXN6V0V4QmRUWnZjV3R6WWtGV2FHYxAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOkdLcnByNmszWExBdTZvcWtzYkFWaGc%7C0d1LUTPshMw%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:44:34.000Z",
+      "responseFromOwnerText": "This means the world to us! We are thrilled to hear that the friendly staff and the entire team provided such a comfortable and positive first scaling experience for your 3-year-old son. Handling toddlers with care is a priority, and we appreciate you recognizing our efforts!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "106147907605967974253",
+      "reviewerUrl": "https://www.google.com/maps/contrib/106147907605967974253?hl=en",
+      "name": "Rou Ning Leow",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKrPQqrLLvJMtjDQcQGStBhWIcnhbwL_Je9n4SrhkH0LSinUg=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "a week ago",
+      "publishedAtDate": "2025-11-03T03:03:18.284Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2poUmRHOXBkMUpYV1hObGRUbEZkblF4Y0ZCdGJYYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2poUmRHOXBkMUpYV1hObGRUbEZkblF4Y0ZCdGJYYxAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOjhRdG9pd1JXWXNldTlFdnQxcFBtbXc%7C0d10hqFvxJt%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:45:53.000Z",
+      "responseFromOwnerText": "Thank you for your rating! We are committed to providing great service, and we truly appreciate your trust. Should you have any dental concerns or need care in the future, we are always here to help. ",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "109575504776460593936",
+      "reviewerUrl": "https://www.google.com/maps/contrib/109575504776460593936?hl=en",
+      "name": "Arrow GAMER Bd",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVX5nGcdZtKQ56zBR_UsUCBq-NWdRxSFvDX9_XnaMxqwKpD3Vg=s1920-c-rp-mo-br100",
+      "text": null,
+      "textTranslated": null,
+      "publishAt": "2 weeks ago",
+      "publishedAtDate": "2025-10-29T07:29:32.689Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2todFZqUnJTa010VEdkTVZqSldYMFUyWm1salMwRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2todFZqUnJTa010VEdkTVZqSldYMFUyWm1salMwRRAB!2m1!1s0x0:0xb2755fc03597a5df!3m1!1s2@1:CAIQACodChtycF9oOkhtVjRrSkMtTGdMVjJWX0U2ZmljS0E%7C0d-R8Rd3LvD%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-08T02:45:47.000Z",
+      "responseFromOwnerText": "Thank you for your rating! We are committed to providing great service, and we truly appreciate your trust. Should you have any dental concerns or need care in the future, we are always here to help. ",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": null,
+      "translatedLanguage": null
+    }
+  ],
+  "leadsEnrichment": []
+},
+{
+  "title": "Klinik Pergigian Joy Dental (I-avenue)",
+  "price": null,
+  "categoryName": "Dental clinic",
+  "address": "1-1, 37, Medan Kampung Relau 1, I-avenue, 11900 Bayan Lepas, Penang, Malaysia",
+  "neighborhood": "I-avenue",
+  "street": "1-1, 37, Medan Kampung Relau 1",
+  "city": "Bayan Lepas",
+  "postalCode": "11900",
+  "state": "Penang",
+  "countryCode": "MY",
+  "website": "https://www.joydental.com.my/",
+  "phone": "+60 10-719 8150",
+  "phoneUnformatted": "+60107198150",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 5.3329181,
+    "lng": 100.2934042
+  },
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJe7vbiLPBSjARquzRG9jB5Es",
+  "categories": [
+    "Dental clinic",
+    "Dentist",
+    "Denture care center",
+    "Teeth whitening service"
+  ],
+  "fid": "0x304ac1b388dbbb7b:0x4be4c1d81bd1ecaa",
+  "cid": "5468708981458463914",
+  "reviewsCount": 852,
+  "imagesCount": 54,
+  "imageCategories": [
+    "All",
+    "Latest",
+    "By owner",
+    "Street View & 360°"
+  ],
+  "scrapedAt": "2025-11-15T09:27:16.206Z",
+  "googleFoodUrl": null,
+  "hotelAds": [],
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "10 AM to 1 PM, 2 to 6 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "10 AM to 1 PM, 2 to 6 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "10 AM to 1 PM, 2 to 6 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "Closed"
+    },
+    {
+      "day": "Friday",
+      "hours": "10 AM to 1 PM, 2 to 6 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "10 AM to 1 PM, 2 to 6 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "10 AM to 1 PM, 2 to 6 PM"
+    }
+  ],
+  "peopleAlsoSearch": [
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian Dentistree",
+      "reviewsCount": 100,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian Dentabay Krystal Point",
+      "reviewsCount": 483,
+      "totalScore": 4.9
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian Olive Dental",
+      "reviewsCount": 153,
+      "totalScore": 5
+    },
+    {
+      "category": "People also search for",
+      "title": "Klinik Pergigian Smile (smile dental surgery)",
+      "reviewsCount": 1100,
+      "totalScore": 5
+    },
+    {
+      "category": "People also search for",
+      "title": "Sunshine Dental Penang",
+      "reviewsCount": 306,
+      "totalScore": 5
+    }
+  ],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "braces",
+      "count": 93
+    },
+    {
+      "title": "doctorate",
+      "count": 26
+    },
+    {
+      "title": "public service",
+      "count": 20
+    },
+    {
+      "title": "scaling",
+      "count": 16
+    },
+    {
+      "title": "environment",
+      "count": 11
+    },
+    {
+      "title": "illnesses",
+      "count": 10
+    },
+    {
+      "title": "explanation",
+      "count": 8
+    },
+    {
+      "title": "liver",
+      "count": 7
+    },
+    {
+      "title": "check up",
+      "count": 6
+    },
+    {
+      "title": "good doctor",
+      "count": 5
+    }
+  ],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible restroom": false
+      },
+      {
+        "Wheelchair accessible seating": false
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Planning": [
+      {
+        "Appointment required": true
+      },
+      {
+        "Appointments recommended": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Parking": [
+      {
+        "On-site parking": true
+      },
+      {
+        "Paid parking garage": true
+      },
+      {
+        "Paid parking lot": true
+      },
+      {
+        "Paid street parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Klinik%20Pergigian%20Joy%20Dental%20(I-avenue)&query_place_id=ChIJe7vbiLPBSjARquzRG9jB5Es",
+  "searchPageUrl": "https://www.google.com/maps/search/joy+dental+in+penang/@5.3923375,100.2606678,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D&hl=en",
+  "searchString": "joy+dental+in+penang",
+  "language": "en",
+  "rank": 1,
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipMF_sIXioTyMtvi1SHCwX-T1_0TvaLw1MurNk8l=w408-h544-k-no",
+  "kgmid": "/g/11rtmysgvm",
+  "subTitle": null,
+  "description": null,
+  "locatedIn": null,
+  "plusCode": "87MV+59 Bayan Lepas, Penang, Malaysia",
+  "menu": null,
+  "reviewsDistribution": {
+    "oneStar": 2,
+    "twoStar": 0,
+    "threeStar": 2,
+    "fourStar": 3,
+    "fiveStar": 845
+  },
+  "reserveTableUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "similarHotelsNearby": null,
+  "hotelReviewSummary": null,
+  "additionalOpeningHours": null,
+  "openingHoursBusinessConfirmationText": null,
+  "questionsAndAnswers": [
+    {
+      "question": "My name is RASEL MOLLA, I have  taken treatment from this klinik, this klinik very good service.The receptionist is very pleasant and helpful. Thank you joy dental.",
+      "answers": [
+        {
+          "answer": "Dear RASEL MOLLA, Thank you for taking time to leave us a review. We appreciate your kind words about the service you received. Later on, you may recommend us to your friends too. We're thrilled to hear that you had a positive experience with us and we look forward to serving you again soon.",
+          "answeredBy": {}
+        }
+      ],
+      "askDate": "2 years ago",
+      "askedBy": {}
+    }
+  ],
+  "updatesFromCustomers": null,
+  "inputPlaceId": null,
+  "userPlaceNote": null,
+  "webResults": [],
+  "tableReservationLinks": [],
+  "bookingLinks": [
+    {
+      "name": "whatsapp.com",
+      "url": "https://api.whatsapp.com/send/?phone=60107198150&text&app_absent=0"
+    }
+  ],
+  "orderBy": [],
+  "restaurantData": {
+    "tableReservationProvider": null
+  },
+  "ownerUpdates": [
+    {
+      "text": "【🇲🇾JOY MALAYSIA DAY SPECIAL! 🇲🇾】\n🦷 Special Happy Malaysia Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Klinik Pergigian Joy Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!\n.\n📢 DON’T MISS OUT! 🗓️ Promo valid until 15th September 2025 (Monday) 📍 Available at Klinik Pergigian Joy Dental Bayan Lepas.\n.\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n⚡ Limited slots available – book your treatment now! 😉",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-03T09:04:06.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipPfDT3LRJFF0WLzJqNEo-LZWg4nWzNIpOAkdfBK=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MALAYSIA DAY SPECIAL! 🇲🇾】\n🦷 Special Happy Malaysia Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Klinik Pergigian Joy Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!\n.\n📢 DON’T MISS OUT! 🗓️ Promo valid until 15th September 2025 (Monday) 📍 Available at Klinik Pergigian Joy Dental Bayan Lepas.\n.\nPromo includes: ✅ Consultation Free ✨ NO Admin Fee\n⚡ Limited slots available – book your treatment now! 😉",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-09-03T09:03:49.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOQxobHiQ3crR1XbJ4pnjSojIXLlx5h7sDiKEkz=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Klinik Pergigian Joy Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-22T02:39:57.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNYXpf2RrARMf13a0KrIOP-LqWwW03LHZoascq3=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Klinik Pergigian Joy Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-21T09:24:36.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNAiE1jEp-RuOaWaNbnTobBv4ys1XD1pihL4lvF=h400-no"
+    },
+    {
+      "text": "【🇲🇾JOY MERDEKA DAY SPECIAL! 🇲🇾】\n🦷 Special 68th Happy Malaysia Independence Day Promo 🇲🇾✨ Teeth Whitening for only RM159* (1 cycle) at Klinik Pergigian Joy Dental – let’s keep Malaysia smiling fresh & healthy 🤩\n.\n🦷✨ 1 CYCLE WHITENING - RM159!\n🦷✨ 3 CYCLE WHITENING - RM408!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-21T09:24:11.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOwopNXb89njUsLO1oObigRzr0zRgQ0t9M8MHrn=h400-no"
+    },
+    {
+      "text": "Let’s hear what Dr. Zi has to say about braces myths! 🦷✨ Kindly book a consultation with us, & we’ll guide you step by step",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-08-20T09:26:42.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOZVXZvYfSGE5UaZSTArhlXGrXepq680tdESrZa=h400-no"
+    },
+    {
+      "text": "✨ Brighten Your Smile, Boost Your Confidence! ✨ Say goodbye to stains and hello to a radiant smile with our professional teeth whitening treatment at Joy Dental.\n✅ Safe, fast & effective ✅ Noticeable results in just one session ✅ Perfect for special events or everyday confidence",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-07-17T06:06:26.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOW2N8i2Oh_6SbOEwBme_vFt8U2M2MGSkEx-tIq=h400-no"
+    },
+    {
+      "text": "Tired, Doc? 🥲 Hang in there, stay strong! 💪🏻 No matter the treatment, we always give it our all.",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-06-25T07:15:40.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipOFK5f2m285FG-icdR_yXYqt3LqYhG2CVoWRkis=h400-no"
+    },
+    {
+      "text": "💛🦷 4 dental tips for pregnant women!",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-06-24T09:09:10.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipN6cWWRsZ9_ipWP6Od_07ZpFxe4QMUX2vJi0jx-=h400-no"
+    },
+    {
+      "text": "Say goodbye to pain before it starts! 🦷✨\nRemoving your wisdom teeth early can prevent crowding, jaw discomfort, infections, and damage to nearby teeth.\n\nIt’s a proactive step toward a healthier, happier smile — and easier healing while you're young! 😁💪",
+      "buttonText": "Call now",
+      "buttonLink": null,
+      "date": "2025-06-24T04:41:36.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipP64mMtLFNdTCdkezlQuKjuRbC1wSIcuNASNWcW=h400-no"
+    }
+  ],
+  "imageUrls": [
+    "https://lh3.googleusercontent.com/p/AF1QipMF_sIXioTyMtvi1SHCwX-T1_0TvaLw1MurNk8l=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxkaE7ItNT7r_QG_KZ6xCCGC3qMWlJxMmjrdMRkURcgHWUqP4Ze-EKYOV6NJJ2ZZeUD__mImKgs7UEybtOEmVVwR8qoPxLOHV25XYSD7BPs_G9HOrtaeFcvu8ztii89exhyHv4=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxOPhkNRHeh3eyP96dh7hMPMhb8cJls7yXKzqjOmpSZ1k_T5j02ItmJBL4VMIdl9g0OqOR3GD1aIOSUgh6ZNtgBQCi7JZ6jtH7KLo20nmIr_ouM1TzNg-URKqfVlaSG5ENtb0B2Lg=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzKF_wJ6dddjYThz8y0e9udfFP8bEtPebq8-Dxl4guWrbiutHuehc0CoOVbeWGSdPUFyPpjQ9eSWe2R6spEAs_k0M_yzdH_upk1Zg74sbXLS9Gjt0QI_tPNNRTYESbngDxcM6FhA0dk074=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPL-PTUuVdJoEwooujfeJ8n_Pjsv6e9QhMKUbSk=w1920-h1080-k-no"
+  ],
+  "images": null,
+  "reviews": [
+    {
+      "reviewerId": "108991345170957540042",
+      "reviewerUrl": "https://www.google.com/maps/contrib/108991345170957540042?hl=en",
+      "name": "aleeya adriana",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKBFXlycIGv4s9fGQ_gu2oNg91Bu3GcDPEyyLAPL9kPFBsd6FA=s1920-c-rp-mo-br100",
+      "text": "good service❤️",
+      "textTranslated": null,
+      "publishAt": "a minute ago",
+      "publishedAtDate": "2025-11-15T09:25:46.449Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21wQmMzVkZWVmxvTVROeGRURjNMVzVIVUZwUFNuYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21wQmMzVkZWVmxvTVROeGRURjNMVzVIVUZwUFNuYxAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOmpBc3VFVVloMTNxdTF3LW5HUFpPSnc%7C0d53RPPoUSq%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "105442120863567038705",
+      "reviewerUrl": "https://www.google.com/maps/contrib/105442120863567038705?hl=en",
+      "name": "NURULASHIKIN OTHMAN",
+      "reviewerNumberOfReviews": 2,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVUPQUM622jM-ZwNVbcv8FjFH1bqNj3q3HahvWLWTqTCERd8aw=s1920-c-rp-mo-br100",
+      "text": "Layan sangat baik",
+      "textTranslated": "Very good service",
+      "publishAt": "2 hours ago",
+      "publishedAtDate": "2025-11-15T07:16:59.276Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tKRWJGWmlXV1JtYURZM2RuRlBTVXAwVkdkUWFXYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKRWJGWmlXV1JtYURZM2RuRlBTVXAwVkdkUWFXYxAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOkJEbFZiWWRmaDY3dnFPSUp0VGdQaWc%7C0d51YfFSdlj%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": null,
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "ms",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "110160973530119142534",
+      "reviewerUrl": "https://www.google.com/maps/contrib/110160973530119142534?hl=en",
+      "name": "Puteri Nabila",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjV-gUqXXFMWjlBEq2tweI9uWfoGAqe1aAgKw5SEGi_ypUhHdP8=s1920-c-rp-mo-br100",
+      "text": "Best sini .. Dr buat lemah lembut 🥰🥰🥰",
+      "textTranslated": "Best here.. Dr. is gentle 🥰🥰🥰",
+      "publishAt": "a day ago",
+      "publishedAtDate": "2025-11-14T06:12:59.961Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tSaFVTMWpUbTk2V1daaGJHMU9TSFV3UVMxNk5rRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tSaFVTMWpUbTk2V1daaGJHMU9TSFV3UVMxNk5rRRAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOkRhUS1jTm96WWZhbG1OSHUwQS16NkE%7C0d4gWftJz3p%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-14T07:27:26.000Z",
+      "responseFromOwnerText": "Terima kasih Cik Puteri Nabila, kerana memberikan ulasan anda tentang servis kami🤗. Kami sangat gembira kerana mendengar bahawa anda berpuas hati dengan perkhidmatan kami. Nanti cik boleh recommend pada kawan-kawan .Kami berharap dapat melayani anda lagi dalam masa yang akan datang.😍",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "ms",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "105932415465288784415",
+      "reviewerUrl": "https://www.google.com/maps/contrib/105932415465288784415?hl=en",
+      "name": "Khaizhe",
+      "reviewerNumberOfReviews": 2,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjXpL7DoLopnxVrHHlTOcYlnHYL1BIlXcPzQb7RSDXAnpc1EkFPz=s1920-c-rp-mo-br100",
+      "text": "very great service",
+      "textTranslated": null,
+      "publishAt": "3 days ago",
+      "publishedAtDate": "2025-11-12T09:21:18.451Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT25GR1owVmtTMDFhYjA5dVVHUktkMll0VGpZNVYyYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25GR1owVmtTMDFhYjA5dVVHUktkMll0VGpZNVYyYxAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOnFGZ0VkS01ab09uUGRKd2YtTjY5V2c%7C0d445DPtzys%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-14T07:28:56.000Z",
+      "responseFromOwnerText": "Dear Khaizhe, Thank you for taking time to leave us a review.😊 We appreciate your kind words about the service you received.💕 Later on, you may recommend us to your friends too. We're thrilled to hear that you had a positive experience with us and we look forward to serving you again soon.🤗",
+      "reviewImageUrls": [
+        "https://lh3.googleusercontent.com/geougc-cs/AMBA38spcHln-pvNBaAR3x0zyCUV2O5B7lcE5cU6lELVcr962lUkFwUsGtFSHm6K5tgOrjxndsVPllgs12Y1wjPfYwrEc38Cr3dcQ2MjRkZk4mGZUL6wBNmTI-21sNvjIbaEK1tcbe36C5ok9VS5"
+      ],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "en",
+      "translatedLanguage": null
+    },
+    {
+      "reviewerId": "100657120116845942022",
+      "reviewerUrl": "https://www.google.com/maps/contrib/100657120116845942022?hl=en",
+      "name": "dwi arlani",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocI1V8JDyUKOHclGM_NSxnw2sOJKNYizV02qLTLu0xsTwT889Q=s1920-c-rp-mo-br100",
+      "text": "Pelayanan ramah, memuaskan",
+      "textTranslated": "Friendly, satisfying service",
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T08:50:27.766Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tGeWNEbG1Ua3d6UVdOVVFVbEpSbWxVVWt0dGJHYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGeWNEbG1Ua3d6UVdOVVFVbEpSbWxVVWt0dGJHYxAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOkFycDlmTkwzQWNUQUlJRmlUUkttbGc%7C0d3jYIhfJSU%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-14T07:27:40.000Z",
+      "responseFromOwnerText": "Terima kasih Cik dwi arlani, kerana memberikan ulasan anda tentang servis kami🤗. Kami sangat gembira kerana mendengar bahawa anda berpuas hati dengan perkhidmatan kami. Nanti cik boleh recommend pada kawan-kawan .Kami berharap dapat melayani anda lagi dalam masa yang akan datang.😍",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "id",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "110065088200962428122",
+      "reviewerUrl": "https://www.google.com/maps/contrib/110065088200962428122?hl=en",
+      "name": "Senti Junita",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocI-mWL_2MkL-oMCKVyMkwdjQlRcy1CfWUVZgIJrZP838jKM7A=s1920-c-rp-mo-br100",
+      "text": "Layanan bagus",
+      "textTranslated": "Good service",
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T08:25:45.347Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pkclpHUldObmRRTWkwM1VHZDNORXc1ZGtRMFlsRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkclpHUldObmRRTWkwM1VHZDNORXc1ZGtRMFlsRRAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOjdrZGRWNndQMi03UGd3NEw5dkQ0YlE%7C0d3jB8JjDYd%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-14T07:28:21.000Z",
+      "responseFromOwnerText": "Terima kasih Cik Senti Junita kerana memberikan ulasan anda tentang servis kami🤗. Kami sangat gembira kerana mendengar bahawa anda berpuas hati dengan perkhidmatan kami. Nanti cik boleh recommend pada kawan-kawan .Kami berharap dapat melayani anda lagi dalam masa yang akan datang.😍",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "id",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "106616092148439826154",
+      "reviewerUrl": "https://www.google.com/maps/contrib/106616092148439826154?hl=en",
+      "name": "Winda Siregar",
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIybFjyB1traB8DLusksEHtDbSSGf2q42y4hyeQw8ETwMvWDA=s1920-c-rp-mo-br100",
+      "text": "pelayanan yang sangat baik . Dokternya dan admin nya ramah dan baik banget 👍🏼👍🏼👍🏼\nrekomen banget si buat kalian yang lagi cari klinik gigi",
+      "textTranslated": "Excellent service. The doctor and staff are very friendly and kind. 👍🏼👍🏼👍🏼\nHighly recommended for those of you looking for a dental clinic.",
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T07:38:04.503Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2s5RVVtWXdTMHhPVFhwRVdpMXVWM1J5YzE4emFIYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s5RVVtWXdTMHhPVFhwRVdpMXVWM1J5YzE4emFIYxAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOk9EUmYwS0xOTXpEWi1uV3Ryc18zaHc%7C0d3iURT-V4R%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-14T07:19:41.000Z",
+      "responseFromOwnerText": "Terima kasih Cik Winda Siregar, kerana memberikan ulasan anda tentang servis kami🤗. Kami sangat gembira kerana mendengar bahawa anda berpuas hati dengan perkhidmatan kami. Nanti cik boleh recommend pada kawan-kawan .Kami berharap dapat melayani anda lagi dalam masa yang akan datang.😍",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "id",
+      "translatedLanguage": "en"
+    },
+    {
+      "reviewerId": "110819843688052282227",
+      "reviewerUrl": "https://www.google.com/maps/contrib/110819843688052282227?hl=en",
+      "name": "Cahaya Aya",
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIhlSKctvnI89gI2L-AUgKabCrDStTZ-samuPnIPWGByfgEwQ=s1920-c-rp-mo-br100",
+      "text": "Sangat puas pelayanan klinik ya,,dokter yg ramah sama pembantu klinik ramah and sopan",
+      "textTranslated": "Very satisfied with the clinic service, the doctor is friendly and the clinic assistants are friendly and polite.",
+      "publishAt": "4 days ago",
+      "publishedAtDate": "2025-11-11T05:00:37.381Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2w5aFExVjVORFkwT0ZCRVRFOWpibGxxUWtGTk1YYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2w5aFExVjVORFkwT0ZCRVRFOWpibGxxUWtGTk1YYxAB!2m1!1s0x0:0x4be4c1d81bd1ecaa!3m1!1s2@1:CAIQACodChtycF9oOl9hQ1V5NDY0OFBETE9jbllqQkFNMXc%7C0d3gApLk5PA%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": "2025-11-14T07:27:50.000Z",
+      "responseFromOwnerText": "Terima kasih Cik Cahaya Aya, kerana memberikan ulasan anda tentang servis kami🤗. Kami sangat gembira kerana mendengar bahawa anda berpuas hati dengan perkhidmatan kami. Nanti cik boleh recommend pada kawan-kawan .Kami berharap dapat melayani anda lagi dalam masa yang akan datang.😍",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "originalLanguage": "id",
+      "translatedLanguage": "en"
+    }
+  ],
+  "leadsEnrichment": []
+}]

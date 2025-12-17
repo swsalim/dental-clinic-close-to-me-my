@@ -253,8 +253,8 @@ class ClinicDataProcessor {
 
       const listingData: Omit<ClinicInsert, 'images'> = {
         name: listing.title,
-        area_id: 'de1d0d1a-9ec7-4e7c-bcd6-89ea1b775bf2', // Cheras
-        state_id: '0cd6a9dc-760d-4c09-8af7-0530a70cc9ef', // Kuala Lumpur
+        area_id: '435560d3-71a4-45c9-8a28-4cf933e97d9d', // Cheras
+        state_id: 'a6d88d07-7216-469f-8f2b-454a360d3b83', // Kuala Lumpur
         is_active: false,
         is_featured: false,
         slug: listing.slug,

@@ -134,6 +134,8 @@ const clinicProfileSchema = z.object({
   instagram_url: z.string().optional(),
   featured_video: z.string().optional(),
   youtube_url: z.string().optional(),
+  whatsapp: z.string().optional(),
+  tiktok_url: z.string().optional(),
   area_id: z.string(),
   state_id: z.string(),
   status: z.string(),
@@ -286,6 +288,8 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
       instagram_url: '',
       featured_video: '',
       youtube_url: '',
+      whatsapp: '',
+      tiktok_url: '',
       area_id: '',
       state_id: '',
       status: 'pending',
@@ -541,6 +545,8 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
           instagram_url: finalData.instagram_url,
           youtube_url: finalData.youtube_url,
           featured_video: finalData.featured_video,
+          whatsapp: finalData.whatsapp,
+          tiktok_url: finalData.tiktok_url,
           // STATUS RELATED
           is_active: finalData.is_active,
           is_featured: finalData.is_featured,
@@ -737,6 +743,8 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
           instagram_url: newClinic.instagram_url || undefined,
           featured_video: newClinic.featured_video || undefined,
           youtube_url: newClinic.youtube_url || undefined,
+          whatsapp: newClinic.whatsapp || undefined,
+          tiktok_url: newClinic.tiktok_url || undefined,
           area_id: newClinic.area_id,
           state_id: newClinic.state_id,
           status: newClinic.status,
@@ -1506,6 +1514,43 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                       </FormControl>
                       <FormDescription>
                         This is the video that will be displayed on the business profile.
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className="col-span-6 sm:col-span-3">
+                <FormField
+                  control={form.control}
+                  name="whatsapp"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>WhatsApp</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                      <FormDescription>
+                        This is the WhatsApp number or link that will be displayed on the business
+                        profile.
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className="col-span-6 sm:col-span-3">
+                <FormField
+                  control={form.control}
+                  name="tiktok_url"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>TikTok</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                      <FormDescription>
+                        This is the TikTok URL that will be displayed on the business profile.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>

@@ -1,0 +1,1085 @@
+[
+  {
+    "title": "Gunung Rapat Dental Clinic",
+    "website": "",
+    "latitude": 4.5628641,
+    "longitude": 101.1118768,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "gunung-rapat-dental-clinic-ipoh-perak",
+    "skip": false,
+    "placeId": "ChIJUX8u8ivsyjERc45AnEpqbE8",
+    "phone": "+6053115813",
+    "permanentlyClosed": false,
+    "address": "Klinik Kesihatan Gunung Rapat, Jalan Dr Nazrin Shah, Pusat Kesihatan Gunung Rapat, 31350 Ipoh, Perak, Malaysia",
+    "neighborhood": "Pusat Kesihatan Gunung Rapat",
+    "city": "Ipoh",
+    "postalCode": "31350",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 19,
+    "totalScore": 2.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrRlLi6RuaoSoTdwwtZzvLEz0BCQOzlKA_26yUTcLMt5af8YQ1BfkF96-BwlZlBpJ7jpb2k5u8Gkv_6cYFyOTDCUezbaWjrfU--_TzOY8NeGMiNZ2OQ7aEgg4lBWKrb7DlQMUehEA=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=LjiAXahpWfPivkfj4PoQVw&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=94.85521&pitch=0&thumbfov=100",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=LjiAXahpWfPivkfj4PoQVw&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=94.85521&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Chacha Farish",
+        "stars": 2,
+        "text": "Doktor2 di sini semua bagus2. Ckp baik2 je dgn patient. Yang menyakitkan hati dia pny nurse tu xboleh ke cakap baik2. Nak jerit dah kenapa.ingat org pekak ke. Byk kali dh dtg sini.nurse2 dia memang xboleh cakap elok2.",
+        "publishedAtDate": "2025-05-05T06:29:02.119Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nani sainal",
+        "stars": 5,
+        "text": "came here this morning to remove my teeth.service is good and fast.\n\nThe dentist in charge, Dr Monica give the best service and she also follow up by call this evening to make sure my condition were ok, whether the gum still bleeding etc.. thanks doctor and her team as well..",
+        "publishedAtDate": "2024-10-30T07:59:24.259Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fiona Looi",
+        "stars": 5,
+        "text": "去过几次拨牙,服务与态度都很好",
+        "publishedAtDate": "2024-10-01T04:33:10.247Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "syed Amir",
+        "stars": 1,
+        "text": "Worst service. Worst staff.",
+        "publishedAtDate": "2024-07-05T03:54:41.674Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Azie Yusuff",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-05-14T08:12:02.230Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "hilmi shafiq",
+        "stars": 1,
+        "text": "Dah la nak call susah jawab . Bila di jawab awat la kurang sopan . Jiwa kacau ke nurse kerja dept klinik gigi ? Tiada yang pantau deme ni .",
+        "publishedAtDate": "2024-05-06T00:10:34.294Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "可奇",
+        "stars": 1,
+        "text": "Nurse dental kat counter tu banyak sombong halau aku esok pagi baru mari perangai tak baik tak tunjuk baik-baik masa jadual kepada i",
+        "publishedAtDate": "2024-03-11T04:13:12.388Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jessie wong",
+        "stars": 1,
+        "text": "服务和语气都不好",
+        "publishedAtDate": "2024-01-30T11:41:42.288Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Klinik Kesihatan Gunung Rapat, Jalan Dr Nazrin Shah",
+    "description": "<p>At Gunung Rapat Dental Clinic, patients find a haven of dental expertise nestled within the bustling community of Perak. This clinic specializes in delivering a comprehensive suite of oral health services with a focus on patient comfort and state-of-the-art care. From routine check-ups to complex procedures, the clinic's dedicated professionals ensure every smile is given the attention it deserves.</p>\n\n<p>The patient journey at Gunung Rapat Dental Clinic is underscored by efficiency and empathy. Recent feedback highlights the clinic's swift service and the caring nature of its staff, though there is room for improvement in the patient-nurse interaction. The commitment to continual betterment is palpable, as the clinic embraces constructive criticism to enhance the healthcare experience. With accessible hours throughout the workweek, the clinic stands as a reliable resource for dental well-being.</p>\n\n<p>Situated within the vibrant heart of Jalan Dr Nazrin Shah, Gunung Rapat Dental Clinic is not just a destination for quality dental care but also an integral part of the local fabric. Its location offers easy accessibility to residents and working professionals alike, ensuring that top-tier dental health is never out of reach. The clinic’s role in fostering community health is as unwavering as the smiles it protects and perfects.</p>"
+  },
+  {
+    "title": "Oral Care Dental Clinic",
+    "website": "https://www.facebook.com/oralcaredentalmalaysia?locale=ms_MY",
+    "latitude": 4.5683001,
+    "longitude": 101.0792853,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "oral-care-dental-clinic-ipoh-perak",
+    "skip": true,
+    "placeId": "ChIJqfE6uQ3syjERH15jZRnJe-U",
+    "phone": "+60196690645",
+    "permanentlyClosed": false,
+    "address": "685, Jalan Pasir Putih, Pasir Puteh Baharu, 31650 Ipoh, Perak, Malaysia",
+    "neighborhood": "Pasir Puteh Baharu",
+    "city": "Ipoh",
+    "postalCode": "31650",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 23,
+    "totalScore": 4.1,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4norOv3h7rJfcp6LLgm0rxegKawOzGoVLBfkE9IXdHynEDs5BRoVYLeKTMq10QB6PeR1lq4bX2YOzi2ONyj51NOmZ6JWSHRefVnOKrePszZTGUGSrJyNQ9K8CvynNk2VX3JCJcRN2g=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrN_j9Er9yNgNae3HYMADCG_ctjBqMmyf4TvZspyQQ3BdcNpUiT2k89a-amOTGaQp-LWrTX1oarVVQEuQIK5CsTe7ZwyozdpuuR1JvwSyj9tWrDh4p6npO1dTF_-CfXGhP0Zts1Mg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npcxMQopA__pJfS49_9mvm64ekTVZbgqqeL_gMoE6XFvdVTnka_q8uHWeweOUQwCYahEDXRlQvxna7-hp9AOlF0s5imbq8AQsMFnsz8sxtDJ7CB7zPa1HY2AaV8DOq9TEl3IXh5=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqY4pNHs24UD4_lzBmE70hJwwrD5YkHUwrigV07Z4aX1k6hRFJWoI5KnTORin8R0RPcssarXClzcPOYhIFtfzbMmw6cbosZ3PM8c2NCHR20xsaGby3uoI9yVHYmM2HwiFcveY66=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "JT",
+        "stars": 5,
+        "text": "Highly recommend Dr. Kong - I've been going there for years, and I absolutely love the services from the nurses and Dr. Kong. I'm usually afraid of going to the dentist but with Dr. Kong, she's very professional, gentle and caring towards her patients.",
+        "publishedAtDate": "2025-05-08T07:22:54.206Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mawarberduri Duri",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-24T10:23:00.526Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dai Chou",
+        "stars": 5,
+        "text": "I highly recommend Dr.Kong.\nbeen visiting for years, highly skilled and professional.",
+        "publishedAtDate": "2025-04-07T01:36:07.435Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Goon Month Lim",
+        "stars": 5,
+        "text": "I always return here annually for teeth scaling, dentist and nurses are very detail and gentle. I am so afraid of dentist and always try to avoid visiting, until I did my first teeth scaling here few years back. Saw other reviews that nurse is rude, but I personally don’t feel that, more like direct communication I think? I would still highly recommend!",
+        "publishedAtDate": "2025-01-28T01:48:50.124Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AQjP8cZro8wwXddbGcKwzDKPFy47p_ePXMzvWziRiyH8mJGLAD1dRDc8RTcsUNNTN8JS7PPAAkB1C6KRaszuy_Xmlt_PuD_Ov2DCFQKvnQ4rBf5z1F58nFyNzui_1dSg-5hTfE"
+        ]
+      },
+      {
+        "name": "Thai Kok Keong",
+        "stars": 1,
+        "text": "BAD SERVICE, NURSE ATTUTUDE BAD",
+        "publishedAtDate": "2024-07-03T05:52:40.983Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chan仲基",
+        "stars": 5,
+        "text": "Attentive and explain in detail",
+        "publishedAtDate": "2024-04-24T12:51:19.063Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Noor Baizurah",
+        "stars": 1,
+        "text": "Bad attitude.\nPercakapan kasar.\nIngat orang datang free ke.. bayar ok\nAnak guna singki.. terus buka pintu n marah.\nEh eh tak belajar adap ke...cakap la elok2.\nMmg cancel ..banyak lgi klinik better dari ini.\n\nMmg xrekomen\nLeh baca review org lain..ramai komen bab bad attitude diaorg.",
+        "publishedAtDate": "2024-04-16T07:50:43.043Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "DR. ALVIN TUNG",
+        "stars": 5,
+        "text": "Fabulous local dentist. Have been coming here for years every time I come to Ipoh. Always a pleasant visit as staff and Dr are very friendly. Beautiful new modern facility is bright and immaculately clean. COVID-19 protocols and best practices were strictly enforced and adhered to by all.\n\nHad such a positive experience, went back to have a wisdom tooth removed. The procedure went smooth as silk and recovered and back to my old self in 1 day. Very pleased with how everything went! Highly recommended! 😊\n\nNever thought I would say this but I actually enjoy coming to see my dentist here for my annual checkup! Service is always friendly and professional! Just can't beat the amazing price and service!",
+        "publishedAtDate": "2024-03-20T03:41:59.192Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AbqenZp3gksKbIs9zzMtPFGHRwrcbitdViDoZnOUGo671p-xgZGDu_-eRcYrcDmSmxt9wOQX78PdJ5nuSGRLHJQwq58X1_szi4ffHR4xFxTJ-ybcAl_f-hvpgb5FC1qpIMLd-V",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BGWAQXo6hHu7B2vA6-27GA-fgt6POmvDqqgr2uxfsWS5XjoItZ66ybFWJBo6JSAJuvJquzbvTMELCHLFo_5tecdc2aNqWvWhnKATASQgBbOdgNdHJCv-icYvWSuPhZrJUl6lCq",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Bz03Ju0YTPtrKO-JcyX-yaj6JNNBCINCCR7sg0ClXgrZ7r7NO1Dy7PPPGeswCXP0qPZG9GozZqBhOOieU5krH8nlcvQ7TL6ZAssH1bRbAkMCftUEL_V3I4vVonA8nbHSbR5ZGW",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DxZqwIFLG_inJR_g78JY-Cg5ym-oQyCPoetML-m-4GzMG8invFIE1sUpoSi6hKs-UMhGxiLJApL_bdG6ER5ohM4x2M1M-C8pUdsV8lfrf7fZDzZYzO1emzcZD5Ku1R_V8RjJ443A",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CrQTfCdSeCAisqQZD4dm2eNmZ-Dk4yZh92bYlkLsgqYqYCr8wBqElG4vbls6QZWmmG75InoOCP723t4owqliRtGU0ALujsH6rjsoWxqw3NUxno3cZ_KwbaDpuq5TS1k-2NUm2Vtw"
+        ]
+      }
+    ],
+    "street": "685, Jalan Pasir Putih",
+    "description": "<p>In the heart of Perak, Oral Care Dental Clinic stands as a testament to dental excellence and patient-centered care. With a strong emphasis on precision and comfort, this facility distinguishes itself through the adept hands of Dr. Kong, whose reputation for meticulous work has garnered years of patient loyalty. The clinic's state-of-the-art equipment and modern techniques ensure that every procedure from routine check-ups to complex treatments is performed with the highest standard of care.</p>\n\n<p>Patients consistently praise the quality of service received at Oral Care Dental Clinic, often highlighting Dr. Kong's professionalism and skill. The clinic's environment resonates with a sense of trust and well-being, reflecting the positive experiences shared by visitors. While testimonials speak volumes, the clinic maintains a transparent approach to feedback, welcoming all patient reviews as a means to continuously refine their practice and uphold the commitment to exceptional dental health.</p>\n\n<p>Strategically located on Jalan Pasir Putih, the clinic is a convenient choice for those living in and around Perak, offering accessible dental care without compromising quality. Operating hours cater to diverse schedules, ensuring that maintaining oral health fits seamlessly into the lives of residents. Oral Care Dental Clinic not only serves smiles but also embodies the harmony between professional expertise and community well-being.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Chu",
+    "website": "https://www.dentistsnearby.com/browse-by-treatment/general-dentistry/507-klinik-pergigian-chu.html",
+    "latitude": 4.6150585,
+    "longitude": 101.1256554,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      }
+    ],
+    "slug": "klinik-pergigian-chu-ipoh-perak",
+    "skip": true,
+    "placeId": "ChIJc3wZq-PsyjERWHgLGjd5kvA",
+    "phone": "+6055469546",
+    "permanentlyClosed": false,
+    "address": "48A, Jalan Perajurit, Taman Ipoh Timur, 31400 Ipoh, Perak, Malaysia",
+    "neighborhood": "Taman Ipoh Timur",
+    "city": "Ipoh",
+    "postalCode": "31400",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 14,
+    "totalScore": 4.4,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np6iBnsnhTeDseQKyMKNmQc81EUd9VZpfUerSG1IjoBsiZ66vFpjHRvPpLSJW7GL9uBUT2AL8Bdxre9a7cNu9WvkJ4qsr-Wr75KaRD1OYHvd1xyhDzfgdSNd76jYubrIgQ04LU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqxi7y5Fo5whdmZ4UQYmR7fS6e7GOXMq3eECIJgroEbLFsmARJfS2zLyz_sPc0-h_tirTYsv0vTCVrN4QIlGC9LBliRLGWuA-3Kyt9vl3ONd2fxRj43cF6QI2uKz-mQgj1czrdYGw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqQ_1Tt5Jstnat5PivW0UX2ZJ9-qrhrTfcfF4yTEyiDXbPaEWOcJa4cGyE5wVK0VjBrHH9gGOvpgP2KL1Y5fREH6DNrEWdkKlfOLJNfUgi6BOPgPDZ5SoZlnd_aZrm_tH6vw8tB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqflNCn_ll-5-6x59L-RqLfRQ56V68srUQjUudA-PjLkXXtUZE6bdXBX11f9HxXO8Khpre2n6ouVG5lxRUPOvZcy_8FdEgnoWH8y05BrvNpts1ZfTpuzy8I3UiD5uSTz7jFY_OxTA=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Wai Sheong Chu",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-10-26T04:59:57.891Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jennifer Baby",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-17T03:44:52.085Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Steven Kok",
+        "stars": 5,
+        "text": "I recently had the pleasure of visiting Klinik Pergigian Chu for an impromptu dental treatment, and I must say it was an exceptional experience from start to finish.\n\nThe reception area was clean, simple, and welcoming. The administrative staff was efficient and courteous, making the check-in process smooth and easy.\n\nMy appointment began promptly.  Dr Chu conducted a comprehensive examination, addressing all the concerns I had with patience and clarity. His manner was impeccable, and he took the time to answer all of my questions, putting me at ease. He was thorough yet gentle, ensuring that I was comfortable throughout the process. Besides, he also provided me with valuable tips for maintaining oral health.\n\nThe ambience of the facility was superb, especially the soothe and calming music that was played throughout the treatment session.\n\nOverall, my experience at Klinik Pergigian Chu surpassed my expectations. The staff went above and beyond to ensure my comfort and satisfaction, and I left feeling grateful for the exceptional care I received.\n\nI highly recommend this clinic to anyone in search of quality dental care in Ipoh.",
+        "publishedAtDate": "2024-03-12T14:09:25.406Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "VH Koo",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-02-09T15:09:37.554Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CQkx4ano6Tb8skTzCFaHVqgwnz0Wg-LeA9jKla6v4Ezo_6JDfjX3p0z-jfa88EtGR6n0dk109GTzUVMu7DVf6Z5aIHdqpuAWFL1azZD9jA04RI-NUdXvvqfJVyLpLp4TzzanxY",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Dtrbho_ASBB4AVRbIt_sZOX3eWf00gjgbqL3__7KdIf9wnwY8yHjdHKxciuH3OX1F5FspQnj0dwn0rc1rE3YNhlbFuIuRXE6W70WCQqunkdnYHdITofkhIIHgD-s63OwvVP0M",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AyFm_3AIOMWY3SDM4GeeCo-rfm5mF2DfNX3NClxZlaeqiVbJoK2UfBFLoJRUeYkgpQ1rkoR6-rkA_AKJCiezX9bXR4O3haLJK_3TewdNFPV1Si_aRYTM5F7DpSdUrO2jOvpx9Xcw"
+        ]
+      },
+      {
+        "name": "猫崽",
+        "stars": 5,
+        "text": "牙医很和蔼一直在帮我缓解紧张",
+        "publishedAtDate": "2024-01-14T03:52:17.010Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Peace -",
+        "stars": 5,
+        "text": "Dr. Chu is very experienced & so helpful & friendly. I would highly recommend him!",
+        "publishedAtDate": "2023-11-17T06:12:21.476Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pierre Goh",
+        "stars": 5,
+        "text": "Doctor very good in Explanation and service. Will recommend friends and family.",
+        "publishedAtDate": "2023-09-30T08:00:09.000Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shahmina",
+        "stars": 5,
+        "text": "Very good dentist.  Been going there for many years. Very helpful, will refer if unable to do the service. Highly recommend!",
+        "publishedAtDate": "2023-05-28T02:24:28.522Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "48A, Jalan Perajurit",
+    "description": "<p>At Klinik Pergigian Chu in Perak, a commitment to personalized dental care sets the clinic apart. Specializing in a comprehensive suite of dental services, the clinic ensures that every patient leaves with a brighter, healthier smile. Their expertise encompasses preventive care, restorative treatments, and cosmetic dentistry, catering to a diverse range of patient needs with precision and compassion.</p>\n\n<p>The patient experience at Klinik Pergigian Chu is underscored by the clinic's modern facilities and welcoming atmosphere. From routine check-ups to complex procedures, the clinic is equipped to provide a smooth and comfortable journey towards optimal oral health. The recent testimonial about an 'impromptu dental treatment' reflects the clinic's readiness to handle immediate dental concerns, highlighting their efficiency and patient-centric approach.</p>\n\n<p>Klinik Pergigian Chu's location in the heart of Perak adds to its accessibility for locals seeking quality dental care. The clinic's strategic operating hours accommodate both working professionals and families, making dental health a convenient part of their routine. Though feedback is scarce, the positive account of an unplanned visit speaks volumes about the trust and confidence the community places in this facility.</p>"
+  },
+  {
+    "title": "Choo Dental Clinic",
+    "website": "",
+    "latitude": 4.5931914,
+    "longitude": 101.0825266,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "choo-dental-clinic-ipoh-perak",
+    "skip": false,
+    "placeId": "ChIJJRxES3vsyjERDoDoU-xYvbU",
+    "phone": "+6052410181",
+    "permanentlyClosed": false,
+    "address": "52, Jalan Masjid, Taman Jubilee, 30300 Ipoh, Perak, Malaysia",
+    "neighborhood": "Taman Jubilee",
+    "city": "Ipoh",
+    "postalCode": "30300",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 6,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqT2XzV7gNTK1VHPsFoLQeFze7MgQk4Bx2fAx6aUKisibkQVl_7euG3fVeKvP9Oo2wGNRW4FOtWeCMHS3juFflY8Ig74itst7_FJLg3DPsdixK14ABLJBmEIFVVzqD4nVlxbUle=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noFPXP6HlTLEeTxoGFwVYA52jO-Q1ZDMd8XHZp_MQg7-5oEOKO_zKi_bDeki98ULBAzcJUIqugWvkFOJchyuU_djpqS27YMizYJc6xeQxZr1bMPEJPTZTwzaYublkuFpg9HwxW1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npOWMQWos3j4OLhE6_6eJ8OvXvPaZbHQf4WUyaCE2nXshrKEin_dBcQ8sh0Zmm6fSnIK2-f5Cm26MMun0XLfdpsMQjB8HCFFrR7N9K81c2R-tswPG44l4HI5vTIdKXfSCR4VL5d=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Juan Chai",
+        "stars": 5,
+        "text": "Dr Choo is kind and caring. Its my first time here and my experince is very good. He will advice and talk you thru the session. His rates are very affordable. The clinic may not look like much but the treatment is first class. Highly recommended and I wonder why I did not know about this place earlier.",
+        "publishedAtDate": "2023-06-09T02:34:01.181Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90D4Yf1j8ml83gF8iOSNruec-en2aOBqp7ZVsUZLcxyZYum7aA4dImgHWQT-fJdQfYPZ5U2JrntCqcq4P92wqF94MgMAzik6TvcMDz3TxIVyczhmMiyVu0jl62bDejheRE7Fpdxp"
+        ]
+      },
+      {
+        "name": "Kimberly Aw",
+        "stars": 5,
+        "text": "If you are looking for reasonable prices, great service and a dentist who is attentive to your teeth, this is the place to go. Have been coming here for yearly check up of my teeth.",
+        "publishedAtDate": "2022-12-13T06:31:13.916Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Feezo Apis",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-04-07T09:24:50.777Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "usha john",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-09-01T09:52:00.486Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kong NF",
+        "stars": 5,
+        "text": "Very satisfied with the service given. There are two dentists here and the elder one is more famous but is also very busy. So I met the younger one. Definitely the best dentist I have met! Very skillful and patient.",
+        "publishedAtDate": "2019-04-13T06:01:36.913Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hong Choon Wai",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2018-12-10T02:25:31.066Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "52, Jalan Masjid",
+    "description": "<p>At the heart of Perak's bustling streets lies Choo Dental Clinic, a cornerstone of oral health known for its commitment to personalized dental care. With a focus on both routine and specialized treatments, it stands as a testament to high-quality dentistry tailored to individual needs. The clinic's unassuming facade belies a haven where state-of-the-art facilities meet the warm, expert touch of Dr. Choo and his team.</p>\n\n<p>Patient testimonials frequently spotlight Dr. Choo's kind demeanor and attentive approach, reflecting the clinic's ethos of patient-first care. From the gentle handling of first-time visitors to the meticulous attention offered to regular clients, the experiences shared by patients underscore the clinic's reputation for exceptional service and reasonable pricing. These stories weave together a narrative of trust and satisfaction that resonates with every smile restored and maintained.</p>\n\n<p>Convenience is paramount at Choo Dental Clinic, operating six days a week to cater to the community's diverse schedules. Nestled in the familiar neighborhood of Jalan Masjid, the clinic is an accessible oasis for dental wellbeing. By prioritizing transparency and patient education, it not only brightens smiles but also illuminates the path to sustained oral health for those it serves.</p>"
+  },
+  {
+    "title": "Public Dental Clinic",
+    "website": "",
+    "latitude": 4.594929,
+    "longitude": 101.0831639,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "16:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "public-dental-clinic-ipoh-perak",
+    "skip": false,
+    "placeId": "ChIJTez4T2PsyjERfqHBc5UHE_Q",
+    "phone": "+6052530129",
+    "permanentlyClosed": false,
+    "address": "15, Jalan Theatre, Taman Jubilee, 30300 Ipoh, Perak, Malaysia",
+    "neighborhood": "Taman Jubilee",
+    "city": "Ipoh",
+    "postalCode": "30300",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 8,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr25f6QXPhLglCXzDx4tyRuwa-1IqFZgq2_WYmslzNinRX0Te43v3-uSVviz7NluMYqrh6H09rCY74EFmmh4nJzQUEWPe6d1qau4CM4MNz0PxH_Nb6WFVTux4y_-Zgiz8Uvn3v1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npE1CGcxKh8rlLCv6t6oQ3pPcWLnidAbmwgZr3ZkgtErcWkKVLy1aATMYJ6lgWx0BVe-BmYwys8n2c2QpnIv0Z-Y4I9-bgbS13G5021c5ox0YCiZtGun36oqjcG-dFsi73zcaSJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noB7J7lpMaDZTvpn2CgdY7Zzqwr3ooaAHPou2B-82ys9Fwc1xxPZdqiDGdT0BEUSrUVnemyLBqUJ7zx6l0NwxRQ__jKN350Us2OY34Vcr2jx17FV7HEsRXKwjl_772aMZq3CdJ77Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npxa0cwHSYAmOIbip8KlQCpLT5UaIBnzwVY5Mzfmqyd7iF6XZSpv0fCTK4wFDK4m0obR14TU-4jazaF6wZyAw0ShI84zmdH2VYAfm8DkFYjiWx1SXwInARl2jdaILuEJLOpUTha=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ng Andy",
+        "stars": 5,
+        "text": "谁有联系方式",
+        "publishedAtDate": "2024-10-24T01:37:37.228Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "CK C",
+        "stars": 5,
+        "text": "Old school dentist.",
+        "publishedAtDate": "2024-02-19T11:40:26.340Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DTfKiP8ZZuKhh8CcgF4i9bRNdP6Fxnq0qMUz2_m1DXph1TCEBlbEaZv01ocMC0PJBo3PJrEApp4XGxzdLBZg1T5gxYYJnaFISDaQ9WEHl4hd1DEXn6ZxqfvAy6xseTFTLAbeqp"
+        ]
+      },
+      {
+        "name": "Niese Chan",
+        "stars": 4,
+        "text": "每次都是给男医生弄，护士也很friendly ...最重要是价钱公道~",
+        "publishedAtDate": "2022-07-19T05:01:51.895Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "baby Ling",
+        "stars": 5,
+        "text": "服务很好。。价格公道。。",
+        "publishedAtDate": "2022-04-05T02:13:16.124Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "L",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-02-14T10:57:48.535Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hidayat Hamzah",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2021-04-28T04:23:45.245Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BZv82IKslxzJlbCnFXQiCSErXJHSW7LsoFYNRXIkitPYQDZeF53lKAeqDoAIe-cEEXZq6iOt9Clr_Mxt177hY0_SuscRnhU1UmBFtTIdkDP3X4kZ3vuKGEurSkntdYDDA2634L",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DWuw9qI2erznZwesNGBj6Ochv6FQWzN82Q4iNk2ZBbFkUnQd85XukstRZdg8yJqyEkXWRP-kn9VtA_S6e8qD2uJtV5jNJbR903pjwsl2MjHcDUtBNq8ccIeuTwuwDqt2sbM7yd"
+        ]
+      },
+      {
+        "name": "kc mrcp",
+        "stars": 5,
+        "text": "good and friendly..experience",
+        "publishedAtDate": "2020-10-25T00:40:59.163Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "hairie rahim",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2018-11-02T02:29:09.249Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "15, Jalan Theatre",
+    "description": "<p>Stepping into the Public Dental Clinic on Jalan Theatre, patients in Perak are greeted with a blend of traditional care and modern dental precision. This clinic stands out for its commitment to providing high-quality dental services with a touch of old-school diligence, ensuring each patient's oral health is managed with meticulous attention. Specializing in general dentistry, it becomes clear why residents prefer this clinic for routine check-ups and essential dental treatments.</p>\n\n<p>The patient journey here is characterized by a professional yet friendly atmosphere, where skilled dentists work alongside compassionate nurses to deliver personalized dental care. Testimonials often highlight the affable nature of the staff and the fairness in pricing, reflecting the clinic's dedication to fostering a comfortable environment for every visit. While feedback points to a predominantly male dental team, it's the amiable interaction and clinical expertise that leave lasting impressions.</p>\n\n<p>In the heart of Perak, this clinic not only offers accessibility to locals but also serves as a crucial pillar in community healthcare. Balancing clinical excellence with genuine patient relations, Public Dental Clinic embodies an approachable yet authoritative presence in the local medical landscape. With its doors open six days a week, it assures community members that quality dental care is within easy reach.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Dr Fadzli Meru Raya",
+    "website": "https://ms-my.facebook.com/pages/Klinik-Pergigian-Drfadzli-Meru-Raya/130856037069522",
+    "latitude": 4.673602,
+    "longitude": 101.0752821,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "15:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "13:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "15:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dr-fadzli-meru-raya-ipoh-perak",
+    "skip": true,
+    "placeId": "ChIJ1fp3XXyTyjERxAYLcljnE0c",
+    "phone": "+60124567855",
+    "permanentlyClosed": false,
+    "address": "7, Jalan Meru Bestari A2, medan meru bestari, 30020 Ipoh, Perak, Malaysia",
+    "neighborhood": "medan meru bestari",
+    "city": "Ipoh",
+    "postalCode": "30020",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 284,
+    "totalScore": 3,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNjBo7JyKvezfeRDavKelV8d8zxpNYGZTA8EHfh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqm3zSXfp8e4GMm8z964mREw6mAZyFlGF7nNsIH0Uoz4TQse1IRP6ruzLkTSQMB_WnO8pQU_5RX50IDoHeSA2yRFwT2QHA3MzaoJmVoZdpENWnxAnHjeT8dGzjEHBvKZvJQ-ELD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no1885iwvKeUDm0N_uSUKRjxE9Do7aEnunTbqkDc-uXQLAyRAXMyxmMIgftYqecf3swCaJtxLFnhyWE_EttOZhLJfACAFOPq_XYJHnvIW-wFkpvp-4LRLWXqcblgsoKa3X3B9Wz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npDdz5LX_VLDR6wRnmnVKhqtHdFClyIYoThaNzgqxZ-4J4Hm-DpFI6X_JdwIu3qBi_bUfj2kEJS-XSNk5AkhCof6NIWAg4GToTPMQZTo1y7As_SVyvLANWqrFzDCurJq4iIEGAvn8XZJGg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Nur Shafikah",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2025-07-18T05:53:12.792Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dayaq Othman",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2025-07-18T05:30:59.645Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nadhirah Omar",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2025-07-18T05:03:23.518Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Muhammad Zulhilmi Shahrolnisham",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2025-07-18T02:01:08.145Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Maryam Najwa",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2025-07-18T00:16:26.256Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Eddy Azman",
+        "stars": 1,
+        "text": "Clinic cuci duit.. lembab nk mamm, dr bajet bagus, rase nak sepak je muke ko.. tnggu esok agency government dtg gegor.. buat pala korg je yer.. sabor sat",
+        "publishedAtDate": "2025-07-13T14:17:33.873Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fariesha qareena",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2025-07-11T11:54:15.296Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Syamimi",
+        "stars": 1,
+        "text": "sngat teruk",
+        "publishedAtDate": "2025-07-08T02:46:20.730Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "7, Jalan Meru Bestari A2",
+    "description": "<p>At the heart of Meru Raya, Klinik Pergigian Dr Fadzli stands out with its dedicated focus on personalized dental care. This clinic specializes in providing comprehensive oral health services, blending modern techniques with a gentle touch to ensure patient comfort and well-being. The specialized offerings highlight preventive care, restorative solutions, and aesthetic dentistry designed to meet the unique needs of each smile that walks through their doors.</p>\n\n<p>The patient experience at Klinik Pergigian Dr Fadzli is marked by attentiveness and precision from arrival to departure. With state-of-the-art equipment and a serene environment, individuals are ushered through their dental journey with ease and clarity. Despite the lack of textual feedback, the clinic's commitment to maintaining a clean, welcoming space speaks volumes, reflecting a silent testament to patient satisfaction and high standards of care.</p>\n\n<p>Conveniently positioned within the bustling enclave of Meru Raya, the clinic benefits from easy accessibility and proximity to local amenities, making it a practical choice for residents. The thoughtful operating hours cater to a range of schedules, affirming the clinic's role as a reliable pillar in the community's health infrastructure. With an unwavering dedication to oral health excellence, Klinik Pergigian Dr Fadzli embodies professional integrity and community trust in every interaction.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Pakar Ortodontik JAdental",
+    "website": "",
+    "latitude": 4.6178039,
+    "longitude": 101.1162936,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-pakar-ortodontik-jadental-ipoh-perak",
+    "skip": false,
+    "placeId": "ChIJKTmBU2vtyjERjvp7MMDIRlw",
+    "phone": "+60182225400",
+    "permanentlyClosed": false,
+    "address": "25A, Jalan Niaga Simee 1, Pusat Perniagaan Simee, 31400 Ipoh, Perak, Malaysia",
+    "neighborhood": "Pusat Perniagaan Simee",
+    "city": "Ipoh",
+    "postalCode": "31400",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 39,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPZgpjuC4D2Adg9yOO8GtuoLZyaP5vyKtSpb6sX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOZ2h-o3g4HVPNuAPtfV8EP6ULXetCd-ri_IP34=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNET7E49HmFv2afl7R7tWpQsjPyMXo3h4D5Uum2=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNyGIyGmW9MNjON6cnSKfMQzXbe-LojKphJAuUd=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPEi6Ow9Z5chi9qCvSz7iLtQRtL7nTovqP-TqZk=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Jenny Khor",
+        "stars": 5,
+        "text": "Dr Soh is very professional and managed my case with care. I had an open bite problem that was considered complex, and Dr Soh thoroughly managed my case and followed up with me constantly. For an older patient like me, I’m pleasantly surprised  at the outcome of my treatment and amazed at the results. would recommend getting your teeth straightened at JAdental.",
+        "publishedAtDate": "2025-06-03T13:48:01.486Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zhun Min Chen",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-09T07:00:38.676Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Elaine Wong",
+        "stars": 5,
+        "text": "Dr.soh is friendly and professional, provides good orthodontics knowledges, skills and advices which suitable to the patient. Parking lot is provided if you have make appointment.",
+        "publishedAtDate": "2025-05-03T04:50:15.845Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fanny Leong",
+        "stars": 5,
+        "text": "Professional n patient doctors around",
+        "publishedAtDate": "2025-05-02T04:48:54.270Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chang Leeching",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-02T04:28:04.475Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "1̳9̳7̳9̳3̳2̳ LEOW YUEN THENG /̳ ̳U̳P̳M̳",
+        "stars": 5,
+        "text": "Dr soh very nice person, provide good service and price is affordable and logic",
+        "publishedAtDate": "2025-05-02T04:15:56.131Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "small tree Oyang",
+        "stars": 5,
+        "text": "good environment\ndoctor and nurse are so nice",
+        "publishedAtDate": "2025-05-02T04:04:13.916Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Teoh Kit",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-02T03:30:28.142Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "25A, Jalan Niaga Simee 1",
+    "description": "<p>In the evolving landscape of Malaysian dental healthcare, Klinik Pergigian Pakar Ortodontik JAdental stands out as a premier orthodontic practice in Perak, dedicated to correcting smiles with precision and care. The clinic's reputation for professional excellence is bolstered by the skilled hands of Dr. Soh, whose expertise in managing complex cases like open bites has earned the trust and commendation of patients.</p>\n\n<p>At JAdental, the patient experience is tailored to individual needs, fostering a sense of comfort and assurance from consultation to treatment completion. Testimonials speak volumes, with patients lauding Dr. Soh's friendly demeanor and his ability to impart orthodontic knowledge in a way that demystifies the dental journey. This personalized approach underscores the clinic's commitment to not only perfecting smiles but also to educating patients on maintaining their dental health.</p>\n\n<p>The clinic seamlessly integrates with the Simee community, providing a convenient and reliable service that resonates with the rhythms of local life. Operating six days a week, JAdental ensures accessibility for those seeking specialized orthodontic care. While feedback is overwhelmingly positive, the clinic maintains a stance of humility and continuous improvement, remaining attuned to the needs and experiences of its clientele.</p>"
+  },
+  {
+    "title": "Klinik Pergigian AzZahra",
+    "website": "https://www.azzahradental.com/",
+    "latitude": 4.6110869,
+    "longitude": 101.0748249,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      }
+    ],
+    "slug": "klinik-pergigian-azzahra-ipoh-perak",
+    "skip": true,
+    "placeId": "ChIJqbhBE-HtyjEREH4ex9IW9Tw",
+    "phone": "+60103989871",
+    "permanentlyClosed": false,
+    "address": "Jalan Labrooy, Taman Pari, 30100 Ipoh, Perak, Malaysia",
+    "neighborhood": "Taman Pari",
+    "city": "Ipoh",
+    "postalCode": "30100",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 213,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOgBLQLoiGsvoAdXL6yC_tT0LAtEraVwD8b6O6N=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPzL4o6CXfsF8Je8-QLG1EgXAn8WRfp-qanhU7J=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOLzJvbBvd6f92BkBypNUm8-4vTG0V-OXOz-Ppu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMel7-ZQjVrjCOJx6RWwYzDtIGb3rv9tCjlHQZf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM1d2-7uD6dH7czncHAjNchqPM9jnFsmdW19rO9=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Asnida Isa",
+        "stars": 4,
+        "text": "Rawatan yang cekap. Layanan kakitangan juga sangat memuaskan",
+        "publishedAtDate": "2025-07-01T04:37:40.873Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "rose",
+        "stars": 5,
+        "text": "The dentist & the staff are execellent...",
+        "publishedAtDate": "2025-06-16T03:37:21.597Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alex Chng",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-06-09T03:27:07.652Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "AJRUDDIN ZULKIFLI",
+        "stars": 5,
+        "text": "Highly recommended. Staff mesra, doktor juga mesra. Penerangan jelas. Harga berpatutan. Klinik so nice.",
+        "publishedAtDate": "2025-06-09T03:16:12.723Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Ainn Abu Bakar",
+        "stars": 5,
+        "text": "Klinik yang bagus",
+        "publishedAtDate": "2025-06-06T07:47:13.445Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "niknorazilahaslini nikmohamad",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2025-06-06T04:19:19.809Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "rezza shah",
+        "stars": 5,
+        "text": "Worth the price.Comfy accomodation.Dr. & Staff also friendly.The Service given is very good.",
+        "publishedAtDate": "2025-05-30T09:05:33.469Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ahmad taqy",
+        "stars": 5,
+        "text": "Professional and affordable",
+        "publishedAtDate": "2025-05-23T04:03:12.023Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C_UDcHT6OLLQJ08BVicNFw9qG7SsQpTxyC8bE4uBECHGPfe45BfVxOKqAmWPnLnpzoLqrPO376qQdsllFTH5FlTCT0461T5hsW1DHQtxq_SvAOVDNs73XRQ7hW1ENWBi-krEmE5w"
+        ]
+      }
+    ],
+    "street": "Jalan Labrooy",
+    "description": "<p>At the heart of Perak's vibrant healthcare tapestry, Klinik Pergigian AzZahra emerges as a cornerstone of dental wellness, serving the community with both precision and compassion. Strategically situated on Jalan Labrooy, this clinic is an accessible haven for those seeking top-tier oral health services amidst the bustling life of the region. With a reputation for professional excellence, it stands as a testament to Malaysia's commitment to quality dental care.</p>\n\n<p>Inside Klinik Pergigian AzZahra, patients are not just treated; they are welcomed into an environment where comfort meets clinical expertise. Testimonials frequently laud the proficient treatments and the exceptional staff, reflecting a patient experience that is both efficient and satisfying. From routine cleanings to advanced procedures, the clinic’s blend of cutting-edge technology and warm patient interactions makes every visit a positive step towards lasting dental health.</p>\n\n<p>Open daily until 7 PM, Klinik Pergigian AzZahra is imbued with a spirit of community service, offering residents consistent access to exemplary dental care. While actual ratings are yet to be quantified, the heartfelt reviews speak volumes about the trust and satisfaction garnered amongst its patrons. This clinic not only brightens smiles but also reinforces the fabric of local healthcare through dedicated practice and genuine patient engagement.</p>"
+  }
+]

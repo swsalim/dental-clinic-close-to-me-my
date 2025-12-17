@@ -1,0 +1,121 @@
+[
+
+  {
+    "title": "Klinik Pergigian Dr Indra Lutfi",
+    "website": "https://m.facebook.com/pages/klinik-pergigian-dr-indra-lutfi/785731428435179",
+    "latitude": 5.5170985,
+    "longitude": 100.5468185,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dr-indra-lutfi-padang-serai-kedah",
+    "skip": true,
+    "placeId": "ChIJY0Y67MnTSjARvQEf-kUOdLo",
+    "phone": "+60122980966",
+    "permanentlyClosed": false,
+    "address": "No.1335, Jalan Serai Wangi 13/6 Taman Serai Wangi II, 09400 Padang Serai, Kedah, Malaysia",
+    "neighborhood": null,
+    "city": "Padang Serai",
+    "postalCode": "09400",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 7,
+    "totalScore": 4,
+    "images": [],
+    "reviews": [
+      {
+        "name": "channel daus",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2023-01-19T03:34:54.203Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nabila Ibrahim",
+        "stars": 4,
+        "text": "Sy bt rawatan waktu covid... Jd sesuai sgt klinik xda org... Just walk in xperlu appointment n doc membantu beri penerangan yg jelas... Wlupun basic checking tp tanpa bayaran apa² dikenakan.. good service.",
+        "publishedAtDate": "2021-07-10T06:54:24.527Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Piqah Noor",
+        "stars": 2,
+        "text": "2 stars for friendly doc and nurse...1 star for being unreasonable late...2 times in a row, i have to wait for almost 1 hour and half😒",
+        "publishedAtDate": "2020-09-07T08:35:44.434Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siti nurhasna Roslan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-10-20T06:00:50.762Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "lazh bakar",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-07-13T09:16:46.453Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hidayah Idris",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2018-10-02T07:32:44.870Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fairuz Rahmad",
+        "stars": 3,
+        "text": "Klinik Pergigian Dr Indra Lutfi, situated just besides SEVEN ELEVEN shoplot.",
+        "publishedAtDate": "2018-06-24T16:38:54.970Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No.1335, Jalan Serai Wangi 13/6 Taman Serai Wangi II",
+    "description": "<p>At Klinik Pergigian Dr Indra Lutfi, a dedicated dental practice in the heart of Taman Serai Wangi II, patients receive care that balances technical expertise with a friendly, community-oriented approach. Specializing in a range of dental services, this clinic stands out for its commitment to maintaining oral health and enhancing smiles with precision and compassion.</p>\n\n<p>The journey to a healthier smile at Dr Indra Lutfi's clinic is underscored by personalized attention and the utilization of contemporary dental techniques. Though recent feedback indicates instances of wait-time concerns, the consistent praise for the affable doctor and nursing staff reflects the clinic's ethos of patient-centric care. The facility's thoughtful scheduling from Monday to Sunday, with a break on Fridays, ensures ample opportunity for patients to receive treatment without rush.</p>\n\n<p>Klinik Pergigian Dr Indra Lutfi's location in Kedah offers convenient access for residents seeking top-tier dental care close to home. While acknowledging areas for improvement in punctuality, it remains a cornerstone of local healthcare, providing essential dental services within the community. This clinic continues to strive for excellence in every patient interaction, fortifying its role as a trusted healthcare provider.</p>"
+  }
+]

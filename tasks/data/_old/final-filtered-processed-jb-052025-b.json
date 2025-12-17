@@ -1,0 +1,261 @@
+[
+  {
+    "title": "Dr Wong Dental Clinic (Bukit Indah JB)",
+    "website": "",
+    "latitude": 1.4775373,
+    "longitude": 103.6504248,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "dr-wong-dental-clinic-bukit-indah-jb-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJRd4o93HZLQgR5UnU6zVdnKA",
+    "phone": "+60108268810",
+    "permanentlyClosed": false,
+    "address": "54, Jalan Indah 8/15, Taman Bukit Indah, 79100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bukit Indah",
+    "city": "Johor Bahru",
+    "postalCode": "79100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 219,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPpO3AHmE9EZk6l5v90vQie_O_YoETHWU-TYDoI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOkXaL0y1nTbTXVB6yzO1l49tajmuEXUOCZXh_8=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "AHMAD SAZAL",
+        "stars": 5,
+        "text": "Excellent! The root canal to my molar was done with minimal pain, and the filing works done comfortably. She explains every steps or processes clearly to me.\nAll the rates are also reasonably priced.\nFrom now on, she will be my one only dentist.\nThank you Dr Wong for the great service.",
+        "publishedAtDate": "2025-05-04T10:58:21.078Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ben Tan",
+        "stars": 5,
+        "text": "I had a root canal treatment done by Dr. Wong for one of my molar teeth, and I couldn’t be more pleased with the experience. From the start, Dr. Wong was professional, gentle, and thorough in explaining the procedure, which really helped to ease my anxiety.\n\nThe treatment itself was smooth and almost painless — I was surprised at how comfortable it turned out to be. Dr. Wong clearly takes pride in her work and made sure everything was done with great care. I also appreciate that her clinic maintains very reasonable rates even with the latest equipment.\n\nIf you’re looking for a dentist who’s skilled, kind, and honest, I highly recommend Dr. Wong Dental. Thank you for taking such good care of my dental health!",
+        "publishedAtDate": "2025-04-22T09:17:06.972Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rubby Soh",
+        "stars": 5,
+        "text": "细心与专业，推荐",
+        "publishedAtDate": "2025-04-11T08:39:47.671Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Glenn Lee",
+        "stars": 5,
+        "text": "I had a great experience with Dr. Wong. She provided a clear and detailed explanation of my tooth issues, making sure I understood my options. The procedure was done quickly and gently, ensuring I was comfortable throughout. Highly recommend her for anyone looking for a skilled and caring dentist!",
+        "publishedAtDate": "2025-04-01T10:36:30.778Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Soo Khun Chung",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-25T08:53:08.860Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ANDREW TAN",
+        "stars": 5,
+        "text": "Excellent services with a gentle care and treatment.",
+        "publishedAtDate": "2025-03-20T22:20:17.175Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Freedom Office",
+        "stars": 5,
+        "text": "Very good and beautiful doctor, patient , explains every details, careful, gentle. I don’t even feel the pain when the LA was injected to numb my gum… one of the best experience.\n\n“ crack molar”",
+        "publishedAtDate": "2025-03-14T01:57:27.702Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jonathan Chow",
+        "stars": 5,
+        "text": "Went for my first scaling and polishing appointment in years. Was very impressed by the professional and calm treatment provided by Dr Wong.\n\nThe session started with checking the condition of my teeth, which she demonstrated to me with live video/photo, which I was surprised to see! She then clearly explained what follow-up treatment she recommended in future. During the scaling and polishing, she also clearly explained each step, and also assured me that I could stop the treatment at any time if too painful. Dr Wong and her assistant were very patient and kind throughout the session.\n\nWill definitely recommend and be returning myself! A very positive experience! 🙏🏻",
+        "publishedAtDate": "2025-02-25T07:58:32.680Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "54, Jalan Indah 8/15",
+    "description": "<p>At the heart of Johor's bustling dental care scene, Dr Wong Dental Clinic shines as a premier destination for those seeking expert oral health services. With a commitment to cutting-edge dental practices, the clinic stands out in the Bukit Indah area, providing both locals and visitors with exceptional care. Dr. Wong's facility is renowned for its professional excellence, offering a suite of treatments that cater to the diverse needs of its patients.</p>\n\n<p>Patients consistently rave about their experiences at Dr Wong Dental Clinic, where meticulous attention to detail and professionalism are the cornerstones of every treatment. Testimonials often highlight the clinic's ability to transform what could be an anxiety-inducing procedure, such as a root canal, into a surprisingly comfortable experience. The team's dedication to minimizing discomfort and providing clear, compassionate communication has earned them a loyal following in the community.</p>\n\n<p>The clinic operates six days a week, ensuring accessibility for those with busy schedules. Embedded within the fabric of Bukit Indah, it has become more than just a healthcare provider; it's a trusted neighbor that consistently delivers dental care with a personal touch. Reflecting the vibrancy and diversity of Johor, Dr Wong Dental Clinic prides itself on fostering smiles that are as bright and welcoming as the city itself.</p>"
+  },
+  {
+    "title": "Deluxe Dental Clinic JB Mount Austin 新山牙科",
+    "website": "https://deluxedental.com.my/",
+    "latitude": 1.5498201,
+    "longitude": 103.7834656,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      }
+    ],
+    "slug": "deluxe-dental-clinic-jb-mount-austin-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJ8VlvKgJt2jERBMlrelC3Gxo",
+    "phone": "+60178341168",
+    "permanentlyClosed": false,
+    "address": "31, Jalan Mutiara Emas 10/2, Taman Mount Austin, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Mount Austin",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 195,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPFydaWrFcUJGlDQPtCP4dJYAVOY5UnJCwGZ3Yd=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "YG Poh",
+        "stars": 5,
+        "text": "I had a great experience with my scaling + polishing. Dr Kang was very attentive, explained everything clearly and did a thorough job.",
+        "publishedAtDate": "2025-05-05T00:27:51.946Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chin Edwin",
+        "stars": 5,
+        "text": "真的没有想过洗牙和美白牙齿可以那么轻松，过往都洗到都有恐惧感！因为很痛  。Deluxe Dental 这里的医生真的太厉害了！",
+        "publishedAtDate": "2025-04-24T05:13:37.276Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "vini eng",
+        "stars": 5,
+        "text": "Dental very professional ,good experience for the appointment today .Whitening teeth",
+        "publishedAtDate": "2025-04-24T05:08:59.394Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zj Kok",
+        "stars": 5,
+        "text": "The female doctor was very kind and patient while extracting my daughter's tooth. Thank you.",
+        "publishedAtDate": "2025-04-20T04:37:57.773Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "yong xing",
+        "stars": 5,
+        "text": "服务好 洗牙也很干净",
+        "publishedAtDate": "2025-04-19T08:20:06.445Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "George Suthes",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-19T05:16:38.721Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kayalvili Gnashanmugam",
+        "stars": 5,
+        "text": "Did scaling, filling,  xray & wisdom tooth extraction.  Dr Kelly was very attentive and caring. Been doing scaling for many years, but this is the very 1st time my gums didn't bleed!!!\nHIGHLY RECOMMENDED!!!",
+        "publishedAtDate": "2025-04-08T11:35:19.609Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Kok Tee",
+        "stars": 5,
+        "text": "年轻帅气的医生，体贴细致的技术，值得推荐",
+        "publishedAtDate": "2025-04-07T03:39:33.071Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C_y888L7573gS387NSoDPDbKg8lZahouS2MaKDTj0PKYGSUEjMC0DcXDbVbVG9gS7YCSJ0kWSqgh7pHLSpEn_WiDilN3FaxIBa-dQlCiJB4oqtHCX0Vi_D53wxvNAyBl7pPiVO"
+        ]
+      }
+    ],
+    "street": "31, Jalan Mutiara Emas 10/2",
+    "description": "<p>At the heart of Johor's bustling Mount Austin district, Deluxe Dental Clinic JB stands out for its commitment to patient comfort and cutting-edge dental care. With an emphasis on state-of-the-art technology and innovative treatment options, this clinic has become a go-to destination for those seeking a seamless dental experience. The team's technical proficiency is matched by a warm, patient-centric approach, ensuring every visit is as pleasant as it is effective.</p>\n\n<p>Patients routinely praise Deluxe Dental Clinic JB for its gentle yet thorough procedures, from routine scaling and polishing to advanced teeth whitening. Dr. Kang, in particular, receives accolades for his attentive manner and clear communication, transforming what could be an anxiety-inducing experience into a surprisingly comfortable one. The clinic's interior mirrors the sophistication of its services, fostering an environment where patients feel both reassured and at ease.</p>\n\n<p>Reflecting the vibrancy of its Johor neighborhood, Deluxe Dental Clinic JB capitalizes on accessibility and convenience, operating seven days a week to accommodate the dynamic lifestyles of its community. While feedback is overwhelmingly positive, the clinic maintains a humble dedication to continuous improvement and patient satisfaction. This balance of excellence and openness cultivates a deep-seated trust among patients who are assured of receiving top-tier dental care with every appointment.</p>"
+  }
+]

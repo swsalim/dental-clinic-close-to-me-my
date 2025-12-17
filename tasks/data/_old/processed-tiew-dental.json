@@ -1,0 +1,4901 @@
+[
+  {
+    "title": "Tiew Dental Nilai",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 2.8104081,
+    "longitude": 101.8060873,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-nilai",
+    "skip": true,
+    "placeId": "ChIJ9bmPpRvEzTERi2rAsR8zBIU",
+    "phone": "+6067990677",
+    "permanentlyClosed": false,
+    "address": "PT 4761, Ground Floor, Jalan TS 1/19, Taman Semarak, 71800 Nilai, Negeri Sembilan, Malaysia",
+    "neighborhood": "Taman Semarak",
+    "city": "Nilai",
+    "postalCode": "71800",
+    "state": "Negeri Sembilan",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 580,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM9VG16yaW4j_dAy-zIWixz-29cfZ0H5V90uYPh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrOYrWkfDMSZvwj5I01Nvw3j5SqHPuY2JjwIhOOnsQAyghmivVasIaE24Xvnxv57N3bdw-syzjVFdcUouVkL2XIm2sj0iOPXc-AOz65xsnVYliqMw-benp6L8Kw9jwgXCuV_xYVDA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP77TdYDBgHKQzZZpv0BSkI_p7GLr59FuU398r-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq4r4cWg2QcfEiTs9QI6wWaSAwQYAphB4Ra6f8w--MeI5H17eyXXhf2NaqBF6TOLFSg7fzB0Dhb8u6ZFWvuzt8c9CeEqRI_e__TJtaMn_8pV4LrLy4nxjMJ5iEURz6xgVUlIRy3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPzu8jdGBvsUnRu1fxBzJHPGijq-Vqbj8T5Kaon=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "NOOR ALAINA",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-05T04:29:55.898Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nor Salihah Ibrahim",
+        "stars": 5,
+        "text": "Friendly doctor and staff.",
+        "publishedAtDate": "2024-08-24T06:47:37.686Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "NYD ND",
+        "stars": 5,
+        "text": "Suka dgn klinik ni…dr sangat mesra n staff sangat membantu,sangat recommended to all",
+        "publishedAtDate": "2024-08-24T03:32:23.486Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CAv3XXpcCdJmDKVyH_g5UFGH8bMppkSI6lEtIOu_gSXy_9p2Hu1Qc2HvN3yWNoRRUDK5Y5fHEKVxYZQEpcxwiU4tjdjWbMRbvafK3FJ0MKN0pO_1Fm_EOMDgEUyxYi6x7sKNMl",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AX9NEekSMeerBq6YkKTkabELJ1s4EjVJD1l4K2Nnc445GfHDNjGOAxj0IJKI7IMHaUlsmnI8qb6xAIIlG7c-NDyUmS5S7B1xolJGbrWn1Fjf9RZ1MKvv8b4AfAt3Y9ob3LHK_zfQ"
+        ]
+      },
+      {
+        "name": "Sugu2379 Vasagi2379",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-08-19T04:04:27.442Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohamad Azrin",
+        "stars": 5,
+        "text": "Servis dan konsultan bagus",
+        "publishedAtDate": "2024-08-17T02:33:32.017Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ain Sya",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-17T02:17:13.369Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Raja Norsiah Raja Muhammad",
+        "stars": 5,
+        "text": "Service terbaik",
+        "publishedAtDate": "2024-08-14T03:55:48.432Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Zizree",
+        "stars": 5,
+        "text": "Layanan terbaik. Doktor sangat baik dan tak terasa sakit buat rawatan cabut gigi. Terima kasih",
+        "publishedAtDate": "2024-08-13T07:04:03.947Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "PT 4761, Ground Floor, Jalan TS 1/19"
+  },
+  {
+    "title": "Tiew Dental USJ 10 Taipan",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0487533,
+    "longitude": 101.5838505,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-usj-10-taipan",
+    "skip": true,
+    "placeId": "ChIJZ6qn1vBNzDERyuc9Yp2flis",
+    "phone": "+60380117169",
+    "permanentlyClosed": false,
+    "address": "23-A, Jalan USJ 10/1e, Taipan Business Centre, 47620 Subang Jaya, Selangor, Malaysia",
+    "neighborhood": "Taipan Business Centre",
+    "city": "Subang Jaya",
+    "postalCode": "47620",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 161,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPEsuCt-5P6Ar5Ggfgo_WOXEuZwurUq5uQUHci1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPFHWp-1ibb-Tt1CwrpGuB9vskPDZRLve4MDo0v=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noMCLQ7efg9kB29OxPKpjf9iDcsnVKOEUWY2GTcJkPlHlTdVrY_4Gm57v8XhJr7qE9xblu9CNOr1BHgJKtpl_ZVB-LObLEq_GIny45DTUb5Zh8Lu_FokiLW78gwMQfoLhVodT0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUzNED8Au6z9H6HjXhnW_720ukUlQ7QDb2GkhId9UK3ZK8Kz5y4LzjlE_femdCNEo5dAfEWoaggTttiz97lfxNftwuNefGNKtIGI6RhNssz8x_yGYRJofoDrNaJ6ILpjsfxUA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqR1qFvIbT1nMq36wsav6yr3IcU8pSOR_fLC6iCSneArkNMMSD3bxPUkPUdZj8GAfOWuyh3jbWuiMFk5kyVg0GN7sKSAaGI-D4QCDU0BEd80wwXTN4Jgvg-fjHnMtqAUDAJGnTV0nYznzFU=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Tang Suet Yee",
+        "stars": 5,
+        "text": "I had a fantastic experience with Dr.Grace and her team! From the moment I walked in, the staff was warm, welcoming, and professional. Dr. Grace was incredibly patient and took the time to explain each step of the procedure, which really helped ease my anxiety. The office was spotless and equipped with modern technology, making the whole process smooth and efficient. I left feeling confident and well taken care of. I highly recommend this dental practice to anyone looking for top-notch care!",
+        "publishedAtDate": "2025-07-18T08:39:56.975Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hasmaniah Abdul Hamid",
+        "stars": 5,
+        "text": "Dr Ashley ok.Saya puas hati.Staff semua ok.Tq.",
+        "publishedAtDate": "2025-07-10T05:18:33.146Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Clarissa Chung",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-06-30T12:40:49.396Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Travel_ Ranger",
+        "stars": 5,
+        "text": "I would like to express my appreciation to Dr. Ashley and Dr. Grace from Tiew Dental, Taipan Branch, as I dropped by to seek a second opinion regarding my affected tooth.\n\nFirst, a big thank you to Dr. Ashley, who patiently explained the condition of my affected tooth, which was caused by the growth of a wisdom tooth. Her professional advice and suggestions were logical and practical—unlike a dental center in SS14 that tried to convince me to undergo various treatments that may not be effective.\n\nDue to certain circumstances, the affected tooth could not be extracted during my first visit, and I had to return the next day.\n\nOn the following day, Dr. Grace followed up on my case. She patiently explained the extraction procedure & condition. After several attempts and numbers of doses of anesthetic, my affected tooth was finally extracted—without much pain. I am extremely happy, relief and satisfied, especially after suffering from tooth pain for a week, which greatly affected my daily life.\n\nThank you, Dr. Grace, for the excellent work, and thank you, Dr. Ashley, for providing such an effective and honest solution!",
+        "publishedAtDate": "2025-06-19T09:35:23.313Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "yc chan",
+        "stars": 3,
+        "text": "This particular experience started on 23.1.2025 (Thurs). I shall not mention name but will refer this as \"1st dentist\".\n\nFrom the start, the treatment to fill up 2 cavities on 2 adjoining molar wasn't within my expectation. Food constantly being lodged between the 2 teeth after the treatment... and in less than 2 months, I've decided to visit a different dentist, Dr Grace Chan who did a marvellous job in rectifying the problem by redoing the filling to one of the 2 teeth. Job well done! 5⭐️\n\nToday I visited Dr Grace Chan again thinking either one of the two fillings done was chipped off while chewing on my food a week earlier. Alas! The part affected was the filling done by the 1st dentist. Again, Dr Grace did a fantastic job and fingers crossed, I don't have to return to the clinic for the initial crappy job done by the 1st 1⭐️ dentist\n\nI'll return again but only for Dr Grace.",
+        "publishedAtDate": "2025-05-13T12:51:25.412Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joshua Neoh",
+        "stars": 5,
+        "text": "Dr Grace was very kind and good with the extraction of my kid’s baby tooth which was also her first time to the dentist. Tq. 👍",
+        "publishedAtDate": "2025-03-11T10:09:07.365Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zoey",
+        "stars": 5,
+        "text": "Excellent service and thorough service. Staff were friendly and helpful. Will come back again :)",
+        "publishedAtDate": "2025-01-03T07:57:21.113Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "N L",
+        "stars": 5,
+        "text": "Im not going to another dentist after this. Dr Grace is awesome.",
+        "publishedAtDate": "2024-12-31T03:35:30.458Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "23-A, Jalan USJ 10/1e"
+  },
+  {
+    "title": "Tiew Dental Sungai Long Kajang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0411312,
+    "longitude": 101.7924506,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-sungai-long-kajang",
+    "skip": true,
+    "placeId": "ChIJQ8Sitag0zDERRJ_P7Mo0ZnU",
+    "phone": "+60390112243",
+    "permanentlyClosed": false,
+    "address": "7, 01, Jalan SL 1/10, Bandar Sungai Long, 43000 Kajang, Selangor, Malaysia",
+    "neighborhood": "Bandar Sungai Long",
+    "city": "Kajang",
+    "postalCode": "43000",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 110,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPsNmJDERW9FnGBuYpQiQqNgGDiqHxS5pqX6JVr=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPU-7IAQE43zTyJHL0vIkjeRsqqvHVPMe9nWHdX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNHhoqUNGmwvNOIySIKXLU36bxUHSxPpVQMIgdH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPRwezBFg9wbyP2jCSqxz9o5ac7xHqX6rOdb2p3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrKasGIWgb3BZ_72bOeT96bwFG35-YA9Zpc-jjWXCE6IjYGafM6R703BoQi5XGJKjf3Wb_WNJoIwjsdKhaA98oYakG9gBQNxZEM1PjKB1RM8clMo38rB_8IfJUn50p03mzCqE-S=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Kimberly Ang",
+        "stars": 5,
+        "text": "Doctor Janice is the best doctor I have ever had and the only dentist I will ever look for. Since I was a kid I have changed dentists looking for the right one, now I will only find Doctor Janice and highly recommended to anyone looking for a great doctor that makes you feel comfortable.",
+        "publishedAtDate": "2025-01-14T03:57:33.271Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Norain Daiyan",
+        "stars": 5,
+        "text": "Servise yang terbaikk . Staff semua super best . Doktor baik anak pun tak takut . RECOMMEND 🩷🩷🩷",
+        "publishedAtDate": "2024-08-15T03:08:53.749Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "M.J Foong",
+        "stars": 5,
+        "text": "Friendly and pentiet nurse & doctor . Thanks to Dr Janice .",
+        "publishedAtDate": "2024-08-06T05:01:22.598Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Samuel Mok",
+        "stars": 5,
+        "text": "2nd time visit here. Great service and check up done by the doctor Yeo. Much appreciated 👍",
+        "publishedAtDate": "2024-07-26T07:52:07.212Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Anson Pang",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-12T08:37:04.011Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yee Kwan loh",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-12T07:45:06.298Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Agnes Ong",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-12T03:39:59.277Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "henry ong kok hing",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-12T03:39:40.888Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "7, 01, Jalan SL 1/10"
+  },
+  {
+    "title": "Tiew Dental Seksyen 9 Shah Alam",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0848644,
+    "longitude": 101.5227385,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-seksyen-9-shah-alam",
+    "skip": true,
+    "placeId": "ChIJSc9Oj3dSzDER5o6V9iKSxBA",
+    "phone": "+60355100332",
+    "permanentlyClosed": false,
+    "address": "Tingkat 3, No, 33, Jalan Tengku Ampuan Zabedah F 9/F, Section 9, 40100 Shah Alam, Selangor, Malaysia",
+    "neighborhood": "Section 9",
+    "city": "Shah Alam",
+    "postalCode": "40100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 143,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNwtCfDNQ6Ccf3vxhUkN0LiKH3H_ATiXY4L6Ppk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMH34gbdy-083jSHLcruBPWr62sUiwIH81BEajY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM2Cjp4gO43P7Br8UjJZeTKSnTwgrrR1P8rH-oQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOGpsSjE9sJB_2O_BxL6nGjuNwh9JfUKFaFM_mM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOK9Khg1zt_KzF8evScX7JjASPO0PFKUqqGXPP4=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "I Am AM",
+        "stars": 2,
+        "text": null,
+        "publishedAtDate": "2025-02-07T06:31:47.324Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alt Alt",
+        "stars": 5,
+        "text": "Excellent dental service and professional facilities",
+        "publishedAtDate": "2025-02-01T04:20:24.135Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tat Chew Yeo",
+        "stars": 5,
+        "text": "Dr Ng Hui Cheen is a very friendly person .She is meticulous and very professional in her work.I am glad l finally found a good dentist.",
+        "publishedAtDate": "2024-10-22T03:16:48.004Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "farah eleana",
+        "stars": 5,
+        "text": "Dr Tan Cheers Cheers provided exceptional service",
+        "publishedAtDate": "2024-08-30T05:13:09.915Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sean Oo",
+        "stars": 5,
+        "text": "Had a great time here! Great service too!",
+        "publishedAtDate": "2024-08-29T06:26:17.378Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jason Lim",
+        "stars": 5,
+        "text": "谢谢 Dr.chen细心的看诊。",
+        "publishedAtDate": "2024-08-29T02:37:21.211Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aliff Abdul Nasir",
+        "stars": 5,
+        "text": "Good",
+        "publishedAtDate": "2024-08-29T02:00:03.704Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ahmad Afzal",
+        "stars": 5,
+        "text": "Friendly yet professional doctor\n\nLoved it!",
+        "publishedAtDate": "2024-08-28T07:16:16.913Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Tingkat 3, No, 33, Jalan Tengku Ampuan Zabedah F 9/F"
+  },
+  {
+    "title": "Tiew Dental Bukit Tinggi Klang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0071344,
+    "longitude": 101.4368202,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-bukit-tinggi-klang",
+    "skip": true,
+    "placeId": "ChIJKUbtKZ2szTER7NuC7Mq7vWU",
+    "phone": "+60333244120",
+    "permanentlyClosed": false,
+    "address": "no 1 tingkat 1, 72, Lorong Batu Nilam 4b, Bandar Bukit Tinggi, 41200 Klang, Selangor, Malaysia",
+    "neighborhood": "Bandar Bukit Tinggi",
+    "city": "Klang",
+    "postalCode": "41200",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 187,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMJ_qmwHdINbg8GAzdEynoCyIdUHOuOVMb62xn6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPQLCEshjtRv9DSVOXLqjK8aE0t7RLFSyNyXQbp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNfLAAgCExpBsIFOGtFELmCmsaLOkpDSWPnQIZn=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no3d6EgD0T5ZUNOJ_8QSMP7eUhw9FE_mhgV-nee3y8c5wIqobfmCGSvEHc2oq3FmA4ngzYQIu7_ZqyAIoTl-rU1pX99w8DPY9OF0coZfKr12Cq7Wl3_SKEMl12ssHC_g65Fgx6j=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqiLEpzEIF9B407v0eqoiGhjNRLsS-9_WYOk3FTETGeBbCuz42mf4SjhTMCiTqP7b9dGcz0JqTkzBm5IPcbFjUbWwGCtpWRy3ZZtVdrwU_8QZmHxFTmjrPqdFwqasFxzIYWkt8=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "MYC KITTY",
+        "stars": 1,
+        "text": "i came to this dentist practice about 2 yrs ago and had a terrible experience. Initially i came for check up and cleansing of my teeth.\nAs the lady dentist pointed out that two of my molar teeth need filling so i had my fillings done right after the cleansing.\nShe did a white filling for me, in total i was charged rm400 plus (100pls for cleansing and the rest for fillings).\nHowever the fillings was not done well, so i had discomfort after a few days and came back to the clinic a week after, met another lady dentist who said the dentist who did for me was not available on that day. She offered redo the fillings but i refused as I already suffered a lot mentally besides that they knew my medical condition before giving me treatment that my body cannot take stress.\nI am very disappointed over the skills of this practice.I am aware all the dentists at this practice are ladies and those two I met are young, they are not over 35 of age, i m a lady in her mid fifties and i believe i am a good judge of other ladies' age.\nFor yr infor, the fillings all came off after a few weeks, so is my money and suffering i endure during the filling sessions.",
+        "publishedAtDate": "2025-06-09T12:41:21.895Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gwendolyn Lewis",
+        "stars": 5,
+        "text": "First visit to Tiew Dental for both myself and my 10 year old and I must say that the overall experience has been great! From the booking enquiry online to the response. Very prompt and accommodating. Dr. Louisa was very patient, gives detailed explanation, doesn't make you feel like you're being rushed. Liked that they take their time to ensure the patient's comfort and understanding. Highly recommended!",
+        "publishedAtDate": "2024-10-19T02:57:49.979Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "A world of Everything",
+        "stars": 5,
+        "text": "Good Service..good and calm environment..Nurses are friendly...Doctors are kids friendly and very good",
+        "publishedAtDate": "2024-09-21T06:49:36.634Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Diva Koo",
+        "stars": 5,
+        "text": "We meet Dr.Louise Tan , and she is a very gentle and patient lady especially treating kids.",
+        "publishedAtDate": "2024-08-30T04:17:08.628Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Steven Lu",
+        "stars": 5,
+        "text": "Great treatment from dr louise!",
+        "publishedAtDate": "2024-08-16T03:42:09.010Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shirley Too",
+        "stars": 5,
+        "text": "Dr Louise is very good and professional 💯",
+        "publishedAtDate": "2024-08-16T03:08:40.464Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ng Candy",
+        "stars": 5,
+        "text": "good sernice and good explanation",
+        "publishedAtDate": "2024-08-14T07:58:39.100Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lok WEE LIN",
+        "stars": 5,
+        "text": "Very patient doctor (Dr Ngew Chi San) with my 4 year old. My kid comment tooth ache but actually her teeth just being too sharp. Doctor patiently check and flatten the tooth for her. Wala, no more tooth ache",
+        "publishedAtDate": "2024-08-13T08:40:44.375Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DbCPuqYpXMn_Rs9il4qRSWz5rL0iebnNrWx7WIMJUV21ZpeuOCb1A0aMoaJk2V_9Ahz27TEjmA7zes0HSyA_3OIrTPVhclOSxSfIBGCjAFfOx2OjwUCB4moQ6Oyzmb_ynZXyI"
+        ]
+      }
+    ],
+    "street": "no 1 tingkat 1, 72, Lorong Batu Nilam 4b"
+  },
+  {
+    "title": "Tiew Dental SS25 PJ",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1137781,
+    "longitude": 101.5990978,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-ss25-pj",
+    "skip": true,
+    "placeId": "ChIJJ6x1taBOzDERk2GlaK6cxL8",
+    "phone": "+60378051627",
+    "permanentlyClosed": false,
+    "address": "No. 5A, Tingkat, 1, Jalan SS 25/23, Taman Plaza, 47301 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Taman Plaza",
+    "city": "Petaling Jaya",
+    "postalCode": "47301",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 79,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMW4I5Bae1CZwrSZp7o4_H7qAwm1xCE13eLlelK=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNRZcu4ssrh983EvfXJzmBeeF60eBQjYIA5aV80=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no_dzE-1agleRHLHfW_iKq9enBwLSqh-Nb3vKiMiZwsmWWfwrG_x88ZWqaotWBKSigtTg12sBJNc_kk_XJf177JBH8-EbaYgHeXcwekS25NREwYd9swrriCgqHguPhL8A21OVnclA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npvKVhgYJ9Jhlv6z-DuqGuiPEqg-FqBw0CeqanRvL_2A5YvRHJ3cdYfpwjz-erYK0OWhuGr-_OgWCcvlVDpAQdgB5yLHTudWxcatCd09iYwlnLaCCjP56pdjVGA321rRukxP3s=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noRoEH45fbtEj7oYkKjshtYj1dmSiPQHn3Tj8RDYvjyw4y2nMrekpcjI3fqEn4etN-JyqpVhSQc1DKD7Yjd5wKJz2G_8Z8YJwuLNk47TPpk4WqipavB4iZodF9tRiSByD6NG0-B=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Yean Tai",
+        "stars": 5,
+        "text": "Professional and knowledgeable dentists, and great customer service. Been visiting them for years.",
+        "publishedAtDate": "2024-12-28T14:40:09.182Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pui Kheng How",
+        "stars": 5,
+        "text": "I been visiting this clinic for past years. Very recommended for you to visit for tooth healthcare",
+        "publishedAtDate": "2024-08-26T02:42:46.992Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jolene Lee",
+        "stars": 5,
+        "text": "The Dr & the Nurses are polite & friendly. Done Scaling & Polishing here for first time. Will definately visit again.",
+        "publishedAtDate": "2024-08-24T07:34:05.230Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Irene Tooleseram",
+        "stars": 5,
+        "text": "Dr explained everything in details regarding my teeth condition",
+        "publishedAtDate": "2024-08-24T05:04:48.286Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ronny",
+        "stars": 5,
+        "text": "Selamat datang",
+        "publishedAtDate": "2024-08-24T04:52:40.007Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jasthrine Foong",
+        "stars": 5,
+        "text": "Efficient and prompt follow up .",
+        "publishedAtDate": "2024-08-24T03:28:16.191Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "adel",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-08-09T07:02:20.889Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "erriyana mohammad",
+        "stars": 5,
+        "text": "Dr ,dn nurse friendly,layanan sangat baik dan sopan..\ndatang untuk buat cuci gg.\nExplanation dri doktor sangat jelas dan membantu saya.\nklinik sangat recomended🥰🥰",
+        "publishedAtDate": "2024-08-07T04:37:20.138Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 5A, Tingkat, 1, Jalan SS 25/23"
+  },
+  {
+    "title": "Tiew Dental PJ Sri Manja",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0748943,
+    "longitude": 101.6460068,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-pj-sri-manja",
+    "skip": true,
+    "placeId": "ChIJ9TPf1VhLzDER2vOB4lMRltA",
+    "phone": "+60377722239",
+    "permanentlyClosed": false,
+    "address": "Selatan, 9, Jalan SM10, Taman Sri Manja, 46000 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Taman Sri Manja",
+    "city": "Petaling Jaya",
+    "postalCode": "46000",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 151,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipP0MlljvLiva46bQmmNq-pzGmiFXShqRbaKcZvM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP_Yv1qsQj7FZnKkKxsGcZwcTqTVjqlwA1e00iz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nomqNnRlmUUDE_nw11qIF1SjhQjDm3T4s7KA7O03qp-p_Ny71kZhreCyzzEP2TdbdQ8lmzpnYCcwUTmXMoOMWa5-vUMd5sKNgpM-Zh9FJpwYSpVG60ME_5JlMSHY1Es2aNLa1D0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nowqDUik_R-k0VLtEKn0Nou9L7fKQqZAHnCB5Qn7nXcLQ1aK0gZvzZDn9e4rtp73xG_8FweaVR7aNyuJMhde7V97ya3BzeD5L3jVMHF9WPb722s8pMCTHM-1yk_VPL-5twIvjw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMA09aD4XM2-Pkz8fx8ToSgIBvEAT5CQk_UojQP=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Aliff Wolff",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-07-24T09:30:27.042Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syuhaida Zulkifle",
+        "stars": 5,
+        "text": "Dr Ashley Gan is highly recommended..so great with kids..know how to make my 7yo son calm during the extraction..softly spoken..n the treatment went smoothly..thank you doc and nurse for excellent service..keep up the great service👍🏻",
+        "publishedAtDate": "2025-02-05T06:53:03.041Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "HARRIPRIYA A/P THAMILCHELVAN",
+        "stars": 5,
+        "text": "I recently visited Tiew Dental PJ Sri Manja for a filling to fix my broken tooth, and I had an excellent experience. From the moment I stepped in, the staff were incredibly welcoming, helpful, and professional. They made sure I felt comfortable and taken care of throughout my visit.\n\nDr. Laura, who attended to me, was outstanding. She was not only kind and patient but also very thorough in explaining the entire procedure and giving me valuable tips on dental care. Her professionalism and attention to detail reassured me that I was in safe hands.\n\nThe clinic itself had a very pleasant and calming ambience, which created a relaxing environment for my treatment. On top of that, the pricing was very reasonable, offering great value for the high-quality service they provide.\n\nOverall, I’m truly impressed with the care and service at Tiew Dental PJ Sri Manja. I highly recommend this clinic to anyone looking for professional, affordable, and friendly dental care. I absolutely loved my experience and will definitely return for future treatments!",
+        "publishedAtDate": "2025-01-21T08:30:04.860Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "York Wah Tan",
+        "stars": 5,
+        "text": "Love the services offered by Dr Ashley, Dr Laura and team, my condition is always explained in detail and clarity, staffs are also nice and friendly! Much recommended dental clinic 👌🏻💯",
+        "publishedAtDate": "2024-10-16T10:39:03.577Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jay jay",
+        "stars": 5,
+        "text": "Good and friendly doctors and nurses, I’m very happy with the doctor care on my daughter.",
+        "publishedAtDate": "2024-09-13T07:13:22.254Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CevQ_Bz8wqmjJgZJzYWNl-wafEvaljDdggywFnRDtLd7y_7xHMEJvZXMr_w6sApTlnwJCwQrS-4Sztg6OOaExl9WaxjXhu_jJkIWoojc6MCShZnh33OT6gCPcGUghBRk0EvDs"
+        ]
+      },
+      {
+        "name": "Angie Ng",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-27T04:10:41.905Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syamimi Mustafa",
+        "stars": 5,
+        "text": "good services. Dr too nice and very friendly. got some advices from Dr too. recommended",
+        "publishedAtDate": "2024-08-17T04:08:21.156Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amirah Sakinah Mustafa",
+        "stars": 5,
+        "text": "Already visit two times for scaling. Overall was good. Dr Ashley and staff was very friendly. She explaining very well and the procedure run smoothly. Will visit and recommend this clinic to my friends.",
+        "publishedAtDate": "2024-08-17T03:57:26.248Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Selatan, 9, Jalan SM10"
+  },
+  {
+    "title": "ST Tiew Dental Group Sdn Bhd",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0028079,
+    "longitude": 101.5403123,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "st-tiew-dental-group-sdn-bhd",
+    "skip": true,
+    "placeId": "ChIJgY8w846yzTERZZ3ywMr2mFM",
+    "phone": "+60351226680",
+    "permanentlyClosed": false,
+    "address": "3-3C, Jalan Anggerik Vanilla N 31/N, Seksyen 31, Kota Kemuning, 40460 Shah Alam, Selangor, Malaysia",
+    "neighborhood": "Kota Kemuning",
+    "city": "Shah Alam",
+    "postalCode": "40460",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 13,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMJrZAUZelKxtiVVDaXjdL_28J4mGgs38W20vbY=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=h8lvyXpU0xM_I-4ceE9Qzg&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=14.543549&pitch=0&thumbfov=100",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npTTsandiV5zivIvf-OXE-0euqboiNXoesh_u8qO4hwZ9l7ScZ3imQMQgHBPgBJHtJFGZsJFJgv-tHSy8zq5tAZdgX5gb2TzAmIIwMwcCoGklDUuPoy8S1ilkK7haTuglOLhtso=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPhIVO-adtMqer7hxwzylTEnV_CRedhfGsryS8f=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOdyQ6XYAmeFT3_5qEmkMx89UBVtOAspadsMZ2m=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Siti Aisyah",
+        "stars": 5,
+        "text": "Thank You.. Very satisfied the service.. Friendly Staff",
+        "publishedAtDate": "2024-08-08T03:06:39.594Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Bn4mJfubXHw_a6N4cbnTOSapZ50HHahNOqlFETyWVfDhrJ3sMt6s-vyD3cTXuT1OPvPvMlGccZwgt6G9Q98d1DSj0tE3QdzyU34mtulmcQZQtXXLh7RPjb8WaKUDoNpmplPsk0"
+        ]
+      },
+      {
+        "name": "Evelyn Kong",
+        "stars": 5,
+        "text": "Overall good experience attended by Dr. Mishaleni in Setapak branch👍",
+        "publishedAtDate": "2023-09-09T05:23:32.832Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "NG YI TING",
+        "stars": 5,
+        "text": "First time visit introduced by relatives 👍",
+        "publishedAtDate": "2023-07-12T03:43:08.350Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "wm lim",
+        "stars": 5,
+        "text": "Nice service",
+        "publishedAtDate": "2023-07-07T01:49:48.498Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aina Abd Rahman",
+        "stars": 5,
+        "text": "Good service good doctor, nice and friendly staff 😘❤️",
+        "publishedAtDate": "2023-06-08T05:56:49.266Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jasmica Chai",
+        "stars": 5,
+        "text": "Good services",
+        "publishedAtDate": "2021-03-11T08:05:30.758Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "sha shazelin",
+        "stars": 5,
+        "text": "Good service good doctor ❤️ Recommended",
+        "publishedAtDate": "2021-02-24T07:22:37.054Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vengadesan Mayan",
+        "stars": 5,
+        "text": "very good treatment. i happy n satisfied with her dental treatment",
+        "publishedAtDate": "2020-12-17T04:13:49.117Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "3-3C, Jalan Anggerik Vanilla N 31/N, Seksyen 31"
+  },
+  {
+    "title": "Tiew Dental Puchong Jaya",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0455911,
+    "longitude": 101.6205421,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-puchong-jaya",
+    "skip": true,
+    "placeId": "ChIJMfqh3jpLzDER3Gk-Zhc0zuw",
+    "phone": "+60125102801",
+    "permanentlyClosed": false,
+    "address": "2A, Jalan Kenari 1, Bandar Puchong Jaya, 47100 Puchong, Selangor, Malaysia",
+    "neighborhood": "Bandar Puchong Jaya",
+    "city": "Puchong",
+    "postalCode": "47100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 107,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMrF7IAplllxVwtvz3vamV2kHnzsZdv-kzL5-oo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOLGY-_hdCr16mFfjbCGrzJ74s39vqH14I2lyHb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMPwfIqMCTppcRRw920juYL0mOc22vnYYveqS5p=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMmZ-j5LD8nMT_d4TQtWGBqput_y3Q8rnHEdy8q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npwrEj9ZZnC5H0ciMRIJH_WuVe1vdvjQhr1iIqRW62971fNOg-aqFL9nXnCl-a55Nk-y32u-X3SYa1nnUIZSr0e7-bUmwrEfNlRVcEUTD094kwNVujx9AeLm1FQyvZl7cZ_2YnMww=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Colin Wong",
+        "stars": 5,
+        "text": "I had a very good experience with Dr. Chong Mei Xin during my first visit to her clinic in Puchong Jaya. As someone new to the area, I was a bit nervous about finding a good dentist, but Dr. Chong exceeded my expectations. She was very gentle and professional throughout the whole process, and I really appreciated how she took the time to explain everything clearly. Most importantly, I didn’t feel any pain at all during the treatment — she made sure I was comfortable the entire time. Highly recommended if you’re looking for a skilled and caring.",
+        "publishedAtDate": "2025-04-19T13:35:58.036Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kumar nathan",
+        "stars": 5,
+        "text": "Very well treated & satisfied with the work👌🏽😁",
+        "publishedAtDate": "2024-08-24T06:43:51.355Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "RAVINKUMAR VISWANATHAN",
+        "stars": 5,
+        "text": "Very good service 👍",
+        "publishedAtDate": "2024-08-24T06:42:36.142Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ng poh yoong",
+        "stars": 5,
+        "text": "Very good service, doctor and staff are very nicely!",
+        "publishedAtDate": "2024-08-19T04:58:34.977Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tan Chan hon",
+        "stars": 5,
+        "text": "Good",
+        "publishedAtDate": "2024-08-17T05:45:45.402Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vanessa Tong",
+        "stars": 5,
+        "text": "Good service , nurse and doctor is friendly .",
+        "publishedAtDate": "2024-08-17T05:26:04.149Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Irid Wong",
+        "stars": 5,
+        "text": "Service nice， stuff friendly and professional Dentisit.",
+        "publishedAtDate": "2024-08-10T08:12:15.701Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Cheyenne Tan",
+        "stars": 5,
+        "text": "Workers is kind and friendly, environment also nice",
+        "publishedAtDate": "2024-08-10T06:14:12.532Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "2A, Jalan Kenari 1"
+  },
+  {
+    "title": "Tiew Dental Telok Panglima Garang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 2.912473,
+    "longitude": 101.4733864,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-telok-panglima-garang",
+    "skip": true,
+    "placeId": "ChIJgYt8BgWvzTERtOMraXYTZIw",
+    "phone": "+60331229427",
+    "permanentlyClosed": false,
+    "address": "No. 164, Tingkat 1, Jalan Utama 2, Taman Jaya Utama, 42500 Telok Panglima Garang, Selangor, Malaysia",
+    "neighborhood": "Taman Jaya Utama",
+    "city": "Telok Panglima Garang",
+    "postalCode": "42500",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 194,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr8Q_7fOUY1pvanBheIwUnoQeStGP5PwmLNC88g9UMUehIzDr5sTXjNooEPePK_2Bb9VuSIaYL_xmXgMt1yy4kxGjO6q5gWEH0H0EQFtgyzSH6q6EePfPZYD0brJ4NqMovK69zLPQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqEhOscSII7-eqC1FJo5OJWLsIXbBTa0Bp9KoFJZZ6EJX2I9HmF9qs2lgvjsDEUD-VLlHzpwZh-FUiaYNdM6VWDDlbKtcR1KrjWKEcmVl5GO_nmAOdJ3sqrbHlZvJqjchnwFcHz5w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrehbmUvLPF4Cafyt0N1lWLqvpIWz0fDsQasoTNRHDvmLuiEpHPlytsBGZ7THWPPPGVJcnxP6iar5npgMM_38SWRtPJoqyPQIou-LijbUOJWg8GLFr-MSdk2rJki7rgZu_KYfVD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npU6R1DlFVf_f1uh1yGcu1aSnFMtQPTm98KqZnR0lu0vCBJbtjmrq_7KzXveKoMLN9smeQAQzARnKj1fABx4Qpkl-9v0zAZJTgdUccb1WO3SR8GGq1KsMnAko8m_Uwnj4wVQycv1Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noRHiqWEE3HLsn2iAD1RYkAgh9NRytQYp_c7TCMO4di8iAcu5-kyw-kDlRjt1MoImJ9sgyZq1Oo2AJCvWhJy70rc9MdiPZ-9ySp6nIb2rtuLL1TP0AQmoRYweap8pJ4QZhKQcRs=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "ika saad",
+        "stars": 4,
+        "text": "They have very friendly and gentle dentist. This will be my favourite dental clinic.",
+        "publishedAtDate": "2025-03-26T07:18:03.308Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rosdi Abd Rahman",
+        "stars": 5,
+        "text": "Service sgt bagus dan selesa.",
+        "publishedAtDate": "2024-08-17T08:13:45.408Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Norshikah Razak",
+        "stars": 5,
+        "text": "Perkhidmatan dan layanan sangat mesra. Tempat sangat selesa.",
+        "publishedAtDate": "2024-08-17T07:33:07.892Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nurul irdina",
+        "stars": 5,
+        "text": "Dr scaling & polishing saya dengan baik tak sakit pun. Dr pun peramah sangat dengan saya. Klinik gigi paling terbaik saya pernah pergi.",
+        "publishedAtDate": "2024-08-17T03:00:30.120Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AAxaKkhhZXxJ5iphGGY3RdiB0rzNboc44Sn4R98cZbufWJnpM1PC81IHHBJYn36qOchFH3mAQUq2XQ4hBb6oim0Afz9aEanXDTrQ4x9HY9xYgHlJzUHqMruuAfzTNOamkFBWGMzQ"
+        ]
+      },
+      {
+        "name": "Nur Anniesa",
+        "stars": 5,
+        "text": "excellent service, nice environment and also friendly staffs !!",
+        "publishedAtDate": "2024-08-17T02:39:25.810Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Insyirah",
+        "stars": 5,
+        "text": "service dia okay..dr pon baik je..klinik bersih sejuk👍🏻👍🏻",
+        "publishedAtDate": "2024-08-17T02:19:56.033Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "abbi nathan",
+        "stars": 4,
+        "text": "I took my mother to this clinic, where Dr. Lim Shi Rou attended to us. She provided a thorough explanation of our situation, and we were very pleased with the service. The charges were reasonable, the environment was pleasant, and the staff were polite and friendly. I highly recommend this clinic for anyone seeking dental consultation.",
+        "publishedAtDate": "2024-08-16T02:27:27.943Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "fauzilina Ahmad",
+        "stars": 4,
+        "text": "Terima kasih di atas layanan yg baik sepanjang menjalani rawatan Gigi di sini. Doktor pun bagus dlm memberi rawatan & infomasi.",
+        "publishedAtDate": "2024-08-10T07:52:08.061Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 164, Tingkat 1, Jalan Utama 2, Taman Jaya Utama"
+  },
+  {
+    "title": "Tiew Dental Balakong",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0426089,
+    "longitude": 101.7723982,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-balakong",
+    "skip": true,
+    "placeId": "ChIJZU565sM0zDER4HiO_c3qgTM",
+    "phone": "+60390757677",
+    "permanentlyClosed": false,
+    "address": "23, Jalan SS 2/2 Batu 11 Cheras, Batu 9, 43200 Cheras, Selangor, Malaysia",
+    "neighborhood": "Batu 9",
+    "city": "Cheras",
+    "postalCode": "43200",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 410,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPF-gLkgfpFILcMCdD-L2ABoao0cxPGv_kQ9qeB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPdgPL04d7RnwhFIHZHwFUxfWZMuV5ODw7VUc5b=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPoXm06tuNSXJjeMSDmCtdWo7WWAKGzAXqPCiTG=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOm7c3NA6nYbr1tL8EogxL-rvVSuioGcKgl3JSO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOldUSSkxeLVQ716Agq1WOIYMMGSBEZxh_T-b0G=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "KH",
+        "stars": 5,
+        "text": "Malay dentist good service",
+        "publishedAtDate": "2025-07-22T04:16:41.272Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alexa lok",
+        "stars": 1,
+        "text": "REMEMBER DON'T LOOK  FOR SUCH DENTAL\nDr. Yeo Yue Ming\nWORST DENTAL SERVICE EVER\nNO PATIENT\nVERY RUDE\nLIKE HAVING PERIOD 365 DAYS\nIF YOU SICK DON'T COME TO WORK\n\nWORST Dr. Yeo Yue Ming\nSKIP Dr. Yeo Yue Ming\nDON'T EVER APPOINTMENT Dr. Yeo Yue Ming\n\nLOUSY SERVER Dr. Yeo Yue Ming",
+        "publishedAtDate": "2024-12-07T03:53:04.613Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jia Ming",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-10-04T07:02:16.899Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "eric saw",
+        "stars": 5,
+        "text": "Good",
+        "publishedAtDate": "2024-09-19T02:09:16.322Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kelly Lim",
+        "stars": 5,
+        "text": "Nice treatment from Dr Joyner and the staffs are friendly 😊",
+        "publishedAtDate": "2024-09-07T03:01:25.707Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "wai jerry",
+        "stars": 5,
+        "text": "Bagus",
+        "publishedAtDate": "2024-09-04T03:01:49.184Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yoke Lan Thong",
+        "stars": 5,
+        "text": "Good service, Good doctor, nice nurse",
+        "publishedAtDate": "2024-09-02T03:02:36.349Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lup Yan Siew",
+        "stars": 5,
+        "text": "Good experience and attentive service",
+        "publishedAtDate": "2024-09-02T02:58:06.085Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "23, Jalan SS 2/2 Batu 11 Cheras"
+  },
+  {
+    "title": "Tiew Dental Setia Alam",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1002608,
+    "longitude": 101.4448247,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-setia-alam",
+    "skip": true,
+    "placeId": "ChIJqbydH_JTzDER0eMckZJ8LIQ",
+    "phone": "+60333588405",
+    "permanentlyClosed": false,
+    "address": "Unit 14-2-1, Jalan Setia Prima Q U13/Q, Seksyen U13, 40170 Setia Alam, Selangor, Malaysia",
+    "neighborhood": "Seksyen U13",
+    "city": "Setia Alam",
+    "postalCode": "40170",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 375,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrjpmgETUgQAlQP--USpLa3KpBab3wj3JBw0ZN_nLou6_TrMKm_fiK3IuMDRzest_cYboRh9tuhX0dXLI16opEUm0v6XYsRVwf5MnpPlREf2lB6M3mbwy3mu_R4fB0vKXJtDm_Y=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN0MPR2Sy1mL6bO3T16ejmYNKEEkUYMdHmy-rwQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipObR5jlLwQzqOts19hnXOY-SbaRXH3JP0P1jJqH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqzN698MLzJemPV5SV4cFiYTuAD1Xf8iBbuwUSKraBZyzUI9si3kGTsl-WpfBR8yPEL9Q68By3oqts8Eh6Ch76zzh8mQKqFt79Kg5Nn6fk7fLoT9CxVZy3LLz-vEDWfYluDN5ymKw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noUTTEeEQk6wUM0G8eDbWbgtAt_RyYw0vFJupyTUbrVYluUR5CW-js5zKX-2hoV8mM5xDAZFyXbX3QlSLiGqOq451FM4P7cOBTjD5bpZBGyfeVsQik6bn1DBnfFivd5lKTJLrz6rw=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Sabrina Toon",
+        "stars": 5,
+        "text": "I had an amazing experience with Dr. Cheong Hui Sze at Tiew Dental Setia Alam. She was professional, gentle, and took the time to explain my condition and treatment plan thoroughly. The staff was warm and welcoming, making me feel comfortable from the moment I walked in. The office was clean and modern, and I appreciated how efficiently they handled my appointment.",
+        "publishedAtDate": "2025-07-12T02:49:33.321Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mohammad siddiq",
+        "stars": 5,
+        "text": "good",
+        "publishedAtDate": "2025-07-05T09:15:08.279Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Rui Chi",
+        "stars": 5,
+        "text": "Good service.. doctor & nurse are nice",
+        "publishedAtDate": "2025-07-05T05:17:21.201Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alice Tan",
+        "stars": 5,
+        "text": "Doctor is very professional and patience.",
+        "publishedAtDate": "2025-07-05T03:01:22.919Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vanessa Priya",
+        "stars": 5,
+        "text": "Good service, painless and quick. Appointment was with Dr. Cheong.",
+        "publishedAtDate": "2025-07-05T01:46:39.107Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "M. FARUQ AMIRUN AZMAN",
+        "stars": 5,
+        "text": "Very details procedure and great docto😁😁",
+        "publishedAtDate": "2025-07-02T04:26:47.961Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syahida Adnan",
+        "stars": 5,
+        "text": "Hari ni dapatkan rawatan gigi di sini. A to Z sangat memuaskan. Sangat recommended datang sini wahai warga Setia Alam. Buat appointment thru wasap, respons sangat cepat. Keadaan klinik yang bersih dan selesa dan sangat sejuk ya. Kakak dua orang yang jaga kaunter depan pon baik.\n\nYang paling penting, Dr Cheong Hui Sze sangattttttt baik, professional dan membantu sangat sangat! Penerangan yang jelas dan informatif, service yang bagus dan rawatan sangat cepat! Next appointment pon saya nak book dengan Dr ni lagi.\n\nAfter service pon ada ya mereka siap send cara penjagaan gigi lagi thru wasap. Tak pernah lagi ada klinik gigi buat mcm ni, setakat yg sy jumpa.\n\nOverall saya sangat puas hati dan recommend utk sesiapa yg nak buat rawatan gigi!!!!",
+        "publishedAtDate": "2025-06-20T08:09:50.192Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BHX2Xk5mcJm-iMc6yLJy_IFvQjYRDQf-k1f_nPOTUJQi3F8S3vVVTIqj31u3HXksAtFIlgV4yq-kg6kE_3qc-SJgdaNPKceVsjuwqHZeJyjSjYJTnE2caR63LlnWHCMm_KBqdMka8FyNE"
+        ]
+      },
+      {
+        "name": "Quay Chai Yoon",
+        "stars": 4,
+        "text": "Doctor Chong very good and patient. Listen carefully to our issues and  treat our teeth carefully.",
+        "publishedAtDate": "2025-06-14T04:32:59.764Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Unit 14-2-1, Jalan Setia Prima Q U13/Q"
+  },
+  {
+    "title": "Tiew Dental Taming Jaya",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0236992,
+    "longitude": 101.740905,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-taming-jaya",
+    "skip": true,
+    "placeId": "ChIJOQ68CsXKzTER28J398m_fpI",
+    "phone": "+60389641873",
+    "permanentlyClosed": false,
+    "address": "1, Pusat Perniagaan, 25-1, Medan Taming Sari 3, Taman Taming Jaya, 43300 Seri Kembangan, Selangor, Malaysia",
+    "neighborhood": "Taman Taming Jaya",
+    "city": "Seri Kembangan",
+    "postalCode": "43300",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 196,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNUZydFNN_mp4ahDvNJSnlZtTEDZMmEnRk-zcQ4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrfnNSCCysFyg1Hl6NnK1y2vBiHStLUaD9v4cFOVFEZb-oEiA9HMnO1a0rPNPK3yVGGh4AEjMPg4Z_bRaMTIX7B3WFb6oT_KBxDjn4LQWmH950wPAuspN_It1OmdRW8TBjMIgQd=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npZ5nt-ITv1yW9BVlBLHaUBKLOB5uNnunLALP6UGbCEQnfqDAEDT1fnb_RBuu8mP7Vt_0e4M7agvt4VhnykcVT64gUWSlk7HhXEjqvDs4E7u95GAkyC9YlZJtUaBVer-VkB4PoD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN94xjziyfBB_rWCH6mi9sNHS6PH3eUSan2v5J4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNF5COHGW8NJpkrTsG59AFfqls3Nh3nfD1QxJDh=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Chew Ooi Teck",
+        "stars": 5,
+        "text": "Recommend Dr Lim Yee Chin. Very good",
+        "publishedAtDate": "2025-06-09T06:21:40.316Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "norarsida",
+        "stars": 5,
+        "text": "Rawatan akar di Dental Clinic Tiew. Staff friendly and Dr Ng memberi penerangan yg jelas mengenai masalah gigi dan gusi yang dihadapi. Tq Dr Ng and staff Ms Ziha. Jumpa next visit ya🦷🦷",
+        "publishedAtDate": "2024-10-25T05:33:26.670Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CsfFauSsbg4eR8HTz3a5CKAVcgEWTiZFvcisnOi1HHQCV0E8wEwytstUMs6RKP9BiYgi4HcFMrgvXyKTszh__6isYJzBVqG-ZKAUz0JuXWLw_-Q_m2Azfc6R0zgka1zdnOb8BK"
+        ]
+      },
+      {
+        "name": "CAHYANA",
+        "stars": 5,
+        "text": "sangat bagus dan mesra ☺️",
+        "publishedAtDate": "2024-10-10T10:22:15.898Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Frost Jun",
+        "stars": 5,
+        "text": "Good Scaling & Polishing service",
+        "publishedAtDate": "2024-08-30T02:29:30.717Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jackius Wan",
+        "stars": 5,
+        "text": "Ok and mesra dgn patien",
+        "publishedAtDate": "2024-08-26T02:45:20.485Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "shabitah hasimi",
+        "stars": 5,
+        "text": "Friendly staff and talented doctor 🫡",
+        "publishedAtDate": "2024-08-26T01:58:00.527Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lim Marie",
+        "stars": 5,
+        "text": "Dr. Santha Kumari very attentive and able to explain in details by current teeth problem.\n\nReceptionist also very attentive and friendly.",
+        "publishedAtDate": "2024-08-24T07:34:22.106Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "tharseni chinaya",
+        "stars": 5,
+        "text": "Send my son for treatment very Friendly and very patience when handle my boy. Thank you Dr Santha",
+        "publishedAtDate": "2024-08-24T03:09:21.361Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "1, Pusat Perniagaan, 25-1, Medan Taming Sari 3"
+  },
+  {
+    "title": "Tiew Dental Banting",
+    "website": "http://www.tiewdental.com/",
+    "latitude": 2.8129162,
+    "longitude": 101.503189,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-banting",
+    "skip": true,
+    "placeId": "ChIJK2ljc7ykzTERtGkDGzrhHXY",
+    "phone": "+60331872967",
+    "permanentlyClosed": false,
+    "address": "126 & 128, Tingkat 1, Jalan Bunga Pekan, 42700 Banting, Selangor, Malaysia",
+    "neighborhood": "Banting",
+    "city": "Banting",
+    "postalCode": "42700",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 182,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM-ai6up90fLFKO4_Dy3jVz6V9ypyGTHbJjk7T1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPxhVOKnyCWJdDsBrLbYhsRIEsLX4_Y7NWDZIk2=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMgIHRqOnbqp4zGAaUGhBQcSXBYTJgez2KOhfG9=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPe6_rrdNfnmLqIgoWqa7n0qIlLEsOmxdsz0zqP=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nooekTNv5vfzf_HoBzvR3RiA53Ebcpi8jLuDwiCTps6qGIcyFuxbty39YDV7NZ4SEZkK8nci4gJx0jvCudOf342w_qdg0FEVThUtLKpoMuwL8TuDbbpi6gd9AXsu-cxH1QSrPOJuA=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Dee Dee",
+        "stars": 5,
+        "text": "Very good service 👍",
+        "publishedAtDate": "2025-05-01T13:18:59.763Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bro Grab30",
+        "stars": 5,
+        "text": "Servis sangat bagus, staf dan doktor sangat friendly... penerangan dari doktor latifah sangat2 jelas, klinik bersih dan cantik👍👍👍",
+        "publishedAtDate": "2025-04-17T04:54:30.099Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "FARA 83",
+        "stars": 5,
+        "text": "Terbaik layanan staff bernama Sha sabar melayan semua pertanyaan.Service dari Dr Latifah pon sgt2 memuaskan.Terima kasih jadikan gg saya sihat❤️",
+        "publishedAtDate": "2025-01-07T09:10:04.210Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nor Ema",
+        "stars": 1,
+        "text": "Not recomended...my worst experience ever make me trauma to dentist.telling to do and persuade unnecessary procedure not related to my pain...resulting ruining my teeth which i have then have to consider crown.so depressed,my worst decision come to the clinic.many other modern,much comfortable & new clinic in the area much better in listening & process ur problem rather than easily jump to conclusion and telling u unnecesary thing not related to ur purpose came there. Been many clinic,this the only clinic thats during consultation keep telling on the promotion,at the end i have to spend more to consult other clinic as the doc not taking me seriously when i came again told them i still fell pain.even they cooperate but i the one bare the ruining teeth.other clinic have many tools to test ur teeth/nerve & new brand of filling.the filling done here not even same color to my teeth.",
+        "publishedAtDate": "2024-11-02T09:30:22.025Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sua Yeehang",
+        "stars": 5,
+        "text": "good service",
+        "publishedAtDate": "2024-08-27T03:03:36.324Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Packiam Muniyandi perumal",
+        "stars": 5,
+        "text": "Good service. Thank you.",
+        "publishedAtDate": "2024-08-23T04:07:04.901Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pavithra Kanakalingam",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-08-22T04:11:27.180Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kavitha",
+        "stars": 5,
+        "text": "I came to Tiew dental by referral. Got consultation with Dr.Subashini. the Dr was great in consultation and treatment advise. Will follow up here permanently.\nRecommended",
+        "publishedAtDate": "2024-08-22T03:58:22.994Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "126 & 128, Tingkat 1, Jalan Bunga Pekan"
+  },
+  {
+    "title": "Tiew Dental Puchong Perdana",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0076036,
+    "longitude": 101.6061827,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-puchong-perdana",
+    "skip": true,
+    "placeId": "ChIJQWtXp2WzzTERliVzbgKo0UI",
+    "phone": "+60380615688",
+    "permanentlyClosed": false,
+    "address": "No.1 , Tingkat 1, Jalan Perdana 3/3, Taman Puchong Perdana, Batu 12 3/4, Jalan Puchong Perdana, 47100 Puchong, Selangor, Malaysia",
+    "neighborhood": "Jalan Puchong Perdana",
+    "city": "Puchong",
+    "postalCode": "47100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 507,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNFfG1xmvGvQo2Z-myOOj6kb6bSWVsFoL_H_NBk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMS-fQCF9mb_j39ySgKLFzmdu_DABeO7SfOEgrY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np3fRbUyc-j_JjIOkJJePFh9w66jAl0DbGgszv9xM90MLb0BfW9JIXL4Zr0j-Imclco6tiL__d2mmqZG-l9jqdrnDOjEJ7sqE1gm5Or3xMHCBaPEYo_rwtuCowqZWjoIAEJ7G3W=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqdqEYkmxFZBZt3_PSTvek_8rlRXmXyzV4BrlOe2tlq9pJrNxDvMVlArXDUWSz9-4LYcPCQAUaXjByVW1Stm3Z7EM7gBz6gSBBVR4D9uI5sV5AUybbJsJRaur4dJMLP1fYEzII=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nro7XbBL_2h42dBq_H8avJp1-1k_p6jRSHsesveLowuFBjqctdoCZjxwFIJ-G7GeKhqCFkuzVkKnUC-4bFXqKJS6M0sCIRR52-o1E6ZihM9rOFvyHaHThRoEGay0MgO-_d34H7G=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "ong siew fong",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-10-23T00:22:59.237Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Khadijah raof",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-24T02:42:23.703Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "shasha richQ7",
+        "stars": 5,
+        "text": "Good service,good doctor jaya. Nice to meet u doctor 🥰",
+        "publishedAtDate": "2024-08-17T04:43:21.072Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Santha Murugesu",
+        "stars": 5,
+        "text": "The Doctor is very good,  she explain very well.",
+        "publishedAtDate": "2024-08-17T03:12:26.107Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Suria Hani",
+        "stars": 5,
+        "text": "Best dental clinic especially Dr Annam who always try her best to save my teeth and give the best smile! And all the staff are very friendly. The appointments are on time.",
+        "publishedAtDate": "2024-08-16T03:38:36.421Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "royani ramlan",
+        "stars": 5,
+        "text": "Saya membuat rawatan dengan doktor Annam..servis dan layanan terbaik dari staff dan doktor.",
+        "publishedAtDate": "2024-08-16T01:40:42.633Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Izham Md Khalid",
+        "stars": 5,
+        "text": "The best dental clinic especially treatment by Dr. Farha.",
+        "publishedAtDate": "2024-08-15T07:15:41.807Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alif Ikhwan",
+        "stars": 5,
+        "text": "Tampalan bagus - dr farah",
+        "publishedAtDate": "2024-08-09T02:19:24.213Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No.1 , Tingkat 1, Jalan Perdana 3/3, Taman Puchong Perdana, Batu 12 3/4"
+  },
+  {
+    "title": "Tiew Dental Subang Perdana",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.148643,
+    "longitude": 101.5468729,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-subang-perdana",
+    "skip": true,
+    "placeId": "ChIJhXbA7KtPzDERSbiiQUsb6dU",
+    "phone": "+60378400006",
+    "permanentlyClosed": false,
+    "address": "32A, Tingkat, 1, Jalan Dinar C U3/C, Taman Subang Perdana, 40150 Shah Alam, Selangor, Malaysia",
+    "neighborhood": "Taman Subang Perdana",
+    "city": "Shah Alam",
+    "postalCode": "40150",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 386,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM6wSQ3Qxbb_6WR4FMmVukiu2uFvl7Jo1uWopFy=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr4R2u16vfQzESfRyMx5IfS-vzCHfVLfA3_JbMRwolMGxNDOL2qYgvZ7EY-jzQdVsffC-xqzuhR-cMiQ9MV_U6-gqWzXjiD7sdcBASVUfQky8Gfmwm6uKqhw45QotiDC7Iong_GTg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np3d2zDrIVj7cr5wz990N5dRaVA1gWu1bue9sWHTVwEoo8jOmnyI00g2pC52aiyJw4-FH11hB6YxuEmXjJsbpqAus6zOEtiqVpaYRFfdWGyHcNLMan1aaw9t4iXjP8U3doNFBk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noyKUlBHDIIq38WYsw1H25q1EIT2FQCbkC4bbVOv8PFEzGKPWsXDrYZ_rBk58BkUEirZHs9dizhMCz9sAIHB10p7AR1EtF09eaKh4I_iZLkPvqp7CahlcKVVnvBJOZ9x4WF9ss4vw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq0U1RYSuQAp-uGUEDa3DC7gc5jR1Hdh_LUlRh-B-Z7Z-d6Jp_uHwgFwupZzStj__kg60ztI1iLM3ZMHgsuZJQBRk4DaUoJ0vWm-2iJ6IP2WijuRgwkG8921E_6B3mpzmITzaEcJg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Razi My",
+        "stars": 5,
+        "text": "Good experience, Good consultation, fast service",
+        "publishedAtDate": "2024-08-28T01:54:37.106Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aidil Azhar",
+        "stars": 5,
+        "text": "Good explanation from Dr. Chen Sze Min and good service from all the staff. Recommended 👍🏻",
+        "publishedAtDate": "2024-08-27T02:28:45.672Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nurul wahidah abdul rahim",
+        "stars": 5,
+        "text": "Staff n doc friendly...treatment smooth je..",
+        "publishedAtDate": "2024-08-26T09:20:23.347Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "syah ilham",
+        "stars": 5,
+        "text": "Friendly staff",
+        "publishedAtDate": "2024-08-19T04:12:29.004Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Umi Suriati",
+        "stars": 5,
+        "text": "Doctor sangat bagus dan memberi penerangan yang baik..service cepat dan bagus👍🏻..will come again for next treatment❤️",
+        "publishedAtDate": "2024-08-17T03:12:21.860Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Syahirah",
+        "stars": 5,
+        "text": "Had a very good experience with the dr. gan wei chi. This is my second time for my teeth treatment and the treatment wasn't hurt at all. Will surely come here again in future",
+        "publishedAtDate": "2024-08-12T07:31:46.399Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "杨明",
+        "stars": 5,
+        "text": "Dr sangat Bagus Cabut gigi tak rasa sakit klinik bersih ,Akan datang lagi",
+        "publishedAtDate": "2024-08-10T03:11:33.175Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jacky Fong",
+        "stars": 5,
+        "text": "Good service...semua baik",
+        "publishedAtDate": "2024-08-09T04:43:38.853Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "32A, Tingkat, 1, Jalan Dinar C U3/C"
+  },
+  {
+    "title": "Tiew Dental Bandar Puteri Puchong",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0241638,
+    "longitude": 101.6184521,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-bandar-puteri-puchong",
+    "skip": true,
+    "placeId": "ChIJnXRO_lezzTERboWyikxzg-I",
+    "phone": "+60380664698",
+    "permanentlyClosed": false,
+    "address": "71, Jalan Puteri 2/1, Bandar Puteri, 47100 Puchong, Selangor, Malaysia",
+    "neighborhood": "Bandar Puteri Puchong",
+    "city": "Puchong",
+    "postalCode": "47100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 692,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMuCTBJ8HSS_BwSXk74wpuoNf7fjrEdIynYgaJk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLoH6sSnJmLP4RMM2fjfa1r1S0_Wa9s8D_ZF4nvAI_VtDBzvRaCvs3FJp7fUU4Rnru-Kh1kn_hhab321TxY0cXIGOC27Jw9sjCRLRCVp9I8Trt0enFErch7qwN2-m9dDO5jkHgpg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPVQYxfb6tT9ZFqvcT5FZdfP53IxRAXNP0UupkO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nplIoMOxE-P-g6jGuJab_DK6NheMr4-2afI93_laHPAi5Efehp3xrXPLCJTZm4TLOlpXZ5Jm06IpGqjuW-fzkKG9d5da0pj6ZCNtxOIlNvNXJUeLPBS7xfIBiD91Y8m1D5qOqq6Ig=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO3-DcG2BadpGniVu1mRNbwaYf47ik9mpkUz6ff=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ritchell Glyde",
+        "stars": 5,
+        "text": "I recently had an upper and lower horizontal tooth extraction done simultaneously here and I couldn’t be more grateful for the experience. Dr. Gan and the nurses were incredibly gentle and professional throughout the whole procedure.\n\nWhat really stood out to me was how clearly everything was explained — I felt calm and informed every step of the way. The extraction itself was much smoother and done faster than I expected, and the aftercare instructions given by Dr. Gan were also clear and easy to follow.\n\nHighly recommend this clinic & Dr. Gan 😊",
+        "publishedAtDate": "2025-06-23T14:50:07.626Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Najwa Mohd Khoiri",
+        "stars": 5,
+        "text": "Sangat best....the charge also affordable..tampal gigi 2 batang for rm300,  waiting hall pun cantik dan selesa...Dr  explain pasal future plan untuk gigi juga...",
+        "publishedAtDate": "2025-02-18T05:43:55.156Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DvjtedvPY-OT-K5THQyOENy5RC_YcJYGguc16cxYJemdODD71Eta6u-Wp9X159uSQrpAulk_xkkk6gzGipVtjpZ_U_ASgQI_5og-abW21lfXLo0SFwc4yRGlbd4LbiA_tY1l-sHw"
+        ]
+      },
+      {
+        "name": "SuanLeng Ng",
+        "stars": 1,
+        "text": "Cancel my appointment, I need wait for the other booking day. This time can't and that time can't!!!",
+        "publishedAtDate": "2024-12-30T06:36:55.513Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "c wj",
+        "stars": 5,
+        "text": "Tiew Dental Centre in Bandar Puteri Puchong, professional and reasonable price for everyone. Recommended for dental problems and seek for advices. Dr. Tang Sum Pei is nice and professional. Definitely will visit again next time. :)",
+        "publishedAtDate": "2024-11-27T05:44:16.710Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DWJys-aqyKyUWJ576ftqNcpoz8hh0k7gYFd06e0ydx0uM83aA1WYEytJyg8f0qogJdo1uwN8W5ewdxz4PZgTIl3Rw1V5pCUQrpdpWUJsgoblcHwpBHTmvkokKTqfCw5K-JzpPKhA",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C7p2GxbI-F-WVZxOMDM8HXq-TJIIGG_a3fdHmZWn0Svq9cyxFQWDSNQrp93a747Mm0Qj7mO0dLJut26VrARXVwYRIVcFSrTQUNLA5RgKBpJVlcgd3UR4OKE4fOu0L_xRpuWgQ",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DFi1biroqDQLO4kDM3sZkmneJq7UsS6lYUeJyzb0Ts3K2Kzrj1t-TD2fnzF66igPlB6QDmWx2XcyFt2qZHVZaeVI-otYqk2iPB4aH_eJgHZN9ncC8mRZcSHvKYJCwP6W6QyHOEEw",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BXBtkk6DSOlMWp4MqxTcJFzvyc-23IT--Iqi69IaVgjASzR5qCmPyjNslHem5Zx2tUg--_GPKYO85IYqpIYd3bvLquTvJOxbGlNSrA8of9Oo4slZTtKGDgA2feeHHRnOCd5fQZ",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DAb7cScO7hR_VRK4EB7uzb82OOeHAiUOZx7UeDw3Imj3uoBdJQLxabodKLnbCcenEkZfYtz9rJMuSyfOTXibs0yoTfiB17c_gHBgM0xLS_LRHwiZysi12cqIOnxZgdwYiXIG3jRw"
+        ]
+      },
+      {
+        "name": "jade lee",
+        "stars": 5,
+        "text": "I had two fillings done due to fractured teeth by Dr. Tang, who was very professional throughout the entire procedure. A few days later, I mentioned experiencing discomfort of the filled tooth with my mouth guard, and without hesitation, Dr. Tang trimmed it and checked my bite again, all without any extra charges. I really appreciate her time and care.",
+        "publishedAtDate": "2024-11-20T11:23:40.462Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joanne L",
+        "stars": 1,
+        "text": "I recently visited Tiew Dental Bandar Puteri for a dental checkup, the Dr. Gan Wei Chien informed me about a tooth decay that required filling. I agreed to proceed with the filling immediately. However, just a few days later, I began to experience unusual pain in the treated tooth. Concerned, I sought a second opinion at a nearby dental clinic.\n\nTo my dismay, the new dentist revealed that the filling at Tiew Dental Bandar Puteri was improperly done, leaving the root exposed and resulting in an infection. As a consequence, I now need a root canal treatment to salvage the tooth, which could have been avoided had the initial procedure been performed correctly.\n\nI am very disappointed with the level of care I received at Tiew Dental by Gan Wei Chien. The apparent negligence has not only caused me additional pain and inconvenience but also a more complicated and costly treatment. I can not recommend this clinic based on my experience. Improffesion treatment by doctor Gan Wei Chien",
+        "publishedAtDate": "2024-11-17T16:05:36.483Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hajar Azraai",
+        "stars": 5,
+        "text": "Recommended dentist. I went for premolar and molar filling with an anxiety, but Dr. Tang Sum Pei was so calming and reassuring. I thought the bill was going to be expensive, but it turned out very affordable despite treatments for 2 teeth. The procedure was painless and I can't wait for our next appointment.",
+        "publishedAtDate": "2024-10-19T03:38:14.258Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "MARKETING _SUPPORT",
+        "stars": 5,
+        "text": "Dr. Tang Sum Pei, highly recommended dentist.  Good service and friendly dentist.\nshe very professional and patient, didn’t feeling pain during the extraction experience, scaling. The price also very reasonable. Thanks",
+        "publishedAtDate": "2024-10-12T07:04:17.628Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "71, Jalan Puteri 2/1"
+  },
+  {
+    "title": "Tiew Dental Seri Kembangan",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0171605,
+    "longitude": 101.7033192,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-seri-kembangan",
+    "skip": true,
+    "placeId": "ChIJ11Bf5F61zTERWgMot_8DnO4",
+    "phone": "+60389417375",
+    "permanentlyClosed": false,
+    "address": "No. 1, Tingkat 1, Jalan Perusahaan Serdang Off, Jalan Seri Kembangan, 43300 Seri Kembangan, Selangor, Malaysia",
+    "neighborhood": "Jalan Seri Kembangan",
+    "city": "Seri Kembangan",
+    "postalCode": "43300",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 448,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npbJ0U2wr7knFQbdnHJRv_R9QnM_Cz_kIzmEAM-BLprpT4V0OlutfSXGUPaDTp7BiNrogza3ra5YPOJyKyVrNOI2H-D42Nz6DK7ClZmGRPiueWT2qIR1tbaAo5M38u3Z2YZmOwS=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMO8SqFQaEsu5Gwt93dPae1vDC2j6oMt9bc1HiB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npkiOfSRU-3vsyQU2fSivicXPzc9WbzOKzHeFLgM1wXVt5SXbT0vmJdyQw4WeCdCD7FBAO91XBrJixO7pS6KeLtLQZPhR-wfLXvvlkyGkEOxzHdxH6zaexiPT8z-JfuGFe0MxAMeA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np8QBYLkt3WffKQ5EW81DvoFqzYR_3Nqlrq51hmwb5dMX51Mug_gJvnpi8KuqaZQkZo8vzxKmEBKibLTUJPZwRp3GIw71d4W6L1ddrqSxtGCD0nZ0Q_aByimWWxrugzE3f4en81=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNn4Po-2MySKkZvGIA337nTL3GmHy1ln-o2-14Y=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Da77y Study",
+        "stars": 5,
+        "text": "Very Very good, professional craft and explains, recommended by colleague’s girlfriend.",
+        "publishedAtDate": "2025-06-27T06:52:25.885Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Elaine Wong",
+        "stars": 1,
+        "text": "只能说太商业化了，冼牙十五分钟就冼好, 冼到牙齿一着出血。应该不会有下次。",
+        "publishedAtDate": "2025-01-27T08:31:18.448Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Carol Hill Tan",
+        "stars": 1,
+        "text": "My 1st time visit.\nHuge improvement needed for the condition of patient toilet. You wouldnt feel comfortable while in the space. Patient chair is old and torn.\nExperience wasnt superb.",
+        "publishedAtDate": "2024-12-07T07:21:35.317Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ramasamy Sinasamy",
+        "stars": 5,
+        "text": "Doctor very good",
+        "publishedAtDate": "2024-08-16T03:19:28.621Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "yoon woo",
+        "stars": 5,
+        "text": "good service from drjanice",
+        "publishedAtDate": "2024-08-15T08:53:45.222Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "IVY HO",
+        "stars": 5,
+        "text": "Really appreciate for the Dr Janice ,so nice and patient",
+        "publishedAtDate": "2024-08-15T04:15:10.924Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Azura Zainon",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-08-13T10:52:02.814Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Randy Chai",
+        "stars": 5,
+        "text": "Thanks for Dr.Yeo",
+        "publishedAtDate": "2024-08-13T02:47:47.489Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 1, Tingkat 1, Jalan Perusahaan Serdang Off"
+  },
+  {
+    "title": "Tiew Dental Sungai Chua Kajang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 2.9900071,
+    "longitude": 101.7761487,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-sungai-chua-kajang",
+    "skip": true,
+    "placeId": "ChIJH_Exb5_LzTERN_om8d9s5BU",
+    "phone": "+60387379967",
+    "permanentlyClosed": false,
+    "address": "No. 9, Jalan M/J 1, Jalan Sungai Chua, Taman Majlis Jaya, 43000 Kajang, Selangor, Malaysia",
+    "neighborhood": "Taman Majlis Jaya",
+    "city": "Kajang",
+    "postalCode": "43000",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 141,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM_YxbiIK9o-C-sdgtK8XuCbgOf6wMESdbNuaaI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN6_q343iMfLjVp04xTL72pJdjS8RGpuo1HGycO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPDqetr57MnREJvW_FTXswd-nKVHTR06wTz79yJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npiwod27gTaiqkV2o2TMDjkmhjkX5EWoLKyO0e2exWZw08Tf0cvRzpltzFd5RNvMPDvLz2jJNm1pp1kFfQzkfUhFsYnV9h6Av6_lOs5RTpAXlE3-l-Cc2HWQI1dQ_LbLw8-qCyc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNWBVD7uf1jRZrZQ8ZtGoHOZvnlLfFdk8UIy7EF=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Sabrina Ab wahab",
+        "stars": 5,
+        "text": "Great doctor and profession treatment given by the doctor and staff",
+        "publishedAtDate": "2024-08-29T04:59:47.043Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gyo Za",
+        "stars": 5,
+        "text": "เซอร์วิสดีมาก หมอน่ารัก แนะนำดีมาก",
+        "publishedAtDate": "2024-08-29T04:14:44.820Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dr. Soe Ei Phyu",
+        "stars": 5,
+        "text": "The doctor, nurse and receptionist are friendly and provide good service.",
+        "publishedAtDate": "2024-08-28T07:38:59.794Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dr. Sithu",
+        "stars": 5,
+        "text": "Got Good service from Dr. , Nurse., Receptionist",
+        "publishedAtDate": "2024-08-28T07:35:12.533Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Harbans Kaur",
+        "stars": 5,
+        "text": "Everything is well-done... I'm happy with the treatment👍",
+        "publishedAtDate": "2024-08-27T04:33:26.346Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "WH Tan",
+        "stars": 5,
+        "text": "Gentle doctor and polite nurses.",
+        "publishedAtDate": "2024-08-27T01:45:43.434Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Penny Sua",
+        "stars": 3,
+        "text": "医生与医护人员的工作态度非常好",
+        "publishedAtDate": "2024-08-26T03:43:50.708Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Suet Qi Ting",
+        "stars": 5,
+        "text": "Good service with very patience explanation. Excellent service !",
+        "publishedAtDate": "2024-08-26T02:39:32.427Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 9, Jalan M/J 1, Jalan Sungai Chua"
+  },
+  {
+    "title": "Tiew Dental Nilai",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 2.8104081,
+    "longitude": 101.8060873,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-nilai",
+    "skip": true,
+    "placeId": "ChIJ9bmPpRvEzTERi2rAsR8zBIU",
+    "phone": "+6067990677",
+    "permanentlyClosed": false,
+    "address": "PT 4761, Ground Floor, Jalan TS 1/19, Taman Semarak, 71800 Nilai, Negeri Sembilan, Malaysia",
+    "neighborhood": "Taman Semarak",
+    "city": "Nilai",
+    "postalCode": "71800",
+    "state": "Negeri Sembilan",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 580,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM9VG16yaW4j_dAy-zIWixz-29cfZ0H5V90uYPh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrOYrWkfDMSZvwj5I01Nvw3j5SqHPuY2JjwIhOOnsQAyghmivVasIaE24Xvnxv57N3bdw-syzjVFdcUouVkL2XIm2sj0iOPXc-AOz65xsnVYliqMw-benp6L8Kw9jwgXCuV_xYVDA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP77TdYDBgHKQzZZpv0BSkI_p7GLr59FuU398r-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq4r4cWg2QcfEiTs9QI6wWaSAwQYAphB4Ra6f8w--MeI5H17eyXXhf2NaqBF6TOLFSg7fzB0Dhb8u6ZFWvuzt8c9CeEqRI_e__TJtaMn_8pV4LrLy4nxjMJ5iEURz6xgVUlIRy3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPzu8jdGBvsUnRu1fxBzJHPGijq-Vqbj8T5Kaon=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "NOOR ALAINA",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-05T04:29:55.898Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nor Salihah Ibrahim",
+        "stars": 5,
+        "text": "Friendly doctor and staff.",
+        "publishedAtDate": "2024-08-24T06:47:37.686Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "NYD ND",
+        "stars": 5,
+        "text": "Suka dgn klinik ni…dr sangat mesra n staff sangat membantu,sangat recommended to all",
+        "publishedAtDate": "2024-08-24T03:32:23.486Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CAv3XXpcCdJmDKVyH_g5UFGH8bMppkSI6lEtIOu_gSXy_9p2Hu1Qc2HvN3yWNoRRUDK5Y5fHEKVxYZQEpcxwiU4tjdjWbMRbvafK3FJ0MKN0pO_1Fm_EOMDgEUyxYi6x7sKNMl",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AX9NEekSMeerBq6YkKTkabELJ1s4EjVJD1l4K2Nnc445GfHDNjGOAxj0IJKI7IMHaUlsmnI8qb6xAIIlG7c-NDyUmS5S7B1xolJGbrWn1Fjf9RZ1MKvv8b4AfAt3Y9ob3LHK_zfQ"
+        ]
+      },
+      {
+        "name": "Sugu2379 Vasagi2379",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-08-19T04:04:27.442Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohamad Azrin",
+        "stars": 5,
+        "text": "Servis dan konsultan bagus",
+        "publishedAtDate": "2024-08-17T02:33:32.017Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ain Sya",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-17T02:17:13.369Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Raja Norsiah Raja Muhammad",
+        "stars": 5,
+        "text": "Service terbaik",
+        "publishedAtDate": "2024-08-14T03:55:48.432Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Zizree",
+        "stars": 5,
+        "text": "Layanan terbaik. Doktor sangat baik dan tak terasa sakit buat rawatan cabut gigi. Terima kasih",
+        "publishedAtDate": "2024-08-13T07:04:03.947Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "PT 4761, Ground Floor, Jalan TS 1/19"
+  },
+  {
+    "title": "Tiew Dental • Semenyih",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 2.9470868,
+    "longitude": 101.8464929,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-semenyih",
+    "skip": true,
+    "placeId": "ChIJ606vTHzOzTER4-4-s5cNyMU",
+    "phone": "+60387232566",
+    "permanentlyClosed": false,
+    "address": "30, Jalan Pasar Baru, Pekan Semenyih, 43500 Semenyih, Selangor, Malaysia",
+    "neighborhood": "Pekan Semenyih",
+    "city": "Semenyih",
+    "postalCode": "43500",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 275,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipO0ZO6Yi9y-yW33umEeqc9Hd7a6oK9FPwU8dH4V=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOHFULAOUL9cCw7mSOtYJUow8u4vs2wdldVXEP1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMVu1Zo_NR70iH0RTa7IAaZ7ZUvzkJUw_x0KZIR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqCBFA_8jm_Bk1szQPqbVf4m8wN8TVJGsA5TPht8uuPNXkKvy5ADt8o1hdpC4cNjTQo84UFPr8tpJbCEfE42G_tMFYnPHEFioerRu1q_iTjISUu1zsCMkiqfon8H4gLSWytPRgb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npAp-tOhQUEQGkDPpsHayiGGL2v34DuZuTfMRj1M90f4pf0YaF5Y2Mjjrp78-ZwCPMBhGNacob8Pp-Rf8SJk0vRUCBWCm2WkvROGeme5mg0VEdA4pGEc8bXJaoTDKamM8nqbfIdZ1a3oXM=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Poovarasi Thennarasu",
+        "stars": 5,
+        "text": "Amazing service and thank you !!",
+        "publishedAtDate": "2024-08-27T04:01:03.075Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vivo y36",
+        "stars": 5,
+        "text": "Harga okeyh . Nurse sgt baik . Yaya boleh explain dlm bahasa saya. Myra sgt bagus asisst dr chia . Saya sgt lega dan selesa . Klinik brsih dan sejuk .",
+        "publishedAtDate": "2024-08-23T07:06:01.609Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "shaheera shahril",
+        "stars": 5,
+        "text": "Good service & doctor Farhah explaination  👍🏻👍🏻👍🏻👍🏻",
+        "publishedAtDate": "2024-08-17T08:38:57.260Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rajeswary Gopal",
+        "stars": 5,
+        "text": "Special thanks to Dr.Amnapoornam who always very humble and gives good information before and after the  treatments.",
+        "publishedAtDate": "2024-08-15T04:33:03.026Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "eyakub Md",
+        "stars": 5,
+        "text": "Good service nurse and dtoc",
+        "publishedAtDate": "2024-08-12T07:49:22.657Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vinotini Genason",
+        "stars": 5,
+        "text": "Great hospitality by Dr Annam!",
+        "publishedAtDate": "2024-08-08T07:10:48.514Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "circuitbiscuit",
+        "stars": 5,
+        "text": "Great dentist thorough check up great assistant",
+        "publishedAtDate": "2024-08-06T08:08:54.813Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ervina Robby",
+        "stars": 5,
+        "text": "Good & very attentive by Dr Farha",
+        "publishedAtDate": "2024-08-03T04:10:12.015Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "30, Jalan Pasar Baru"
+  },
+  {
+    "title": "Tiew Dental Taman Megah SS24 PJ",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1143482,
+    "longitude": 101.6125506,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-taman-megah-ss24-pj",
+    "skip": true,
+    "placeId": "ChIJSzEnsW5PzDERHpthrc4tANI",
+    "phone": "+60378030522",
+    "permanentlyClosed": false,
+    "address": "45A, Jln SS 24/8, Taman Megah, 47301 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Taman Megah",
+    "city": "Petaling Jaya",
+    "postalCode": "47301",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 91,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipP7ZiEturXIGBkb69_GqeUANdKEza6pPkBiuo31=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMhy_eSIL5BmH7_5ZZdU4PoNrZ0X03avOIVDbUo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPaU9SQE2MO29umWkkTY18JGJcggmtmS5Fismcg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPNJMAPu8AsDLn50fkK5I1eccAAxfg3SLi5JtQU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNxx6dHmBWYKqSElMVTJMaI4OsXA56ChxklFQui=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Pw TONG",
+        "stars": 1,
+        "text": "My dad went to the clinic to ask for tooth extraction of a shaky one. As a result, the next tooth was extracted. My dad called to ask for the dentist but he’s not even working for so many days???",
+        "publishedAtDate": "2025-05-30T01:51:08.873Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "dshw 2014",
+        "stars": 5,
+        "text": "Dentist very patiently provide clear explanation for the treatment",
+        "publishedAtDate": "2024-08-21T02:26:12.124Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kunaseelan Subramaniam",
+        "stars": 5,
+        "text": "Excellent service.",
+        "publishedAtDate": "2024-08-20T07:58:21.120Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jovy Ng",
+        "stars": 5,
+        "text": "环境很好，医生护士都很友善，医生在讲解时也很仔细，值得推荐",
+        "publishedAtDate": "2024-08-20T07:04:37.852Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chun Heong Tan",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-08-12T09:09:11.936Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Benjamin Cheah",
+        "stars": 5,
+        "text": "Had a fantastic dental treatment with Dr Chin You Xiu today. Great recommendation!",
+        "publishedAtDate": "2024-08-12T07:50:24.702Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Catsarethebest",
+        "stars": 5,
+        "text": "Did my braces here and had a good experience.",
+        "publishedAtDate": "2024-08-10T03:29:39.115Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jenson zheng hui",
+        "stars": 5,
+        "text": "professional dentist",
+        "publishedAtDate": "2024-07-19T05:01:42.227Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "45A, Jln SS 24/8"
+  },
+  {
+    "title": "Tiew Dental Sungai Buloh (TSB)",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.2088181,
+    "longitude": 101.5705566,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-sungai-buloh-tsb",
+    "skip": true,
+    "placeId": "ChIJP4rpi3RFzDERXnyDYPf7LwY",
+    "phone": "+60361431449",
+    "permanentlyClosed": false,
+    "address": "2, 69, Jalan Nautika A U20/A, Pusat Komersial Tsb, 40160 Sungai Buloh, Selangor, Malaysia",
+    "neighborhood": "Pusat Komersial Tsb",
+    "city": "Sungai Buloh",
+    "postalCode": "40160",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 395,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPfDbyjPfhHUUpR8al9cJ1Kp1Toqpi-haF74coX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOL8_XWuvvdWRlyphklpk2e0motIArCYeM6Cv50=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrMKadQTppzUlwRXgMu-1pkpitUITBehiGkGst_pMR5k4yLA-HS5_nMECO5Hj1_JYlaN-1SLalJhTZhs2gNysV8pzrkC0rYo2YDf6_Ylhw5w79Q7eS1uXQEDAs_2_mwchI9ltLv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMKD3HolMBSwiHWt2Be6NqF1greTI_sN9ClAtyd=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipObxFdd2faNfLES5PTelNzFVChyDyszM3m-YMqb=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Shahrell Abdullah",
+        "stars": 4,
+        "text": "Kerja doctor terbaik…Tapi waiting tu lama..\nAppoinment pkl 4…sejam lebih kena sidai. Kalau dah tahu session patient sebelumnya datang lambat and treatment lama, call la update kena revise time appoinmnt tu, buang masa menunggu lama. Btw doc & staff tersebut minta maaf, ya very humble doc ,she’s good\n..sorry if i termarah ..",
+        "publishedAtDate": "2025-07-29T07:12:58.888Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CywRr77_sfAbgfLv3DAG7UhTBiKt16yYXSQJ7nL__iu-abUUuYoybrB1yGZMI9ZgVQaiZ405MwziLAr-gNxi_jqhBO5ykoRK_dZ5U2ZLnhuOy6IY6OEp4Au41XHMtCy5EQ9-6kqtTB6kpm"
+        ]
+      },
+      {
+        "name": "padmani 1957",
+        "stars": 5,
+        "text": "Very good service and good treatment",
+        "publishedAtDate": "2024-09-05T08:35:35.091Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sarah Wee",
+        "stars": 5,
+        "text": "Friendly staffs",
+        "publishedAtDate": "2024-09-04T03:08:15.280Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sherrymilla Esther",
+        "stars": 5,
+        "text": "The doctor & staff are very helpful & nice.Keep the atititude.😊",
+        "publishedAtDate": "2024-09-04T02:47:42.396Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mohd anuar",
+        "stars": 5,
+        "text": "Cepat dan cabutan tak sakit pon.. Terbaik\nTempat bersih dan selesa..",
+        "publishedAtDate": "2024-09-02T06:40:24.847Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Safiyah Nazir",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-02T03:29:05.337Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syafiqah Sakarani",
+        "stars": 5,
+        "text": "Dr Chenta explained to me very well. Services so fast! Recommended!",
+        "publishedAtDate": "2024-08-30T04:34:34.301Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Issac Ang",
+        "stars": 5,
+        "text": "Excellent",
+        "publishedAtDate": "2024-08-29T05:10:20.544Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "2, 69, Jalan Nautika A U20/A"
+  },
+  {
+    "title": "Tiew Dental Kinrara Puchong",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0668108,
+    "longitude": 101.6496212,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-kinrara-puchong",
+    "skip": true,
+    "placeId": "ChIJraqxYw9LzDERhL6QU_jMTz4",
+    "phone": "+60380807522",
+    "permanentlyClosed": false,
+    "address": "22A, Jln Kinrara, Taman Kinrara, 47180 Puchong, Selangor, Malaysia",
+    "neighborhood": "Taman Kinrara",
+    "city": "Puchong",
+    "postalCode": "47180",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 132,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMZX_RcLa0z-nUysm0im5_bK4bI-RhGMpCMkEJC=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNnFtgTTEgo2raR7qEbHrv3qa0TyJZjXWEUVdye=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npEn77vBAzHReNdIMq4ego1CfN-9f3LUbphY2fxbwZpV_3dlW71ltfN4SmfrNmuZQb-Adl4nxNj-ejMs78DH93cWjS2Q4dCAjgUrRopkaaXz9uajlZkz080iKoyj7dCyhKVXk5U=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNFryZpX6ib-LVLW1sLg5o1O_UzU3OUKehg24Nf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNXaqBagIO8_f9V9d3LkGBHQzuS1C9FUID09JYP=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "A'in Natasya",
+        "stars": 5,
+        "text": "Great service, painless tooth removal, i do recommend",
+        "publishedAtDate": "2025-07-14T11:21:43.401Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Daphne Tew",
+        "stars": 5,
+        "text": "Tortured by my wisdom tooth for 3 days and called for few clinics they quoted me crazy high price for my extraction\n\nThen the nurse and doctor here were very decent and honest.They will tell you every possible outcome and pricing,and also check for your situation whether you suitable to extract that anot.\n\nMy extraction only took less than 5 mins 🤪thank you Dr Gan and the nurses!",
+        "publishedAtDate": "2025-04-25T09:55:26.046Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bonnie Yew",
+        "stars": 1,
+        "text": "Saw very good Google reviews, so I finally decided to visit the Kinrara branch today. I arrived as a walk-in customer around 11 AM and informed the two receptionists that I needed scaling and polishing services.\n\nTwo minutes later, two elderly individuals walked in and requested tooth extraction and polishing services.\n\nUp to this point, the receptionists hadn’t informed me whether the doctor was available for walk-ins. Instead, they proceeded to register the two elderly customers ahead of me, even though I had been waiting at the counter.\n\n(Oh, please note that the other 2 customers are walk in too)\n\nAfter standing there for a good five minutes, they finally told me to come back tomorrow.\n\nUnfortunately, this experience left me quite disappointed. This is my first time leaving a negative review, but I feel compelled to share it because I will not be returning to this clinic.\n\nI was raised to be kind and to respect the elderly, and I fully understand the importance of prioritizing them. However, as a paying customer, I expected to be treated with respect and consideration as well. Sadly, that wasn’t the case today.",
+        "publishedAtDate": "2025-01-04T03:52:27.283Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alan126278 Lim",
+        "stars": 3,
+        "text": "让我觉得不是很耐心。",
+        "publishedAtDate": "2024-09-05T06:00:45.074Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "See Han Leng",
+        "stars": 5,
+        "text": "Service is good",
+        "publishedAtDate": "2024-08-27T03:59:27.174Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ck weng",
+        "stars": 5,
+        "text": "好",
+        "publishedAtDate": "2024-08-16T02:53:35.368Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Leong Chu Yoke",
+        "stars": 5,
+        "text": "Dr Chin You Xiu and Ms Vishnupriya are friendly and professional.\nI am satisfied with the laser dentistry treatment and there is additional nutrition treatment which help me a lot.\nSometimes I will seek their nutrient opinion Ms Rachel, appreciate your kindness effort 😌",
+        "publishedAtDate": "2024-08-11T02:46:51.338Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CtZRXUOXdpumurVJg6cGjVJ_Wix5IFQvV1GBYsWuVC6LLl2tfYfRgQGkWjTUQ0Aj3VtxAQJQ6QjIXv3T_0fGcj_r5ednWyOWnUVrX0DNOcSRQsM6JvmQAQ-ktCTIaO8pQLK8fokQ"
+        ]
+      },
+      {
+        "name": "Law Kee Chuan",
+        "stars": 5,
+        "text": "Good service and Dr Laura very patient during explanation.",
+        "publishedAtDate": "2024-08-07T07:48:43.401Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "22A, Jln Kinrara"
+  },
+  {
+    "title": "Tiew Dental Kelana Jaya",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1033549,
+    "longitude": 101.6001768,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-kelana-jaya",
+    "skip": true,
+    "placeId": "ChIJ1XvWSnZNzDERel9jbeX6DUg",
+    "phone": "+60378865678",
+    "permanentlyClosed": false,
+    "address": "J-12-2, Jalan SS 6/16, Dataran Glomac, 47301 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Dataran Glomac",
+    "city": "Petaling Jaya",
+    "postalCode": "47301",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 116,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPv0ZDaOJeRDdS17Xb2eXA0AhttPOMkb6cadbrH=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMFrs2iZuZFMiMUGK5jWq_gHKmoXRoL7igtrsdJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npGxF3zvy6xH4sZsEVEG645PVrmhb-yhtuEG_i6zHmD8QqiRn0cagcVt1HdKd3FfMAHC0gn6sSS4GTeDDO9sbNDR1fv4CeYZICtPepcnEw8Z3OY0i-qnUcGmn1kIddRB_QaKM2l=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npLNwDpXzdegAYOYclK10bDhPEJuy7Annz9aPi9yrxNsOPqaMhPb8eFh3cjEAWO_Hq_7MNifANo07kZPRbZlYKZB4mFyDrrWk9JuXs9zFMh9LhmCSbukswpEuQ4aYdl5t6x2JjaIw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrG1OYn7Yp_qeMAE-uI87LGZaC9bhS-RqGIQyjgtn1SLgZr3o0aUY0bGsQReVW_ABBO0xqBwD7291PZlVbaampKqDl6wS8YI_FchuIiYOrVn3yC14JGShESd6vBc8ymws8Sc-hr5w=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Mei H",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-07-01T12:17:33.308Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ishak Moussa",
+        "stars": 5,
+        "text": "I'm so satisfied with the treatment. Even though what I requested wasn't recommended, they still respected my choice. Dr. Cherylina did a great job, and I highly recommend her and the clinic.",
+        "publishedAtDate": "2025-05-10T13:02:09.139Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jijoy zizul",
+        "stars": 5,
+        "text": "Did my root canal treatment here. Staff is friendly & the dr is very professional",
+        "publishedAtDate": "2024-08-12T03:10:34.205Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Emma Imah",
+        "stars": 5,
+        "text": "Perfect service, doktor ok baik spoting... Staff pun baik and baguss",
+        "publishedAtDate": "2024-08-08T02:47:42.457Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Najwa Mazlan",
+        "stars": 5,
+        "text": "Treatment was good. Doctor & nurses friendly. The clinic is clean.",
+        "publishedAtDate": "2024-07-26T03:48:27.773Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Endless Hayat",
+        "stars": 5,
+        "text": "So far so good.\nSenang nak book appointment which is direct contact tiew dental kelana jaya @ website which is convenient.\nDr pon akan consults and suggests which one is better choice for us. Setiap persoalan diterima dan explain dengan baik & no doubt I stick to this clinic. Worth every visit!\nSatisfying! 🌟😁",
+        "publishedAtDate": "2024-07-13T08:05:18.717Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DZSekAEIkuFqLPaTOJYIECW7TTL1BXQPgqNSPN3TSzkIGmBzl-gsm5DCWfAqjkpwwBfesGP37fVkgcYPFBuOWArNWbM-liFlT967pTcLUOHOx2jgjxL9vN34ezQlUsM_6NKYgt",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Bgx_3r_SmDpTmJoTknv36cc3uOGAU-Otns8KLvADMxS8mXdw_8wXo2wZ8s-ZZKQ8zJs3rDb8VBWDtcShVzjRA8j1RXKhyrVdZVuNug_KDBBa4hqdFKS24j2lHyxKthwYFLplRwFA",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Bt08fRyL8UbZq3RxPbr5iQn176enxGzlRhdY7RxG_n4Jnkd5-fEmTxpJx7uAo3LNvat-TsBl0Px3e4M0Dj8KOqZUei-4nWTkmScDPCA-F3qN_g8ItT0yG0mfNWhA1CXNNt8PQ7",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C6gV0ymSDG974J77NelOH2fsPIaUqqhbGwV2nCFpKR-NzOGAgpVL0A-MHWicHej7jA5A-7O5swxboi_1q8u7ikie0LsTSQCCKVm7h-qWIPDb_Sjw-wxRnAh720asaa09d1i3ufMg"
+        ]
+      },
+      {
+        "name": "Francis Pio",
+        "stars": 5,
+        "text": "Professional and good service",
+        "publishedAtDate": "2024-07-13T04:17:15.044Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Alya Afrina Norzaihan",
+        "stars": 5,
+        "text": "DR Cherylina rani is very professional and nice .. nurse  kak hana and rose very friendly.. clinic  very clean",
+        "publishedAtDate": "2024-07-12T02:23:22.479Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "J-12-2, Jalan SS 6/16"
+  },
+  {
+    "title": "Tiew Dental SS2 PJ",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.118627,
+    "longitude": 101.6229355,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-ss2-pj",
+    "skip": true,
+    "placeId": "ChIJJ6svQVFJzDERqRjxc2T_cF0",
+    "phone": "+60378652573",
+    "permanentlyClosed": false,
+    "address": "No. 7, Mezzanine Floor, Jalan SS2/67, 47300 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Jalan SS2/67",
+    "city": "Petaling Jaya",
+    "postalCode": "47300",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 219,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNm7gga4T4bS8F8ixXMXgITFVVWhP3O9m9IT1MV=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npXhumGQHCV_g21JE7fo48ri5RzJzD5W9rsunzi1_UeyrPyQkdKbU3wzXTS7U0JhprzOIQYB-UQPSO0J6JnhRIggDmbAUu8HOqcd5WypZ416rZAsGGX49bzkHuDeLaqEeeygX7h=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np73xns4v3l8B7vpS1bD3PfuPQDUePy7Vw5Dge6PODOzgsQ_gw0yFxUJ3xvMRXjEhFJpfDla0fd15WqdeiEwUVCEwp3C1lsEl6Pc5RNfvoZqWQIz01nCskHcI6fdQg__Sf5xBsXFQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq25cQD7PBUivmxSBv8tiW959Y8UiLY86NbJsVcKGdrsUav9y9dpUdKfv5Y5poA50CbvEbC3Q2YcaechT8i9ZtorWe7a7Y5jWx93mKiNALF4qB_pdbgx8sRe4Ue8ItJxEtDoUPz=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMA0KP0bkv4y-6sBBw9OEaZD7FmyP4r2aSEhP_h=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Yucai 99",
+        "stars": 5,
+        "text": "First time visiting this clinic for teeth scaling and to repair my fixed retainer. Dr. Chan was very attentive and professional. The scaling was completely painless. Really happy with the good service and reasonable price",
+        "publishedAtDate": "2025-05-31T05:37:11.375Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Edward Yong",
+        "stars": 5,
+        "text": "Very friendly nurses & doctors. The doctor's explanations and skills are very good. The prices are reasonable. Will be my go to dental clinic.",
+        "publishedAtDate": "2024-12-30T03:15:35.570Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ho Voon Fong",
+        "stars": 5,
+        "text": "Dr Wong Chin Yee is a very caring and attentive doctor. The service here is also very good.",
+        "publishedAtDate": "2024-08-30T10:11:34.318Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kee khen",
+        "stars": 5,
+        "text": "Nice service 👍👍",
+        "publishedAtDate": "2024-08-30T10:01:39.431Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tracy Zebius",
+        "stars": 5,
+        "text": "The Dentist really helpful in explaining everything.. thankyou ♥️",
+        "publishedAtDate": "2024-08-30T06:10:41.505Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DiDX0mb0iMLaOulN7JyZpijII9PozUpS9rgNntWJf9x8kzAjtSylZhafQeULLGbg6uOr5UWIvORxNKTUeuoSV4sx2jt4trDtGSuk96ZJbb-QctA9qoB6gHJVl9zu1S-ptWQ5dg"
+        ]
+      },
+      {
+        "name": "LiNi “Abby” He",
+        "stars": 5,
+        "text": "Good service and dentist provides clear explanation to problem and procedure.",
+        "publishedAtDate": "2024-08-29T09:36:31.820Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Liew Mey Mey",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-08-29T04:48:06.529Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "singhui ong",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-28T09:31:25.425Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 7, Mezzanine Floor"
+  },
+  {
+    "title": "Tiew Dental Taman Suntex Kajang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.072194,
+    "longitude": 101.766426,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-taman-suntex-kajang",
+    "skip": true,
+    "placeId": "ChIJlT1te1g0zDER1UPOMlLvxL8",
+    "phone": "+60390817533",
+    "permanentlyClosed": false,
+    "address": "No. 25, Jalan Kijang 1, Taman Suntex, 43200 Kajang, Selangor, Malaysia",
+    "neighborhood": "Taman Suntex",
+    "city": "Kajang",
+    "postalCode": "43200",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 173,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipP8eny6xX1WwzwYG9sDD8Nb7GBC7qKjoIA_GBEq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npMTzKQmiKG6MAtk0HZ44ladKIj3b-Gh0aF-ZsAujCSOpzxI9CbLc-FxipfMPXiYNy9NG4MER0HBohwg5uqbdPLcjkl0RDeismu2b2_1WFtsOIBV1aEwMLAV_F9N9Wsymkpu34=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPbqoutTDZ3VN7C-5o4G_S9GSP6ieYFigdZgdhc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN4-B9_DlJJO83F1zNQawoY9WjyWxsyvKoo0UnN=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPXnFVW4RR6KkrCaGT-C1HcgOYfvXe5Mb2MLpve=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "patrick kang",
+        "stars": 1,
+        "text": "Very bad reception. I called up to express I am in pain after the treatment. The reception says the schedule is full. This is not reasonable.\n\nOther thing to comment is the helper that hold the suction during the treatment, they done really see and pay attention. Most of the time it is sucking at your skin rather than the water. You try it then you know what I am saying.\n\nThis type of staff should be sacked. The dentist is ok but with this type of staff, I won't recommend to go there.",
+        "publishedAtDate": "2025-01-28T23:52:51.245Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CKwJKbkHgjDavFFt6LZjcq4IWZKj9e5wXERmHTsJovoHFKpbyWyh1oqeEBYdzbTQNq1pGz1m58JGAuSjLzrPSz6tmka5XwenmlrO7mmIloZH9PJth-W1rzl8llNaccSr3UKv3O3w"
+        ]
+      },
+      {
+        "name": "Muhammed Soffiq Saripin",
+        "stars": 5,
+        "text": "Terima kasih. Servis terbaik. Penjelasan terperinci oleh Dr.",
+        "publishedAtDate": "2024-12-28T10:43:50.326Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jeremy Lim",
+        "stars": 5,
+        "text": "Very gentle and soft spoken Dr Chen 👍🏻 recomended",
+        "publishedAtDate": "2024-11-30T10:18:49.913Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aziey",
+        "stars": 1,
+        "text": "The reception was not friendly. I asked for the price range,but the receptionist seemed to raise voice at me.. The price is quite expensive compared to other dental clinics.",
+        "publishedAtDate": "2024-09-23T14:20:50.456Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "A H (Nani)",
+        "stars": 4,
+        "text": "Service by staffs ok. But need to improve on customer service when message customer to set date for appointment. Do not simply put already call, but actually no call has been made to client regarding the appointment.",
+        "publishedAtDate": "2024-09-23T04:31:31.495Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Soo Huey",
+        "stars": 5,
+        "text": "Dr. Chen is super gentle and always takes the time to explain everything clearly, so you know exactly what’s going on. I always feel well taken care of and never rushed. Definitely recommend him if you’re looking for a great dentist!",
+        "publishedAtDate": "2024-09-15T04:07:19.635Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chelsea Vilson",
+        "stars": 5,
+        "text": "Dr Chen was so informative. Have never been to a better scaling appointment. Definitely coming back to do my filling here as well.\n\nStaff are so polite and accommodating as well!",
+        "publishedAtDate": "2024-09-07T03:07:59.076Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chin Ling Yong",
+        "stars": 5,
+        "text": "Doctor and nurses are very attentive and kind.",
+        "publishedAtDate": "2024-09-06T06:38:50.417Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 25, Jalan Kijang 1"
+  },
+  {
+    "title": "Tiew Dental Selayang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.237559,
+    "longitude": 101.6506582,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-selayang",
+    "skip": true,
+    "placeId": "ChIJ84Mi-blHzDER7JkN4JXKzjg",
+    "phone": "+60361282498",
+    "permanentlyClosed": false,
+    "address": "49, Ground floor, 47, Jalan SJ 17, Taman Selayang Jaya, 68100 Batu Caves, Selangor, Malaysia",
+    "neighborhood": "Taman Selayang Jaya",
+    "city": "Batu Caves",
+    "postalCode": "68100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 132,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipN7WcvuWtAJAvfM2bjqxqgNsorCwEgBm8snq-F6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMdkvfqvI3Khn2it_oObd_YoGsDG22pwW5LJf3o=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMGsDu7_zRl9jAJyw4AHw0l2Q0HZmA6HSAMFWj9=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM_xlvNjgZOwBLG_vGZP8L83Wr2bdPOecUiT6zm=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqa1DtsZAr2brLNj1r6eaPsyweXXx1HR70vh8Pm0kNlZN7wbcXtZl5rgFUqXYGsoa8qANV8sc5GWMd0TGW72skKqlJ-VzgjBbhNr94oxhfdcsZ8gPIYjqHGFJ26qzaiaNKb48JW=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "TuckLoong Low",
+        "stars": 3,
+        "text": "One of Tiew Dental branches, here in Selayang.\nMay I suggest to owner or the management, please add ramp (from main street as per photo) for wheelchair access unto the clinic.",
+        "publishedAtDate": "2025-03-20T01:39:47.736Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jaye S",
+        "stars": 5,
+        "text": "Brought my son to have a dental check-up. Highly recommended Dr Amanda, very patient and gentle. Able to calm and put this little nervous human at ease. Procedure was done professionally and she took the effort to explain every steps clearly. 👍🏻👍🏻👍🏻",
+        "publishedAtDate": "2025-03-08T04:32:01.834Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siti Fatimah",
+        "stars": 5,
+        "text": "Good experience with Dr Amanda even though just a consultation. She is very friendly, gentle and thorough in her explanation. I've met a Myo Dr once for consultation but the infos shared,  insights given from Dr Amanda and her analysis for my condition is far better. Without doubt she knows what she's doing. I will definitely recommend this Clinic to other people as well.",
+        "publishedAtDate": "2025-02-10T05:38:09.369Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jimmy Z",
+        "stars": 5,
+        "text": "Just wanted to take a moment to express my gratitude to Dr. Amenda, her assistants, and the entire team. During my recent visit for a teeth cleaning and polishing, Dr. Amenda provided an exceptional service with meticulous attention to detail. She took great care of my teeth, and I am thrilled with the results. This will definitely be my go-to place for all my future dental needs.",
+        "publishedAtDate": "2024-12-29T05:25:05.248Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sherene Tang",
+        "stars": 5,
+        "text": "My husband and I had very good experience at Tiew Dental. Dr. Lim Suk Yik is a very professional dentist, she explains everything in detail. Staff are friendly and charges are very reasonable. It has now become our family dental clinic.",
+        "publishedAtDate": "2024-10-15T22:10:03.362Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "zoe Eve",
+        "stars": 5,
+        "text": "Dr Nicole great!",
+        "publishedAtDate": "2024-08-18T04:39:25.314Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "liew brandy",
+        "stars": 5,
+        "text": "Excellent service",
+        "publishedAtDate": "2024-08-17T07:14:09.411Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kok Kin Yet",
+        "stars": 4,
+        "text": "Service here is friendly. One star deduced due to dirty floors and no slippers provided.",
+        "publishedAtDate": "2024-08-17T05:31:49.638Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "49, Ground floor, 47, Jalan SJ 17"
+  },
+  {
+    "title": "Tiew Dental Taman Putra Ampang",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1212169,
+    "longitude": 101.7613844,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-taman-putra-ampang",
+    "skip": true,
+    "placeId": "ChIJwUZfh482zDERvC-m1CQzhAM",
+    "phone": "+60342803384",
+    "permanentlyClosed": false,
+    "address": "29, Tingkat 1, Jalan Tanjung Bunga 6A, Taman Putra, 68100 Ampang, Selangor, Malaysia",
+    "neighborhood": "Taman Putra",
+    "city": "Ampang Jaya",
+    "postalCode": "68100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 117,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOuuFi2WAMVkaqU6DNvN5eHyzEqR1kr-3jPgMD7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM5DG_pi7sIQvRFWKgPB5bG_3Q1rqkW11uRXZ6Z=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM0SncYo7V82UhS-3kBOnnsDpqdy25Hmv7NwjhQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPNrCav9BUGcRhmlH6AYJSOmugh5eeVZC6yfK-F=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM13q7oG6r1vuYwKOH8NS7FM5hrciqv62yLZHXx=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "tan ivy",
+        "stars": 5,
+        "text": "Dr. Eliza treatment good and service nice",
+        "publishedAtDate": "2024-08-19T02:17:02.193Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "june jamil",
+        "stars": 5,
+        "text": "Doktor servis okay , harga berpatutan ,\nstaff pun okay ramah,\nPerkhidmatan gigi yg terbaik setakat ini.",
+        "publishedAtDate": "2024-08-16T03:34:58.922Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kelly Lim",
+        "stars": 5,
+        "text": "Good service and treatment from Dr Joyner😊",
+        "publishedAtDate": "2024-08-16T02:49:38.949Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jocelyn Chew",
+        "stars": 5,
+        "text": "Very friendly and nice Yasmin, professional service and good quality! Very happy treatments here many time. Thank you",
+        "publishedAtDate": "2024-08-15T04:29:47.361Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Khor",
+        "stars": 5,
+        "text": "Dr Chong ka mun so nice",
+        "publishedAtDate": "2024-08-09T06:33:10.561Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jw Lau",
+        "stars": 5,
+        "text": "Good",
+        "publishedAtDate": "2024-07-24T03:03:27.623Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pooifun Hor",
+        "stars": 5,
+        "text": "医生很好，很有耐心的解释清楚",
+        "publishedAtDate": "2024-07-06T03:08:32.367Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Munyee Chan",
+        "stars": 5,
+        "text": "Good 1st time experience. Dr Joyner is very patient and caring during the dental procedures.",
+        "publishedAtDate": "2024-07-05T08:26:19.307Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "29, Tingkat 1, Jalan Tanjung Bunga 6A"
+  },
+  {
+    "title": "Tiew Dental Kepong",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.2155427,
+    "longitude": 101.642712,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-kepong",
+    "skip": true,
+    "placeId": "ChIJbxywZ0FGzDERN6wes6HDLQI",
+    "phone": "+60362422488",
+    "permanentlyClosed": false,
+    "address": "No. 16-1, Tingkat, 1, Jalan Metro Perdana 8, Taman Usahawan Kepong, 52100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Usahawan Kepong",
+    "city": "Kuala Lumpur",
+    "postalCode": "52100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 84,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPjC84VpCHRAYM_YYEE4LI_GoPqKXQqpiFW86Bf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npSf8GTTWOc1A9Sq0Yw-p_I1zN7nib1g6UZAyMaGMkOF6exGroPcdqQHgSLCy431Kf6hd3pcsDx3e_svRcjIKV0pyR5bOHw_eZxO8gK_3LepdRBhNvIrBfh2J3dU48UpwqeQIEq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMFj2prjwkgXxSVykKplkDqgvxiiGNn1FVeYhrS=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNmTziU1iwT0maASNfiWyIpaTOeAEU8WBd-iKSe=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNiPxzyCZv_oTq71WfGg3aazKs0XNDAz5nciDvR=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Regina Step",
+        "stars": 1,
+        "text": "1. In 2021 I was getting my root canal done at your place. I attended 3 appointments. The doctor (young chinese female) did holes in my tooth and on last appointment declared that she’s UNABLE to do my root canal and placed temporary fillings on my tooth. I ended up with extra hole in my tooth and procedure not done. This bad service dragged my tooth pain problem further.\n2. I was always on time for my appointments. However I would be made to wait between 20 to 40 minutes to see the doctor.\n3. Overall I had a disappointing experience for root canal treatment wasting my time and not solving the problem.",
+        "publishedAtDate": "2025-07-03T07:26:14.089Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "V Teo",
+        "stars": 5,
+        "text": "Dr. Wong is very professional. She provides a detailed explanation of my oral condition while ensuring a painless experience throughout the cleaning procedure. Her filling is good and smooth. The nurse is also very friendly.",
+        "publishedAtDate": "2025-02-03T03:36:40.924Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ks Ks",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-09-14T04:53:01.651Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alexis Ee",
+        "stars": 5,
+        "text": "Good service and friendly staff, definitely will come again!",
+        "publishedAtDate": "2024-08-29T02:05:08.134Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alex Chow",
+        "stars": 5,
+        "text": "Good scaling skill",
+        "publishedAtDate": "2024-08-28T07:46:08.328Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chua Hock Chuan",
+        "stars": 5,
+        "text": "Good service in this clicnic",
+        "publishedAtDate": "2024-08-26T07:40:10.353Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chua C",
+        "stars": 5,
+        "text": "Good service friendly staff",
+        "publishedAtDate": "2024-08-26T07:39:54.517Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ZIN EE LEE",
+        "stars": 5,
+        "text": "Doctor & service both nice, also introduced by friend!",
+        "publishedAtDate": "2024-08-25T04:40:33.664Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 16-1, Tingkat, 1, Jalan Metro Perdana 8"
+  },
+  {
+    "title": "Tiew Dental OUG",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0727658,
+    "longitude": 101.6726918,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-oug",
+    "skip": true,
+    "placeId": "ChIJN6EU-fdKzDERYH01LOtopC4",
+    "phone": "+60379716788",
+    "permanentlyClosed": false,
+    "address": "No. 56A, Tingkat 1, 2, Jalan Hujan Rahmat, Happy Garden, 58200 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+    "neighborhood": "Happy Garden",
+    "city": "Kuala Lumpur",
+    "postalCode": "58200",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 67,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNpYYHIgeqvjWIOfJYEosf9CWAnqJhHTV5B7Att=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMJzf0IbYtSQ8RDinCuJimjFMrrO2kWSXMLogE1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPBv82DNnIZNGMomwMSI2POPPhrAqELZZA1ErHI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr24xHFAFtALcVPla13UlIcpCp5FcS63yu4bOn8Ci-22vbLWePD2RU95GGDHNgy-K6pSvhqBIv4n2SjpSCDv9tXscdTZafZpfHkIi5h0XfuZWo1am6ebbR4SGy2mHRlIQwqefe5tQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrqFrmpTuq3az0dyx3Jqq_BNqKhYP2rd3aJr2yPtjVJ0l3yVk5MFjyR1-LGGelloUjPqCGrB6Lva48XA4CDeItHd6_h2nXrTQS3eXglJAKvJ5eEY7fP29eWIfX_e8BFbw16sHW3=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "meiling.0429",
+        "stars": 5,
+        "text": "牙医很专业，很好的体验感，洗牙和补牙都很舒服，干净的环境",
+        "publishedAtDate": "2024-09-11T07:45:04.740Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nico Chan",
+        "stars": 5,
+        "text": "Good service ....",
+        "publishedAtDate": "2024-09-11T07:45:00.175Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alice Neng",
+        "stars": 5,
+        "text": "Friendly and helpful dentist and staffs",
+        "publishedAtDate": "2024-08-29T03:09:40.573Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "vita leow",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-08-28T03:15:58.496Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Huai Yu Chew",
+        "stars": 5,
+        "text": "Dentist very kind and professional :>",
+        "publishedAtDate": "2024-08-13T08:57:45.425Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yenpin Lin",
+        "stars": 5,
+        "text": "Best service 👍",
+        "publishedAtDate": "2024-08-12T09:01:04.406Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ai Hwa",
+        "stars": 5,
+        "text": "Good service and environment. Friendly staff and dentist",
+        "publishedAtDate": "2024-08-12T07:50:29.411Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joanne Tan",
+        "stars": 5,
+        "text": "👍👍 Friendly staff and good dr👍🏻👍🏻❤️",
+        "publishedAtDate": "2024-08-12T02:25:54.974Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 56A, Tingkat 1, 2, Jalan Hujan Rahmat"
+  },
+  {
+    "title": "Tiew Dental Damai Perdana",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.0463717,
+    "longitude": 101.7394332,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-damai-perdana",
+    "skip": true,
+    "placeId": "ChIJt53WGTs1zDERPwxIHFeB0-o",
+    "phone": "+60391074011",
+    "permanentlyClosed": false,
+    "address": "2-1, Jalan Damai Perdana 1/9a, Bandar Damai Perdana, 56000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Bandar Damai Perdana",
+    "city": "Kuala Lumpur",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 153,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPDCxjXqr8MYvl8B2e5SddshnWZJkkOG_OIJOhY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM_irWi08c_x8bygn3bLklGMq_r0I6xQaexweZC=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNjLkpNEezhlVI0zWLT7q7fS1_TgnxcAXU2Mwe2=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqHDv_1Z91AzWbFvfZwG48yxmXTNzHsbwfuL6lNvxzdTwHtdEgicAtDxyoHxDVE30FWMv5Bmzwv8BfrtrDrATJbEdIkxY5-BUTW4ptKoPw67clLwQvJ__H7GyUlpShqHJywDPsOsw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMiNkjBvYWRegE0-Glvbt_sFuquYQiPd9VivGbX=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "shahd ramzi",
+        "stars": 5,
+        "text": "I'm going to talk about Dr:Chen yung yee in this clinic, from my personal experience with him, I say that he deserves to be certified well, and on the other hand, he's very comfortable in dealing with. This clinic is really lucky to have him there",
+        "publishedAtDate": "2025-07-25T20:42:06.412Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BQATTR9zz-_XyKVf_SHWujRwjyS75bDO5UagPNia3N77nRpU8_lwhvNS-EsDTenH44OnmbXFdLNLCIrTRtrBuVQcIdZzoPDhq5jZgwQ78BLAQlc2CH-S_EY-qXz_8-8gGTmFFHPix907M"
+        ]
+      },
+      {
+        "name": "surianihadrawi",
+        "stars": 5,
+        "text": "klinik yang sangat bersih , and thank you so much to DR CHEN YUNG YEE, explanation yg sangat details . and DR yang sangat ramah /baik . bayar mahal pun tkpea kalau service terbaik mcm ni .",
+        "publishedAtDate": "2025-06-19T01:02:42.881Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Cf Ng (Cf)",
+        "stars": 1,
+        "text": "Support staff is \"brilliant\". On the day collecting tooth retainer, she said no stock for orthodox (to store the retainer). She gave us a paper box as a substitute. Has she considered that this is not hygienic? Shouldn't the cliniq get ready the orthbox knowing that patient has made apointment that day? Really disappointing",
+        "publishedAtDate": "2025-04-28T09:42:00.472Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gerard YouTube",
+        "stars": 5,
+        "text": "Excellent dentists and staff here. Great explanation to issues and solutions.",
+        "publishedAtDate": "2025-03-28T06:35:28.140Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Loo Aldo",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-11-05T13:47:01.598Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "trinity yap",
+        "stars": 5,
+        "text": "Did my braces here good!",
+        "publishedAtDate": "2024-08-27T03:28:19.587Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "C Z",
+        "stars": 5,
+        "text": "Very Good",
+        "publishedAtDate": "2024-08-27T03:12:28.428Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mandy",
+        "stars": 5,
+        "text": "First time here did my hygiene cleaning. Dentist and staff are friendly. Highly recommended.",
+        "publishedAtDate": "2024-08-15T09:05:46.182Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "2-1, Jalan Damai Perdana 1/9a"
+  },
+  {
+    "title": "Tiew Dental Taman Dahlia Cheras",
+    "website": "http://www.tiewdental.com/",
+    "latitude": 3.0574915,
+    "longitude": 101.7493453,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-taman-dahlia-cheras",
+    "skip": true,
+    "placeId": "ChIJZ8lkKhw1zDERKbnSWMTG8Oo",
+    "phone": "+60391073188",
+    "permanentlyClosed": false,
+    "address": "109, 1, Jalan 34/154, Taman Dahlia, 56000 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Dahlia",
+    "city": "Cheras",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 123,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipN8fZKnr7Y8qubXnZokFimg9rFIqCDFuR6us3z3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPPAbcIDZQJuMLiPp8gKZ9jgJFwIh4qQtlbqJli=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOOzUQaerLeJ_slt59Puq85sw4J3uNxBYmsMj1a=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nokkJWEzh3cMMQ0y_vf2u1v756Y0k3Cyk0CpiZiZLcVeGhYefotywOUUql3FlXS9VIP1RRf_S-M_1Ri1H6lJKM8V4lksMi6_UAw2qVyTW38Aaw0CTdWsl0s13BSUuWtBZmNBLZ5Uw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noE71H9Op6Flfg34WGPst417m_TW1nFLGAKdfafjBWvzv6lKukf2ixXrRB3kyMuKjvwERG6VLn9E4efzNaWCtLK6A3bj9HttvtFbpLPs6hSSv8B_7j9DOX9GBFBuSjVSTUY7mNx1Q=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Catherine Sang",
+        "stars": 5,
+        "text": "Dr. Phuah was very thorough and careful—she double-checked both her own and the nurse’s work to ensure everything was done properly. I appreciated her honesty, clear explanations, and the way she consistently checked in to make sure I was comfortable throughout the treatment. Thank you!",
+        "publishedAtDate": "2025-07-17T06:36:04.054Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lamii VOYN",
+        "stars": 3,
+        "text": "I had an appointment for teeth scaling with Dr. Phuah today. While the procedure itself seemed fine, I couldn’t help but feel disappointed with the interaction. Dr. Phuah appeared disengaged and reluctant to communicate, which made it difficult for me to hear or understand her explanations. As a patient, I didn’t feel valued or well-treated during the visit.\n\nI hope this feedback can serve as a reminder to prioritize clear communication and a more approachable demeanor with patients in the future, as it greatly impacts the overall experience.",
+        "publishedAtDate": "2025-01-24T07:03:11.543Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ng Zheng Kai",
+        "stars": 5,
+        "text": "I recently visited Dr. Vivian Phuah, and I must say she is an exceptional dentist. She performed a very thorough scaling and a detailed medical check-up for my teeth, leaving no corners unchecked. Her explanations were clear and professional, and her advice was practical and easy to follow.\n\nDr. Vivian is a soft-spoken dentist who can communicate fluently in English, Chinese, and Malay, which is a big plus for diverse patients. She is very meticulous in her work and ensures everything is done properly.\n\nAll in all, Dr. Vivian is highly skilled, professional, and efficient. I would recommend her to anyone looking for quality dental care—and yes, she’s also very approachable and personable! 😊",
+        "publishedAtDate": "2024-11-25T08:25:36.870Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "JACKY",
+        "stars": 5,
+        "text": "dr and nurse friendly",
+        "publishedAtDate": "2024-08-24T04:26:13.979Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aisha Rasul",
+        "stars": 4,
+        "text": "Well explained procedure",
+        "publishedAtDate": "2024-08-23T07:34:09.476Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "KY Lim",
+        "stars": 5,
+        "text": "Professional service with a calm and friendly approach.",
+        "publishedAtDate": "2024-08-17T09:12:24.920Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Erica ho",
+        "stars": 5,
+        "text": "Service is good, polite.",
+        "publishedAtDate": "2024-08-17T08:22:23.537Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Thomas Tham",
+        "stars": 5,
+        "text": "Always a great experience—my first choice for dental visits.",
+        "publishedAtDate": "2024-08-17T07:00:45.337Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CFgqwGK8BSV_1Hsr-CLdJRbWFFmzGByai2rWRwzHMTuG5J2D2loDxbO6m-kqZ7NwZe90_HpA8MZL6AupU2cA9k6juuVOxhPmwaeWAPhflUABdFfkdSuF1EAv1p2qml0N7ov_92NQ"
+        ]
+      }
+    ],
+    "street": "109, 1, Jalan 34/154"
+  },
+  {
+    "title": "Tiew Dental Taman Maluri",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1295899,
+    "longitude": 101.731705,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-taman-maluri",
+    "skip": true,
+    "placeId": "ChIJ17E_7Wk3zDERgvntF9EpVS8",
+    "phone": "+60392023831",
+    "permanentlyClosed": false,
+    "address": "267A, Jalan Mahkota, Maluri, 55100 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Maluri",
+    "city": "Cheras",
+    "postalCode": "55100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 133,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMYTxu5Xv2yyJAVNNegNDrge2zQSgeonUtLYpYL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr8xtkXMZQL2hctQacNqHx86OxVqZ-YgwRS7f6-ZC8jpPj9fxYEKDngzsOggnSSE7kP-IAP6sOO5a2Nc2kdyJgSK2GBNYhyUeacfMx-Zatx-cIAs4PiOBbcaPKksig11Ry0jZ9Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqwubTdHR1jg7t9A5lHDuAmzl1QKTHW5r1HZpOxEa41B3VlyEeUeLZTBLQsvSZLszireHfsyKQgrzSyvPp3d65OBFeOcMBbPzjCKsSun128lxzIkLRsRAg_rg6j1sM0cAthw-k8YQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqypWSekbf_5SF1F_qVN8A1d2yDsHlMY5eRWM5HUXzTXEpPxmZPCRnhU_LCSwMhwbNc_l5ml_I2Kg2E353itROkMbSi3XEH7NQUOIMz8mTL78-elyFXKpKPfZ3MismfUvONE1mi=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqlptMPDd3O4VbxnycnozS7heHoz1zbNYJfheA9qFFcAnuImVMfyNbePeyQd3TL_0jdxOEY_I_o023a8yXQP-MThytd9wYUD8v528OEuDHWnAw0AYNe6BgATf1HiMgWvbmDQDUhPg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Poh Leng Chen",
+        "stars": 5,
+        "text": "My 1st visit with my husband turned out to be pleasant. Dr. Misha and staff made us feel comfortable. Explanation and advice by Dr Misha was clear and made sense. Price was reasonable. They made an effort to expedite delivery of my customer made bruxism tray knowing that I would be travelling soon. My pick for my future dental needs.",
+        "publishedAtDate": "2025-05-17T07:14:23.725Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jaime LeBoutillier",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-10-01T08:04:34.585Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syazani Zaim",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-08-28T10:03:07.586Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tiffany Kher",
+        "stars": 5,
+        "text": "Had my braces treatment with Dr. Mishaleni and her team. She is very detail and organised in terms of my treatment.",
+        "publishedAtDate": "2024-08-28T06:53:20.710Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Boy Fazy",
+        "stars": 5,
+        "text": "The service was excellent, and the staff was incredibly friendly!",
+        "publishedAtDate": "2024-08-28T04:10:04.884Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hadmas Yip",
+        "stars": 5,
+        "text": "Very good dental service from Dr Mishaleni.\nErna, the nurse is also very attentive and care about the patient.\nHighly recommended place for dental service.",
+        "publishedAtDate": "2024-08-28T02:54:11.695Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CAFbAT3HKSEfPSPdyu4X_7DJq7YS6ilw1-UvYZkUF4_EvhZhC3_yFOXSaffvTPQDUaGpgabFXq9uBqfUTA0758tXXPwmvoNfG9PlLUZtVlntINQDwzgROrAGVoVsIja-sE8Hq1"
+        ]
+      },
+      {
+        "name": "wiznie marz",
+        "stars": 5,
+        "text": "I came to this clinic since before covid as I have choose to do my braces here. Since then I have been coming to the clinic to take care of my teeth. I love Dr Mesha and Irna. Their service here is awesome and they are very professional. I have also brought my mother and my friend here to do some scaling, etc. They have been very friendly towards me and others as well. Thank you.",
+        "publishedAtDate": "2024-08-21T04:04:36.006Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Asmadi Asmadi",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-19T08:58:16.125Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "267A, Jalan Mahkota"
+  },
+  {
+    "title": "Tiew Dental Clinic Setapak",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1956486,
+    "longitude": 101.711647,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "tiew-dental-clinic-setapak",
+    "skip": true,
+    "placeId": "ChIJPTOurQY4zDERXbmXbpoBjqE",
+    "phone": "+60340310596",
+    "permanentlyClosed": false,
+    "address": "No.6-1, Jalan 3/50c, Taman Setapak Indah Jaya, Off Jalan Genting Kelang, 53300 Setapak, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Off Jalan Genting Kelang",
+    "city": "Setapak",
+    "postalCode": "53300",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 164,
+    "totalScore": 4.6,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMHw6HipP7p-atyh6TEYKkyq71aDMB_d_Xeudie=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNTNEhDdPuzFRvzSKMCylsVoihlIiKErO-F9tgb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noNfFvyNOroHv87yn4_hCePuxlxzKq2tmeNVAVv5Z-bHQ73tjy99du-kSVyBiG-1a6yUOBOqaue7hkX1c9yTgT3oV4Hsaxao-Pm-S5TLOF9PSI2aYtobxST_zpzQ_a-DrJJvFOp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npXmfTKJ02s1Uje8tvd--1j5O0LYsmJyRComBuj75ELQgYymGDEJB-D3cRSjc3qU3rwE-XTapgEoF3-GfvoUFzqniu9rm45n1Y0WnS3_Vn0GGdoTsvFo0rUVHmAgJrlqlKTAWet=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noaMvZL5di6whXkRRXONBsLHfMu06ZNPdNr92k_BkuC2P98fARZqCvz18e_-smGN5gTSEu4UlIBbLeNSjAt12EpJD7vsDMqoQcvbt-gxAJh8L391D4L56-QC83L0VoGJeVO50XUew=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "annithaa annithaa",
+        "stars": 5,
+        "text": "*My Review of Today's Dental Visit with Dr. Mishalini*\n\nFirst and foremost, I must say that Dr. Mishalini is truly professional. Ever since I got to know her, I haven’t visited any other dentist for consultations or treatments, including scaling.\n\nShe makes me feel welcomed and is very approachable.\nHer professionalism stands out, and she always greets with a warm smile.\n\nThank you, Dr. Mishalini! See you in November.\n\nDr Annithaa",
+        "publishedAtDate": "2025-06-03T14:31:16.278Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "padma kannan",
+        "stars": 5,
+        "text": "Brought my daughter here due to her painful baby tooth that was accidentally knocked by little brother. Was attended by Dr Nikki who was so friendly and comforting my child from start till finish removal. Definitely will come back for other services, and the price is very reasonable. Thanks to Dr Nikki Sim🙌👍👍",
+        "publishedAtDate": "2025-01-27T14:50:38.256Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joeyi Lim",
+        "stars": 2,
+        "text": "Went for a teeth scaling treatment. The cost was quite high, but the overall experience was just soso. The dentist didn’t clean my teeth as thoroughly as the one I visited last year (which was way more cheaper), and throughout the process, I feel a bit uncomfortable especially as she kept pushing additional treatments on me.",
+        "publishedAtDate": "2024-11-23T08:10:05.961Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Cindy Lim",
+        "stars": 1,
+        "text": "I had a crown replacement at Tiew Dental Clinic Setapak about a year ago, and recently I’ve been experiencing pain and swelling in the area. My first crown, placed in Penang, has lasted over 15 years without any issues. However, since replacing it at this clinic, I’ve encountered numerous problems and discomfort. Unfortunately, I no longer have confidence in returning to the clinic for further treatment due to this experience. I hope the clinic takes this feedback seriously and works to improve the quality of their services.",
+        "publishedAtDate": "2024-09-09T00:25:21.334Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C7Ts6eUulIy0UQR8lBnF9ci-JxeXnxtHHUn4uMbmIGnS2JUfwvfh9WWjrSPm4VuDCJv7Fpuxg4jyn8XWR8gC9Wkm42wcrgZH6PUq-HfQgtFsuD5y8M4CXFJquGInOkTzV8n043",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BpgmE29TWWcfhJpIPuTFlUjQGTStL8rKRKk6vTH_Jwb3JUFWD-Dc7acfNtBBZ1cJpm6JGMOGcJSbIu4DZqlrI1UE7IV5inQOzfR-6wM9uR9VVMhGCr0wXUvF5_vp7EY_qIHKespA"
+        ]
+      },
+      {
+        "name": "Edika George",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-23T07:05:40.283Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zi Rui Chin",
+        "stars": 5,
+        "text": "Dr very patient",
+        "publishedAtDate": "2024-08-22T04:54:15.391Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "A Lay",
+        "stars": 5,
+        "text": "Very good",
+        "publishedAtDate": "2024-08-21T06:56:58.665Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "fathiah Mustafa",
+        "stars": 5,
+        "text": "Very good service",
+        "publishedAtDate": "2024-08-21T06:40:00.531Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No.6-1, Jalan 3/50c, Taman Setapak Indah Jaya"
+  },
+  {
+    "title": "Tiew Dental Sri Permaisuri",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.1023809,
+    "longitude": 101.7131603,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-sri-permaisuri",
+    "skip": true,
+    "placeId": "ChIJO3pgzvY1zDERa1A05XYBjSA",
+    "phone": "+60391743677",
+    "permanentlyClosed": false,
+    "address": "103-1, Jalan Dwitasik 1, Bandar Sri Permaisuri, 56000 Wilayah Persekutuan, Federal Territory of Kuala Lumpur, Malaysia",
+    "neighborhood": "Bandar Sri Permaisuri",
+    "city": "Wilayah Persekutuan",
+    "postalCode": "56000",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": "PPC Glomac Sdn Bhd",
+    "reviewsCount": 217,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM1FbD9s6wLAiNOfJXi2q_mTFiLA2tNFPuYwkSA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np3n3Px5m3e0x9l4VEdAAYOaSCx-6Jyuy8csQjL0djjCrWchGcoHVYAo4efvtzM1sZzWt0geRVV1yKRPQO0zK10_OhBqLm72iKRNqQP3ZoHsKpxUNBvxU1k1QyPMFQullxyZHo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNL-a3VKqtFbYzb-zvDPv1IXAIxOfe3KcsayEF6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM-lso5XFw68mUwwLnYN84xGGqVo7aSj4w2OPcu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP9XW2r64tCsWBbPMGhB6JBCjzcXZPTfaBXnpem=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Jiatheng L.",
+        "stars": 4,
+        "text": "I really liked the Doctor today! Dr wong jia wen is super nice and gentle. And also very patient! Thank you doctor",
+        "publishedAtDate": "2025-05-24T03:19:27.689Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kairos beauty",
+        "stars": 5,
+        "text": "Such a good experience. No pain at all. The dentist that attended me Dr Chen Ka Yew was amazing. Highly recommend 👍🏻👍🏻👍🏻",
+        "publishedAtDate": "2025-03-19T03:44:01.096Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DvIQ4a9xa3GBdkiMDN5budF-njnIXfHJkDKrXqs_1PojcNaNdYKwtf0mOVfZyJOSNduhK_yEaBXESLxOH2btaDTBBy_oXRftmNf1m4b0w_BGXhqXhGZ3_LQDHhOJxxYlHj40s"
+        ]
+      },
+      {
+        "name": "Thialai Mary Arokiasamy",
+        "stars": 5,
+        "text": "A dental service here very good.  Me and my brother did dental care. Dr Lim Yin Yi was very professional and thoroughly explained about all procedures need to be done. Not forgotten the dental assistant too. I sincerely recommending Tiew Dental Clinic Bdr. Sri Permaisuri for their excellent service!",
+        "publishedAtDate": "2025-03-10T08:43:37.794Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BWAgSt691Gaz_cnp8r8T_DIcYmrbps4l1IWv4Gzx9LIgf8H998da0nEpqd9zNbpRPmuqx0aLkttdo0XnBkAZAGm1sA3tVbPUwZOMKhkiyuVMNB6SySCRmpD6vHNrr0yYLX6ek"
+        ]
+      },
+      {
+        "name": "Yani Yani",
+        "stars": 5,
+        "text": "Service memuaskan",
+        "publishedAtDate": "2024-09-02T03:02:26.321Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tay Yvonne",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2024-08-30T04:40:28.490Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "azrul jalil",
+        "stars": 5,
+        "text": "Service terbaik dan pantas. harga sgt berrpatutan dan murah. Doktor pun sgt ramah, baik dan pandai ambik hati kanak2.",
+        "publishedAtDate": "2024-08-29T02:26:05.582Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nasir Hussein",
+        "stars": 5,
+        "text": "I recently visited Tiew Dentist and had a great experience. The receptionist was warm, welcoming, and provided all the information I needed with a smile. The dentist was highly professional, making me feel at ease throughout the process. The extraction was quick and smooth, far better than I had anticipated. Overall, I would highly recommend Tiew Dentist to anyone seeking quality dental care.",
+        "publishedAtDate": "2024-08-28T01:18:51.836Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "morena lai",
+        "stars": 5,
+        "text": "Dr Lim and staff provide good service and professional advise.",
+        "publishedAtDate": "2024-08-27T07:38:44.897Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "103-1, Jalan Dwitasik 1"
+  },
+  {
+    "title": "Tiew Dental Taman Cheras",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 3.100968,
+    "longitude": 101.7416812,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-taman-cheras",
+    "skip": true,
+    "placeId": "ChIJX3bfR141zDERdZu4VGxwONw",
+    "phone": "+60391338424",
+    "permanentlyClosed": false,
+    "address": "35, Tingkat, 1, Jalan Kaskas 2, Taman Cheras, 56100 Cheras, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "neighborhood": "Taman Cheras",
+    "city": "Cheras",
+    "postalCode": "56100",
+    "state": "Federal Territory of Kuala Lumpur",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 144,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPeXhWOU1JGxDq7YD8WYKgTxw67_D9YTLF5QVVh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMqz-CCGqUBgqny80PTy0Am-gL4OGznFwmnZg-d=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPTy_qBRYR1UL44mzG2Mh_S6sxghQTduPp0Alcv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqYUHksdIBnTnElpkUrx9J7uIuggE1DVBui33p-MlFMYtGGDkwX1Wce4up3k2aZws0VLrsEEVfxeiiDmIMXlsB_WkYGWI8Tg6jFLE_BUJTAK18qo_0azw3sIU52qWDHaPDTF97V=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrmlwjjzptQhWZ7SilcYP8CGBdgeSv0JlAa7Q8T4GS9jghg5M7GY-dQEyX4fhJn_SnvMQ_LXrT8vFKi4ArdKdoliJ7ngTWkEPcZRJQ0KDNXS7h6uuO2VIXdZa857aXOvHa0iDwh=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Eg Mingming",
+        "stars": 2,
+        "text": "disappointed",
+        "publishedAtDate": "2025-07-26T01:42:45.336Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Isa",
+        "stars": 1,
+        "text": "I have experienced repeated issues with appointment scheduling, responsiveness, and clinic management, which have caused me significant inconvenience.\nFirstly, scheduling an appointment has been unnecessarily difficult. Despite my efforts to book in advance, I frequently face long waiting times and delays. The front desk staff assured me they would inform me of my appointment time, but after waiting for three weeks without any update, I had to follow up myself. This lack of communication is highly unprofessional and frustrating. I schedule appointments for my convenience, not for the convenience of your clinic, and I expect better service.\nSecondly, when I have an issue with my braces, I am required to wait for my assigned doctor to return, even though I have explicitly stated that any available doctor could assist me. This rigid system leads to unnecessary delays in my treatment, which is unacceptable.\nMoreover, I do not understand how such a large and well-established dental clinic lacks the necessary tools for treatment. On multiple occasions, I have been told that certain tools were unavailable, causing further delays. This is highly concerning and raises questions about the clinic’s preparedness and efficiency.",
+        "publishedAtDate": "2025-03-03T04:34:06.850Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Koey Thung",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-09-15T03:25:31.481Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Leng Looi Tan",
+        "stars": 5,
+        "text": "Okay good service",
+        "publishedAtDate": "2024-08-24T01:50:49.719Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ysk Dwg",
+        "stars": 5,
+        "text": "Best services",
+        "publishedAtDate": "2024-08-24T01:25:31.708Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jimmy Yap",
+        "stars": 5,
+        "text": "i like here...",
+        "publishedAtDate": "2024-08-22T05:14:48.446Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Abdullah hakim Junaidi",
+        "stars": 5,
+        "text": "Good job kelinik bersih layanan ramah memang mantap huhui",
+        "publishedAtDate": "2024-08-13T05:09:52.034Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "KONWONG LOW",
+        "stars": 5,
+        "text": "Doctor very professional and price is reasonable",
+        "publishedAtDate": "2024-08-13T02:12:30.778Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "35, Tingkat, 1, Jalan Kaskas 2"
+  }
+]

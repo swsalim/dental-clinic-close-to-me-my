@@ -1,0 +1,1474 @@
+[
+  {
+    "title": "Padang Matsirat Health Clinic",
+    "website": "http://www2.moh.gov.my/",
+    "latitude": 6.3500748,
+    "longitude": 99.7312906,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "21:00"
+      }
+    ],
+    "slug": "padang-matsirat-health-clinic-langkawi-kedah",
+    "skip": true,
+    "placeId": "ChIJE8MZqi94TDARNPlJ51p-eKA",
+    "phone": "+6049551355",
+    "permanentlyClosed": false,
+    "address": "Padang Matsirat, 07000 Langkawi, Kedah, Malaysia",
+    "neighborhood": "Padang Matsirat",
+    "city": "Langkawi",
+    "postalCode": "07000",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 31,
+    "totalScore": 3.5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nracdbb-4jj8OiawOYj2bkAPlsLGjOvHts3u02-jcpPHNJPwhTHe04cj210fNxucdupTbeel10xz6QC65phcdFlqBanB-llYZH7OiA0Nf5HdGtbzogvq24sPLygNAttttnL9DTZ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq199xqhmKTtSX9Ks46hodSqBAxlooH07Iam0eA3WAudoJTJw2BGFuvQSMzCrrO0ZnF7Trizi3XMc7iJlzwh_atEeYhLDBdBenNiZwNfeSPy_2P5OcRGZSkrk11_M6x7q2nnDUStw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqJIlZN53YbrmCtSSjS7Al-_jngqXhet6CFHKxM792IlxyWE9a6HyFdBgXp_TGoSYHWaIOKPpaYw5UejVX74IcrZrrqkwTVLQjQTAMuen1LkQGpCDCP5Q97Zbnf5DqP27jKi9PFNg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noBjpDwCigUgOh2eyCMqeLgpqEikIqUlai9TRjTNe4kjNNXc9Rx3beAIHvjk6oEjw32mhUq8NygbcDvbfcm_BswDCdHq1DpFY9duoIwgAOKNPYzChDnSGN8lQPkD8YmW2M8Iikq=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqbAHjL07bW28trGPg6fT8UyTd4DTxzgcSEaB7Pbe7jBhRhgkp0xmOg4yasZgw7CNBnikbxOos2lxg-XBqE4n9BTeu5rORVHy7sbRlpK3RfXG1xbOIR23mfcJwxeoUJFY2Ir50w=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "mimi wahidah",
+        "stars": 1,
+        "text": "it’s very rarely of me to spend my time and write a google review . but unfortunately something happened and reached my limit today when i went to this clinic . yesterday i had a an extreme fever , with sore throat like something stuck inside my throat and today when i woke up i could barely walk or stand cause i had a strong headache , but i could feel my body temp lowers today . thats why ive decided to go to this clinic.  but then the doctor who diagnosed me , treated me like i am some kind of patient that come for nothing. i dont know if this is the right ethics or what,  he even shouted at me, and he says there’s nothing wrong with me . he said he gave me medicine for fever (paracetamol) and he even said i wont give you the medicine for sore throat ,he said if you want that one you can just get at shop somewhere 😄 im offended on the way i was being treated , i wasn’t given a chance to explain my condition since he shouted at me . i will not support any government clinic again after this .\n\nif this is how its supposed to be , shouldn’t have come to this clinic and dont mind spend some pennies on private clinic .",
+        "publishedAtDate": "2025-04-14T01:46:00.879Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd amir Ashraf",
+        "stars": 5,
+        "text": "Staff dan doktor sangat peramah.. Service Macam pergi klinik swasta",
+        "publishedAtDate": "2025-02-27T06:25:29.066Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nasir Ramli",
+        "stars": 5,
+        "text": "Terbaik untuk yang berpijak di bumi yang nyata...tepuk dada tanya dompet..layanan ok,servis ok dan ubat pun ok....padan la rm1 shj...jgn la harapkan servis mcm raja sehari",
+        "publishedAtDate": "2024-12-15T02:15:46.389Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Muhammad Ridzuan",
+        "stars": 1,
+        "text": "tolong la improve segelintir staff dari segi pandang , bercakap dan dll 😄",
+        "publishedAtDate": "2024-12-12T09:24:47.289Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BUSM3cL7Yy85mJtDo64hPd1sn0DoZBk1Bp31RjrScx1rs4VrbmMHKJiRx_YCd3mfdH3XQPiEsw3s4cGnh5K19WPWZLRnUZWOAxcLphMqxn6zLHHRmeag1_69_HUbGSXl9rNqfiTw"
+        ]
+      },
+      {
+        "name": "Muhamad Khairil",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-12-10T02:28:48.493Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohamma Ali",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-11-17T14:22:13.729Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Saiful Islam",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-10-30T13:29:07.563Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "FATEN ZUKI",
+        "stars": 1,
+        "text": "Call cukup payah angkat ..layanan pun ikut mood misi dengan doctor.hurm kalau kerajaan mcm ni laa.orang kalau mampu dah lama p swasta .",
+        "publishedAtDate": "2024-10-23T02:23:09.333Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "null"
+  },
+  {
+    "title": "Klinik Pergigian VN Smile",
+    "website": "http://vnsmile.com.my/",
+    "latitude": 5.4131895,
+    "longitude": 100.375032,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      }
+    ],
+    "slug": "klinik-pergigian-vn-smile-dental-clinic-butterworth-penang",
+    "skip": true,
+    "placeId": "ChIJbdPNb4LFSjARL2Qv5HF7_YA",
+    "phone": "+60102605695",
+    "permanentlyClosed": false,
+    "address": "5092, Ground floor, Jln Telaga Air, Kampung Benggali, 12200 Butterworth, Pulau Pinang, Malaysia",
+    "neighborhood": "Kampung Benggali",
+    "city": "Butterworth",
+    "postalCode": "12200",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 153,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOKDKbM0GtpEYbzrL6j2gCe3OXw3DNZl7_E7PJK=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPRqx2RqaGc0hywtbXBSo6j3fedDUYK3pgbuRj8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNJtA76Fw1OTnRaIpE98mJ3RmDRusvVTEEIceGj=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO1Yppox2eGCxqMIbo3ICcJPCoqSBnYL8vO_CQg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrgXEeaz1xUx5odvW_Ooh2PsK-RrqrEOKZmJcDKzzlx5FQBQXDjYFy2mzVYeBM-CzmEB-IoD4fDyjJZgiKkUXm6LY1hzsrI-6ctkbKp7lFhomR2GTVDr5VzCSH4XQUja2c4zaab1g=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Jeeven Sandasamy",
+        "stars": 5,
+        "text": "Good",
+        "publishedAtDate": "2025-07-03T09:00:18.289Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Wallace Ling",
+        "stars": 5,
+        "text": "Service was tremendously good, Dr. V was very nice professional and patient. Their new EMS scaling method is very good for patient like me who scared of pain! Thank you for the wonderful care and service. The price is reasonable, environment is comfortable, and staff team are well trained and professional in dealing with patients.\nWill share to my family members and colleagues !",
+        "publishedAtDate": "2025-07-02T05:11:12.661Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Niteesh Mogan",
+        "stars": 5,
+        "text": "Great job by dentist. Perfect filling . Good scalling job",
+        "publishedAtDate": "2025-07-02T02:27:10.828Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tommy Nioo",
+        "stars": 5,
+        "text": "Bagus service Nurse dan Doctor",
+        "publishedAtDate": "2025-07-01T04:38:37.300Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sopian Awi",
+        "stars": 5,
+        "text": "This was my first visit to VN Smile, and I’m very satisfied with the experience. The staff were friendly, the clinic was clean and comfortable, and the dentist was professional and gentle. Everything was clearly explained, and the treatment was smooth and painless.\n\nHighly recommended for anyone looking for quality dental care. Thank you, VN Smile! 😁",
+        "publishedAtDate": "2025-06-30T12:03:11.869Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bsim Chew",
+        "stars": 5,
+        "text": "Highly recommended... Doctor & staff fully understand my requirements .. Explanations given before & after treatment were very educational.. Thank you VN Smile for letting me smile confidently 😁",
+        "publishedAtDate": "2025-06-30T04:57:03.004Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Khansa Maisarah",
+        "stars": 5,
+        "text": "Had my first EMS scaling here and I’m very satisfied! The doctor explained everything clearly and was very gentle throughout the treatment. The procedure was comfortable and painless, and my teeth feel super clean. Great service, friendly staff & highly recommended!",
+        "publishedAtDate": "2025-06-28T07:44:07.008Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DV9OQUrKhZyTsGUKziVCbhbv9nKAU-4_gmyK3KpclnfqxPbZaD4Y8mYTsvKIbgF0uqm3BtF_xO3Yq_ME1UW9TjImvnAfZjnjDm8oWZF42ejVc32UyXno34cta14swt9j2E2bseQ1Cisnmx"
+        ]
+      },
+      {
+        "name": "Mohamed Salleh",
+        "stars": 5,
+        "text": "Great clinic I'm satisfied!",
+        "publishedAtDate": "2025-06-28T06:36:23.025Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "5092, Ground floor, Jln Telaga Air"
+  },
+  {
+    "title": "Klinik Pergigian DentCity - Butterworth",
+    "website": "",
+    "latitude": 5.4303147,
+    "longitude": 100.3906542,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dentcity-butterworth-penang",
+    "skip": false,
+    "placeId": "ChIJfY0IW-nFSjARmfyPUrwbHZE",
+    "phone": "+60128688749",
+    "permanentlyClosed": false,
+    "address": "7514 (Ground floor, Lorong Seri Tanjung 1, Taman Regensi Oren, 13400 Butterworth, Pulau Pinang, Malaysia",
+    "neighborhood": "Taman Regensi Oren",
+    "city": "Butterworth",
+    "postalCode": "13400",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 405,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nor-a_zqXjJ7sqRzMLimKE4VPZc9P38EkR64Kf_SbRbhHzftOOqooSAS81aJfKWUyYSjtE1x-BJZpTKxRQrSxApT02XTt-EYF3UV1XMvZbmpUIlN9tg5Qo_6cwOaW8SNKuZwkQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqig0ypxC_BqLqwNdLFBIV3KxjGvm-RT4WsSWWRlFCFsjGqh70uFe3UYwKT5eturipkhg5TdXslSIrpodfDH-n-2o99evrV6DDS8-2L1QEVJb-WPTBG4Ac1_Kpf-H5_G8INmmk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqHfUiDpVnbjO3Pm2EmVwZBoyMmVUunkom5Ihxw6ltWj8aR71FYwikt4jM5YsgF0acetQza4t46mMeX_OjHnWpY8wAf4-ahggrOIybCsgSCjRIoKANBKjgN4rPu05TrpQ-wwEtw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no6QGyT84dzymKaZ0H-DLfpmlMvktGMHDuBV5rI8Ak2OnuKrWaWFfC-PdW4J-y5GNA0ZHNGlH2f7v9Sfa0aSDT3NgQ0cw6AlxyqHjJNp1J0_Ux1UTlo1GlQ3Z1A1jNqRlJwXxgx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noU1xvs8d8N4L0jfF26y0jBF-a5f8AHCrLzgfeQ74SEqob90D9NLNrsbFDbjo5QzAb1sLD9A4dwq45ZKAreyVPEisUzG4XTRbwy7TSRdTxWNKlXXjvzqIrTvGXaOF3R3Z98YbTU=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Chintheng Lim",
+        "stars": 5,
+        "text": "Dr May are very details and gentle to patient.",
+        "publishedAtDate": "2025-07-05T02:13:41.828Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shazy Sahrulazizi",
+        "stars": 5,
+        "text": "The clinic is very nicely design and clean. All the staffs from the doctor, nurse and receptionist are very friendly and nice. I bring my daughter for scaling and cleaning, she very satisfied and mention it didn’t hurt at all. She also can’t wait for her next dentist visit. This dental clinic is very kids friendly, recommended to bring kids for dental checkup. Extra point they got toys egg machine for kids to redeem their gift after the treatment :)",
+        "publishedAtDate": "2025-06-23T13:56:07.708Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90A5B06VvFtiuTmGA7jFUH-ZNZi6ecLmq2o0VGvr0R5DAVdRiZxeebDeQttPZHMwHaElYoHj_P5dYcymycaHsj9oIQQKMoMF6doDv6p4eU_M2A3Mv8s4KQvYPX-dOFMwsHnHJNMJxOjFgh8",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Ah-3Ur_1u-OnY1NLW81EcXerQun8IWV1ta2cGpBJ546Te1-UlAldXyJJeMAeOHdyiToEAI0QOnDvlb7RFpTXkP_XBRr0r9sUXlBZdh4YcSv_cojmJQhm4bIoG1hnth65c10zrvU2Bl-KaY"
+        ]
+      },
+      {
+        "name": "Low Chun Joo",
+        "stars": 5,
+        "text": "Good environment and service. Reasonable price 😁",
+        "publishedAtDate": "2025-06-20T08:17:49.555Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nova Guay",
+        "stars": 5,
+        "text": "这里环境舒适又干净~✨\nDr.Mey很细心洗牙全程都会重复问还O不okay，放轻松放轻松，在这里洗牙比我想象中好多了全程洗牙过程一点疼痛都没有，只有微酸感受而已，护士们也很友善~体验感非常好！过后，还会来复诊~🦷\n害怕洗牙的朋友，放心可以来体验看看~😬",
+        "publishedAtDate": "2025-06-19T12:17:50.771Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BRA3ZfPXQ_OcrJekLl3c1kDXN7ofOUf3PSKh4_5Sf6u0PZ3zZ7mjghSEhXXndHogxiUkX2xfiBArYXK3zdZsOW56N_SYOIFXleqSYcf9R8ii1wsb27On0_OaYBwOuzIng-iLnsSDLTw8DY"
+        ]
+      },
+      {
+        "name": "booee khoo",
+        "stars": 5,
+        "text": "这边拔牙超好的完全没痛，牙拔出来了都没感觉",
+        "publishedAtDate": "2025-05-24T09:51:10.594Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kenny Yip",
+        "stars": 5,
+        "text": "同事介绍这家，来尝试洗牙和补牙感觉不错。服务很好，Dr Teh很专业，解释得很清楚。",
+        "publishedAtDate": "2025-05-24T07:30:10.801Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hwa",
+        "stars": 5,
+        "text": "第一次看牙医\n在这里补牙的过程很舒服，医生的讲解很仔细，服务很好",
+        "publishedAtDate": "2025-05-23T13:50:22.533Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90An9SWWMHWI3MW0eIHUPliCN8in3etgemF3rMk9Qucno99put8oE6LxyYZeVYRxewSEHtzwS6P0XUGaPYPD11giapDCj61rl6xBdCMpvyVykjpQelettmwZ3auK0siebWUSkh8pog",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BtVinsra83CznpED8t-iUstfSBbVwHf7JN_lB_Gn-prWgpPVonj17cMhS1ACi4zkIn3o5Dr9MAWV1CP9bPwh2Ca9R3r-Two4NiuSkOvfPsk5qGvDkMrjpIaOSCYX0M3If_XUs"
+        ]
+      },
+      {
+        "name": "Andi Kenz",
+        "stars": 5,
+        "text": "Sangat ramah dan membantu",
+        "publishedAtDate": "2025-05-22T08:11:45.706Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "7514 (Ground floor, Lorong Seri Tanjung 1"
+  },
+  {
+    "title": "SmileBay Raja Uda",
+    "website": "http://www.smilebaydental.com/",
+    "latitude": 5.4340155,
+    "longitude": 100.3855851,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "smilebay-raja-uda-butterworth-penang",
+    "skip": true,
+    "placeId": "ChIJC8qou_nESjARF0k1T8sJgyE",
+    "phone": "+60174491600",
+    "permanentlyClosed": false,
+    "address": "Ground Floor, No.6952, Jalan Raja Uda, 12300 Butterworth, Penang, Malaysia",
+    "neighborhood": "Raja Uda Industrial Estate",
+    "city": "Butterworth",
+    "postalCode": "12300",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 570,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipP_zr4FefNwHUyEQ91KVJmt3p1i229nXjXrcz5d=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNBgolQyheGaAhqcQ6ZaekxqO-BdLfpQT3Zdi30=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOUGfaLida2YO-SsJaaBOhVWBipkzSMAotU_7K6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqyOcu0xcxnUaF2PAUnq1Dtn5oHnDj_hCK7HJiKbkYFPxpCHaCjwkO6qOngHAHZ8XOVkwTJDJnqR6lrKb0tvqxKZqKGFM_Uz7QwM1g=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPpLMrbNBA7XPPtza7uXiTcfga7yuARKo8khbZI=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Tivendren “Tvn”",
+        "stars": 5,
+        "text": "Best doctor ever, Dr Lim Sze Ming removed my wisdom teeth with no pain at all and handled everything so patiently and professionally.✨✨✨\nExplained my questions very clearly too. Recommended to consult with Dr Lim👍",
+        "publishedAtDate": "2025-07-03T09:21:36.420Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kelly",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-06-23T05:52:03.478Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "RhuYee Tan",
+        "stars": 5,
+        "text": "Great environment for children dental care..\nThanks to Dr. Lim and her team ..",
+        "publishedAtDate": "2025-04-12T08:24:38.262Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Thoe Swee Guan",
+        "stars": 5,
+        "text": "I had a great experience with my denture treatment. Dr Lim Sze Ming was very knowledgeable, professional and took time to explain every step of the process clearly. The service was excellent from start to finish. I am very satisfied with the result and would recommend this clinic to anyone who looking for quality dental care.",
+        "publishedAtDate": "2025-04-12T03:38:42.971Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Javene Tang",
+        "stars": 5,
+        "text": "Thank you Dr Chew and the assistance for helping me to solve my teeth issue.",
+        "publishedAtDate": "2025-04-11T09:48:26.491Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mei yi lim",
+        "stars": 5,
+        "text": "我很满意Dr Cynthia的治疗。强烈推荐。",
+        "publishedAtDate": "2025-04-11T08:55:04.999Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ZX Lim",
+        "stars": 5,
+        "text": "几年前在raja uda branch找Dr Chew 绑牙。\nDr Chew很专业也很温柔，给予很多专业的建议，过程中也不会令人紧张和不舒服。\n目前已经拆掉牙套2年了，一切都很好\nRaja Uda Branch 的前台服务也非常亲切，我们一家人的牙齿都是在Raja Uda Branch 接受检查和治疗，值得推荐！",
+        "publishedAtDate": "2025-04-11T08:44:45.214Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CukVGQAJRqEYpY76UDk1pXQR1SIijsmZE3efoYYQDouJtXaf65ooUy1ShtDThgxFIkG_xrjg6tYwaeuURUwecJqfB8KBcXSqeN2WoLOPmp74dmxR_BGbdTF5XGxMroLkbN5oPN"
+        ]
+      },
+      {
+        "name": "KOOI NGAN CHIN",
+        "stars": 5,
+        "text": "最近在这家牙科进行了implant over denture(植体式假牙），整个过程非常满意。首先，诊所的环境非常整洁、舒适，让人感到放松。接待人员热情有礼，服务周到，每一步都详细说明，让人感到非常安心。\n\nDr Lim Sze Ming 非常专业、耐心，在治疗前详细检查了我的牙齿状况，并为我制定了合适的治疗方案。在整个治疗过程中，医生细心操作，尽量减轻我的不适感，还不断询问我的感受，让我觉得非常贴心。\n\n此外，诊所使用的设备也很先进，整个治疗过程高效且安全。治疗结束后，医生还耐心地讲解了术后护理和注意事项，非常负责任。\n\n总的来说，这次的就诊体验非常好，无论是服务态度还是专业水平，都让我感到放心。如果你也在寻找一家值得信赖的牙科诊所，我非常推荐这里！",
+        "publishedAtDate": "2025-04-11T07:39:13.099Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Ground Floor, No.6952, Jalan Raja Uda"
+  },
+  {
+    "title": "Klinik Pergigian Primodental",
+    "website": "https://wa.me/601158858921",
+    "latitude": 5.5213832,
+    "longitude": 100.4305554,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-primodental-kepala-batas-penang",
+    "skip": true,
+    "placeId": "ChIJlZWQ2S7bSjARL460RO671to",
+    "phone": "+601158858921",
+    "permanentlyClosed": false,
+    "address": "No. 19 (Tingkat Bawah, Jalan Bertam Permata, Taman Bertam Permata, 13200 Kepala Batas, Pulau Pinang, Malaysia",
+    "neighborhood": "Taman Bertam Permata",
+    "city": "Kepala Batas",
+    "postalCode": "13200",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 53,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPIMKXOcsclOg7t9ghBRmBKKt6v6FUyXWqWpLWC=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOvfM5YdJckXZqe6bd5agnTlK3ErQrZhJpCI4ad=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPDuz3FWilGslXmdN6QBCWVli7qRPeHISNSNR96=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPk8Gzi3TbRUPmEgDVh18yLAjkCWsWySrxfLHXZ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npa77gRNloPM1i6k2yj7H2Y5ls_55S9f2tp7WFqe30F7EDajHaLa5YgYhCWJ1DKCNCeVuD4ANhrx4HUlvYaaGCmk0K3ZKTDWCcjgbW9NK81sDurDphwyLaVWWkIqQx-bEtYkVm4W_1xkyz-=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Helianthus Nur",
+        "stars": 5,
+        "text": "Buat tampalan dekat sini and i love it sooo much. The stuff was friendly and the doctor did his best to met my satisfaction and i love the result as well! very recommended",
+        "publishedAtDate": "2025-07-03T09:13:48.649Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "WaklulA",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2025-06-30T10:02:42.376Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "usollie Othman",
+        "stars": 5,
+        "text": "🌟 5-Star Review for PrimoDental 🌟\nI had my dental treatment today at PrimoDental, and I’m genuinely impressed by the outstanding service! From the moment I walked in, the staff were welcoming and professional.\n\nThe dentist was gentle, thorough, and explained every step clearly, which made me feel completely at ease. The nurse was kind, attentive, and supportive throughout the whole process. Together, they made what could have been a stressful experience feel smooth and comfortable.\n\nI truly appreciate the care, patience, and expertise shown today. Highly recommended to anyone looking for top-quality dental care with a personal touch. Thank you, PrimoDental team — I’ll definitely be coming back and will spread the word! 🦷😊👏",
+        "publishedAtDate": "2025-06-23T19:50:55.389Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "hamidah ibrahim",
+        "stars": 5,
+        "text": "Perkhidmatan yang disediakan sangat bagus.. Layanan doktor dan pembantu sangat mesra.. Harga juga sangat berpatutan..",
+        "publishedAtDate": "2025-06-23T12:48:57.880Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aleya Lora",
+        "stars": 5,
+        "text": "Saya sangat berpuas hati dengan layanan di Klinik Primodental. Doktor dan staf sangat ramah dan saya sangat selesa sepanjang rawatan gigi dilakukan. Sebelum membuat rawatan, doktor menjelaskan secara detail kondisi gigi saya dan prosedur yang akan dilakukan. Harga juga berbaloi dengan rawatan yang diterima. Thank you klinik Primodental, Saya bagi 5 bintang untuk anda !!! 👍🏻👍🏻👍🏻👍🏻👍🏻",
+        "publishedAtDate": "2025-06-23T07:18:21.749Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BlrKUHLOQf27EaQhRv5wK0MwwnE_jEXxZRzT2xostOSnoH9BRO3MaxtZn716gIDkDlPxoeyPlkreqzS3lcAMX35OUlirm2py18TH9K7ZVRKtfd51PY4F_McYzZ3qCa8arEQ733bO-YE7yY",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BsokPX3rZWsl1HTWK-LPLOc4Y_TxQtKuFTTnKrJfbUAlTsT3VosMdWE0k1MqushjgGmmBJrB4ButW2ge2DdGTcaeAnYCXtI6cqj4gErT24tDWrFAjKKVPshIRsDeg1EreyENY2Y2O5q-T8"
+        ]
+      },
+      {
+        "name": "Abid Nuqman",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-06-22T08:47:17.363Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syazwan ikhsan Radzuan",
+        "stars": 5,
+        "text": "Dokter yg ramah dan sempoi, staf pun ramah dan cantik².sakit gigi hilang terus🤗🤗",
+        "publishedAtDate": "2025-06-20T07:29:47.680Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aik Khoon Low",
+        "stars": 5,
+        "text": "Friendly dentist and good service. Thanks Dr.",
+        "publishedAtDate": "2025-06-20T02:42:52.599Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 19 (Tingkat Bawah, Jalan Bertam Permata"
+  },
+  {
+    "title": "Union Dental Surgery - Kepala Batas",
+    "website": "http://uniondentalsurgery.com/",
+    "latitude": 5.5056153,
+    "longitude": 100.4342067,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "union-dental-surgery-kepala-batas-penang",
+    "skip": true,
+    "placeId": "ChIJ1wLipoXbSjARCNFPadwI58k",
+    "phone": "+6045773310",
+    "permanentlyClosed": false,
+    "address": "68, Jalan Serdang 1, Pusat Perniagaan Serdang, 13200 Kepala Batas, Pulau Pinang, Malaysia",
+    "neighborhood": "Pusat Perniagaan Serdang",
+    "city": "Kepala Batas",
+    "postalCode": "13200",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 14,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOqX4JDvoMnkMVqd3kczBw9GABNKjBLBCnYSHE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN5HEwqXppGgPc4YIlQFpzGfFASM4x_DkIHAls=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMxfP8Z7Effm-mQFEYygi-_e4Ol60QLe9WzAfE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHE7FT0kXaYwJYmJRGcOYnAor-VVtV98TPXk_15aEvhI07OOsHMAmIey0Zc8ce-I7l9FgfXmNZQAG646Z0gW0ztX09jUTmtr79MzLlITeMVT23F37D0nOcGWpwte9Tm-n3A0Yp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqFcfAPDCBXGpoOhlC7fPLteBRM90thOnMSLVJ9fC7fTIfHvGTGtl4g31XORInvDut2LWrJGrxZaGdZqWQ_WsKm4PndLcG2OjyMj-7BT-kL0HuhJOGKIXRZQ4Cb4RtVcWHCmKbh=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Nurul Izzah",
+        "stars": 5,
+        "text": "nice and good service, very kind doctor and staff 👍🏻",
+        "publishedAtDate": "2025-07-04T13:12:28.334Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Iman Izzati",
+        "stars": 5,
+        "text": "the staff and doctor very professional,the clinic very clean and beautiful, price very affordable.",
+        "publishedAtDate": "2025-07-04T12:42:26.165Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sony Gameplayer",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-01-15T09:15:46.214Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Clara Carol",
+        "stars": 5,
+        "text": "The Dr is very friendly and ensure the process is painless for my 5 year old girl.",
+        "publishedAtDate": "2024-09-02T10:51:05.934Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AtPaexe6fxrPofY3Z6-X7FjoBaJkFE8Ac-baNreWldaMIgX8YO-hlAp9fZrAm_bhqh7Y961I1C517v4K4mkf9VNfJwvF0hH4eZpt4I7OIlxDYK-iX6ye7AMOjKlDe-qXkDJ69WpA",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DsAMQAj7d-Bo99C34O-McUFK2D7ANuSdVVuW_6XzIdlaxlkCm5EvZ_HmTVtPqLtQ2WEaKXf9EnMZeW-SllL2wH4Tn8t5Ku0Pm1o3WLXcZgO3W2ZLZ-RZe9xeyeWBDLIa59j4aW"
+        ]
+      },
+      {
+        "name": "mandy wong",
+        "stars": 5,
+        "text": "The doctor and staff are nice and friendly.",
+        "publishedAtDate": "2023-10-28T06:50:06.039Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kamache Vijayan",
+        "stars": 2,
+        "text": "Charges quite expensive and provided unnecessary antibiotic medicines for very minor treatment",
+        "publishedAtDate": "2023-08-19T07:35:54.662Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "noor amanina",
+        "stars": 5,
+        "text": "Dr have skills and good",
+        "publishedAtDate": "2023-08-18T10:18:54.685Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tang vteng",
+        "stars": 5,
+        "text": "Doctor and the staff are very professional, patience and friendly. Painless during extraction. Best dental clinic. Highly recommended.",
+        "publishedAtDate": "2022-06-04T08:47:21.291Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "68, Jalan Serdang 1"
+  },
+  {
+    "title": "Klinik Pergigian Dr. Norsyafiqah",
+    "website": "https://www.facebook.com/KlinikPergigianDr.NorSyafiqah/",
+    "latitude": 5.5249493,
+    "longitude": 100.4353886,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "19:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dr-norsyafiqah-kepala-batas-penang",
+    "skip": true,
+    "placeId": "ChIJKweU3XbaSjARlpLD0nwgzCU",
+    "phone": "+60196496837",
+    "permanentlyClosed": false,
+    "address": "6A, Lorong Bertam Indah 12, Taman Bertam Indah, 13200 Kepala Batas, Pulau Pinang, Malaysia",
+    "neighborhood": "Taman Bertam Indah",
+    "city": "Kepala Batas",
+    "postalCode": "13200",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 63,
+    "totalScore": 4.4,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr-LjwarSUP3n4NpWKNKFvBQ6vxVRNjFU_OlVXsK1NvG6TX3S5FGJNwl1OkztkUQt2sCdBH_2A4oLxVR5i6SDcFyTLTMoFRuaNF3g=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNPmLBoOqNk2MXsH6PE3aEszMiVq36c2PtX1AmF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npLzN4r_OhfDVnx3RNJ1Yg9_7D67RTdXxGcAGezse8mp-ONoelObpsmKoKSiLwBUzdKm8cwLd8GY6sbZM24RM1a5kkXnWQOXb8xhw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrM_6vQwxiftw6n-N-iSgnBq8KE2JofunkM6Zte7-XVhaoQ32dafse-CgDUGFK7PfQLVQDNxVK7V9iFv5SlqyH3iexhFOBBt_9h6Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npB9FDswrey7GFI9qzqacloL8aDBxEsqElni-ggo_BkFDKtU5go8g5BkcX57_s2FQ6Z0Xf4CBSzE51OSzGiKa9oC63cif4msSSSodI=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Hamizah Bt Zakaria",
+        "stars": 1,
+        "text": "Tampal Gigi ja mahal sampai seratus Lima puluh mahal sangat",
+        "publishedAtDate": "2025-07-05T06:06:13.771Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yong Dae",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-24T12:17:07.557Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nieza Din",
+        "stars": 1,
+        "text": "Sya mmng x brpus hati dgn prkhidmatan kt klinik ni dri skp staf hingga ke Doc.Dgn1sbb mulanya nk palm ggisya sya yg trtanggal brp thn tlh mngubah khidpan sya trpaksa mnanggung skit n trbang hmpir5 k atas sbb slah seorg Doc lelaki ( x ingt namanya) bt rwatn saraf pd Ggi grham sya dsbh kanan yg spatutnya ggi tu msih elok.Smasa rwatan pn tiada skin utk patient drawat..Byaran utk rwatan staf 1 k..tpi rwatannya mmbuatkn ggi sya brtmbh sakit.Doc itu mnyarankn sya prgi ambil surat rujukkan dri klinik kerajaan n bwa surat tu ke pkar Gigi .Apa yg menyedihkan sya apabila diminta surat rujukkan apa yg Doc bt pda sya tpi Doc x bgi melainkan kena bayaran rm 30.Allahhuakbar ...kita sesama Islam di bln Ramadhan yg mulia mcm ni pn ada Sedangkan  smasa rawatan sya dibt x ada screen utk Doc menersngkan pda sya.Sethu sya screen n penerangan tu sgt penting bg patient sgt2 pntng.Sya dh prgii brjumpa dgn Doc Shafiqah utk menerangkan apa yg tlh trjadi da sya secara baik nawaitu x mahu bergaduh n menjatuhkan periuk nasi mereka .Trlupa sya msa mula2 Doc Shafiqah tampal Gigi sya yg trkeluar tu Doc Shafiqah x mencuci sisa2 tampalan sya yg brthn lamanya trus plam n cuci dlm msa yg agak singkt..rm 370 membuatkan byk Kali tampalan sya trkeluar n bernanah.Akibt  trlalu skit sakit sya trpksa Google di mana ada klinik Gigi yg buka pda hari Ahad..Sya pn p klinik UMMI kt Taman Koskam...sya kagum n selesa dgn layanan n rawatan brpandukan ketrangan Doc Salman n Doc Izah mellalu screen yg membolehkan sya melihat sendiri apa yg tlh trjadi pda Gigi saya.Sya trpksa mbuat x-ray satu percaturan 5 btmpt yg amat2 menyakitkan n bayaran agk MAHAL..Sya relakan walaupn kedua2 blah ggi sya kiri n kanan msih sakit..Bayangkansya trpksa gigit 1 last brbentuk kotakyg agak tebal dimsukn kdlm mulut n sya perlu gigit utk dpatkan 1 result gambaran ggi dri akar..Allahhuakbar 😭menitis air mata mnahan kesakitan demi  nk kan result ggi sya .Stlh dpt result Doc trpkasa cbut Ggi gerham yg satu2 utk sya guna utk mengigit mkanan.Sbb smsa dulu stiap kli pregnant sya trpksa cabut Gigi gerham .Jadinya sblh kanan sya dh tiada ggi utk mengigit mkanan.Pda ggi sblh kiri tmpt yg Doc Shafiqah Palam 3 tmpt.Doc Salman n Doc Pakar bertungkus lumus menolong menyelamatkan Gigi tu dgn cara mencuci n membuang bl segala cebisan bekas Doc Shafiqah Palam sbb dh ada jangkitan kuman n bernanah.Sya trpksa kirbn kan puasa sya ,kesakitan sya,Wang yg beribu2 ..anggaran 4lbh,msa sya tidur n kerja sya...Allahhuakbar...mih belum hbis lgi rawatan sya.Jik hbis rwatan saya trpksa bt Gigi palsu .tanam Gigi atau rwatan apa entah sya x ingt utk melengapkan Gigi sya yg x bersalah n brdosa ciptaan ALLAH SAW yg sgt brnilai pda hsmba2nya.Saya Redha tpi apa yg sya kesalkan walaupun sudah p brjumpa dgn Doc Shafiqah sendiri ..beliau menyuruh sya brbincang dgn Doc lelaki tu..sedangkan klinik Gigi tu atas nama Doc Shafiqah.....pelikkan.Sya dh refer pda Abg ipar saya Prof Dr Mustaffa Omar yg berkelulusan PHT di United kingdom...try Google akan dpt...Abg ipar sya  menyarankan sya menyaman .Tpi Suami sya kalau bleh x mahu kes ni brpanjangan.Cuma kami suami isteri x mahu trjadi pda patients2 yg lain mcm kes saya.Allah Maha baik lgi Maha mengetahui tmbh2 di bln Ramadhan yg mulia ini ..doa org2 yg terinaya ALLAH SAW kabulkan.Keberkahtan sgt penting  utk mencari rezeki yg halal..servis staf2 n patients perlu dijaga.Wang yg kita dpt untk membri family makan akan jdi darah daging.\"Biar ilmu SECUBIT..Adab sebukit.\".Terima Kasih.",
+        "publishedAtDate": "2025-03-23T08:14:34.624Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Norehan Mohd",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-05T00:05:44.052Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Irma Syafika",
+        "stars": 5,
+        "text": "I took my 3-year-old to this dental clinic, and was beyond impressed with the experience. The doctor was incredibly child-friendly and explained the entire procedure in a way that was easy for my little one to understand. The doctor explain each step with patience and care.. They were also very considerate and professional throughout the whole process. The price range is average. I highly recommend this clinic for anyone with young children!",
+        "publishedAtDate": "2024-09-22T06:56:11.954Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Najmuddeen Erbakan Mazlan",
+        "stars": 5,
+        "text": "Staff and doctors are well trained and soooo nice. They even gave out a review and recommendations on how to take care of my teeth in long terms. Been to this place idk how many times already probably more than 2-3 years. This clinic that im talking about is located in bertam indah. They also mentioned about their new branch in bertam putra. In shaa Allah ada rezeki ill go there. Kudos to Dr Syafiqah and her team members.",
+        "publishedAtDate": "2024-03-22T18:25:30.162Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aizul Izuan",
+        "stars": 5,
+        "text": "Klinik Gigi terbaik..",
+        "publishedAtDate": "2024-03-06T22:13:19.138Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "izazi uzma",
+        "stars": 5,
+        "text": "sgt2 recommended😍 doktor peramah, dan explain secara detail. assistant sgt membantu. kos pun murah tak terlalu mahal. terima kasih, selepas ni kalau problem gigi mmg tk cari klinik lain dah😁 klinik ni jdi pilihan🥰",
+        "publishedAtDate": "2024-02-22T04:11:13.275Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "6A, Lorong Bertam Indah 12"
+  },
+  {
+    "title": "Klinik Pergigian Dr Indra Lutfi",
+    "website": "https://m.facebook.com/pages/klinik-pergigian-dr-indra-lutfi/785731428435179",
+    "latitude": 5.5170985,
+    "longitude": 100.5468185,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dr-indra-lutfi-padang-serai-kedah",
+    "skip": true,
+    "placeId": "ChIJY0Y67MnTSjARvQEf-kUOdLo",
+    "phone": "+60122980966",
+    "permanentlyClosed": false,
+    "address": "No.1335, Jalan Serai Wangi 13/6 Taman Serai Wangi II, 09400 Padang Serai, Kedah, Malaysia",
+    "neighborhood": null,
+    "city": "Padang Serai",
+    "postalCode": "09400",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 7,
+    "totalScore": 4,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhEiCqQ37nnb7kF3wnp5YVXyeApyQ5OUTqd9x_h8yhej6FfXNue3HatDUBC7mFvj44FGqiWk9tLYpGVIDIFPcgkvV72DCFjDznFndlXKptbGaKRRGEFNmT0dvJMjEAqmf92oPOID7McMPz4I8kmcr-BdwT0dUl3MOlD0lPnJd_EEJ3h2mz5Ho2QGtpqjfn3De1HQMaQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhFfR3B7916KYPfaym_HfYkhEaJ2v6-93H2Ucg2q4XGrppQmfszzB7vq5FGOowKhvDbymzMjkMQkOV7kkM_S-RJB09zXPVGp5IJ55Bs8Cfb35AEuPerbH3TvEnw71ABNIBpV_talkaxmJF9CXZKYAoytEuhjllnZtYAp7RChi8UFtmte8PrJl8AgwB78ikzOtcMT_DU=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=XcHDNMyj2ANadN5vx5LpFg&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=281.4116&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "channel daus",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2023-01-19T03:34:54.203Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nabila Ibrahim",
+        "stars": 4,
+        "text": "Sy bt rawatan waktu covid... Jd sesuai sgt klinik xda org... Just walk in xperlu appointment n doc membantu beri penerangan yg jelas... Wlupun basic checking tp tanpa bayaran apa² dikenakan.. good service.",
+        "publishedAtDate": "2021-07-10T06:54:24.527Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Piqah Noor",
+        "stars": 2,
+        "text": "2 stars for friendly doc and nurse...1 star for being unreasonable late...2 times in a row, i have to wait for almost 1 hour and half😒",
+        "publishedAtDate": "2020-09-07T08:35:44.434Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siti nurhasna Roslan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-10-20T06:00:50.762Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "lazh bakar",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-07-13T09:16:46.453Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hidayah Idris",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2018-10-02T07:32:44.870Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fairuz Rahmad",
+        "stars": 3,
+        "text": "Klinik Pergigian Dr Indra Lutfi, situated just besides SEVEN ELEVEN shoplot.",
+        "publishedAtDate": "2018-06-24T16:38:54.970Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No.1335, Jalan Serai Wangi 13/6 Taman Serai Wangi II"
+  },
+  {
+    "title": "Klinik Pergigian Dr. Yusmina",
+    "website": "",
+    "latitude": 5.6132584,
+    "longitude": 100.482741,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dr-yusmina-sungai-petani-kedah",
+    "skip": false,
+    "placeId": "ChIJEe8TFLXXSjARqvRd9yLMego",
+    "phone": "+601111064106",
+    "permanentlyClosed": false,
+    "address": "no.11 tingkat, 1, Jalan Permatang Gedong, Taman Sejati Indah, 08000 Sungai Petani, Kedah, Malaysia",
+    "neighborhood": "Taman Sejati Indah",
+    "city": "Sungai Petani",
+    "postalCode": "08000",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 9,
+    "totalScore": 3.1,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npswPf4ncTON8v2E4yEq_gzXB0ylPRPJU-n7_vvkfJAkjzfsAIanX3AMqTwa6DMUWDzJjivxPVVPelPUcqn4AxKsreCsvBTKTxpnXWT8vS1EUWYYsxDt8zYec8XPD_GpjuzVJ7OmQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np7jYPz1CYYusyFevfRaBb5oa6hW4RHgJiQLe8CFFQeu2M2tpgE51BxXJdsE1HTBj8M5irUDohQL6se8LdClWR8Ik3w36c7skhPkK52O7QoQVyP2EBVuG2LVlw5WPUbVn-YoAN8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPhgOZ98qcvs7DcfxQ1k3WjuRF08J1j6Y0tgXSnHQl1WZG-HTL0M2Ee2vcNPaFXcTNdO2ndDvcaIBQDuAxA6howhYigNO-V1wYt2zB9PGg8GqSmVjVBCR1YrzyGcaplCCiQ5xc=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Pjbs02rUYeDX3jbjFgcg0w&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=268.61752&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "syarifah zalika",
+        "stars": 1,
+        "text": "Klinik yg plg sakit buat cuci gigi,dr x frendly lgsung ckp ksr,dh mcm dr krjaan ..dr krjaan lg frendly,org byr mhl2 tp lynn tak puas hati lgsung😭slalu p klinik org cuci pelan2 dlu ni tak,dia trus kasar smpai nk tecekik percik abis air dkt muka..staf pon x frendly blh plk sruh letak beg kt bwh lantai..pdhl meja tu ad ja kosong ..",
+        "publishedAtDate": "2024-09-17T12:42:10.855Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "hakimi omar",
+        "stars": 1,
+        "text": "Doctor okay.. Staff jaga kuanter teruk, tak friendly langsung.",
+        "publishedAtDate": "2023-04-19T05:09:17.524Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Muhammad Farhan Suhaimi",
+        "stars": 5,
+        "text": "1. Harga setiap perkhidmatan/rawatan amat berpatutan dan sangat berbaloi.\n2. Layanan mesra (friendly) dan terbaik daripada Doktor dan staff klinik.\n3. Ruangan klinik yang selesa, bersih dan kondusif.\n4. Merupakan Klinik Pergigian yang terawal di buka di kawasan Sungai Petani, Kedah. Sejak tahun 2005 lagi!!\n5. Penerangan yang jelas dan mudah faham untuk setiap rawatan.",
+        "publishedAtDate": "2022-08-20T11:02:06.123Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Wani Zainol",
+        "stars": 1,
+        "text": "Dr langsung xfriendly..saya tnya mana nak.letak handbag,dia tengok je xjawab apa²..staff nye suruh sy letak handbag ats lantai,sedangkan ada meja tepi tue..dia xexplain apa pasal gigi sy..\n\nDan sy takkan cabut lagi gigi di sini,sebab sakit kot,masa dia tarik gigi,,ubat kebas xsempat meresap habih lagi..darah keluar xberenti,smpai kapas habis kapas gnti yg dorang bg..first and last rawatan di sini..",
+        "publishedAtDate": "2022-06-14T08:09:38.313Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nasuha 99",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2021-10-15T14:26:42.240Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yana Azhar",
+        "stars": 5,
+        "text": "Terbaik. Doktor ni macam cikgu2. Pandai explain bagi kita faham dan juga tegas. Staff pun peramah dan juga pandai explain kat kita. Klinik sangat bersih. 👍👍👍",
+        "publishedAtDate": "2021-05-29T07:16:34.851Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "abdul manap",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-12-18T03:07:14.750Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Samsol Amri",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2019-10-01T23:29:00.791Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "no.11 tingkat, 1, Jalan Permatang Gedong"
+  },
+  {
+    "title": "Klinik Pergigian Thang",
+    "website": "",
+    "latitude": 5.8190844,
+    "longitude": 100.4774266,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-thang-gurun-kedah",
+    "skip": false,
+    "placeId": "ChIJCboR9TYwSzARuwAlkswm7pk",
+    "phone": "+6044686945",
+    "permanentlyClosed": false,
+    "address": "16, Jalan Utama Alor Setar-Sungai Petani, Gurun, 08300 Gurun, Kedah, Malaysia",
+    "neighborhood": "Gurun",
+    "city": "Gurun",
+    "postalCode": "08300",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 11,
+    "totalScore": 4.5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqkKUDDNlLzzvwM23M1bnsLdiqAs_OJADX1bzZwhYQ_galRaXfblsNRXPRJIAm6093gpBUlvFidb3uAmCd_fR428CGLLuBNNzj6MshFjfQ4bf0pJCTpWSATZQMXEjyiH-PDYflCtvlrjMe-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqLJSTpIbhn3qADsih6QErkJjor2fPDxgPZOKJ_8r_3QoSiBNQ4vfbzDQ1DhxPPKE4H8r_qfj9_vOw2JxS8fYlO8eFr9WbFUlC47kslax6h6FLMFkfNJ9qWFyVgwGrZpmm4Ya5lDUOC_1A=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npcE1WOlOpBf3zVzWT8MguhvRrb7e57e5eLj1WcDbr8Io5JPsqfTBR13T-Mxiez3U3esDTcBpc21w0E0XMmNIyMu-AKcvaVVfBWJagJj6eoKbFSrxHYUph3hXfTrkO3gGycULzX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqKGxht5su3ONZYVG0JzXy1qx48JCTzc5c6CYfEn9R2knwb4ioUXV4gwDNhsHuPxIpSDQ958rVX102qHq1DpTozVnsnHQDOwv9IaqI9xUD8UxwJEb2Nl3_p6Cb4FOK7lAHD4OOIAT_7-J4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no0glTdDq9UJQ9_Rs6APJmIY5eOuVzW2p32ci1f7jOiAyfjYOF-AOupZy2Q1_Dlv0tw7NngRpvliyrJzEB7FxKZgsrb1cTeyxqwRbryonu6_Kh2F13A-2nI3AOQ2gQvUzTMW71w=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Tinaharyana ahmad",
+        "stars": 5,
+        "text": "Terbaik..explanation by Doctor excellent..misi pun friendly...highly recommended🤩🤩🤩👍🤩🤩👍👍👍",
+        "publishedAtDate": "2024-12-27T03:00:44.158Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mini cooper 1979",
+        "stars": 5,
+        "text": "cabut gigi tak sakit",
+        "publishedAtDate": "2023-12-31T08:25:10.436Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Just to Share",
+        "stars": 5,
+        "text": "Very professional",
+        "publishedAtDate": "2022-11-18T08:01:03.534Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Joey",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-10-23T01:48:13.722Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mursyidmus Mursyidmus",
+        "stars": 5,
+        "text": "good doc 👏🏻",
+        "publishedAtDate": "2022-09-09T00:27:15.780Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "norhafiza a.hamid",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2021-09-13T09:26:13.511Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Xin Ying",
+        "stars": 5,
+        "text": "医生很专业～",
+        "publishedAtDate": "2021-03-31T07:26:20.200Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BPw2JvYBTHZOde6eOmshA9n8OCt8Il6FpG8PMWm1KJ5gFuWijZBZb1T9-EiNRqESRYgDMALzSf0XBfJ5dGUZyADGuhRm-qr9uzQjGKiLrcIQdIOxiBHoB6ISQT4DAJ53H08H3s",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CyeYAM6iXal43rTHGDeHAwRXd4UDS0KsQ1eMR-8eDfnBbQQ4WCkl77ram81_GtgBFQhSUD-ypwYFK2iS7w2p5NBukfIORqqsPbiCA2D7_3uJZEWUfUoSjwu2Sq3apM2_SHpU_6"
+        ]
+      },
+      {
+        "name": "YongMing ChiN",
+        "stars": 5,
+        "text": "华人女牙医\n技术好",
+        "publishedAtDate": "2020-11-19T05:48:29.544Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "16, Jalan Utama Alor Setar-Sungai Petani"
+  }
+]

@@ -22,7 +22,7 @@ const buttonVariants = cva(
           'border border-solid border-transparent bg-red-600 text-white hover:bg-red-800 hover:text-white focus:border-red-800 focus:outline-none active:bg-red-800',
       },
       size: {
-        default: 'px-4 py-2',
+        default: 'px-4 py-3',
         large: 'px-8 py-3',
         icon: 'size-9',
       },

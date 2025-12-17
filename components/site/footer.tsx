@@ -64,32 +64,6 @@ function FooterBadges() {
         </a>
       </div>
       <div>
-        <a href="https://liiinks.net" target="_blank">
-          <svg width="102" height="34" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
-            <rect width="120" height="40" rx="8" fill="#667eea" />
-            <text
-              x="60"
-              y="25"
-              fontFamily="Arial, sans-serif"
-              fontSize="12"
-              fill="white"
-              textAnchor="middle">
-              Liiinks
-            </text>
-          </svg>
-        </a>
-      </div>
-      <div>
-        <a href="https://theindiewall.net" target="_blank">
-          <img
-            src="https://theindiewall.net/indiewall.svg"
-            alt="IndieWall"
-            width="68"
-            height="34"
-          />
-        </a>
-      </div>
-      <div>
         <a
           href="https://turbo0.com/item/dental-clinics-malaysia"
           target="_blank"

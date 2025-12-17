@@ -18,3 +18,4 @@ export * from './magic';
 export * from './loading-circle';
 export * from './tooth-extraction';
 export * from './teeth-whitening';
+export * from './tiktok';

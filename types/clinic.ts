@@ -183,6 +183,8 @@ export interface Clinic {
   instagram_url: string | null;
   featured_video: string | null;
   youtube_url: string | null;
+  tiktok_url: string | null;
+  whatsapp: string | null;
   status: string | null;
   created_at: string | null;
   modified_at: string | null;
@@ -229,6 +231,8 @@ export interface ClinicDetails {
   youtube_url: string;
   facebook_url: string;
   instagram_url: string;
+  tiktok_url: string;
+  whatsapp: string;
   source: string;
   is_permanently_closed: boolean;
   open_on_public_holidays: boolean;

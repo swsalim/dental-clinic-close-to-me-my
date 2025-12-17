@@ -218,16 +218,16 @@ function processOpeningHours(openingHours: OpeningHour[]): ProcessedOpeningHour[
 // Core Processing Functions
 function processPlace(place: RawPlaceData): ProcessedPlaceData | null {
   try {
-    if (place.openingHours.length === 0) {
-      return null;
-    }
+    // if (place.openingHours.length === 0) {
+    //   return null;
+    // }
 
     const processedPlace: ProcessedPlaceData = {
       title: place.title,
       website: place.website?.includes('healthhub') ? '' : place.website || '',
       latitude: place.location.lat,
       longitude: place.location.lng,
-      openingHours: processOpeningHours(place.openingHours),
+      openingHours: place.openingHours.length === 0 ? [] : processOpeningHours(place.openingHours),
       slug: slugify(place.title),
       skip: place.website ? true : false,
       placeId: place.placeId || '',

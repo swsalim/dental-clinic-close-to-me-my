@@ -555,7 +555,9 @@ export type Database = {
           source: string | null
           state_id: string | null
           status: string | null
+          tiktok_url: string | null
           website: string | null
+          whatsapp: string | null
           youtube_url: string | null
         }
         Insert: {
@@ -589,7 +591,9 @@ export type Database = {
           source?: string | null
           state_id?: string | null
           status?: string | null
+          tiktok_url?: string | null
           website?: string | null
+          whatsapp?: string | null
           youtube_url?: string | null
         }
         Update: {
@@ -623,7 +627,9 @@ export type Database = {
           source?: string | null
           state_id?: string | null
           status?: string | null
+          tiktok_url?: string | null
           website?: string | null
+          whatsapp?: string | null
           youtube_url?: string | null
         }
         Relationships: [

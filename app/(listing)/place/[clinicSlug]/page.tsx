@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation';
 import { ClinicDetails, ClinicHours, ClinicImage } from '@/types/clinic';
 import {
   AwardIcon,
-  CarIcon,
   FacebookIcon,
   GlobeIcon,
   InstagramIcon,
@@ -25,11 +24,13 @@ import { getServiceIcon } from '@/helpers/services';
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
+import TikTok from '@/components/icons/tiktok';
 import { ImageGallery } from '@/components/image/image-gallery';
 import { ImageKit } from '@/components/image/image-kit';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import DoctorPractice from '@/components/listing/doctor-practice';
 import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
+import { GetDirectionButton } from '@/components/listing/get-direction-button';
 import NearbyClinics from '@/components/listing/nearby-clinics';
 import Reviews from '@/components/listing/reviews';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
@@ -323,7 +324,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
         <Container>
           <div className="lg:flex lg:items-start lg:justify-between lg:gap-x-6">
             {/* left column */}
-            <div className="flex min-w-0 flex-1 flex-col gap-y-4">
+            <div className="flex w-full min-w-0 flex-1 flex-col gap-y-4 lg:w-9/12">
               <div>
                 <Breadcrumb items={breadcrumbItems} />
               </div>
@@ -379,9 +380,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 )}
               </div>
               <div className="flex flex-col gap-y-2">
-                <div className="flex flex-col gap-x-2 gap-y-3 sm:flex-row sm:flex-wrap"></div>
                 {hasSocialAccounts && (
-                  <div className="flex gap-x-2">
+                  <div className="flex gap-3">
                     {parsedClinic.facebook_url && (
                       <Button
                         variant="outline"
@@ -427,25 +427,29 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                         </a>
                       </Button>
                     )}
+                    {parsedClinic.tiktok_url && (
+                      <Button
+                        variant="outline"
+                        asChild
+                        className="flex-grow-0 justify-center p-3 text-black hover:text-black dark:text-black dark:hover:text-black">
+                        <a
+                          href={parsedClinic.tiktok_url}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          aria-label="Visit business TikTok channel">
+                          <TikTok className="h-5 w-5" />
+                          <span className="sr-only">Visit TikTok</span>
+                        </a>
+                      </Button>
+                    )}
                     {/* add a button with a map icon that opens the map in a new tab and show directions to the clinic */}
-                    <Button
-                      variant="outline"
-                      asChild
-                      className="flex-grow-0 justify-center p-3 text-blue-500 hover:text-blue-400 dark:text-blue-300 dark:hover:text-blue-400">
-                      <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${parsedClinic.name}`}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="Visit business on Google Maps">
-                        <CarIcon className="h-5 w-5" />
-                      </a>
-                    </Button>
+                    <GetDirectionButton clinicSlug={clinicSlug} name={parsedClinic.name} />
                   </div>
                 )}
               </div>
             </div>
             {/* right column */}
-            <div className="mt-5 flex flex-col-reverse justify-between gap-x-4 gap-y-4 sm:flex-row lg:mt-0">
+            <div className="mt-5 flex w-full flex-col-reverse justify-between gap-x-4 gap-y-4 sm:flex-row lg:mt-0 lg:w-3/12">
               {!parsedClinic.is_permanently_closed && parsedClinic.phone && (
                 <>
                   <BookAppointmentButton
@@ -453,12 +457,15 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     stateSlug={parsedClinic.state?.slug ?? ''}
                     areaSlug={parsedClinic.area?.slug ?? ''}
                     clinicSlug={clinicSlug}
+                    whatsapp={parsedClinic.whatsapp}
                   />
                   <StickyBookButton
                     phone={parsedClinic.phone}
+                    name={parsedClinic.name}
                     stateSlug={parsedClinic.state?.slug ?? ''}
                     areaSlug={parsedClinic.area?.slug ?? ''}
                     clinicSlug={clinicSlug}
+                    whatsapp={parsedClinic.whatsapp}
                   />
                 </>
               )}

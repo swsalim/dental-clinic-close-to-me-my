@@ -1,0 +1,135 @@
+[
+  {
+    "title": "SmileCove Dental Clinic (Pauh Jaya)",
+    "website": "https://www.joydental.com.my/",
+    "latitude": 5.369144,
+    "longitude": 100.4173496,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "18:30"
+      }
+    ],
+    "slug": "smilecove-dental-clinic-pauh-jaya",
+    "skip": true,
+    "placeId": "ChIJb_eSbOfHSjARFncCCt6iFFY",
+    "phone": "+60182062360",
+    "permanentlyClosed": false,
+    "address": "B2-1-23, Elevate @ Gravitas, Lrg Pauh Jaya 1/3, Taman Pauh Jaya, 13500 Permatang Pauh, Pulau Pinang, Malaysia",
+    "neighborhood": "Taman Pauh Jaya",
+    "city": "Permatang Pauh",
+    "postalCode": "13500",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 711,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM7cENWF59ndQ0Wg3jAzAlDFyz9bSoxleHeT_35=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw9hBW-EuO_ONOgmAEvDTfhVW1LkhSoCuw-8vPfOnIhWxCzb9wSBgwdKHs6wKnkhrqF9C9xnsTGLqUacdA6sWCqBh96FlFPDCJAVq-9nz7IC1EKNkiDTrt9gHWsmjRco7-hpHI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMnvQD6TqtQw_9wL4_voZBfGpm0mNInOgHqKGqh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSysEdsblbfOhAu1lyDSp03q9-hgA1Sspwbk3PvErkIh1Z9NOBNjrw5HlNMaGzkY5w4uWy9O3MOrvq8t7w-6yFu11AsJ7awaVDBFqgbuRfTf7a_h1nXSoeoSEGmYld6SDQT3a2rZ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOgF-FkNcT9GDrNTrE7CZmMP_Pb-S2SAd6uz9-C=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Tyni_",
+        "stars": 5,
+        "text": "RECOMMENDED TAK SAKIT LANGSUNG AND CEPATT AND MURAHHH",
+        "publishedAtDate": "2025-11-15T05:14:46.666Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shahrizalina 82",
+        "stars": 5,
+        "text": "Servis yang baik cepat dan mudah sangat berususan.staff yang mersa pelaggan dan harga yg berpatutan.",
+        "publishedAtDate": "2025-11-14T06:55:24.508Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Anessa Emylia",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-11-12T04:51:07.464Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Emily Ooi",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-11-11T08:41:09.919Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Dayana Batrisyia",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-11-11T03:07:00.085Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "tasnim zamrie",
+        "stars": 5,
+        "text": "Staf2 semua ramah mesar. Doktor membuat rawat sgt bagus dan tidak sakit.",
+        "publishedAtDate": "2025-11-10T07:14:44.503Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "紫萱",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-11-10T04:51:37.207Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aleeeya Fea",
+        "stars": 5,
+        "text": "Love the affordable price braces",
+        "publishedAtDate": "2025-11-09T09:35:32.906Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "B2-1-23, Elevate @ Gravitas, Lrg Pauh Jaya 1/3",
+    "inputPlaceId": "null",
+    "description": "<p>Amidst the vibrant community of Penang lies SmileCove Dental Clinic, a notable addition to Malaysia's healthcare tapestry renowned for its commitment to dental excellence and patient comfort. This clinic, situated in the heart of Pauh Jaya, is not just a destination for routine dental care but a center where smiles are genuinely crafted and preserved.</p>\n\n<p>Patient testimonials frequently highlight SmileCove's efficient service and pain-free treatments, reflecting a professional environment where patient well-being is paramount. The clinic's staff are praised for their welcoming nature and ability to provide quick, affordable services without compromising on quality. These positive experiences underscore the facility's dedication to fostering a friendly atmosphere that aligns with their high standard of dental practice.</p>\n\n<p>While SmileCove Dental Clinic operates with a distinct focus on creating a seamless patient journey, it also prides itself on being an integral part of the Pauh Jaya locale. With convenient operating hours throughout the week, excluding Thursdays, the clinic remains accessible to locals and visitors alike, ensuring that excellent dental care is just a smile away.</p>"
+  }
+]

@@ -1,0 +1,4020 @@
+[
+  {
+    "title": "Klinik Pakar Pergigian Restoratif Jalan Abdul Samad",
+    "website": "",
+    "latitude": 1.4795605,
+    "longitude": 103.7421588,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pakar-pergigian-restoratif-jalan-abdul-samad-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJ2VxTCk1t2jERsvVn-pm3u4o",
+    "phone": "+6072228015",
+    "permanentlyClosed": false,
+    "address": "39B, Jalan Abdul Samad, Kolam Ayer, 80100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Geylang Bahru",
+    "city": "Johor Bahru",
+    "postalCode": "80100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 14,
+    "totalScore": 2.8,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Zhini Gan",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-04-18T01:19:13.813Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syahiratul Lidya",
+        "stars": 5,
+        "text": "First time datang untk appoinment restoratif, dari nurse kaunter depan, masuk dlm jumpa doktor yang sangat baik (perempuan muslim) terangkan setiap detail n suggestion yg dr akn buat.. Terbaik 👍👍👍 wish staff akn dpt APC tahunan ❤️",
+        "publishedAtDate": "2023-11-19T11:44:18.542Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "jinyee lau",
+        "stars": 5,
+        "text": "Nice doctor and nice service. Wish toilet can repair soon.",
+        "publishedAtDate": "2023-06-30T04:45:24.697Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mohd halil jamhari",
+        "stars": 5,
+        "text": "First time i am here with my lovely daughter for treatment...polite staff and very helpfull. Thanks for serving us",
+        "publishedAtDate": "2022-11-30T05:48:57.290Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sheikh Ayub AL Zarafee",
+        "stars": 2,
+        "text": "my honest comment...\nservice is super super slow ..\nappt at 10 am and still wait till 1.00 pm...",
+        "publishedAtDate": "2022-08-01T04:49:31.509Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fathiah Najwa",
+        "stars": 1,
+        "text": "Lambat",
+        "publishedAtDate": "2022-03-22T02:04:10.636Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "karanai wa",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2022-03-01T03:26:16.680Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siew Kee Tan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-01-06T04:23:53.526Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "39B, Jalan Abdul Samad"
+  },
+  {
+    "title": "Johor Bahru Dentistry",
+    "website": "",
+    "latitude": 1.4978424,
+    "longitude": 103.7776263,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "johor-bahru-dentistry",
+    "skip": false,
+    "placeId": "ChIJTWIEkZ9z2jERivFoEmGpaaw",
+    "phone": "+60189114557",
+    "permanentlyClosed": false,
+    "address": "Abby Dental Clinic, D-1-3, Pusat Komersial Bayu Tasek, Persiaran Southkey 1, Kota Southkey, 80150 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Kota Southkey",
+    "city": "Johor Bahru",
+    "postalCode": "80150",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "The LakeFront @ Southkey",
+    "reviewsCount": 1,
+    "totalScore": 5,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Mahsuri Khalid",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-07-12T02:09:38.570Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Abby Dental Clinic, D-1-3, Pusat Komersial Bayu Tasek, Persiaran Southkey 1"
+  },
+  {
+    "title": "Klinik Pergigian Pulai",
+    "website": "",
+    "latitude": 1.5666693,
+    "longitude": 103.5947493,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-pulai-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJE1qtR4l22jERHD-3LX8c_vo",
+    "phone": "+60197076189",
+    "permanentlyClosed": false,
+    "address": "2, 51-01, Jalan Perdana 4, Taman Sri Pulai Perdana, 81300 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Taman Sri Pulai Perdana",
+    "city": "Johor Bahru",
+    "postalCode": "81300",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 52,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOjIovr5GoKgC7ahNNOtJvZ2HiI7EJpkyl36hEf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPx-ia7kY5IXOVPjE07U_TwJKwx7CjlTE3YVUS4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOKbTjOlmvZCJ1NyxXqznXkieO4oQYk7rkb4VAB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP_BbSIbdvRkz3clxe5p2DBq5Oc9mvZa4qAIpgd=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "A K",
+        "stars": 5,
+        "text": "Excellent experience .Dr & staff baik sgt.",
+        "publishedAtDate": "2025-04-08T06:38:16.600Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CFaH4grnnOCdRk_IVR5C-5FNC_LTh5Fq_Y2Gc07w9EYr5FlJ-9p98VGi24nZYMUzLyiGGYe5QisuNbwpVgSPsxbrr9fho522PDBO6vvkhnIIMDUA8tJqkG5PZu1H0dBeD9WkA",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BbuG1Z3o_PiGANTs4-xkDp-hHDrzapnzrXURL_p64U5yb8S7QACXa_V3wIFIpA4Pt9YsuveiJqXomkcpul5CiBoR9gg2FnRWVIFzDY4WyQS9oksfbuQpD_U3urv5a202Z9nF0hEQ"
+        ]
+      },
+      {
+        "name": "nuramira mohamed",
+        "stars": 5,
+        "text": "Recommend harga sangat berpatutan dengan service yang diberikan",
+        "publishedAtDate": "2025-01-01T09:19:27.714Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pulai Steamboat",
+        "stars": 5,
+        "text": "Alhamdulilah Terima kasih Doktor Azmi Dan Staff layanan Sangat Terbaik😊",
+        "publishedAtDate": "2024-11-17T04:03:26.578Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hannah Miswan",
+        "stars": 5,
+        "text": "Best ever dental clinic. Dr Azmi memang best. Explain one by one. If tak perlu dia bagitahu tak perlu. Dari dulu sampai sekarang, servis mmg best.",
+        "publishedAtDate": "2024-10-16T08:15:01.447Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Bf5npTFZSo3aoQp25yvPgX9B-kkBKdszZ2TXT0vbjlAoyqpCAkxrlzVjywZaSHZcIwrnlk-nw6yvhnMtsJm6IRp35uLZ5nKv-Cmn4Hj0so0N9jYHdF-yEAyDrD1WgzmUuVb1VN"
+        ]
+      },
+      {
+        "name": "AIDA AQILA",
+        "stars": 5,
+        "text": "Datang sini sebab recommended by kawan-kawan mak, servis memang best start dari reception to rawatan semua baik2 dan friendly. Penerangan rawatan sebelum dan selepas pun jelas. Semasa rawatan pun, kesakitan yg dirasakan bearable dan minimal compared to my experience at other place before. 👍🏻👍🏻👍🏻👍🏻👍🏻 harga pun berpatutan",
+        "publishedAtDate": "2024-09-15T02:57:32.939Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zima Naz",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-03-03T10:53:36.416Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "NH UBAI",
+        "stars": 5,
+        "text": "Dah dua kali dapatkan rawatan anak di sini. Servis bagus dan memuaskan. InsyaAllah akan ke sini lagi untuk rawatan akan datang.",
+        "publishedAtDate": "2024-01-25T05:57:49.307Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "MAHADZIR BIN MOHAMAD PHB",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-01-14T03:08:15.541Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "2, 51-01, Jalan Perdana 4"
+  },
+  {
+    "title": "Klinik Pergigian Syaz Dental",
+    "website": "https://www.syazdental.com.my/",
+    "latitude": 1.5544277,
+    "longitude": 103.580717,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-syaz-dental-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJQ6KjCIF32jERcyDb_pcM6XM",
+    "phone": "+60127722974",
+    "permanentlyClosed": false,
+    "address": "No 35 (Ground Floor, Jalan Pulai Makmur 5/2, Bandar Baru Kangkar Pulai, 81300 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bandar Baru Kangkar Pulai",
+    "city": "Johor Bahru",
+    "postalCode": "81300",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 45,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPgyXrAowGz0zcdh_V15-pX9QGSvpBXCguSKr2M=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN3dQiZ2ugH3N-Ib1203QDjy8WI9tdCM4QF5zJJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMAYPtkR1NUVRwbJvUQs2KvC45O5tReYCHASknf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNA0peKmBjWjKMMqehagAQW7cCl6VbxSWE4-o_F=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ayu Narisyah",
+        "stars": 5,
+        "text": "The best dental ever . Service tiptop , doctor explain sangat2 details . Puas hati gigi makin bersih puteh bersih dan sihat . Sangat recommended . Doctor dan staff sangat friendly . ♥️♥️ Thanks for the best service .",
+        "publishedAtDate": "2025-04-22T06:39:38.659Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Hafiz Jamal",
+        "stars": 1,
+        "text": "Disappointing Experience at Syaz Dental Clinic\n\nI arrived at the clinic today at 4:30 PM, hoping to see the doctor. However, when I approached the front desk, I was informed that the doctor would not be seeing any more patients as the doctor wanted to close the clinic—without any explanation.\n\nI was shocked and disappointed, especially  your stated closing time is 5:30 PM. Have another 1 hour left.It made me feel like the clinic does not value its patients or their time.\n\nI took time out of my day to come to your clinic, only to be turned away for no valid reason. I’m very frustrated by this experience and, unfortunately, I will not be returning. All the best!!.",
+        "publishedAtDate": "2025-04-16T10:48:36.903Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "fika87",
+        "stars": 5,
+        "text": "saya mmg suka try pelbagai klinik gigi dkt area pulai(sbb byk kan😂)and dlm banyak2 klinik..klinik ni saya rasa Dr Syaz saya rasa la.lupa nak tanya nama..bg banyak ilmu ttg sakit gigi yang saya hadapi & big point yg saya rasa terbaik,.dia explain sambil beritahu harga rawatan..sangat2 berbeza dgn klinik gigi yang lain..buat without inform harga..sbb tak semua customer mampu utk bayar,tu saja..sekian❤️",
+        "publishedAtDate": "2025-02-23T10:46:34.104Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Be5Wv8nZTfQGtLC-VJwS704jALLNCHb4t86cpZtVk5lWpJXx4HBhZ7Hj67lZoKCweRHvw_ceao4tHADkCUMon306ASBwC7Xl4326L47CoFbpv2GDQOcHrIWjrjw_ROqHSbkNxm"
+        ]
+      },
+      {
+        "name": "Faizah Ibrahim",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-18T08:18:48.290Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dhia Amanina",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-15T08:43:49.233Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siti Nurshafiqah",
+        "stars": 5,
+        "text": "Overall experience was very good.. doctor was very friendly & nurses were very helpful.. doctor will explain in detail oral hygiene & the consequences that may occur if you do not take care of your mouth.. will definitely repeat & recommend to my family & friends",
+        "publishedAtDate": "2025-02-03T07:32:31.063Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90B2BVNyNWv3WEzXiRt4-1vwGkB8tw7t-ehbNIaDttm6QFDncjSwrT-ISvUjUPH7zLSf7N1KEoccmdN68lw9T4m6KZV_GemYl6EtYZ0n6MZCSc-_SbpjdQWwGXwwHmDLe9u0RP5G"
+        ]
+      },
+      {
+        "name": "United Southern Johor",
+        "stars": 5,
+        "text": "Good service friendly staff and experience doctor. The price can be heard.\noverall very good 👍👍👍👍👍",
+        "publishedAtDate": "2025-02-02T09:14:59.113Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CiiR3LJdYD76JLWOYZxAtcWm_HBMg8HL1bJzw3zuXfjT1ka6vVplaUvLzwvWDN9W_GspxDo56-C2Lo9p_IoXyv8FCZTLyJaVy0Sp6YlhcQnAwjubqFJrBkJqT6NPxxcaKg_Ps6",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90B_vxm6xNw6zDR3z9CLB6tvS6A9mEzv1D-yaVSqDoDdh-syqmU0ysSnwxOlri43VVfLvdIEvbut5pmonVIlr8FfBvbdOpWP1NgHbrpe4KL1bUDzUmeCayXHeTU8n-Na4SXBsYoi"
+        ]
+      },
+      {
+        "name": "sha",
+        "stars": 5,
+        "text": "this was my first time here and i was here to address my wisdom tooth issue, throughout the process, the dentist and the staff were so kind and made me feel comfortable! the staff even patted my shoulder while i was feeling nervous during the procedure of pulling out my wisdom tooth. will come back again!!",
+        "publishedAtDate": "2025-01-28T10:10:26.509Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No 35 (Ground Floor, Jalan Pulai Makmur 5/2"
+  },
+  {
+    "title": "Raffles Dental",
+    "website": "",
+    "latitude": 1.530044,
+    "longitude": 103.7928695,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "raffles-dental-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJaRDCM0Fs2jERqMrTmfaqfIU",
+    "phone": "+60167977354",
+    "permanentlyClosed": false,
+    "address": "76-01, Jalan Molek 2/2, Taman Molek, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Molek",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 13,
+    "totalScore": 3.6,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Angus Go",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-12-20T07:54:31.594Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "RinaKiang",
+        "stars": 5,
+        "text": "Very professional and caring dentist. Spent SGD800 for a dental crown in 3 visits. Thank you!",
+        "publishedAtDate": "2024-03-11T04:24:02.858Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "郑俊宁",
+        "stars": 1,
+        "text": "No punctuality, appointment 3.30pm I wait until 4.10pm still not ppl come and tell me anything.",
+        "publishedAtDate": "2023-09-13T08:07:01.339Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yong Chuang",
+        "stars": 5,
+        "text": "Dr Vincent is highly skilled and very friendly. I have never been disappointed by his service!",
+        "publishedAtDate": "2023-01-17T05:57:52.310Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Katherine Lee",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2022-09-05T14:35:37.082Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "khairul hakiman",
+        "stars": 5,
+        "text": "services terbaik",
+        "publishedAtDate": "2020-01-08T17:36:47.336Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "BH Hew",
+        "stars": 2,
+        "text": "Skill  is fine,  but charges very very expensive, if my pocket less than RM 800, I won't go for this dental  service, because the charges  too high.",
+        "publishedAtDate": "2018-10-25T15:25:07.209Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tua yih hian",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2018-10-02T08:25:19.786Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "76-01, Jalan Molek 2/2"
+  },
+  {
+    "title": "Klinik Pergigian Shanghai",
+    "website": "",
+    "latitude": 1.5329883,
+    "longitude": 103.7961862,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "13:30",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "13:30",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "13:30",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "13:30",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "13:30",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-shanghai-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJTT2JjD9s2jERSa2MX7Mxw00",
+    "phone": "+6073540430",
+    "permanentlyClosed": false,
+    "address": "8, A, Jalan Ros Merah 3/2, Taman Johor Jaya, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Johor Jaya",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 11,
+    "totalScore": 4.6,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Manimegalai Kunasegaran",
+        "stars": 5,
+        "text": "Very good doctor",
+        "publishedAtDate": "2025-04-11T02:28:05.951Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Carmen Poon",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2023-01-06T02:09:58.884Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "John Sam",
+        "stars": 5,
+        "text": "Excellent experience with Dr Petrus",
+        "publishedAtDate": "2022-01-26T05:43:09.324Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chua Kok Lian",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-07-27T07:41:07.818Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "khairul hakiman",
+        "stars": 5,
+        "text": "a good dental . staff very friendly",
+        "publishedAtDate": "2020-01-08T17:43:54.767Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Muhammad Dc30",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-11-26T20:27:42.446Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chern Tee Chew",
+        "stars": 4,
+        "text": "Less queue, reasonable price.",
+        "publishedAtDate": "2019-11-13T07:10:21.233Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "以聲音寫作頻道（Senibang日常）",
+        "stars": 3,
+        "text": "is a dentist.",
+        "publishedAtDate": "2019-01-21T12:33:19.636Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "8, A, Jalan Ros Merah 3/2"
+  },
+  {
+    "title": "Ding Dental Surgery",
+    "website": "",
+    "latitude": 1.4928625,
+    "longitude": 103.7668584,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "ding-dental-surgery-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJW5-_piNt2jERMG2px1tCShY",
+    "phone": "+6073337103",
+    "permanentlyClosed": false,
+    "address": "No. 41, A, Jalan Sulam, Taman Sentosa, 80150 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Sentosa",
+    "city": "Johor Bahru",
+    "postalCode": "80150",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 2,
+    "totalScore": 3,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Rosy Lim",
+        "stars": 1,
+        "text": "非常差，服務又不好",
+        "publishedAtDate": "2018-11-14T15:13:06.371Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "TAN LI LI",
+        "stars": 5,
+        "text": "Dr Firdause was great, extraction with no pain.\nPrice reasonable.Living in JB for 20yrs, 1st time visit to dentist met a good doctor.",
+        "publishedAtDate": "2018-10-27T08:20:21.274Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 41, A, Jalan Sulam"
+  },
+  {
+    "title": "Hauz Dental Clinic 万诚牙医诊所 (Invisalign Provider)",
+    "website": "http://www.facebook.com/hauzdentaljb/",
+    "latitude": 1.5623981,
+    "longitude": 103.8073577,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:30"
+      }
+    ],
+    "slug": "hauz-dental-clinic-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJv-Rb37pu2jER1zk9WDFR52k",
+    "phone": "+601121600812",
+    "permanentlyClosed": false,
+    "address": "35, Jln Tanjong 3, Taman Desa Cemerlang, 81800 Ulu Tiram, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Desa Cemerlang",
+    "city": "Ulu Tiram",
+    "postalCode": "81800",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 48,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMf_pDlEBnj-Alqgeas6uqNedhAGLiHyj-gl7MY=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Serena Luo",
+        "stars": 5,
+        "text": "Really satisfied with the clinic. My favourite dentist, Dr Stef, is phenomenal - truly the best Dentist I’ve ever had!! She is always very polite, accommodating and does her job extremely well",
+        "publishedAtDate": "2025-04-12T12:49:35.859Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Patrick Chen",
+        "stars": 5,
+        "text": "stef is the best dentist I have visited, highly recommended!",
+        "publishedAtDate": "2025-04-12T12:48:11.324Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yahya Baharom",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-26T06:29:07.130Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yong Vivi",
+        "stars": 5,
+        "text": "牙医 医生很好很耐心的解释洗牙拔牙补牙挑牙龈都不会痛。大力推荐👍",
+        "publishedAtDate": "2025-01-05T03:04:55.330Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rainy day",
+        "stars": 1,
+        "text": "Generally good but i think do better. A dr skill a little bit bad and want to do it faster. Is you come to do braces better dun come bcs bracket put wrong position (i hv confirm this issue from another dental dr) Ps: i already mention many times about this issue, how i have to wait another several years!!!, every times visit no cleaning.\n\nnow i have go another dental visit for another braces. Bc the teeth is positioning ok but look they tilt to one side look very weird. Overall the braces price a little high and retainer no include in the package.\n\nEnd up 500 ringgit for 5 days retainer😆. bc of visit another dental. Guys money is no the thing only happy. Cheers",
+        "publishedAtDate": "2024-10-27T03:05:55.984Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "B LKZ",
+        "stars": 5,
+        "text": "Dr Tan performed a surgery to remove gum flap thats impacted on my wisdom tooth. I was nervous about the procedure but it turned out to be no pain at all. Wonderful experience and Dr Tan even did some extra touch up to make sure the same problem will not recur. Price is very affordable too. Thank you!",
+        "publishedAtDate": "2024-06-11T06:34:22.489Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Felicia Tay",
+        "stars": 5,
+        "text": "Did teeth whitening and Dr Stephanie tended to me. Dr Stephanie explained the process patiently and ensured I was comfortable throughout the procedure. Will definitely recommend and would be revisiting for my follow-up and retainers with Hauz Dental.",
+        "publishedAtDate": "2024-01-25T11:25:00.313Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kaaviya Kavi",
+        "stars": 5,
+        "text": "I went to tampal my tooth. The dentist was so kind and friendly. I was with Dr Meghan. The nicest debtist i ever met. My next appointment also with her.",
+        "publishedAtDate": "2023-10-14T10:36:09.623Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "35, Jln Tanjong 3"
+  },
+  {
+    "title": "IMC Tebrau Dental Surgery Sdn Bhd",
+    "website": "https://imcmedicalgroup.com/",
+    "latitude": 1.5525871,
+    "longitude": 103.7980805,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      }
+    ],
+    "slug": "imc-tebrau-dental-surgery-sdn-bhd-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJxWX1dY1v2jERLCGJawen8x4",
+    "phone": "+601121933188",
+    "permanentlyClosed": false,
+    "address": "L2.43, Level 2, Ikano Johor Jaya Sdn Bhd, Toppen Shopping Centre, 33A, Jln Harmonium, Taman Desa Tebrau, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Desa Tebrau",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 6,
+    "totalScore": 4.8,
+    "images": [],
+    "reviews": [
+      {
+        "name": "james thiam",
+        "stars": 5,
+        "text": "Nice professional service. Have been using the service here. Must cheaper then Singapore",
+        "publishedAtDate": "2025-03-07T03:47:42.841Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Edris Tiew",
+        "stars": 5,
+        "text": "Reasonable price with super professional yet friendly dental treatment~",
+        "publishedAtDate": "2025-01-03T06:02:12.662Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DYCwN1vfIWnzH6jnRMLMjx9Z1NO8SYtniTtYYBRcZlLvGk5HuZoC0SrV0L6ADegsXl8Wxy9Q-binH2zY1zz8XvK6BiVLR-TK8ItTbf3NhjOdVK9zLCCJIQBZg7rkdJaUFbsM5r"
+        ]
+      },
+      {
+        "name": "Hui Yin Khoo (Ashley)",
+        "stars": 5,
+        "text": "Good experience for the vaccine injection!!",
+        "publishedAtDate": "2024-09-28T09:41:25.621Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bunga Eshal",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-20T08:10:48.256Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ieda Abd Kadir",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-20T08:06:58.536Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurhaizatul Akmar",
+        "stars": 4,
+        "text": "the prices is reasonable, Dr Ariel was very skillful and professional, all the staff also friendly, highly recommended",
+        "publishedAtDate": "2024-07-23T03:55:21.191Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "L2.43, Level 2, Ikano Johor Jaya Sdn Bhd, Toppen Shopping Centre, 33A, Jln Harmonium"
+  },
+  {
+    "title": "Klinik Pergigian Medini Taman Molek",
+    "website": "https://www.medinidentalgroup.com/",
+    "latitude": 1.5301392,
+    "longitude": 103.7934036,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-medini-taman-molek-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJF710OkFs2jERoZg1mkCXAYw",
+    "phone": "+60195008500",
+    "permanentlyClosed": false,
+    "address": "84-01, Jalan Molek 2/2, Taman Molek, 81100 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Taman Molek",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "Standard Chartered Taman Molek Branch",
+    "reviewsCount": 160,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNUOeTMUcLi65G5J1GyKDADUnTJ79ehpwFsswy2=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Nurizwani Misran",
+        "stars": 5,
+        "text": "Doctor very nice and explain in detail when doing the procedure",
+        "publishedAtDate": "2025-05-03T07:00:14.070Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Atiqah idris",
+        "stars": 3,
+        "text": "⭐️⭐️⭐️",
+        "publishedAtDate": "2025-04-26T15:05:00.170Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rosigrace Nagesvaran",
+        "stars": 5,
+        "text": "Good service, polite staffs and doctors, highly recommended",
+        "publishedAtDate": "2025-04-21T06:18:23.993Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Khairul Nizam Yakob",
+        "stars": 5,
+        "text": "Visited Medini Dental Clinic recently due to a severe toothache. The doctor on duty was very professional and recommended a root canal treatment for a permanent solution. However, since I’m currently traveling, I opted to take medication instead. Overall, I’m happy with the treatment and hospitality—friendly staff and a comfortable environment. Thank you for the care!",
+        "publishedAtDate": "2025-04-21T02:56:12.860Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Cbe5CfbSibFoOFhzXvDaMthFzQh4B6AHymgS_z8pUDQoRQazP1euRJqJaOlhGRrWcc_FoX7y0KWWbY1ng_rZ8TB3zQs0oK-YtMSdLaIaemITTBlIGdnPz8VevV45rbNJeE6MOe"
+        ]
+      },
+      {
+        "name": "Renee Harris",
+        "stars": 5,
+        "text": "Nice and great treatment",
+        "publishedAtDate": "2025-04-19T04:52:56.592Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nuruz Zawani",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-19T04:10:26.463Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Wan zati Zati",
+        "stars": 4,
+        "text": "Tq for good service..my doter selesa buat rawatan di klinik medini..sgt mesra..",
+        "publishedAtDate": "2025-04-17T07:24:10.713Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jo Anis",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-17T05:10:16.054Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "84-01, Jalan Molek 2/2"
+  },
+  {
+    "title": "Tebrau Dental Clinic",
+    "website": "",
+    "latitude": 1.4882618,
+    "longitude": 103.7712212,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:15"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:45",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tebrau-dental-clinic-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJYY2zRCZt2jERXZOjVXlqLFc",
+    "phone": "+6073342379",
+    "permanentlyClosed": false,
+    "address": "Klinik Pergigian Tmn, Jalan Kerambit, Taman Sri Tebrau, 80050 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Taman Sri Tebrau",
+    "city": "Johor Bahru",
+    "postalCode": "80050",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "Tebrau Health Clinic",
+    "reviewsCount": 24,
+    "totalScore": 3.5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipN3BD-Kxr6hYuIPs3TXVqDjY2PjvVlPmYd8wtsC=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "wapau",
+        "stars": 1,
+        "text": "very rude. Please be nice.",
+        "publishedAtDate": "2025-03-18T11:45:53.839Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "sara azmi",
+        "stars": 1,
+        "text": "the dentist is very rudela sia.",
+        "publishedAtDate": "2025-03-18T11:40:23.489Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zaidi Jusoh",
+        "stars": 5,
+        "text": "Buat rawatan tampalan gigi untuk diri sendiri. Anak pulak untuk rawatan cabut gigi.Terima kasih buat staff bahagian pergigian Klinik sri Tebrau. Layanan yang baik. Staff juga ramah.",
+        "publishedAtDate": "2024-12-08T08:17:27.132Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "RAIN",
+        "stars": 5,
+        "text": "All staff are very nice. Including the nurse and doctor. Very welcoming and helpful 🥰",
+        "publishedAtDate": "2024-09-11T05:59:20.737Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Apies Lee",
+        "stars": 1,
+        "text": "Ada yang ambil nombor lambat tapi masuk dulu tak ikut aturan...",
+        "publishedAtDate": "2024-04-16T03:25:29.530Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "intan balqis",
+        "stars": 3,
+        "text": "Masa klinik kena update.. pls take note... Jumaat ttup pulak bila datang... Tapi kat sini buka...",
+        "publishedAtDate": "2023-12-22T05:48:28.435Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "atoq jb",
+        "stars": 5,
+        "text": "layanan yg sgt baik.. masyaAllah.. tabarakAllah...",
+        "publishedAtDate": "2023-06-22T07:18:37.372Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gan Tong Hee Gordon",
+        "stars": 3,
+        "text": null,
+        "publishedAtDate": "2023-06-11T16:33:06.782Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Klinik Pergigian Tmn, Jalan Kerambit"
+  },
+  {
+    "title": "Dental Concepts",
+    "website": "http://www.dentalconcepts.com.my/",
+    "latitude": 1.498032,
+    "longitude": 103.815085,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "14:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "dental-concepts-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJpwm50Zhs2jERWUMXk2Mx6Aw",
+    "phone": "+6073822035",
+    "permanentlyClosed": false,
+    "address": "23, Jln Permas 10, Bandar Baru Permas Jaya, 81750 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Permas Jaya",
+    "city": "Johor Bahru",
+    "postalCode": "81750",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 38,
+    "totalScore": 4.1,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipO94LJjrcOwQrwE7_rtg3V2zmZsTsrlh38kRBLY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP-S8GHzS3LZlC54D6QNrfF01KcieghqHCuoqXD=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipON5HV1QNz1eRTVZKcCQHSK1xZ4EKD2BHqFWN7I=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMG1Gc4wU3_TJNOCuBFztGSSeJpdLO1N3Q57H1B=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Lucas Ho",
+        "stars": 5,
+        "text": "Did my scaling and polishing here for the first time for RM200. Dr was very thorough and was generous in applying the numbing cream at the onset so the entire process was painless. Kudos!",
+        "publishedAtDate": "2024-12-16T03:03:21.553Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Ai_Oj4Vee7KnUmHruLrExWS9lxlVm5Mj2YZOJDEx4Ww-us5DBDTO3l15IhIRzhepT0L6HuiFCa8qMwd65XvMvfqhLxl7Ja-O4zVphdQymjxjdqzVT6qLhksENijRbKYqCGiQ"
+        ]
+      },
+      {
+        "name": "ko nay",
+        "stars": 5,
+        "text": "ok",
+        "publishedAtDate": "2024-10-08T22:39:24.346Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Niera Umantod",
+        "stars": 5,
+        "text": "Tooth filling is very comfortable and the Doctor really make sure that I won't feel pain during the process.",
+        "publishedAtDate": "2024-10-08T04:17:41.259Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "munseng chan",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2024-10-02T09:21:12.479Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Marina Phi",
+        "stars": 5,
+        "text": "Dr See is very professional towards her work. Patient lady with lots of experience.  Excellent service with very competitive pricing too. On behalf of my daughter and myself. Thank you once again.",
+        "publishedAtDate": "2024-09-23T06:37:35.134Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Michelle Kerk",
+        "stars": 5,
+        "text": "医生会细心的对病人的牙周情况做解释👍🏻",
+        "publishedAtDate": "2024-09-14T02:25:33.962Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Oscar Tan",
+        "stars": 5,
+        "text": "Would definitely recommend my friends here if they ever need tooth extraction service. As Im pretty sensitive to pain, I asked Dr. Patrick Go to give me extra anaesthesia, which he happily provided 'kaw kaw' of it. And unlike the last Dentist which I visited elsewhere that gave me hell of pain with their rough hands, there was close-to-none discomfort when Dr. Patrick was performing the wisdom tooth surgery on me. Both my father and I are very satisfied with the clinic's service. 絕對良醫！",
+        "publishedAtDate": "2023-07-18T00:30:34.433Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "huishen lee",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2023-03-14T13:42:33.218Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "23, Jln Permas 10"
+  },
+  {
+    "title": "Klinik Pergigian UTC",
+    "website": "",
+    "latitude": 1.459936,
+    "longitude": 103.7631678,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:45",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "16:30"
+      }
+    ],
+    "slug": "klinik-pergigian-utc-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJC8FjsawT2jERBUOgeQSdMe4",
+    "phone": "+6072214669",
+    "permanentlyClosed": false,
+    "address": "65, Jalan Trus, Bandar Johor Bahru, 80000 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bandar Johor Bahru",
+    "city": "Johor Bahru",
+    "postalCode": "80000",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "GALLERIA@KOTARAYA",
+    "reviewsCount": 62,
+    "totalScore": 3.8,
+    "images": [],
+    "reviews": [
+      {
+        "name": "syscute syscha",
+        "stars": 1,
+        "text": "setiap kali pegi mesti hbis no..mmg limit 10 org je ke stiap masa?",
+        "publishedAtDate": "2025-05-02T02:10:49.837Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "She Reen",
+        "stars": 5,
+        "text": "Brought my 9 years old son for tooth extraction on 07.04.25 and 15.04.2025. The staffs and doctors/dentists are very reliable and friendly. Menunggu lama itu biasa untuk mendapatkan perkhidmatan di klinik kerajaan. It is something yang memang kita kena expect kerana patient sangat ramai- berbeza dengan klinik swasta. Kalau nak cepat kena datang awal- sebelum pukul 8 pagi untuk mengambil nombor giliran. Overall, it was a good experience.",
+        "publishedAtDate": "2025-04-21T01:46:13.293Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Divya Siva",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-20T06:49:15.412Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nadiah Norzli",
+        "stars": 5,
+        "text": "Dr chinese lady sangat efficient attend patient. Que lama its okay ramai patient. Sekejap je cabut and explaination toward patient also easy to understand. Will come again 👍🏻👍🏻👍🏻👍🏻",
+        "publishedAtDate": "2025-04-19T02:50:56.047Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "arianee",
+        "stars": 5,
+        "text": "went on Sunday - walk in @ 0804, queue number 31 so recommended to come as early as 0745. was told to wait until 1300 but my number is called at 11 am! nurse at the counter is helpful and the drs are all decent and friendly ^_^. scaling was quick, lesser than 10 mins. nice service, cheap payment paid total rm3 for scaling. may our malaysian healthcare system never collapse. pls dont privatise it.",
+        "publishedAtDate": "2025-04-06T03:54:01.014Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siang Winson",
+        "stars": 1,
+        "text": "垃圾，下午1点才休息 11点半就说不给人看医生了",
+        "publishedAtDate": "2025-04-06T03:46:57.879Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "王家明",
+        "stars": 5,
+        "text": "刚刚在这边拔了牙齿 美女医生很有耐心的解释 护士也很好😁😁😁",
+        "publishedAtDate": "2025-04-02T02:39:41.220Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hisyamuddin Zulkifli",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2025-03-02T05:39:08.684Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "65, Jalan Trus"
+  },
+  {
+    "title": "Sunwag Dental Surgery 康维牙科 (双威) Mount Austin",
+    "website": "",
+    "latitude": 1.5596564,
+    "longitude": 103.7807909,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "sunwag-dental-surgery-mount-austin-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJsQrQ5m5v2jERO4mJdXN4YUc",
+    "phone": "+60127829949",
+    "permanentlyClosed": false,
+    "address": "7, Jalan Austin Heights 3, Taman Mount Austin, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Mount Austin",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 26,
+    "totalScore": 4,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPJbMuTQye9_M98bH7aJE6ctFFEaiUokDsZxlh6=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOCJ2we5sFPGI6SX5zNU-hvhlWparb5I3b33u9Z=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPk97TeG5adW98rY8V5luhH5Hz0xvDYUld7icUQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMaR9wGcWFIrNVxF9lQDg4cYB2ILVM2gGr2a4K7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNwJW9N8CUvOqzYoNrjC6ZOeDaMY7_1eVhUYx4o=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "蒋爱玲",
+        "stars": 1,
+        "text": "评价\nSunwag Dental Surgery 康维牙科 (双威)\ndr.phang\n做假牙，种牙，牙套都不行！\n态度不好！\n价钱贵质量也不行\n做成好像利刃\n一戴上牙肉直接受伤\n回去几次都是赶时间\n赶顾客，戴几个小时后牙肉都受伤了一个礼拜\n还要顾客自己习惯说这种痛是要习惯的！\n回去找他还要强词夺理的说他一直在帮我我却要责备他\n付钱贵还说是帮我\n而且真的很痛很痛，假牙都做不好\n还喜欢骂人\n假牙价钱贵品质差，磨了几次还是一样痛\n只好自己磨，最后还是痛，四颗RM1100到最后还是避免回去浪费时间又受气！\n直接放弃了丢掉了，不想受苦又被挨骂，付了贵价钱还说是在帮我解决问题\n还是找别间从新做过，便宜多好的八颗才RM800\n但是洗牙，牙套种牙的还是要三思，再三思付钱钱跟付钱后态度一百八十度的转变\n为了钱一直在赶时间\n为了钱一直在赶时间\n不注重卫生\n说话快到根本听不懂花钱被骂很正常\n根本不会承认自己的错误\n总之去之前请做好花钱受罪的准备！也许你是幸运的那一个\n看到信息的医生请改改自己的态度\n跟本身问题，别再把问题归咎在花钱去看医生的病人！\n原谅你那么多次\n基本的假牙都做不好\n真的绝望！\n如果不是一颗星才能评论，我一颗都不会给\n之前种的牙齿一个礼拜松了我找另一个医生，结果偷工减料，里面塞了很多东西，每次问他还说是厂家问题，不关他的事！能推就推，做坏了就推卸责任，没医德，还强词夺理，喜欢骂顾客！收费贵还说在帮我解决问题，骂到我哭，我花了几万块还要受罪很多年，终于看清了你的面目，相信他的人请自己要有心理准备，我写上来是希望你做回一个有医德的牙医！而不是针对你，原谅你那么多次，你却觉得你在帮我，免费就可以说在帮我，但是我花钱受罪，还给你骂，假牙都做不好，收费贵过人，就是你根本就是为了赚钱来还要强词夺理！你种的牙齿现在松了，我宁愿花钱找别的医生都不敢回去找你，真是可怕！",
+        "publishedAtDate": "2025-04-03T12:50:51.094Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Huiqing Chen",
+        "stars": 1,
+        "text": "慎重考虑，医生资质不够",
+        "publishedAtDate": "2025-02-21T23:55:04.933Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "TOH Wai Lun",
+        "stars": 1,
+        "text": "I booked an appointment at Austin branch, but receptionist told me Dr at other branch.\n\nIm understand Dr. might be not free or at other branch sometime, but at least inform ur customer to rearrange schedule, dont waste customer time and money\n\nAppointment arrangement is shit, asking customer to proivde info and which branch preferred, but at the end anyhow to change appointment branch without inform customer",
+        "publishedAtDate": "2024-10-06T05:16:59.159Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alo",
+        "stars": 5,
+        "text": "Good service by Dr Goh, provided extreme care and make me comfortable throughout the procedure 😃",
+        "publishedAtDate": "2024-06-14T14:10:14.381Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "matthan cheong",
+        "stars": 5,
+        "text": "👍🏻😊good service",
+        "publishedAtDate": "2024-06-09T08:39:21.733Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "bp Khoo",
+        "stars": 3,
+        "text": "So far the result is not satisfactory but doctor is very helpful and willing to get the feedback and rework until patient is satisfied.",
+        "publishedAtDate": "2024-06-09T07:47:38.184Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nix Kiff",
+        "stars": 1,
+        "text": "If only I could give 0 stars, but such an option is not available. Extremely disappointed with the service provided by this dental clinic, particularly with Dr. Goh. Despite the positive reviews given by many, the experience was far from satisfactory. Dr. Goh made commitments regarding the completion of a crown within two sessions, only to change the plan abruptly to require three sessions, causing considerable inconvenience given the time constraints and urgent need to work overseas which have been explained to her repeatedly.\n\nDespite the request for an explanation, Dr. Goh failed to provide one personally, relying instead on the customer service team to address her mistake. This lack of accountability only intensified the situation, highlighting her insincerity.\n\nShe only made the helpful people from the customer service team to front her mistake made. Would strongly advise against seeking dental care from this clinic and waste your money especially so if you're rushing for time. And especially not an appointment with Dr. Goh.",
+        "publishedAtDate": "2024-04-14T09:46:20.007Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hui Sian Soh",
+        "stars": 5,
+        "text": "Highly recommend this dental clinic. The doctors are very friendly. I visited for a retainer, and they conducted a thorough X-ray and oral check, even though my orthodontic treatment wasn't done here. Thanks for the free gift doctor 😊 (Sunwag mount austin)",
+        "publishedAtDate": "2023-12-02T10:21:35.458Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90B_XMuqBpb9zSrCldB2bfFXZ7gIbbjiR7iAnCutPVCqq26JjMdBWCFVfMs293kO4VM5h1afdS7esK3NY_JfStmR03wkK_VKQrbqxrPLZfIr_vH24OxsWhY1E3BBlVns6_VFsLw"
+        ]
+      }
+    ],
+    "street": "7, Jalan Austin Heights 3"
+  },
+  {
+    "title": "Tiew Dental Kulai JB",
+    "website": "http://www.tiewdental.com/?utm_source=GBP&utm_medium=GBP&utm_campaign=GBP",
+    "latitude": 1.6418152,
+    "longitude": 103.6181351,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:30",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tiew-dental-kulai-jb-johor",
+    "skip": true,
+    "placeId": "ChIJD8F3Rs552jERf1pG0H8Zy18",
+    "phone": "+6076607110",
+    "permanentlyClosed": false,
+    "address": "No.222 (Ground Floor, Kenanga, Jalan Kenanga 29/2, Bandar Indahpura, 81000 Kulai, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Indahpura",
+    "city": "Kulai",
+    "postalCode": "81000",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 88,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMpMSp3Ymw_02tAGO1mjFFqTymKJ8UDS-5cLPq4=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNCwaQqk0vmkph-XtpiJp52NUWlJWuVvwB5dxKc=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Aishah Sahar",
+        "stars": 5,
+        "text": "1st dental clinic after i moved in kulai. Try this clinic after read review from google. The environment good and spacious. Staff and doctor are friendly and gv good explanation. Thumbs up. Will be my favourite clinic after this.",
+        "publishedAtDate": "2025-03-24T10:00:16.252Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C4AOtP0TqwiLyCZxGry0nw1PYox0i_hHoEl224s06Qr_wb_2uzeBXZtJFxLpmx8xqf639_3mWr5ZUTUSzKXbIKGaXRFvUxz6SC8OIB2Xv49772DtRtRFAHE-hI8pwYjp7TrbQs"
+        ]
+      },
+      {
+        "name": "Mr.Omuro大室",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-12-22T09:53:54.144Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "W Human",
+        "stars": 3,
+        "text": "Went to get polishing and scaling treatment\nMy doctor was Dr. Say. She was a little bit hard-sell and trying to pursue me getting dental braces. But I didn’t want to do so.\n\nErm… my first time here but i will not go back as I believe there are more affordable choices out there in Kulai with better services",
+        "publishedAtDate": "2024-12-13T14:17:51.484Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "yunchun chin",
+        "stars": 5,
+        "text": "Doctor Ang is very nice and friendly, explain detailed with much patience.",
+        "publishedAtDate": "2024-08-14T04:24:27.531Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nabilah Huda",
+        "stars": 5,
+        "text": "Good service , doctor good , nurse friendly , enviroment clinic clean ☺️",
+        "publishedAtDate": "2024-08-12T09:56:07.811Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chan UeiNian",
+        "stars": 5,
+        "text": "Good dental services. Recommended.",
+        "publishedAtDate": "2024-08-09T08:06:52.607Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "leo Tee",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-08T07:11:30.959Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nyok Ting Pang",
+        "stars": 5,
+        "text": "The dental hygienist , was very gentle and thorough, making sure I was comfortable throughout the cleaning. They took the time to explain the process and offered helpful tips for maintaining oral hygiene. My teeth feel incredibly clean and polished, and I noticed a significant difference right away. The entire staff was professional and friendly. I highly recommend Tiew Dental Kulai for anyone looking for a top-quality dental cleaning.",
+        "publishedAtDate": "2024-08-06T03:45:20.558Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No.222 (Ground Floor, Kenanga, Jalan Kenanga 29/2"
+  },
+  {
+    "title": "Klinik Pergigian Rakyat Dental (Perling)",
+    "website": "",
+    "latitude": 1.4725199,
+    "longitude": 103.6740581,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      }
+    ],
+    "slug": "klinik-pergigian-rakyat-dental-perling-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJs8rJzVMN2jERwPli44E_yw0",
+    "phone": "+60129117998",
+    "permanentlyClosed": false,
+    "address": "91a, 93A, Jalan Rawa, Taman Perling, 81200 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Taman Perling",
+    "city": "Johor Bahru",
+    "postalCode": "81200",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 57,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMzPCThKD3JJc11B8mg673tf6gWnH9eThUj-kvl=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPZ_mgqFmDfZFUaNGNYt8aNHdOcAhrzySdYZqq7=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNnvwOp30lcQ4RkyfNxZltW1GldzLDftLM5yRh9=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPpdsgle1KN3kNRhkuQrXRbSqu35GuzYIdpbFBo=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipML80bTa3oVqlyiZtGGE-1GYPbbjd-hfGwUCPg7=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "M Ramlan",
+        "stars": 5,
+        "text": "The dentist was incredibly thorough, gentle, and explained every step clearly, which helped reduce any anxiety I had.",
+        "publishedAtDate": "2025-04-26T04:31:39.815Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "West Dragon",
+        "stars": 5,
+        "text": "Overall was good.",
+        "publishedAtDate": "2025-04-13T16:57:36.501Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Celestine Rao",
+        "stars": 5,
+        "text": "I've always had a phobia with dentists in the past due to some of them being excessively rough and impatient. Phobia cured with Dr. Shobana. Extremely gentle and explained all steps during the treatment. And not a single drop of blood was observed. Truly a pleasant experience.",
+        "publishedAtDate": "2025-04-12T03:56:19.428Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kay",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-11T02:30:18.505Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shaaleha Razak",
+        "stars": 5,
+        "text": "I buat veneer, whitening, and scalling. Dua dua doktor terbaik 🤍 Love sangat. Dental assistant sangat baik.",
+        "publishedAtDate": "2025-04-05T08:45:30.268Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rashmika",
+        "stars": 5,
+        "text": "I had an amazing experience with Dr Ashwin and Dr Sho! I consulted them regarding my discolored teeth and expressed that it had been one of my biggest insecurities. They were incredibly attentive, patiently listening to all my concerns and clearly explaining the various whitening options available to me.\n\nThey took the time to answer all my questions, ensuring I felt comfortable and informed before moving forward with any treatment.\n\nOnce I felt confident in the plan, we proceeded with the procedure, which took about 90 minutes. Throughout the process, Dr. Sho was professional and thorough, and the dental assistants were highly efficient, providing excellent support. The whole team made sure I was at ease, and the entire experience was smooth and stress-free.\n\nI am so pleased with the results and couldn’t be happier with the level of care and expertise provided. I highly recommend Dr. Ashwin and Dr. Sho to anyone looking for top-notch dental care.",
+        "publishedAtDate": "2025-03-29T05:16:22.892Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ed dy",
+        "stars": 5,
+        "text": "Perkhidatman yang memuaskan...selesa dan mesra..",
+        "publishedAtDate": "2025-03-26T08:40:54.805Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Min Linkar",
+        "stars": 5,
+        "text": "My wife and me recently had a root canal treatment and dental crown  by Dr Ashwin at ‘Klinik Pergigian Rakyat Dental, Perling’, and I was satisfied with the experience.\nHe was extremely patient and took the time to explain every step of the procedure, which really helped ease my nerves. His professionalism and gentle approach made the entire process smooth and surprisingly painless.\n\nThe staff was also very friendly and welcoming, making the overall experience even better. I truly appreciate the care and attention Dr. Ashwin provided, and I highly recommend him to anyone in need of dental treatment.",
+        "publishedAtDate": "2025-03-21T01:28:51.923Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DCQ8UVLmeZJP6IOY3APWWwWH1_p2JCNEi08gHivfshCelVdQEv2wvGnJ4ECtVapvn0KM0LpySuAP2Im2TxRYPvSnOX6ILCRrCG0yB3Kd7aWBWwvSY-b-UmeGAM1qOIV8bY9-Tn6Q"
+        ]
+      }
+    ],
+    "street": "91a, 93A, Jalan Rawa"
+  },
+  {
+    "title": "Klinik Pergigian Permata Kempas",
+    "website": "https://wa.link/vhwg7q",
+    "latitude": 1.512908,
+    "longitude": 103.7007827,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-permata-kempas-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJ_w1r22Nz2jERdQPSN_fbN4A",
+    "phone": "+601121655564",
+    "permanentlyClosed": false,
+    "address": "10-01, Tingkat Atas, Jalan Cengkerik 5, Pusat Perdagangan Kempas, 81200 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Pusat Perdagangan Kempas",
+    "city": "Johor Bahru",
+    "postalCode": "81200",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 182,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipN68qeR9IlsxbJezdv2JXcrqbegje3WdjGjyTiZ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipObZiPCjMxlB4r8pQsyQaMpKjVd0CTJhgqO5OKx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO7rJPru3pxKXeWcwE6gCEv3uhB5sTsxgbDQNyu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOpKSVp155W_S1K2npCUh2nviJ8lFxqsb6FDpCO=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOXFYFsRYiFESyxuVDYtZ9kexGddgpemms3nbdp=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ainuddin Dzaraby",
+        "stars": 5,
+        "text": "Semuanya baik, DR sangat ramah,baik dan jelas apa yang disampaikan, Terbaik..",
+        "publishedAtDate": "2025-05-06T04:46:49.801Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sharon Valdez",
+        "stars": 5,
+        "text": "staff and dentist are very friendly its my very first dental clinic I've been to  in jb and i recommend to my friends  too and it is affordable.. highly recommend,so what are you waiting for,lets go",
+        "publishedAtDate": "2025-05-02T08:39:08.129Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nora Sulaiman",
+        "stars": 5,
+        "text": "Very recommended. The staff and the doc are very helpful and kind.",
+        "publishedAtDate": "2025-04-27T12:40:39.705Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Afif Afif",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-27T03:53:40.148Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mareena Jan",
+        "stars": 5,
+        "text": "My daughter treatments alhamdulillah all went well and the doctor to staff very polite and well handle her.",
+        "publishedAtDate": "2025-04-27T03:52:35.656Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DK0sOqj3-yw9RW2At4oZEluanNtwz3OBsiLBxF_YWgTN_xIP7QgKEjWsAKEsoPRsgGce_rIjFEYKA0goQWb0Ng1GAG_0hhrT36L6NJOxzD2THSMnxlvvDqMpLkG6KPq4VxKhh-bw"
+        ]
+      },
+      {
+        "name": "Umar Mokhtar",
+        "stars": 5,
+        "text": "Service baik",
+        "publishedAtDate": "2025-04-27T03:06:17.841Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sharsa Jane",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-26T10:33:36.013Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "akhmal 77",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-25T05:41:40.361Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "10-01, Tingkat Atas, Jalan Cengkerik 5"
+  },
+  {
+    "title": "V-Smile Dental Clinic Gelang Patah 黄氏牙科诊所",
+    "website": "https://www.vsmiledental2016.com/",
+    "latitude": 1.459519,
+    "longitude": 103.584277,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "v-smile-dental-clinic-gelang-patah-iskandar-puteri-johor",
+    "skip": true,
+    "placeId": "ChIJQSYXOdEK2jERB9FDYGiRLZg",
+    "phone": "+60167331240",
+    "permanentlyClosed": false,
+    "address": "12, 2, Jln Nusaria 11, Taman Nusantara, 81550 Gelang Patah, Johor, Malaysia",
+    "neighborhood": "Taman Nusantara",
+    "city": "Gelang Patah",
+    "postalCode": "81550",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 105,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNUwFcax2AdJI9Fa5dDxZ8T30nnn_jLGkkwvk82=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN6vUSZJuTy65Bcn9p8X2RItjQl8S6BBIhf1vHe=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO_Ow_MEpsKTBocLbdOX4kpIxYE9LztQnIcAv_X=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMOty0WBL4rOxHoXQDvDoTxqDytqCDVQBapdytL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMsT6VXyllphz_havR1ONASSP0yKziJ4Ehuemwf=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Nirjyo",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-02T06:16:36.945Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hla Hla THAN",
+        "stars": 5,
+        "text": "အရမ်းသဘောကျပါတယ်ရှင့်",
+        "publishedAtDate": "2025-05-02T05:00:02.702Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sri Devi Ramalinggam",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-10T05:11:39.956Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90B8enV0FFNO1JNeb7BH6weekbzLDTG7I1VNeeqXvFbuAmJcRr-dxw5E33vgx-W3ERLLQro_PVKpWBMXWpGbN8kJAVn3R6YWqdH4BB-C3LaXCNXraF0QrsSkKVFATaEIsqinQ4qMpQ",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BDvDbEPjFjytGKh1oZHFjXWJWQA_I06PEOFrw70XgYWRNHwmQufiB4j_viyBp9uIvHoDp1PfNgHY-RJyGqquaP7_ALApKRsirZSE_FNMVhd99bekBV4NwxmKhT4IWAvzYHkPft"
+        ]
+      },
+      {
+        "name": "heng soonheng",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-02T02:35:51.315Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Zhien Hui",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-12T14:12:14.493Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amira Athirah",
+        "stars": 5,
+        "text": "went here for the first time and i had a pleasant experience with the efficient, swift and gentle service from booking appointment to the full process of scaling. Thank you 🩷",
+        "publishedAtDate": "2025-01-28T05:39:18.939Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Alamgir",
+        "stars": 5,
+        "text": "good service",
+        "publishedAtDate": "2025-01-21T06:33:12.457Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nur ain",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-01-19T08:30:09.640Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "12, 2, Jln Nusaria 11"
+  },
+  {
+    "title": "Bukit Indah Dental Clinic",
+    "website": "",
+    "latitude": 1.487016,
+    "longitude": 103.646592,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "bukit-indah-dental-clinic-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJSbWHAO1z2jERByJyvcrOxdw",
+    "phone": "+6072441509",
+    "permanentlyClosed": false,
+    "address": "Jalan Bukit, Jalan Indah 4/14, Bukit Indah, 82000 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Bukit Indah",
+    "city": "Johor Bahru",
+    "postalCode": "82000",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "Bukit Indah Health Clinic",
+    "reviewsCount": 8,
+    "totalScore": 3.1,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Bazil Mazlan",
+        "stars": 1,
+        "text": "Hari Khamis petang, tiada sebarang treatment dilakukan termasuk scalling. Kalau sakit gigi, doctor hanya check dan bagi ubat tahan sakit. Di minta pergi ke klinik pergigian lain.",
+        "publishedAtDate": "2024-10-12T01:53:35.641Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "aca jafri",
+        "stars": 1,
+        "text": "bila nya lah nak open untuk dental clinic ni, dah setahun tunggu gigi pun dah berkarat",
+        "publishedAtDate": "2024-10-02T06:09:52.934Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "noob lll",
+        "stars": 1,
+        "text": "bad place",
+        "publishedAtDate": "2024-03-23T22:43:59.756Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fauziah Ashwa",
+        "stars": 5,
+        "text": "Very good Dr and staff",
+        "publishedAtDate": "2024-02-05T10:39:07.884Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tan Lee Hua",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-01-28T03:04:23.228Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nadiah Zulkifli",
+        "stars": 2,
+        "text": "Maaf cakap..Datang klinik pukul 8 pagi hari ahad, daftar n dapat nombor..menunggu hingga pukul 11 lebih masih tak dipanggil.. bilik pemeriksaan ada 7 tapi sangat2 slow..dtg sini utk cek gigi ank tadika je sebab dpt surat dari sekolah... Bayangkan anak ni menunggu stress parents juga...sepatutnya dah kena ubah Cara supaya laju dan cepat...",
+        "publishedAtDate": "2023-08-06T03:06:24.944Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "pzahafizah",
+        "stars": 5,
+        "text": "staf nurse & Dr sangat peramah.. servispun terbaik.. dtg buat tampalan gigi.. Dr buat cermat.. boleh dtg lagi next appointment..",
+        "publishedAtDate": "2022-08-23T05:03:48.793Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ila ni",
+        "stars": 5,
+        "text": "Datang pukul 3ptg hari Ahad, alhamdulillah sangat smooth & staff very friendly & informative. Waiting time pun pendek sahaja.\n\nTapi sayang, lepas buat pemeriksaan, utk gigi saya ni tak dapat buat root canal treatment kat sini & dinasihatkan ke swasta sahaja since government specialist akan amek rare cases sahaja & RTC kat tempat ni hanya untuk gigi depan sahaja.",
+        "publishedAtDate": "2022-07-24T07:40:44.546Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Jalan Bukit, Jalan Indah 4/14"
+  },
+  {
+    "title": "Klinik Pergigian Dovedent",
+    "website": "https://www.dovedentdentaljb.com/",
+    "latitude": 1.5558096,
+    "longitude": 103.5802096,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "19:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "19:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "19:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "19:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "19:30"
+      }
+    ],
+    "slug": "klinik-pergigian-dovedent-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJWQ9W1Dx32jER9rkMtO2tYuU",
+    "phone": "+6075863569",
+    "permanentlyClosed": false,
+    "address": "4-01, Jalan Pulai Makmur 5/1, Bandar Baru Kangkar Pulai, 81300 Skudai, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bandar Baru Kangkar Pulai",
+    "city": "Skudai",
+    "postalCode": "81300",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 93,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMyd10JTkodEK61xNcbcHU5VF6aOkaIKLLhnlze=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN6hUQMbvfdfJT-e0aPp77d4TTzSGq7BAE4czIF=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNCZBvjr6h0XeLMJ9IbxqzKuoHHB_9TNyTUVQSc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOr_j4S_ZgbwQCVWY5EMkVq5nBzWJa_7lbjXKNt=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMrVfzIOcCJeMaEbMqZjnJdmHrznk81DT1X8IV7=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Muhammad Syafieq",
+        "stars": 5,
+        "text": "Doktor gigi pompuan tu memang terbaik",
+        "publishedAtDate": "2025-04-24T12:09:24.417Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Athirah",
+        "stars": 5,
+        "text": "Rawatan terbaik..klinik selesa, kids friendly..",
+        "publishedAtDate": "2025-04-24T07:31:03.470Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BWb7uqKw_X2zn3lPKMKvxORkN4NyJHhLRzLVKvZZxGD2AVXFea3QvGMAQDH-4mNBfaax5A9x01ZfHIE-miZzwQWJ9tbQXFdgo2mmMVb8xduB9KI2oGtr7fpuMTBvfCfnX7eldv"
+        ]
+      },
+      {
+        "name": "sakinah rabangai",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-23T03:23:03.663Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amirul Adli",
+        "stars": 5,
+        "text": "Terbaik sngt selase",
+        "publishedAtDate": "2025-03-25T11:15:01.205Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rozita Maliki",
+        "stars": 5,
+        "text": "The service was quite good with affordable pricing. Customer Service was responsive. Much recommended.",
+        "publishedAtDate": "2025-03-23T06:21:01.462Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Teddy Siswanto",
+        "stars": 5,
+        "text": "Great service! The doctor was very gentle, and the teeth extraction procedure went smoothly. I'm really happy with the care I received!",
+        "publishedAtDate": "2025-03-13T23:55:37.975Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rajeswari Jayapalan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-12T10:04:46.970Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "AZIDAH SAHRI",
+        "stars": 5,
+        "text": "“Terima kasih banyak, doktor, atas pengalaman rawatan yang sangat memuaskan! Scaling gigi berjalan dengan lancar, dan yang paling saya hargai ialah cara doktor menerangkan setiap langkah dengan jelas—sangat membantu dan menenangkan. Servis pun tip-top, doktor peramah, lembut, dan langsung tak kasar. Memang terbaik! Saya pasti akan kembali lagi dan rekomen pada yang lain. Keep up the great work!”",
+        "publishedAtDate": "2025-03-09T07:02:47.025Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "4-01, Jalan Pulai Makmur 5/1"
+  },
+  {
+    "title": "Tay Dental Surgery",
+    "website": "",
+    "latitude": 1.465169,
+    "longitude": 103.761411,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "tay-dental-surgery-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJGRorLcMS2jERxBY042SJ8HM",
+    "phone": "+6072224997",
+    "permanentlyClosed": false,
+    "address": "63-A, Jalan Wong Ah Fook, Bandar Johor Bahru, 80000 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bandar Johor Bahru",
+    "city": "Johor Bahru",
+    "postalCode": "80000",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 4,
+    "totalScore": 4,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Sheeyen Lee",
+        "stars": 5,
+        "text": "Had a pleasant experience. But Dr usually only work half day before lunch time. So is good to visit early or call before visit.",
+        "publishedAtDate": "2022-06-09T08:35:59.381Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pauline Ang",
+        "stars": 5,
+        "text": "Very good and gentle dentist. Have been seeing him for years, though his clinic looks run down from outside, he has recently refurbished his clinic equipment and they are all new. Most importantly, Dr Titus speaks good English, and has years of experience as dental surgeon. No pushing or hard selling, only honest service. For those looking for impacted wisdom tooth surgery, it's almost half price here compared to Singapore. Highly recommended.",
+        "publishedAtDate": "2019-12-10T03:29:14.086Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kee Hong",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2019-01-09T04:52:02.382Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "audrey lin Lee",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2017-06-17T07:20:47.779Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "63-A, Jalan Wong Ah Fook"
+  },
+  {
+    "title": "Mahmoodiah Dental Clinic",
+    "website": "https://jknjohor.moh.gov.my/",
+    "latitude": 1.4622073,
+    "longitude": 103.7484003,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "mahmoodiah-dental-clinic-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJMfFNK7kS2jERfnxpAPfPP3s",
+    "phone": "+6072266166",
+    "permanentlyClosed": false,
+    "address": "Jalan Mahmoodiah, Kampung Mahmoddiah, 80100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Kampung Mahmoddiah",
+    "city": "Johor Bahru",
+    "postalCode": "80100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "Sultanah Aminah Hospital, Johor Bahru",
+    "reviewsCount": 41,
+    "totalScore": 4.7,
+    "images": [],
+    "reviews": [
+      {
+        "name": "tatee marenee",
+        "stars": 2,
+        "text": "Kenapa tak pick up phone ya. Dari pagi sampai tengari call. Saya appointment Isnin ni, tapi kan johor umum cuti. Appointment saya macam mana. Lenguh jari call. Saya tunggu orang call pun tak ada ni. Biasanya kan akan call bagitau tukar tarikh lain ke?",
+        "publishedAtDate": "2025-04-25T07:46:03.289Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Steve E T T.",
+        "stars": 5,
+        "text": "Quick tip for walk in: target to reach counter @ Level 2 at 7.45 am, or 1.45 pm if afternoon. (Operates 5 day week)\nVery good klinik gigi. Thumbs up for the registration counter. Special mention for Encik Halim for being so polite and friendly.\nThere are many many dentists here. I was attended by Doctor Vani (Vanee? Sorry not sure of spelling). She was very patient to explain what the procedure was, and any possible complications; I went to extract an old upper tooth. Anyway, it went smoothly. Thank you again, Doctor.",
+        "publishedAtDate": "2025-01-23T07:56:00.795Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohamed Riyaz",
+        "stars": 5,
+        "text": "Excellent service... keep it up\nThumbs up for Mr abd halim, on registration counter, very polite,calm and helpful",
+        "publishedAtDate": "2024-12-05T01:44:23.191Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yat Ayuob",
+        "stars": 1,
+        "text": "Sekarang ni kalau check gigi memang kena tanya soalan peribadi depan anak ke? Bapak kandung sapa, bila ayah dia cakap saya lh bapak kandung dia ehh ..ko persoal kn kenapa nama belakang lain yg ni lain..sedangkn ko tahu nama tu kenapa! Siap nk bukti bagai..kepala nenek ko lh. Jangan sebok tanya peribadi orang sedangkn cikgu ke jpn ke takda pn sebok nk korek bagai peribadi orang. Anak aku tu dh remaja sesuai sangat ke ko tanya..siap dh ade ic pn..ni ko  nak suruh bawa surat beranak pulak, surat mati taknak ke . Anak aku dh 6 prg tw. Kakak dia baru lepas check gigi tak da pulak tanya semua tu. Buat je keje ko",
+        "publishedAtDate": "2024-10-07T05:01:02.749Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "JunXiong Foong",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-22T08:48:04.523Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SK ERIC",
+        "stars": 5,
+        "text": "Klinik pergigian di tingkat 2, counter staff En.Abd Halim very friendly, register Rm 1,  cabut gigi Rm 1, thanks 😊",
+        "publishedAtDate": "2024-07-09T05:19:43.717Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CenrNU9ycycAo9GFHfFalw75h8LbUmJ0qXYafOXXi_PqHxUv0_kq6bPdtemj5cNmkij78eHPsMINpo6odUQll4Mr0DXetjSiULTaNbtzmnmGWemTr6FcXxNG3AVNc4EW_LcxB-",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BYSfHezZ5AJTdOPz3_mYK7a_6Eo5h9zk08pUOv1ysTOWrQZDsxWgEZV_TY4RABmqiXiwRZ8xFfJDu_xi-9CcOP06YIA8CZ4obb662wYHEriVQwxFR-2YH_TvhCoVlND6KI8Tn_zQ",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Dz14c72m1n9dXKZFfrjJFWNrUGTiGg4PhLn4nxAwg2S7T5dsbGgkkHrXUO71Gu-lBhUEt_eLJSmTsKfjBK1E0kj0eWoMcudRXBzmcTKY1XoxYo3mb1j5GsV5A3FKaW-k9f0HE",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90ALsQIqejhaDtAXnw1yzoeLUd0nYwlaojkdk0AzRGeGqBfM-_d2R4Jolu4vQ9Byfc155l-VOaioI-2u64tdX1B96P8EEsoa_GlRkATvbZ7BS91DzmZ2pdpqPMK-v6E_hzcoI2Yarg",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BvpC0idAXKL4AD5sfDmZpPd-PhC9IAMJO3HsaoPc1kLdBouRBX1AJM9Wxk7lMDOmXnTvLP1wj9mKcsuzkNXWN6ieKSCdB_IIUoEniZee4QyiyozQ6nOilYtCUuRz2Q3LuIyOnv",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DPBkZO7O79AUmLLzbuVioG-gpBFFRh7S-U0SyKGp50FRJ-28DHKFVcNOtETjN5GIFmGEh3iSiqMtvdxb1r52aFcSkjBKt9I5TRlVARkyI4LCNN6qvX-d_wNqOnTBENZHT27BlM",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BzerL-gnNFXPC3VMz5Hj7EPzZPPIaxyW1J0CoF6rbtDFtr8-JF3MmnPjdtqqlBhXYkvX6e8EmvjNkdSf85DbhVCjYxtfh-4Dbe4Bw1o-ntfWoSJYXJLVEOo7G_8h7A_3zia-0t",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DXuvaC_33WpKPOSxFwW2dO37s9bITeyBmd-dsEeCfZUFrsyKOPbjIggqbp5HHLN3ZSY_SToYsjZSZ7zvT2V5dMB87sWpUrZnAsRAIp_YWiX0aU-71CNGP-yjXgNxLyLfKBMxEtOA"
+        ]
+      },
+      {
+        "name": "Muhammad Sollehin (Putra)",
+        "stars": 1,
+        "text": "Macam sial nak cabut gigi dah injection di suruh kumur dalam toilet,kalau toilet sebelah pintu takpe juga ini kena jalan jauh.walao",
+        "publishedAtDate": "2024-04-20T14:56:11.407Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "y y",
+        "stars": 5,
+        "text": "Klinik dekat sini terbaik. Doktor ramah. Berbanding dengan klinik kesihatan kempas. Rawatan gigi di sana leceh. Benda bole buat taknak . Lebih rela ke klinik mahmodiah. Settle terus. Terima kasih doktor.",
+        "publishedAtDate": "2024-04-11T22:07:50.337Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Jalan Mahmoodiah"
+  },
+  {
+    "title": "Klinik Pergigian Azura LarkinJaya, JB",
+    "website": "https://www.facebook.com/profile.php?id=100086480981534",
+    "latitude": 1.4965242,
+    "longitude": 103.7411377,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:30"
+      }
+    ],
+    "slug": "klinik-pergigian-azura-larkinjaya-jb-johor",
+    "skip": true,
+    "placeId": "ChIJZb0E_kdt2jERIu1jMJGRn4c",
+    "phone": "+60199312596",
+    "permanentlyClosed": false,
+    "address": "No 47(Ground Floor, Pusat Perdagangan Larkin, Jln Geroda 2/1, Larkin Jaya, 80350 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Larkin Jaya",
+    "city": "Johor Bahru",
+    "postalCode": "80350",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 13,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNoUcCqn7fMvNfFDUWEMXLhzCv20rnenCeTDBUR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOhO0saUCVhX54j4jDuYHgCQtgPPd5UFCbAR359=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMv_5fdTNsRSSr16CjXfTNXs-S7dnxkx7SDm36_=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPkkMhxS8bHBmXft8PprLc3xscNYc6soFodVXhh=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN5-CNYF7_IiFokQA_p5Euka0SS28NsvSbYNsE6=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "farahin rozali",
+        "stars": 1,
+        "text": "Not recommended.",
+        "publishedAtDate": "2025-04-21T11:40:39.216Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "safwina yassin",
+        "stars": 5,
+        "text": "Alhamdullilah great experience dengan klinik ni. Yang penting dr bagus, explain everything dan staff yang mesra. Jawab call, jawab dngn mesra dan beri layanan yg baik. Saya sakit gigi nak walk in pun boleh. Terbaik. Kalau sakit gigi sangat kena buat appointment pun susah kan, jenuh saya call klinik2 lain sebelum call klinik pergigian azura larkin ni. Terus kata boleh walk in sekarang puan. Alhamdullilah. Terbaik 👍🏻",
+        "publishedAtDate": "2025-01-17T04:54:11.217Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nathasya Jung",
+        "stars": 5,
+        "text": "recommended!! saya sangat takut nak pergi klinik gigi, tapi klinik ni sangat selesa dan cara kerja sangat la lemah lembut",
+        "publishedAtDate": "2024-12-23T08:15:32.179Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90ChxHrDDSgAZyEjHxa1JBj5rXT9pStER5UPS9pDn6hxcUTWi_PRYLi5-fybb18FsL1v0YKSZ-AfeHoA1CdiUhis-2A1hxd52_7teA4gxh6VtiegzkwD3tQb3BuARDN3bhTNDDOpAA"
+        ]
+      },
+      {
+        "name": "Zaiton Ahmed",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-11-23T08:59:06.897Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nana Eimm",
+        "stars": 5,
+        "text": "Recommended!Klinik yang sgt selesa.Doktor frenly dgn ank dan ank pn xnangis bila kn cabut gigi.Harga berpatutan dengan service.",
+        "publishedAtDate": "2024-09-21T03:00:52.168Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "md fauzi",
+        "stars": 5,
+        "text": "Nasihat dan servis terbaik dari doctor. Terime kasih byk2",
+        "publishedAtDate": "2024-08-30T05:20:49.906Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zarith Farisya",
+        "stars": 5,
+        "text": "Servis yang sangat bagus dan tidak rasa sakit",
+        "publishedAtDate": "2024-07-28T01:51:35.333Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "M Riz",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-13T07:38:25.316Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No 47(Ground Floor, Pusat Perdagangan Larkin, Jln Geroda 2/1"
+  },
+  {
+    "title": "Dhia Dental",
+    "website": "http://www.facebook.com/dhiadental",
+    "latitude": 1.4919597,
+    "longitude": 103.7089096,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "dhia-dental-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJ_WTsne5z2jERBkNYshwHtnU",
+    "phone": "+60166800100",
+    "permanentlyClosed": false,
+    "address": "Uda Business Center, 39-01, Jln Padi Emas 1/3, Bandar Baru Uda, 81200 Johor Bahru, Johor, Malaysia",
+    "neighborhood": "Bandar Baru Uda",
+    "city": "Johor Bahru",
+    "postalCode": "81200",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 22,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNdrQsritZLPVZ34BAnSnMn3hDiY2w3OUigCDqP=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Leia Sufia",
+        "stars": 5,
+        "text": "🔥",
+        "publishedAtDate": "2024-11-21T07:40:16.428Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Hidayah",
+        "stars": 5,
+        "text": "Had a pleasant experience. Dr Fifie is very professional and friendly. The team are also friendly, explained very clearly, and managed my request very well. Will definitely come back!",
+        "publishedAtDate": "2024-09-04T07:05:10.145Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Khairuddin Pawiran",
+        "stars": 5,
+        "text": "Good dentist and thorough explaination. Shall\nCome again for my dental treatment",
+        "publishedAtDate": "2024-08-05T07:48:44.200Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Salwa Kasni",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-05-08T08:58:34.332Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Abubaker Badi",
+        "stars": 5,
+        "text": "I highly recommend Dr. Fifie and the wonderful staff. Thank you for your exceptional care and support.",
+        "publishedAtDate": "2024-02-26T08:46:50.601Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ina Amira",
+        "stars": 5,
+        "text": "Loved my session here. Dr Fifiey was so gentle with the procedure & very good at explaining. Highly recommended!",
+        "publishedAtDate": "2023-07-29T06:33:34.423Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shereen Divya",
+        "stars": 5,
+        "text": "Highly recommended. Very professional Dr Fifie definitely will come back for more treatment❤️",
+        "publishedAtDate": "2023-05-15T06:53:51.400Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Anis Mustafa",
+        "stars": 5,
+        "text": "Klinik gigi yang bagus.\nMempunyai doktor gigi dan pembantu yg terlatih.\nRecommended dental.",
+        "publishedAtDate": "2023-05-04T05:05:55.327Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Daw2jclWcAVFm8nnuQj6XT4x6uAGiK2saK9O0Gz2_Qea3amKmEZ2SmqScjJ63fbXEX1XRixWjh00nTLevCdVrOZH70rPXv43ZImKrXqrURTbM1WtU45emzSfJb8BIyydu2g53l"
+        ]
+      }
+    ],
+    "street": "Uda Business Center, 39-01, Jln Padi Emas 1/3"
+  },
+  {
+    "title": "Klinik Pergigian Amim",
+    "website": "",
+    "latitude": 1.4652735,
+    "longitude": 103.7596854,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-amim-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJ0-FuTMQS2jER4X5fV-5CdPM",
+    "phone": "+6072247580",
+    "permanentlyClosed": false,
+    "address": "05-01 LEVEL 5, MEDICAL SUITE, Menara Landmark, 12, Jalan Ngee Heng, Bandar Johor Bahru, 80888 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bandar Johor Bahru",
+    "city": "Johor Bahru",
+    "postalCode": "80888",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 15,
+    "totalScore": 4.5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOqLsjpo45cCMB59pmN7bQuSP0yxODUkmB1Rrc0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP0-qb4JeFKaT8TyVhfSi5UFG54NEO48ljEtvWp=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMIU9z58mBL_euD2nis_EH0twXAuTkkx_6bqrii=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Matin Rani",
+        "stars": 5,
+        "text": "Did my wisdom tooth removal with dr amim under 15 minutes after i was referred from other clinic. It was painless. Very recommended",
+        "publishedAtDate": "2024-10-22T14:18:52.729Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ellysa Nazirah",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-01-24T04:37:08.953Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Duni Adha",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-01-24T04:35:33.112Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nizam Ali",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-12-16T00:44:15.183Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rina",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-11-15T13:47:57.528Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nor Izan",
+        "stars": 4,
+        "text": "Saya pernah dtg klinik ni jika tak silap dulu masa ada di taxi stand jb.service terbaik.mula2 g klinik kjaan.ampun x blh cabut gg bongsu aku.terus aku dtg sini, dr cuba byk kali mmg susah tp caranya sgt baik dn berhati2 tanpa ada rasa sakit.tak mcm hosp kjaan tk blh cabut dorg suruh balik mcm tu je.mak aiii.Alhamdulillah di klinik amim mrk selesaikan sampai habis.biasalah cuma sediakn duit je😅",
+        "publishedAtDate": "2023-06-30T04:42:51.623Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ronie Ayman Amim",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-09-14T12:38:55.586Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Anom Raudhah",
+        "stars": 4,
+        "text": "Got scalling and cabut gigi bongsu there. The Dr is nice.",
+        "publishedAtDate": "2022-09-13T15:24:42.466Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AY2Aqu1o7VUbs9h9-ffTqAqpzuCE7bDzuQMkEPp22e1hjHGJnAah4hSsaMWyV2Zx6IhZ13OZPLH5mJWYPOyNB8CUDNhg3vsBxCcb8y_-Pt7LpYGvwsVu2-RlN0ARA9TDH7ATc"
+        ]
+      }
+    ],
+    "street": "05-01 LEVEL 5, MEDICAL SUITE, Menara Landmark, 12, Jalan Ngee Heng"
+  },
+  {
+    "title": "Klinik Pergigian Azura Bandar Dato Onn, JB",
+    "website": "",
+    "latitude": 1.5616116,
+    "longitude": 103.7355597,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      }
+    ],
+    "slug": "klinik-pergigian-azura-bandar-dato-onn-jb-johor",
+    "skip": false,
+    "placeId": "ChIJpdKCqJ9v2jER9ODj7b8z38E",
+    "phone": "+60107612596",
+    "permanentlyClosed": false,
+    "address": "46, 1, Jalan Perjiranan 4, Bandar Dato Onn, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bandar Dato Onn",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 39,
+    "totalScore": 4,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM4OogImlvK1z_y77N8SRwi8EQg7iD22EtOnWly=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPffBc8w-dB6Z0NtMZ2H9YIcxlQWhkjxzAH-P5M=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMIqY_0nJgL1i2Yukg78grU09mAk7n8JX_1m_4M=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOkHZDrVWNQrwQJc_2bKwhtjT8kEyGSH3VVdz6o=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNnifV-c7UlhpPprh4YQ9hNK8XwKFw9oN81z0Fe=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Shahida",
+        "stars": 1,
+        "text": "I xsure la doktor locum ke apa tapi sangat rude. I brought my 8yrs old boy cabut gigi. Biasala bdk takut jpe dr gigi. Pastu dr ni xde explaination nk buat. Terkejut bdk tu. Pastu dr tu komen tny ‘ad anxiety ke’ 🙄",
+        "publishedAtDate": "2025-04-28T03:20:43.060Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fasihah Amm",
+        "stars": 5,
+        "text": "Dari staff kaunter, doctor & assistant doctor semua baik & friendly. Explanation yg jelas & servis yg bagus!! Recommended.. Terima kasih juga husband belanja. Happy wife happy life😃😃😃",
+        "publishedAtDate": "2024-12-23T12:36:10.539Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CfeQ4DCkBjSZyekk9A-0VTHxLv5WneeEIPsCzHHOkjaoexbcTuM7ZWB-5BT64-_n6bdvUUwNpctgLWQXAfZNyz_l1XpT3BsnfW5cf1Q1NtXEQmbvwvwZKULh9BbQgmCRWTroQP"
+        ]
+      },
+      {
+        "name": "Hazim Azim",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-12-13T06:06:34.329Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Asyikin",
+        "stars": 5,
+        "text": "Good service and good explanation 🌟👍",
+        "publishedAtDate": "2024-11-23T02:47:23.915Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Roziana",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-11-19T13:47:52.213Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chee Lai",
+        "stars": 1,
+        "text": "这个无良医生不能，要补牙说不能补，要挑牙根和做牙套8千多，当我是菜头赖砍，不要做就收工钱40块🤬，我去另外一间desa cermelang 医生说可以补，百多块就解决了。最怕遇到这种无良医生😡",
+        "publishedAtDate": "2024-11-06T08:32:25.130Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sitiaishah Sitiaishah",
+        "stars": 5,
+        "text": "Pernah datang ke klinik ni buat braces dengan dr aishah.dr dan staff sangat friendly.highly recomended",
+        "publishedAtDate": "2024-07-02T05:51:56.411Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "tobey tan",
+        "stars": 1,
+        "text": "Very bad experience with the Acrylic denture costs me Rm1600+ top and bottom. It was very painful when eating foods with new acrylic denture and keep dropping someone!!! The indian male doctor not even trying to fix it 😤 Really regret had visited this dentel clinic and not responsive too 😡. Please think 10x before decide to get denture! Really Disappointment...",
+        "publishedAtDate": "2024-03-30T09:08:02.457Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "46, 1, Jalan Perjiranan 4"
+  },
+  {
+    "title": "Klinik Pergigian Yap (Yap Dental Surgery)",
+    "website": "",
+    "latitude": 1.5415511,
+    "longitude": 103.8051266,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "monday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "14:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-yap-dental-surgery-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJRZOmxxBs2jER88f1bncEgd4",
+    "phone": "+6073534314",
+    "permanentlyClosed": false,
+    "address": "37, Jalan Dedap 6, Taman Johor Jaya, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Johor Jaya",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 33,
+    "totalScore": 3.8,
+    "images": [],
+    "reviews": [
+      {
+        "name": "Ann fairlady",
+        "stars": 1,
+        "text": "I had a very disappointing experience with this dentist, Dr Yap.  She was rude and dismissive, constantly pushing me to seek a second opinion instead of addressing  my concerns. She wouldn’t even let me finish my questions before cutting me off. It felt like she was rushing to get rid of me rather than providing proper care. Additionally, her equipment seemed outdated, which might explain why she was unwilling to proceed. If you’re looking for a dentist who listens and provides quality treatment, I would not recommend this place.",
+        "publishedAtDate": "2025-02-12T09:22:47.058Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "叶德权",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-08-30T02:32:58.115Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Kohbee",
+        "stars": 1,
+        "text": "请问你们还有开吗？我打你们的电话没人接好几天了。",
+        "publishedAtDate": "2024-05-05T08:54:43.403Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amar Hasan",
+        "stars": 5,
+        "text": "Very good service",
+        "publishedAtDate": "2024-03-23T00:56:39.912Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "chin chin",
+        "stars": 1,
+        "text": "前台服务员态度太差了",
+        "publishedAtDate": "2024-02-01T15:29:43.019Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pei Sze Lee",
+        "stars": 5,
+        "text": "Dr Yap is my favourite dentist since secondary school!  She may not be as friendly as some others commented given but I can be assured that she is a good dentist.  She will not gives unnecessary recommendations and to do something unnecessary to your teeth.  She is quick and fast when dealing with her work.  But be prepared on long wait during the visit.",
+        "publishedAtDate": "2023-10-15T08:32:36.980Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lim Shieh Siew",
+        "stars": 5,
+        "text": "牙医很好，很细心",
+        "publishedAtDate": "2023-07-20T09:27:44.911Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "C K",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2022-10-10T08:17:06.179Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "37, Jalan Dedap 6"
+  },
+  {
+    "title": "Yap Dental Clinic 叶氏牙科 Klinik Pergigian Yap",
+    "website": "http://www.yapdentalclinic.com.my/",
+    "latitude": 1.4805367,
+    "longitude": 103.6575389,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      }
+    ],
+    "slug": "yap-dental-clinic-iskandar-puteri-johor",
+    "skip": true,
+    "placeId": "ChIJ2cHj-Epz2jERrKVJGk3sxcE",
+    "phone": "+60173424889",
+    "permanentlyClosed": false,
+    "address": "18, Jalan Indah 15/3, Taman Bukit Indah, 79100 Iskandar Puteri, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bukit Indah",
+    "city": "Iskandar Puteri",
+    "postalCode": "79100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 64,
+    "totalScore": 3.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMI9WzfHddh1Y97eucv0NvGyKWaDKhZ5iXwvxib=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOAQqZp7CaXhBDUnMpm4GcVecusNie6NizoYKCE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOrBJHKWZiqTYhZntqnYooD8m2FkGzxaBmJiRS1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO41-DJ7WtShbZfyFjGQEZ6RL4HIjVFa2J2TTNk=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Cheryl Chin",
+        "stars": 1,
+        "text": "came here cause of a recommendation but do not come unless you have a lot of time to waste, always dragging the appointment time and always have above 1 hour waiting time even when i arrived early or on time. dental fees are expensive as well. spent at least 12k RM here. When i confronted the doctor all they would do is say sorry???? without fixing their scheduling system. i made the appointment at the specific timing for a reason and it was confirmed, not sure why scheduling so many appointments back to back.\n\ndr teh is also very rude and dismissed most of the questions when i raised problems affecting my treatment. i had a question after   my treatment but she told me she couldn’t answer it cause it was “dinner time”. erm okay???? lmao 1 question affects your dinner time oops. well couldn’t take her attitude anymore and switched to dr yap.",
+        "publishedAtDate": "2025-04-14T06:46:32.234Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nick Loh",
+        "stars": 5,
+        "text": "Have been here more than 4 years. A place for my regular check up. My dentist is Dr tan qi feng. He is very patient. He will explain to me my condition and what treatment need to do and why is required. With him as my dentist, I will have 100% confident that I will not be overcharged or do treatment that might not required. I will be in good hands under him.",
+        "publishedAtDate": "2024-12-20T05:58:49.794Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shinigami “on” Guitar",
+        "stars": 5,
+        "text": "Visited Yap clinic and was assigned to Dr Chua. She was very patient and gentle. The whole session was painless and very comfortable. She was also very knowledgeable which made me at ease throughout the whole session. Really recommend her if you or your kids want to visit a dentist. 👍",
+        "publishedAtDate": "2024-12-05T15:39:46.709Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chee Yu Tan",
+        "stars": 5,
+        "text": "Came to Yap dental because of Dr Chua recently moved here.\n\nAs always, she is very meticulous and gentle in scaling and checking for cavity as I have sensitivity in my tooth. She also explained to me in detailed about which part of my teeth that I need to improve my brushing.\n\nEnvironment is good as well. Nurses are friendly too. Payment was smooth and fast.",
+        "publishedAtDate": "2024-11-29T14:52:51.504Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Windie aw",
+        "stars": 1,
+        "text": "去了很多年，自从看了Liew YS后，不会再去了，医生不专业，和她说话都不知道有听到没有的，没有表情也不大解释，客服处理的方式也让人不舒服，直接反感，其实牙科现在越开越多，专业的医生也很多，没有必要看个牙齿还要受罪，已经black list这家，也不会介绍人去了。",
+        "publishedAtDate": "2024-11-20T10:57:33.155Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "XP L",
+        "stars": 5,
+        "text": "Dr Teh is patient and professional. Explained to me and my wife our dental issues and options carefully. Would return to her for more dental care services in the future.",
+        "publishedAtDate": "2024-06-23T10:02:18.016Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Raymond Chan",
+        "stars": 5,
+        "text": "I would like to extend my heartfelt gratitude to Dr.Tey for the compassion and empathy you bestowed upon me during my treatment.She's quite extraordinary in terms of being gentle, being totally professional and being exceptionally competent.",
+        "publishedAtDate": "2024-05-07T03:01:46.229Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alex Wong",
+        "stars": 1,
+        "text": "补牙要打针说还要照x光,照了说有发炎,但还好没伤到根,我想问牙没伤到根会发炎吗？最气是我打了针4个小时还麻,更气是补了说今天只放药,多2个星期才能再补,这是当我没补过牙的,今天只是这样花了$250,多2个星期再补又花多少,请问补一棵牙要多少钱,3百一$5百？我是在马来西亚做工,当我是新加坡客,你们新来的可要问清楚\n,这间是上等骗子",
+        "publishedAtDate": "2024-02-24T14:30:14.758Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "18, Jalan Indah 15/3"
+  },
+  {
+    "title": "Horizon Dental Clinic - Bukit Indah",
+    "website": "https://www.horizondental.com.my/",
+    "latitude": 1.4807686,
+    "longitude": 103.6570915,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "horizon-dental-clinic-bukit-indah-iskandar-puteri-johor",
+    "skip": true,
+    "placeId": "ChIJ9w0XkKdz2jERvjpnW6a8Lc0",
+    "phone": "+60197022257",
+    "permanentlyClosed": false,
+    "address": "73-A, Jalan Indah 15/2, Bukit Indah, 79100 Iskandar Puteri, Johor, Malaysia",
+    "neighborhood": "Bukit Indah",
+    "city": "Iskandar Puteri",
+    "postalCode": "79100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 70,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPQCSjRldyYzyEyahcUdUoNVY3psK3nzPWCwy04=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Alicia Ong",
+        "stars": 5,
+        "text": "Half yearly dental appointment.  Each time it's getting better and better.  Almost close to perfection.  My whitening service is painless I even fell asleep.  Dr Goh and his team of nurses are so professional and gentle.  I highly recommend their services.",
+        "publishedAtDate": "2025-04-13T08:43:28.142Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SELVANATHAN SUPURMANIAM",
+        "stars": 5,
+        "text": "I came for wisdom tooth removal. Was very nervous thinking about the swelling after procedure. But dr.james did the procedure so professionally and it did not swell eventhough my case abit complicated. The dr did not rush eventhough the procedure took more than 1.5hours to complete and beyond the clinic operational hour. the receptionist also was very helpful. They even follow up next day after procedure on my condition. Definitely will come back for next wisdom tooth removal.",
+        "publishedAtDate": "2025-04-08T08:19:41.078Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Crystal Ng",
+        "stars": 5,
+        "text": "Second time visit, Dr Goh was very attentive and patient in explaining my problem. Every staff was very kind.",
+        "publishedAtDate": "2025-03-11T07:29:27.879Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Leung Shen",
+        "stars": 5,
+        "text": "good place",
+        "publishedAtDate": "2025-03-01T07:26:14.345Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Song Xiechang",
+        "stars": 1,
+        "text": "I went to Malaysia for a teeth cleaning, and the experience was just average. The cost was 285 MYR, which is about 85 SGD. This price is actually more expensive than in Singapore. If Singaporeans are looking to save money, they definitely shouldn't consider coming here.",
+        "publishedAtDate": "2025-01-27T05:20:32.178Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AodUOnFy_Dco1fC2CBvvDFWyr1yTdKWstK-xpOybyzwmiJtVNKZkkD_kmPy1QLW4CvqLQLdVU9xcCWGHDmZvdNwqSBd1GoRwVRJiDzehQMiYSAw2Sx45-o7VzfB0-JF3NA9sZx"
+        ]
+      },
+      {
+        "name": "Adeline Wong",
+        "stars": 5,
+        "text": "Visiting a dentist can be a very daunting experience. However, with Dr Ko, it is the complete opposite!!!\n\nHe is very patient, very thorough and gentle. His team members are also very friendly!\n\nI highly recommend going to his clinic!!!",
+        "publishedAtDate": "2025-01-06T07:39:26.285Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CbNcc0Luav4qK-_AADGUrbtCecE63pnaIuSQ90L2NBsMv-hp3IynNQAUKHX8k-6qz2IvAimYSGVoYzSQn_g64dQ0dkd6iXY2vTqxjXAgkwRBoYsgQmRaEirlD31xxi2aUmv1I"
+        ]
+      },
+      {
+        "name": "Enn",
+        "stars": 5,
+        "text": "这是我第一次洗牙 很紧张 但他们的服务态度真的让我很放松 好像在哄小朋友一样 慢慢张开嘴 真棒之类的 下次一定还会再来",
+        "publishedAtDate": "2024-12-17T09:33:28.650Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Paul Young",
+        "stars": 5,
+        "text": "Good experience. Counter staff was kind and patient. Dentist was through",
+        "publishedAtDate": "2024-11-24T05:05:11.217Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "73-A, Jalan Indah 15/2"
+  },
+  {
+    "title": "Comfort Dental Clinic 康福牙科",
+    "website": "https://www.facebook.com/Comfort-Dental-Clinic-109805958178574/",
+    "latitude": 1.5139455,
+    "longitude": 103.6316936,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "21:00"
+      }
+    ],
+    "slug": "comfort-dental-clinic-skudai-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJO9mTIRV12jERfPLHHvRpu_o",
+    "phone": "+60177989843",
+    "permanentlyClosed": false,
+    "address": "67a, Jln Mutiara 1/9, Mutiara Rini, 81300 Skudai, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Mutiara Rini",
+    "city": "Skudai",
+    "postalCode": "81300",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 50,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMasSe0MCI8WigYMhbI7DKSOHkfli0D3j8gtZ5j=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNHiGNUqvHWwXwyhpygJQ8FXFvRPiMlZsxbya_d=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOGBJbMgx8oE9cDP-Q4f6Y39jROQNLJGomvyr2z=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOI7Ix1kpcXzUgHrlZclQvzEvnZDebcX0796TTJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNYO8FPlbDFWogoNvVXMgcS2E_Lo8d-pBc6F3Q_=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "ke ai wen",
+        "stars": 5,
+        "text": "今天带妈妈来拔牙，真的好细心👍5️⃣星服务2⭐️价格😱超平民",
+        "publishedAtDate": "2025-04-18T03:25:45.918Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Francyn Tan",
+        "stars": 5,
+        "text": "25 March 2025 Tuesday 4:20pm\nWas attended to by Dr Justin - very gentle and reassuring. Very happy that he was able to see me on such short notice - we had walked in, intending to make an appointment for the next day, but was told he was available now.\n\nSet up is neat and clean, with the proper equipment available. Explaining every step of the way, and constantly checking if I was okay and how I was feeling. Gave valuable tips on how to use the Waterpik to floss the teeth. Such a nice young man!\n\nPrices are reasonable, and I’m glad I’ve finally found a dentist I am not terrified of doing dental work, so gentle & competent, and conveniently located in Mutiara Rini.",
+        "publishedAtDate": "2025-03-25T17:21:43.815Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90B8Phfp3P6CP4NQiwHo5oAcfRc8TAkScpzfaxhRml7iKprpxU2BnN__IwKmPv97819vjEz5PJN2ApUz6c3KAPtS_p7sea_q-YAkX8-WbEUV3nRnCg2b7-frG5SuLHh5UOb3zZ2v",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CPnCXZlkTzb6oT0R-YpywSbOzkPi4USTsuEpSDdOiVTuesay5GuaY1w9-DXGD0qjVCjWqpuMZ2ksbKygfdby9GecpnGAfJr43ccpWYbCJE5JsFK_uSMSGK8YjAtpTxgw_qPJg",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90ALnI3DHxo2qbqhI-3xAqhmFSiWuBk17ihUrh05CZN6W4h2Bp00mi0U-OyTyfash4kXkgCHeWHNXCRA2HquXa7P3gayE2wKF2kAsnKjaxqbioENiBTqJoHG15qB-SD3gH98x2gVhQ"
+        ]
+      },
+      {
+        "name": "Gordon Gan",
+        "stars": 5,
+        "text": "医生细心，价钱公道",
+        "publishedAtDate": "2025-03-08T04:16:19.455Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Dtclj6nF7wCucCZ2D4Kna-Xn-Ko_OF7BbfJ5O4XvHIQ2XScAUC1XLcS6BlDsFvg3Q5ycvt_Ty6t_rSX1V_lmkcjsHEmY-HF6QI0PMsLunITBRTi6cfwNZo_AqzCBAr7YYNMog"
+        ]
+      },
+      {
+        "name": "jian ss",
+        "stars": 5,
+        "text": "医师技术还蛮好的，价钱也不贵👍🏻",
+        "publishedAtDate": "2025-02-17T03:50:42.457Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jia Jean Loh",
+        "stars": 5,
+        "text": "医生洗牙很专业价钱公道，前台服务员很友善",
+        "publishedAtDate": "2024-12-15T04:37:53.753Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "OKR2 k",
+        "stars": 5,
+        "text": "牙医解释我牙齿的情况解释得很清楚，洗牙也很想有效率，还有polish牙齿😆挺专业的👍",
+        "publishedAtDate": "2024-12-14T09:08:52.134Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bao K",
+        "stars": 5,
+        "text": "Efficient service from the doctor. No hard sell and anyhow recommend to blast your bill.",
+        "publishedAtDate": "2024-12-14T09:08:10.259Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AFSC_Oeu79vFoulf24dqvpFMFp4jJqXdVd00o9yGqpJ_YF5UK5WP3oQBzoL1Inl4Ps28Xmw-Pq83hnNYyz8mkxVaG4j_SuXtnwkh0hi6afexxw-mIjb9-Rh3JPoPm0Chza-ZlP"
+        ]
+      },
+      {
+        "name": "karis chew",
+        "stars": 5,
+        "text": "很好👍",
+        "publishedAtDate": "2024-11-30T06:42:27.075Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "67a, Jln Mutiara 1/9"
+  },
+  {
+    "title": "Klinik Pergigian Irma Ariandi",
+    "website": "http://www.drirma.com/",
+    "latitude": 1.4976998,
+    "longitude": 103.7433078,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "16:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "12:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "16:30"
+      }
+    ],
+    "slug": "klinik-pergigian-irma-ariandi-dental-clinic-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJEZ47NGht2jER3-s_Ubig95E",
+    "phone": "+60189004980",
+    "permanentlyClosed": false,
+    "address": "Plaza Larkin, Larkin, 80350 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Larkin",
+    "city": "Johor Bahru",
+    "postalCode": "80350",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": "Plaza Larkin",
+    "reviewsCount": 68,
+    "totalScore": 3.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNeyvYZIJg64_XyGsE_as0KU6pBKHbCtJRUX51m=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPgeQANx0pNB7cl1y-T0ifB-pzsoqJD5Rb71Km3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM79XugbTOV0c-kwjdoBObochQ0hFIRXyv3iozE=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMdy2XmbRM8A9ora6OwPcuT-U--2HGw1mvqfxe6=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "liew wanwan",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2024-08-14T07:32:29.794Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Christine violet",
+        "stars": 5,
+        "text": "May I check with you the price of orthodontics treatment ?",
+        "publishedAtDate": "2024-06-12T15:30:50.267Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kang patrick",
+        "stars": 1,
+        "text": "The queue system have some issues. Because not a proper way for queue when clinic closed and patient reach early. I face a situation when I arrive on 1.30pm (Clinic open on 2pm), already have 2 patients seat on the chair, we consider is third. Time around 1.40pm, a group of 3 ladies, just direct stand and Q at clinic’s door and without asking opinion from patient came early. And 3 minute later, another guy just reach also direct queue behind that mentioned group. Is very unfair to the patient reach early and push behind on the waiting queue. I advise clinic to do something about this like have number/tickets system. To avoid this unhappy issues happen. Tq",
+        "publishedAtDate": "2024-05-05T07:14:21.696Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yuan jie Lee",
+        "stars": 5,
+        "text": "May I check with you the price of teeth implants ?",
+        "publishedAtDate": "2024-01-24T08:51:47.585Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sinnn C",
+        "stars": 1,
+        "text": "Lousy service",
+        "publishedAtDate": "2023-12-11T03:45:49.814Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Filzah",
+        "stars": 3,
+        "text": "Klinik ni patut improvise on their appointment arrangement. Setiap kali teman orang appointment ke sana, mesti masa menunggu lama betul. 1 hour of waiting, baik tak payah make appointment. As if semua orang punya appointment pada waktu yg sama (contoh: 2pm) lepastu diminta ikut turn padahal kita datang memang sharp at 2 but still dikira lambat & have to wait for hours? Macam kita tak ada kerja lain pula. Appointment shud make it faster & smoother. Ini tidak, appt at 2, sampai sharp at 2 pun masih kena tunggu berjam. Another issue is, patient braces bertukar doktor? Consult dengan doktor lain, datang appointment dengan doktor lain. Lepastu treatment plan berbeza. The doctor pun unsure apa plan yg sepatutnya untuk patient. How is that possible???? Kita bayar, bukan datang review free free. Sedih ya bila kena macamni setiap kali datang klinik.",
+        "publishedAtDate": "2023-06-11T07:32:59.012Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Juliet Cheah",
+        "stars": 1,
+        "text": "Can you reply to the message?🥹🥹",
+        "publishedAtDate": "2022-10-04T05:25:40.265Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sherlyn",
+        "stars": 1,
+        "text": "Please pick up call !!! I Ady called many times but still no one pickup phone .",
+        "publishedAtDate": "2022-09-06T07:42:48.031Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Plaza Larkin"
+  }
+]

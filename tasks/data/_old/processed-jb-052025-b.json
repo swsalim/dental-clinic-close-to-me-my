@@ -1,0 +1,667 @@
+[
+  {
+    "title": "Dr Wong Dental Clinic (Bukit Indah JB)",
+    "website": "",
+    "latitude": 1.4775373,
+    "longitude": 103.6504248,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "17:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "dr-wong-dental-clinic-bukit-indah-jb-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJRd4o93HZLQgR5UnU6zVdnKA",
+    "phone": "+60108268810",
+    "permanentlyClosed": false,
+    "address": "54, Jalan Indah 8/15, Taman Bukit Indah, 79100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Bukit Indah",
+    "city": "Johor Bahru",
+    "postalCode": "79100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 219,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPpO3AHmE9EZk6l5v90vQie_O_YoETHWU-TYDoI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noaG22YJ_myHZqChVS5Z2P4zyFJdpaLtezbZ-Md7gxqUOuSnPZ_lZQvCF3yJxasV3iZDxX_fLuXqcYD8xucpIkvbJaUbrCblnX4cpsia0NH4Omjr1yS9OcwYkSrQvZk8vinux2Lyw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOkXaL0y1nTbTXVB6yzO1l49tajmuEXUOCZXh_8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nobRRYug3ERtMpqmUxwaJc7ipGppUOAYYzRXJTcNTIBZQKS69P-fyzjCpEwN7Zw8S6lt7VlIh5NFX_tNPrlwK-tJknn4jCdkB7KcthTZkFyyld5A9hVcHvoK1OJNr5HykwDXzgISA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nogXh7BI5gj0G1yYLG3-wn-f5Nr7kp0S1cMfemu_rU88QMaOoVSDDOxm7-DIfyxcDTM0pARRGApl0TslmPJiUS21LNV8nU3MSA4z4OAe81AzuFdVFFgyNNifFZo8KzmHFqHh8Ok2A=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "AHMAD SAZAL",
+        "stars": 5,
+        "text": "Excellent! The root canal to my molar was done with minimal pain, and the filing works done comfortably. She explains every steps or processes clearly to me.\nAll the rates are also reasonably priced.\nFrom now on, she will be my one only dentist.\nThank you Dr Wong for the great service.",
+        "publishedAtDate": "2025-05-04T10:58:21.078Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ben Tan",
+        "stars": 5,
+        "text": "I had a root canal treatment done by Dr. Wong for one of my molar teeth, and I couldn’t be more pleased with the experience. From the start, Dr. Wong was professional, gentle, and thorough in explaining the procedure, which really helped to ease my anxiety.\n\nThe treatment itself was smooth and almost painless — I was surprised at how comfortable it turned out to be. Dr. Wong clearly takes pride in her work and made sure everything was done with great care. I also appreciate that her clinic maintains very reasonable rates even with the latest equipment.\n\nIf you’re looking for a dentist who’s skilled, kind, and honest, I highly recommend Dr. Wong Dental. Thank you for taking such good care of my dental health!",
+        "publishedAtDate": "2025-04-22T09:17:06.972Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Rubby Soh",
+        "stars": 5,
+        "text": "细心与专业，推荐",
+        "publishedAtDate": "2025-04-11T08:39:47.671Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Glenn Lee",
+        "stars": 5,
+        "text": "I had a great experience with Dr. Wong. She provided a clear and detailed explanation of my tooth issues, making sure I understood my options. The procedure was done quickly and gently, ensuring I was comfortable throughout. Highly recommend her for anyone looking for a skilled and caring dentist!",
+        "publishedAtDate": "2025-04-01T10:36:30.778Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Soo Khun Chung",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-25T08:53:08.860Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ANDREW TAN",
+        "stars": 5,
+        "text": "Excellent services with a gentle care and treatment.",
+        "publishedAtDate": "2025-03-20T22:20:17.175Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Freedom Office",
+        "stars": 5,
+        "text": "Very good and beautiful doctor, patient , explains every details, careful, gentle. I don’t even feel the pain when the LA was injected to numb my gum… one of the best experience.\n\n“ crack molar”",
+        "publishedAtDate": "2025-03-14T01:57:27.702Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jonathan Chow",
+        "stars": 5,
+        "text": "Went for my first scaling and polishing appointment in years. Was very impressed by the professional and calm treatment provided by Dr Wong.\n\nThe session started with checking the condition of my teeth, which she demonstrated to me with live video/photo, which I was surprised to see! She then clearly explained what follow-up treatment she recommended in future. During the scaling and polishing, she also clearly explained each step, and also assured me that I could stop the treatment at any time if too painful. Dr Wong and her assistant were very patient and kind throughout the session.\n\nWill definitely recommend and be returning myself! A very positive experience! 🙏🏻",
+        "publishedAtDate": "2025-02-25T07:58:32.680Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "54, Jalan Indah 8/15"
+  },
+  {
+    "title": "Deluxe Dental Clinic JB Mount Austin 新山牙科",
+    "website": "https://deluxedental.com.my/",
+    "latitude": 1.5498201,
+    "longitude": 103.7834656,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "20:00"
+      }
+    ],
+    "slug": "deluxe-dental-clinic-jb-mount-austin-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJ8VlvKgJt2jERBMlrelC3Gxo",
+    "phone": "+60178341168",
+    "permanentlyClosed": false,
+    "address": "31, Jalan Mutiara Emas 10/2, Taman Mount Austin, 81100 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Mount Austin",
+    "city": "Johor Bahru",
+    "postalCode": "81100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 195,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noKUvnQjk37oq1y5YYA8bkdYhEbHhOGaRJkXRB3QIj8uh36UKAqZZHuzJHahZM2kFmGzs-pNAk0NohGf_2XKDzQDvDyrbGlE__Ahi5u-W5udff4WbA6vJ9OHqxXHP3JAe7-0AMUIg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npIBep8zQGndAERkcCdNRVf3xw0ZGL9MxW7PxShs7z1pp3J0c71YkXiKSTtVBgDuDmpc-6KYpMMHfh_KZoJDUrGGATVn3idaZp7SbY2wuHU2AErsgMHxDBlI-EwUWVjfYiL1PNL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq37mk8aFOvQ_RpICZBCXrhbt0xq1nHIy6pl1fAmEd-OiURukAQzOfgLtY48KGBpJ6Pvl7aIuBv1qSq5RZc7EgrtqijtpwbZlR9bCydCwcW2jt-EnNWQL0PY7y1zadoqpOGL4Th=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noo5uNG7UeuNUgyBsCXejuVt2Jx3wI1xghoxoqfb3xX_sv2TjBX-6kGRUrD0WN-cgrP7W-p7Il2NVTk9nA6ML882d2JYb4h3S7HzQaSpibc6915KH-GBcPPjqH4wONx7qEPCtJWYQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPFydaWrFcUJGlDQPtCP4dJYAVOY5UnJCwGZ3Yd=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "YG Poh",
+        "stars": 5,
+        "text": "I had a great experience with my scaling + polishing. Dr Kang was very attentive, explained everything clearly and did a thorough job.",
+        "publishedAtDate": "2025-05-05T00:27:51.946Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chin Edwin",
+        "stars": 5,
+        "text": "真的没有想过洗牙和美白牙齿可以那么轻松，过往都洗到都有恐惧感！因为很痛  。Deluxe Dental 这里的医生真的太厉害了！",
+        "publishedAtDate": "2025-04-24T05:13:37.276Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "vini eng",
+        "stars": 5,
+        "text": "Dental very professional ,good experience for the appointment today .Whitening teeth",
+        "publishedAtDate": "2025-04-24T05:08:59.394Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BCRQUrCiekboUpZ8V8rgq42Xo06wiOleRtGUf_nOlrs5cB8zLRqLxvRsIxpG9m8U60sA9ZZlJdFgcXFvsrMK01cfKnKjpmcT_NFN1xKzoGVI3Y-6PVXkN2srz5E1GH8w80tlE",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Aa49vhQjp2W62LA3iB0AH4D4FbtjT9exP6piJ0_X-bGmLIdc946EcE8_0GClb2pT_QcrRBanrgl_s29QB58sO84VjTKNinIRCK21wrPS_cofHuvSmeRF_wM6qkLMmcffmRxpsH"
+        ]
+      },
+      {
+        "name": "Zj Kok",
+        "stars": 5,
+        "text": "The female doctor was very kind and patient while extracting my daughter's tooth. Thank you.",
+        "publishedAtDate": "2025-04-20T04:37:57.773Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "yong xing",
+        "stars": 5,
+        "text": "服务好 洗牙也很干净",
+        "publishedAtDate": "2025-04-19T08:20:06.445Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "George Suthes",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-19T05:16:38.721Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kayalvili Gnashanmugam",
+        "stars": 5,
+        "text": "Did scaling, filling,  xray & wisdom tooth extraction.  Dr Kelly was very attentive and caring. Been doing scaling for many years, but this is the very 1st time my gums didn't bleed!!!\nHIGHLY RECOMMENDED!!!",
+        "publishedAtDate": "2025-04-08T11:35:19.609Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Kok Tee",
+        "stars": 5,
+        "text": "年轻帅气的医生，体贴细致的技术，值得推荐",
+        "publishedAtDate": "2025-04-07T03:39:33.071Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C_y888L7573gS387NSoDPDbKg8lZahouS2MaKDTj0PKYGSUEjMC0DcXDbVbVG9gS7YCSJ0kWSqgh7pHLSpEn_WiDilN3FaxIBa-dQlCiJB4oqtHCX0Vi_D53wxvNAyBl7pPiVO"
+        ]
+      }
+    ],
+    "street": "31, Jalan Mutiara Emas 10/2"
+  },
+  {
+    "title": "Klinik Pergigian Medini Sentosa",
+    "website": "https://www.medinidentalgroup.com/",
+    "latitude": 1.4930858,
+    "longitude": 103.7682566,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-medini-sentosa-johor-bahru",
+    "skip": true,
+    "placeId": "ChIJV6Y4xiNt2jERkMktgH-p63M",
+    "phone": "+60148002000",
+    "permanentlyClosed": false,
+    "address": "25A, Jalan Sutera, Taman Sentosa, 80150 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Sentosa",
+    "city": "Johor Bahru",
+    "postalCode": "80150",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 129,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipM0hB5dopPNIdUV4bwSrmMaqycf_IrwtnYb28y0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNSK2RAlWWzMxAqngeJW_uuRVzrbR1OoPxiS6yx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOzirMhixFvpgyztPUHrunNsxys2VtBNHV3RcdM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMPRrZjx4vRBJRaFzneJ83xd4VCkUn2OFoDNYDU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOi1HgFHppJ9YkzH_qcIJByYNTd3ERxiRXC9Rll=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Muhammad Salahuddin",
+        "stars": 5,
+        "text": "Nice environment and friendly staff. Hughly recommended !",
+        "publishedAtDate": "2025-04-20T07:28:25.927Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pikat Kecut",
+        "stars": 5,
+        "text": "nice service . recommended",
+        "publishedAtDate": "2025-04-19T09:27:34.646Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mieshazakaria 17",
+        "stars": 5,
+        "text": "Staff yang friendly , klinik yang selesa. Love 🫰🏻",
+        "publishedAtDate": "2025-04-19T09:13:58.244Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hazeeq Rahman",
+        "stars": 5,
+        "text": "very satisfying and the service is really solid🥰👍",
+        "publishedAtDate": "2025-04-19T09:11:21.297Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syafiqah Syafie",
+        "stars": 5,
+        "text": "Really recommended , Service Dr dan staff sangat bagus 👍👍",
+        "publishedAtDate": "2025-04-19T09:03:45.682Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "faiqah batrisya",
+        "stars": 5,
+        "text": "servis bagus, klinik bersih  ,  staff fikri dan dr sangat friendly 👍🏻",
+        "publishedAtDate": "2025-04-19T08:56:59.911Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tan Hing Yoon Bobby",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-04-14T02:46:06.462Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SELVAPANDIYAN",
+        "stars": 5,
+        "text": "Good experience",
+        "publishedAtDate": "2025-04-13T08:20:18.173Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "25A, Jalan Sutera"
+  },
+  {
+    "title": "Light Dental Clinic Eco Botanic",
+    "website": "http://lightdentalclinic.com/",
+    "latitude": 1.4404905,
+    "longitude": 103.6184479,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "light-dental-clinic-eco-botanic-iskandar-puteri",
+    "skip": true,
+    "placeId": "ChIJuR1f3tIL2jERuo6gNCo3GF8",
+    "phone": "+6075102495",
+    "permanentlyClosed": false,
+    "address": "22, Jalan Eko Botani 3/2, Taman Eko Botani, 79100 Iskandar Puteri, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Eko Botani",
+    "city": "Iskandar Puteri",
+    "postalCode": "79100",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 160,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOHH_HzNqb09g40s9dbNlAgBH1VcdwrBuwTDJyR=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMxvmlwOQZhJrR-NnC9U6ybom2S5YOOBfpr3jzA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPtPRo7xi_7uVRcWpUGUMzmYHN4gJ5HteD3gDfl=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNo1ZFP83S2-pZ2ez1VjSlYZ6r9nwoOxtAdGzSA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipORn1VQ8BnrnsytFlHiXJvdASxWT6yIm3ltjA7R=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "杨哇啦",
+        "stars": 5,
+        "text": "很棒的体验。我去做根管治疗，当天完成了X'ray和根管治理术，Dr.Chow很耐心，英语和华语都十分流利，全程几乎无任何不舒服。诊所环境很清洁，服务人员也很Nice。可以使用支付宝和刷卡。推荐！",
+        "publishedAtDate": "2025-04-23T13:03:42.762Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "芷谣林",
+        "stars": 5,
+        "text": "Friendly receptionist and very effective clinic",
+        "publishedAtDate": "2025-04-07T13:27:14.581Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Junnie Wong",
+        "stars": 5,
+        "text": "Recommended dental clinic to do root canal treatment and crown👍🏻👍🏻",
+        "publishedAtDate": "2025-04-04T07:39:00.618Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Grace Chong",
+        "stars": 5,
+        "text": "My second visit here. Done the teeth whitening with Dr Koay, she is very caring and experienced, happy with the result. My teeth so white now and clean. Customer service is very responsive too. Suggest to pre arrange the appointment as is quite full. Highly recommended :)",
+        "publishedAtDate": "2025-03-29T08:50:34.733Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90C-MACxNSW8MJFG1XSIIFVYkB0feIpb9UxCFihSI1Nv78w9RvkgzgNalleymeJT4Daa9mzlQsKGOlSlvNK7ot7h4qoQuoM26RwDknZX3JLk4kU8uVvb5uWBzE8LpVGkiov7rzzSXQ",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DJifDnuhG53szRCY8P8WkOvtUzGphYh7UCn0eL5lGpHfpih5r2P-E-Ymb9FpqChqYOoCYNf4K5LN4IVQ8Md8OA4OlYGmSlboD8xubHu6r10WIukSAss3vJRsbn436uJoCpmxeU"
+        ]
+      },
+      {
+        "name": "Alvin Chan",
+        "stars": 5,
+        "text": "Fantastic dental clinic with modern technology.\n\nFriendly staff and even accommodated my walk in appointment.\n\nWill come back here again.",
+        "publishedAtDate": "2025-03-26T05:01:48.303Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CfZKesC6W_MoA9DhC-93C0yeonBxyUoBFejrwcQTZx_FCOSv5Mu50ey2yFSCWhra401nM09fat1LDAxxDN5tYDNBIIIgG6IJ6vdPkz9m2JAEoc8sUHUp1ky0s6RrXOr13PL3KJ"
+        ]
+      },
+      {
+        "name": "Tan ziu loong",
+        "stars": 5,
+        "text": "Very professional orthodontist Dr Ng with affordable instalment plan",
+        "publishedAtDate": "2025-03-25T07:57:04.278Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Julie Ann",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-09T08:35:46.226Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Raja Shahrul Eznil",
+        "stars": 5,
+        "text": "Amazing experience ❤️ Staffs are also friendly.",
+        "publishedAtDate": "2025-03-06T06:57:29.940Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90D3eYQJ0EsS5q1Q84h0BO4bbXvCbXu15AkwBBcqE-1HpZ3z4gycUUyZ02Bw6otz_ZTCvdXQI2H35tb6sUF6NA8Rdi51dlpGRY1IlPlp6w7Q4V9e78e22ux0MZ3xdqbMR3XPmqr3LQ"
+        ]
+      }
+    ],
+    "street": "22, Jalan Eko Botani 3/2"
+  },
+  {
+    "title": "Yang Dental Surgery",
+    "website": "",
+    "latitude": 1.4809851,
+    "longitude": 103.7641824,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "yang-dental-surgery-johor-bahru",
+    "skip": false,
+    "placeId": "ChIJD2sf8i1t2jERTBSgzDBuHUk",
+    "phone": "+6073342746",
+    "permanentlyClosed": false,
+    "address": "34-A, Jalan Harimau Tarum, Taman Century, 80250 Johor Bahru, Johor Darul Ta'zim, Malaysia",
+    "neighborhood": "Taman Century",
+    "city": "Johor Bahru",
+    "postalCode": "80250",
+    "state": "Johor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 16,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMg1w6mV7odlxX4AQpgflkPBr7WMLOATCG5V-qy=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM_5BPNwhDoeqegfFMZoEgzKleLbe_IqqmoR9YX=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNXEeFpuJhRfoCTBakdI5NoTufG1q1xfyOnVTja=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "O ng",
+        "stars": 1,
+        "text": "The filling fell out within 3 months. I feel uncomfortable after thinking  as the doctor put his finger with glove inside my mouth with present a nurse when he did the treatment while I go for the same treatment after filling fall out with others doctor didn’t do that. He can use tools instead fingers. Felt like very weird and felt was molested when he did that. And I should voice out that time. Just not recommended as there are plenty of dentist.",
+        "publishedAtDate": "2024-08-28T12:36:43.371Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chee Meng Loh",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-06-21T08:53:12.464Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kexin Tan",
+        "stars": 5,
+        "text": "First visit. Dr Yang is kind and friendly. Paid 200rm for scaling and polishing.",
+        "publishedAtDate": "2024-03-19T05:14:41.428Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "szuchea Liew",
+        "stars": 5,
+        "text": "第一次感觉洗牙不用涂麻药也不会痛，身体也不会紧绷，很细心，下次还会找回杨医生。",
+        "publishedAtDate": "2024-01-11T03:40:23.879Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amanda Chong",
+        "stars": 5,
+        "text": "Very experienced and trustworthy dentist. Treatment is performed without rush. You’re in good hands!",
+        "publishedAtDate": "2024-01-02T07:38:42.316Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sean Ooi",
+        "stars": 5,
+        "text": "医生很细心友善 有问题会耐心解释 很棒",
+        "publishedAtDate": "2022-08-17T09:01:44.107Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mona Thila",
+        "stars": 5,
+        "text": "My mother start going this clinic when young age nw I'm 39years old the doctor service still the best service and care ..the best doctor I recommend to u all.",
+        "publishedAtDate": "2022-07-11T03:09:20.301Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Stef Y.",
+        "stars": 5,
+        "text": "Dr Yang is very patience, gentle and experienced. Definitely one of the best experience so far!",
+        "publishedAtDate": "2022-05-21T08:58:39.964Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "34-A, Jalan Harimau Tarum"
+  }
+]

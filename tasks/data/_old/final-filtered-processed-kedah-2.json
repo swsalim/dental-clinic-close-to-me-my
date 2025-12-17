@@ -1,0 +1,1471 @@
+[
+  {
+    "title": "Klinik Pergigian Dr Jasmine & Co",
+    "website": "https://instagram.com/drjasmineandcodental?igshid=MzRlODBiNWFlZA==",
+    "latitude": 6.3503509,
+    "longitude": 99.7311034,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "20:30"
+      }
+    ],
+    "slug": "klinik-pergigian-dr-jasmine-and-co-langkawi-kedah",
+    "skip": true,
+    "placeId": "ChIJF5Odz5R5TDART82TZhI0Ij8",
+    "phone": "+60127983260",
+    "permanentlyClosed": false,
+    "address": "No 6, Tingkat 1, Bangunan The Smith House, Mukim, Kampung Padang Mat Sirat, 07100 Langkawi, Kedah, Malaysia",
+    "neighborhood": "Padang Matsirat",
+    "city": "Langkawi",
+    "postalCode": "07100",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 360,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipNV6QY_caG2Elms5fN_eTOpw2HffHsoB9A3ejuk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr9N0ag_siynVM6AvcFDaqsSMqQGLvXnBJ2i85yUna7t0z-3vJxbQ-ThlkqprQjfoO2h4i8JH1NOXii1ilIEoOlFLkPdB7G_p3SBsF9duY0csczikZjSCAU-yUW0xQ5eQxpugMM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNqnQ1m0pCJqXxCGJ1TkZZjFdn9fJZBxltgctaf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPUlRJ9x17fEce3xNaNymFYprVzAyOwYZsYykos=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM8VCWkNltOkpTISVeS93TxpDPbaQixB8_3FWax=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "An Lisa",
+        "stars": 5,
+        "text": "Really good service and very friendly receptionist. Dentist is really careful and good",
+        "publishedAtDate": "2025-07-04T08:55:23.112Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Taha Rakurai",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-07-04T07:29:39.888Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lisani",
+        "stars": 5,
+        "text": "The dentist stood out. Not only was she very charming, but also extremely precise and gentle in how she worked. I left feeling well taken care of and confident in the treatment I received.\nWould definitely come back",
+        "publishedAtDate": "2025-07-04T04:36:53.354Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "An's Diamond Hands Team",
+        "stars": 5,
+        "text": "Really clean and professional clinic. Everyone was friendly — from the reception staff to the dentist.\n\nThe dentist was incredibly kind and did an excellent job. Honestly, the level of care and attention I received here was better than what I’ve experienced in Germany. She was very gentle and thorough.\n\nThe prices are also very reasonable and affordable.\n\nI would highly recommend this place to everyone!",
+        "publishedAtDate": "2025-07-04T04:06:49.935Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chef Pitroy",
+        "stars": 5,
+        "text": "Good quality services",
+        "publishedAtDate": "2025-07-01T02:25:32.058Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jojo Ng",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-06-30T02:12:42.526Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hasni Abu Seman",
+        "stars": 5,
+        "text": "Terima kasih kepada klinik atas rawatan yang sangat selesa dan langsung tak menyakitkan. Scaling, polish dan buang lebihan gusi semua berjalan lancar. Layanan pun terbaik!”",
+        "publishedAtDate": "2025-06-29T01:40:01.680Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DcggKWeFxRgg83dqQnOM_I3jsNfmQIlX95HrAKf5FTsf5sN1PShWtkdhzRq9fWYjEUPD2XalKsAJePmDZhGWfKhKCsArHZxbMYj5XqPEAcN58wurVhoS7hxGYqWxRbLR4HBBqTs9ABa9Ir"
+        ]
+      },
+      {
+        "name": "Ayoub Jeddi",
+        "stars": 5,
+        "text": "I really like them service they are so kind and welcoming thank you so much to help me and to make my trip better because I really feel not comfortable when I had the pain in said my mouth your service is excellent. Keep going❤️",
+        "publishedAtDate": "2025-06-27T05:23:28.234Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No 6, Tingkat 1, Bangunan The Smith House, Mukim",
+    "description": "<p>At the heart of Kedah's vibrant community lies Klinik Pergigian Dr Jasmine & Co, a dental practice renowned for its precision in oral healthcare and an unwavering commitment to patient comfort. Specializing in a range of dental services, the clinic is a cornerstone for residents seeking expert care with a gentle touch. The team's proficiency in contemporary dental techniques ensures every visit is as effective as it is reassuring.</p>\n\n<p>Patients at Dr Jasmine's clinic encounter a seamless journey from the moment they step in. The facility prides itself on its state-of-the-art equipment and serene environment, cultivating a sense of ease amidst the stress that often accompanies dental visits. Recent feedback applauds the clinic's careful approach and charming dentists, highlighting the personalized experience that defines the practice. While feedback varies, the consistent theme is one of trust and meticulous care.</p>\n\n<p>The clinic's strategic location in Mukim amplifies its appeal, offering easy accessibility alongside extended daily operating hours catering to busy lifestyles. This dental haven not only garners praise for its clinical expertise but also for fostering a friendly rapport with patients, reflecting its integral role in the fabric of the local healthcare landscape. With each thoughtful interaction, Klinik Pergigian Dr Jasmine & Co reinforces its status as a trusted partner in dental wellness for the Kedah community.</p>"
+  },
+  {
+    "title": "Jalan Putra Dental Clinic",
+    "website": "https://m.facebook.com/KPJalanPutra/",
+    "latitude": 6.1362185,
+    "longitude": 100.3420128,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "15:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "jalan-putra-dental-clinic-alor-setar-kedah",
+    "skip": true,
+    "placeId": "ChIJj6F6F6VESzARvP09oXHyPoM",
+    "phone": "+601115034650",
+    "permanentlyClosed": false,
+    "address": "Klinik Kesihatan Jalan Putra 05150 Alor Setar, Kedah, 05150, Malaysia",
+    "neighborhood": "Kampung Mergong Indah",
+    "city": "Alor Setar",
+    "postalCode": "05150",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 34,
+    "totalScore": 3.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqg2XoQu72TRE6kYesL7TaIScAI2dF2F7de0h0hdjmroRHfQqamiLxSAi6vpL93C9UOOouhqjjlyMGFZ3mMguDX_th-hu_P_rEpPLLFED7rt__Tbcz85KqyYSGzztw3yNmEZgOk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrCdMi2sBcEVOrdGESn6nrcdL4Rq8H153IRleUpVBtPM8arHuomGXGq2n16KmVNti1L4TPMIOu6JqdxlRB6xH2szCIXiMDVhuOtgFE60rP8FtNrIuQ-YmESWhmWklZTcuVdN_nt-w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noDheRjpKS6Dhh86GiyVwccePoowpsZJ1hPzEW59cYfO8T7MqC1ju7DAc8THCawlchSGmdBl583jUmrGTaMqDjX3E0D0zC-StuC1xMNtbgXoMbxz4ZILlY2nKZlThgJlq9WeO77=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrJWM8h_zRtS8TJlQclU6Y_MbRKfNIjOD2JRPY33v5dCIcCzD_L_ZosqoxwGzOJQI3xBgJCKFfdBx8hgoQ1hYJkVfzHKQNE5B1E2ZvsZSs6bYZPXW18iIz9igpXGvsJny31s6dm=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nprWjDW88GiTtNsjz2MSqoemYMPDhY5X2S1J10OTgH6bX5f7jJzFWUl_HvrvmOkomXSxWpfcRhp9MLbLND_P0cMpv2Njmtvm3nDmilthsyyXqMZ1zAoqYJOz3jb14hQKLIwt1Rqjg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ayaya Kamisato",
+        "stars": 5,
+        "text": "Sy datang walk-in dengan gusi bengkak lega sebab dapat rawatan segera Doctor yg rawat saya juga skillful. Memang terer Dr Nuha yg buat rawatan scaling akar tak sakit sangat dan cepat.",
+        "publishedAtDate": "2024-06-06T02:47:07.312Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SumayyahAdriana Ahmad",
+        "stars": 1,
+        "text": "No fon ni Knp call tiada dlm perkhidmatan",
+        "publishedAtDate": "2024-04-28T06:38:47.531Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siti nur Zulaikha",
+        "stars": 5,
+        "text": "Nak tanya kalau pasang braces untuk student berapa harga dia",
+        "publishedAtDate": "2023-12-03T10:29:39.412Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "hashimato arian",
+        "stars": 1,
+        "text": "Hari ni rasa terhina dngan staf klinik gg ni.Dlm akaun xdak duit tp ada cash.Boleh dia perli aku.Aku memang bukan staf faderal.aku cuma staf kerajaan negeri ja..apa2 pun fungsi kita sama.Jngn la ckp lebih kurang.Jngn ada niat nk menyinggung perasaan org",
+        "publishedAtDate": "2023-03-22T02:17:57.844Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hafizam Ridzuan",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2020-03-18T08:44:33.014Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "fryss chan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-02-09T01:39:14.053Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Hobo Ventures",
+        "stars": 5,
+        "text": "Filling tooth is so easy and no pain at all. Doctor are so professional and friendly. Love the vibe there too. Thank you so much.",
+        "publishedAtDate": "2020-01-30T04:29:43.672Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90DhPaXaHNoajn6M34C7nvAeX4nTZVe-WQozkCwzoJuPZArWofPd12Olt4DPea85oe1zOJx_y_Vypfh8FMw3XcRrkLDm2EYDY2tkceLYtPx_LM_ZlUDJno-pcxInCrNrudNf2IY",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Cocwx3SME5lou2mKc5kXFBckImNLN_cS_IiYziwICBrPst1LumkkAJNHATzAmmAr4BZg6x1dAMRVbZnimO4TcnoDtDC56GyZFbeyYTcXRsMHskqAAOy3GGH4KahgjQf4UglTs"
+        ]
+      },
+      {
+        "name": "ChewSW",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-01-27T05:15:36.453Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Klinik Kesihatan Jalan Putra 05150 Alor Setar, Kedah",
+    "description": "<p>At the heart of Alor Setar, Jalan Putra Dental Clinic emerges as a dedicated center for dental excellence, where personalized oral care meets cutting-edge treatment. Specializing in addressing acute issues such as swollen gums with prompt services, the clinic stands as a testament to responsive dental care, attuned to the urgent needs of the community.</p>\n\n<p>The patient journey here unfolds with efficiency and empathy, from walk-in convenience to the skillful hands of their dental professionals. The clinic's environment is designed to alleviate the anxiety often associated with dental visits, fostering a sense of ease and comfort. Recent feedback underscores the proficiency of the staff, though it also candidly points to areas for enhancement, such as communication channels, reflecting a commitment to transparency and continuous improvement.</p>\n\n<p>Strategically positioned in Kedah's bustling hub, this clinic is not just easily accessible—it's an integral part of the local fabric. Balancing technical expertise with genuine patient care, Jalan Putra Dental Clinic is a cornerstone for oral health in Alor Setar, consistently updating its practices to serve its community better while ensuring every smile it crafts is as vibrant as the city itself.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Darul Aman - Alor Setar Mentaloon",
+    "website": "https://www.facebook.com/darulamandental/",
+    "latitude": 6.1619708,
+    "longitude": 100.369171,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-darul-aman-alor-setar-mentaloon",
+    "skip": true,
+    "placeId": "ChIJ57iF56ZbSzARa6K_VX5rdLw",
+    "phone": "+6047300041",
+    "permanentlyClosed": false,
+    "address": "No. 11, Tingkat Bawah, Plaza, Mentaloon, 05250 Alor Setar, Kedah, Malaysia",
+    "neighborhood": "Mentaloon",
+    "city": "Alor Setar",
+    "postalCode": "05250",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 55,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrrOfrIOkFa5juD3oLxXL4MxYSBIcFiBU6pvqA1voU-7ypmqazicmG9IgbS9R6QfWmhzNKcLxUB-bes4f1DFXKTmhhPnuRhCh9Q5MYS29fNvRcUbUHMVmVFo7FTmXIZjwHSmsq5iA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqYqMBGL_x7loIbfeRzOlsTGR24dibQZ-MaFQas4SxeEtaAA4M88hzgexvFuD84GBpSG2ILsfDCwfV8p5M_u0QnPAqfdAI68hPsZXpjgh8-9XstHoeG5NxKYRsrxbwqIEwQqYIG=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOEcJVC3nV8VEko0OHTI-viLevCotEht16odidr=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=64ISn8o26enreUQmflDHsA&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=56.079613&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Amani Sahat",
+        "stars": 3,
+        "text": "Service makin merosot berbanding tahun 2024 dan staff unfriendly.",
+        "publishedAtDate": "2025-03-23T10:51:49.951Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "saiful anuar",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-09-15T02:48:48.885Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nurulaizzah mohd fuad",
+        "stars": 5,
+        "text": "Service terbaik! cepat dan efisien.",
+        "publishedAtDate": "2024-08-27T02:18:16.523Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Atikah Uzma",
+        "stars": 5,
+        "text": "Service mantap!..Dr & staff semua friendly, overall sangat memuaskan😊👍🏻",
+        "publishedAtDate": "2024-08-06T12:55:59.030Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nurul Ashikin",
+        "stars": 5,
+        "text": "Perkhidmatan sangat baik dan penjelasan yang jelas",
+        "publishedAtDate": "2024-07-30T00:48:04.093Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sabaruddin Kamaruddin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-07-17T03:23:23.477Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Farah Azizan",
+        "stars": 5,
+        "text": "Klinik yang bersih,selesa.Doc dan staff nurse pun layan dengan baik.👍",
+        "publishedAtDate": "2024-07-14T04:31:38.139Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shakir Mohamad",
+        "stars": 5,
+        "text": "Mantap n terbaik",
+        "publishedAtDate": "2024-07-14T04:08:45.171Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No. 11, Tingkat Bawah, Plaza",
+    "description": "<p>Amidst the bustling streets of Alor Setar, Klinik Pergigian Darul Aman stands as a dedicated dental care provider, committed to maintaining the oral health of its community. This clinic is an integral part of Kedah's healthcare fabric, offering a range of specialized dental services tailored to meet the needs of every patient.</p>\n\n<p>The patient experience at Klinik Pergigian Darul Aman is a blend of professional excellence and swift service, as echoed by recent feedback highlighting their \"service terbaik! cepat dan efisien.\" While some have noted a dip in service quality compared to previous years, the clinic is responsive to such sentiments, striving for continuous improvement and ensuring that each visit is met with expertise and care.</p>\n\n<p>Open daily from 10 AM to 6 PM, the clinic serves as a reliable healthcare partner for Alor Setar residents. With its convenient Plaza location, Klinik Pergigian Darul Aman remains steadfast in its mission to provide exceptional dental care while nurturing its relationship with the local community through attentive service and a welcoming atmosphere.</p>"
+  },
+  {
+    "title": "Drs.Wong & Partners Dental Surgeons - Legenda Heights",
+    "website": "https://drswongandpartners.com.my/",
+    "latitude": 5.6629273,
+    "longitude": 100.5027241,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "drswong-and-partners-dental-surgeons-legenda-heights-sungai-petani-kedah",
+    "skip": true,
+    "placeId": "ChIJkeiKN9wpSzARrxeZzt--v0A",
+    "phone": "+60128227869",
+    "permanentlyClosed": false,
+    "address": "Ground Floor, 196, Jalan Legenda 7, Lagenda Heights, 08000 Sungai Petani, Kedah, Malaysia",
+    "neighborhood": "Lagenda Heights",
+    "city": "Sungai Petani",
+    "postalCode": "08000",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 17,
+    "totalScore": 4.5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMnC9zF7Ry4CeS7FnKlGQDEczUGJmctbhip7P3h=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipO3i8KEKfi0h_CKeoN8-jFMH-YFZu5stASK_6Xv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nopIKknd4DgSh37pOqIKphfNpSStqKAxcX5DvYDoKF902sPvJwRvaa1m5QJAdwGAXx9r8xJ_67DmT3jC4TS4vkeSvsfYZSr2YjTtOfI-zl_9QbJwUygCjI9faze3FF72iNmft5z_g=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMpoiX49-2sf6a87WWb_y5rbS8sdhJNRWt8HPPI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOukXb76PPnC36nTNJFtW1cClw4w90YsSFSo48F=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Andy王愛迪",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-28T18:26:55.404Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yusri Jamalut",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-11T12:40:10.109Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ganesan Kunyambu",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-01-06T12:12:25.331Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kai Shin Tan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-01-04T10:07:19.251Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Nazrul",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-10-21T06:32:49.033Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Muhd Nazrul",
+        "stars": 5,
+        "text": "Klinik gigi terbaik dan staf sangat peramah",
+        "publishedAtDate": "2024-10-14T07:49:40.858Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "kamal46669 suppan",
+        "stars": 5,
+        "text": "Very good dental service! Highly recommended👍",
+        "publishedAtDate": "2024-05-07T06:15:59.396Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "thiagan suppan",
+        "stars": 4,
+        "text": "Dr Salahuddin was friendly and gave good explanation on the procedures.",
+        "publishedAtDate": "2024-05-07T06:11:58.095Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Ground Floor, 196, Jalan Legenda 7",
+    "description": "<p>At Drs. Wong & Partners Dental Surgeons in Legenda Heights, patients receive comprehensive dental care that is both advanced and compassionate. Specializing in a range of oral health services, this clinic stands out for its commitment to dental excellence, offering everything from preventative care to complex dental surgeries. Its state-of-the-art facilities ensure that each patient's smile is nurtured with the utmost precision and care.</p>\n\n<p>The patient journey here is designed for comfort and efficiency, with a focus on minimizing anxiety associated with dental visits. From the moment one steps into the serene reception area, to the time spent in the modern treatment rooms equipped with the latest dental technology, the experience is tailored to individual needs. Despite the absence of explicit patient testimonials, the clinic's extended operating hours reflect a dedication to accommodating busy lifestyles and providing accessible oral health care to the community.</p>\n\n<p>Conveniently located on Jalan Legenda 7, Drs. Wong & Partners Dental Surgeons serves as a vital part of the Kedah healthcare landscape. The clinic's position ensures easy accessibility for residents seeking top-tier dental services close to home. By maintaining an authoritative yet welcoming presence, this facility contributes significantly to the overall well-being of its community, proving that professional dental care can indeed be both local and exceptional.</p>"
+  },
+  {
+    "title": "Klinik Pergigian Bandar Puteri",
+    "website": "",
+    "latitude": 5.6174801,
+    "longitude": 100.5352107,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-bandar-puteri-sungai-petani-kedah",
+    "skip": false,
+    "placeId": "ChIJBQdVldXVSjARu2f5DB0z3Ys",
+    "phone": "+60104476191",
+    "permanentlyClosed": false,
+    "address": "No46, Klinik Pergigian, Tingkat Bawah, Jalan Bandar Puteri Jaya 1/1, Bandar Puteri Jaya, 08000 Sungai Petani, Kedah, Malaysia",
+    "neighborhood": "Bandar Puteri Jaya",
+    "city": "Sungai Petani",
+    "postalCode": "08000",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 55,
+    "totalScore": 4,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np46Go2B_q3vmOywtjetYXpU8QL2Sys4DqErLTURKAhNVYnZ0N1BA0tFUqSz8EVIaxaqVCbLx3RG2qNunvvEnSmKZoMhKi_ojD2vyV3CO2bW6DEZ-Edtautzh80PHHLMHuKWpF3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrcotEwA4WWwZZcsFirL32qkygfbJRRGG_alcgm3kJMaTqIDfK8uwDxeJwuNVoxlHmUJAy9S7iopo2b6STsb2PRd-89qta3cySipDtxqjZJlgb7bxXjh2nYdX3ln6XaRoL1OeO8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noMuma-EgGnbt8xQIn_37_4e77vXIH1UW8ddB-r5icjWj26Kr32Tq-DBdcCuEY0b7ThrekXqezyVRxyOxQ1M4OvqAyWZZIgFOUPPqpQ6fH-naxc3IJz_tJyzAzSq8Qv7_oZJJMl=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npUOie1sDnKHVQJa6f9654yX8Yvykn2vqEtz2xZwFO7027GDwBulE-3BUHSMvrxFr37KKryfhzbO9e5nzuAsQOTJO-eNsPSR85VG-DKTKm5J2R5bsBycNpf0UAhqHl8tqv_krav=w1920-h1080-k-no",
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=cPTnVt3ooyozglZfPx0zzA&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=277.27975&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Aliff Dani",
+        "stars": 5,
+        "text": "Servis yang cepat, staff dan Dr yang ramah dan sangat membantu dan memudahkan urusan. Terima kasih. Recommended.",
+        "publishedAtDate": "2025-05-27T04:24:35.212Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nor Azimah Ahmad",
+        "stars": 5,
+        "text": "Best sgt mai sini murah cepat dan doctor friendly sangat.. anak langsung tak nangis..",
+        "publishedAtDate": "2025-05-14T03:06:58.775Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ecah Pipit",
+        "stars": 4,
+        "text": "Hari Wesak ni bukak x?",
+        "publishedAtDate": "2025-05-12T01:08:38.249Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zulkarnain Ismail",
+        "stars": 2,
+        "text": "the receptionist staff is not so friendly. maybe can implement to greet every customer that come in the clinic, it will only take 2 seconds of your time and oh, it is free to smile too so that the every customer feel welcome.",
+        "publishedAtDate": "2025-05-08T06:30:04.026Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Azwan Azman",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-20T01:55:44.094Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Esa Eswari",
+        "stars": 5,
+        "text": "I'm satisfied with the treatment given by Dr. Divya. Good job doctor. Keep on with your humble angel friendly approach.",
+        "publishedAtDate": "2025-03-16T10:27:09.647Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Vicky Honda",
+        "stars": 5,
+        "text": "Thanks to Dr Uma who treated me well. Satisfied with the service provided and great explanation given by the Dr. Definitely will come again. The clinic staffs also were very friendly👍",
+        "publishedAtDate": "2025-03-11T14:06:45.100Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siva Magendra",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-03-09T08:17:32.608Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No46, Klinik Pergigian, Tingkat Bawah, Jalan Bandar Puteri Jaya 1/1",
+    "description": "<p>In the heart of Kedah's vibrant community, Klinik Pergigian Bandar Puteri distinguishes itself through a commitment to dental excellence and personalized care. Patients stepping into this local hub for oral health are greeted by state-of-the-art facilities, reflecting the clinic's dedication to cutting-edge dental practices. Its accessibility remains a cornerstone, operating daily to ensure residents can easily integrate dental care into their bustling schedules.</p>\n\n<p>The quality of service at Klinik Pergigian Bandar Puteri is not merely clinical but also warmly personal, as echoed by the grateful voices of those treated there. Testimonials frequently highlight the swift, friendly, and supportive environment fostered by both staff and dentists. This patient-centric approach is evident in stories of children leaving with smiles, untouched by fear, a testament to the gentle expertise that defines the clinic's care.</p>\n\n<p>Addressing dental needs with both proficiency and heart, Klinik Pergigian Bandar Puteri stands as a cherished part of its neighborhood. Feedback from the community often centers on the convenience of service, even on public holidays like Wesak Day, demonstrating responsiveness to patient needs. Through integrating genuine patient experiences with a narrative of trustworthiness and convenience, this facility continues to be a cornerstone of dental wellness in Kedah.</p>"
+  },
+  {
+    "title": "Padang Matsirat Dental Clinic",
+    "website": "https://www.facebook.com/share/1E9cRFi9qi/",
+    "latitude": 6.3500789,
+    "longitude": 99.7312752,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:00",
+        "close_time": "15:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "padang-matsirat-dental-clinic-langkawi-kedah",
+    "skip": true,
+    "placeId": "ChIJX6_NqS94TDARL5L9TSMON5Y",
+    "phone": "+6049553124",
+    "permanentlyClosed": false,
+    "address": "Klinik Pergigian Padang Mat Sirat, 07100 Langkawi, Kedah, 07100, Malaysia",
+    "neighborhood": "Padang Matsirat",
+    "city": "Langkawi",
+    "postalCode": "07100",
+    "state": "Kedah",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 15,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqLBE-R5qpYkKRD95HddwvfyP6L3lHkq-v_-R-2E_c3rqY8rl1MLv5LteAMNlc-7sIfLf1dQ4cKaZzSPDHAOXgRqS2fsR_Tw3zBGDJFYl5BozRCPkXeRJA4b8VAtFh1DIBA15et=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nppJhYThYdO8eu7cMnG1r9bNOZKpxtpxql1aZWi0nFbfLFvaUfsY30Nbfa822NxSfNApli_v5hib4H1Paxe-ORr55GbiZZ12Cxi1NoFl-37xm25Eol1XRU5UyuFMLlCUdwWIt00=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqi8cIxVuTZGMmve872l9OyPbw2vONpkKkkN2zLJQIm_e4KmGYowDLcAqxpJPhxiB3w_COrvK-uqtw4dh8gYKDkqvQ6YuIUZ1qlfovbBdGmEYvE-tKjiAV2xn1mG5B20mtjFDRJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nojRKSIfoyL2nV4igbKg_Kv8CKsJLDop-4ZAEcfWst8YN_RFBmuchLL0tN1p3Y1G0o5mcHoUHqMNoUBjUzRYfFk6ReX5ErK7VK1Z--6CN6_PewgSazUFXDl4KxQguLgGRTyKDkA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrwNZLgjs-Xz5UnWzfIr6JaPy8ceMoJxNeUbTk0XyOSeGflkE-qj5cRzOpyCW_6j1DTo8IHhBsVRqHYc3U73IPVKGCVRzNtJrOxJYTp-g5AC8OEpy7qxd6ms9voTjQL_3YZtCFo=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Saiful Islam",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2024-11-11T00:32:27.279Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fitriah Ruslan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-06-09T17:19:16.307Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amjad Tano",
+        "stars": 5,
+        "text": "Friendly and helpful medical team...clean and sterile place...and good service they provide...thank you",
+        "publishedAtDate": "2024-04-28T16:18:05.267Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohd Zul Effandi Mahamad Ghazi",
+        "stars": 5,
+        "text": "Saya suka staff nme yana tu ckp pon sopan je",
+        "publishedAtDate": "2022-10-02T15:06:56.225Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Myraa Adnan",
+        "stars": 5,
+        "text": "Dtg nk tampaL gigi belubang n sakit Tp temu janji nuuu..bulan 2 hahaa..jenoh lah dok bedendang Sakit nk tgu buln 2 nt 😂",
+        "publishedAtDate": "2021-11-09T11:31:35.500Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BxeV-uc4Ifsqqr8y21a8hAXKYzATuUR7PbB4JL1dlvDnnpRLBXe0-hIJDse5JKdoLc9Zfw8Tb48W7N1AEbOyyy8_-rMtNbIxrPsNKetrAi0nP2S3Cwi7YVhMkBBguUiag1noV2",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90A6Dxc6t5c0U_fc4Ql7vp7CrL2TIP9e00sr_G5oHroX0pnKtA9Xmlkt7v4HJaoyimoDBSxhEHA_QHFxXM2HxZRKEuoQ-PsQuSIyonuvegDzxrnJ_sqRKVeGgNjBkrqoSts2kVUW",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90CsUTNjlc7GwNZhuiXbq14zoly1vyu4gZ_igj-iQEqaMXneaZT0KB-wJS6JJRNXB0NB5b5xV3051uenfWOxRovro3ThoPEOGhMoQkDmZk_jVNrTBRSpH77tsN8e-RD8cwPbQXLNxQ",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90BvQEthVpPhOG_u2DkmOWiuzvpszU9fGd8QOOE29J0aqg9PSHblI9kpcGSY_IL9W65WdOl4mSAZ97oBBE6t8ziquM8QhqF46uiQzg6FLZbV_D0nYF_s_b0-SDQQxR22iFHHwP5a",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Ap4HOlFxIwHdnMqHDPRUZPxoOQzo19tp0Pozy59BiQPZwuEQmTwjdkECizewqXs6rKv4siVSnmzu1pAZR6Qyknl12c22QnSSUAkv3EiUA0sgeKrV2akrO9ZxHhRdtgS4bkSIto",
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90B5adaJC8dmN7CmiU0SMmeJbMt4YtM6rYiMIKk0twQaAdZXeaf0MpztXcN-BkQ0jdJnexKYMkU_Jz2l2mdfs1sPPwh8xkuyr45SnBcg87GYq3kEYU80-85hsPsHW3Fqx1BjgH9j"
+        ]
+      },
+      {
+        "name": "Mohd Yusri Abd Latif are 2 32 r rumah rr",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-12-14T00:13:56.238Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "sharifah nazriah",
+        "stars": 5,
+        "text": "Pleasant all the way from reception to the dentist .",
+        "publishedAtDate": "2020-10-25T05:03:56.038Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "saiful azam",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2020-07-27T12:03:33.446Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "Klinik Pergigian Padang Mat Sirat, 07100 Langkawi, Kedah",
+    "description": "<p>In the heart of Langkawi, Kedah, Padang Matsirat Dental Clinic stands as a cornerstone of dental health, serving the community with a blend of professionalism and personalized care. Known for its pristine conditions, the clinic prides itself on maintaining a clean and sterile environment that assures patients of their safety and comfort during every visit.</p>\n\n<p>The clinic's dedicated medical team has garnered praise for being friendly and helpful, reflecting the high-quality service that extends beyond dental expertise. Combining state-of-the-art facilities with a warm approach, patients of Padang Matsirat Dental Clinic experience a level of care that addresses both their dental needs and personal well-being. Testimonials frequently highlight the thorough service provided, underscoring the team's commitment to excellence in oral health.</p>\n\n<p>Accessibility is key for Padang Matsirat Dental Clinic, offering convenient hours throughout the week to accommodate residents and visitors alike in Langkawi. While there is no feedback text provided, the positive sentiments resonate through mentions of good service and commendations for the clinic's attentiveness. As a local hub for dental care, this clinic not only ensures healthy smiles but also contributes to the vibrant community fabric of Kedah.</p>"
+  },
+  {
+    "title": "KLINIK PERGIGIAN DENTAL REPUBLIK KANGAR",
+    "website": "https://wa.link/2as8pv",
+    "latitude": 6.4075565,
+    "longitude": 100.181945,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:30",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "klinik-pergigian-dental-republik-kangar",
+    "skip": true,
+    "placeId": "ChIJodeK7LWZTDAR2TrHVsMacEw",
+    "phone": "+60198816610",
+    "permanentlyClosed": false,
+    "address": "5, Jalan Kangar Jaya 1, Kangar Jaya, 01000 Kangar, Perlis, Malaysia",
+    "neighborhood": "Kangar Jaya",
+    "city": "Kangar",
+    "postalCode": "01000",
+    "state": "Perlis",
+    "countryCode": "MY",
+    "locatedIn": "Kangar Jaya",
+    "reviewsCount": 141,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqpMK4LiMMfAG-fsh7Fvb_o_ZT9JyWO3lVvoPmJCrvxJb2As0d1y1SY_fKLPsKFYSxPfQv1nb64rDPfU5LGsvb2kIZ6PB-F7GE4CJhxyr4rRP9WIzTFNKXxGX5gWqnVVd9ikolG=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqTWNB8T5MUnJP9d18aRWTcicH9JTkdfB5MmU0Ww2hnFFkhPWbqz0QFM6VC0eNv01C-1nCsAFFFlVfDFf6rSq7ecW2b6UPaLtCL0-sVACgiZ2PWv1vPoGU4uErKCH5uOUVF27jKOA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrPVim_Ir33r2b1glUoc0sic1UHUpXahrlUWdrBn7kK3vx1wtFSp5YShqnGKy_MW1i4ugYyGIJhOeqYovaoeS8WshdknQMcDa1rx0ozNZBiZuWlnFgg8SI9yqBdBr3q55_ilPSQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noNKUFJ9Kl0p9QQ89445nCH1NQg8rAQ2zLueRpvYZ3rxOA84TFbLwu8ko9-xUv5F2EoX85g9HGA-k7medJ8bKriR0N9sqo2ppe-nDHrlfBxi575ss0lfzhiOEpLMc8hqeXcjboSUw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqxjW4FKEgSDnkTaQzdtio3tU1qAu3QTIzYlGJboP295QRmypnCeRCBhcfSKGf40tZO3pVR52QJSPIxO8gey-LYRnnkIG-HGagOPJOXHbK7cQPRb1OCorKVtx_uzF8nz6-2zY_6TA=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Anis Syifaa Othman",
+        "stars": 5,
+        "text": "I’ve been with this clinic since January 2023 for my braces journey, and today I finally got them off—what a ride it’s been! From day one, the team has been incredibly friendly, professional, and genuinely caring. Every appointment was smooth, and I always felt well-informed and taken care of. The clinic itself is clean, modern, and comfortable, which really helps ease the nerves (especially in the early days!).\n\nThank you to the amazing dental team esp Dr Jihan for making this experience such a positive one. Highly recommend to anyone looking for gentle, top-quality dental care. This is easily the best dental clinic I’ve ever been to!",
+        "publishedAtDate": "2025-06-23T04:47:22.061Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aisy Ali",
+        "stars": 5,
+        "text": "Service yang bagus, staff friendly dan sangat membantu.",
+        "publishedAtDate": "2025-05-09T07:40:09.759Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Fatihah",
+        "stars": 5,
+        "text": "Service yang terbaik,sangat berpuas hati dgn layanan,dan harga berpatutan☺️staff dgn dr ramah baik layan customer..klinik dental paling selesa dn service tiptop.",
+        "publishedAtDate": "2025-05-07T03:19:11.226Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nuha omr",
+        "stars": 5,
+        "text": "Alhamdulillah perkhidmatan di klinik ini sangat terbaik! Doktor dan staf mesra serta profesional. Rawatan diberikan dengan teliti dan penerangan juga sangat jelas. Sangat recommended ✨!",
+        "publishedAtDate": "2025-05-06T07:26:53.593Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Amiza Aziz",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-04T02:19:26.951Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "farah wahida",
+        "stars": 5,
+        "text": "best❤️",
+        "publishedAtDate": "2025-05-03T04:03:13.777Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ain Jasmine",
+        "stars": 5,
+        "text": "Servis terbaikkk",
+        "publishedAtDate": "2025-05-02T09:03:17.562Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Nur Husnina",
+        "stars": 5,
+        "text": "Doctor and staff baik, good environment",
+        "publishedAtDate": "2025-05-01T08:38:24.040Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "5, Jalan Kangar Jaya 1",
+    "description": "<p>At Klinik Pergigian Dental Republik Kangar, patients embark on a transformative dental journey, guided by a team renowned for their technical expertise and patient-centered approach. Located in the heart of Perlis, the clinic has become a cornerstone of oral health in the community, offering a spectrum of dental services that cater to individual needs with precision and compassion.</p>\n\n<p>The quality of care at this facility is reflected not just in its state-of-the-art equipment and facilities, but also in the glowing testimonials of those who have experienced their services firsthand. From the start of a braces journey to the satisfaction of a smile transformation, patients consistently praise the professional yet friendly staff, affirming the clinic's commitment to delivering exceptional dental care with a personal touch.</p>\n\n<p>Patients' feedback underscores the clinic's dedication to excellence and affordability, with many highlighting the value they receive. The accessible location near Kangar Jaya adds to the convenience for locals seeking top-tier dental care without venturing far from home. By maintaining consistent operating hours every day of the week, Klinik Pergigian Dental Republik Kangar ensures that great smiles are within easy reach for all its patients.</p>"
+  },
+  {
+    "title": "Klinik Pergigian LeTooth",
+    "website": "https://www.facebook.com/profile.php?id=100089649649457&mibextid=LQQJ4d",
+    "latitude": 5.4512722,
+    "longitude": 100.3046775,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:30"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "19:00"
+      }
+    ],
+    "slug": "klinik-pergigian-letooth-georgetown-penang",
+    "skip": true,
+    "placeId": "ChIJ0V5ipJnDSjARJDOVpefr_o0",
+    "phone": "+60129439820",
+    "permanentlyClosed": false,
+    "address": "98-G-20, Jalan Fettes, Prima Tanjung Business Centre, 10470 Tanjung Tokong, Pulau Pinang, Malaysia",
+    "neighborhood": "Prima Tanjung Business Centre",
+    "city": "Tanjung Tokong",
+    "postalCode": "10470",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 184,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPXugNAGYwm1bVfFyY7iGAkCyxsv1pIhJzJYmzU=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqmFPVLmb6k0q5MfyZf0JMJFcLteaOgHHI23RIO-A4jPt68NPBC3X6VpP4rnxqPlipGD5PAm779Jv7vB3sIhIQinbQpoUiIa1UjG1Vv7C7HtSZTHjwocUdUpdI3vvGhCRGesaNx=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipM2189sfyoMM7fewA_-jyhcSfDkMKcJErX-5tAu=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipP8diyPMkMCVDMR9UAyCudqENXLP43vcmZb_kUf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMQ1IQrTH8Vr_vKyRmLR7AiP0O9GMh4nS0IfX8-=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Aipeng teoh",
+        "stars": 5,
+        "text": "I highly recommend Dr. Lee Yi Rou from Le tooth if you need to see a dentist. I am extremely happy with my root canal treatment done by Dr Lee. Dr Lee is very knowledgeable in his field. He explained in detail the root problem of my tooth. After his treatment, I felt very good about my teeth and did not feel any discomfort at all. Dr Lee and his staffs are indeed very professional, caring and gentle.  Thank you Dr Lee and all the staff of Le Tooth.",
+        "publishedAtDate": "2025-07-04T15:49:27.706Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sandra Warman",
+        "stars": 5,
+        "text": "It's better to make an appointment before walking in. The receptionist and the assistant in charge are very helpful. The dentist is patient and takes the time to explain every step of the procedure. The cost is reasonable for the quality of service provided. Highly recommend this clinic!",
+        "publishedAtDate": "2025-06-30T01:04:21.749Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ooi YZ",
+        "stars": 5,
+        "text": "Dr. Lee is incredibly patient and attentive to when attending my 6-year-old nephew. He took his time to explain each step gently and ensure my nephew felt calm and comfortable throughout. His detailed and reassuring approach really made a difference. Highly recommended, especially for young children.",
+        "publishedAtDate": "2025-06-28T03:56:17.926Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90Cfm6fJD5w0YPQ3KlSxn9uHyXOzEUu_SR87erlirRTAKyhWxoFAgVyx9_0xKLh_ry9jdY8UVBIxOAw1a_1_MTY6kuD4EmSKMNIA_kxShdbkcz4Bt3P2yksSf_5NKWPZ7hgQqk-LLs-Lyo41"
+        ]
+      },
+      {
+        "name": "Igor",
+        "stars": 5,
+        "text": "Very professional staff!",
+        "publishedAtDate": "2025-06-26T05:39:39.307Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "SoHo Ang",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-06-16T02:28:18.024Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Celine Lee Si Ning",
+        "stars": 5,
+        "text": "Got my wisdom tooth extracted here, the experience was really good. Cant really feel the pain during extraction. Dr Lee is professional and soft throughout the session! The whole process from consultation until extraction was really seamless.\nKudos to Dr Lee and the team✨",
+        "publishedAtDate": "2025-06-12T01:33:31.723Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "William Tang",
+        "stars": 5,
+        "text": "I recently visited and had a great experience.",
+        "publishedAtDate": "2025-06-10T05:44:38.390Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Shinna Lim",
+        "stars": 5,
+        "text": "Dr. Lee is very friendly and accommodating to my 7 year old son. When my son knows it's time for him to visit the dentist, he did not reject and looked forward for his treatment.\n\nHighly recommend to bring your children for a checkup with Dr. Lee.",
+        "publishedAtDate": "2025-06-10T05:43:42.871Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "98-G-20, Jalan Fettes",
+    "description": "<p>In the heart of Penang, Klinik Pergigian LeTooth emerges as a paragon of dental care, renowned for its personalized approach to oral health. The clinic's embodiment of professional excellence is exemplified by its lead practitioner, Dr. Lee Yi Rou, whose skilled hands and attentive nature have earned the trust and high praise of the community.</p>\n\n<p>LeTooth's commitment to quality is evident not just in the competence of its staff but also in patient experiences that speak volumes. The clinic boasts state-of-the-art facilities, ensuring each individual's journey to optimal dental health is smooth and comfortable. From routine cleanings to complex procedures, the team's expertise shines through, with patients frequently lauding the care they receive, especially when it comes to treating young ones with the utmost patience and attention.</p>\n\n<p>Accessibility and convenience are key at LeTooth, with opening hours catering to busy schedules and a location that seamlessly blends into the fabric of Jalan Fettes. While the clinic is highly recommended, patients suggest making an appointment to guarantee prompt service. This advice reflects a transparency in patient feedback that reinforces the clinic's reputation as a trusted pillar for dental excellence in Penang.</p>"
+  },
+  {
+    "title": "Confidental Surgery 诚康牙科 Seberang Jaya",
+    "website": "https://seberangjaya.dentalclinicmy.com/home-en/",
+    "latitude": 5.3981249,
+    "longitude": 100.3994383,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "20:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "15:00"
+      }
+    ],
+    "slug": "confidental-surgery-seberang-jaya-penang",
+    "skip": true,
+    "placeId": "ChIJIVPND9LFSjARd3-rdpm6WbA",
+    "phone": "+6043986895",
+    "permanentlyClosed": false,
+    "address": "37G, Jln Todak 4, 13700 Seberang Jaya, Pulau Pinang, Malaysia",
+    "neighborhood": null,
+    "city": "Seberang Jaya",
+    "postalCode": "13700",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 123,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipOhKHO7aIOn0XW11MmQp7PFXq892dfjURqIxsB8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noJEdaBvkmy6QQyGSnNu6UFvQYkXnJJGsw03go4EwFCgGcBLcqFJKDw2Sfnw1pCh9ZVV-wp0dnqMTAjuXnWzaa3xvei--QxpJLshGqwzPbcSGF62qLHEbw-j2syjq1KQj9XvsIfog=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNqz1FaDZIGXUiwYpJKKYI7nDR-E6iWNayeMQq_=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npSq4Cw_cwSy-W2K_7ausxOeJ0DQrp9mUeQtbgJB8k5Xz3rh3n-nDYjBU4kgU__a2URNldvetlEg7rpr6QC0Q60tLlvaKiP5r9wedakIhCydirLzPPKsS68YDsRNT8mZyODhCY=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqIw0WqBk3HWiVX6B1VInl5GIXxR6utyRQLK6ARu_EsAzdU87nPAjYJDndHS112orjwPC8XeFT7CJS3HwHUvrhB0rsLiWTLeTO95N01ED0JS3B1MgWno81GpLgyr-rWCXnZ-bIp=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Shira",
+        "stars": 5,
+        "text": "Everything was very good and smooth🤗buat scaling and tampalan dekat sini dalam masa sejam sahaja siap🫡Thanks to Doctor and pembantu semua sangat excellent buat kerja👍🏻",
+        "publishedAtDate": "2025-07-04T07:30:55.610Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Akira Haziq",
+        "stars": 5,
+        "text": "Nice clinic, and great doctor here",
+        "publishedAtDate": "2025-06-17T05:35:58.723Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sandya Subash",
+        "stars": 5,
+        "text": "The dentist explained well and helped me throughout my teeth reshaping journey, always will be grateful ☺️",
+        "publishedAtDate": "2025-06-09T10:30:19.946Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yin C",
+        "stars": 5,
+        "text": "very good，the doctor is very attentive and the service is good.",
+        "publishedAtDate": "2025-04-29T05:05:16.343Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Choong Wee Keat",
+        "stars": 5,
+        "text": "I'm incredibly grateful for Dr.Lee gentle touch and patience. They took the time to address all my concerns and ensured my comfort throughout my dental visit.",
+        "publishedAtDate": "2025-04-16T04:06:45.465Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "edward teoh yeow loon",
+        "stars": 5,
+        "text": "Dr.lee chun how is a very amazing dental surgeon...his service made me feel very comfortable and safe...thanks",
+        "publishedAtDate": "2025-03-04T04:56:19.746Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Annie Oon",
+        "stars": 5,
+        "text": "Had a nice experience at this dental clinic .Dr Li gave  clear explaination on the condition of the teeth and the procedures involved. .",
+        "publishedAtDate": "2025-03-01T02:40:56.210Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "chong jit lin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-02-28T04:07:37.335Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "37G, Jln Todak 4",
+    "description": "<p>Confidental Surgery 诚康牙科 in Seberang Jaya stands out for its commitment to providing comprehensive dental care with a touch of comfort and precision. Specializing in both routine and complex dental procedures, this facility has carved a niche for itself with services that span from scaling to teeth reshaping, all delivered with a personalized approach that caters to the unique dental needs of each patient.</p>\n\n<p>The patient journey at Confidental Surgery is one marked by efficiency and clarity. Visitors often remark on the smoothness of their experience, with procedures like scaling and fillings completed within an hour—testimony to the clinic's dedication to prompt service without compromising on quality. The serene clinic environment, paired with the expertise of a highly regarded dental team, ensures that every visit is both calming and effective, leaving patients satisfied with the outcome of their treatments.</p>\n\n<p>Located in the bustling heart of Penang, Confidental Surgery benefits from its easy accessibility to locals and visitors alike. Patients consistently praise the informative and supportive nature of the dental care they receive here, highlighting how the dentist's clear explanations and attentive guidance have been pivotal throughout their oral health journey. By placing patient comfort and understanding at the forefront, Confidental Surgery 诚康牙科 has become a valued healthcare partner within its community.</p>"
+  },
+  {
+    "title": "SmileBay Dental Surgery (Air Itam)",
+    "website": "http://www.smilebaydental.com/",
+    "latitude": 5.405178,
+    "longitude": 100.2922022,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": null,
+        "close_time": null
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "smilebay-dental-surgery-air-itam-penang",
+    "skip": true,
+    "placeId": "ChIJuRSF7jvCSjARfJ8_9bp0uqY",
+    "phone": "+60166978000",
+    "permanentlyClosed": false,
+    "address": "492A, Sri Indah, Jalan Air Itam, Lrg Kg Baru, Kampung Baharu, 11400 Air Itam, Penang, Malaysia",
+    "neighborhood": "Kampung Baharu",
+    "city": "Air Itam",
+    "postalCode": "11400",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 338,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipMqdBWHU7ngTXZuFvcFzw2RRVU3PSxwBf9BM6Vc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipOlHMEcQpEZ-3_XvGdEwD1r6LEOF1UAQaxW1ONm=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPxP-yAT1j8awoP_mWTijXv5a2z3LY9pqqhYGDa=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN7Y12zA_e6SZ5RT7RRJgOXIkDJyHBrsxaXnuuw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrDC_8niMJ9hUe4UI1BOXaqZ50f5EgELNQ0kTJ4wY_zSmVmorKj2bKJc-VzJw4TFTxGba1TqeLUvN-_NJXAfLXQJfmHbs-hCMZaKurb08Ohv4jxnHfbMxRZPndppzIwqWK4aak=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "siti fatimah az-zahraa",
+        "stars": 5,
+        "text": "⭐️⭐️⭐️⭐️⭐️ Gentle, compassionate, and truly dedicated dental care\n\nDr. Leong gave outstanding treatment to my mother with deep care and professionalism. She explained the procedure clearly, ensured my mother’s comfort, and performed a painless tooth extraction that exceeded our expectations.\n\nWhat truly touched us was the follow-up from the clinic the next day initiated by Dr. Leong herself to check on my mother’s recovery. They also offered thoughtful aftercare advice, which showed their genuine concern beyond the clinic walls.\n\nThe clinic staffs were friendly, warm, and incredibly helpful throughout. It was a reassuring experience from start to finish.\n\nHighly recommended for anyone seeking respectful, gentle, and patient-focused dental care.",
+        "publishedAtDate": "2025-07-01T08:35:22.801Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ace Stefan",
+        "stars": 5,
+        "text": "Been using this particular dental for over 4-5 years.\n\nA big shout out to the receptionist make me felt welcoming each time I came here as well as being very informative about how things works at smilebay, a peace of mind.\n\nDentists are excellent too, keeping the treatment very structural and hygiene throughout. Most importantly, they don’t push you for any ‘additional unnecessary’ treatment. Once I was asking for whitening treatment, the dentist was given clear info with great detail and demonstration without pushing you to take it. Big plus!\n\nHighly recommend anyone!",
+        "publishedAtDate": "2025-06-03T06:35:15.365Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "CHOON ENG ONG",
+        "stars": 5,
+        "text": "Dr Khoo 和她的团队们都很专业。",
+        "publishedAtDate": "2025-05-01T02:48:20.591Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Michaela Sperling",
+        "stars": 5,
+        "text": "I went to SmileBay because of recommendations from friends. I felt very comfortable the two times I went to Dr. Chuah Swing Jin. I felt that he understood my thoughts and anxieties (when related to my teeth ). His treatment was done perfectly find, very sensitive and 100% trust him.",
+        "publishedAtDate": "2025-04-28T18:47:41.792Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kong-Leng Goh",
+        "stars": 5,
+        "text": "Great doctors! Great staff! Great service!",
+        "publishedAtDate": "2025-04-26T02:09:36.899Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Aida Hadhirah",
+        "stars": 5,
+        "text": "Dr Khoo is a skillful doctor makes me feel at ease during treatment. All staff are kind and very nice too. Will recommend to my friends.",
+        "publishedAtDate": "2025-04-12T15:24:03.219Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Regine Yeoh",
+        "stars": 5,
+        "text": "I recently had a wisdom tooth extraction and root canal treatment done by Dr. Khoo, and I couldn’t be more thankful for her care. She is incredibly patient, gentle, and professional throughout the entire process. I was very nervous at first, but Dr. Khoo made sure I felt comfortable and explained every step clearly. Her calm and reassuring manner really helped ease my fear and anxiety. Thank you, Dr. Khoo, for your excellent service and kindness — you’re truly a wonderful dentist!",
+        "publishedAtDate": "2025-04-08T08:33:55.448Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Suria Bawani Gohbalan",
+        "stars": 5,
+        "text": "My first visit to the dentist in 30 years and definitely in good hands 🙏🏽… thank you, Dr Khoo ❤️",
+        "publishedAtDate": "2025-03-22T11:08:21.300Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "492A, Sri Indah, Jalan Air Itam, Lrg Kg Baru",
+    "description": "<p>At the heart of Air Itam in Penang, SmileBay Dental Surgery distinguishes itself with a reputation for gentle, compassionate care that resonates in the patient feedback. Situated conveniently for locals and those in surrounding areas, this dental haven is recognized for its blend of professional expertise and a warm, welcoming atmosphere. The team's dedication to dental excellence shines through every treatment and consultation, making it a cornerstone of oral health in the community.</p>\n\n<p>The quality of care at SmileBay Dental Surgery is reflected in both its state-of-the-art facilities and the glowing testimonials from long-term patients. Whether it's routine check-ups or complex procedures, the skilled practitioners, led by Dr. Leong and Dr. Khoo, employ the latest dental techniques to ensure optimal outcomes. The facility's commitment to patient comfort and satisfaction is evident, and this has fostered a loyal client base that trusts their smiles to no other.</p>\n\n<p>Accessibility is key at SmileBay Dental Surgery, with opening hours tailored to accommodate busy lifestyles from Tuesday to Saturday. While the team celebrates positive patient experiences, they also maintain a culture of continuous improvement, welcoming all feedback as a chance to refine their services further. In the bustling locale of Air Itam, this dental clinic stands out as a beacon of individualized care, where every patient leaves with more reasons to smile confidently.</p>"
+  },
+  {
+    "title": "Smiledent Dental Clinic",
+    "website": "",
+    "latitude": 5.3960824,
+    "longitude": 100.3991586,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "21:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "smiledent-dental-clinic-seberang-jaya-penang",
+    "skip": false,
+    "placeId": "ChIJexG1ZcfFSjARiPXFP-RY0Fo",
+    "phone": "+60124037889",
+    "permanentlyClosed": false,
+    "address": "9, Jalan Todak 4,Seberang Jaya, 13700 Perai, Pulau Pinang, Malaysia",
+    "neighborhood": null,
+    "city": "Perai",
+    "postalCode": "13700",
+    "state": "Penang",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 16,
+    "totalScore": 4.7,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noF1swuJHjCdfXEyp3tW1dH5cAQyqzmvwINdpWq2MKkjbvKR-RxpUSEGxW_OOsJrabCaJQk9BltHgSG98RIYWVo6seME_ATDo0Z_6XvBvYchukxEokAzHbZX7fOV3DTVx3GYbnc=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNavcjkh1ukdK0eLrJ2aLTE-u8y_qgkNG3kpd2t=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no_CHMwh4C5g15KC2hxfjCuiGqn05U2LuSAVpOMuRZ-_qmyVetGW_Vhmkh7j2bLrYJxkhBpGdRHe4IqLo1M6TzYuCZUe6fxibp2GiRYg_CjYd841wi7DYwcw_nio0WbXQXFzOcsxA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqpSetMj5PA5ScbPATJ_LedhPDVZ2qz-slv2UgTwy0XUsZn-ha_PB4lrNCyE__-q_Pqf226jMK3foaXvRe6cqxZvGzJP_47DmfzmjtMD4_tyqMuowHw8Yl1lj_Jw1YplU84wqdzzg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npd4yB_i6JyeV9Jc0IrDRf5tRGnKRF7FlNyUeTAEiW_i3jnBxpEnBvMnk8DpxFw-kLA1HCF7fyuEE-7q1hwvecnoG_2EdNipxX8SNhfZc_widBBu9WzNmiR1GbkKDV_qOJGb273=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "aida ramli",
+        "stars": 5,
+        "text": "Dr sgt bagus. Penerangan sgt detail dan mudah di fahami\nKlinik bersih,\nTq Dr dan staf",
+        "publishedAtDate": "2025-04-23T08:17:57.362Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bob C Wei",
+        "stars": 4,
+        "text": "Good experience. Nice and clean, simple no fuss.  Doc is pretty good, and gives clear explanation. No hard sell and makes you feel comfortable. Went for cleaning and polishing,.. and I feel pricing is OK.",
+        "publishedAtDate": "2025-03-31T07:11:16.436Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Joo Zjin Oh",
+        "stars": 5,
+        "text": "Clean clinic.\nThorough explanation.\nGentle hands.\nWill propose you several services based on your condition but never hard sell any.\nNo irritation or discomfort throughout the whole process",
+        "publishedAtDate": "2024-10-30T08:00:23.518Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tan Hui Qi",
+        "stars": 5,
+        "text": "Great experience! The dentist explained everything in very details, and always involve patient in making any decisions. Entire process is painless and comfortable.\n\nHighly recommended!! 👍🏻👍🏻",
+        "publishedAtDate": "2024-10-04T07:39:43.032Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AAJQRNMbr0T-yaDd5QbI8-c5ZZvQT0a4ibqBBN8wnws1fPinpUwcufre0izwVH9VaxjeXl0DFVt04oFPxCPC38u2hp5-xnq27n_V1N47OYk9jEPvYmSJMqZLf0gIuQCJ1tCY39"
+        ]
+      },
+      {
+        "name": "Isaac Tan",
+        "stars": 5,
+        "text": "Best dental clinic in Seberang Jaya.",
+        "publishedAtDate": "2024-07-06T13:34:27.894Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/geougc-cs/AB3l90AvIWfiYOc18MicnIrcDqQS_OodVgVXnidV9iX1SN7I1pCuEYBcKyh-9mbxdD0hggZvWhDtGgzmh8nItqwBNIEQgm2SoMZE5pDEGCadP4wnkEWDyPy2U-2na-8fHfv1I4iGQeEKFw"
+        ]
+      },
+      {
+        "name": "Shrawan Kumar",
+        "stars": 5,
+        "text": "Cabuk gigi x Sakit",
+        "publishedAtDate": "2024-07-03T02:35:54.392Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Siva Guru",
+        "stars": 5,
+        "text": "Realy good service. Dr give good suggest for tc cr our teeth.",
+        "publishedAtDate": "2024-06-24T12:54:41.252Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "futri Mahmud",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2024-06-21T07:59:23.404Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "9, Jalan Todak 4,Seberang Jaya",
+    "description": "<p>In the dynamic healthcare tapestry of Penang, Smiledent Dental Clinic shines with a commitment to oral health and patient comfort. Located in the bustling heart of Seberang Jaya, this clinic is a cornerstone of dental excellence, serving the community with extended hours that cater to even the busiest of schedules.</p>\n\n<p>Patients at Smiledent Dental Clinic consistently laud the pristine environment and the professional finesse of its dental team. With detailed explanations demystifying dental procedures and gentle hands delivering care, the clinic prioritizes an informative and pain-free experience. Testimonials frequently highlight the tailored treatment plans, showcasing a dedication to personalized care that addresses individual needs and concerns.</p>\n\n<p>Smiledent Dental Clinic not only fosters a welcoming atmosphere but also embodies trust with its transparent approach to services offered. As the sun sets over Seberang Jaya, patients can find solace in knowing that high-quality dental care is within reach throughout the week, including Sundays. In this local hub of dental expertise, one can expect a harmonious blend of professionalism and community-centric service.</p>"
+  }
+]

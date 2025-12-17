@@ -1,0 +1,134 @@
+[
+  {
+    "title": "The Denti5ts Dental Clinic - Ipoh Jaya",
+    "website": "http://facebook.com/The-Denti5t-Ipoh-jaya-116181823111305/",
+    "latitude": 4.5776499,
+    "longitude": 101.1229481,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      }
+    ],
+    "slug": "the-denti5ts-dental-clinic-ipoh-jaya-perak",
+    "skip": true,
+    "placeId": "ChIJ5zCJxD3tyjERLUYmQAeq-fA",
+    "phone": "+601133084668",
+    "permanentlyClosed": false,
+    "address": "52, Selasar Rokam 11,Taman Ipoh Jaya, Ipoh Jaya, 31350 Ipoh, Perak, Malaysia",
+    "neighborhood": "Ipoh Jaya",
+    "city": "Ipoh",
+    "postalCode": "31350",
+    "state": "Perak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 39,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/p/AF1QipPFGbxNxz4paV9wP4AUz3ppeVcKEE_ex_c2UEQy=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipNjlSqyNFCgZZ2eRRDeYvc1-rm7BJz5__X1coD3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMZXgF6YRWr3tYVu9c6iwGcQAYvVNraCjNbGPQv=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN13N4G6BJ-FgbKnAK7DzdWaNGE7u_LEAj43SPI=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipPWNCd8o3KIbWKFOtrNbWtIJvKbysK-xQWR-qh0=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "J L",
+        "stars": 5,
+        "text": "医生很耐心，洗牙没痛，洗得很干净。",
+        "publishedAtDate": "2023-12-02T09:10:47.142Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "S Rammiya PERUMAL (S Rammiya Thevar)",
+        "stars": 5,
+        "text": "Excellent dentist",
+        "publishedAtDate": "2023-07-02T07:07:14.499Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jessica Loo",
+        "stars": 5,
+        "text": "I did my root canal, crown & scaling and filling in this clinic starting in January 2023 until today under  Dr Liew. He's a nice gentleman and a very professional dentist. He patiently explained every step throughout the process & answered all my questions. Besides being well equipped, this clinic is also very clean. The staffs are cute and friendly. Thank you Dr Liew & staffs.",
+        "publishedAtDate": "2023-05-05T09:28:28.552Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Yahanis Yahya",
+        "stars": 5,
+        "text": "Excellent service. Dr and Nurse   Thank you.",
+        "publishedAtDate": "2023-04-29T03:14:44.849Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Melody Hiong",
+        "stars": 5,
+        "text": "Kids friendly environment. Dr Liew was very patience and gentle. Staff is friendly. Thumbs up by 7 years old kid whom just got his tooth extraction.",
+        "publishedAtDate": "2023-04-12T07:20:21.697Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "wadah khalid",
+        "stars": 5,
+        "text": "The lady dr is very good . Best dental experience. Done scaling and filling less than an hour.",
+        "publishedAtDate": "2023-04-01T09:04:52.344Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jooyee Brenda",
+        "stars": 5,
+        "text": "Did scaling and filling by Dr Liew. He was very patient & it was painless throughout the session. The check up was very detailed and this clinic even has intraoral camera. Will visit again!",
+        "publishedAtDate": "2023-02-14T14:57:59.839Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "PC Seng",
+        "stars": 5,
+        "text": "Thank you Dr Liew for the nice and detailed scaling filling experience. Service is good and the clinic provides intra oral camera to screen for my teeth caries.",
+        "publishedAtDate": "2023-02-05T03:14:08.006Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "52, Selasar Rokam 11,Taman Ipoh Jaya",
+    "description": "<p>At The Denti5ts Dental Clinic in the heart of Taman Ipoh Jaya, patients receive specialized dental care that mirrors the clinic's commitment to oral health excellence. With a focus on comprehensive dentistry, this facility stands out for its meticulous approach to procedures like root canals, crowns, scaling, and fillings. Their medical proficiency is complemented by state-of-the-art technology, ensuring every dental journey begins with confidence.</p>\n\n<p>The patient experience at The Denti5ts is one marked by attentiveness and proficiency. Visitors praise the gentle touch and clean results of their treatments, highlighting a pain-free experience that underscores the clinic's dedication to comfort and quality. From the initial consultation through to the follow-up, the team's patient-centric approach is evident, creating a seamless journey that attends to individual needs with precision and care.</p>\n\n<p>Feedback from those who've stepped through The Denti5ts' doors often reflects satisfaction with the services rendered. Situated conveniently in Perak's bustling Taman Ipoh Jaya neighborhood, accessibility is a breeze for residents seeking top-tier dental care. While patient testimonials speak volumes about their trust in the clinic's expertise, it's the personal stories of improved dental health that truly define The Denti5ts' role in the community.</p>"
+  }
+]
