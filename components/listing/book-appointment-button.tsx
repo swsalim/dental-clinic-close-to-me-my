@@ -3,7 +3,7 @@
 import { PhoneIcon } from 'lucide-react';
 
 import { selineTrack } from '@/lib/analytics';
-import { cn } from '@/lib/utils';
+import { buildWhatsAppLink, cn } from '@/lib/utils';
 
 import WhatsApp from '@/components/icons/whatsapp';
 import { Button } from '@/components/ui/button';
@@ -31,7 +31,6 @@ export function BookAppointmentButton({
           e.preventDefault();
           try {
             selineTrack(`book_appointment_click_${stateSlug}_${areaSlug}_${clinicSlug}`);
-            console.log('Analytics event fired successfully');
             window.location.href = `tel:${phone}`;
           } catch (error) {
             console.error('Error firing analytics event:', error);
@@ -48,8 +47,7 @@ export function BookAppointmentButton({
             e.preventDefault();
             try {
               selineTrack(`book_appointment_whatsapp_click_${stateSlug}_${areaSlug}_${clinicSlug}`);
-              console.log('Analytics event fired successfully');
-              window.location.href = whatsapp;
+              window.location.href = buildWhatsAppLink(whatsapp, clinicSlug);
             } catch (error) {
               console.error('Error firing analytics event:', error);
             }

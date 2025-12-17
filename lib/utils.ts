@@ -209,3 +209,26 @@ export const generateUniqueFilename = (originalFilename: string): string => {
   const cleanSlug = baseName.replace(/[^a-zA-Z0-9-]/g, '');
   return `${cleanSlug}_${timestamp}.${extension}`;
 };
+
+export const buildWhatsAppLink = (rawLink: string, clinicSlug: string): string => {
+  const clinicUrl = `https://www.dentalclinicclosetome.my/place/${clinicSlug}`;
+
+  const message = `Hi, I found your clinic from ${clinicUrl}. I'd like to make an appointment.`;
+
+  // Normalise for easier checks
+  const link = rawLink.trim();
+
+  // wa.me → append dynamic message
+  if (link.includes('wa.me')) {
+    const separator = link.includes('?') ? '&' : '?';
+    return `${link}${separator}text=${encodeURIComponent(message)}`;
+  }
+
+  // wa.link → return as-is (static message)
+  if (link.includes('wa.link')) {
+    return link;
+  }
+
+  // fallback (optional)
+  return link;
+};
