@@ -234,7 +234,11 @@ export default async function StatePage({ params, searchParams }: StatePageProps
       <Wrapper size="sm">
         <Container>
           <div className="mx-auto mb-10 max-w-2xl">
-            <a href="https://dub.sh/watsons-bundle" className="hover:!border-b-transparent">
+            <a
+              href="https://dub.sh/watsons-bundle"
+              className="hover:!border-b-transparent"
+              target="_blank"
+              rel="nofollow noopener noreferrer">
               <ImageKit
                 src="watsons-bundle-deal.avif"
                 directory="images"
@@ -314,7 +318,9 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                             <div className="flex flex-col items-center justify-center gap-2 text-center">
                               <a
                                 href="https://dub.sh/darley-toothpaste"
-                                className="hover:!border-b-transparent">
+                                className="hover:!border-b-transparent"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer">
                                 <ImageKit
                                   src="watson-toothpaste-1-1.avif"
                                   directory="images"
@@ -332,7 +338,9 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                               </a>
                               <a
                                 href="https://dub.sh/watsons-promo"
-                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400">
+                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer">
                                 Browse Watsons Promotions
                               </a>
                             </div>

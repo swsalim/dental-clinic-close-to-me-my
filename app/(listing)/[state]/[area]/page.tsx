@@ -237,11 +237,15 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       <Wrapper size="sm">
         <Container>
           <div className="mx-auto mb-10 max-w-2xl">
-            <a href="https://dub.sh/watsons-monthly" className="hover:!border-b-transparent">
+            <a
+              href="https://invl.me/cln4pal"
+              className="hover:!border-b-transparent"
+              target="_blank"
+              rel="nofollow noopener noreferrer">
               <ImageKit
-                src="watson-cruise.avif"
+                src="watson-year-end.avif"
                 directory="images"
-                alt="Watsons Club - Shop to Sail Pianoland Cruise"
+                alt="Biggest Year End Giveaway"
                 width={600}
                 height={600}
                 priority
@@ -280,7 +284,9 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                             <div className="flex flex-col items-center justify-center gap-2 text-center">
                               <a
                                 href="https://dub.sh/darley-toothpaste"
-                                className="hover:!border-b-transparent">
+                                className="hover:!border-b-transparent"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer">
                                 <ImageKit
                                   src="watson-toothpaste-1-1.avif"
                                   directory="images"
@@ -298,7 +304,9 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                               </a>
                               <a
                                 href="https://dub.sh/watsons-promo"
-                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400">
+                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer">
                                 Browse Watsons Promotions
                               </a>
                             </div>
