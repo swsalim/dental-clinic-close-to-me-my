@@ -276,6 +276,8 @@ class ClinicDataProcessor {
         facebook_url: '',
         instagram_url: '',
         youtube_url: '',
+        tiktok_url: '',
+        whatsapp: '',
         featured_video: '',
         source: 'scraped',
         place_id: listing.placeId || '',
