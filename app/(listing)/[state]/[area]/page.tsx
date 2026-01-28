@@ -111,6 +111,10 @@ export async function generateMetadata({ params, searchParams }: AreaPageProps):
         },
       ],
     },
+    robots: {
+      index: Number(page) < 4,
+      follow: true,
+    },
   };
 }
 

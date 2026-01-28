@@ -73,7 +73,7 @@ export async function ExploreStates() {
   // Show loading state if no states are provided
   if (!states || states.length === 0) {
     return (
-      <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
+      <Wrapper>
         <Container>
           <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
             <h2 className="text-balance text-3xl font-black">
@@ -93,7 +93,7 @@ export async function ExploreStates() {
   }
 
   return (
-    <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
+    <Wrapper>
       <Container>
         <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
           <h2 className="text-balance text-3xl font-black">

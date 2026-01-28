@@ -58,7 +58,7 @@ export async function RecentClinics() {
   const clinics = await getRecentClinics();
 
   return (
-    <Wrapper>
+    <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
       <Container>
         <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
           <h2 className="text-balance text-3xl font-black">

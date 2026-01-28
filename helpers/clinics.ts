@@ -200,6 +200,65 @@ export const getClinicReviews = unstable_cache(
 );
 
 /**
+ * Fetches testimonials (reviews with clinic information) for homepage
+ */
+export const getTestimonials = unstable_cache(
+  async (limit: number = 8) => {
+    const supabase = await createAdminClient();
+
+    const { data, error } = await supabase
+      .from('clinic_reviews')
+      .select(
+        `
+        id,
+        clinic_id,
+        author_name,
+        review_time,
+        created_at,
+        rating,
+        text,
+        status,
+        clinics:clinic_id (
+          id,
+          name,
+          slug
+        )
+      `,
+      )
+      .eq('status', 'approved')
+      .not('text', 'is', null)
+      .order('review_time', { ascending: false, nullsLast: true })
+      .order('created_at', { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      console.error('Error fetching testimonials:', error);
+      return [];
+    }
+
+    return (
+      data
+        ?.filter((review) => review.clinics && review.text)
+        .map((review) => ({
+          id: review.id,
+          clinic_id: review.clinic_id,
+          author_name: review.author_name,
+          review_time: review.review_time || review.created_at,
+          rating: review.rating,
+          text: review.text,
+          clinic_name: (review.clinics as { name: string; slug: string })?.name,
+          clinic_slug: (review.clinics as { name: string; slug: string })?.slug,
+        })) || []
+    );
+  },
+  ['testimonials'],
+  {
+    revalidate: 1_209_600, // Cache for 2 weeks
+    tags: ['reviews', 'testimonials'],
+  },
+);
+
+/**
  * Fetches clinic operating hours
  */
 export async function getClinicHours(clinicId: string) {
