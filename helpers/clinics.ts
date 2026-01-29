@@ -218,8 +218,7 @@ export const getTestimonials = unstable_cache(
         rating,
         text,
         status,
-        clinics:clinic_id (
-          id,
+        clinic:clinics (
           name,
           slug
         )
@@ -227,9 +226,12 @@ export const getTestimonials = unstable_cache(
       )
       .eq('status', 'approved')
       .not('text', 'is', null)
-      .order('review_time', { ascending: false, nullsLast: true })
+      .order('review_time', { ascending: false })
       .order('created_at', { ascending: false })
       .limit(limit);
+
+    console.log('data');
+    console.log(data);
 
     if (error) {
       console.error('Error fetching testimonials:', error);
@@ -238,17 +240,27 @@ export const getTestimonials = unstable_cache(
 
     return (
       data
-        ?.filter((review) => review.clinics && review.text)
-        .map((review) => ({
-          id: review.id,
-          clinic_id: review.clinic_id,
-          author_name: review.author_name,
-          review_time: review.review_time || review.created_at,
-          rating: review.rating,
-          text: review.text,
-          clinic_name: (review.clinics as { name: string; slug: string })?.name,
-          clinic_slug: (review.clinics as { name: string; slug: string })?.slug,
-        })) || []
+        ?.filter((review) => {
+          const clinic = Array.isArray(review.clinic)
+            ? review.clinic[0]
+            : (review.clinic as { name: string; slug: string } | null);
+          return clinic && review.text;
+        })
+        .map((review) => {
+          const clinic = Array.isArray(review.clinic)
+            ? review.clinic[0]
+            : (review.clinic as { name: string; slug: string } | null);
+          return {
+            id: review.id,
+            clinic_id: review.clinic_id,
+            author_name: review.author_name,
+            review_time: review.review_time || review.created_at,
+            rating: review.rating,
+            text: review.text,
+            clinic_name: clinic?.name,
+            clinic_slug: clinic?.slug,
+          };
+        }) || []
     );
   },
   ['testimonials'],
