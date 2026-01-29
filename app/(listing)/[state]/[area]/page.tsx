@@ -240,29 +240,6 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       </Wrapper>
       <Wrapper size="sm">
         <Container>
-          <div className="mx-auto mb-10 max-w-2xl">
-            <a
-              href="https://invl.me/cln4pal"
-              className="hover:!border-b-transparent"
-              target="_blank"
-              rel="nofollow noopener noreferrer">
-              <ImageKit
-                src="watson-year-end.avif"
-                directory="images"
-                alt="Biggest Year End Giveaway"
-                width={600}
-                height={600}
-                priority
-                quality={85}
-                sizes="100vw"
-                className="m-0 h-auto w-full object-cover"
-                style={{
-                  objectPosition: 'center center',
-                }}
-              />
-            </a>
-          </div>
-
           {isJohorBahru && (
             <Prose className="mb-12 block lg:hidden">
               <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} area={areaData.name} />

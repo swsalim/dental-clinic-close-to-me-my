@@ -486,29 +486,6 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               <DoctorPracticeAvatar clinicSlug={clinicSlug} />
 
-              <div className="flex flex-col gap-2 text-center">
-                <a
-                  href="https://invl.me/cln4pal"
-                  className="hover:!border-b-transparent"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer">
-                  <ImageKit
-                    src="watson-year-end.avif"
-                    directory="images"
-                    alt="Biggest Year End Giveaway"
-                    width={600}
-                    height={600}
-                    priority
-                    quality={85}
-                    sizes="100vw"
-                    className="m-0 h-auto w-full object-cover"
-                    style={{
-                      objectPosition: 'center center',
-                    }}
-                  />
-                </a>
-              </div>
-
               {parsedClinic.services && (
                 <article className="block lg:hidden">
                   <h2>{parsedClinic.name} Services</h2>
