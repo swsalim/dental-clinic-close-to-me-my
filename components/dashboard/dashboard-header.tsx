@@ -64,7 +64,7 @@ const DashboardHeader = () => {
 
   return (
     <header
-      className={cn('sticky inset-x-0 top-[-1px] z-50 bg-white duration-200 ease-in', {
+      className={cn('sticky inset-x-0 top-[-1px] z-50 bg-white duration-200 ease-in dark:bg-gray-900 dark:shadow-gray-950/50', {
         'shadow-lg': isSticky,
       })}
       ref={headerRef}>
@@ -82,20 +82,17 @@ const DashboardHeader = () => {
                 className={cn(
                   'relative -mx-3 -my-2 rounded-lg border-none px-3 py-2 text-base font-medium transition-colors delay-150 hover:border-none hover:delay-0',
                   {
-                    'text-gray-700 hover:text-gray-800': pathname !== href,
-                    'text-blue-600 hover:text-blue-900': pathname === href,
+                    'text-gray-700 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100':
+                      pathname !== href,
+                    'text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300':
+                      pathname === href,
                   },
                 )}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}>
                 {hoveredIndex === index && (
                   <motion.div
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      borderRadius: '0.5rem',
-                      backgroundColor: 'rgb(243 244 246)',
-                    }}
+                    className="absolute inset-0 rounded-lg bg-gray-100 dark:bg-gray-800"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { duration: 0.15 } }}
                     exit={{ opacity: 0, transition: { duration: 0.15 } }}

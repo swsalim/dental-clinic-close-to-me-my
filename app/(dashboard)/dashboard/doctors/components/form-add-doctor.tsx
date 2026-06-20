@@ -204,14 +204,14 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
               <div className="relative aspect-square overflow-hidden rounded-md shadow-md">
                 {!isCurrentImage && (
                   <button
-                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                     onClick={() => handleImageRemove(index)}>
                     <XIcon className="mx-auto h-6 w-6"></XIcon>
                   </button>
                 )}
                 {isCurrentImage && (
                   <button
-                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                     onClick={(e) => handleImagekitImageRemove(e, (image as ClinicImage).image_url)}>
                     <XIcon className="mx-auto h-6 w-6"></XIcon>
                   </button>
@@ -394,11 +394,11 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} aria-label="Doctor edit form">
-        <div className="space-y-6 divide-y divide-gray-200 overflow-hidden">
-          <div className="space-y-6 bg-white">
+        <div className="space-y-6 divide-y divide-gray-200 dark:divide-gray-700 overflow-hidden">
+          <div className="space-y-6 bg-white dark:bg-gray-900">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Profile</h3>
-              <p className="text-text-gray-500 mt-1 text-sm">
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Profile</h3>
+              <p className="text-gray-500 dark:text-gray-400 mt-1 text-sm">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>
@@ -534,7 +534,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
 
               {currentImages.length > 0 && (
                 <div className="col-span-6">
-                  <h3>Current Images</h3>
+                  <h3 className="font-display dark:text-gray-50">Current Images</h3>
                   {renderImages(currentImages, true)}
                 </div>
               )}
@@ -565,10 +565,10 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
             </div>
           </div>
 
-          <div className="space-y-6 bg-white">
+          <div className="space-y-6 bg-white dark:bg-gray-900">
             <div className="mt-4">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Listing Feature</h3>
-              <p className="mt-1 text-sm text-gray-500">Listing related fields</p>
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Listing Feature</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Listing related fields</p>
             </div>
 
             <div className="grid grid-cols-6 gap-6">
@@ -587,7 +587,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                               type="button"
                               className={cn(
                                 'w-full justify-between',
-                                !field.value?.length && 'text-gray-500',
+                                !field.value?.length && 'text-gray-500 dark:text-gray-400',
                               )}>
                               {field.value?.length
                                 ? `${field.value.length} clinic${field.value.length === 1 ? '' : 's'} selected`
@@ -636,7 +636,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                       <FormDescription>Select the clinics where this doctor works.</FormDescription>
                       {field.value?.length > 0 && (
                         <div className="mt-3">
-                          <div className="mb-2 text-sm font-medium text-gray-700">
+                          <div className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                             Selected Clinics:
                           </div>
                           <div className="flex flex-wrap gap-2">
@@ -645,7 +645,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                               return (
                                 <div
                                   key={selectedClinic.clinic_id}
-                                  className="flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-sm">
+                                  className="flex items-center gap-1 rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm">
                                   <span>{clinic?.name}</span>
                                   <Button
                                     type="button"

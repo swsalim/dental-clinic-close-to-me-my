@@ -20,11 +20,11 @@ export async function ExploreAreas() {
     <Wrapper>
       <Container>
         <div className="mb-10 flex flex-col gap-4 text-center md:mb-12">
-          <span className="text-base font-semibold uppercase text-red-500">Popular Areas</span>
-          <h2 className="text-balance text-3xl font-black">
+          <span className="text-base font-semibold uppercase text-blue-600 dark:text-blue-400">Popular Areas</span>
+          <h2 className="font-display text-balance text-3xl font-black dark:text-gray-50">
             Explore dental clinics in popular areas
           </h2>
-          <p className="text-base font-medium text-gray-700">
+          <p className="text-base font-medium text-gray-700 dark:text-gray-300">
             We&apos;ve compiled a list of dental clinics in these locations.
           </p>
         </div>

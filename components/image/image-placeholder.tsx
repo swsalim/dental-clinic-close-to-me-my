@@ -9,16 +9,16 @@ interface ImagePlaceholderProps {
 export function ImagePlaceholder({ title, isPerson = false, className }: ImagePlaceholderProps) {
   return (
     <div
-      className={`flex h-full flex-col items-center justify-center rounded-md bg-gray-100 px-4 py-4 ${
+      className={`flex h-full flex-col items-center justify-center rounded-md bg-gray-100 dark:bg-gray-800 px-4 py-4 ${
         isPerson ? 'min-h-[300px]' : ''
       } ${className ?? ''}`}
       role="img"
       aria-label={title ? `Placeholder for ${title}` : 'Image placeholder'}>
       {!isPerson ? (
         <>
-          <CameraIcon className="h-10 w-10 text-gray-600" aria-hidden="true" />
+          <CameraIcon className="h-10 w-10 text-gray-600 dark:text-gray-400" aria-hidden="true" />
           {title && (
-            <p className="mb-0 mt-3 text-center text-gray-600">
+            <p className="mb-0 mt-3 text-center text-gray-600 dark:text-gray-400">
               Add image for {title} <span className="sr-only">:)</span>
             </p>
           )}

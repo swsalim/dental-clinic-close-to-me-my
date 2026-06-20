@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google';
 
 import { siteConfig } from '@/config/site';
 
@@ -13,6 +13,13 @@ import './globals.css';
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+  preload: true,
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
   display: 'swap',
   preload: true,
 });
@@ -95,6 +102,7 @@ export default function RootLayout({
         className={cn(
           'flex min-h-screen flex-col font-sans antialiased dark:bg-gray-900 dark:text-gray-100',
           plusJakartaSans.variable,
+          fraunces.variable,
         )}
         suppressHydrationWarning>
         <WebsiteJsonLd company="Dental Clinics Malaysia" url={absoluteUrl('/')} />

@@ -98,7 +98,7 @@ export default async function EditClinicToBeReviewedPage({
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-medium">Profile - {clinic.name}</h3>
+            <h3 className="font-display text-lg font-medium">Profile - {clinic.name}</h3>
             <p className="text-sm text-gray-300">
               This is how others will see this listing on the site.
             </p>

@@ -222,8 +222,8 @@ export default async function DentistsByStatePage({
             <Breadcrumb items={breadcrumbItems} />
 
             <Prose>
-              <h1 className="text-balance text-4xl font-black">{title}</h1>
-              <p className="text-balance text-lg font-medium text-gray-600">
+              <h1 className="text-balance font-display text-4xl font-black">{title}</h1>
+              <p className="text-balance text-lg font-medium text-gray-600 dark:text-gray-400">
                 Discover {totalDoctors} dentists in {stateData.name}. Browse by city or clinic to
                 find a dentist near you.
               </p>
@@ -233,7 +233,7 @@ export default async function DentistsByStatePage({
               {/* Featured Dentists */}
               {featuredDoctors.length > 0 && (
                 <section>
-                  <h2 className="mb-6 text-2xl font-semibold">
+                  <h2 className="mb-6 font-display text-2xl font-semibold">
                     Featured Dentists in {stateData.name}
                   </h2>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
@@ -246,7 +246,7 @@ export default async function DentistsByStatePage({
 
               {/* All Dentists */}
               <section>
-                <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+                <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
                   All Dentists in {stateData.name} ({totalDoctors})
                 </h2>
                 {doctors.length > 0 ? (
@@ -294,17 +294,17 @@ export default async function DentistsByStatePage({
                   </>
                 ) : (
                   <div className="flex flex-col items-center justify-center gap-y-4 py-12">
-                    <h3 className="text-balance text-xl font-semibold">
+                    <h3 className="text-balance font-display text-xl font-semibold">
                       No dentists found in {stateData.name}
                     </h3>
-                    <p className="text-balance text-gray-600">
+                    <p className="text-balance text-gray-600 dark:text-gray-400">
                       We couldn&apos;t find any dentists in {stateData.name} at the moment.
                     </p>
                     <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                       <Link
                         href="/dentists"
                         className={cn(
-                          'inline-flex items-center gap-x-2 text-blue-600 hover:text-blue-800',
+                          'inline-flex items-center gap-x-2 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300',
                         )}
                         prefetch={false}>
                         Browse all dentists

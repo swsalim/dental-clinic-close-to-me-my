@@ -58,24 +58,24 @@ export async function RecentClinics() {
   const clinics = await getRecentClinics();
 
   return (
-    <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
-      <Container>
-        <div className="mb-10 flex flex-col gap-2 text-center md:mb-12">
-          <h2 className="text-balance text-3xl font-black">
-            Discover best dental clinics near you
+    <Wrapper className="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950/30">
+      <Container className="min-w-0">
+        <div className="mb-8 max-w-2xl md:mb-10">
+          <h2 className="font-display text-balance text-2xl font-bold text-gray-900 md:text-3xl dark:text-gray-50">
+            Recently updated clinics
           </h2>
-          <p className="text-lg font-medium text-gray-500 dark:text-gray-300">
-            Browse verified reviews, clinic hours, and contact details to book your visit.
+          <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
+            Fresh listings with hours, contact details, and patient reviews.
           </p>
         </div>
 
         {clinics.length === 0 ? (
           <div className="py-8 text-center">
-            <p className="text-gray-500">No recent clinics found.</p>
+            <p className="text-gray-500 dark:text-gray-400">No recent clinics found.</p>
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+            <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
               {clinics.map((clinic) => {
                 return (
                   <ClinicCard
@@ -100,10 +100,10 @@ export async function RecentClinics() {
                 );
               })}
             </div>
-            <div className="mt-10 flex justify-center sm:mt-14">
-              <Button variant="primary" size="large" asChild rounded>
+            <div className="mt-10 sm:mt-12">
+              <Button variant="outline" size="large" asChild>
                 <Link href="/browse" className="no-underline">
-                  Discover clinics near me
+                  Browse all locations
                 </Link>
               </Button>
             </div>

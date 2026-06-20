@@ -166,7 +166,7 @@ export function DataTableRowActions<TData extends ClinicTableData>({
             <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
             <AlertDialogDescription>
               This action cannot be undone. This will permanently delete{' '}
-              <span className="font-medium text-gray-900">&quot;{clinic.name}&quot;</span> from our
+              <span className="font-medium text-gray-900 dark:text-gray-100">&quot;{clinic.name}&quot;</span> from our
               database.
             </AlertDialogDescription>
           </AlertDialogHeader>
@@ -184,7 +184,7 @@ export function DataTableRowActions<TData extends ClinicTableData>({
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="flex h-8 w-8 justify-center p-0 data-[state=open]:bg-gray-100">
+            className="flex h-8 w-8 justify-center p-0 data-[state=open]:bg-gray-100 dark:bg-gray-800">
             <MenuIcon className="h-4 w-4" />
             <span className="sr-only">Open menu</span>
           </Button>

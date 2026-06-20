@@ -19,7 +19,7 @@ const TableHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <thead
     ref={ref}
-    className={cn('bg-gray-50 dark:bg-gray-900 [&_tr]:border-b', className)}
+    className={cn('bg-gray-50 dark:bg-gray-900 [&_tr]:border-b [&_tr]:border-gray-200 dark:[&_tr]:border-gray-700', className)}
     {...props}
   />
 ));
@@ -31,7 +31,7 @@ const TableBody = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <tbody
     ref={ref}
-    className={cn('divide-y divide-gray-200 bg-white dark:bg-gray-900', className)}
+    className={cn('divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-900', className)}
     {...props}
   />
 ));
@@ -41,7 +41,7 @@ const TableFooter = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
-  <tfoot ref={ref} className={cn('bg-gray-50 font-medium text-gray-900', className)} {...props} />
+  <tfoot ref={ref} className={cn('bg-gray-50 font-medium text-gray-900 dark:bg-gray-800 dark:text-gray-100', className)} {...props} />
 ));
 TableFooter.displayName = 'TableFooter';
 
@@ -50,7 +50,7 @@ const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTML
     <tr
       ref={ref}
       className={cn(
-        'hover:bg-gray-50 data-[state=selected]:bg-gray-100 dark:hover:bg-gray-800 dark:data-[state=selected]:bg-gray-700',
+        'hover:bg-gray-50 data-[state=selected]:bg-gray-100 dark:hover:bg-gray-800/50 dark:data-[state=selected]:bg-gray-700',
         className,
       )}
       {...props}
@@ -90,7 +90,7 @@ const TableCaption = React.forwardRef<
   HTMLTableCaptionElement,
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
-  <caption ref={ref} className={cn('mt-4 text-sm text-gray-500', className)} {...props} />
+  <caption ref={ref} className={cn('mt-4 text-sm text-gray-500 dark:text-gray-400', className)} {...props} />
 ));
 TableCaption.displayName = 'TableCaption';
 

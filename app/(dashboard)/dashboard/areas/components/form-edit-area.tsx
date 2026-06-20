@@ -128,7 +128,7 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
       <div className="mt-4 grid grid-cols-4 gap-4">
         <div className="relative aspect-square overflow-hidden rounded-md shadow-md">
           <button
-            className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+            className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
             onClick={(e) => {
               if (!isCurrentImage) {
                 handleImageRemove();
@@ -298,11 +298,11 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} aria-label="Clinic review form">
-        <div className="space-y-6 divide-y divide-gray-200 shadow sm:overflow-hidden sm:rounded-md">
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+        <div className="space-y-6 divide-y divide-gray-200 dark:divide-gray-700 shadow sm:overflow-hidden sm:rounded-md">
+          <div className="space-y-6 bg-white dark:bg-gray-900 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Edit Area</h3>
-              <p className="text-text-gray-500 mt-1 text-sm">
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Edit Area</h3>
+              <p className="text-gray-500 dark:text-gray-400 mt-1 text-sm">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>
@@ -332,7 +332,7 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
               </div>
 
               <div className="col-span-6 space-y-4">
-                <h4 className="text-base font-medium text-gray-900">State</h4>
+                <h4 className="font-display text-base font-medium text-gray-900 dark:text-gray-50">State</h4>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                   {area.state?.name}
                 </div>
@@ -399,7 +399,7 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
 
               {currentImage && (
                 <div className="col-span-6">
-                  <h3>Current Image</h3>
+                  <h3 className="font-display dark:text-gray-50">Current Image</h3>
                   {renderImage(currentImage, true)}
                 </div>
               )}

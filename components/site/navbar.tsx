@@ -1,97 +1,19 @@
 'use client';
 
-import * as React from 'react';
-
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { HospitalIcon, PlusIcon } from 'lucide-react';
+import { HospitalIcon } from 'lucide-react';
 
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
 import Container from '@/components/ui/container';
 import Logo from '@/components/ui/logo';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
 
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'> & {
-    title: string;
-    logo?: string;
-    isExternal?: boolean;
-  }
->(({ className, title, children, logo, isExternal, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:border-transparent hover:bg-blue-50 hover:text-blue-600 focus:border-transparent focus:bg-blue-50 focus:text-blue-600',
-            className,
-          )}
-          target={isExternal ? '_blank' : '_self'}
-          rel={isExternal ? 'noopener noreferrer' : undefined}
-          {...props}>
-          {!logo && <div className="text-sm font-medium leading-none">{title}</div>}
-          {logo && (
-            <div className="flex flex-row gap-2 text-sm font-medium leading-none">
-              <Image
-                src={`https://flagcdn.com/${logo.toLowerCase()}.svg`}
-                alt={`${logo} flag`}
-                width={24}
-                height={18}
-                className="rounded"
-              />
-              {title}
-            </div>
-          )}
-          <p className="line-clamp-2 text-sm leading-snug text-gray-500">{children}</p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';
+import { advertiseNavItem, isNavItemActive, primaryNavItems } from './site-links';
 
-export const navItems: {
-  name: string;
-  href?: string;
-  segments?: string[];
-  icon?: React.ElementType;
-  childItems?: {
-    title: string;
-    href: string;
-    description?: string;
-    isExternal?: boolean;
-    icon?: React.ElementType;
-    iconClassName?: string;
-    logo?: string;
-  }[];
-}[] = [
-  {
-    name: 'Browse Location',
-    href: '/browse',
-  },
-  {
-    name: 'Dentists',
-    href: '/dentists',
-  },
-  {
-    name: 'Submit',
-    href: '/submit',
-    icon: PlusIcon,
-  },
-];
+export { primaryNavItems as navItems } from './site-links';
 
 export default function Navbar() {
   const scrolled = useScroll(50);
@@ -100,77 +22,67 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-10 w-full border-b bg-white/50 backdrop-blur-md transition-all duration-75 dark:bg-white',
-        scrolled ? 'dark:border-brand-600 border-gray-200 dark:bg-white/50' : 'border-transparent',
+        'sticky top-0 z-10 w-full border-b border-transparent bg-white/90 backdrop-blur-md transition-[border-color,background-color] duration-150 dark:bg-gray-900/90',
+        scrolled && 'border-gray-200 dark:border-gray-800',
       )}>
-      <div className="flex items-center justify-center gap-x-1 bg-blue-500 px-4 py-3 text-white">
-        <HospitalIcon className="h-4 w-4" />
-        Own a dental clinic? Get{' '}
-        <Link
-          href="/advertise-with-us"
-          className="border-white font-bold text-white hover:border-white hover:text-white/80">
-          premium visibility.
-        </Link>
-      </div>
-      <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-x-2 text-xl hover:border-transparent">
-          <Logo className="h-8 w-auto fill-blue-500" />
-        </Link>
-        <NavigationMenu className="hidden lg:block">
-          <NavigationMenuList>
-            {navItems.map(({ name, href, segments, childItems, icon }) => {
-              const isActive = segments?.some((segment) => pathname?.startsWith(segment));
-              const Icon = icon;
+      <Container className="pb-0 pt-4 lg:pt-5">
+        <div className="flex min-w-0 items-center justify-between gap-4 pb-3 lg:pb-4">
+          <Link
+            href="/"
+            className="group inline-flex min-w-0 items-center gap-3 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+            aria-label="Dental Clinics Malaysia home">
+            <Logo className="h-8 w-auto shrink-0 fill-blue-500 transition-transform duration-150 group-active:scale-[0.98]" />
+            <span className="hidden min-w-0 sm:inline">
+              <span className="block truncate font-display text-lg leading-tight text-gray-900 dark:text-gray-50">
+                Dental Clinics
+              </span>
+              <span className="block truncate text-xs font-medium uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400">
+                Malaysia
+              </span>
+            </span>
+          </Link>
 
-              return (
-                <NavigationMenuItem key={name}>
-                  <>
-                    {href && (
-                      <NavigationMenuLink
-                        className={cn(
-                          'font-regular focus:bg-blue-50/hover:bg-blue-50 data-[active=true]:bg-blue-50/hover:bg-blue-50 data-[state=open]:bg-blue-50/hover:bg-blue-50 data-[active=true]:focus:bg-blue-50/hover:bg-blue-50 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:border-transparent hover:bg-blue-50 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:text-blue-600 data-[state=open]:text-blue-600 data-[active=true]:hover:bg-blue-50 data-[state=open]:hover:bg-blue-50 data-[state=open]:focus:bg-blue-50 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-300',
-                        )}
-                        asChild>
-                        <Link href={href} prefetch={false}>
-                          <span>{name}</span>
-                          {Icon && <Icon className="ml-2 size-4" />}
-                        </Link>
-                      </NavigationMenuLink>
-                    )}
-                    {!href && (
-                      <>
-                        <NavigationMenuTrigger data-active={isActive}>
-                          <span>{name}</span>
-                          {Icon && <Icon className="ml-2 size-4" />}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                            {childItems?.map((item) => {
-                              return (
-                                <ListItem
-                                  key={item.title}
-                                  title={item.title}
-                                  href={item.href}
-                                  logo={item.logo}
-                                  isExternal={item.isExternal}
-                                  data-active={pathname === item.href}
-                                  className={cn(
-                                    pathname === item.href && 'bg-blue-50 text-blue-600',
-                                  )}>
-                                  {item.description}
-                                </ListItem>
-                              );
-                            })}
-                          </ul>
-                        </NavigationMenuContent>
-                      </>
-                    )}
-                  </>
-                </NavigationMenuItem>
-              );
-            })}
-          </NavigationMenuList>
-        </NavigationMenu>
+          <nav className="hidden min-w-0 items-center gap-1 lg:flex" aria-label="Primary">
+            <ul className="flex min-w-0 items-center gap-0.5">
+              {primaryNavItems.map((item) => {
+                const active = isNavItemActive(pathname, item);
+
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      prefetch={false}
+                      aria-current={active ? 'page' : undefined}
+                      className={cn(
+                        'inline-flex h-11 min-w-[4.5rem] items-center justify-center rounded-md px-3.5 text-sm font-medium text-gray-700 transition-colors duration-150 hover:border-transparent hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-offset-gray-900 dark:active:bg-gray-700',
+                        active && 'dark:bg-blue-950/40 bg-blue-50 text-blue-700 dark:text-blue-300',
+                      )}>
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <Link
+              href={advertiseNavItem.href}
+              prefetch={false}
+              aria-current={isNavItemActive(pathname, advertiseNavItem) ? 'page' : undefined}
+              className={cn(
+                'ml-2 inline-flex h-11 shrink-0 items-center justify-center rounded-full border border-gray-300 bg-white px-4 text-sm font-semibold text-gray-900 transition-colors duration-150 hover:border-gray-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:translate-y-px dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-500 dark:hover:bg-gray-800 dark:focus-visible:ring-offset-gray-900',
+                isNavItemActive(pathname, advertiseNavItem) &&
+                  'dark:bg-blue-950/40 border-blue-300 bg-blue-50 text-blue-800 dark:border-blue-700 dark:text-blue-200',
+              )}>
+              Advertise
+            </Link>
+          </nav>
+        </div>
+
+        <div
+          className="hidden border-t border-gray-900 lg:block dark:border-gray-100"
+          aria-hidden="true">
+          <div className="border-t border-gray-900 dark:border-gray-100" />
+        </div>
       </Container>
     </header>
   );

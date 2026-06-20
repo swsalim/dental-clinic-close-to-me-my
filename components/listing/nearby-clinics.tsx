@@ -37,7 +37,7 @@ async function NearbyClinicsContent({
       <Container>
         <article>
           <Prose>
-            <h2 className="mb-6">Nearby Clinics</h2>
+            <h2 className="font-display mb-6 dark:text-gray-50">Nearby Clinics</h2>
           </Prose>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
             {filteredClinics.map((clinic) => (

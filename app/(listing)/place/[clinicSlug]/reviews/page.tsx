@@ -152,7 +152,7 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
           <Breadcrumb items={breadcrumbItems} />
 
           <div className="mt-8">
-            <h1 className="text-3xl font-bold">Reviews for {parsedClinic.name}</h1>
+            <h1 className="font-display text-3xl font-bold">Reviews for {parsedClinic.name}</h1>
             <p className="mt-2 text-gray-500 dark:text-gray-400">
               {parsedClinic.review_count} reviews • {parsedClinic.rating?.toFixed(1)} average rating
             </p>

@@ -205,12 +205,12 @@ export default async function DentistPage({ params }: DentistPageProps) {
                   </div>
                 )}
                 <div className="flex grow flex-col items-start justify-end gap-2">
-                  <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
+                  <h1 className="mb-0 font-display text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
                     {doctor.name}
                   </h1>
                   {doctor.qualification && (
                     <div
-                      className="font-bold text-gray-500 dark:text-gray-500"
+                      className="font-bold text-gray-500 dark:text-gray-400"
                       dangerouslySetInnerHTML={{ __html: doctor.qualification }}
                     />
                   )}
@@ -238,7 +238,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
               {/* TODO: fix images */}
               {/* {galleryImages && galleryImages.length > 0 && (
                 <Prose>
-                  <h2 className="mb-4 text-xl font-semibold">Photos</h2>
+                  <h2 className="font-display mb-4 text-xl font-semibold">Photos</h2>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {galleryImages.map((image, index) =>
                       image ? (
@@ -260,7 +260,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
               {/* Featured Video */}
               {doctor.featured_video && (
                 <Prose>
-                  <h2 className="mb-4 text-xl font-semibold">Video</h2>
+                  <h2 className="mb-4 font-display text-xl font-semibold">Video</h2>
                   <div className="aspect-video">
                     <iframe
                       src={doctor.featured_video}
@@ -275,7 +275,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
               {/* Associated Clinics */}
               {doctor.clinics && doctor.clinics.length > 0 && (
                 <Prose>
-                  <h2 className="mb-4 text-xl font-semibold">Practices At</h2>
+                  <h2 className="mb-4 font-display text-xl font-semibold">Practices At</h2>
                   <div className="not-prose grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
                     {doctor.clinics.map((clinic) => (
                       <ClinicCard
@@ -304,9 +304,11 @@ export default async function DentistPage({ params }: DentistPageProps) {
               )}
 
               {/* Call to Action */}
-              <div className="rounded-lg bg-blue-50 px-6 py-8 text-center">
-                <h2 className="mb-2 mt-0 text-xl font-semibold">Book an Appointment</h2>
-                <p className="mb-4 text-gray-600">
+              <div className="rounded-lg bg-blue-100 px-6 py-8 text-center dark:border dark:border-blue-800 dark:bg-blue-800/70">
+                <h2 className="mb-2 mt-0 font-display text-2xl font-semibold">
+                  Book an Appointment
+                </h2>
+                <p className="mb-4 text-gray-600 dark:text-gray-300">
                   Ready to schedule your dental appointment with {doctor.name}?
                 </p>
                 {doctor.clinics && doctor.clinics.length > 0 && (

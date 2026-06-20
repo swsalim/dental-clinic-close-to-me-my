@@ -65,7 +65,7 @@ export default async function SubmitClinicPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
-      <h1 className="mb-6 text-3xl font-bold">Join Dental Clinics Malaysia Listing</h1>
+      <h1 className="font-display mb-6 text-3xl font-bold dark:text-gray-50">Join Dental Clinics Malaysia Listing</h1>
       <p className="mb-6 text-gray-700 dark:text-gray-400">
         Submit your clinic and get exposure to thousands of potential customers.
       </p>

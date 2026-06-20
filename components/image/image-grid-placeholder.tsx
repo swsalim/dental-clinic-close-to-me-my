@@ -11,7 +11,7 @@ export function ImageGridPlaceholder({ title, className }: ImageGridPlaceholderP
   return (
     <div className={`image-grid is-empty relative overflow-y-hidden rounded-lg ${className ?? ''}`}>
       <div className="grid grid-cols-4 grid-rows-2 gap-2">
-        <div className="col-span-2 row-span-2 bg-gray-100">
+        <div className="col-span-2 row-span-2 bg-gray-100 dark:bg-gray-800">
           <div className="h-full w-full">
             <Link
               href="mailto:support@clinicgeek.com"
@@ -23,7 +23,7 @@ export function ImageGridPlaceholder({ title, className }: ImageGridPlaceholderP
           </div>
         </div>
         {Array.from({ length: 4 }, (_, index) => (
-          <div key={`dummy-${index}`} className="bg-gray-100">
+          <div key={`dummy-${index}`} className="bg-gray-100 dark:bg-gray-800">
             <div className="h-full w-full">
               <Link
                 href="mailto:support@clinicgeek.com"

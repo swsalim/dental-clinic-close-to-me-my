@@ -77,13 +77,13 @@ export default async function SubmitSuccessPage({
     console.error('Failed to retrieve Stripe session:', error);
     return (
       <div className="mx-auto max-w-xl py-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold text-red-600">Session Error</h1>
+        <h1 className="font-display mb-4 text-3xl font-bold text-red-600 dark:text-red-400">Session Error</h1>
         <p className="mb-4">Unable to verify your payment session.</p>
         <p className="text-sm">
           Contact support at{' '}
           <a
             href="mailto:support@dentalclinicclosetome.my"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 dark:text-blue-400 hover:underline">
             support@dentalclinicclosetome.my
           </a>{' '}
           if you need assistance.
@@ -96,7 +96,7 @@ export default async function SubmitSuccessPage({
   if (session.payment_status !== 'paid') {
     return (
       <div className="mx-auto max-w-xl py-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold text-yellow-600">Payment Pending</h1>
+        <h1 className="font-display mb-4 text-3xl font-bold text-yellow-600 dark:text-yellow-400">Payment Pending</h1>
         <p className="mb-4">Your payment is still being processed.</p>
         <p className="text-sm">
           Please check back in a few minutes or contact support if the issue persists.
@@ -116,13 +116,13 @@ export default async function SubmitSuccessPage({
   if (!canSubmit) {
     return (
       <div className="mx-auto max-w-xl py-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold text-red-600">Data Error</h1>
+        <h1 className="font-display mb-4 text-3xl font-bold text-red-600 dark:text-red-400">Data Error</h1>
         <p className="mb-4">Missing required submission data.</p>
         <p className="text-sm">
           Contact support at{' '}
           <a
             href="mailto:support@dentalclinicclosetome.my"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 dark:text-blue-400 hover:underline">
             support@dentalclinicclosetome.my
           </a>{' '}
           with your session ID: {session_id}

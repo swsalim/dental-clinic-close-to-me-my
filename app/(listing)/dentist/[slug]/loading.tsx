@@ -56,7 +56,7 @@ export default function DentistLoading() {
           </div>
 
           {/* CTA */}
-          <div className="space-y-4 rounded-lg bg-blue-50 p-6">
+          <div className="space-y-4 rounded-lg bg-blue-50 dark:bg-blue-950/40 p-6">
             <Skeleton className="mx-auto h-6 w-48" />
             <Skeleton className="mx-auto h-4 w-80" />
             <div className="flex justify-center space-x-4">

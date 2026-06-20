@@ -14,11 +14,24 @@ html body[data-scroll-locked] {
     @apply font-medium;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply dark:text-gray-50;
+  }
+
   a {
     @apply border-b-2 border-transparent font-medium text-blue-500 no-underline duration-200 dark:text-blue-300;
   }
 
   a:hover {
     @apply border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400;
+  }
+
+  ::selection {
+    @apply bg-blue-200 text-gray-900 dark:bg-blue-900 dark:text-gray-100;
   }
 }

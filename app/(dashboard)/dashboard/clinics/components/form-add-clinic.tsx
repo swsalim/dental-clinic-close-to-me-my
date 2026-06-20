@@ -413,14 +413,14 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
               <div className="relative aspect-square overflow-hidden rounded-md shadow-md">
                 {!isCurrentImage && (
                   <button
-                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                     onClick={() => handleImageRemove(index)}>
                     <XIcon className="mx-auto h-6 w-6"></XIcon>
                   </button>
                 )}
                 {isCurrentImage && (
                   <button
-                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white/90"
+                    className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                     onClick={(e) => handleImagekitImageRemove(e, (image as ClinicImage).image_url)}>
                     <XIcon className="mx-auto h-6 w-6"></XIcon>
                   </button>
@@ -777,11 +777,11 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} aria-label="Clinic review form">
-        <div className="space-y-6 divide-y divide-gray-200 shadow sm:overflow-hidden sm:rounded-md">
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+        <div className="space-y-6 divide-y divide-gray-200 dark:divide-gray-700 shadow sm:overflow-hidden sm:rounded-md">
+          <div className="space-y-6 bg-white dark:bg-gray-900 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Add Clinic</h3>
-              <p className="mt-1 text-sm text-gray-500">
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Add Clinic</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>
@@ -846,7 +846,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                               aria-label="Select a town"
                               className={cn(
                                 'w-full justify-between',
-                                !field.value && 'text-gray-500',
+                                !field.value && 'text-gray-500 dark:text-gray-400',
                               )}>
                               {field.value
                                 ? states.find((state) => state.id === field.value)?.name
@@ -906,7 +906,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                               aria-label="Select a town"
                               className={cn(
                                 'w-full justify-between',
-                                !field.value && 'text-gray-500',
+                                !field.value && 'text-gray-500 dark:text-gray-400',
                               )}>
                               {field.value
                                 ? areas.find((area) => area.id === field.value)?.name
@@ -1028,7 +1028,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
 
               {currentImages.length > 0 && (
                 <div className="col-span-6">
-                  <h3>Current Images</h3>
+                  <h3 className="font-display dark:text-gray-50">Current Images</h3>
                   {renderImages(currentImages, true)}
                 </div>
               )}
@@ -1059,14 +1059,14 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
             </div>
           </div>
 
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+          <div className="space-y-6 bg-white dark:bg-gray-900 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Location Information</h3>
-              <p className="mt-1 text-sm text-gray-500">Information related fields</p>
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Location Information</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Information related fields</p>
             </div>
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6">
-                <h3 className="mb-2 text-base font-medium leading-6 text-gray-900">
+                <h3 className="font-display mb-2 text-base font-medium leading-6 text-gray-900 dark:text-gray-50">
                   Business Hours
                 </h3>
                 <div className="space-y-4">
@@ -1100,7 +1100,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                     {daysOfWeek.map((day) => (
                       <div key={day} className="rounded-md border p-4">
                         <div className="mb-2 flex items-center justify-between">
-                          <h4 className="font-medium">{day}</h4>
+                          <h4 className="font-display font-medium dark:text-gray-50">{day}</h4>
                           <div className="flex items-center gap-2">
                             <FormField
                               control={form.control}
@@ -1276,10 +1276,10 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                           }}
                         />
                       </FormControl>
-                      <div className="mt-2 text-sm text-gray-500">
+                      <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                         Click{' '}
                         <Link
-                          className="font-medium text-blue-600"
+                          className="font-medium text-blue-600 dark:text-blue-400"
                           href={`https://www.google.com/maps/place/${watchName.split(' ').join('+')}`}
                           target="_blank">
                           here
@@ -1311,10 +1311,10 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                           }}
                         />
                       </FormControl>
-                      <div className="mt-2 text-sm text-gray-500">
+                      <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
                         Click{' '}
                         <Link
-                          className="font-medium text-blue-600"
+                          className="font-medium text-blue-600 dark:text-blue-400"
                           href={`https://www.google.com/maps/place/${watchName.split(' ').join('+')}`}
                           target="_blank">
                           here
@@ -1386,10 +1386,10 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
             </div>
           </div>
 
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+          <div className="space-y-6 bg-white dark:bg-gray-900 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Social Info</h3>
-              <p className="mt-1 text-sm text-gray-500">Social related fields</p>
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Social Info</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Social related fields</p>
             </div>
 
             <div className="grid grid-cols-6 gap-6">
@@ -1559,10 +1559,10 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
               </div>
             </div>
           </div>
-          <div className="space-y-6 bg-white px-4 py-6 sm:p-6">
+          <div className="space-y-6 bg-white dark:bg-gray-900 px-4 py-6 sm:p-6">
             <div>
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Listing Feature</h3>
-              <p className="mt-1 text-sm text-gray-500">Listing related fields</p>
+              <h3 className="font-display text-lg font-medium leading-6 text-gray-900 dark:text-gray-50">Listing Feature</h3>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Listing related fields</p>
             </div>
 
             <div className="grid grid-cols-6 gap-6">

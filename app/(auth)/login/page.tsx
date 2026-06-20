@@ -24,7 +24,7 @@ export default function Login() {
     <div className="w-full max-w-md">
       <Prose className="mb-8 text-center">
         <Logo className="mx-auto h-12 w-12" aria-hidden="true" />
-        <h1 className="mt-6 text-3xl font-bold tracking-tight">Sign in to your account</h1>
+        <h1 className="font-display mt-6 text-3xl font-bold tracking-tight">Sign in to your account</h1>
         <p className="mt-2 text-sm">
           Or{' '}
           <Link
@@ -42,13 +42,13 @@ export default function Login() {
           </Suspense>
         </CardContent>
         <CardFooter className="flex justify-center border-t px-6 py-4">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500 dark:text-gray-400">
             By signing in, you agree to our{' '}
-            <Link href="/terms" className="underline hover:text-gray-900">
+            <Link href="/terms" className="underline hover:text-gray-900 dark:text-gray-100">
               Terms of Service
             </Link>{' '}
             and{' '}
-            <Link href="/privacy" className="underline hover:text-gray-900">
+            <Link href="/privacy" className="underline hover:text-gray-900 dark:text-gray-100">
               Privacy Policy
             </Link>
           </p>

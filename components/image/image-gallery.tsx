@@ -69,7 +69,7 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
           'grid grid-cols-4 gap-2',
           validImages.length > 3 ? 'grid-rows-3' : 'grid-rows-2',
         )}>
-        <div className="col-span-2 row-span-2 bg-gray-50">
+        <div className="col-span-2 row-span-2 bg-gray-50 dark:bg-gray-800/50">
           <button
             onClick={() => handleImageClick(0)}
             className="relative h-full max-h-[500px] w-full overflow-hidden rounded-lg">

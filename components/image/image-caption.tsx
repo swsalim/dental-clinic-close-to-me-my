@@ -61,12 +61,12 @@ function Caption({ showAttribute, caption, authorName, authorLink }: CaptionProp
   if (!caption && !showAttribute) return null;
 
   return (
-    <figcaption className="mt-2 block text-center text-sm text-gray-500">
+    <figcaption className="mt-2 block text-center text-sm text-gray-500 dark:text-gray-400">
       {!showAttribute && caption}
       {showAttribute && authorLink && authorName && (
         <span>
           Photo by{' '}
-          <Link href={authorLink} target="_blank" rel="noreferrer" className="hover:text-gray-700">
+          <Link href={authorLink} target="_blank" rel="noreferrer" className="hover:text-gray-700 dark:text-gray-300">
             {authorName}
           </Link>
         </span>
@@ -113,7 +113,7 @@ export default function ImageCaption({
           priority={priority}
           width={width || defaultWidth}
           height={height || defaultHeight}
-          className="mt-0 h-full w-full transform bg-gray-100 object-cover object-center"
+          className="mt-0 h-full w-full transform bg-gray-100 dark:bg-gray-800 object-cover object-center"
         />
       </Suspense>
       <div

@@ -82,9 +82,9 @@ export function ClinicSubmit({
     return (
       <div className="mx-auto max-w-xl py-12 text-center">
         <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"></div>
-        <h1 className="mb-4 text-3xl font-bold">Payment Successful!</h1>
-        <p className="mb-4">Processing your clinic submission...</p>
-        <p className="text-sm text-gray-600">This usually takes just a few seconds.</p>
+        <h1 className="font-display mb-4 text-3xl font-bold dark:text-gray-50">Payment Successful!</h1>
+        <p className="mb-4 dark:text-gray-200">Processing your clinic submission...</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400">This usually takes just a few seconds.</p>
       </div>
     );
   }
@@ -92,7 +92,7 @@ export function ClinicSubmit({
   if (status === 'error') {
     return (
       <div className="mx-auto max-w-xl py-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold text-red-600">Something went wrong</h1>
+        <h1 className="font-display mb-4 text-3xl font-bold text-red-600 dark:text-red-400">Something went wrong</h1>
         <p className="mb-4">
           Your payment was successful, but we encountered an issue processing your submission.
         </p>
@@ -103,13 +103,13 @@ export function ClinicSubmit({
           Contact us at{' '}
           <a
             href="mailto:support@dentalclinicclosetome.my"
-            className="text-blue-600 hover:underline">
+            className="text-blue-600 dark:text-blue-400 hover:underline">
             support@dentalclinicclosetome.my
           </a>{' '}
           with your payment confirmation if you need immediate assistance.
         </p>
         <div className="mt-6">
-          <Link href="/" className="text-blue-600 hover:underline">
+          <Link href="/" className="text-blue-600 dark:text-blue-400 hover:underline">
             Return to Home
           </Link>
         </div>
@@ -120,13 +120,13 @@ export function ClinicSubmit({
   return (
     <div className="mx-auto max-w-xl py-12 text-center">
       <div className="mb-4 text-4xl">✅</div>
-      <h1 className="mb-4 text-3xl font-bold text-green-600">Submission Complete!</h1>
+      <h1 className="font-display mb-4 text-3xl font-bold text-green-600 dark:text-green-400">Submission Complete!</h1>
       <p className="mb-6 text-lg">
         Thank you for your payment. Your clinic listing has been submitted for review.
       </p>
 
       <div className="mt-6 rounded-lg bg-green-50 p-6 text-left dark:bg-green-900/20">
-        <h2 className="mb-4 text-lg font-semibold text-green-800 dark:text-green-200">
+        <h2 className="font-display mb-4 text-lg font-semibold text-green-800 dark:text-green-200">
           What happens next?
         </h2>
         <ul className="mb-4 space-y-2 text-sm text-green-700 dark:text-green-300">
@@ -136,7 +136,7 @@ export function ClinicSubmit({
         </ul>
 
         <div className="border-t border-green-200 pt-4 dark:border-green-800">
-          <h3 className="font-medium text-green-800 dark:text-green-200">Submission Details:</h3>
+          <h3 className="font-display font-medium text-green-800 dark:text-green-200">Submission Details:</h3>
           <ul className="mt-2 space-y-1 text-sm text-green-700 dark:text-green-300">
             <li>
               <strong>Name:</strong> {meta.name}

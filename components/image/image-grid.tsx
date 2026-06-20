@@ -14,7 +14,7 @@ function ImageGridSkeleton() {
   return (
     <div className="image-grid relative overflow-y-hidden rounded-lg">
       <div className="grid grid-cols-4 grid-rows-2 gap-2">
-        <div className="col-span-2 row-span-2 bg-gray-50">
+        <div className="col-span-2 row-span-2 bg-gray-50 dark:bg-gray-800/50">
           <div className="aspect-h-4 aspect-w-3 lg:aspect-h-3 lg:aspect-w-4 relative h-full w-full">
             <Skeleton className="h-full w-full" />
           </div>
@@ -51,7 +51,7 @@ function GridImage({
           priority={priority}
           width={priority ? 800 : 600}
           height={priority ? 800 : 600}
-          className="h-full w-full transform bg-gray-100 object-cover object-center"
+          className="h-full w-full transform bg-gray-100 dark:bg-gray-800 object-cover object-center"
         />
       </div>
     </div>
@@ -66,7 +66,7 @@ export function ImageGrid({ images, title, className }: ImageGridProps) {
   return (
     <div className={`image-grid relative overflow-y-hidden rounded-lg ${className ?? ''}`}>
       <div className="grid grid-cols-4 grid-rows-2 gap-2">
-        <div className="col-span-2 row-span-2 bg-gray-50">
+        <div className="col-span-2 row-span-2 bg-gray-50 dark:bg-gray-800/50">
           <Suspense fallback={<Skeleton className="h-full w-full" />}>
             <GridImage src={images[0]} alt={`Main photo for ${title}`} priority={true} />
           </Suspense>

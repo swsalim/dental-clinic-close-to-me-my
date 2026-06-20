@@ -63,7 +63,7 @@ function Map({
 }) {
   return (
     <>
-      <h2 className="mt-0">Map</h2>
+      <h2 className="font-display mt-0 dark:text-gray-50">Map</h2>
 
       <div className="mb-6 mt-2">
         <MapWrapper
@@ -329,7 +329,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <Breadcrumb items={breadcrumbItems} />
               </div>
               <div className="flex flex-col flex-wrap items-start justify-between gap-x-2 gap-y-2 lg:flex-row lg:items-center lg:justify-normal">
-                <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
+                <h1 className="font-display mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
                   {parsedClinic.name}
                 </h1>
                 <StarRating rating={parsedClinic.rating ?? 0} />
@@ -479,7 +479,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             <Prose className="space-y-8">
               {parsedClinic.description && (
                 <article>
-                  <h2 className="my-0">About {parsedClinic.name}</h2>
+                  <h2 className="font-display my-0 dark:text-gray-50">About {parsedClinic.name}</h2>
                   <TruncatedHtml html={parsedClinic.description} limit={80} />
                 </article>
               )}
@@ -488,7 +488,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.services && (
                 <article className="block lg:hidden">
-                  <h2>{parsedClinic.name} Services</h2>
+                  <h2 className="font-display dark:text-gray-50">{parsedClinic.name} Services</h2>
                   <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 md:grid-cols-6">
                     {parsedClinic.services.map((service, index) => (
                       <div
@@ -507,7 +507,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
-                  <h2>{parsedClinic.name}&apos;s Opening Hours</h2>
+                  <h2 className="font-display dark:text-gray-50">{parsedClinic.name}&apos;s Opening Hours</h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
                     {renderOpeningHours(parsedClinic)}
                   </div>
@@ -516,7 +516,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.images && parsedClinic.images.length > 1 && (
                 <article>
-                  <h2>Gallery of {parsedClinic.name}</h2>
+                  <h2 className="font-display dark:text-gray-50">Gallery of {parsedClinic.name}</h2>
                   <ImageGallery images={parsedClinic.images} title={parsedClinic.name || ''} />
                 </article>
               )}
@@ -579,7 +579,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
                 {parsedClinic.services && (
                   <div className="hidden lg:block">
-                    <h2 className="">{parsedClinic.name} Services</h2>
+                    <h2 className="font-display dark:text-gray-50">{parsedClinic.name} Services</h2>
                     <div className="grid grid-cols-3 gap-4">
                       {parsedClinic.services.map((service, index) => (
                         <Link

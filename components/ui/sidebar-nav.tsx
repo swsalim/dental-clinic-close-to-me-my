@@ -29,8 +29,8 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
           className={cn(
             buttonVariants({ variant: 'outline' }),
             pathname === item.href
-              ? 'bg-gray-100 hover:bg-gray-100'
-              : 'hover:bg-gray-50 hover:bg-transparent',
+              ? 'bg-gray-100 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-800'
+              : 'hover:bg-gray-50 hover:bg-transparent dark:hover:bg-gray-800/50',
             'justify-start',
           )}
           aria-current={pathname === item.href ? 'page' : undefined}>

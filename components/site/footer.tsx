@@ -4,33 +4,36 @@ import { seo } from '@/config/next-seo.config';
 
 import Logo from '../ui/logo';
 
+import { footerLinkGroups } from './site-links';
+
 function FooterCopyright() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-8">
-      <p className="text-sm leading-5 text-gray-100">
-        &copy; {currentYear} {seo.site_name}.
-        <span className="ml-2 mt-0 inline-block text-gray-100">
+    <div className="border-t border-gray-800 px-6 py-6">
+      <p className="text-sm leading-relaxed text-gray-400">
+        <span>&copy; {currentYear} {seo.site_name}.</span>{' '}
+        <span>
           Built by{' '}
           <a
             href="https://www.yuurrific.com?ref=dentalclinicclosetome.my"
-            className="inline-block font-medium underline underline-offset-4 transition-colors duration-200 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-offset-2 focus:ring-offset-gray-900"
+            className="font-medium text-gray-300 underline decoration-gray-600 underline-offset-4 transition-colors duration-150 hover:text-white hover:decoration-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
             target="_blank"
             rel="noopener noreferrer">
             Yuurrific
           </a>
           .
-        </span>
-        <span className="mt-2 block text-gray-100 md:ml-2 md:mt-0 md:inline-block">
+        </span>{' '}
+        <span>
           Privacy-friendly analytics by{' '}
           <a
             href="https://go.yuurrific.com/seline"
-            className="inline-block rotate-0 rounded-md bg-blue-600 px-2 py-1 text-gray-100 transition duration-100 ease-out hover:-rotate-3 hover:bg-blue-700 hover:ease-in focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            className="font-medium text-gray-300 underline decoration-gray-600 underline-offset-4 transition-colors duration-150 hover:text-white hover:decoration-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
             target="_blank"
             rel="noopener noreferrer">
             Seline
           </a>
+          .
         </span>
       </p>
     </div>
@@ -39,109 +42,120 @@ function FooterCopyright() {
 
 function FooterBadges() {
   return (
-    <div className="flex flex-row flex-wrap items-center justify-start gap-6">
-      <div>
-        <a
-          href="https://productburst.com/product/dental-clinics-malaysia"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img
-            src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747782156422x193143061268857820/pB-Badge-dark.png"
-            alt="Featured on ProductBurst"
-            width="147"
-            height="34"
-          />
-        </a>
-      </div>
-      <div>
-        <a href="https://fazier.com/launches/www.dentalclinicclosetome.my" target="_blank">
-          <img
-            src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
-            width="170"
-            height="34"
-            alt="Fazier badge"
-          />
-        </a>
-      </div>
-      <div>
-        <a
-          href="https://turbo0.com/item/dental-clinics-malaysia"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img
-            src="https://img.turbo0.com/badge-listed-light.svg"
-            alt="Listed on Turbo0"
-            height="34"
-            width="101"
-          />
-        </a>
-      </div>
+    <div className="flex flex-row flex-wrap items-center justify-start gap-6 px-6 pb-8">
+      <a
+        href="https://productburst.com/product/dental-clinics-malaysia"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+        <img
+          src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747782156422x193143061268857820/pB-Badge-dark.png"
+          alt="Featured on ProductBurst"
+          width="147"
+          height="34"
+        />
+      </a>
+      <a
+        href="https://fazier.com/launches/www.dentalclinicclosetome.my"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+        <img
+          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
+          width="170"
+          height="34"
+          alt="Fazier badge"
+        />
+      </a>
+      <a
+        href="https://turbo0.com/item/dental-clinics-malaysia"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+        <img
+          src="https://img.turbo0.com/badge-listed-light.svg"
+          alt="Listed on Turbo0"
+          height="34"
+          width="101"
+        />
+      </a>
     </div>
-  );
-}
-
-function FooterLogo() {
-  return (
-    <Link
-      href="/"
-      className="inline-block hover:border-transparent hover:no-underline focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-offset-2 focus:ring-offset-gray-900"
-      prefetch={false}
-      aria-label="Home">
-      <Logo className="relative h-8 w-8 sm:h-10 sm:w-10" />
-    </Link>
   );
 }
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="border-t border-gray-800 bg-gray-950" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pt-8">
-        <div className="lg:gap-8 xl:grid xl:grid-cols-3 xl:gap-16">
-          <div className="space-y-4">
-            <FooterLogo />
-            <p className="text-base leading-6 text-gray-300">
-              Explore top-rated dental clinics across Malaysia.
+
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-10">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.6fr)] lg:gap-16">
+          <div className="min-w-0 space-y-4">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+              prefetch={false}
+              aria-label="Home">
+              <Logo className="relative h-9 w-9 shrink-0" />
+              <span>
+                <span className="font-display block text-lg leading-tight text-gray-100">
+                  Dental Clinics Malaysia
+                </span>
+                <span className="block text-sm text-gray-400">
+                  Find trusted care near you
+                </span>
+              </span>
+            </Link>
+            <p className="max-w-sm text-sm leading-6 text-gray-400">
+              Explore top-rated dental clinics across Malaysia. Search by location,
+              compare services, and book with confidence.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:gap-8">
-              <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold leading-6 text-gray-100">Other Health Directories</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      className="leading-6 text-gray-300 transition-colors duration-200 hover:text-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-50/50 focus:ring-offset-2 focus:ring-offset-gray-900"
-                      href="https://www.clinicgeek.com/"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Clinic Geek
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="leading-6 text-gray-300 transition-colors duration-200 hover:text-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-50/50 focus:ring-offset-2 focus:ring-offset-gray-900"
-                      href="https://www.aestheticclinics.my/"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      Aesthetic Clinics Malaysia
-                    </a>
-                  </li>
+
+          <nav
+            className="grid min-w-0 grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6"
+            aria-label="Footer">
+            {footerLinkGroups.map((group) => (
+              <div key={group.title} className="min-w-0">
+                <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-gray-500">
+                  {group.title}
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex min-h-11 items-center text-sm text-gray-300 transition-colors duration-150 hover:border-transparent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950">
+                          {link.label}
+                          <span className="sr-only"> (opens in new tab)</span>
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          prefetch={false}
+                          className="inline-flex min-h-11 items-center text-sm text-gray-300 transition-colors duration-150 hover:border-transparent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950">
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div className="mt-10 md:mt-0"></div>
-            </div>
-          </div>
+            ))}
+          </nav>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl px-6 pt-8">
-        <FooterBadges />
+
+      <FooterBadges />
+
+      <div className="mx-auto max-w-7xl">
+        <FooterCopyright />
       </div>
-      <FooterCopyright />
     </footer>
   );
 }

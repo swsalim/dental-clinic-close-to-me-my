@@ -187,21 +187,21 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
         <Container>
           <div className="flex min-w-0 flex-1 flex-col gap-y-6 md:gap-y-12">
             <Prose>
-              <h1 className="text-balance text-4xl font-black">
+              <h1 className="font-display text-balance text-4xl font-black">
                 Find the Best Dentists in Malaysia
               </h1>
-              <p className="text-balance text-lg font-medium text-gray-600">
+              <p className="text-balance text-lg font-medium text-gray-600 dark:text-gray-300">
                 Browse dentists by{' '}
                 <Link
                   href="/browse"
-                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600"
+                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600 dark:text-blue-400"
                   prefetch={false}>
                   state
                 </Link>
                 , or{' '}
                 <Link
                   href="/browse"
-                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600"
+                  className="text-blue-500 hover:border-blue-600 hover:text-blue-600 dark:text-blue-400"
                   prefetch={false}>
                   city
                 </Link>
@@ -210,7 +210,7 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
             </Prose>
 
             <section className="">
-              <h2 className="mb-6 text-2xl font-semibold">Browse Dentists by State</h2>
+              <h2 className="font-display mb-6 text-2xl font-semibold">Browse Dentists by State</h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {doctorByState.map((link) => (
                   <Link
@@ -231,7 +231,7 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
               {/* Featured Dentists */}
               {featuredDoctors.length > 0 && (
                 <section>
-                  <h2 className="mb-6 text-2xl font-semibold">Featured Dentists</h2>
+                  <h2 className="font-display mb-6 text-2xl font-semibold">Featured Dentists</h2>
                   <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
                     {featuredDoctors.slice(0, 6).map((doctor) => (
                       <DoctorCard key={doctor.id} doctor={doctor} />
@@ -242,7 +242,7 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
 
               {/* All Dentists */}
               <section>
-                <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+                <h2 className="font-display mb-6 text-balance text-xl font-bold md:text-2xl">
                   All Dentists ({totalDoctors})
                 </h2>
                 {doctors.length > 0 ? (
@@ -259,8 +259,8 @@ export default async function DentistsPage({ searchParams }: DentistsPageProps) 
                   </>
                 ) : (
                   <div className="flex flex-col items-center justify-center gap-y-4 py-12">
-                    <h3 className="text-balance text-xl font-semibold">No dentists found</h3>
-                    <p className="text-balance text-gray-600">
+                    <h3 className="font-display text-balance text-xl font-semibold">No dentists found</h3>
+                    <p className="text-balance text-gray-600 dark:text-gray-400">
                       We couldn&apos;t find any dentists matching your criteria.
                     </p>
                   </div>

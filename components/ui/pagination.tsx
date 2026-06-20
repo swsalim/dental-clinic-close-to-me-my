@@ -105,7 +105,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
               </Link>
             </Button>
           ) : (
-            <span key={`ellipsis-${idx}`} className="select-none px-2 text-gray-400">
+            <span key={`ellipsis-${idx}`} className="select-none px-2 text-gray-400 dark:text-gray-500">
               ...
             </span>
           ),

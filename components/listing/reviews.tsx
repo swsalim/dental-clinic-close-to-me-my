@@ -23,7 +23,7 @@ export default function Reviews({ reviews, clinicSlug }: ReviewsProps) {
 
   return (
     <article>
-      <h2>Reviews</h2>
+      <h2 className="font-display dark:text-gray-50">Reviews</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map(({ author_name, rating, text, review_time }) => (
           <Card key={`${author_name}-${review_time}`}>

@@ -1,144 +1,103 @@
 'use client';
 
-import { ElementType, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { advertiseNavItem, isNavItemActive, primaryNavItems } from './site-links';
 
-import { navItems } from './navbar';
+const mobileNavItems = [...primaryNavItems, advertiseNavItem];
 
 export default function NavMobile() {
   const [open, setOpen] = useState(false);
-  // prevent body scroll when modal is open
+  const pathname = usePathname();
+
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [open]);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <div>
+    <div className="lg:hidden">
       <button
+        type="button"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls="mobile-primary-nav"
+        aria-label={open ? 'Close menu' : 'Open menu'}
         className={cn(
-          'fixed right-3 top-16 isolate z-50 rounded-full p-2 transition-colors duration-200 hover:bg-gray-50 focus:outline-none active:bg-gray-100 lg:hidden dark:hover:bg-gray-800',
+          'fixed right-3 top-3 z-50 inline-flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-700 shadow-sm backdrop-blur transition-colors duration-150 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-gray-100 dark:border-gray-700 dark:bg-gray-900/95 dark:text-gray-200 dark:hover:bg-gray-800 dark:focus-visible:ring-offset-gray-900 dark:active:bg-gray-700',
         )}>
         {open ? (
-          <X className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+          <X className="size-5" aria-hidden="true" />
         ) : (
-          <Menu className="h-5 w-5 text-gray-600 dark:text-gray-300" />
+          <Menu className="size-5" aria-hidden="true" />
         )}
       </button>
+
+      {open ? (
+        <button
+          type="button"
+          aria-label="Close menu overlay"
+          className="fixed inset-0 z-30 bg-gray-900/20 backdrop-blur-[1px] dark:bg-black/40"
+          onClick={() => setOpen(false)}
+        />
+      ) : null}
+
       <nav
+        id="mobile-primary-nav"
         className={cn(
-          'fixed inset-0 z-30 hidden max-h-screen w-full overflow-y-auto bg-white px-5 py-16 lg:hidden dark:bg-gray-900',
+          'fixed inset-x-0 top-0 z-40 hidden max-h-[calc(100dvh-6.5rem)] overflow-y-auto border-b border-gray-200 bg-white px-5 py-4 shadow-lg dark:border-gray-800 dark:bg-gray-900',
           open && 'block',
         )}>
-        <ul className="grid divide-y divide-gray-100 dark:divide-gray-800">
-          {navItems.map(({ name, href, childItems }, idx) => (
-            <MobileNavItem
-              key={idx}
-              name={name}
-              href={href}
-              childItems={childItems}
-              setOpen={setOpen}
-            />
-          ))}
+        <ul className="divide-y divide-gray-100 dark:divide-gray-800">
+          {mobileNavItems.map((item) => {
+            const active = isNavItemActive(pathname, item);
+            const Icon = item.icon;
+
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  prefetch={false}
+                  aria-current={active ? 'page' : undefined}
+                  className={cn(
+                    'flex min-h-11 items-center gap-3 py-3 transition-colors duration-150 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900',
+                    active
+                      ? 'text-blue-700 dark:text-blue-300'
+                      : 'text-gray-900 dark:text-gray-100',
+                  )}>
+                  {Icon ? (
+                    <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800">
+                      <Icon className="size-4" aria-hidden="true" />
+                    </span>
+                  ) : null}
+                  <span className="min-w-0">
+                    <span className="block font-medium">{item.name}</span>
+                    {item.description ? (
+                      <span className="block text-sm text-gray-500 dark:text-gray-400">
+                        {item.description}
+                      </span>
+                    ) : null}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>
   );
 }
-
-const MobileNavItem = ({
-  name,
-  href,
-  childItems,
-  setOpen,
-}: {
-  name: string;
-  href?: string;
-  childItems?: {
-    title: string;
-    description?: string;
-    isExternal?: boolean;
-    href: string;
-    icon?: ElementType;
-    iconClassName?: string;
-  }[];
-  setOpen: (open: boolean) => void;
-}) => {
-  const [expanded, setExpanded] = useState(false);
-
-  if (childItems && childItems.length > 0) {
-    return (
-      <li>
-        <Collapsible open={expanded} onOpenChange={setExpanded}>
-          <CollapsibleTrigger className="flex w-full items-center justify-between py-3">
-            <p className="font-semibold text-gray-900 dark:text-gray-300">{name}</p>
-            <ChevronDown
-              className={cn(
-                'h-5 w-5 text-gray-500 transition-all dark:text-gray-400',
-                expanded && 'rotate-180',
-              )}
-            />
-          </CollapsibleTrigger>
-          <CollapsibleContent
-            className={cn(
-              'duration overflow-hidden transition-all ease-in-out',
-              'data-[state=closed]:animate-slide-up',
-              'data-[state=open]:animate-slide-down',
-            )}>
-            <div className="grid gap-1 overflow-hidden pb-4">
-              {childItems.map(({ title, href, icon: Icon, description }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="group flex w-full gap-3 py-2"
-                  prefetch={false}>
-                  {Icon && (
-                    <div className="flex size-10 items-center justify-center rounded-lg border border-gray-200 bg-gradient-to-t from-gray-100">
-                      <Icon className="size-5 text-gray-700" />
-                    </div>
-                  )}
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h2 className="text-sm font-medium text-gray-900 group-hover:text-blue-400 dark:text-gray-300">
-                        {title}
-                      </h2>
-                    </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{description}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </CollapsibleContent>
-        </Collapsible>
-      </li>
-    );
-  }
-
-  if (!href) {
-    return null;
-  }
-
-  return (
-    <li>
-      <Link
-        href={href}
-        onClick={() => setOpen(false)}
-        className="flex w-full py-3 font-semibold capitalize"
-        prefetch={false}>
-        {name}
-      </Link>
-    </li>
-  );
-};

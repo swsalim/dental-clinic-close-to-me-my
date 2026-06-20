@@ -35,7 +35,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  'font-regular data-[state=open]:hover:bg-blue-10 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:bg-blue-50 hover:text-blue-600 focus:bg-blue-50 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:bg-blue-50 data-[state=open]:bg-blue-50 data-[active=true]:text-blue-600 data-[state=open]:text-blue-600 data-[active=true]:hover:bg-blue-50 data-[active=true]:focus:bg-blue-50 data-[state=open]:focus:bg-blue-50',
+  'font-regular data-[state=open]:hover:bg-blue-10 group inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-base text-gray-700 transition-colors hover:bg-blue-50 hover:text-blue-600 focus:bg-blue-50 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active=true]:bg-blue-50 data-[state=open]:bg-blue-50 data-[active=true]:text-blue-600 data-[state=open]:text-blue-600 data-[active=true]:hover:bg-blue-50 data-[active=true]:focus:bg-blue-50 data-[state=open]:focus:bg-blue-50 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-blue-300 dark:focus:bg-gray-800 dark:data-[active=true]:bg-gray-800 dark:data-[state=open]:bg-gray-800 dark:data-[active=true]:text-blue-300 dark:data-[state=open]:text-blue-300',
 );
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -79,7 +79,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn('absolute left-0 top-full flex justify-center')}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        'origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-white text-gray-700 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
+        'origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border border-gray-200 bg-white text-gray-700 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 md:w-[var(--radix-navigation-menu-viewport-width)]',
         className,
       )}
       ref={ref}

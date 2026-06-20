@@ -142,7 +142,7 @@ export default function AddBookingForm({ clinicName, currentUrl, area }: Props) 
 
   return (
     <article className="mt-0">
-      <h2 className="mt-0">
+      <h2 className="font-display mt-0 dark:text-gray-50">
         Book an Appointment {clinicName ? `with ${clinicName}` : area ? `in ${area}` : ''}
       </h2>
       <Card>
@@ -266,7 +266,7 @@ export default function AddBookingForm({ clinicName, currentUrl, area }: Props) 
                             variant="outline"
                             className={cn(
                               'w-full pl-3 text-left text-sm',
-                              !field.value && 'text-gray-500',
+                              !field.value && 'text-gray-500 dark:text-gray-400',
                             )}>
                             {field.value ? (
                               field.value.toLocaleDateString()

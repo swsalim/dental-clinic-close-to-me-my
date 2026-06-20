@@ -64,7 +64,7 @@ const features = [
     description:
       'Appear in top search results for <strong>“dental clinic near me”</strong>—connect with high-intent patients searching for care now.​ Our <strong>DR is 23</strong> and growing.',
     icon: (
-      <div className="inline-block rounded-full bg-blue-100 p-4">
+      <div className="dark:bg-blue-950/60 inline-block rounded-full bg-blue-100 p-4">
         <MapPinIcon className="h-6 w-6 text-blue-500" />
       </div>
     ),
@@ -75,7 +75,7 @@ const features = [
     description:
       'Stand out with <strong>verified listings</strong>, <strong>genuine reviews</strong>, and a <strong>professionally presented profile</strong>.​',
     icon: (
-      <div className="inline-block rounded-full bg-yellow-100 p-4">
+      <div className="inline-block rounded-full bg-yellow-100 p-4 dark:bg-yellow-950/40">
         <ShieldCheckIcon className="h-6 w-6 text-yellow-600" />
       </div>
     ),
@@ -85,7 +85,7 @@ const features = [
     description:
       'Get authoritative citations and backlinks to your website, enhancing your Google rankings.​',
     icon: (
-      <div className="inline-block rounded-full bg-green-100 p-4">
+      <div className="inline-block rounded-full bg-green-100 p-4 dark:bg-green-950/40">
         <ChartNoAxesCombinedIcon className="h-6 w-6 text-green-600" />
       </div>
     ),
@@ -95,7 +95,7 @@ const features = [
     description:
       'Enjoy <strong>cost-effective packages</strong> and <strong>flexible upgrades</strong> that deliver lasting results—just one new patient can cover your ad spend.​',
     icon: (
-      <div className="bg-orange-100 inline-block rounded-full p-4">
+      <div className="bg-orange-100 dark:bg-orange-950/40 inline-block rounded-full p-4">
         <HandCoinsIcon className="text-orange-600 h-6 w-6" />
       </div>
     ),
@@ -106,7 +106,7 @@ const features = [
     description:
       'Work with a <strong>responsive team</strong> ready to help you maximize your clinic’s exposure and tackle any questions—no complicated systems required.​',
     icon: (
-      <div className="inline-block rounded-full bg-violet-100 p-4">
+      <div className="inline-block rounded-full bg-violet-100 p-4 dark:bg-violet-950/40">
         <HeartHandshakeIcon className="h-6 w-6 text-violet-600" />
       </div>
     ),
@@ -116,7 +116,7 @@ const features = [
     description:
       'Clinics choosing premium placements consistently receive more enquiries and bookings compared to standard listings.',
     icon: (
-      <div className="inline-block rounded-full bg-cyan-100 p-4">
+      <div className="inline-block rounded-full bg-cyan-100 p-4 dark:bg-cyan-950/40">
         <SproutIcon className="h-6 w-6 text-cyan-600" />
       </div>
     ),
@@ -127,25 +127,25 @@ function AdvertiseHero() {
   return (
     <>
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="mb-4 mt-2 text-4xl font-bold leading-snug tracking-tight text-blue-900 sm:text-5xl sm:leading-snug">
+        <h2 className="mb-4 mt-2 font-display text-4xl font-bold leading-snug tracking-tight text-blue-900 sm:text-5xl sm:leading-snug dark:text-blue-300">
           Reach Malaysia&apos;s Dental Patients Directly—Advertise With Us
         </h2>
-        <p className="text-lg font-medium text-blue-700">
+        <p className="text-lg font-medium text-blue-700 dark:text-blue-300">
           Showcase your clinic, highlight your expertise, and connect with thousands searching for
           dental care across Malaysia every month.
         </p>
         <div className="mx-auto mt-8">
           <ul className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
-            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-700">
-              <CheckIcon className="h-6 w-6 text-violet-600" />
+            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-300">
+              <CheckIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
               <span>Over 7,000 Nationwide Audience</span>
             </li>
-            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-700">
-              <CheckIcon className="h-6 w-6 text-violet-600" />
+            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-300">
+              <CheckIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
               <span>Verified Clinic Listings</span>
             </li>
-            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-700">
-              <CheckIcon className="h-6 w-6 text-violet-600" />
+            <li className="flex items-center gap-2 text-blue-700 dark:text-blue-300">
+              <CheckIcon className="h-6 w-6 text-violet-600 dark:text-violet-400" />
               <span>Flexible Ad Packages</span>
             </li>
           </ul>
@@ -159,10 +159,10 @@ function AdvertiseWhyUs() {
   return (
     <>
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="mb-4 mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        <h2 className="mb-4 mt-2 font-display text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 dark:text-gray-50">
           Why List Your Dental Clinic With Us?
         </h2>
-        <p className="text-lg font-medium text-gray-600">
+        <p className="text-lg font-medium text-gray-600 dark:text-gray-300">
           We offer a range of advertising options to help you reach more patients. Contact our team
           for a free consultation today.
         </p>
@@ -172,13 +172,13 @@ function AdvertiseWhyUs() {
           {features.map((feature) => (
             <li
               key={feature.title}
-              className="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+              className="flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-900/40">
               {feature.icon && <div className="">{feature.icon}</div>}
-              <h3 className="text-lg font-semibold leading-snug tracking-tight text-gray-900">
+              <h3 className="font-display text-lg font-semibold leading-snug tracking-tight text-gray-900 dark:text-gray-50">
                 {feature.title}
               </h3>
               <p
-                className="text-base text-gray-700"
+                className="text-base text-gray-700 dark:text-gray-300 [&_strong]:text-gray-900 dark:[&_strong]:text-gray-100"
                 dangerouslySetInnerHTML={{ __html: feature.description }}
               />
             </li>
@@ -191,10 +191,12 @@ function AdvertiseWhyUs() {
 
 function AdvertiseFooter() {
   return (
-    <div className="not-prose flex flex-col items-center justify-center gap-8 rounded-xl bg-blue-50 p-16 text-center shadow-lg">
+    <div className="not-prose flex flex-col items-center justify-center gap-8 rounded-xl bg-blue-50 p-16 text-center shadow-lg dark:bg-blue-800/40">
       <div className="flex flex-col items-center justify-center gap-2">
-        <h2 className="text-3xl font-bold text-blue-900">Ready to Grow Your Clinic’s Reach?</h2>
-        <p className="text-blue-700">
+        <h2 className="font-display text-3xl font-bold text-blue-900 dark:text-blue-300">
+          Ready to Grow Your Clinic’s Reach?
+        </h2>
+        <p className="text-blue-700 dark:text-blue-300">
           We offer a range of advertising options to help you reach more patients. Contact our team
           for a free consultation today.
         </p>
@@ -218,7 +220,7 @@ export default async function AdvertisePage() {
         reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
       />
 
-      <Wrapper size="default" className="bg-blue-50">
+      <Wrapper size="default" className="bg-blue-50 dark:bg-blue-800/40">
         <Container>
           <AdvertiseHero />
         </Container>

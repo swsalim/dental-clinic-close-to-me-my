@@ -61,8 +61,8 @@ export default async function AddDoctorPage() {
       <div className="flex-1 lg:max-w-full">
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-medium">Add New Doctor</h3>
-            <p className="text-sm text-gray-500">
+            <h3 className="font-display text-lg font-medium">Add New Doctor</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               Create a new doctor listing that will be shown on the site.
             </p>
           </div>

@@ -64,8 +64,8 @@ export function ExploreAreasClient({ areas }: ExploreAreasClientProps) {
                 />
               )}
             </div>
-            <h3 className="text-base font-semibold">{area.name}</h3>
-            <p className="text-sm font-medium text-gray-700">
+            <h3 className="font-display text-base font-semibold dark:text-gray-50">{area.name}</h3>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
               {area.clinics?.[0].count} {pluralize('clinic', area.clinics?.[0].count)}
             </p>
           </Link>

@@ -31,7 +31,7 @@ export function DataTableColumnHeader<TData, TValue>({
     <div className={cn('flex items-center space-x-2', className)}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="-ml-3 h-8 w-auto px-3 data-[state=open]:bg-gray-100">
+          <Button variant="ghost" className="-ml-3 h-8 w-auto px-3 data-[state=open]:bg-gray-100 dark:bg-gray-800">
             <span>{title}</span>
             {column.getIsSorted() === 'desc' ? (
               <ArrowDownIcon className="ml-2 h-4 w-4" />
@@ -44,16 +44,16 @@ export function DataTableColumnHeader<TData, TValue>({
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
-            <ArrowUpIcon className="mr-2 h-3.5 w-3.5 text-gray-500/70" />
+            <ArrowUpIcon className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
             Asc
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
-            <ArrowDownIcon className="mr-2 h-3.5 w-3.5 text-gray-500/70" />
+            <ArrowDownIcon className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
             Desc
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => column.toggleVisibility(false)}>
-            <EyeOffIcon className="mr-2 h-3.5 w-3.5 text-gray-500/70" />
+            <EyeOffIcon className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
             Hide
           </DropdownMenuItem>
         </DropdownMenuContent>

@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2026-06-20",
+    "macrostructure": "Stat-Led",
+    "theme": "site-native (Fraunces · Plus Jakarta · blue accent)",
+    "enrichment": "none",
+    "brief": "Dental Clinics Malaysia · homepage directory landing"
+  },
+  {
+    "date": "2026-06-20",
+    "macrostructure": "chrome-redesign",
+    "theme": "site-native (Fraunces · Plus Jakarta · blue accent)",
+    "enrichment": "none",
+    "nav": "N6 Newspaper masthead",
+    "footer": "Ft3 Index columns (domain-specific)",
+    "brief": "Navbar + footer redesign · internal links"
+  },
+  {
+    "date": "2026-06-20",
+    "macrostructure": "Ecosystem Index",
+    "theme": "site-native (Plus Jakarta Sans · blue-500 · red-500 accent)",
+    "enrichment": "none",
+    "brief": "Dental Clinics Malaysia · /browse location listing"
+  }
+]

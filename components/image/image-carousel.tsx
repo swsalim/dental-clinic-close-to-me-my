@@ -34,7 +34,7 @@ function ImageSlide({ image, title, index }: { image: string; title: string; ind
         priority={index === 0}
         width={800}
         height={800}
-        className="h-full w-full transform bg-gray-100 object-cover object-center"
+        className="h-full w-full transform bg-gray-100 dark:bg-gray-800 object-cover object-center"
       />
     </div>
   );

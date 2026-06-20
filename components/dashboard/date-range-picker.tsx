@@ -46,7 +46,7 @@ export const DatePickerWithRange: React.FC<DatePickerWithRangeProps> = ({
             variant="outline"
             className={cn(
               'w-[300px] justify-start text-left font-normal',
-              !date && 'text-gray-500',
+              !date && 'text-gray-500 dark:text-gray-400',
             )}>
             <CalendarIcon className="mr-2 h-4 w-4" />
             {date?.from ? (

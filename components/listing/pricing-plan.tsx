@@ -85,7 +85,7 @@ export function PricingPlan() {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <div className="flex flex-row items-center justify-between gap-4">
-            <h2 className="mb-0 mt-0 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 dark:text-gray-50">
+            <h2 className="font-display mb-0 mt-0 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 dark:text-gray-50">
               Simple, Transparent Pricing
             </h2>
             <div className="flex flex-row items-center gap-2">
@@ -105,15 +105,15 @@ export function PricingPlan() {
             <motion.div
               key={plan.name}
               whileHover={{ y: -5 }}
-              className="relative rounded-xl border p-6 shadow-sm transition hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
+              className="relative rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-lg dark:border-gray-800 dark:bg-gray-900">
               {plan.tag && (
                 <div className="absolute right-6 top-6">
                   <Badge variant="brand">{plan.tag}</Badge>
                 </div>
               )}
               <div className="mb-6 flex flex-col gap-2">
-                <h2 className="mb-0 mt-0 !text-xl !font-bold">{plan.name}</h2>
-                <p className="mb-0 text-2xl font-semibold text-blue-600">
+                <h2 className="font-display mb-0 mt-0 !text-xl !font-bold">{plan.name}</h2>
+                <p className="mb-0 text-2xl font-semibold text-blue-600 dark:text-blue-400">
                   RM{plan.price}
                   {type === 'monthly' ? (
                     <span className="text-base text-gray-500 dark:text-gray-400">/month</span>
@@ -122,7 +122,7 @@ export function PricingPlan() {
                   )}
                 </p>
                 {type === 'yearly' && (
-                  <p className="mb-0 mt-1 text-sm text-gray-500">
+                  <p className="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
                     <span className="text-base text-gray-500 line-through dark:text-gray-400">
                       RM{pricing.monthly[index].price * 12}/year
                     </span>

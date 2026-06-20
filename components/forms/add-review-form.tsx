@@ -150,7 +150,7 @@ export default function AddReviewForm({ clinicId }: AddReviewFormProps) {
 
   return (
     <article className="mt-8">
-      <h2>Add Your Review</h2>
+      <h2 className="font-display dark:text-gray-50">Add Your Review</h2>
       <Card>
         <CardContent className="pt-6">
           <Form {...form}>

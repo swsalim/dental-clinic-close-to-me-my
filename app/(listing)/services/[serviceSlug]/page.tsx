@@ -194,7 +194,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
       />
       <Wrapper>
         <Container>
-          <h1 className="mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
+          <h1 className="font-display mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
             {serviceData.name}
           </h1>
           <p className="mt-2 text-gray-500 dark:text-gray-400">{serviceData.description}</p>
@@ -219,7 +219,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
 
       <Wrapper>
         <Container>
-          <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+          <h2 className="font-display mb-6 text-balance text-xl font-bold md:text-2xl">
             {totalClinics} Dental Clinics that provides {serviceData.name}
           </h2>
           {clinics.length > 0 ? (
@@ -301,7 +301,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
                   />
                 </div>
               </div>
-              <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
+              <h2 className="font-display text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
               <p className="text-balance text-lg">No dental clinics provides {serviceData.name}.</p>
               <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                 <Link

@@ -224,7 +224,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
         <Container className="relative z-10">
           <div className="flex flex-col gap-4 py-12 md:py-24">
             <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
+            <h1 className="font-display text-balance text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities in{' '}
               <Link
@@ -245,7 +245,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
               <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} area={areaData.name} />
             </Prose>
           )}
-          <h2 className="mb-6 text-balance text-xl font-bold md:text-2xl">
+          <h2 className="font-display mb-6 text-balance text-xl font-bold md:text-2xl">
             {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
           </h2>
           {areaData.clinics?.length > 0 ? (
@@ -343,8 +343,8 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                   />
                 </div>
               </div>
-              <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
-              <p className="text-balance text-lg">
+              <h2 className="font-display text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
+              <p className="text-balance text-lg dark:text-gray-300">
                 We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
               </p>
               <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
@@ -370,12 +370,12 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       <Wrapper size="sm">
         <Container>
           <div className="flex flex-col gap-y-6">
-            <h2 className="text-balance text-xl font-bold md:text-2xl">
+            <h2 className="font-display text-balance text-xl font-bold md:text-2xl">
               Dental Clinics near {areaData.name}, {areaData.state?.name}
             </h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
               {stateData.areas?.map((area) => (
-                <h3 className="text-balance text-base font-medium" key={area.slug}>
+                <h3 className="font-display text-balance text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
                     className="py-1 hover:border-transparent"

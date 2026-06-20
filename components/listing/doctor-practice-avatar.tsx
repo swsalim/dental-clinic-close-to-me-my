@@ -22,7 +22,7 @@ export default async function DoctorPracticeAvatar({ clinicSlug, className }: Do
 
   return (
     <div className={cn('flex flex-col gap-6 lg:hidden', className)}>
-      <h2 className="text-xl font-semibold">Our Doctors</h2>
+      <h2 className="font-display text-xl font-semibold">Our Doctors</h2>
 
       <div className="not-prose flex flex-wrap gap-4">
         {doctors.map((doctor) => {
@@ -44,7 +44,7 @@ export default async function DoctorPracticeAvatar({ clinicSlug, className }: Do
                   priority={false}
                 />
               ) : (
-                <div className="flex h-full w-full items-center justify-center bg-gray-100">
+                <div className="flex h-full w-full items-center justify-center bg-gray-100 dark:bg-gray-800">
                   <SquareUserRoundIcon className="h-12 w-12 text-gray-400" />
                 </div>
               )}

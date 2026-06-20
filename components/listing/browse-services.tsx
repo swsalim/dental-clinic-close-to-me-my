@@ -26,33 +26,27 @@ export async function BrowseServices() {
   const services = await fetchServices();
 
   return (
-    <Wrapper className="bg-gray-50 dark:bg-gray-950/30">
-      <Container>
-        <div className="flex w-full flex-col items-center justify-center md:flex-row">
-          <div className="mb-10 w-full px-4 md:mb-0 md:w-5/12">
-            <h2 className="mb-4 text-3xl font-black text-black md:text-4xl dark:text-gray-50">
-              Browse a Variety of Dental Services
+    <Wrapper className="border-t border-gray-200 dark:border-gray-800">
+      <Container className="min-w-0">
+        <div className="flex min-w-0 w-full flex-col md:flex-row md:gap-12 lg:gap-16">
+          <div className="mb-8 min-w-0 md:mb-0 md:w-5/12">
+            <h2 className="font-display mb-3 text-2xl font-bold text-gray-900 md:text-3xl dark:text-gray-50">
+              Browse by service
             </h2>
-            <p className="mb-8 text-gray-500 dark:text-gray-300">
-              Whether you’re coming in for a regular checkup or need something more specialized,
-              we’re here to help keep your smile bright and healthy. Take a look at the services we
-              offer for kids, teens, and adults alike!
+            <p className="mb-6 text-base text-gray-600 dark:text-gray-300">
+              From routine checkups to specialised care — pick a service to see clinics that offer
+              it.
             </p>
-            <Button
-              asChild
-              variant="primary"
-              aria-label="Browse Services"
-              className="rounded-full"
-              size="large">
+            <Button asChild variant="outline" aria-label="Browse services" size="large">
               <Link href="/services/general-dentistry">
-                Browse Services
+                All services
                 <span className="ml-2" aria-hidden="true">
                   →
                 </span>
               </Link>
             </Button>
           </div>
-          <div className="grid w-full grid-cols-2 gap-6 px-4 sm:grid-cols-3 md:w-7/12">
+          <div className="grid min-w-0 w-full grid-cols-2 gap-4 sm:grid-cols-3 md:w-7/12 md:gap-5">
             {services.length === 0 && (
               <div className="col-span-full text-center text-gray-400 dark:text-gray-500">
                 No services found.
@@ -64,7 +58,7 @@ export async function BrowseServices() {
                 href={`/services/${service.slug}`}
                 tabIndex={0}
                 aria-label={service.name}
-                className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-8 text-gray-900 shadow-md outline-none transition hover:border-transparent hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
+                className="flex min-h-11 cursor-pointer flex-col items-center justify-center rounded-lg border border-gray-200 bg-white p-6 text-gray-900 outline-none transition hover:border-blue-200 hover:bg-blue-50/40 focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-900/40 dark:text-gray-50 dark:hover:border-blue-800 dark:hover:bg-blue-950/20"
                 role="button"
                 prefetch={false}>
                 {getServiceIcon(service.slug)}

@@ -35,7 +35,7 @@ export function DoctorCardSimple({ doctor }: DoctorCardProps) {
                 priority={false}
               />
             ) : (
-              <div className="flex h-full w-full items-center justify-center bg-gray-100">
+              <div className="flex h-full w-full items-center justify-center bg-gray-100 dark:bg-gray-800">
                 <SquareUserRoundIcon className="h-12 w-12 text-gray-400" />
               </div>
             )}

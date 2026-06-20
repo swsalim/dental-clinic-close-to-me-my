@@ -214,7 +214,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
         <Container className="relative z-10">
           <div className="flex flex-col gap-4 py-12 md:py-24">
             <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="text-balance text-4xl font-black text-white">{title}</h1>
+            <h1 className="font-display text-balance text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
@@ -261,8 +261,8 @@ export default async function StatePage({ params, searchParams }: StatePageProps
           </div>
           <div className="flex flex-col gap-y-6">
             {totalDoctors > 0 && (
-              <div className="flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900">
-                <h2 className="text-balance text-xl font-bold md:text-xl">
+              <div className="flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900 dark:border-blue-700 dark:bg-blue-950/40 dark:text-blue-100">
+                <h2 className="font-display text-balance text-xl font-bold md:text-xl">
                   Browse Dentists in {stateData.name}
                 </h2>
                 <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:justify-start">
@@ -296,7 +296,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                     href={`/${state}/dentists`}
                     className={cn(
                       buttonVariants({ variant: 'secondary' }),
-                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 sm:w-auto',
+                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 dark:border-blue-600 dark:bg-blue-900/40 dark:text-blue-200 dark:hover:border-blue-500 dark:hover:bg-blue-900/60 dark:hover:text-blue-100 sm:w-auto',
                     )}
                     prefetch={false}>
                     View All Dentists
@@ -304,7 +304,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                 </div>
               </div>
             )}
-            <h2 className="text-balance text-xl font-bold md:text-2xl">
+            <h2 className="font-display text-balance text-xl font-bold md:text-2xl">
               {totalClinics} Dental Clinics in {stateData.name}
             </h2>
             {stateData.clinics?.length > 0 ? (
@@ -389,8 +389,8 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                     />
                   </div>
                 </div>
-                <h2 className="text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
-                <p className="text-balance text-lg">No dental clinics found in {stateData.name}.</p>
+                <h2 className="font-display text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
+                <p className="text-balance text-lg dark:text-gray-300">No dental clinics found in {stateData.name}.</p>
                 <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                   <Link
                     href="/submit"
@@ -416,12 +416,12 @@ export default async function StatePage({ params, searchParams }: StatePageProps
       <Wrapper size="sm">
         <Container>
           <div className="flex flex-col gap-y-6">
-            <h2 className="text-balance text-xl font-bold md:text-2xl">
+            <h2 className="font-display text-balance text-xl font-bold md:text-2xl">
               Dental Clinics near {stateData.name}
             </h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
               {stateData.areas?.map((area) => (
-                <h3 className="text-balance text-base font-medium" key={area.slug}>
+                <h3 className="font-display text-balance text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
                     className="py-1 hover:border-transparent"

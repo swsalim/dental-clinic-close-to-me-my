@@ -370,7 +370,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
   if (success) {
     return (
       <div className="flex flex-col gap-4 rounded-lg bg-gray-50 p-6 text-center text-gray-700 dark:bg-gray-800/50 dark:text-gray-300">
-        <h2 className="mb-2 text-2xl font-bold text-gray-900 dark:text-gray-100">Thank you!</h2>
+        <h2 className="font-display mb-2 text-2xl font-bold text-gray-900 dark:text-gray-100">Thank you!</h2>
         <p>Your listing submission was successful.</p>
         <p>We will review and get your submission listed in 6 months.</p>
         <p>
@@ -592,7 +592,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                     : 'border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-900'
                 }`}>
                 <input {...dropzone.getInputProps()} onBlur={field.onBlur} />
-                <p className="text-gray-500">Drag and drop or click to select up to 5 images.</p>
+                <p className="text-gray-500 dark:text-gray-400">Drag and drop or click to select up to 5 images.</p>
                 {field.value && field.value.length > 0 && (
                   <div className="mt-4 flex flex-col gap-2">
                     {(field.value as File[])
@@ -608,8 +608,8 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                         return (
                           <div
                             key={file.name + file.size + file.type}
-                            className="flex items-center gap-3 rounded border bg-gray-50 p-2">
-                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded bg-gray-100">
+                            className="flex items-center gap-3 rounded border bg-gray-50 dark:bg-gray-800/50 p-2">
+                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded bg-gray-100 dark:bg-gray-800">
                               <img
                                 src={previewUrl}
                                 alt={file.name}
@@ -617,10 +617,10 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                               />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <div className="truncate text-sm font-medium text-gray-900">
+                              <div className="truncate text-sm font-medium text-gray-900 dark:text-gray-100">
                                 {file.name}
                               </div>
-                              <div className="text-xs text-gray-500">
+                              <div className="text-xs text-gray-500 dark:text-gray-400">
                                 {formatFileSize(file.size)} {file.type}
                               </div>
                             </div>
@@ -714,7 +714,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                   onValueChange={field.onChange}
                   className="flex flex-col gap-2">
                   <FormItem>
-                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 [&:has([data-state=checked])>div]:text-blue-700 dark:[&:has([data-state=checked])>div]:border-gray-700 dark:[&:has([data-state=checked])>div]:bg-gray-800 dark:[&:has([data-state=checked])>div]:text-gray-200">
+                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 dark:bg-blue-950/40 [&:has([data-state=checked])>div]:text-blue-700 dark:text-blue-300 dark:[&:has([data-state=checked])>div]:border-gray-700 dark:[&:has([data-state=checked])>div]:bg-gray-800 dark:[&:has([data-state=checked])>div]:text-gray-200">
                       <FormControl>
                         <RadioGroupItem value="instant" className="sr-only" />
                       </FormControl>
@@ -741,7 +741,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                     </FormLabel>
                   </FormItem>
                   <FormItem>
-                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 [&:has([data-state=checked])>div]:text-blue-700 dark:[&:has([data-state=checked])>div]:border-gray-700 dark:[&:has([data-state=checked])>div]:bg-gray-800 dark:[&:has([data-state=checked])>div]:text-gray-200">
+                    <FormLabel className="cursor-pointer [&:has([data-state=checked])>div]:border-blue-700 [&:has([data-state=checked])>div]:bg-blue-50 dark:bg-blue-950/40 [&:has([data-state=checked])>div]:text-blue-700 dark:text-blue-300 dark:[&:has([data-state=checked])>div]:border-gray-700 dark:[&:has([data-state=checked])>div]:bg-gray-800 dark:[&:has([data-state=checked])>div]:text-gray-200">
                       <FormControl>
                         <RadioGroupItem value="free" className="sr-only" />
                       </FormControl>

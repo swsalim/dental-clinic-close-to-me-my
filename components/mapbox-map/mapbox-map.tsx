@@ -88,7 +88,7 @@ export default function MapboxMap({
   if (!mapboxToken) {
     console.error('MapboxMap: Missing API token');
     return (
-      <div className="flex h-96 w-full items-center justify-center bg-gray-100">
+      <div className="flex h-96 w-full items-center justify-center bg-gray-100 dark:bg-gray-800">
         <p className="text-red-500">Map configuration error: Missing API token</p>
       </div>
     );
@@ -97,7 +97,7 @@ export default function MapboxMap({
   if (validLocations.length === 0) {
     console.warn('MapboxMap: No valid locations to display');
     return (
-      <div className="flex h-96 w-full items-center justify-center bg-gray-100">
+      <div className="flex h-96 w-full items-center justify-center bg-gray-100 dark:bg-gray-800">
         <p className="text-amber-500">No valid location coordinates available</p>
       </div>
     );
@@ -113,15 +113,15 @@ export default function MapboxMap({
   };
 
   return (
-    <div className="relative h-72 w-full overflow-hidden rounded-lg border border-gray-200">
+    <div className="relative h-72 w-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
       {!mapLoaded && !mapError && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-100">
-          <div className="animate-pulse">Loading map...</div>
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+          <div className="animate-pulse text-gray-700 dark:text-gray-300">Loading map...</div>
         </div>
       )}
 
       {mapError && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-100">
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
           <p className="text-red-500">{mapError}</p>
         </div>
       )}
@@ -160,7 +160,7 @@ export default function MapboxMap({
                   sizes="(max-width: 768px) 24px, 32px"
                   priority
                 />
-                <div className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm font-medium shadow-lg transition-all group-hover:opacity-100 md:opacity-0">
+                <div className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-white px-2 py-1 text-sm font-medium text-gray-900 shadow-lg transition-all group-hover:opacity-100 dark:bg-gray-900 dark:text-gray-100 md:opacity-0">
                   {location.name}
                 </div>
               </div>
