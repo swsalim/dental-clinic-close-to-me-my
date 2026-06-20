@@ -8,7 +8,7 @@ import { ArrowRightIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
-import { getStateBySlugCached } from '@/lib/data';
+import { getStateMetadataBySlugCached } from '@/lib/data';
 import { absoluteUrl, getPagination } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 
@@ -40,16 +40,10 @@ export async function generateMetadata({
   const { state } = await params;
   const { page } = await searchParams;
 
-  const limit = 20;
-  const parsedPage = page ? Number(page) : 1;
-  const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
-  const { from, to } = getPagination(currentPage, limit);
-  const stateData = await getStateBySlugCached(state, from, to);
+  const stateData = await getStateMetadataBySlugCached(state);
 
   if (!stateData) {
-    // Enhanced logging for production debugging
     console.error(`[DentistsByStatePage] State not found: "${state}"`);
-    console.error(`[DentistsByStatePage] Pagination: from=${from}, to=${to}`);
     notFound();
   }
 
@@ -139,14 +133,12 @@ export default async function DentistsByStatePage({
 
   // Fetch state metadata and doctors data in parallel
   const [stateData, doctorsResult] = await Promise.all([
-    getStateBySlugCached(state, from, to),
+    getStateMetadataBySlugCached(state),
     getDoctorsByState(state, limit, from),
   ]);
 
   if (!stateData) {
-    // Enhanced logging for production debugging
     console.error(`[DentistsByStatePage] State not found at runtime: "${state}"`);
-    console.error(`[DentistsByStatePage] Pagination: from=${from}, to=${to}`);
     notFound();
   }
 

@@ -253,8 +253,10 @@ class ClinicDataProcessor {
 
       const listingData: Omit<ClinicInsert, 'images'> = {
         name: listing.title,
-        area_id: '435560d3-71a4-45c9-8a28-4cf933e97d9d', // Cheras
-        state_id: 'a6d88d07-7216-469f-8f2b-454a360d3b83', // Kuala Lumpur
+        // area_id: '435560d3-71a4-45c9-8a28-4cf933e97d9d', // Cheras
+        // state_id: 'a6d88d07-7216-469f-8f2b-454a360d3b83', // Kuala Lumpur
+        area_id: 'e3cf3cdd-a0f8-499d-963b-565bb5f2f27f', // Cheras
+        state_id: '9ba983cb-7cd9-4d52-818e-03d38ca69a61', // Kuala Lumpur
         is_active: false,
         is_featured: false,
         slug: listing.slug,

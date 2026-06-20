@@ -14,27 +14,46 @@ import {
 
 import { createAdminClient, createServerClient } from '@/lib/supabase';
 
-export async function getClinicListings(status: string = 'approved') {
+type ClinicListing = {
+  id: string;
+  name: string;
+  slug: string;
+};
+
+const CLINIC_LISTINGS_PAGE_SIZE = 1000;
+
+export async function getClinicListings(status: string = 'approved'): Promise<ClinicListing[]> {
   const supabase = createAdminClient();
+  const clinics: ClinicListing[] = [];
+  let from = 0;
 
-  const { data: clinicData } = (await supabase
-    .from('clinics')
-    .select(
-      `
-      id,
-      name,
-      slug
-    `,
-    )
-    .match({ is_active: true, status })) as {
-    data: {
-      id: string;
-      name: string;
-      slug: string;
-    }[];
-  };
+  while (true) {
+    const { data, error } = await supabase
+      .from('clinics')
+      .select('id, name, slug')
+      .match({ is_active: true, status })
+      .order('id')
+      .range(from, from + CLINIC_LISTINGS_PAGE_SIZE - 1);
 
-  return clinicData ?? [];
+    if (error) {
+      console.error('Error fetching clinic listings:', error);
+      break;
+    }
+
+    if (!data?.length) {
+      break;
+    }
+
+    clinics.push(...data);
+
+    if (data.length < CLINIC_LISTINGS_PAGE_SIZE) {
+      break;
+    }
+
+    from += CLINIC_LISTINGS_PAGE_SIZE;
+  }
+
+  return clinics;
 }
 
 /**

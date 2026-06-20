@@ -6,7 +6,7 @@ import { createAdminClient } from '@/lib/supabase';
 
 // Type definitions for the state data
 
-interface StateData {
+export interface StateData {
   id: string;
   name: string;
   slug: string;
@@ -14,6 +14,43 @@ interface StateData {
   areas: Partial<ClinicArea>[];
   clinics: Partial<Clinic>[];
   total_clinics?: number;
+}
+
+export type StateMetadata = Pick<StateData, 'id' | 'name' | 'slug'>;
+
+async function fetchStateMetadataBySlug(slug: string): Promise<StateData | null> {
+  const supabase = createAdminClient();
+
+  const { data: metadata, error } = await supabase.rpc('get_state_metadata_by_slug', {
+    state_slug: slug,
+  });
+
+  if (error) {
+    throw new Error(`Failed to fetch state metadata for "${slug}": ${error.message}`);
+  }
+
+  if (!metadata) {
+    return null;
+  }
+
+  const clinics = (metadata as StateData).clinics ?? [];
+  return {
+    ...(metadata as StateData),
+    total_clinics: clinics.length,
+  };
+}
+
+function paginateStateClinics(
+  state: StateData,
+  fromIndex: number,
+  toIndex: number,
+): StateData {
+  const clinics = state.clinics ?? [];
+  return {
+    ...state,
+    total_clinics: state.total_clinics ?? clinics.length,
+    clinics: clinics.slice(fromIndex, toIndex + 1),
+  };
 }
 
 export const getStateListings = async () => {
@@ -24,6 +61,38 @@ export const getStateListings = async () => {
     .select('id, name, slug', { count: 'exact' });
 
   return statesData || [];
+};
+
+/**
+ * Lightweight state lookup for pages that only need id/name/slug (e.g. dentists listings).
+ */
+export const getStateMetadataBySlug = async (stateSlug: string): Promise<StateMetadata | null> => {
+  const slug = stateSlug;
+
+  if (!slug || typeof slug !== 'string') {
+    console.error('Invalid stateSlug provided to getStateMetadataBySlug:', stateSlug);
+    return null;
+  }
+
+  return unstable_cache(
+    async () => {
+      const state = await fetchStateMetadataBySlug(slug);
+      if (!state) {
+        return null;
+      }
+
+      return {
+        id: state.id,
+        name: state.name,
+        slug: state.slug,
+      };
+    },
+    [`state-metadata-v1-${slug}`],
+    {
+      revalidate: 1_209_600,
+      tags: ['states', `state-${slug}`],
+    },
+  )();
 };
 
 /**
@@ -60,12 +129,23 @@ export const getStateBySlug = async (
           `Error fetching state by slug "${slug}" (from: ${fromIndex}, to: ${toIndex}):`,
           error,
         );
+        throw new Error(
+          `Failed to fetch state by slug "${slug}" (from: ${fromIndex}, to: ${toIndex}): ${error.message}`,
+        );
+      }
+
+      if (state) {
+        return state as StateData;
+      }
+
+      const fallbackState = await fetchStateMetadataBySlug(slug);
+      if (!fallbackState) {
         return null;
       }
 
-      return state as StateData | null;
+      return paginateStateClinics(fallbackState, fromIndex, toIndex);
     },
-    [`state-by-slug-${slug}-${fromIndex}-${toIndex}`],
+    [`state-by-slug-v2-${slug}-${fromIndex}-${toIndex}`],
     {
       revalidate: 1_209_600, // Cache for 2 weeks
       tags: ['states', `state-${slug}`],

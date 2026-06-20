@@ -319,6 +319,14 @@ export default function FormEditClinic({
     mode: 'onChange',
   });
 
+  const handleSelectAllServicesExceptEmergency = () => {
+    services.forEach((service) => {
+      form.setValue(`services.${service.id}`, service.slug !== 'emergency-dentistry', {
+        shouldDirty: true,
+      });
+    });
+  };
+
   const { reset } = form;
   const { isSubmitting } = form.formState;
   const watchName = form.watch('name');
@@ -1056,6 +1064,15 @@ export default function FormEditClinic({
                     <FormItem>
                       <FormLabel className="block">Clinic Services</FormLabel>
                       <FormDescription>Select services provided.</FormDescription>
+                      <div className="mb-4">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="default"
+                          onClick={handleSelectAllServicesExceptEmergency}>
+                          Select All Except Emergency Dentistry
+                        </Button>
+                      </div>
                       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {services.map((service) => (
                           <FormField
