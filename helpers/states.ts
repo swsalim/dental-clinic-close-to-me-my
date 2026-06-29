@@ -48,11 +48,7 @@ async function fetchStateMetadataBySlug(slug: string): Promise<StateData | null>
   };
 }
 
-function paginateStateClinics(
-  state: StateData,
-  fromIndex: number,
-  toIndex: number,
-): StateData {
+function paginateStateClinics(state: StateData, fromIndex: number, toIndex: number): StateData {
   const clinics = state.clinics ?? [];
   return {
     ...state,
@@ -100,7 +96,7 @@ export const getStateAreasWithClinics = async (
         return [];
       }
 
-      return (areas || []).filter(hasApprovedClinics) as StateAreaWithClinics[];
+      return (areas || []).filter(hasApprovedClinics) as unknown as StateAreaWithClinics[];
     },
     [`state-areas-with-clinics-v1-${slug}`],
     {
