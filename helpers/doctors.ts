@@ -235,6 +235,8 @@ export async function getDoctors(
     },
   );
 
+  console.log('getCachedDoctors', getCachedDoctors());
+
   return getCachedDoctors();
 }
 

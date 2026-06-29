@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -17,7 +18,6 @@ import { getStateListings } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { DoctorCard } from '@/components/cards/doctor-card';
-import { ImageKit } from '@/components/image/image-kit';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -257,31 +257,23 @@ export default async function DentistsByStatePage({
                           {index === 5 && (
                             <div className="flex flex-col items-center justify-center gap-2 text-center">
                               <a
-                                href="https://dub.sh/darley-toothpaste"
+                                href="https://invl.me/clnlab2"
                                 className="hover:!border-b-transparent"
                                 target="_blank"
                                 rel="nofollow noopener noreferrer">
-                                <ImageKit
-                                  src="watson-toothpaste-1-1.avif"
-                                  directory="images"
-                                  alt="Darlie toothpaste"
+                                <Image
+                                  src="/images/total-image-2.jpg"
+                                  alt="Total Image"
                                   width={600}
                                   height={600}
                                   priority
                                   quality={85}
-                                  sizes="100vw"
-                                  className="mb-0 h-auto w-full object-cover"
+                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  className="m-0 h-auto w-full object-cover"
                                   style={{
                                     objectPosition: 'center center',
                                   }}
                                 />
-                              </a>
-                              <a
-                                href="https://dub.sh/watsons-promo"
-                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer">
-                                Browse Watsons Promotions
                               </a>
                             </div>
                           )}

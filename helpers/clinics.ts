@@ -22,6 +22,101 @@ type ClinicListing = {
 
 const CLINIC_LISTINGS_PAGE_SIZE = 1000;
 
+export const DASHBOARD_CLINIC_SELECT = `
+  id,
+  name,
+  slug,
+  website,
+  images:clinic_images(image_url, imagekit_file_id),
+  area:area_id(name, slug),
+  state:state_id(name, slug),
+  is_active
+`;
+
+export async function getDashboardClinics(options: {
+  status: 'approved' | 'pending';
+  orderBy?: 'created_at' | 'modified_at';
+}): Promise<{ data: Partial<Clinic>[]; total: number }> {
+  const supabase = createAdminClient();
+  const orderBy =
+    options.orderBy ?? (options.status === 'pending' ? 'modified_at' : 'created_at');
+  const clinics: Partial<Clinic>[] = [];
+  let from = 0;
+
+  const countQuery = supabase
+    .from('clinics')
+    .select('*', { count: 'exact', head: true })
+    .eq('status', options.status);
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('clinics')
+      .select(DASHBOARD_CLINIC_SELECT)
+      .eq('status', options.status)
+      .order(orderBy, { ascending: false })
+      .order('id', { ascending: false })
+      .range(from, from + CLINIC_LISTINGS_PAGE_SIZE - 1);
+
+    if (error) {
+      console.error('Error fetching dashboard clinics:', error);
+      break;
+    }
+
+    if (!data?.length) {
+      break;
+    }
+
+    clinics.push(...(data as unknown as Partial<Clinic>[]));
+
+    if (data.length < CLINIC_LISTINGS_PAGE_SIZE) {
+      break;
+    }
+
+    from += CLINIC_LISTINGS_PAGE_SIZE;
+  }
+
+  const { count, error: countError } = await countQuery;
+
+  if (countError) {
+    console.error('Error counting dashboard clinics:', countError);
+  }
+
+  return { data: clinics, total: count ?? clinics.length };
+}
+
+export async function getAllClinicListings(): Promise<ClinicListing[]> {
+  const supabase = createAdminClient();
+  const clinics: ClinicListing[] = [];
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from('clinics')
+      .select('id, name, slug')
+      .order('name')
+      .range(from, from + CLINIC_LISTINGS_PAGE_SIZE - 1);
+
+    if (error) {
+      console.error('Error fetching all clinic listings:', error);
+      break;
+    }
+
+    if (!data?.length) {
+      break;
+    }
+
+    clinics.push(...data);
+
+    if (data.length < CLINIC_LISTINGS_PAGE_SIZE) {
+      break;
+    }
+
+    from += CLINIC_LISTINGS_PAGE_SIZE;
+  }
+
+  return clinics;
+}
+
 export async function getClinicListings(status: string = 'approved'): Promise<ClinicListing[]> {
   const supabase = createAdminClient();
   const clinics: ClinicListing[] = [];

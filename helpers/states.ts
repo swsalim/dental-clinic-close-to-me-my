@@ -18,6 +18,14 @@ export interface StateData {
 
 export type StateMetadata = Pick<StateData, 'id' | 'name' | 'slug'>;
 
+export type StateAreaWithClinics = Pick<ClinicArea, 'id' | 'name' | 'slug'> & {
+  state?: { slug: string; name: string };
+};
+
+function hasApprovedClinics(area: { clinics?: { count: number }[] | null }): boolean {
+  return (area.clinics?.[0]?.count ?? 0) > 0;
+}
+
 async function fetchStateMetadataBySlug(slug: string): Promise<StateData | null> {
   const supabase = createAdminClient();
 
@@ -61,6 +69,45 @@ export const getStateListings = async () => {
     .select('id, name, slug', { count: 'exact' });
 
   return statesData || [];
+};
+
+/**
+ * Returns areas in a state that have at least one approved, active clinic.
+ */
+export const getStateAreasWithClinics = async (
+  stateSlug: string,
+): Promise<StateAreaWithClinics[]> => {
+  const slug = stateSlug;
+
+  if (!slug || typeof slug !== 'string') {
+    console.error('Invalid stateSlug provided to getStateAreasWithClinics:', stateSlug);
+    return [];
+  }
+
+  return unstable_cache(
+    async () => {
+      const supabase = createAdminClient();
+
+      const { data: areas, error } = await supabase
+        .from('areas')
+        .select('id, name, slug, state:states!inner(slug, name), clinics(count)')
+        .eq('state.slug', slug)
+        .eq('clinics.status', 'approved')
+        .eq('clinics.is_active', true);
+
+      if (error) {
+        console.error(`Error fetching areas with clinics for "${slug}":`, error);
+        return [];
+      }
+
+      return (areas || []).filter(hasApprovedClinics) as StateAreaWithClinics[];
+    },
+    [`state-areas-with-clinics-v1-${slug}`],
+    {
+      revalidate: 1_209_600,
+      tags: ['areas', `state-${slug}`],
+    },
+  )();
 };
 
 /**

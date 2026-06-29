@@ -1,0 +1,397 @@
+[{
+  "title": "Klinik Pergigian Kristal (Sibu) | Sibu Jaya",
+  "subTitle": null,
+  "description": null,
+  "price": null,
+  "categoryName": "Dental clinic",
+  "address": "1A, Ground Floor, No. 11, Jalan Industri Permata, Sibu Jaya, 96000 Sibu, Sarawak, Malaysia",
+  "neighborhood": "Sibu Jaya",
+  "street": "1A, Ground Floor, No. 11, Jalan Industri Permata",
+  "city": "Sibu",
+  "postalCode": "96000",
+  "state": "Sarawak",
+  "countryCode": "MY",
+  "website": "http://www.kpkristalsibu.online/",
+  "phone": "+60 10-921 7728",
+  "phoneUnformatted": "+60109217728",
+  "claimThisBusiness": false,
+  "location": {
+    "lat": 2.2376576,
+    "lng": 111.9757102
+  },
+  "locatedIn": null,
+  "floor": null,
+  "plusCode": "6XQG+37 Sibu Jaya, Sibu, Sarawak, Malaysia",
+  "menu": null,
+  "servicesLink": null,
+  "totalScore": 5,
+  "permanentlyClosed": false,
+  "temporarilyClosed": false,
+  "placeId": "ChIJr8e1-PQp-DERvp1fJ56FDVw",
+  "categories": [
+    "Dental clinic"
+  ],
+  "fid": "0x31f829f4f8b5c7af:0x5c0d859e275f9dbe",
+  "cid": "6633104740498513342",
+  "reviewsCount": 10,
+  "reviewsDistribution": {
+    "oneStar": 0,
+    "twoStar": 0,
+    "threeStar": 0,
+    "fourStar": 0,
+    "fiveStar": 10
+  },
+  "imagesCount": 30,
+  "imageCategories": [
+    "All",
+    "Latest",
+    "Videos",
+    "By owner",
+    "Street View & 360°"
+  ],
+  "scrapedAt": "2026-06-25T08:30:01.811Z",
+  "reserveTableUrl": null,
+  "googleFoodUrl": null,
+  "hotelStars": null,
+  "hotelDescription": null,
+  "checkInDate": null,
+  "checkOutDate": null,
+  "hotelAds": [],
+  "popularTimesLiveText": null,
+  "popularTimesLivePercent": null,
+  "popularTimesHistogram": {},
+  "openingHours": [
+    {
+      "day": "Monday",
+      "hours": "8:30 AM to 5 PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "8:30 AM to 5 PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "8:30 AM to 12:30 PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "8:30 AM to 5 PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "8:30 AM to 5 PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "8:30 AM to 5 PM"
+    },
+    {
+      "day": "Sunday",
+      "hours": "8:30 AM to 5 PM"
+    }
+  ],
+  "openingHoursBusinessConfirmationText": "Updated by this business 8 weeks ago",
+  "peopleAlsoSearch": [],
+  "placesTags": [],
+  "reviewsTags": [
+    {
+      "title": "precise explanations",
+      "count": 2
+    },
+    {
+      "title": "professional dentist",
+      "count": 2
+    }
+  ],
+  "additionalInfo": {
+    "Service options": [
+      {
+        "Onsite services": true
+      }
+    ],
+    "Accessibility": [
+      {
+        "Wheelchair accessible entrance": true
+      },
+      {
+        "Wheelchair accessible parking lot": true
+      },
+      {
+        "Wheelchair accessible restroom": true
+      },
+      {
+        "Wheelchair accessible seating": true
+      }
+    ],
+    "Offerings": [
+      {
+        "Cosmetic dentistry": true
+      },
+      {
+        "Emergency services": true
+      },
+      {
+        "Pediatric care": true
+      }
+    ],
+    "Amenities": [
+      {
+        "Restroom": true
+      }
+    ],
+    "Payments": [
+      {
+        "Credit cards": true
+      },
+      {
+        "Debit cards": true
+      },
+      {
+        "NFC mobile payments": true
+      }
+    ],
+    "Parking": [
+      {
+        "On-site parking": true
+      }
+    ]
+  },
+  "gasPrices": [],
+  "questionsAndAnswers": [],
+  "url": "https://www.google.com/maps/search/?api=1&query=Klinik%20Pergigian%20Kristal%20(Sibu)%20%7C%20Sibu%20Jaya&query_place_id=ChIJr8e1-PQp-DERvp1fJ56FDVw",
+  "searchString": "Direct Detail URL: https://www.google.com/maps/place/Klinik+Pergigian+Kristal+(Sibu)+%7C+Sibu+Jaya/@2.2693831,111.8213456,12z/data=!4m10!1m2!2m1!1skp+kristal+sibu!3m6!1s0x31f829f4f8b5c7af:0x5c0d859e275f9dbe!8m2!3d2.2376576!4d111.9757102!15sCg9rcCBrcmlzdGFsIHNpYnVaESIPa3Aga3Jpc3RhbCBzaWJ1kgENZGVudGFsX2NsaW5pY5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMXdjbU5GWjNkWk1qVnJXVlJTUTAxSFVsVk1WbWh2WlVWMFZtUXpZeEFC4AEA-gEECAAQNA!16s%2Fg%2F11ytj7wp9b?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D",
+  "language": "en",
+  "inputStartUrl": "https://www.google.com/maps/place/Klinik+Pergigian+Kristal+(Sibu)+%7C+Sibu+Jaya/@2.2693831,111.8213456,12z/data=!4m10!1m2!2m1!1skp+kristal+sibu!3m6!1s0x31f829f4f8b5c7af:0x5c0d859e275f9dbe!8m2!3d2.2376576!4d111.9757102!15sCg9rcCBrcmlzdGFsIHNpYnVaESIPa3Aga3Jpc3RhbCBzaWJ1kgENZGVudGFsX2NsaW5pY5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMXdjbU5GWjNkWk1qVnJXVlJTUTAxSFVsVk1WbWh2WlVWMFZtUXpZeEFC4AEA-gEECAAQNA!16s%2Fg%2F11ytj7wp9b?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D",
+  "isAdvertisement": false,
+  "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGc2zh42t9FYmSbxjdYe1qlfaJfz3r9Ubexy6WNSogq1lXUlEaAuQfo1tY2HtHjxBAapeJrPA1qT0ew_Wtn1X6i-OZuYu49OF8Omvq6O6fmcnXxhqy6wuDaZcuc7m66ihjNgid9In3MtIQ-=w408-h544-k-no",
+  "kgmid": "/g/11ytj7wp9b",
+  "webResults": [],
+  "tableReservationLinks": [],
+  "tableReservationProviders": [],
+  "bookingLinks": [],
+  "restaurantData": {
+    "tableReservationProvider": null
+  },
+  "ownerUpdates": [
+    {
+      "text": "Waktu Operasi Khas: Awal Muharram \n\nKlinik Pergigigan Kristal akan dibuka sepanjang hari pada Awal Muharram (Rabu, 17/6/26), berbeza daripada waktu operasi Rabu kami yang biasa, memberi anda peluang untuk menyelesaikan masalah gigi anda!\n\n 特别营业时间通知！\n\n伊斯兰新年（2026年6月17日，星期三）我们将全天营业, 与平时星期三的营业时间不同，给您一个解决牙齿问题的好机会！\n立即预约吧。",
+      "buttonText": null,
+      "buttonLink": null,
+      "date": "2026-06-15T05:00:00.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNUTuFZiOXmnr-YLbCfWM1rVeAez6k0PTc4uCMi=h400-no"
+    },
+    {
+      "text": "Mei adalah bulan yang penuh dengan sebab untuk anda senyum, dan kami ingin menjadikannya lebih bermakna! \n\nKami kini buka pada hari Ahad, dan sempena Hari Ibu, Hari Penghargaan Guru, cuti sekolah, serta perayaan Gawai yang semakin hampir, kami mengadakan promosi paling dinanti-nantikan: Pemutihan Laser, kini dengan harga khas untuk pelajar, kerana semua orang berhak tampil dengan senyuman cerah ketika berhari raya!\n\nMengapa ramai yang memilih pemutihan laser ini?\n✅ Kurang sensitif: kesan selepas rawatan yang lebih selesa berbanding pemutihan biasa\n✅ Hanya 20 minit untuk 3 kitaran pemutihan lengkap: nilai sebenar, hasil yang nyata\n✅ Konsultasi + skaling disertakan\nSama ada anda ingin memanjakan ibu tersayang, menghargai guru terbaik, atau memberi hadiah kepada diri sendiri menjelang cuti — inilah masanya! \n\nSinggah bila-bila masa (termasuk hari Ahad!) atau tempah slot anda sekarang. Slot terhad!\n\n五月，处处充满微笑的理由, 我们让它更值得期待！\n诊所现已逢星期日开放，值此母亲节、教师感恩日、学校假期，以及即将到来的丰收节（Gawai），我们隆重推出最受期待的优惠：激光美白疗程, 现特设学生专属价，因为每个人都值得以灿烂笑容迎接节日！\n\n为什么那么多顾客选择激光美白？\n✅ 敏感反应更少 — 术后不适明显少于传统美白\n✅ 只需20分钟 完成3个完整美白周期 — 真实价值，看得见的效果\n✅ 包含咨询 + 洗牙服务 \n无论是犒劳亲爱的妈妈、感谢最敬爱的老师，还是在假期前给自己一份礼物 , 欢迎随时光临（星期日也开放！），或立即预约。名额有限！\n",
+      "buttonText": null,
+      "buttonLink": null,
+      "date": "2026-05-13T01:01:13.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNMyL5_u0Q31X1X0GK5Ncmm-AKpxXT2WzL5RPcr=h400-no"
+    },
+    {
+      "text": "Berita baik untuk semua pelanggan kami!\nBermula minggu depan sepanjang bulan Mei, kami kini buka pada hari Ahad, supaya anda tidak perlu cuti kerja semata-mata untuk menjaga kesihatan mulut anda.\nKami faham jadual anda sibuk. Hari bekerja datang dan pergi, dan urusan kesihatan sering kali terpaksa ditangguhkan. Itulah sebabnya kami hadir pada hujung minggu... supaya tiada alasan lagi untuk melewatkan pemeriksaan yang anda perlukan. \nSama ada untuk pemeriksaan rutin, ubat ulangan, atau sekadar rasa tidak sihat — kami ada di sini untuk anda pada hari Ahad.\n\n好消息，告诉身边的人！🎉\n从下个星期开始，整个五月份我们每逢星期日也开诊啦！\n我们明白大家平时工作繁忙，看诊的事总是一拖再拖。请假不方便，平日抽不出时间, 这些我们都懂。所以我们决定在星期日也为您开门，让您在最方便的时候照顾好自己的健康",
+      "buttonText": null,
+      "buttonLink": null,
+      "date": "2026-05-04T08:36:05.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipNDnBjzOeYboy3E9UZ0YQCTCwRcMdqYv4CV6AF-=h400-no"
+    },
+    {
+      "text": "Berita baik untuk semua pelanggan kami! 🎉\nBermula minggu depan sepanjang bulan Mei, kami kini buka pada hari Ahad, supaya anda tidak perlu cuti kerja semata-mata untuk menjaga kesihatan mulut anda.\nKami faham jadual anda sibuk. Hari bekerja datang dan pergi, dan urusan kesihatan sering kali terpaksa ditangguhkan. Itulah sebabnya kami hadir pada hujung minggu... supaya tiada alasan lagi untuk melewatkan pemeriksaan yang anda perlukan. \nSama ada untuk pemeriksaan rutin, ubat ulangan, atau sekadar rasa tidak sihat — kami ada di sini untuk anda pada hari Ahad.\n\n好消息，告诉身边的人！🎉\n从下个星期开始，整个五月份我们每逢星期日也开诊啦！\n我们明白大家平时工作繁忙，看诊的事总是一拖再拖。请假不方便，平日抽不出时间, 这些我们都懂。所以我们决定在星期日也为您开门，让您在最方便的时候照顾好自己的健康",
+      "buttonText": null,
+      "buttonLink": null,
+      "date": "2026-04-27T00:57:13.000Z",
+      "imageUrl": "https://lh3.googleusercontent.com/geougc/AF1QipP9R0yYV_RdWEMdK_eUeFoqUqhszLqeH2QDHkGe=h400-no"
+    }
+  ],
+  "imageUrls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGc2zh42t9FYmSbxjdYe1qlfaJfz3r9Ubexy6WNSogq1lXUlEaAuQfo1tY2HtHjxBAapeJrPA1qT0ew_Wtn1X6i-OZuYu49OF8Omvq6O6fmcnXxhqy6wuDaZcuc7m66ihjNgid9In3MtIQ-=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGXEH2Xs6i8Q0Z1pCSlpfk4aPtsSgkfgSb5qWs2OJlTfbv8rCh11GJXyCT7kCLDCz3-qRxX88PHd4HGZFLEOGdwiS6jcgZYoa3hcWUnaVENd8sBjzL_gtUZ9RS4MK4I6Pm-zjNoN7coy2Gw=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1SZPF60Glm5V-YLiZOLvX0Y9aZuFhfRkwNvjmtVrkeJQg3BEOCnwcflVSEAv-xBUvxiVBlbNjpLbpbhQayLPPflvhy1rLnX7bCIPVwDsjR8gnm9plw45oaTUGIOO-8OCmihvbR_6N6qSb=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMvpzGX12uGJ3gy_SaxYuySrzI14DptXPoiQCaCWFoJqOxiu21WmGAnrBA7gDykTx9_xgUud2ci0XrEyNv7j0ic4PE0CKTg1l3u6PL0USEG7quXaur4a92-ZclbBpvk-Xr2s2rhO0MstkB=w1920-h1080-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9K4Zqqhp4sPLzpUfwSl5u5eJ8ggFQRoq_lCnRuxOYHDoIzpqWCQoYOoIQYxdXNKviPeonrvVNijb1CrBQ5aJnpy_nrxwaw3T3dco_z189NiGMqKlP35O_5SsRsRxG0bDK8h0GtkzA-Hg=w1920-h1080-k-no"
+  ],
+  "reviews": [
+    {
+      "textTranslated": "The best service. It doesn't hurt even a little when you pull it out. The best.",
+      "translatedLanguage": "en",
+      "text": "Layan terbaik Mase cabut sikit pun tak sakit  terbaik",
+      "originalLanguage": "ms",
+      "publishAt": "6 days ago",
+      "publishedAtDate": "2026-06-18T11:31:30.080Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2psWldFeEJlRUZNUjJWV1RWRkxNamszWTFKRVJFRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2psWldFeEJlRUZNUjJWV1RWRkxNamszWTFKRVJFRRAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOjlZWExBeEFMR2VWTVFLMjk3Y1JEREE%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you for sharing your positive experience and review and thank you very much for choosing our clinic for your dental needs.<br><br>We look forward to serving you again in the future.",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerId": "108267478572708331950",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocL_KwvRK3wW8x703qnBtqZog5ea3z3-IJIny0mh_7tNOWRqUA=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/108267478572708331950/reviews?hl=en-US",
+      "name": "Siouan Dian"
+    },
+    {
+      "textTranslated": "A very ethical dentist 👍",
+      "translatedLanguage": "en",
+      "text": "很有医德的牙医小姐👍",
+      "originalLanguage": "zh-Hans",
+      "publishAt": "6 days ago",
+      "publishedAtDate": "2026-06-18T11:26:48.187Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT25reWFDMXBiRmxaYTBsdWVWaE5XSFF6UldSTlUyYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25reWFDMXBiRmxaYTBsdWVWaE5XSFF6UldSTlUyYxAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOnkyaC1pbFlZa0lueVhNWHQzRWRNU2c%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you so much for leaving such an encouraging review! We are truly grateful that you chose us as your preferred dental clinic. It would be our honor to continue serving you and your family!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerId": "111101587478687765742",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKcansm5ad0fqeB0e8mtndadQgc7NL3rz7FNl9VS0ZfsHUULA=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/111101587478687765742/reviews?hl=en-US",
+      "name": "Kong Kin Siong"
+    },
+    {
+      "textTranslated": null,
+      "translatedLanguage": "en",
+      "text": "I had a great experience at the dental clinic Kristal, Sibu Jaya. The dentist was professional, gentle, and explained everything precisely. The treatment was comfortable, and I felt well taken care of.<br><br>Highly recommended! 👍👍👍",
+      "originalLanguage": "en",
+      "publishAt": "a month ago",
+      "publishedAtDate": "2026-04-28T23:13:57.494Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2xsb1pqTkVaMnMyVjBsdFJUaENMVXREZFhCRlJVRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsb1pqTkVaMnMyVjBsdFJUaENMVXREZFhCRlJVRRAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOlloZjNEZ2s2V0ltRThCLUtDdXBFRUE%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you for leaving this positive and encouraging review, and we truly appreciate you for choosing us as your dental clinic of choice!<br><br>We are honoured to be able to continue serving you and your family in the days to come!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerId": "114633127296865163427",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJR7TJh0sXDLdwE5O-6-hoiHAZKFDWc3-tqH-54_s7ORv0swg=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/114633127296865163427/reviews?hl=en-US",
+      "name": "Jude Ngu"
+    },
+    {
+      "textTranslated": null,
+      "translatedLanguage": "en",
+      "text": "Very efficient and friendly dentist, caring and able to identify and fix my teeth problem in a very professional way. Scaling is not painful and pleasant. Will come back again!",
+      "originalLanguage": "en",
+      "publishAt": "2 months ago",
+      "publishedAtDate": "2026-04-13T15:05:26.158Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21sc01tVlFUazFsVVdwMFoxTnFTRlY1Y2s1YWMzYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21sc01tVlFUazFsVVdwMFoxTnFTRlY1Y2s1YWMzYxAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOmlsMmVQTk1lUWp0Z1NqSFV5ck5ac3c%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you for leaving this positive and encouraging review, and we truly appreciate you for choosing us as your dental clinic of choice!<br><br>We are honoured to be able to continue serving you and your family in the days to come!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 5,
+      "isLocalGuide": false,
+      "reviewerId": "116898627373572929834",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLQ-vXRuSmKw9n0viiWDqsrY_vcAHrXwM63zOkKzgVeJ5IxBA=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/116898627373572929834/reviews?hl=en-US",
+      "name": "Jeffrey Ong"
+    },
+    {
+      "textTranslated": "Brought my 8 year old son to have his baby tooth extracted for the first time. The doctor and staff were very nice and patient with my son's concerns. The persuasion session took a while but the doctor & staff remained professional the whole time. Thank you Dr. Wong & staff. Clinic very clean & tidy too. Highly recommended dental.",
+      "translatedLanguage": "en",
+      "text": "Bawa anak umur 8 tahun pertama kali cabut gigi susu. Doktor dan staff sangat bagus dan sabar melayan kerenah anak saya. Agak lama juga sesi pujuk-memujuk berlangsung tetapi doktor & staff tetap kekal profesional sepanjang masa. Thank you Dr. Wong & staff. Clinic very clean & tidy too. Highly recommended dental.",
+      "originalLanguage": "ms",
+      "publishAt": "2 months ago",
+      "publishedAtDate": "2026-04-05T10:54:42.406Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21wcmNFZ3dZMjVrWVRSQ01HUlVMVmhvZUV0VmQzYxAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21wcmNFZ3dZMjVrWVRSQ01HUlVMVmhvZUV0VmQzYxAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOmprcEgwY25kYTRCMGRULVhoeEtVd3c%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you for leaving this positive and encouraging review, and we truly appreciate you for choosing us as your dental clinic of choice!<br><br>We are honoured to be able to continue serving you and your family in the days to come!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 1,
+      "isLocalGuide": false,
+      "reviewerId": "109970370899490401198",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a-/ALV-UjVQ7Qs4zAtkOBaOTJB82iaDHPP2cUtudlAZH00lYxU8SpcVfw1a=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/109970370899490401198/reviews?hl=en-US",
+      "name": "Elydia Isa"
+    },
+    {
+      "textTranslated": null,
+      "translatedLanguage": "en",
+      "text": "Visited the clinic and was warmly greeted by the staff, Dr Wong was exceptionally warm and detailed in explaining my dental problems. Highly recommend this place!<br>Location a bit hidden because of the neighbouring foodcourt signboards but it’s just next to Ecoshop, look for ecoshop and you’ll find it!",
+      "originalLanguage": "en",
+      "publishAt": "2 months ago",
+      "publishedAtDate": "2026-03-30T05:27:20.982Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pCcVowbzFTbVp0WkRaNFdURjNiVjh0ZUZkRVNGRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pCcVowbzFTbVp0WkRaNFdURjNiVjh0ZUZkRVNGRRAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOjBqZ0o1SmZtZDZ4WTF3bV8teFdESFE%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you for leaving this positive and encouraging review, and we truly appreciate you for choosing us as your dental clinic of choice!<br><br>We are honoured to be able to continue serving you and your family in the days to come!",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 6,
+      "isLocalGuide": false,
+      "reviewerId": "101788093204676870747",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIzDv-yiwfJfTYeuGgkxs-0BeqblfSKP6urZAuzzN1MSkBv=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/101788093204676870747/reviews?hl=en-US",
+      "name": "Esther Kwan"
+    },
+    {
+      "textTranslated": null,
+      "translatedLanguage": "en",
+      "text": "",
+      "originalLanguage": "",
+      "publishAt": "2 months ago",
+      "publishedAtDate": "2026-03-29T00:38:18.556Z",
+      "likesCount": 0,
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21NMWFtaHdRMlk0Um5kT1gwbDNhVEpHYWxORlMxRRAB",
+      "reviewUrl": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21NMWFtaHdRMlk0Um5kT1gwbDNhVEpHYWxORlMxRRAB!2m1!1s0x0:0x5c0d859e275f9dbe!3m1!1s2@1:CAIQACodChtycF9oOmM1amhwQ2Y4RndOX0l3aTJGalNFS1E%7C%7C?hl=en",
+      "reviewOrigin": "Google",
+      "stars": 5,
+      "rating": null,
+      "responseFromOwnerDate": null,
+      "responseFromOwnerText": "Thank you for sharing your positive experience and review and thank you very much for choosing our clinic for your dental needs.<br><br>We look forward to serving you again in the future.",
+      "reviewImageUrls": [],
+      "reviewContext": {},
+      "reviewDetailedRating": {},
+      "visitedIn": null,
+      "reviewerNumberOfReviews": 0,
+      "isLocalGuide": false,
+      "reviewerId": "104439068450863897906",
+      "reviewerPhotoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIrOGZ5Sq6dtu28_tvTqnb5MX7iPIagRXTpcxP7gs2eL6Slcw=s64-c-rp-mo-br100",
+      "reviewerUrl": "https://www.google.com/maps/contrib/104439068450863897906/reviews?hl=en-US",
+      "name": "vanessa chalengga"
+    }
+  ],
+  "leadsEnrichment": []
+}]

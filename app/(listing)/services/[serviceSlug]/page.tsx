@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -194,7 +195,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
       />
       <Wrapper>
         <Container>
-          <h1 className="font-display mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
+          <h1 className="mb-0 font-display text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
             {serviceData.name}
           </h1>
           <p className="mt-2 text-gray-500 dark:text-gray-400">{serviceData.description}</p>
@@ -219,7 +220,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
 
       <Wrapper>
         <Container>
-          <h2 className="font-display mb-6 text-balance text-xl font-bold md:text-2xl">
+          <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
             {totalClinics} Dental Clinics that provides {serviceData.name}
           </h2>
           {clinics.length > 0 ? (
@@ -233,31 +234,23 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
                         {index === 5 && (
                           <div className="flex flex-col items-center justify-center gap-2 text-center">
                             <a
-                              href="https://dub.sh/darley-toothpaste"
+                              href="https://invl.me/clnlab2"
                               className="hover:!border-b-transparent"
                               target="_blank"
                               rel="nofollow noopener noreferrer">
-                              <ImageKit
-                                src="watson-toothpaste-1-1.avif"
-                                directory="images"
-                                alt="Darlie toothpaste"
+                              <Image
+                                src="/images/total-image-2.jpg"
+                                alt="Total Image"
                                 width={600}
                                 height={600}
                                 priority
                                 quality={85}
-                                sizes="100vw"
-                                className="mb-0 h-auto w-full object-cover"
+                                sizes="(max-width: 672px) 100vw, 672px"
+                                className="m-0 h-auto w-full object-cover"
                                 style={{
                                   objectPosition: 'center center',
                                 }}
                               />
-                            </a>
-                            <a
-                              href="https://dub.sh/watsons-promo"
-                              className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
-                              target="_blank"
-                              rel="nofollow noopener noreferrer">
-                              Browse Watsons Promotions
                             </a>
                           </div>
                         )}
@@ -301,7 +294,7 @@ export default async function ServicePage({ params, searchParams }: ServicePageP
                   />
                 </div>
               </div>
-              <h2 className="font-display text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
+              <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">Oops!</h2>
               <p className="text-balance text-lg">No dental clinics provides {serviceData.name}.</p>
               <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                 <Link

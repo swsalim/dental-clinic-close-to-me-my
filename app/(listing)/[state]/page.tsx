@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -9,7 +10,7 @@ import { ArrowRightIcon, PersonStandingIcon } from 'lucide-react';
 
 import { siteConfig } from '@/config/site';
 
-import { getStateBySlugCached } from '@/lib/data';
+import { getStateAreasWithClinicsCached, getStateBySlugCached } from '@/lib/data';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getDoctorsByState } from '@/helpers/doctors';
@@ -49,16 +50,17 @@ export async function generateMetadata({
   const parsedPage = page ? Number(page) : 1;
   const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
-  const stateData = await getStateBySlugCached(state, from, to);
+  const [stateData, areasWithClinics] = await Promise.all([
+    getStateBySlugCached(state, from, to),
+    getStateAreasWithClinicsCached(state),
+  ]);
 
   if (!stateData) {
     notFound();
   }
 
-  const nearbyAreas = stateData.areas
-    ?.slice(0, 3)
-    .map((area) => area.name)
-    .join(', ');
+  const featuredAreas = areasWithClinics.slice(0, 3);
+  const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
 
   const LAST_UPDATED = 'November 2025';
   const title = `Top ${stateData.total_clinics} Dental Clinics in ${stateData.name} [${LAST_UPDATED}]`;
@@ -140,26 +142,25 @@ export default async function StatePage({ params, searchParams }: StatePageProps
   const currentPage = isNaN(parsedPage) || parsedPage < 1 ? 1 : Math.floor(parsedPage);
   const { from, to } = getPagination(currentPage, limit);
 
-  // Fetch state metadata and clinics data in parallel
-  const stateData = await getStateBySlugCached(state, from, to);
+  const [stateData, areasWithClinics, doctorsResult] = await Promise.all([
+    getStateBySlugCached(state, from, to),
+    getStateAreasWithClinicsCached(state),
+    getDoctorsByState(state, 5, 0),
+  ]);
 
   if (!stateData) {
     notFound();
   }
 
-  const doctorsResult = await getDoctorsByState(state, 5, 0);
   const doctors = doctorsResult.data;
   const totalDoctors = doctorsResult.count || 0;
 
   const totalClinics = stateData.total_clinics || 0;
   const totalPages = Math.ceil(totalClinics / limit);
 
-  const nearbyAreas = stateData.areas
-    ?.slice(0, 3)
-    .map((area) => area.name)
-    .join(', ');
-
-  const nearbyAreasWithLinks = stateData.areas?.slice(0, 3);
+  const featuredAreas = areasWithClinics.slice(0, 3);
+  const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
+  const nearbyAreasWithLinks = featuredAreas;
 
   const title = `Top Dental Clinics in ${stateData.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
@@ -214,7 +215,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
         <Container className="relative z-10">
           <div className="flex flex-col gap-4 py-12 md:py-24">
             <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="font-display text-balance text-4xl font-black text-white">{title}</h1>
+            <h1 className="text-balance font-display text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
@@ -239,19 +240,18 @@ export default async function StatePage({ params, searchParams }: StatePageProps
         <Container>
           <div className="mx-auto mb-10 max-w-2xl">
             <a
-              href="https://dub.sh/watsons-bundle"
+              href="https://invl.me/clnlab2"
               className="hover:!border-b-transparent"
               target="_blank"
               rel="nofollow noopener noreferrer">
-              <ImageKit
-                src="watsons-bundle-deal.avif"
-                directory="images"
-                alt="Darlie toothpaste"
+              <Image
+                src="/images/total-image-1.jpg"
+                alt="Total Image"
                 width={600}
                 height={600}
                 priority
                 quality={85}
-                sizes="100vw"
+                sizes="(max-width: 672px) 100vw, 672px"
                 className="m-0 h-auto w-full object-cover"
                 style={{
                   objectPosition: 'center center',
@@ -261,8 +261,8 @@ export default async function StatePage({ params, searchParams }: StatePageProps
           </div>
           <div className="flex flex-col gap-y-6">
             {totalDoctors > 0 && (
-              <div className="flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900 dark:border-blue-700 dark:bg-blue-950/40 dark:text-blue-100">
-                <h2 className="font-display text-balance text-xl font-bold md:text-xl">
+              <div className="dark:bg-blue-950/40 flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900 dark:border-blue-700 dark:text-blue-100">
+                <h2 className="text-balance font-display text-xl font-bold md:text-xl">
                   Browse Dentists in {stateData.name}
                 </h2>
                 <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:justify-start">
@@ -296,7 +296,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                     href={`/${state}/dentists`}
                     className={cn(
                       buttonVariants({ variant: 'secondary' }),
-                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 dark:border-blue-600 dark:bg-blue-900/40 dark:text-blue-200 dark:hover:border-blue-500 dark:hover:bg-blue-900/60 dark:hover:text-blue-100 sm:w-auto',
+                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 sm:w-auto dark:border-blue-600 dark:bg-blue-900/40 dark:text-blue-200 dark:hover:border-blue-500 dark:hover:bg-blue-900/60 dark:hover:text-blue-100',
                     )}
                     prefetch={false}>
                     View All Dentists
@@ -304,7 +304,7 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                 </div>
               </div>
             )}
-            <h2 className="font-display text-balance text-xl font-bold md:text-2xl">
+            <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
               {totalClinics} Dental Clinics in {stateData.name}
             </h2>
             {stateData.clinics?.length > 0 ? (
@@ -321,31 +321,23 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                           {index === 5 && (
                             <div className="flex flex-col items-center justify-center gap-2 text-center">
                               <a
-                                href="https://dub.sh/darley-toothpaste"
+                                href="https://invl.me/clnlab2"
                                 className="hover:!border-b-transparent"
                                 target="_blank"
                                 rel="nofollow noopener noreferrer">
-                                <ImageKit
-                                  src="watson-toothpaste-1-1.avif"
-                                  directory="images"
-                                  alt="Darlie toothpaste"
+                                <Image
+                                  src="/images/total-image-2.jpg"
+                                  alt="Total Image"
                                   width={600}
                                   height={600}
                                   priority
                                   quality={85}
-                                  sizes="100vw"
-                                  className="mb-0 h-auto w-full object-cover"
+                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  className="m-0 h-auto w-full object-cover"
                                   style={{
                                     objectPosition: 'center center',
                                   }}
                                 />
-                              </a>
-                              <a
-                                href="https://dub.sh/watsons-promo"
-                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer">
-                                Browse Watsons Promotions
                               </a>
                             </div>
                           )}
@@ -389,8 +381,10 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                     />
                   </div>
                 </div>
-                <h2 className="font-display text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
-                <p className="text-balance text-lg dark:text-gray-300">No dental clinics found in {stateData.name}.</p>
+                <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">Oops!</h2>
+                <p className="text-balance text-lg dark:text-gray-300">
+                  No dental clinics found in {stateData.name}.
+                </p>
                 <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
                   <Link
                     href="/submit"
@@ -416,12 +410,12 @@ export default async function StatePage({ params, searchParams }: StatePageProps
       <Wrapper size="sm">
         <Container>
           <div className="flex flex-col gap-y-6">
-            <h2 className="font-display text-balance text-xl font-bold md:text-2xl">
+            <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
               Dental Clinics near {stateData.name}
             </h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
               {stateData.areas?.map((area) => (
-                <h3 className="font-display text-balance text-base font-medium" key={area.slug}>
+                <h3 className="text-balance font-display text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
                     className="py-1 hover:border-transparent"

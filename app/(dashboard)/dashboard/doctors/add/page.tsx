@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import { siteConfig } from '@/config/site';
 
-import { createClient } from '@/lib/supabase/server';
+import { getAllClinicListings } from '@/helpers/clinics';
 
 import { Separator } from '@/components/ui/separator';
 
@@ -52,9 +52,7 @@ export const metadata: Metadata = {
 };
 
 export default async function AddDoctorPage() {
-  const supabase = await createClient();
-
-  const { data: clinicsData } = await supabase.from('clinics').select('id, name, slug');
+  const clinicsData = await getAllClinicListings();
 
   return (
     <div className="flex flex-row gap-6">

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import { siteConfig } from '@/config/site';
 
-import { createBrowserClient } from '@/lib/supabase';
+import { getDashboardClinics } from '@/helpers/clinics';
 
 import { ClinicTableData, columns } from '../columns';
 import { DataTable } from '../components/data-table';
@@ -53,27 +53,17 @@ export const metadata: Metadata = {
 };
 
 export default async function DashboardReviewClinicsPage() {
-  const supabase = createBrowserClient();
-  const { data } = await supabase
-    .from('clinics')
-    .select(
-      `id,
-      name,
-      slug,
-      website,
-      images:clinic_images(image_url, imagekit_file_id),
-      area:area_id(name, slug),
-      state:state_id(name, slug),
-      is_active`,
-    )
-    .eq('status', 'pending')
-    .order('modified_at', { ascending: false });
+  const { data, total } = await getDashboardClinics({
+    status: 'pending',
+    orderBy: 'modified_at',
+  });
 
   return (
     <DataTable
       columns={columns}
       data={(data as unknown as ClinicTableData[]) || []}
       type="clinic"
+      totalCount={total}
     />
   );
 }

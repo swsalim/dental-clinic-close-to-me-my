@@ -22,9 +22,15 @@ interface DataTableToolbarProps<TData> {
   table: Table<TData>;
   type?: string;
   states: State[];
+  totalCount?: number;
 }
 
-export function DataTableToolbar<TData>({ table, type, states }: DataTableToolbarProps<TData>) {
+export function DataTableToolbar<TData>({
+  table,
+  type,
+  states,
+  totalCount,
+}: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0;
   const nameColumn = table.getColumn('name');
   const stateColumn = table.getColumn('state');
@@ -32,6 +38,11 @@ export function DataTableToolbar<TData>({ table, type, states }: DataTableToolba
   return (
     <div className="flex items-center justify-between">
       <div className="flex flex-1 items-center space-x-2">
+        {totalCount !== undefined && (
+          <p className="text-sm text-muted-foreground whitespace-nowrap">
+            {totalCount.toLocaleString()} {type ? `${type}s` : 'rows'}
+          </p>
+        )}
         {nameColumn && (
           <Input
             placeholder="Filter business..."

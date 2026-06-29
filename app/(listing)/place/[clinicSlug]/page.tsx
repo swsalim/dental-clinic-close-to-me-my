@@ -28,7 +28,7 @@ import TikTok from '@/components/icons/tiktok';
 import { ImageGallery } from '@/components/image/image-gallery';
 import { ImageKit } from '@/components/image/image-kit';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
-import DoctorPractice from '@/components/listing/doctor-practice';
+import { ClinicSidebar } from '@/components/listing/clinic-sidebar';
 import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
 import { GetDirectionButton } from '@/components/listing/get-direction-button';
 import NearbyClinics from '@/components/listing/nearby-clinics';
@@ -63,7 +63,7 @@ function Map({
 }) {
   return (
     <>
-      <h2 className="font-display mt-0 dark:text-gray-50">Map</h2>
+      <h2 className="mt-0 font-display dark:text-gray-50">Map</h2>
 
       <div className="mb-6 mt-2">
         <MapWrapper
@@ -329,7 +329,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 <Breadcrumb items={breadcrumbItems} />
               </div>
               <div className="flex flex-col flex-wrap items-start justify-between gap-x-2 gap-y-2 lg:flex-row lg:items-center lg:justify-normal">
-                <h1 className="font-display mb-0 text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
+                <h1 className="mb-0 font-display text-xl font-black leading-7 text-gray-800 sm:truncate sm:text-3xl sm:leading-9 dark:text-gray-50">
                   {parsedClinic.name}
                 </h1>
                 <StarRating rating={parsedClinic.rating ?? 0} />
@@ -479,7 +479,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
             <Prose className="space-y-8">
               {parsedClinic.description && (
                 <article>
-                  <h2 className="font-display my-0 dark:text-gray-50">About {parsedClinic.name}</h2>
+                  <h2 className="my-0 font-display dark:text-gray-50">About {parsedClinic.name}</h2>
                   <TruncatedHtml html={parsedClinic.description} limit={80} />
                 </article>
               )}
@@ -507,7 +507,9 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
 
               {parsedClinic.hours && parsedClinic.hours.length > 0 && (
                 <article>
-                  <h2 className="font-display dark:text-gray-50">{parsedClinic.name}&apos;s Opening Hours</h2>
+                  <h2 className="font-display dark:text-gray-50">
+                    {parsedClinic.name}&apos;s Opening Hours
+                  </h2>
                   <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
                     {renderOpeningHours(parsedClinic)}
                   </div>
@@ -535,68 +537,13 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 </>
               )}
             </Prose>
-            <aside>
-              <Prose>
-                <article className="hidden lg:block">
-                  <Map
-                    latitude={parsedClinic.latitude ?? 0}
-                    longitude={parsedClinic.longitude ?? 0}
-                    name={parsedClinic.name ?? ''}
-                  />
-                </article>
-
-                <DoctorPractice clinicSlug={clinicSlug} />
-
-                <div className="flex flex-col gap-2 text-center">
-                  <a
-                    href="https://dub.sh/darley-toothpaste"
-                    className="hover:!border-b-transparent"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer">
-                    <ImageKit
-                      src="watson-toothpaste-1-1.avif"
-                      directory="images"
-                      alt="Darlie toothpaste"
-                      width={600}
-                      height={600}
-                      priority
-                      quality={85}
-                      sizes="100vw"
-                      className="mb-0 h-auto w-full object-cover"
-                      style={{
-                        objectPosition: 'center center',
-                      }}
-                    />
-                  </a>
-                  <a
-                    href="https://dub.sh/watsons-promo"
-                    className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer">
-                    Browse Watsons Promotions
-                  </a>
-                </div>
-
-                {parsedClinic.services && (
-                  <div className="hidden lg:block">
-                    <h2 className="font-display dark:text-gray-50">{parsedClinic.name} Services</h2>
-                    <div className="grid grid-cols-3 gap-4">
-                      {parsedClinic.services.map((service, index) => (
-                        <Link
-                          key={service.slug ?? service.name ?? String(index)}
-                          href={`/services/${service.slug}`}
-                          aria-label={service.name}
-                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-3 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950/40 dark:text-gray-50"
-                          role="button">
-                          {getServiceIcon(service.slug ?? '')}
-                          <div className="mt-4 text-center text-xs">{service.name}</div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </Prose>
-            </aside>
+            <ClinicSidebar
+              clinicSlug={clinicSlug}
+              clinicName={parsedClinic.name ?? ''}
+              latitude={parsedClinic.latitude ?? 0}
+              longitude={parsedClinic.longitude ?? 0}
+              services={parsedClinic.services}
+            />
           </div>
         </Container>
       </Wrapper>

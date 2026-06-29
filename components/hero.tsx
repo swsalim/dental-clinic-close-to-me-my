@@ -2,7 +2,6 @@
  * knobs: ratio=7/5 · right=proof-column · divider=vertical-rule · enrichment: none
  * pre-emit critique: P4 H5 E5 S5 R4 V5
  */
-
 import Link from 'next/link';
 
 import { ClinicImage } from '@/types/clinic';
@@ -12,10 +11,9 @@ import { cn } from '@/lib/utils';
 
 import { getDoctors } from '@/helpers/doctors';
 
+import { getHomeDirectoryStats } from '@/components/listing/home-stats';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
-
-import { getHomeDirectoryStats } from '@/components/listing/home-stats';
 
 import { ImageKit } from './image/image-kit';
 
@@ -23,11 +21,7 @@ function formatStat(value: number) {
   return value.toLocaleString('en-MY');
 }
 
-function buildLede(
-  clinicCount: number,
-  doctorsCount: number,
-  stateCount: number,
-): string {
+function buildLede(clinicCount: number, doctorsCount: number, stateCount: number): string {
   const parts: string[] = [];
 
   if (clinicCount > 0) {
@@ -65,16 +59,12 @@ export async function Hero() {
       <Container className="min-w-0 py-10 md:py-14 lg:py-16">
         <div className="grid min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-12 xl:gap-16">
           <div className="min-w-0">
-            <h1 className="font-display max-w-xl text-balance text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.05] tracking-tight text-gray-900 dark:text-gray-50">
+            <h1 className="max-w-xl text-balance font-display text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.05] tracking-tight text-gray-900 dark:text-gray-50">
               Find dental care near you
             </h1>
 
             <p className="mt-4 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg dark:text-gray-300">
-              {buildLede(
-                directoryStats.clinicCount,
-                doctorsCount,
-                directoryStats.stateCount,
-              )}
+              {buildLede(directoryStats.clinicCount, doctorsCount, directoryStats.stateCount)}
             </p>
 
             <div className="mt-8 flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -104,7 +94,7 @@ export async function Hero() {
             className="min-w-0 border-t border-gray-200 pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0 xl:pl-12 dark:border-gray-800"
             aria-label="Directory snapshot">
             {doctorsData.length > 0 ? (
-              <div className="mb-6 grid min-w-0 grid-cols-3 gap-2 sm:max-w-sm sm:grid-cols-3 lg:max-w-none">
+              <div className="mb-6 grid min-w-0 grid-cols-3 gap-2 sm:max-w-none sm:grid-cols-3 lg:max-w-none">
                 {doctorsData.map((doctor) => (
                   <Link
                     key={doctor.id}
@@ -141,7 +131,7 @@ export async function Hero() {
                     <dt className="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
                       {stat.label}
                     </dt>
-                    <dd className="font-display mt-1 text-xl font-bold tabular-nums text-gray-900 md:text-2xl dark:text-gray-50">
+                    <dd className="mt-1 font-display text-xl font-bold tabular-nums text-gray-900 md:text-2xl dark:text-gray-50">
                       {formatStat(stat.value)}
                     </dd>
                   </div>

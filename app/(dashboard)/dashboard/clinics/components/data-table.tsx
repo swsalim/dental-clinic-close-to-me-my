@@ -8,12 +8,14 @@ interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   type?: string;
+  totalCount?: number;
 }
 
 export async function DataTable<TData, TValue>({
   columns,
   data,
   type,
+  totalCount,
 }: DataTableProps<TData, TValue>) {
   const supabase = await createServerClient();
   const { data: states, error } = await supabase
@@ -31,6 +33,7 @@ export async function DataTable<TData, TValue>({
       columns={columns}
       data={data}
       type={type}
+      totalCount={totalCount}
       states={states.map((state) => ({
         name: state.name,
         slug: state.slug,

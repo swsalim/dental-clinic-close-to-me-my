@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -224,7 +225,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
         <Container className="relative z-10">
           <div className="flex flex-col gap-4 py-12 md:py-24">
             <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="font-display text-balance text-4xl font-black text-white">{title}</h1>
+            <h1 className="text-balance font-display text-4xl font-black text-white">{title}</h1>
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities in{' '}
               <Link
@@ -240,12 +241,33 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       </Wrapper>
       <Wrapper size="sm">
         <Container>
+          <div className="mx-auto mb-10 max-w-2xl">
+            <a
+              href="https://invl.me/clnlab2"
+              className="hover:!border-b-transparent"
+              target="_blank"
+              rel="nofollow noopener noreferrer">
+              <Image
+                src="/images/total-image-1.jpg"
+                alt="Total Image"
+                width={600}
+                height={600}
+                priority
+                quality={85}
+                sizes="(max-width: 672px) 100vw, 672px"
+                className="m-0 h-auto w-full object-cover"
+                style={{
+                  objectPosition: 'center center',
+                }}
+              />
+            </a>
+          </div>
           {isJohorBahru && (
             <Prose className="mb-12 block lg:hidden">
               <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} area={areaData.name} />
             </Prose>
           )}
-          <h2 className="font-display mb-6 text-balance text-xl font-bold md:text-2xl">
+          <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
             {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
           </h2>
           {areaData.clinics?.length > 0 ? (
@@ -264,31 +286,23 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                           {index === 5 && (
                             <div className="flex flex-col items-center justify-center gap-2 text-center">
                               <a
-                                href="https://dub.sh/darley-toothpaste"
+                                href="https://invl.me/clnlab2"
                                 className="hover:!border-b-transparent"
                                 target="_blank"
                                 rel="nofollow noopener noreferrer">
-                                <ImageKit
-                                  src="watson-toothpaste-1-1.avif"
-                                  directory="images"
-                                  alt="Darlie toothpaste"
+                                <Image
+                                  src="/images/total-image-2.jpg"
+                                  alt="Total Image"
                                   width={600}
                                   height={600}
                                   priority
                                   quality={85}
-                                  sizes="100vw"
-                                  className="mb-0 h-auto w-full object-cover"
+                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  className="m-0 h-auto w-full object-cover"
                                   style={{
                                     objectPosition: 'center center',
                                   }}
                                 />
-                              </a>
-                              <a
-                                href="https://dub.sh/watsons-promo"
-                                className="text-sm !font-medium text-blue-500 hover:border-0 hover:text-blue-400 hover:no-underline dark:text-blue-300 dark:hover:text-blue-400"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer">
-                                Browse Watsons Promotions
                               </a>
                             </div>
                           )}
@@ -343,7 +357,7 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
                   />
                 </div>
               </div>
-              <h2 className="font-display text-balance text-2xl font-bold md:text-4xl">Oops!</h2>
+              <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">Oops!</h2>
               <p className="text-balance text-lg dark:text-gray-300">
                 We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
               </p>
@@ -370,12 +384,12 @@ export default async function AreaPage({ params, searchParams }: AreaPageProps) 
       <Wrapper size="sm">
         <Container>
           <div className="flex flex-col gap-y-6">
-            <h2 className="font-display text-balance text-xl font-bold md:text-2xl">
+            <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
               Dental Clinics near {areaData.name}, {areaData.state?.name}
             </h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
               {stateData.areas?.map((area) => (
-                <h3 className="font-display text-balance text-base font-medium" key={area.slug}>
+                <h3 className="text-balance font-display text-base font-medium" key={area.slug}>
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
                     className="py-1 hover:border-transparent"

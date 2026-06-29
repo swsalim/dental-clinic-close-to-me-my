@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 import { siteConfig } from '@/config/site';
 
-import { createServerClient } from '@/lib/supabase';
+import { getDashboardClinics } from '@/helpers/clinics';
 
 import { ClinicTableData, columns } from './columns';
 import { DataTable } from './components/data-table';
@@ -53,32 +53,17 @@ export const metadata: Metadata = {
 };
 
 export default async function DashboardClinicsPage() {
-  const supabase = await createServerClient();
-  const { data, error } = await supabase
-    .from('clinics')
-    .select(
-      `id,
-      name,
-      slug,
-      website,
-      images:clinic_images(image_url, imagekit_file_id),
-      area:area_id(name, slug),
-      state:state_id(name, slug),
-      is_active`,
-    )
-    .eq('status', 'approved')
-    .order('created_at', { ascending: false });
+  const { data, total } = await getDashboardClinics({
+    status: 'approved',
+    orderBy: 'created_at',
+  });
 
-  if (error) {
-    console.error('Error fetching clinics:', error);
-  }
-
-  // Convert Supabase data to our expected format
   return (
     <DataTable
       columns={columns}
       data={(data as unknown as ClinicTableData[]) || []}
       type="clinic"
+      totalCount={total}
     />
   );
 }

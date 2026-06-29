@@ -17,14 +17,31 @@ import { Button } from '@/components/ui/button';
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;
+  totalCount?: number;
 }
 
-export function DataTablePagination<TData>({ table }: DataTablePaginationProps<TData>) {
+export function DataTablePagination<TData>({
+  table,
+  totalCount,
+}: DataTablePaginationProps<TData>) {
+  const filteredCount = table.getFilteredRowModel().rows.length;
+  const selectedCount = table.getFilteredSelectedRowModel().rows.length;
+  const isFiltered = filteredCount !== table.getCoreRowModel().rows.length;
+
   return (
     <div className="flex items-center justify-between px-2">
       <div className="flex-1 text-sm text-gray-300">
-        {table.getFilteredSelectedRowModel().rows.length} of{' '}
-        {table.getFilteredRowModel().rows.length} row(s) selected.
+        {selectedCount > 0 && (
+          <>
+            {selectedCount} of {filteredCount} row(s) selected
+            {' · '}
+          </>
+        )}
+        {isFiltered
+          ? `${filteredCount.toLocaleString()} of ${(totalCount ?? filteredCount).toLocaleString()} shown`
+          : totalCount !== undefined
+            ? `${totalCount.toLocaleString()} total`
+            : `${filteredCount.toLocaleString()} row(s)`}
       </div>
       <div className="flex items-center space-x-6 lg:space-x-8">
         <div className="flex items-center space-x-2">

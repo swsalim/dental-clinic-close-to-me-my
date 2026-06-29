@@ -35,6 +35,7 @@ interface DataTableClientProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   type?: string;
+  totalCount?: number;
   states: { name: string; slug: string }[];
 }
 
@@ -56,6 +57,7 @@ export function DataTableClient<TData, TValue>({
   columns,
   data,
   type,
+  totalCount,
   states,
 }: DataTableClientProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -92,7 +94,7 @@ export function DataTableClient<TData, TValue>({
 
   return (
     <div className="space-y-4">
-      <DataTableToolbar table={table} type={type} states={states} />
+      <DataTableToolbar table={table} type={type} states={states} totalCount={totalCount} />
       <div className="rounded-md border">
         <ShadcnTable>
           <TableHeader>
@@ -121,7 +123,7 @@ export function DataTableClient<TData, TValue>({
           </TableBody>
         </ShadcnTable>
       </div>
-      <DataTablePagination table={table} />
+      <DataTablePagination table={table} totalCount={totalCount} />
     </div>
   );
 }
