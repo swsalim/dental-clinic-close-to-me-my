@@ -1,0 +1,1228 @@
+[
+  {
+    "title": "Klinik Pergigian Suriani Kota Damansara",
+    "website": "https://beacons.ai/surianidental",
+    "latitude": 3.153912,
+    "longitude": 101.579283,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      }
+    ],
+    "slug": "klinik-pergigian-suriani-kota-damansara-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJJ-vWYljs4aIR8PpUiuiEKb0",
+    "phone": "+60126318264",
+    "permanentlyClosed": false,
+    "address": "14-A1, SEKSYEN 4, Jalan Camar 4/3, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Kota Damansara",
+    "city": "Petaling Jaya",
+    "postalCode": "47810",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 536,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF73FQgivWuDFmNIIDFUZd01Jg11bFcTDWChIkBRc3KPksJm5nACSmhsMWopc7HJ8MS3a2CZpq2utbgrzBw_M7O2M98W_-Dd6VUdDJgmlaEks4waJTssRrdX2xH7SZG9sdrLWA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5d5uJIu324QSk8mA4RutmX8ZkMvXiplAC9u_dgv-0Nl6Whv5h2Pkhq-904umI1JEr6ce_YCwcOfn8ECrpvhPgPEtCgFn6oBS5GsEX0izbeP0B31sdS8v1Eoz9OnBgS1qyKeYf=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXMGqYa9CMO54dAY9VbqvaA_E3SDU-rzbkizD3VSFwNPaHglTXdN0P3DvI_l2obOmeNWoyc46nOBXlCv23xH5Lw9Ed4Gtwa1GQYuPO0NEZuD9rs6mmr9lKWG3MDgC63lPehDk=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGyuckRiEFvcYdpRiuLekEC6FolXYXHPbL23oCP_fNRnH-ichpwOO8oKQhjbMaKH_8XUjVENlmd1ja6tnSMs29Phd7P7Wuft0iXkAlSc1boS3VxL8opJEDyfMfMAhz7TmUJo6iAww=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwUsfyeHqj9GZS4MrZtdGLBgL9vjiklJM5h9EMX75sGFKGdiuyIuWfr90vCysCclw0fb0XkgFuR5toyi6o_H3K7Kkd9iu1RwA7EgXRwSplWv7W9vFIxuCTDlCvtZ_EPGSTE-z6XA=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Noor Syazwana Mat Islan",
+        "stars": 5,
+        "text": "Senang dan mudah berurusan. Appointment dgn whatsapp saja. Staff dan doktor ok. Terang pon mudah faham.",
+        "publishedAtDate": "2026-06-14T12:23:58.041Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn0Oy0fCPPBKdnUPAc-FJ84Lkro0viZBNzBqV5_aqo3dBvxfTrFrOEZrws04aWjlkMkEykn0r3LGH40PEH9Wak0-PCdfud8Zq_jASNirYOVRmFvdP6zbQ20pA1KgNYWdvyajzDCrtjGsSlVq=k-no"
+        ]
+      },
+      {
+        "name": "Fauziah Hani",
+        "stars": 5,
+        "text": "I dah sakit gigi few days but my regular dental asyik xkena timing for appointment. Sakit gigi malam, so google2 found this clinic yg thankfully open until 10pm. So cepat2 call around 9.15pm and they said okay boleh dtg. Dr Amal patiently listening to my backgrd story, kindly explain to me well on my options. Overall good experience 👍🏻",
+        "publishedAtDate": "2026-06-06T10:58:40.625Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "hanny 94",
+        "stars": 5,
+        "text": "Hello, Klinik Suriani is very nice to visit. Really recommended!",
+        "publishedAtDate": "2026-06-05T08:22:57.002Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Adam Danish",
+        "stars": 5,
+        "text": "good 👍🏻",
+        "publishedAtDate": "2026-06-04T17:29:42.832Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zavarenden 15k",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-04T14:19:16.171Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kamalin Annuar",
+        "stars": 5,
+        "text": "Honest review; saya pergi untuk scaling gigi pain level 1/10, ngilu 2/10 👍🏻 gigi bersih, dr akan consult apa yg perlu saya buat lepas hbs scaling. Klinik bersih, staff friendly. I would say bayar rm240 untuk newcomer scaling + polishing sangat berbaloi 🤗 ws klinik tanya je apa2 soalan staff akan reply 👍🏻 thank u!!!",
+        "publishedAtDate": "2026-06-04T13:30:36.137Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Fadhli Ikram",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-04T12:25:14.018Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "14-A1, SEKSYEN 4, Jalan Camar 4/3",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+kota+damansara/@3.1039582,101.5872982,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Klinik Pergigian DentaLevant",
+    "website": "https://www.dentalevant.com.my/",
+    "latitude": 3.1570049,
+    "longitude": 101.5713756,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-dentalevant-kota-damansara",
+    "skip": true,
+    "placeId": "ChIJqyidFg5PzDERLHDP_h3LUY8",
+    "phone": "+60327745122",
+    "permanentlyClosed": false,
+    "address": "S-01-08 EMPORIS GROUND FLOOR Persiaran Surian, Jalan Teknologi Seksyen 3, Taman Sains Selangor, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Kota Damansara",
+    "city": "Petaling Jaya",
+    "postalCode": "47810",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 2057,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHloXQX7HoxOf1CA5mSkruBoCPSVZUMafoOIrsz73mIA0mmDcsY5jQZxTvnO_kHyfa1cajQ0TCdT_ZRpk2gce7K24H25NWMCeI9HrfGeFTrJf4QFHHLoUk1s7UH9SxX1goBW-cHdA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFUdpp6i8HfB3nPAX7WIn-Ri18G9Z16fjb5esd8CNALrsR3kG-fUncOYymDgEAOTXD8DL2tgO2lC3bgE81tux0P3Fi1Ow8a09DjHVC6t0ZK80O4x8RTcQjHgdZsfbgnK6VKFfobMg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEaZJRr0c_q83mP6U47KXrMY1yG0Q4Alx2J1T3txf084EAH_EgRM2bSsVXNlX1l0ul108b-BDJZ7UheRYEe9scsBD67dI0ddSPgWpwGcGEH7RCGg2C9fz6dhmva1pktfdTrrFUrKQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKAwKFsmzyoFKf2J2K31p-JrIgT9ntbw09V50NDsnSnkX-DiCfKxUodwqXloqW3t36oWbgnyQhwYZsSqVwweJ62dgzQChpsCzR1yyv9be1c0l-7iENRMSYoVChHzyTMdG15Q=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwTRnZSYmBJGCaCkLTZKIM_ItVppc2LzEqspHmVHJH_CEVHWARYsERw0HjwAUsVh7d3KfUlIvqDv3LR1Zsfu5BH8KbAzMSm2LCdLkLq3Sfv6NImB94wcgwC2ikPjtu1DWQ_ivu=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "sdeeba k",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-18T05:10:00.673Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ah Ming",
+        "stars": 5,
+        "text": "Great service & dentist experience! Will definitely recommend my friends & family",
+        "publishedAtDate": "2026-06-17T07:59:36.517Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ahmad Mubaraq Ahmad",
+        "stars": 4,
+        "text": "My 6-year-old has been seeing Dr. Nolan for his dental care, and he has always been comfortable during his visits. Dr. Nolan previously fitted him with 2 metal crowns, and more recently extracted 2 other decayed teeth.\n\nThe procedure went smoothly. He was able to go about his usual activities later without any significant discomfort, which was reassuring for us as parents.\n\nWe also appreciated that Dr. Nolan took the time to check in on our son’s healing progress after the procedure. Thank you for the care and attention provided.",
+        "publishedAtDate": "2026-06-15T14:04:09.272Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "ariff masjuni",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-13T06:17:28.629Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mohammad Salleh",
+        "stars": 5,
+        "text": "Dr. Nolan was very helpful throughout my veneer treatment. He is a great dentist with a very positive and friendly attitude that made me feel comfortable during the entire process. I am very satisfied with the final result of my composite veneers, and they look fantastic. I would highly recommend Dr. Nolan to anyone looking for quality dental care.",
+        "publishedAtDate": "2026-06-12T07:17:05.351Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "mizanur rahman",
+        "stars": 5,
+        "text": "Dr Nolan and nurse Azila, great service and reassured me the correct appropriate treatment. Noticed an immediate differnce on my teeth. Great result\n\nFriendly counter staff  by Shaza",
+        "publishedAtDate": "2026-06-09T11:31:49.430Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Eddy Goh",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-09T05:07:54.463Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "S-01-08 EMPORIS GROUND FLOOR Persiaran Surian, Jalan Teknologi Seksyen 3, Taman Sains Selangor",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+kota+damansara/@3.1039582,101.5872982,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Tey & Khaw Dental Clinic",
+    "website": "",
+    "latitude": 3.151319,
+    "longitude": 101.5927025,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:30",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "tey-and-khaw-dental-clinic-petaling-jaya",
+    "skip": false,
+    "placeId": "ChIJf-Ga599OzDER5ZhZ5hpSLvE",
+    "phone": "+60162105711",
+    "permanentlyClosed": false,
+    "address": "5, Jalan PJU 5/10, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Kota Damansara",
+    "city": "Petaling Jaya",
+    "postalCode": "47810",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 277,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHkWZhiVAlQKPj-RLDaWq8ACy8G3fZ9At8aWeJlor0MFGsjfFz8pyOAC0k5mcz-mimRtFurWsrxDiQK-lsYSoXrPnkGLAOwVwsy0ZWvOZpQh-DDYWHa2QyaVypmQPPI-iyOKRoDjw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEl1zPiv7vWd3nbXUQsLquM7xjl1rBC4zsl5rfIHEDt_pv93wlxkE-Et5pQrJyrDvuRTQlG0jwOxSn4ZdXkS5s5gHebhRDsLUVKMaAGpq1G9QIVEMGAMIEDMy_GEHZd1uhvByeL=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFm1D27wWgK1Q_wSFw-hUHIjXqXJ9OACt0peidMEgwbKAK1iyM-t5-wcfuFwHpHlLdv8sXXrNEE4IVcdZzBhli5Gmba5wx7OX10phbD9PSGt1_lxFhc1mMZIMc-bmpNbSdONy9iCA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZXDYP_hgZGZXUsCqhmSkltdCnO4g1_MSg8X2keiMHKLJ-tFkfEgqiTBpFeLi39MZA-h8SwcRKcsbKx0IsV3Ypa1nhNawng9IKqpynpYlcVWXCB9RIw1a1m_xoA7EffpLXTA8=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHzO_I-ZqaB39hoaSltGCfdBMQF0WNB1YrfwlHEuuPMNdHPwjtqLVYAulmHtYFx78Qjw94eUmltMSxzSwptdw_C-WN9kR6rPQiCFVNdUgKSAeTKndOR8oz0epfrg1LSZ3EnrdDzMw=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Bryan Lee",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-18T09:10:23.735Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "F.m Lan",
+        "stars": 5,
+        "text": "Good service",
+        "publishedAtDate": "2026-06-18T08:48:30.798Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Sek Piew Toh",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-18T06:34:44.880Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jon Teo",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-18T06:33:06.633Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Stephanie Lee",
+        "stars": 5,
+        "text": "I am a regular patient. Great care.",
+        "publishedAtDate": "2026-06-17T10:27:37.356Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mel",
+        "stars": 5,
+        "text": "Dr Lim is very kind and patient",
+        "publishedAtDate": "2026-06-17T10:06:44.810Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Evie S",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-06-17T06:40:53.699Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "5, Jalan PJU 5/10",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+kota+damansara/@3.1039582,101.5872982,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Klinik Pergigian Rohaya",
+    "website": "https://klinikpergigianrohaya.com/",
+    "latitude": 3.1590757,
+    "longitude": 101.5736032,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "22:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-rohaya-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJOf8MxXNPzDER2_BPbec5lQ4",
+    "phone": "+60162166863",
+    "permanentlyClosed": false,
+    "address": "No.27-2, Jalan Cecawi PSB 6/19A, Seksyen 6, Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Kota Damansara",
+    "city": "Petaling Jaya",
+    "postalCode": "47810",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 935,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwgnBUgVlVFoUZKgJh1ONkERDEuEXAaizNq4jTTzN-YyPttvXiMf6lnidNyiENP0LYc4kCvSbmc3OsWA1r8XvvQSD0R_p3hguJFGvOt8llYFk-GKeiDpyNALMPWqbdmIScYLZ9QqEfzYS-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkqhH4sf1DJWERJhpCy9J8sOptc302eTj3j7RAUem_4EoWLRCUwTd_FjhbkhXwq9olAe3rkxnMGqFd-YPJXxTMYFP0KQDKmY5pMRWE9xdBGLNwZpDX9aA6E7Z9lmP1R5Gu6LxJ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHn3TXctDcquk2jIVxaZQS9OhSiRuPsX0Mkx7JVZYA8abx65_6Nxikc0KHqCCPs4Gi2zN8qtE-p67JbosAPvUFRPWy88RpaDEhUZfp1vyjDZlhRIfsj34sw4mis_z8LW5L5gXw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERayvOIA-FpeslvZNHFHm5y-xY6XtHUaRXG-ijAw6o009fr3vuxROi0vBzLdEDT6NlS7I6dhvKgjEb9gss9ljw4MKhmKO2uZo9bObKJWNgjNJ2W2mrJLCSo_UH2D-ktg3WJO6UEQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEwCIADbhESSO13EDACQHvI4IF0betBb5_YrsHBEzTJ0zy5heiyWRK2JE4kRdzHQ-t-v9FYmOQb7C277qY7mknF3FoIajru4DzZRyj_qmHvfBJnSlQpHARqeh5Tnwd7pp6_CsNaeEm9jhQj=w1920-h1080-k-no"
+    ],
+    "street": "No.27-2, Jalan Cecawi PSB 6/19A, Seksyen 6",
+    "floor": "null",
+    "servicesLink": "https://www.klinikpergigianrohaya.com/pricing",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+kota+damansara/@3.1039582,101.5872982,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Smile Arts Dental Kota Damansara",
+    "website": "https://www.smilearts.com.my/",
+    "latitude": 3.153971,
+    "longitude": 101.5942531,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "19:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "smile-arts-dental-kota-damansara-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJaxy8JSBPzDERtN9D5B4EBI4",
+    "phone": "+60143650270",
+    "permanentlyClosed": false,
+    "address": "No.55-1 Jalan PJU 5/20 The Strand Kota Damansara, 47810 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "The Strand",
+    "city": "Petaling Jaya",
+    "postalCode": "47810",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": "Strand Mall",
+    "reviewsCount": 267,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF1A21mxzyn2HKkfYhamxNZylUoY5IkFAH8N90KaYrNlSTi8EpL61IgSZbEbVskD8-NYShEA1CQH3bUqQJFnKeV6iBLSqws4HNrCE48uNoYzTB_Zn5n-rW1fteM8piAT2-h2rXM7w=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtHA231dIIvVsFj28AAgLJstNQb6ixrTGsGszdpPzfN_3MYc9k7YwotEemZoSgSDxxNVWgOdU9Sy1WdSKdaxDNTENoPRkT-MMwTpKOFDBXXqND9pXbBsrrmZGJ5RU6Tg9MNjl3=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGD6NsbMiU_CnY4eJ03Uz9tZUqRf0vaKDjxIIV878T9MJaNpa2g37aI33hQaW2-cpWJX6ect65FNdY1D-9FqEZwaJggxYq_D4AayYHZwOe3l2jNd91lL6Kc5c1klcbsIpLHJqfT=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEKbOABuX2gEuCcw82HFQ6lCF5eT4rOL8KIlt0-_ZLUMldXp5b5gZXiBAf27CofwkkSouaYKLpWf8GlBQH9DsOW_viL5jHrFsSlwNKwziWZJoU3JkU8XhkHOIv91-Y-dIcYJP3c=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGLY68vkCF8uEwAQpgyEVX36owiVoOl8HX1e_-S6Jh11bKuZRnmSZ262NS1MRYScjLB4QrhIcIFDDEPOaML2ixfTCi4G4r-6mjZRx1rK6YGun51-9DB8oeIgHvQk03uBS_t0GRVy-fPDdM=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Sean wan",
+        "stars": 5,
+        "text": "环境好，服务好，医生很niceeeee 最重要店的设计很好看！",
+        "publishedAtDate": "2026-05-29T03:18:46.131Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Marsya Afrina",
+        "stars": 5,
+        "text": "Good experience",
+        "publishedAtDate": "2026-05-28T08:58:30.589Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Darren",
+        "stars": 5,
+        "text": "Very good",
+        "publishedAtDate": "2026-05-26T03:12:20.020Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Tusha 16",
+        "stars": 5,
+        "text": "Nice 👍🏻",
+        "publishedAtDate": "2026-05-23T04:45:40.217Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kelvin Lee",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-05-19T09:03:35.840Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Mazliana abdil",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-05-17T09:08:35.717Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Chew YY",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-05-09T04:55:06.953Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "No.55-1 Jalan PJU 5/20 The Strand Kota Damansara",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+kota+damansara/@3.1039582,101.5872982,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Klinik Pergigian Saidah",
+    "website": "",
+    "latitude": 3.1112937,
+    "longitude": 101.633877,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "15:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "13:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "klinik-pergigian-saidah-petaling-jaya",
+    "skip": false,
+    "placeId": "ChIJv2GelOFLzDERA5CgQwBEvmc",
+    "phone": "+601160663635",
+    "permanentlyClosed": false,
+    "address": "16-2, Jalan 14/22, Seksyen 14, 46100 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Seksyen 14",
+    "city": "Petaling Jaya",
+    "postalCode": "46100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 9,
+    "totalScore": 4,
+    "images": [
+      "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=z8TB_UL66lArr4Z0qL_4Pw&cb_client=search.gws-prod.gps&w=1920&h=1129&yaw=240.19125&pitch=0&thumbfov=100"
+    ],
+    "reviews": [
+      {
+        "name": "Helena YT",
+        "stars": 1,
+        "text": null,
+        "publishedAtDate": "2023-04-27T15:07:38.003Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Azhar Mohd",
+        "stars": 1,
+        "text": "Worst services",
+        "publishedAtDate": "2020-10-15T06:21:20.385Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "esmee aniza mohamed",
+        "stars": 5,
+        "text": "I have been with klinik saidah for few years now. Always so upset to go to the dentist as almost all dentist I went to before are quiet scary as they are a bit harsh on my teeth.\nI love coming here as doctor saidah and her colleagues are always treating my teeth nicely and I won't be having any painful experience here. Good also to bring children here.\nI only do my scaling here as the doctors are so gentle. Just came here to do filling on my teeth and replace a composite tooth which doctor saidah made for me 3 years ago. However, sometimes hard to get appointment maybe up until 1 week... but you can request to walk in early if you are in pain.\nI recommend this clinic as I know it is hard to find a good dentist nowadays.\nYou will have problem on parking better to take grabcar or ask somebody to drive you here.",
+        "publishedAtDate": "2020-06-18T22:59:50.689Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Afanizam Badarudin",
+        "stars": 5,
+        "text": "Sungguh puas hati dengan rawatan yang diberikan. Doktor dan staf juga baik.",
+        "publishedAtDate": "2019-10-23T01:15:39.106Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "noorhamiza mat nor",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-08-06T03:30:35.133Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "rabiatul adawiyyah izzaddin",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2019-02-08T20:10:15.675Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Syafiq Haikal",
+        "stars": 4,
+        "text": null,
+        "publishedAtDate": "2018-09-20T05:07:09.716Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "16-2, Jalan 14/22",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+SS2,+Petaling+Jaya,+Selangor,+Malaysia/@3.1160711,101.5413572,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Cheong & Chai Dental Surgery - Petaling Jaya",
+    "website": "https://www.facebook.com/share/19yiN4oxjb/?mibextid=wwXIfr",
+    "latitude": 3.1093635,
+    "longitude": 101.6365308,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "cheong-and-chai-dental-surgery-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJtQ1h--BLzDERPnS2Zo8oTuw",
+    "phone": "+60379564222",
+    "permanentlyClosed": false,
+    "address": "5A, Jalan 14/20, Seksyen 14, 46100 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Seksyen 14",
+    "city": "Petaling Jaya",
+    "postalCode": "46100",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 21,
+    "totalScore": 4,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgIG657-BzSlVCTlgxr5Wgrw7nqcR_BlUjCmEMI4ffpsLwhfdQIj9MrtxPholU6JoC4CR4dpJW7hTOwM0Z1E-BnlyYeVOEuLaDbqrZLi7-pIu-6Yi_S2q_nKcrN4knHu4ICsylYg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHoVfyKG9TElTDAXLm2oGnaD5WmOMocA7YNqv5pk8uET16ACtJT-_tYbYTXttVq4hTFv9v7K9OkA2KBBKdkBcFjxo9VnwbSW6QB4kXXIqQFaZg26yAG54DvoTvlfhIBXWPVKHP_ug=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERgN_S4CvxXLeq-8NrN-GdfvmVZdwjK5gVhkesSeod_vXdg5KCsEY9JoWOWo6Jt-ZqecjpeutP014HtbKF0H4QPp29FQm4cQgQMy8ZKQdF4ytBv9EScKnjShi3XzN-dZNLY-s0hpu1U40y=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEv5gEnhnvX4z4A2PWXw0zl5GdI2hlFOhTUC6Xi-9b6BN2k3-6vb4-hSd7my_CJCsuiZpOTYKb44VXlnoeyWoCCj8n5ipvNVyK6tIjGa_PL-Fs5BNrklZXVc7qDf0CflLdWxbk1=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFy_KXa1afqPzNclQpVpOweYzF-buPGhQxP4zUOWUhJ2N7heltbYD1bseBMQjSzEC389yZr7rLGEZrxn2eTfAP6j37cFIVTvtdCl5BTHfTWXGIQp9yNmvwJu8YWi_VJa9qODaKRw=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Ikram",
+        "stars": 5,
+        "text": "Great place for scaling 👌🏻.\n\nDoctors and nurses are very kind and polite.\n\nBeen here since I was a little boy.\n\nMade an appointment at 9am, Dentist opens exactly on time.\n\nThey also sell toothbrushes for people with braces.",
+        "publishedAtDate": "2026-03-30T03:15:14.906Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn0JXIPBOLotiP9Ccx2HOdAWO-EAJv4FNLM1_7EnLhA3YzpQEzzehY3KJYDphFYiLv2lqWUUqsTiOTDBYuYUdGPF4PC4IeIVHXTXMuPlpAhnlPPGOGMSJGf1v6dzdkA81lZYvxXs=k-no",
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn3EFiNfchfafp1V8V5e7WrplzRnDczxI3sTJnwIdOBnGVWmf_SZo16kwZnbmG9NkaNPJMM9r6fp0eowwhuH4TgdIS65anq8W7SJaw6nVlVzqc2IA0MMbIW-A9V-dGPDf6IkrscT=k-no",
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn2mdanjYvmUzDPnMlZkTFzdw6B1UlSS0oBVA-t9lwo4zKYISyRl20L9u4SPOBpb7H6mJjC9VLCwJ6MdYy8y-UyAeCKnOMa2BSHmAVn1rYkWH55TMFQiEV4pFDQZU0rE6noqnUQ8jA=k-no",
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn2CFG8bjiT7Oo5PnOqwxRVWl5-yzUUO53AQ26TfUplbAJOix6hO_1tnP6B6JRb8U2AEE8LJyih1q3f6jeXrSpAIrM9hyefg2ZO_QS2sltCYCghXNPcr9cGxbA2-vPu2BzZ9v3Jh__RC_ZZ6=k-no",
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn2qENhUKBVeKkfQD77O0A3rTlgPX9LhnS1WKzYeEvQKJoWsK0HVUjEFg4F_c8DVEnHI4g4l0Jg1yJIB0Q3V-o7xxa3uKuaf_nDouBvqYBxNnd8Qs9Q3OVNDV7fl9YHZ_ZPeySX7MqiRVHlN=k-no",
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn1aaFSsF72QeB2l3CgWA4u2nUF3qgqtKruvxBIfQB9bOky7HI7oX_cR9gwfhygnFtS9DBzWs0Rcdy0Z20RKUUntL7W2fpeflIFEuMIkN_fw8ptz1oXe19lQey9cEtL4fTsMGZDm3GFi3wyU=k-no"
+        ]
+      },
+      {
+        "name": "Sam of KL",
+        "stars": 1,
+        "text": "NOT recommended if you are considering Invisalign.\n\nWent there for a Invisalign. The female dentist was very unprofessional, instead of explain all the unknowns to me as the patient who is paying over RM10,000 for a Invisalign, she just kept asking me to read the menu or look up the internet for answers.\n\nAt the finishing phase of the Invisalign, instead of giving me the Invisalign that needs to be ordered from overseas, they charge me extra to make one retainer from them.\nand the retainer broke in less than a week.\nKeep in mind I still wore it with care yet still, the broke and now my teeth gap are slowly reappearing again.\n\nThey seem to be in business for many years, I am guessing this side of the business principle is very inexperience and many other small things I won't bother mentioning such as Dentist is always late, the reception never have a clue about what is going on.\n\nKeep this in mind if you are considering any big treatment here. I do not recommend it personally.",
+        "publishedAtDate": "2026-03-25T20:27:57.480Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Gunasekaran Kandasamy",
+        "stars": 5,
+        "text": "Very calmly, patiently and professionally carried out the procedure explaining along the way. Very satisfied with the service. TQVM Dr Cheong🙏🙏🙏",
+        "publishedAtDate": "2025-12-09T04:36:41.729Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Bell Lee",
+        "stars": 5,
+        "text": "If you’re afraid of pain or have dental phobia, she’s truly the gentlest dentist I’ve ever met. Not only is she genuine, but also highly professional—other dentists I’ve visited have even complimented the quality of her work on my teeth. We actually found this clinic by chance. My sister was working nearby when she suddenly had severe tooth pain and urgently needed treatment. That’s how she discovered the most gentle and professional dentist in her life. Since then, she introduced her to me and our other sister. Our whole family has been visiting this clinic for years, and we’ve happily recommended it to many of our friends as well.",
+        "publishedAtDate": "2025-08-23T00:03:39.185Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Karin Cheong",
+        "stars": 5,
+        "text": "I fell down and broke my 3 front teeth to almost 80% gone 😭\nCan't consume any food or drink, and dare not smile at all☹️😷\nLuckily I went to them and save 3 of them. Now I have no worries of laughing and talking bravely😁😄.\nThank you so much for saving making my days shinny again🤗☺️",
+        "publishedAtDate": "2025-05-11T04:11:28.764Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ny Chen",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-05-05T02:02:43.596Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Calvin T",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2023-09-30T02:56:18.128Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "5A, Jalan 14/20",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+SS2,+Petaling+Jaya,+Selangor,+Malaysia/@3.1160711,101.5413572,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "JA Dental Surgery",
+    "website": "https://www.jadentalpj.com.my/",
+    "latitude": 3.1166666,
+    "longitude": 101.6170774,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "09:00",
+        "close_time": "16:00"
+      }
+    ],
+    "slug": "ja-dental-surgery-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJKYCQ3TNJzDERoiFrcvLzot0",
+    "phone": "+60102863168",
+    "permanentlyClosed": false,
+    "address": "149G, Jalan SS 2/6, SS 2, 47300 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "SS 2",
+    "city": "Petaling Jaya",
+    "postalCode": "47300",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 58,
+    "totalScore": 4.8,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiSjxL9BR-9L3-sOvUTM216PTCkBqsohUS_XTN9ulAxHTYlj-0Uf6fhS8RTiyx9yXk5WifcGQlJGVAocVFIuwLW_l6Wp6wrKtA8g2rLtKEYTr4qy3C6_Lw5wPyk5ivXrXJV0y0=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuRHdDAq6n20Sk3KWymRFYBeggXc_T-oPO-VpK8aH_iYavireVw3P-NJ7gMIr9fT6wEn29VbzZwXgOTrXdmZpSwxTl541JMSsgPVVxqGB1S_GzaIMg4WMqckDY3qChRALAvXsQToA3gpaB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPbyaeHUxd639pwaIt9xKQqlqDhNHdu3BtcB4dj_bykIQhGqy4vFleNXuAuKR6cV-IyUnuqmWb1ftM-_m19MNQFnvxhs0UGG_-2m94Ckj7_Krm5CIawFrBRLR0_RlKtzpcRV_O=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG7KWvykrujn_GsCoak0YQDqpgOqvaiuZ1Lt2W90waaSNOXW9d1NPHUUaZWGpadtwwIMtZ6XOFJvMfviNbyVigqQ366gM0akcWlv64bkXSVrsbXHhNY_PtElrf34KaX-cvtAdXDsg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRSuaweph9JjWJw_SDVhzscU_-apXzXQGpg9RwVxW-mUSmB_GDAXxW7GqicJXH_Pjwfb2c9rDiRChDwH1e3HZ7FBOoRmMj7ozd6G3sITAkH0GGD_tLGry364n3lmkrzcphhryMer92OYU=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "chloe chia",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-02-04T05:21:03.095Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "tan ping",
+        "stars": 4,
+        "text": "⭐️ Excellent experience! Friendly dentist, modern clinic, painless procedure. Highly recommend!",
+        "publishedAtDate": "2026-01-08T03:17:41.529Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn2mRguYI3selJ6_D91tQYP7ki8xhUOPgabJSzArLlJTBxCij-oCQg4wU60RsuIQuY4OylWRYTQqsRSAMaxZBFOKsHnP8hQ0xIsfGylUKLxj4tKFUOwoshtDc_1gCTpo5NoVlqhYE_QP9NE=k-no"
+        ]
+      },
+      {
+        "name": "盈盈廖",
+        "stars": 5,
+        "text": "All staff are kind and polite. The service is very good.",
+        "publishedAtDate": "2025-12-28T03:57:05.672Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Zi Hui",
+        "stars": 5,
+        "text": "good service, staffs and doctors are friendly and professional, helpful.",
+        "publishedAtDate": "2025-12-28T01:56:01.166Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "sandy bozz",
+        "stars": 5,
+        "text": "Good service🦷👍🏻",
+        "publishedAtDate": "2025-12-12T08:06:38.014Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Loy Kun",
+        "stars": 5,
+        "text": "The staffs were kind and prompt. Dentist explained carefully about my conditions and letting me to choose how to proceed, didn't felt like I was pushed towards a choice that benefitted them alone. Proceed to do scaling, x-ray and 3 fillings for a fair and reasonable price. Overall had a great time. Will go here again.",
+        "publishedAtDate": "2025-12-02T09:10:14.197Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "AA Gene",
+        "stars": 5,
+        "text": "Dr Phoon is very helpful and attentive, fast treatment with reasonable pricing. 11/10 would recommend.",
+        "publishedAtDate": "2025-10-16T11:50:19.964Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "149G, Jalan SS 2/6",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+SS2,+Petaling+Jaya,+Selangor,+Malaysia/@3.1160711,101.5413572,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "Dr. Ling & Partners Dental Surgeons",
+    "website": "https://drling-frontend.vercel.app/",
+    "latitude": 3.1200747,
+    "longitude": 101.5975116,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "09:00",
+        "close_time": "18:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "dr-ling-and-partners-dental-surgeons-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJYV6KBKNOzDERWa3_XtEXa9c",
+    "phone": "+60105502218",
+    "permanentlyClosed": false,
+    "address": "9-1, BLOCK 1 SUNWAYMAS COMMERCIAL CENTRE, Jalan PJU 1/3f, Aman Suria, 47301 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Aman Suria",
+    "city": "Petaling Jaya",
+    "postalCode": "47301",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 62,
+    "totalScore": 4.5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHoEWMQIVlkwwl00zircHfm7cIzfjqgNX5L8p4ZKniqEPBcwVMTA9V3wBjwfCrvKFdGgEOl4JfAehho7gsLg5DLnvW4puMP3vvdDtFcKy1gdCzJ52f0bNTyVgGEyrPbxZb3gic=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG57Sx9MkieISa--dR41CgnMzErsbB8I3i5igx_KDVj4bGX6qdi9yL_DlN7stpuJP4yxbTTWRHYYedZiT-1rV_tkwCePArZX0K7Z3Q7RDDE70944KEDOIOtbOaHgNEiHtRRzeB-kxrG0diP=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkAOnsY8QY2U1BJiyBugv4Xeq1f-VP98S_BpRT7Z7s-PxJbGrNhs2QuQp2jQdhqUsQG8RhqcQh_yn9IPFoBM-bXH2iCcs7HPVuP8UJbNRbWBW-MOWlp3VQn78wOOJGIB1a9z2E=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG2czQ1NBphXR5elw0206QKhJ3OS5SsVGq_BOSrIzQAVNMsnYsLnx7AUG_q5W4JBzBAw32yDInNbMPTVWxeyqeiDhZovGRiyVmTJyivYrwPpkisDRyxOZ8LCc88a2Ikc09bbJM=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPxNQTuw4iyA-HwqS6u3P259v4E7M6lp7Vv7MetDDHp9D8uYmXm0eiZtNWQwkcKvq-FVj6EhKnRbxmHGuOeWrz7vCsEGzshmAfYxNxzij7oCproa6Xm-557Ue4VK4FO1Lvcv9gNg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Olivia Beh",
+        "stars": 5,
+        "text": "Dr Tan是我人生中难得遇见的一位非常专业德行好又充满爱心的牙医❤️非常感恩女儿的介绍🙏🏻🙏🏻🙏🏻",
+        "publishedAtDate": "2026-01-14T06:00:57.976Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kean L",
+        "stars": 5,
+        "text": "Dr Ling is so pro , patience and friendly!",
+        "publishedAtDate": "2026-01-12T03:08:14.409Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Lee Marg",
+        "stars": 5,
+        "text": "Very gentle lady dentist. Skillful,\nPatient and give good advice",
+        "publishedAtDate": "2025-12-10T08:21:31.793Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Alwyn Choy",
+        "stars": 5,
+        "text": "Congratulations on your 20th Anniversary! Dr. Ling has been taking care of my dental health for almost as long. Thank you!",
+        "publishedAtDate": "2025-12-05T06:27:19.424Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Ringo Chan",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-12-04T01:28:15.510Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Pat Lai",
+        "stars": 5,
+        "text": "I have been using your dental services for umpteen years, and most recently just two weeks ago to get scaling for my teeth.\nI have been under Dr Tan for as long as she has been with the clinic and is very happy with her growing experience.\nI am grateful for the annual reminders which pop up in my phone to remind me to take care of my oral health.\nTqvm Doctors and staff 🙏🏻 looking forward to more years of great service.",
+        "publishedAtDate": "2025-11-29T10:10:00.814Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Y",
+        "stars": 5,
+        "text": "Their scaling is very detail and gentle~ especially from Dr Tan. Thank you!",
+        "publishedAtDate": "2025-11-29T05:33:38.219Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "9-1, BLOCK 1 SUNWAYMAS COMMERCIAL CENTRE, Jalan PJU 1/3f",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+SS2,+Petaling+Jaya,+Selangor,+Malaysia/@3.1160711,101.5413572,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  },
+  {
+    "title": "The Dental Studio",
+    "website": "https://thedentalstudio.my/",
+    "latitude": 3.1421331,
+    "longitude": 101.6197336,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "10:00",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "10:00",
+        "close_time": "14:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": null,
+        "close_time": null
+      }
+    ],
+    "slug": "the-dental-studio-petaling-jaya",
+    "skip": true,
+    "placeId": "ChIJR59QJvlJzDER-os3wf4sdLc",
+    "phone": "+60377327714",
+    "permanentlyClosed": false,
+    "address": "25, Jalan SS 21/34, Damansara Utama, 47400 Petaling Jaya, Selangor, Malaysia",
+    "neighborhood": "Damansara Utama",
+    "city": "Petaling Jaya",
+    "postalCode": "47400",
+    "state": "Selangor",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 65,
+    "totalScore": 4.9,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0OtUgiAeYki_SgW7iLPz3vCF4kFNw3Md8GDUOWNKnxD_t1PhtiBShUQQZi6nMMt1mC4BnFMF1heTggZek253wf95xQYHlRzaYIOrO_W5dQlmdfRfiQM6JD9A3J13GdZ7ulHjA=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbbJ3nNl0rRQv6hfpLJnOTFeTIH1_bcwJxIoKbQubJT6vMFixiszx1dl8mPzU0Lu4fObgD7akfSOAlalsaz5vL-OqldVG4Cel3qGUl_fASyAi27cEUkVq9nxOwIwBT3C336ARmfg=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFzu3WTllu77Kon3U40gCLy7lRSittZ-cX-orpXi9iIP0b0jymS2saXLmKXggjBwnMF5NCqzBPXtpaLlVMmaafZ9zU2xQ_5mzdqQ-KhthmqW9so24T5PP_z2PYHFngO-HpxmM-mOQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEY2nCHN92JaJgEWHNS3ky4miBAGxuBwnMJd21mx0AQMO9iRLMGSV4gMg9fWyY5p1zfajEIVVpImg17euCPTWnpTAXrNGs1mbEQO9xnw1MXOw9ZdlQgpdPmFHiA9ohHFb_b-ysQ=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFye_yPrgnCdPLdYrFq6BdOcaEoXfVvK0LQbRFZtdKWrqy_xgTdnEPpVut6BhsTmlAhwgt_dNCjSjoovFm822HdSq6cMP_wc09MFr-OX1SUYdYSwd3zsQPmN5Jnmlcrkvnm3T97Q=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "加藤聡太",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2026-03-19T03:34:21.465Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Carmen Foong",
+        "stars": 5,
+        "text": "Had a wonderful experience with Dr Wan. She is patient with the kids. Explains all treatment thoroughly. Highly recommended if you are looking for a dentist for your child.",
+        "publishedAtDate": "2025-12-26T07:11:43.556Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Evan Wong",
+        "stars": 5,
+        "text": null,
+        "publishedAtDate": "2025-12-22T02:27:03.972Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Norsaida Mohd Said",
+        "stars": 5,
+        "text": "Very professional & friendly Dentist. Gentle with patient & always concern about patient's comfort. Clinic is highly recommended.",
+        "publishedAtDate": "2025-12-15T04:49:29.755Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Dyan Chitty",
+        "stars": 5,
+        "text": "Had a great first visit for my child, Dr made my son feel very comfortable during the check up. Will be back again for the next check up",
+        "publishedAtDate": "2025-12-13T07:19:11.876Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "nur adilah",
+        "stars": 5,
+        "text": "My kids have fun every times see the dentist.doctor so professional handle the kids and they not cry at all",
+        "publishedAtDate": "2025-12-11T02:41:32.170Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": [
+          "https://lh3.googleusercontent.com/grass-cs/ANxoTn17XqOKAGWAxmYfzrB8sd5ji77ma6LUcx9U93ygzcHNm39ATVXJQamX7EBwVzpjLL6MUE5sJ7wH2Zrx0KEzddTrvaYZP96e-IAQqENGF2K1eImD2NUsj1Ov2xVceyV5P3I81kUELfwDXbgL=k-no"
+        ]
+      },
+      {
+        "name": "mai",
+        "stars": 1,
+        "text": "The doctor was very arrogant and rude, saying things like “If your child doesn’t like it, how can you do the treatment?”\nI would never recommend this clinic\n\nI had a very unpleasant experience with this dentist.\nThe doctor’s attitude was extremely rude, and when I told them how uncomfortable it made me feel, they casually said they would waive the treatment fee. However, I never received any refund, and they completely ignored my messages afterward.\nSuch disrespectful behavior makes this the worst dental clinic I’ve ever visited",
+        "publishedAtDate": "2025-11-22T11:00:39.308Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "25, Jalan SS 21/34",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/search/dental+clinic+near+SS2,+Petaling+Jaya,+Selangor,+Malaysia/@3.1160711,101.5413572,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": ""
+  }
+]

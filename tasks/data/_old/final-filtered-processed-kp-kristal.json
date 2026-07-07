@@ -1,0 +1,130 @@
+[
+  {
+    "title": "Klinik Pergigian Kristal (Sibu) | Sibu Jaya",
+    "website": "http://www.kpkristalsibu.online/",
+    "latitude": 2.2376576,
+    "longitude": 111.9757102,
+    "openingHours": [
+      {
+        "day_of_week": "monday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "tuesday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "wednesday",
+        "open_time": "08:30",
+        "close_time": "12:30"
+      },
+      {
+        "day_of_week": "thursday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "friday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "saturday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      },
+      {
+        "day_of_week": "sunday",
+        "open_time": "08:30",
+        "close_time": "17:00"
+      }
+    ],
+    "slug": "klinik-pergigian-kristal-sibu-sibu-jaya",
+    "skip": true,
+    "placeId": "ChIJr8e1-PQp-DERvp1fJ56FDVw",
+    "phone": "+60109217728",
+    "permanentlyClosed": false,
+    "address": "1A, Ground Floor, No. 11, Jalan Industri Permata, Sibu Jaya, 96000 Sibu, Sarawak, Malaysia",
+    "neighborhood": "Sibu Jaya",
+    "city": "Sibu",
+    "postalCode": "96000",
+    "state": "Sarawak",
+    "countryCode": "MY",
+    "locatedIn": null,
+    "reviewsCount": 10,
+    "totalScore": 5,
+    "images": [
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGc2zh42t9FYmSbxjdYe1qlfaJfz3r9Ubexy6WNSogq1lXUlEaAuQfo1tY2HtHjxBAapeJrPA1qT0ew_Wtn1X6i-OZuYu49OF8Omvq6O6fmcnXxhqy6wuDaZcuc7m66ihjNgid9In3MtIQ-=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGXEH2Xs6i8Q0Z1pCSlpfk4aPtsSgkfgSb5qWs2OJlTfbv8rCh11GJXyCT7kCLDCz3-qRxX88PHd4HGZFLEOGdwiS6jcgZYoa3hcWUnaVENd8sBjzL_gtUZ9RS4MK4I6Pm-zjNoN7coy2Gw=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH1SZPF60Glm5V-YLiZOLvX0Y9aZuFhfRkwNvjmtVrkeJQg3BEOCnwcflVSEAv-xBUvxiVBlbNjpLbpbhQayLPPflvhy1rLnX7bCIPVwDsjR8gnm9plw45oaTUGIOO-8OCmihvbR_6N6qSb=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMvpzGX12uGJ3gy_SaxYuySrzI14DptXPoiQCaCWFoJqOxiu21WmGAnrBA7gDykTx9_xgUud2ci0XrEyNv7j0ic4PE0CKTg1l3u6PL0USEG7quXaur4a92-ZclbBpvk-Xr2s2rhO0MstkB=w1920-h1080-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG9K4Zqqhp4sPLzpUfwSl5u5eJ8ggFQRoq_lCnRuxOYHDoIzpqWCQoYOoIQYxdXNKviPeonrvVNijb1CrBQ5aJnpy_nrxwaw3T3dco_z189NiGMqKlP35O_5SsRsRxG0bDK8h0GtkzA-Hg=w1920-h1080-k-no"
+    ],
+    "reviews": [
+      {
+        "name": "Siouan Dian",
+        "stars": 5,
+        "text": "Layan terbaik Mase cabut sikit pun tak sakit  terbaik",
+        "publishedAtDate": "2026-06-18T11:31:30.080Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Kong Kin Siong",
+        "stars": 5,
+        "text": "很有医德的牙医小姐👍",
+        "publishedAtDate": "2026-06-18T11:26:48.187Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jude Ngu",
+        "stars": 5,
+        "text": "I had a great experience at the dental clinic Kristal, Sibu Jaya. The dentist was professional, gentle, and explained everything precisely. The treatment was comfortable, and I felt well taken care of.<br><br>Highly recommended! 👍👍👍",
+        "publishedAtDate": "2026-04-28T23:13:57.494Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Jeffrey Ong",
+        "stars": 5,
+        "text": "Very efficient and friendly dentist, caring and able to identify and fix my teeth problem in a very professional way. Scaling is not painful and pleasant. Will come back again!",
+        "publishedAtDate": "2026-04-13T15:05:26.158Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Elydia Isa",
+        "stars": 5,
+        "text": "Bawa anak umur 8 tahun pertama kali cabut gigi susu. Doktor dan staff sangat bagus dan sabar melayan kerenah anak saya. Agak lama juga sesi pujuk-memujuk berlangsung tetapi doktor & staff tetap kekal profesional sepanjang masa. Thank you Dr. Wong & staff. Clinic very clean & tidy too. Highly recommended dental.",
+        "publishedAtDate": "2026-04-05T10:54:42.406Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "Esther Kwan",
+        "stars": 5,
+        "text": "Visited the clinic and was warmly greeted by the staff, Dr Wong was exceptionally warm and detailed in explaining my dental problems. Highly recommend this place!<br>Location a bit hidden because of the neighbouring foodcourt signboards but it’s just next to Ecoshop, look for ecoshop and you’ll find it!",
+        "publishedAtDate": "2026-03-30T05:27:20.982Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      },
+      {
+        "name": "vanessa chalengga",
+        "stars": 5,
+        "text": "",
+        "publishedAtDate": "2026-03-29T00:38:18.556Z",
+        "reviewOrigin": "Google",
+        "reviewImageUrls": []
+      }
+    ],
+    "street": "1A, Ground Floor, No. 11, Jalan Industri Permata",
+    "floor": "null",
+    "servicesLink": "null",
+    "inputStartUrl": "https://www.google.com/maps/place/Klinik+Pergigian+Kristal+(Sibu)+%7C+Sibu+Jaya/@2.2693831,111.8213456,12z/data=!4m10!1m2!2m1!1skp+kristal+sibu!3m6!1s0x31f829f4f8b5c7af:0x5c0d859e275f9dbe!8m2!3d2.2376576!4d111.9757102!15sCg9rcCBrcmlzdGFsIHNpYnVaESIPa3Aga3Jpc3RhbCBzaWJ1kgENZGVudGFsX2NsaW5pY5oBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMXdjbU5GWjNkWk1qVnJXVlJTUTAxSFVsVk1WbWh2WlVWMFZtUXpZeEFC4AEA-gEECAAQNA!16s%2Fg%2F11ytj7wp9b?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D",
+    "tableReservationProviders": "",
+    "description": "<p>Klinik Pergigian Kristal in Sibu Jaya stands out as a reliable provider of dental care, dedicated to ensuring oral health excellence. The clinic offers a comprehensive range of services, from routine check-ups to specialized treatments, executed by skilled professionals who prioritize patient comfort and care. With positive feedback highlighting gentle procedures, many patients commend their experiences, noting the adeptness of the dental staff.</p>\n\n<p>The patient journey begins with a welcoming atmosphere that promotes relaxation. Clients are encouraged to voice their concerns, ensuring a collaborative experience. Recent reviews reveal satisfaction with the attentive service provided, underscoring the clinic's commitment to high standards of practice and patient well-being.</p>\n\n<p>Located within a thriving commercial area, Klinik Pergigian Kristal is easily accessible for residents of Sibu Jaya and nearby communities. This convenience enhances not only routine visits but also emergency dental care. As an integral part of the local health ecosystem, the clinic stands ready to address diverse oral health needs efficiently and effectively.</p>"
+  }
+]

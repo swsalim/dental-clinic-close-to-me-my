@@ -84,9 +84,9 @@ export function ImageGallery({ images, title, className }: ImageGalleryProps) {
             />
           </button>
         </div>
-        {validImages.map((image, index) => (
+        {validImages.slice(1).map((image, index) => (
           <button
-            key={`${title}-image-${index + 1}`}
+            key={`${title}-image-${index + 2}`}
             onClick={() => handleImageClick(index + 1)}
             className="relative col-span-2 row-span-1 h-60 w-full overflow-hidden rounded-lg">
             <ImageKit

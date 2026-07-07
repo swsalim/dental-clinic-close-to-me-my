@@ -38,8 +38,7 @@ export async function getDashboardClinics(options: {
   orderBy?: 'created_at' | 'modified_at';
 }): Promise<{ data: Partial<Clinic>[]; total: number }> {
   const supabase = createAdminClient();
-  const orderBy =
-    options.orderBy ?? (options.status === 'pending' ? 'modified_at' : 'created_at');
+  const orderBy = options.orderBy ?? (options.status === 'pending' ? 'modified_at' : 'created_at');
   const clinics: Partial<Clinic>[] = [];
   let from = 0;
 
@@ -165,6 +164,9 @@ export async function getClinicBySlug(
     status_input: status,
     review_limit: 6,
   });
+
+  console.log('data');
+  console.log(data);
 
   if (error) {
     console.error('Error fetching clinic for static generation:', error);
