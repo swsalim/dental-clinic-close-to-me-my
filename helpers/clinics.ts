@@ -165,9 +165,6 @@ export async function getClinicBySlug(
     review_limit: 6,
   });
 
-  console.log('data');
-  console.log(data);
-
   if (error) {
     console.error('Error fetching clinic for static generation:', error);
     return null;
