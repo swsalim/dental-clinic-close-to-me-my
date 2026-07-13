@@ -34,6 +34,15 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/place/our-dental-clinic-masai',
+        destination: '/place/our-dental-clinic-johor-bahru',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

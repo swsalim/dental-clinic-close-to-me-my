@@ -343,9 +343,6 @@ export const getTestimonials = unstable_cache(
       .order('created_at', { ascending: false })
       .limit(limit);
 
-    console.log('data');
-    console.log(data);
-
     if (error) {
       console.error('Error fetching testimonials:', error);
       return [];

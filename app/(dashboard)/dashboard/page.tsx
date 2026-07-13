@@ -1,21 +1,17 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { DateRange } from 'react-day-picker';
 
 import Link from 'next/link';
 
 import { Clinic, ClinicDoctor } from '@/types/clinic';
 import type { RealtimeChannel } from '@supabase/supabase-js';
-import { addDays, format, subDays } from 'date-fns';
-import { Calendar as CalendarIcon } from 'lucide-react';
+import { addDays, startOfToday, subDays } from 'date-fns';
 
 import { createClient } from '@/lib/supabase/client';
-import { cn } from '@/lib/utils';
 
-import { Calendar } from '@/components/dashboard/dynamic-imports';
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { DatePickerWithRange, getDateRangeLabel } from '@/components/dashboard/date-range-picker';
 import { Skeleton } from '@/components/ui/skeleton';
 
 interface StatProps {
@@ -31,6 +27,11 @@ interface DashboardStats {
   approvedDoctors: Partial<ClinicDoctor>[];
   toBeReviewedDoctors: Partial<ClinicDoctor>[];
 }
+
+const DEFAULT_DATE_RANGE: DateRange = {
+  from: subDays(startOfToday(), 6),
+  to: startOfToday(),
+};
 
 function Stat({ name, value, path, isLoading = false }: StatProps) {
   return (
@@ -66,24 +67,28 @@ export default function Dashboard() {
     toBeReviewedDoctors: [],
   });
   const [isLoading, setIsLoading] = useState(true);
-  const [date, setDate] = useState<DateRange | undefined>({
-    from: subDays(new Date(), 7),
-    to: new Date(),
-  });
+  const [dateRange, setDateRange] = useState<DateRange | undefined>(DEFAULT_DATE_RANGE);
+  const dateRangeRef = useRef(dateRange);
 
   const supabase = createClient();
 
-  // Fetch initial data
+  useEffect(() => {
+    dateRangeRef.current = dateRange;
+  }, [dateRange]);
+
   const fetchData = useCallback(
     async (fromDate: Date, toDate: Date) => {
+      setIsLoading(true);
+
       const adjustedFromDate = fromDate.toISOString();
       const adjustedToDate = addDays(toDate, 1).toISOString();
 
-      const [clinicsResponse, doctorsResponse] = await Promise.all([
-        supabase
-          .from('clinics')
-          .select(
-            `id,
+      try {
+        const [clinicsResponse, doctorsResponse] = await Promise.all([
+          supabase
+            .from('clinics')
+            .select(
+              `id,
           name,
           slug,
           website,
@@ -91,53 +96,60 @@ export default function Dashboard() {
           state:state_id(name, slug),
           is_active,
           status`,
-          )
-          .lt('created_at', adjustedToDate)
-          .gt('created_at', adjustedFromDate)
-          .order('name', { ascending: true }),
-        supabase.from('clinic_doctors').select('*').order('name', { ascending: true }),
-      ]);
+            )
+            .lt('created_at', adjustedToDate)
+            .gt('created_at', adjustedFromDate)
+            .order('name', { ascending: true }),
+          supabase
+            .from('clinic_doctors')
+            .select('*')
+            .lt('created_at', adjustedToDate)
+            .gt('created_at', adjustedFromDate)
+            .order('name', { ascending: true }),
+        ]);
 
-      if (clinicsResponse.error) throw new Error(clinicsResponse.error.message);
+        if (clinicsResponse.error) throw new Error(clinicsResponse.error.message);
+        if (doctorsResponse.error) throw new Error(doctorsResponse.error.message);
 
-      const clinics = clinicsResponse.data as unknown as Partial<Clinic>[];
-      const doctors = doctorsResponse.data as unknown as Partial<ClinicDoctor>[];
+        const clinics = clinicsResponse.data as unknown as Partial<Clinic>[];
+        const doctors = doctorsResponse.data as unknown as Partial<ClinicDoctor>[];
 
-      setStats({
-        approvedClinics: clinics.filter((c) => c.status === 'approved'),
-        toBeReviewedClinics: clinics.filter((c) => c.status === 'pending'),
-        approvedDoctors: doctors.filter((d) => d.status === 'approved'),
-        toBeReviewedDoctors: doctors.filter((d) => d.status === 'pending'),
-      });
-
-      setIsLoading(false);
+        setStats({
+          approvedClinics: clinics.filter((c) => c.status === 'approved'),
+          toBeReviewedClinics: clinics.filter((c) => c.status === 'pending'),
+          approvedDoctors: doctors.filter((d) => d.status === 'approved'),
+          toBeReviewedDoctors: doctors.filter((d) => d.status === 'pending'),
+        });
+      } finally {
+        setIsLoading(false);
+      }
     },
     [supabase],
   );
 
   useEffect(() => {
-    // Set your date range
-    const toDate = new Date();
-    const fromDate = subDays(toDate, 7);
+    if (!dateRange?.from || !dateRange?.to) return;
+    fetchData(dateRange.from, dateRange.to);
+  }, [dateRange, fetchData]);
 
-    // Fetch initial data
-    fetchData(fromDate, toDate);
+  useEffect(() => {
+    const refetchCurrentRange = () => {
+      const currentRange = dateRangeRef.current;
+      if (!currentRange?.from || !currentRange?.to) return;
+      fetchData(currentRange.from, currentRange.to);
+    };
 
-    // Set up realtime subscriptions
     const clinicsChannel: RealtimeChannel = supabase
       .channel('clinics-changes')
       .on(
         'postgres_changes',
         {
-          event: '*', // Listen to all events (INSERT, UPDATE, DELETE)
+          event: '*',
           schema: 'public',
           table: 'clinics',
         },
-        (payload) => {
-          console.log('Clinic change received:', payload);
-
-          // Refetch data when changes occur
-          fetchData(fromDate, toDate);
+        () => {
+          refetchCurrentRange();
         },
       )
       .subscribe();
@@ -151,25 +163,19 @@ export default function Dashboard() {
           schema: 'public',
           table: 'clinic_doctors',
         },
-        (payload) => {
-          console.log('Doctor change received:', payload);
-
-          // Refetch data when changes occur
-          fetchData(fromDate, toDate);
+        () => {
+          refetchCurrentRange();
         },
       )
       .subscribe();
 
-    // Cleanup subscriptions on unmount
     return () => {
       supabase.removeChannel(clinicsChannel);
       supabase.removeChannel(doctorsChannel);
     };
   }, [fetchData, supabase]);
 
-  if (isLoading) {
-    return <div className="p-8">Loading dashboard...</div>;
-  }
+  const sectionTitle = dateRange?.from && dateRange?.to ? getDateRangeLabel(dateRange) : 'Select a date range';
 
   return (
     <section className="max-w-8xl mx-auto px-4 py-8 sm:px-6">
@@ -177,78 +183,56 @@ export default function Dashboard() {
         <h1 className="font-display text-3xl font-bold leading-6 text-gray-900 dark:text-gray-100">Dashboard</h1>
 
         <div className="flex flex-col gap-8">
-          <div>
-            <h2 className="font-display text-xl font-semibold leading-6 text-gray-900 dark:text-gray-100">
-              Last 7 days
-            </h2>
-
-            <div className={cn('grid gap-2', 'mt-2')}>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button
-                    id="date"
-                    variant="outline"
-                    className={cn(
-                      'w-[300px] justify-start text-left font-normal',
-                      !date && 'text-gray-500 dark:text-gray-400',
-                    )}>
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date?.from ? (
-                      date.to ? (
-                        <>
-                          {format(date.from, 'LLL dd, y')} - {format(date.to, 'LLL dd, y')}
-                        </>
-                      ) : (
-                        format(date.from, 'LLL dd, y')
-                      )
-                    ) : (
-                      <span>Pick a date</span>
-                    )}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="range"
-                    defaultMonth={date?.from}
-                    selected={date}
-                    onSelect={setDate}
-                    numberOfMonths={2}
-                  />
-                </PopoverContent>
-              </Popover>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="font-display text-xl font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                {sectionTitle}
+              </h2>
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                Stats for clinics and doctors created in this period
+              </p>
             </div>
+
+            <DatePickerWithRange
+              value={dateRange}
+              onChange={setDateRange}
+              disabled={isLoading}
+            />
           </div>
 
-          <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <dl className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             <Stat
               name="Approved clinics"
               value={stats.approvedClinics?.length}
               path="/dashboard/clinics"
+              isLoading={isLoading}
             />
             <Stat
               name="To Be Reviewed clinics"
               value={stats.toBeReviewedClinics?.length}
               path="/dashboard/clinics/review"
+              isLoading={isLoading}
             />
             <Stat
               name="Approved doctors"
               value={stats.approvedDoctors?.length}
               path="/dashboard/doctors"
+              isLoading={isLoading}
             />
             <Stat
               name="To Be Reviewed doctors"
               value={stats.toBeReviewedDoctors?.length}
               path="/dashboard/doctors/review"
+              isLoading={isLoading}
             />
           </dl>
 
-          {/* Recent Pending Clinics */}
-          {stats.toBeReviewedClinics.length > 0 && (
+          {!isLoading && stats.toBeReviewedClinics.length > 0 && (
             <div>
               <h2 className="font-display mb-4 text-xl font-semibold">Recent Pending Clinics</h2>
               <div className="space-y-2">
                 {stats.toBeReviewedClinics.slice(0, 5).map((clinic) => (
-                  <div key={clinic.id} className="rounded border border-gray-200 p-4 hover:bg-gray-50 dark:bg-gray-800/50 dark:border-gray-700 dark:hover:bg-gray-800/50">
+                  <div key={clinic.id} className="rounded border border-gray-200 p-4 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50 dark:hover:bg-gray-800/50">
                     <p className="font-medium">{clinic.name}</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{clinic.slug}</p>
                     <Link href={`/dashboard/clinics/review/edit/${clinic.id}`}>Review</Link>
@@ -258,13 +242,12 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* Recent Pending Doctors */}
-          {stats.toBeReviewedDoctors.length > 0 && (
+          {!isLoading && stats.toBeReviewedDoctors.length > 0 && (
             <div>
               <h2 className="font-display mb-4 text-xl font-semibold">Recent Pending Doctors</h2>
               <div className="space-y-2">
                 {stats.toBeReviewedDoctors.slice(0, 5).map((doctor) => (
-                  <div key={doctor.id} className="rounded border border-gray-200 p-3 hover:bg-gray-50 dark:bg-gray-800/50 dark:border-gray-700 dark:hover:bg-gray-800/50">
+                  <div key={doctor.id} className="rounded border border-gray-200 p-3 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/50 dark:hover:bg-gray-800/50">
                     <p className="font-medium">{doctor.name}</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{doctor.specialty}</p>
                   </div>
