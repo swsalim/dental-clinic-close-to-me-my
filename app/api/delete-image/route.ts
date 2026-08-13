@@ -2,18 +2,6 @@ import { NextResponse } from 'next/server';
 
 import { generateSHA1, generateSignature } from '@/lib/utils';
 
-// Environment variables validation
-const apiName = process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME;
-const apiSecret = process.env.CLOUDINARY_API_SECRET;
-const apiKey = process.env.CLOUDINARY_API_KEY;
-
-if (!apiName || !apiSecret || !apiKey) {
-  throw new Error('Missing required Cloudinary environment variables');
-}
-
-// Type assertion after validation
-const validatedApiSecret = apiSecret as string;
-
 interface DeleteImageRequest {
   public_id: string;
 }
@@ -25,10 +13,19 @@ interface CloudinaryResponse {
   };
 }
 
-const CLOUDINARY_API_URL = `https://api.cloudinary.com/v1_1/${apiName}/image/destroy`;
-
 export async function POST(request: Request) {
   try {
+    const apiName = process.env.NEXT_PUBLIC_CLOUDIARY_API_NAME;
+    const apiSecret = process.env.CLOUDINARY_API_SECRET;
+    const apiKey = process.env.CLOUDINARY_API_KEY;
+
+    if (!apiName || !apiSecret || !apiKey) {
+      return NextResponse.json(
+        { error: 'Missing required Cloudinary environment variables' },
+        { status: 500 },
+      );
+    }
+
     const body = await request.json();
 
     // Input validation
@@ -41,9 +38,9 @@ export async function POST(request: Request) {
 
     const { public_id } = body as DeleteImageRequest;
     const timestamp = new Date().getTime();
-    const signature = generateSHA1(generateSignature(public_id, validatedApiSecret));
+    const signature = generateSHA1(generateSignature(public_id, apiSecret));
 
-    const response = await fetch(CLOUDINARY_API_URL, {
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${apiName}/image/destroy`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
