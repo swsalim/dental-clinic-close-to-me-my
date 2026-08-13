@@ -19,6 +19,10 @@ import { getStateListings } from '@/helpers/states';
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { ImageKit } from '@/components/image/image-kit';
+import {
+  getFeaturedListingCardPlaceholder,
+  getFeaturedPartnerCardPlaceholder,
+} from '@/components/listing/featured-clinic-spotlight';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -313,6 +317,24 @@ export default async function StatePage({ params, searchParams }: StatePageProps
                   className={cn(
                     'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4',
                   )}>
+                  {currentPage === 1 && (
+                    <>
+                      <ClinicCard
+                        key="featured-placeholder-partner"
+                        {...getFeaturedPartnerCardPlaceholder(
+                          stateData.name,
+                          stateData.areas?.[0]?.name,
+                        )}
+                      />
+                      <ClinicCard
+                        key="featured-placeholder-listing"
+                        {...getFeaturedListingCardPlaceholder(
+                          stateData.name,
+                          stateData.areas?.[1]?.name ?? stateData.areas?.[0]?.name,
+                        )}
+                      />
+                    </>
+                  )}
                   {stateData.clinics
                     ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
                     .map((clinic, index) => {

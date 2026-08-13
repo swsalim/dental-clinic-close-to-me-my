@@ -3,6 +3,7 @@ import { absoluteUrl } from '@/lib/utils';
 import { Hero } from '@/components/hero';
 import BrowseServices from '@/components/listing/browse-services';
 import { ExploreStates } from '@/components/listing/explore-states';
+import { FeaturedClinics } from '@/components/listing/featured-clinics';
 import { HomeCtaStrip } from '@/components/listing/home-cta-strip';
 import { RecentClinics } from '@/components/listing/recent-clinics';
 import { Testimonials } from '@/components/listing/testimonials';
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <LogoJsonLd logo={absoluteUrl('/images/logo.png')} url={absoluteUrl('/')} />
       <Hero />
+      <FeaturedClinics />
       <ExploreStates />
       <RecentClinics />
       <BrowseServices />

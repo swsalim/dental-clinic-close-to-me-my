@@ -30,7 +30,10 @@ export const DASHBOARD_CLINIC_SELECT = `
   images:clinic_images(image_url, imagekit_file_id),
   area:area_id(name, slug),
   state:state_id(name, slug),
-  is_active
+  is_active,
+  modified_at,
+  rating,
+  review_count
 `;
 
 export async function getDashboardClinics(options: {

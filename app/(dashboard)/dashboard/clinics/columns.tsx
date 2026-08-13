@@ -76,11 +76,30 @@ export const columns: ColumnDef<ClinicTableData>[] = [
       <DataTableColumnHeader column={column} title="Name" className="dark:text-gray-100" />
     ),
     cell: ({ row }) => {
-      const slug = row.original.slug;
+      const { slug, modified_at, rating, review_count } = row.original;
+      const modifiedLabel = modified_at
+        ? new Date(modified_at).toLocaleString(undefined, {
+            dateStyle: 'medium',
+            timeStyle: 'short',
+          })
+        : null;
+      const googleRatingLabel = rating != null ? `Google: ${rating.toFixed(1)}` : null;
+      const totalRatingsLabel =
+        review_count != null ? `Total ratings: ${review_count.toLocaleString()}` : null;
       return (
         <div>
           <span className="block max-w-[500px] truncate">{row.getValue('name')}</span>
           <span className="block max-w-[500px] truncate italic">{slug}</span>
+          {modifiedLabel && (
+            <span className="text-muted-foreground block max-w-[500px] truncate">
+              {modifiedLabel}
+            </span>
+          )}
+          {(googleRatingLabel || totalRatingsLabel) && (
+            <span className="text-muted-foreground block max-w-[500px] truncate">
+              {[googleRatingLabel, totalRatingsLabel].filter(Boolean).join(' · ')}
+            </span>
+          )}
         </div>
       );
     },

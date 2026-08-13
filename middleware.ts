@@ -20,6 +20,18 @@ export const config = {
 };
 
 export async function middleware(req: NextRequest): Promise<NextResponse> {
+  const { pathname } = req.nextUrl;
+
+  if (pathname.endsWith('.md')) {
+    const url = req.nextUrl.clone();
+    const withoutExtension = pathname.slice(0, -3);
+    url.pathname =
+      withoutExtension === '' || withoutExtension === '/'
+        ? '/api/markdown'
+        : `/api/markdown${withoutExtension}`;
+    return NextResponse.rewrite(url);
+  }
+
   const { supabase, response } = createMiddlewareClient(req);
 
   const {

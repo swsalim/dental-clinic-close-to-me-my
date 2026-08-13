@@ -20,7 +20,16 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
+import { Input } from '@/components/form-fields/input';
 import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,6 +37,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Label } from '@/components/ui/label';
 import { ToastAction } from '@/components/ui/toast';
 import { toast } from '@/components/ui/use-toast';
 
@@ -47,8 +57,12 @@ export function DataTableRowActions<TData extends ClinicTableData>({
   const pathname = usePathname();
   const supabase = createClient();
   const [open, setOpen] = useState(false);
+  const [ratingDialogOpen, setRatingDialogOpen] = useState(false);
+  const [rating, setRating] = useState('');
+  const [reviewCount, setReviewCount] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [isToggling, setIsToggling] = useState(false);
+  const [isSavingRatings, setIsSavingRatings] = useState(false);
 
   const isToBeReviewed = pathname?.includes('/review');
 
@@ -126,6 +140,69 @@ export function DataTableRowActions<TData extends ClinicTableData>({
     }
   };
 
+  const openRatingDialog = () => {
+    setRating(clinic.rating != null ? String(clinic.rating) : '');
+    setReviewCount(clinic.review_count != null ? String(clinic.review_count) : '');
+    setRatingDialogOpen(true);
+  };
+
+  const handleUpdateRatings = async () => {
+    if (isSavingRatings) return;
+
+    const parsedRating = rating === '' ? null : Number(rating);
+    const parsedReviewCount = reviewCount === '' ? null : Number(reviewCount);
+
+    if (parsedRating != null && (Number.isNaN(parsedRating) || parsedRating < 0 || parsedRating > 5)) {
+      toast({
+        variant: 'destructive',
+        title: 'Invalid rating',
+        description: 'Rating must be a number between 0 and 5.',
+      });
+      return;
+    }
+
+    if (
+      parsedReviewCount != null &&
+      (Number.isNaN(parsedReviewCount) || parsedReviewCount < 0 || !Number.isInteger(parsedReviewCount))
+    ) {
+      toast({
+        variant: 'destructive',
+        title: 'Invalid review count',
+        description: 'Review count must be a whole number of 0 or greater.',
+      });
+      return;
+    }
+
+    try {
+      setIsSavingRatings(true);
+      const { error } = await supabase
+        .from('clinics')
+        .update({
+          rating: parsedRating,
+          review_count: parsedReviewCount,
+        })
+        .eq('id', clinic.id);
+
+      if (error) throw error;
+
+      toast({
+        title: 'Ratings updated successfully',
+      });
+
+      setRatingDialogOpen(false);
+      router.refresh();
+    } catch (error) {
+      console.error('Error updating ratings:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Failed to update ratings',
+        description: error instanceof Error ? error.message : 'An unknown error occurred',
+      });
+    } finally {
+      setIsSavingRatings(false);
+    }
+  };
+
   const handleToggleActive = async () => {
     if (isToggling) return;
 
@@ -180,6 +257,52 @@ export function DataTableRowActions<TData extends ClinicTableData>({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+      <Dialog open={ratingDialogOpen} onOpenChange={setRatingDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Update ratings</DialogTitle>
+            <DialogDescription>
+              Update Google rating and total ratings for{' '}
+              <span className="font-medium text-gray-900 dark:text-gray-100">&quot;{clinic.name}&quot;</span>.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-2">
+            <div className="grid gap-2">
+              <Label htmlFor={`rating-${clinic.id}`}>Google rating</Label>
+              <Input
+                id={`rating-${clinic.id}`}
+                type="number"
+                min={0}
+                max={5}
+                step={0.1}
+                placeholder="5.0"
+                value={rating}
+                onChange={(e) => setRating(e.target.value)}
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor={`review-count-${clinic.id}`}>Total ratings</Label>
+              <Input
+                id={`review-count-${clinic.id}`}
+                type="number"
+                min={0}
+                step={1}
+                placeholder="100"
+                value={reviewCount}
+                onChange={(e) => setReviewCount(e.target.value)}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setRatingDialogOpen(false)} disabled={isSavingRatings}>
+              Cancel
+            </Button>
+            <Button onClick={handleUpdateRatings} disabled={isSavingRatings}>
+              {isSavingRatings ? 'Saving...' : 'Save'}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
@@ -209,6 +332,13 @@ export function DataTableRowActions<TData extends ClinicTableData>({
           )}
           <DropdownMenuItem onSelect={handleToggleActive} disabled={isToggling}>
             {isToggling ? 'Updating...' : `${clinic.is_active ? 'Deactivate' : 'Activate'}`}
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onSelect={(e) => {
+              e.preventDefault();
+              openRatingDialog();
+            }}>
+            Update ratings
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
