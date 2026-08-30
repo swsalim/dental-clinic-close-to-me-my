@@ -4,6 +4,12 @@ import { DatabaseService } from '@/services/database.service';
 import { GoogleMapsService } from '@/services/google-maps.service';
 import Stripe from 'stripe';
 
+import { normalizeMalaysiaPhone } from '@/lib/listing/phone';
+import {
+  LISTING_FEE_PRODUCT_DESCRIPTION,
+  LISTING_FEE_PRODUCT_NAME,
+  LISTING_FEE_SEN,
+} from '@/lib/listing/submission-fee';
 import { absoluteUrl, slugify } from '@/lib/utils';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -39,7 +45,7 @@ export async function POST(request: Request) {
       state_id: body.state_id,
       area_id: body.area_id,
       address: body.address,
-      phone: body.phone,
+      phone: normalizeMalaysiaPhone(body.phone || ''),
       postal_code: body.postal_code,
       email: body.clinic_email,
       images: null, // Set to null since images are stored in clinic_images table
@@ -52,6 +58,7 @@ export async function POST(request: Request) {
       facebook_url: body.facebook_url,
       instagram_url: body.instagram_url,
       featured_video: body.featured_video,
+      website: body.website,
       place_id: placeId,
       source: 'ugc_paid',
       status: 'pending_payment',
@@ -60,6 +67,10 @@ export async function POST(request: Request) {
     // Insert images into clinic_images table if we have any
     if (body.images && body.images.length > 0) {
       await databaseService.insertClinicImages(clinic.id, body.images);
+    }
+
+    if (body.businessHours) {
+      await databaseService.insertClinicHours(clinic.id, body.businessHours);
     }
 
     // Handle Stripe customer creation/retrieval
@@ -132,10 +143,10 @@ export async function POST(request: Request) {
           price_data: {
             currency: 'myr',
             product_data: {
-              name: 'Instant Listing',
-              description: 'Get your clinic listed with a dofollow backlink in 24 hours.',
+              name: LISTING_FEE_PRODUCT_NAME,
+              description: LISTING_FEE_PRODUCT_DESCRIPTION,
             },
-            unit_amount: 19900, // RM199.00
+            unit_amount: LISTING_FEE_SEN,
           },
           quantity: 1,
         },

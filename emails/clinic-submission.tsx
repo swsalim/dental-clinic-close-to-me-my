@@ -2,24 +2,20 @@ import type * as React from 'react';
 
 import { Container, Heading, Hr, Link, Text } from '@react-email/components';
 
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
+
 import { EmailLayout } from './layout';
 
 interface ClinicSubmissionEmailProps {
   clinicName: string;
-  price: string;
+  price?: string;
   recipientName?: string;
 }
 
 export const ClinicSubmissionEmail = ({
   clinicName,
-  price,
   recipientName = 'Partner',
 }: ClinicSubmissionEmailProps) => {
-  const isPremium = price === 'instant';
-  const processingTime = isPremium ? 'within 24 hours' : 'within 6 months';
-  const statusIcon = isPremium ? '✅' : '⏳';
-  const priceText = isPremium ? 'Instant Premium Listing (MYR 199)' : 'Standard Listing (Free)';
-
   return (
     <EmailLayout preview={`Thank you for your ${clinicName} listing submission`}>
       <Container className="px-6 py-4">
@@ -41,12 +37,10 @@ export const ClinicSubmissionEmail = ({
 
         <Container className="rounded-lg border border-gray-200 bg-gray-50 p-4">
           <Text className="text-base font-bold text-gray-800">
-            {statusIcon} {priceText}
+            Paid listing ({LISTING_FEE_LABEL})
           </Text>
           <Text className="text-base text-gray-700">
-            Your listing will be live on our platform {processingTime}.
-            {!isPremium &&
-              ' Due to high submission volume, standard listings require longer processing times.'}
+            Your listing will be live on our platform within 24 hours.
           </Text>
         </Container>
 
@@ -83,7 +77,6 @@ export const ClinicSubmissionEmail = ({
 
 ClinicSubmissionEmail.PreviewProps = {
   clinicName: 'Dental Clinic',
-  price: 'free',
   recipientName: 'John Wick',
 } satisfies ClinicSubmissionEmailProps;
 

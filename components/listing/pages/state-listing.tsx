@@ -1,0 +1,421 @@
+import React from 'react';
+
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+
+import { ClinicImage } from '@/types/clinic';
+import { ArrowRightIcon, PersonStandingIcon } from 'lucide-react';
+
+import { siteConfig } from '@/config/site';
+
+import { getStateAreasWithClinicsCached, getStateBySlugCached } from '@/lib/data';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import { absoluteUrl, cn, getPagination } from '@/lib/utils';
+
+import { getDoctorsByState } from '@/helpers/doctors';
+
+import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
+import { ClinicCard } from '@/components/cards/clinic-card';
+import { ImageKit } from '@/components/image/image-kit';
+import {
+  getFeaturedListingCardPlaceholder,
+  getFeaturedPartnerCardPlaceholder,
+} from '@/components/listing/featured-clinic-spotlight';
+import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
+import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
+import Breadcrumb from '@/components/ui/breadcrumb';
+import { buttonVariants } from '@/components/ui/button';
+import Container from '@/components/ui/container';
+import { Pagination } from '@/components/ui/pagination';
+import { Wrapper } from '@/components/ui/wrapper';
+
+type StateListingProps = {
+  state: string;
+  currentPage: number;
+};
+
+export async function generateStateListingMetadata(
+  state: string,
+  currentPage: number,
+): Promise<Metadata> {
+  const limit = 20;
+  const { from, to } = getPagination(currentPage, limit);
+  const [stateData, areasWithClinics] = await Promise.all([
+    getStateBySlugCached(state, from, to),
+    getStateAreasWithClinicsCached(state),
+  ]);
+
+  if (!stateData) {
+    notFound();
+  }
+
+  const featuredAreas = areasWithClinics.slice(0, 3);
+  const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
+
+  const LAST_UPDATED = 'November 2025';
+  const title = `Top ${stateData.total_clinics} Dental Clinics in ${stateData.name} [${LAST_UPDATED}]`;
+  const description = `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
+  const url = absoluteUrl(listingCanonicalPath(`/${state}`, currentPage));
+
+  // Build the OG image URL with optional background image
+  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og-list`);
+  ogImageUrl.searchParams.set('title', title);
+  if (stateData.image) {
+    ogImageUrl.searchParams.set('image', stateData.image);
+  }
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: ogImageUrl,
+          width: siteConfig.openGraph.width,
+          height: siteConfig.openGraph.height,
+          alt: title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      title,
+      description,
+      card: 'summary_large_image',
+      creator: siteConfig.creator,
+      images: [
+        {
+          url: ogImageUrl,
+          width: siteConfig.openGraph.width,
+          height: siteConfig.openGraph.height,
+          alt: title,
+        },
+      ],
+    },
+    robots: {
+      index: currentPage <= MAX_INDEXED_LISTING_PAGE,
+      follow: true,
+    },
+  };
+}
+
+export async function StateListing({ state, currentPage }: StateListingProps) {
+  const limit = 20;
+  const { from, to } = getPagination(currentPage, limit);
+
+  const [stateData, areasWithClinics, doctorsResult] = await Promise.all([
+    getStateBySlugCached(state, from, to),
+    getStateAreasWithClinicsCached(state),
+    getDoctorsByState(state, 5, 0),
+  ]);
+
+  if (!stateData) {
+    notFound();
+  }
+
+  const doctors = doctorsResult.data;
+  const totalDoctors = doctorsResult.count || 0;
+
+  const totalClinics = stateData.total_clinics || 0;
+  const totalPages = Math.ceil(totalClinics / limit);
+
+  const featuredAreas = areasWithClinics.slice(0, 3);
+  const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
+  const nearbyAreasWithLinks = featuredAreas;
+
+  const title = `Top Dental Clinics in ${stateData.name}`;
+  const description = `Explore ${totalClinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
+
+  const breadcrumbItems = [
+    {
+      name: stateData.name,
+    },
+  ];
+
+  const JSONLDbreadcrumbs = [
+    {
+      item: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      name: 'Home',
+      position: '1',
+    },
+    {
+      item: absoluteUrl(`/${state}`),
+      name: stateData.name,
+      position: '2',
+    },
+  ];
+
+  return (
+    <>
+      <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
+      <CollectionPageJsonLd
+        name={`Dental Clinics in ${stateData.name}`}
+        url={`/${state}`}
+        description={description}
+        clinics={stateData.clinics ?? []}
+      />
+      <Wrapper className="relative overflow-hidden">
+        {/* Optimized background image using Next.js Image */}
+        {stateData.image && (
+          <ImageKit
+            src={stateData.image}
+            alt={`${stateData.name} aesthetic clinics background`}
+            width={1920}
+            height={600}
+            priority
+            quality={85}
+            sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{
+              objectPosition: 'center center',
+            }}
+          />
+        )}
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+        <Container className="relative z-10">
+          <div className="flex flex-col gap-4 py-12 md:py-24">
+            <Breadcrumb items={breadcrumbItems} theme="dark" />
+            <h1 className="text-balance font-display text-4xl font-black text-white">{title}</h1>
+            <p className="text-balance text-lg font-medium text-white">
+              Explore {totalClinics} trusted dental clinics across cities like{' '}
+              {nearbyAreasWithLinks?.map((area, index) => (
+                <React.Fragment key={area.slug}>
+                  <Link
+                    href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)}
+                    className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
+                    prefetch={false}>
+                    {area.name}
+                  </Link>
+                  {index < nearbyAreasWithLinks.length - 2 && ', '}
+                  {index === nearbyAreasWithLinks.length - 2 && ', and '}
+                </React.Fragment>
+              ))}{' '}
+              in {stateData?.name}. Find services, reviews, and opening hours.
+            </p>
+          </div>
+        </Container>
+      </Wrapper>
+
+      <Wrapper size="sm">
+        <Container>
+          <div className="mx-auto mb-10 max-w-2xl">
+            <a
+              href="https://invl.me/clnlab2"
+              className="hover:!border-b-transparent"
+              target="_blank"
+              rel="nofollow noopener noreferrer">
+              <Image
+                src="/images/total-image-1.jpg"
+                alt="Total Image"
+                width={600}
+                height={600}
+                priority
+                quality={85}
+                sizes="(max-width: 672px) 100vw, 672px"
+                className="m-0 h-auto w-full object-cover"
+                style={{
+                  objectPosition: 'center center',
+                }}
+              />
+            </a>
+          </div>
+          <div className="flex flex-col gap-y-6">
+            {totalDoctors > 0 && (
+              <div className="dark:bg-blue-950/40 flex flex-col gap-y-4 rounded-lg border-blue-300 bg-blue-50/70 px-6 py-4 text-blue-900 dark:border-blue-700 dark:text-blue-100">
+                <h2 className="text-balance font-display text-xl font-bold md:text-xl">
+                  Browse Dentists in {stateData.name}
+                </h2>
+                <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:justify-start">
+                  <div className="flex space-x-3 md:-space-x-1">
+                    {doctors.map((doctor, index) => (
+                      <Link
+                        href={`/dentist/${doctor.slug}`}
+                        className="relative size-16 overflow-hidden rounded-full outline -outline-offset-1 outline-blue-200 ring-2 ring-blue-300"
+                        key={`${doctor.id}-${index}`}>
+                        {doctor.images?.[0] && (
+                          <ImageKit
+                            src={doctor.images?.[0].image_url}
+                            alt={`Photo of ${doctor.name}`}
+                            width={100}
+                            height={100}
+                            sizes="(max-width: 600px) 100vw, 350px"
+                            quality={85}
+                            priority
+                            className="h-full w-full object-cover"
+                          />
+                        )}
+                        {!doctor.images?.[0] && (
+                          <div className="mx-auto mb-6 h-full w-full p-0 md:p-0">
+                            <PersonStandingIcon className="size-12" />
+                          </div>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href={`/${state}/dentists`}
+                    className={cn(
+                      buttonVariants({ variant: 'secondary' }),
+                      'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 sm:w-auto dark:border-blue-600 dark:bg-blue-900/40 dark:text-blue-200 dark:hover:border-blue-500 dark:hover:bg-blue-900/60 dark:hover:text-blue-100',
+                    )}
+                    prefetch={false}>
+                    View All Dentists
+                  </Link>
+                </div>
+              </div>
+            )}
+            <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
+              {totalClinics} Dental Clinics in {stateData.name}
+            </h2>
+            {stateData.clinics?.length > 0 ? (
+              <>
+                <div
+                  className={cn(
+                    'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4',
+                  )}>
+                  {currentPage === 1 && (
+                    <>
+                      <ClinicCard
+                        key="featured-placeholder-partner"
+                        {...getFeaturedPartnerCardPlaceholder(
+                          stateData.name,
+                          stateData.areas?.[0]?.name,
+                        )}
+                      />
+                      <ClinicCard
+                        key="featured-placeholder-listing"
+                        {...getFeaturedListingCardPlaceholder(
+                          stateData.name,
+                          stateData.areas?.[1]?.name ?? stateData.areas?.[0]?.name,
+                        )}
+                      />
+                    </>
+                  )}
+                  {stateData.clinics
+                    ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
+                    .map((clinic, index) => {
+                      return (
+                        <React.Fragment key={clinic.slug}>
+                          {index === 5 && (
+                            <div className="flex flex-col items-center justify-center gap-2 text-center">
+                              <a
+                                href="https://invl.me/clnlab2"
+                                className="hover:!border-b-transparent"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer">
+                                <Image
+                                  src="/images/total-image-2.jpg"
+                                  alt="Total Image"
+                                  width={600}
+                                  height={600}
+                                  priority
+                                  quality={85}
+                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  className="m-0 h-auto w-full object-cover"
+                                  style={{
+                                    objectPosition: 'center center',
+                                  }}
+                                />
+                              </a>
+                            </div>
+                          )}
+                          {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
+                          <ClinicCard
+                            key={clinic.slug}
+                            slug={clinic.slug ?? ''}
+                            name={clinic.name ?? ''}
+                            address={clinic.address ?? ''}
+                            phone={clinic.phone ?? ''}
+                            postalCode={clinic.postal_code ?? ''}
+                            state={clinic.state?.name ?? ''}
+                            area={clinic.area?.name ?? ''}
+                            image={
+                              clinic.images?.[0]
+                                ? (clinic.images[0] as unknown as ClinicImage).image_url
+                                : undefined
+                            }
+                            rating={clinic.rating}
+                            isFeatured={clinic.is_featured ?? false}
+                            hours={clinic.hours ?? []}
+                            specialHours={clinic.special_hours ?? []}
+                            openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                          />
+                        </React.Fragment>
+                      );
+                    })}
+                </div>
+                <Pagination currentPage={currentPage} totalPages={totalPages} />
+              </>
+            ) : (
+              <div className="flex flex-col items-center justify-center gap-y-4">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="relative size-64 md:size-96">
+                    <ImageKit
+                      src="lost-boy.png"
+                      alt="No dental clinics found"
+                      width={500}
+                      height={500}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+                <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">Oops!</h2>
+                <p className="text-balance text-lg dark:text-gray-300">
+                  No dental clinics found in {stateData.name}.
+                </p>
+                <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                  <Link
+                    href="/submit"
+                    className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
+                    prefetch={false}>
+                    Add a clinic
+                    <ArrowRightIcon className="size-4" />
+                  </Link>
+                  <Link
+                    href="/"
+                    className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
+                    prefetch={false}>
+                    Get back to homepage
+                    <ArrowRightIcon className="size-4" />
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+        </Container>
+      </Wrapper>
+
+      <Wrapper size="sm">
+        <Container>
+          <div className="flex flex-col gap-y-6">
+            <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
+              Dental Clinics near {stateData.name}
+            </h2>
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+              {stateData.areas?.map((area) => (
+                <h3 className="text-balance font-display text-base font-medium" key={area.slug}>
+                  <Link
+                    href={absoluteUrl(`/${state}/${area.slug}`)}
+                    className="py-1 hover:border-transparent"
+                    prefetch={false}>
+                    {area.name}, {area.state?.name}
+                  </Link>
+                </h3>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+    </>
+  );
+}

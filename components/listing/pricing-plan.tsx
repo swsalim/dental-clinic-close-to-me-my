@@ -47,7 +47,7 @@ const plans: Plan[] = [
       { text: 'Ad-free clinic profile' },
       { text: 'Do-follow backlink to your website' },
       { text: '1 promotional image' },
-      { text: 'Priority listing placement above free listings' },
+      { text: 'Priority listing placement above standard listings' },
     ],
   },
   {

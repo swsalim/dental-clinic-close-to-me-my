@@ -18,6 +18,7 @@ type ClinicListing = {
   id: string;
   name: string;
   slug: string;
+  modified_at: string | null;
 };
 
 const CLINIC_LISTINGS_PAGE_SIZE = 1000;
@@ -94,7 +95,7 @@ export async function getAllClinicListings(): Promise<ClinicListing[]> {
   while (true) {
     const { data, error } = await supabase
       .from('clinics')
-      .select('id, name, slug')
+      .select('id, name, slug, modified_at')
       .order('name')
       .range(from, from + CLINIC_LISTINGS_PAGE_SIZE - 1);
 
@@ -127,7 +128,7 @@ export async function getClinicListings(status: string = 'approved'): Promise<Cl
   while (true) {
     const { data, error } = await supabase
       .from('clinics')
-      .select('id, name, slug')
+      .select('id, name, slug, modified_at')
       .match({ is_active: true, status })
       .order('id')
       .range(from, from + CLINIC_LISTINGS_PAGE_SIZE - 1);

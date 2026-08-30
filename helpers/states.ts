@@ -62,7 +62,7 @@ export const getStateListings = async () => {
 
   const { data: statesData } = await supabase
     .from('states')
-    .select('id, name, slug', { count: 'exact' });
+    .select('id, name, slug, modified_at', { count: 'exact' });
 
   return statesData || [];
 };

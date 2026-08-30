@@ -22,6 +22,7 @@ export const getAreaListings = async () => {
         id,
         name,
         slug,
+        modified_at,
         state:states(name, slug)
       `,
   )) as {
@@ -29,6 +30,7 @@ export const getAreaListings = async () => {
       id: string;
       name: string;
       slug: string;
+      modified_at: string | null;
       state: {
         name: string;
         slug: string;

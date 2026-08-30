@@ -1,4 +1,8 @@
 import { createAdminClient } from '@/lib/supabase/admin';
+import {
+  businessHoursToInsertRows,
+  type BusinessHours,
+} from '@/lib/listing/business-hours';
 
 export interface ClinicData {
   name: string;
@@ -10,7 +14,7 @@ export interface ClinicData {
   phone: string;
   postal_code: string;
   email?: string;
-  images: null; // Changed to null since images are now stored in clinic_images table
+  images: null;
   neighborhood: string | null;
   city: string | null;
   latitude: number;
@@ -20,6 +24,7 @@ export interface ClinicData {
   facebook_url?: string;
   instagram_url?: string;
   featured_video?: string;
+  website?: string;
   place_id: string;
   source: string;
   status: string;
@@ -42,7 +47,7 @@ export class DatabaseService {
       .from('clinics')
       .insert({
         ...data,
-        images: null, // Always set images to null since they're stored in clinic_images table
+        images: null,
         rating: 0,
         review_count: 0,
       })
@@ -92,6 +97,21 @@ export class DatabaseService {
     }
 
     return insertedImages || [];
+  }
+
+  async insertClinicHours(clinicId: string, businessHours: BusinessHours) {
+    const hoursToInsert = businessHoursToInsertRows(clinicId, businessHours);
+    if (hoursToInsert.length === 0) {
+      return [];
+    }
+
+    const { error, data } = await this.supabase.from('clinic_hours').insert(hoursToInsert).select();
+
+    if (error) {
+      throw new Error(`Failed to insert clinic hours: ${error.message}`);
+    }
+
+    return data || [];
   }
 
   async updateClinicStatus(clinicId: string, status: string) {

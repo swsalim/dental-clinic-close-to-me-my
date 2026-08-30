@@ -12,7 +12,8 @@ export async function getAllServices() {
       id,
       name,
       slug,
-      description
+      description,
+      modified_at
     `,
     )
     .order('modified_at', { ascending: false });

@@ -119,6 +119,7 @@ export const getDoctorListings = async (status: string = 'approved') => {
         id,
         name,
         slug,
+        modified_at,
         is_active,
         status
       `,
@@ -128,6 +129,7 @@ export const getDoctorListings = async (status: string = 'approved') => {
       id: string;
       name: string;
       slug: string;
+      modified_at: string | null;
       is_active: boolean | null;
       status: string | null;
     }[];

@@ -2,6 +2,7 @@ import { Clinic, ClinicDetails } from '@/types/clinic';
 
 import { siteConfig } from '@/config/site';
 
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import {
   escapeMd,
   formatHours,
@@ -98,7 +99,11 @@ export async function markdownHome() {
       .join('\n'),
     '## For clinic owners',
     [
-      listItem('List your clinic', mdUrl('/submit'), 'Free listing for dental clinics in Malaysia'),
+      listItem(
+        'List your clinic',
+        mdUrl('/submit'),
+        `Paid listing for dental clinics in Malaysia (${LISTING_FEE_LABEL} one-time)`,
+      ),
       listItem(
         'Advertise with us',
         mdUrl('/advertise-with-us'),
@@ -175,9 +180,9 @@ export async function markdownDentists() {
 
 export function markdownSubmit() {
   return joinSections([
-    '# List your clinic | Reach more patients in Malaysia',
-    '> Promote your dental clinic on Malaysia’s top local directory. Submit your listing on DentalClinicCloseToMe.my for free and connect with nearby patients.',
-    'Submit your clinic and get exposure to patients searching for dental care near them. Listings are free.',
+    `# List your clinic for ${LISTING_FEE_LABEL} | Reach more patients in Malaysia`,
+    `> List your dental clinic on DentalClinicCloseToMe.my for a one-time ${LISTING_FEE_LABEL} fee. Reviewed within 24 hours, with a dofollow link to your website.`,
+    `Submit your clinic for a one-time ${LISTING_FEE_LABEL} fee and get exposure to patients searching for dental care near them.`,
     `HTML form: ${absoluteUrl('/submit')}`,
   ]);
 }

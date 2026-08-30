@@ -34,6 +34,19 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*.md',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=1209600, stale-while-revalidate=86400',
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {

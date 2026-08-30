@@ -5,6 +5,8 @@ import { ReviewNotificationEmail } from '@/emails/review-notification';
 import { ReviewSubmissionAcknowledgmentEmail } from '@/emails/review-submission-acknowledgment';
 import { Resend } from 'resend';
 
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email template for new review notifications
@@ -148,10 +150,7 @@ export const sendNewClinicNotification = async ({
   }
 
   try {
-    const subject =
-      price === 'instant'
-        ? 'Your Premium Dental Clinic Listing: Live Within 24 Hours'
-        : 'Dental Clinic Listing Received - Processing Confirmation';
+    const subject = `Your Dental Clinic Listing: Live Within 24 Hours (${LISTING_FEE_LABEL})`;
     const { error } = await resend.batch.send([
       {
         from: process.env.EMAIL_FROM || 'hello@dentalclinicclosetome.my',

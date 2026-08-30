@@ -2,6 +2,8 @@ import type * as React from 'react';
 
 import { Heading, Section, Text } from '@react-email/components';
 
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
+
 import { EmailLayout } from './layout';
 
 interface ClinicNotificationEmailProps {
@@ -12,7 +14,7 @@ interface ClinicNotificationEmailProps {
   phone: string;
   address: string;
   description: string;
-  price: string;
+  price?: string;
 }
 
 export const ClinicNotificationEmail = ({
@@ -23,7 +25,6 @@ export const ClinicNotificationEmail = ({
   phone,
   address,
   description,
-  price,
 }: ClinicNotificationEmailProps) => {
   return (
     <EmailLayout preview={`New Listing Submission: ${clinicName}`}>
@@ -54,8 +55,7 @@ export const ClinicNotificationEmail = ({
         </Text>
 
         <Text className="mt-2 text-base text-gray-700">
-          <strong>Listing Type:</strong>{' '}
-          {price === 'instant' ? 'Instant Listing' : 'Free Listing ($0)'}
+          <strong>Listing Type:</strong> Paid listing ({LISTING_FEE_LABEL})
         </Text>
       </Section>
     </EmailLayout>
@@ -69,7 +69,7 @@ ClinicNotificationEmail.PreviewProps = {
   phone: '1234567890',
   address: '123 Main St, Anytown, USA',
   description: 'This is a description of the clinic',
-  price: '100',
+  price: 'instant',
 } satisfies ClinicNotificationEmailProps;
 
 export default ClinicNotificationEmail;

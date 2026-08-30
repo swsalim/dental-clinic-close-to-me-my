@@ -24,6 +24,7 @@ import {
   markdownStateDentists,
   markdownSubmit,
 } from '@/lib/llms/pages';
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getAllServices } from '@/helpers/services';
@@ -88,7 +89,11 @@ async function buildLlmsIndex() {
       .join('\n'),
     '## Optional',
     [
-      listItem('List your clinic', mdUrl('/submit'), 'Free clinic listing form'),
+      listItem(
+        'List your clinic',
+        mdUrl('/submit'),
+        `Paid clinic listing form (${LISTING_FEE_LABEL} one-time)`,
+      ),
       listItem(
         'Advertise with us',
         mdUrl('/advertise-with-us'),

@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server';
 
 import { categoryList as categories } from '@/config/routes';
 
+import { parsePageParam } from '@/lib/listing/pagination';
 import { createMiddlewareClient } from '@/lib/supabase';
 
 export const config = {
@@ -19,6 +20,48 @@ export const config = {
   ],
 };
 
+function isDashboardPath(pathname: string) {
+  return pathname === '/dashboard' || pathname.startsWith('/dashboard/');
+}
+
+function listingQueryRedirect(req: NextRequest): NextResponse | null {
+  const { pathname, searchParams } = req.nextUrl;
+  if (pathname.endsWith('.md') || isDashboardPath(pathname)) {
+    return null;
+  }
+
+  const pageParam = searchParams.get('page');
+  if (pageParam === null) {
+    return null;
+  }
+
+  const currentPage = parsePageParam(pageParam);
+  const url = req.nextUrl.clone();
+  url.searchParams.delete('page');
+
+  if (currentPage <= 1) {
+    return NextResponse.redirect(url, 308);
+  }
+
+  if (/\/page\/\d+$/.test(pathname)) {
+    return null;
+  }
+
+  url.pathname = `${pathname.replace(/\/$/, '')}/page/${currentPage}`;
+  return NextResponse.redirect(url, 308);
+}
+
+function trailingPageOneRedirect(req: NextRequest): NextResponse | null {
+  const match = req.nextUrl.pathname.match(/^(.*)\/page\/1\/?$/);
+  if (!match) {
+    return null;
+  }
+
+  const url = req.nextUrl.clone();
+  url.pathname = match[1] || '/';
+  return NextResponse.redirect(url, 308);
+}
+
 export async function middleware(req: NextRequest): Promise<NextResponse> {
   const { pathname } = req.nextUrl;
 
@@ -32,30 +75,38 @@ export async function middleware(req: NextRequest): Promise<NextResponse> {
     return NextResponse.rewrite(url);
   }
 
-  const { supabase, response } = createMiddlewareClient(req);
+  const queryRedirect = listingQueryRedirect(req);
+  if (queryRedirect) {
+    return queryRedirect;
+  }
 
+  const pageOneRedirect = trailingPageOneRedirect(req);
+  if (pageOneRedirect) {
+    return pageOneRedirect;
+  }
+
+  for (const [key, value] of Object.entries(categories)) {
+    if (value.is_active && pathname === `/${key}`) {
+      const url = req.nextUrl.clone();
+      url.pathname = `/category/${key}`;
+      return NextResponse.rewrite(url);
+    }
+  }
+
+  if (!isDashboardPath(pathname)) {
+    return NextResponse.next();
+  }
+
+  const { supabase, response } = createMiddlewareClient(req);
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user && req.nextUrl.pathname.startsWith('/dashboard')) {
-    // Auth condition not met, redirect to login page
+  if (!user) {
     const redirectUrl = req.nextUrl.clone();
     redirectUrl.pathname = '/login';
-    redirectUrl.searchParams.set('redirectedFrom', req.nextUrl.pathname);
+    redirectUrl.searchParams.set('redirectedFrom', pathname);
     return NextResponse.redirect(redirectUrl);
-  }
-
-  for (const [key, value] of Object.entries(categories)) {
-    // if category is active, rewrite the URL pathname
-    if (value.is_active) {
-      if (req.nextUrl.pathname === `/${key}`) {
-        const url = req.nextUrl.clone();
-        url.pathname = `/category/${key}`;
-
-        return NextResponse.rewrite(url);
-      }
-    }
   }
 
   return response;

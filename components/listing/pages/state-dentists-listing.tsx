@@ -1,0 +1,279 @@
+import React from 'react';
+
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+
+import { ArrowRightIcon } from 'lucide-react';
+
+import { siteConfig } from '@/config/site';
+
+import { getStateMetadataBySlugCached } from '@/lib/data';
+import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { absoluteUrl, getPagination } from '@/lib/utils';
+import { cn } from '@/lib/utils';
+
+import { getDoctorsByState } from '@/helpers/doctors';
+
+import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
+import { DoctorCard } from '@/components/cards/doctor-card';
+import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
+import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
+import Breadcrumb from '@/components/ui/breadcrumb';
+import Container from '@/components/ui/container';
+import { Pagination } from '@/components/ui/pagination';
+import Prose from '@/components/ui/prose';
+import { Wrapper } from '@/components/ui/wrapper';
+
+type StateDentistsListingProps = {
+  state: string;
+  currentPage: number;
+};
+
+export async function generateStateDentistsListingMetadata(
+  state: string,
+  currentPage: number,
+): Promise<Metadata> {
+  const stateData = await getStateMetadataBySlugCached(state);
+
+  if (!stateData) {
+    console.error(`[DentistsByStatePage] State not found: "${state}"`);
+    notFound();
+  }
+
+  const doctorsResult = await getDoctorsByState(state, 1, 0);
+  const totalDoctors = doctorsResult.count || 0;
+
+  const title = `Top ${totalDoctors} Dentists in ${stateData.name}`;
+  const description = `Discover ${totalDoctors} dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you. Information includes clinic locations and contact details.`;
+  const url = absoluteUrl(listingCanonicalPath(`/${state}/dentists`, currentPage));
+
+  // Build the OG image URL
+  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
+  ogImageUrl.searchParams.set('title', title);
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: ogImageUrl,
+          width: siteConfig.openGraph.width,
+          height: siteConfig.openGraph.height,
+          alt: title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      title,
+      description,
+      card: 'summary_large_image',
+      creator: siteConfig.creator,
+      images: [
+        {
+          url: ogImageUrl,
+          width: siteConfig.openGraph.width,
+          height: siteConfig.openGraph.height,
+          alt: title,
+        },
+      ],
+    },
+  };
+}
+
+export async function StateDentistsListing({ state, currentPage }: StateDentistsListingProps) {
+  const limit = 20;
+  const { from } = getPagination(currentPage, limit);
+
+  // Fetch state metadata and doctors data in parallel
+  const [stateData, doctorsResult] = await Promise.all([
+    getStateMetadataBySlugCached(state),
+    getDoctorsByState(state, limit, from),
+  ]);
+
+  if (!stateData) {
+    console.error(`[DentistsByStatePage] State not found at runtime: "${state}"`);
+    notFound();
+  }
+
+  const doctors = doctorsResult.data;
+  const totalDoctors = doctorsResult.count || 0;
+  const totalPages = Math.ceil(totalDoctors / limit);
+
+  if (currentPage > totalPages && totalPages > 0) {
+    notFound();
+  }
+
+  const featuredDoctors = doctors.filter((doctor) => doctor.is_featured);
+
+  const breadcrumbItems = [
+    {
+      name: 'Dentists',
+      url: '/dentists',
+    },
+    {
+      name: stateData.name,
+    },
+  ];
+
+  const JSONLDbreadcrumbs = [
+    {
+      item: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      name: 'Home',
+      position: '1',
+    },
+    {
+      item: `${process.env.NEXT_PUBLIC_BASE_URL}/dentists`,
+      name: 'Dentists',
+      position: '2',
+    },
+    {
+      item: absoluteUrl(`/${state}/dentists`),
+      name: stateData.name,
+      position: '3',
+    },
+  ];
+
+  // TODO: add JSON-LD list items for dentists
+  const JSONLDlistItems = doctors?.map((doctor, index) => ({
+    '@type': 'ListItem',
+    name: doctor.name,
+    url: absoluteUrl(`/dentist/${doctor.slug}`),
+    position: `${from + index + 1}`,
+  }));
+
+  const addListItemsJsonLd = () => {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Dentists in ${stateData.name}",
+        "description": "Discover dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you.",
+        "itemListElement": ${JSON.stringify(JSONLDlistItems)}
+      }`,
+    };
+  };
+
+  const title = `Dentists in ${stateData.name}`;
+  const description = `Discover ${totalDoctors} dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you. Information includes clinic locations and contact details.`;
+
+  return (
+    <>
+      <WebPageJsonLd
+        description={description}
+        id={`/${state}/dentists`}
+        reviewedBy={process.env.NEXT_PUBLIC_SCHEMA_REVIEWER}
+      />
+      <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
+      <script
+        id="dentist-list-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={addListItemsJsonLd()}
+      />
+      <Wrapper>
+        <Container>
+          <div className="flex min-w-0 flex-1 flex-col gap-y-6 md:gap-y-12">
+            <Breadcrumb items={breadcrumbItems} />
+
+            <Prose>
+              <h1 className="text-balance font-display text-4xl font-black">{title}</h1>
+              <p className="text-balance text-lg font-medium text-gray-600 dark:text-gray-400">
+                Discover {totalDoctors} dentists in {stateData.name}. Browse by city or clinic to
+                find a dentist near you.
+              </p>
+            </Prose>
+
+            <div className="space-y-8">
+              {/* Featured Dentists */}
+              {featuredDoctors.length > 0 && (
+                <section>
+                  <h2 className="mb-6 font-display text-2xl font-semibold">
+                    Featured Dentists in {stateData.name}
+                  </h2>
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
+                    {featuredDoctors.slice(0, 6).map((doctor) => (
+                      <DoctorCard key={doctor.id} doctor={doctor} />
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* All Dentists */}
+              <section>
+                <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
+                  All Dentists in {stateData.name} ({totalDoctors})
+                </h2>
+                {doctors.length > 0 ? (
+                  <>
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                      {doctors.map((doctor, index) => (
+                        <React.Fragment key={doctor.id}>
+                          {index === 5 && (
+                            <div className="flex flex-col items-center justify-center gap-2 text-center">
+                              <a
+                                href="https://invl.me/clnlab2"
+                                className="hover:!border-b-transparent"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer">
+                                <Image
+                                  src="/images/total-image-2.jpg"
+                                  alt="Total Image"
+                                  width={600}
+                                  height={600}
+                                  priority
+                                  quality={85}
+                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  className="m-0 h-auto w-full object-cover"
+                                  style={{
+                                    objectPosition: 'center center',
+                                  }}
+                                />
+                              </a>
+                            </div>
+                          )}
+                          {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
+                          <DoctorCard doctor={doctor} />
+                        </React.Fragment>
+                      ))}
+                    </div>
+                    <Pagination currentPage={currentPage} totalPages={totalPages} />
+                  </>
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-y-4 py-12">
+                    <h3 className="text-balance font-display text-xl font-semibold">
+                      No dentists found in {stateData.name}
+                    </h3>
+                    <p className="text-balance text-gray-600 dark:text-gray-400">
+                      We couldn&apos;t find any dentists in {stateData.name} at the moment.
+                    </p>
+                    <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                      <Link
+                        href="/dentists"
+                        className={cn(
+                          'inline-flex items-center gap-x-2 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300',
+                        )}
+                        prefetch={false}>
+                        Browse all dentists
+                        <ArrowRightIcon className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </section>
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+    </>
+  );
+}
