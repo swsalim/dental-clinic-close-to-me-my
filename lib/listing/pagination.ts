@@ -1,3 +1,4 @@
+/** Two weeks. Page `export const revalidate` must be this numeric literal, not this import. */
 export const LISTING_REVALIDATE_SECONDS = 1_209_600;
 export const MAX_INDEXED_LISTING_PAGE = 3;
 

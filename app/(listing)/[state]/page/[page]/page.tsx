@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { LISTING_REVALIDATE_SECONDS, parsePageParam } from '@/lib/listing/pagination';
+import { parsePageParam } from '@/lib/listing/pagination';
 
 import {
   generateStateListingMetadata,
   StateListing,
 } from '@/components/listing/pages/state-listing';
 
-export const revalidate = LISTING_REVALIDATE_SECONDS;
+export const revalidate = 1_209_600;
 export const dynamicParams = true;
 
 type StatePaginatedPageProps = {

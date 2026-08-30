@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { LISTING_REVALIDATE_SECONDS, parsePageParam } from '@/lib/listing/pagination';
+import { parsePageParam } from '@/lib/listing/pagination';
 
 import {
   generateServiceListingMetadata,
   ServiceListing,
 } from '@/components/listing/pages/service-listing';
 
-export const revalidate = LISTING_REVALIDATE_SECONDS;
+export const revalidate = 1_209_600;
 export const dynamicParams = true;
 
 type ServicePaginatedPageProps = {

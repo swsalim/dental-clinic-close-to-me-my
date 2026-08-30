@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 
-import { LISTING_REVALIDATE_SECONDS } from '@/lib/listing/pagination';
-
 import { getStateListings } from '@/helpers/states';
 
 import {
@@ -9,7 +7,7 @@ import {
   StateDentistsListing,
 } from '@/components/listing/pages/state-dentists-listing';
 
-export const revalidate = LISTING_REVALIDATE_SECONDS;
+export const revalidate = 1_209_600;
 export const dynamic = 'force-static';
 export const dynamicParams = true;
 

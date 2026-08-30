@@ -1,12 +1,10 @@
 import { Metadata } from 'next';
 
-import { LISTING_REVALIDATE_SECONDS } from '@/lib/listing/pagination';
-
 import { getAreaListings } from '@/helpers/areas';
 
 import { AreaListing, generateAreaListingMetadata } from '@/components/listing/pages/area-listing';
 
-export const revalidate = LISTING_REVALIDATE_SECONDS;
+export const revalidate = 1_209_600;
 export const dynamic = 'force-static';
 export const dynamicParams = true;
 
