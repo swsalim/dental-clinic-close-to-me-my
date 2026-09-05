@@ -28,7 +28,7 @@ export const DASHBOARD_CLINIC_SELECT = `
   name,
   slug,
   website,
-  images:clinic_images(image_url, imagekit_file_id),
+  images:clinic_images(id, r2_url, r2_key, image_url, display_order),
   area:area_id(name, slug),
   state:state_id(name, slug),
   is_active,

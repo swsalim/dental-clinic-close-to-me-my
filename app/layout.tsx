@@ -83,6 +83,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="" />
         <link rel="preconnect" href="https://app.tinyadz.com" />
+        <link rel="preconnect" href="https://media.dentalclinicclosetome.my" />
+        <link rel="dns-prefetch" href="https://media.dentalclinicclosetome.my" />
         <link rel="preconnect" href="//ik.imagekit.io" />
         <link rel="dns-prefetch" href="//ik.imagekit.io" />
         <link rel="dns-prefetch" href="//www.google.com" />

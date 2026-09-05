@@ -16,6 +16,7 @@ import {
 import { siteConfig } from '@/config/site';
 
 import { getClinicBySlugCached } from '@/lib/data';
+import { resolveMediaUrl } from '@/lib/media';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getClinicListings } from '@/helpers/clinics';
@@ -26,7 +27,6 @@ import { ClinicStatus } from '@/components/clinic-status';
 import AddReviewForm from '@/components/forms/add-review-form';
 import TikTok from '@/components/icons/tiktok';
 import { ImageGallery } from '@/components/image/image-gallery';
-import { ImageKit } from '@/components/image/image-kit';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import { ClinicSidebar } from '@/components/listing/clinic-sidebar';
 import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
@@ -311,7 +311,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
       {parsedClinic.images && parsedClinic.images.length > 0 && parsedClinic.images[0] && (
         <Wrapper
           style={{
-            backgroundImage: `url('${(parsedClinic.images[0] as unknown as ClinicImage).image_url}')`,
+            backgroundImage: `url('${resolveMediaUrl(parsedClinic.images[0] as ClinicImage) ?? ''}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',

@@ -24,6 +24,8 @@ export type Database = {
           imagekit_file_id: string | null
           modified_at: string | null
           name: string
+          r2_key: string | null
+          r2_url: string | null
           short_description: string | null
           slug: string
           state_id: string | null
@@ -38,6 +40,8 @@ export type Database = {
           imagekit_file_id?: string | null
           modified_at?: string | null
           name: string
+          r2_key?: string | null
+          r2_url?: string | null
           short_description?: string | null
           slug: string
           state_id?: string | null
@@ -52,6 +56,8 @@ export type Database = {
           imagekit_file_id?: string | null
           modified_at?: string | null
           name?: string
+          r2_key?: string | null
+          r2_url?: string | null
           short_description?: string | null
           slug?: string
           state_id?: string | null
@@ -120,30 +126,36 @@ export type Database = {
           display_order: number
           doctor_id: string
           id: string
-          image_url: string
-          imagekit_file_id: string
+          image_url: string | null
+          imagekit_file_id: string | null
           modified_at: string
           original_cloudinary_url: string | null
+          r2_key: string | null
+          r2_url: string | null
         }
         Insert: {
           created_at?: string
           display_order?: number
           doctor_id: string
           id?: string
-          image_url: string
-          imagekit_file_id: string
+          image_url?: string | null
+          imagekit_file_id?: string | null
           modified_at?: string
           original_cloudinary_url?: string | null
+          r2_key?: string | null
+          r2_url?: string | null
         }
         Update: {
           created_at?: string
           display_order?: number
           doctor_id?: string
           id?: string
-          image_url?: string
-          imagekit_file_id?: string
+          image_url?: string | null
+          imagekit_file_id?: string | null
           modified_at?: string
           original_cloudinary_url?: string | null
+          r2_key?: string | null
+          r2_url?: string | null
         }
         Relationships: [
           {
@@ -334,30 +346,36 @@ export type Database = {
           created_at: string
           display_order: number
           id: string
-          image_url: string
-          imagekit_file_id: string
+          image_url: string | null
+          imagekit_file_id: string | null
           modified_at: string
           original_cloudinary_url: string | null
+          r2_key: string | null
+          r2_url: string | null
         }
         Insert: {
           clinic_id: string
           created_at?: string
           display_order?: number
           id?: string
-          image_url: string
-          imagekit_file_id: string
+          image_url?: string | null
+          imagekit_file_id?: string | null
           modified_at?: string
           original_cloudinary_url?: string | null
+          r2_key?: string | null
+          r2_url?: string | null
         }
         Update: {
           clinic_id?: string
           created_at?: string
           display_order?: number
           id?: string
-          image_url?: string
-          imagekit_file_id?: string
+          image_url?: string | null
+          imagekit_file_id?: string | null
           modified_at?: string
           original_cloudinary_url?: string | null
+          r2_key?: string | null
+          r2_url?: string | null
         }
         Relationships: [
           {
@@ -779,6 +797,8 @@ export type Database = {
           imagekit_file_id: string | null
           modified_at: string | null
           name: string
+          r2_key: string | null
+          r2_url: string | null
           short_description: string | null
           slug: string
           thumbnail_image: string | null
@@ -792,6 +812,8 @@ export type Database = {
           imagekit_file_id?: string | null
           modified_at?: string | null
           name: string
+          r2_key?: string | null
+          r2_url?: string | null
           short_description?: string | null
           slug: string
           thumbnail_image?: string | null
@@ -805,6 +827,8 @@ export type Database = {
           imagekit_file_id?: string | null
           modified_at?: string | null
           name?: string
+          r2_key?: string | null
+          r2_url?: string | null
           short_description?: string | null
           slug?: string
           thumbnail_image?: string | null

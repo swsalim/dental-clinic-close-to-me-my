@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { ClinicImage } from '@/types/clinic';
 import { ArrowRightIcon, PersonStandingIcon } from 'lucide-react';
 
+import { resolveMediaUrl } from '@/lib/media';
+import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
 import { getDoctors } from '@/helpers/doctors';
@@ -15,7 +17,7 @@ import { getHomeDirectoryStats } from '@/components/listing/home-stats';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 
-import { ImageKit } from './image/image-kit';
+import { MediaImage } from './image/media-image';
 
 function formatStat(value: number) {
   return value.toLocaleString('en-MY');
@@ -95,20 +97,23 @@ export async function Hero() {
             aria-label="Directory snapshot">
             {doctorsData.length > 0 ? (
               <div className="mb-6 grid min-w-0 grid-cols-3 gap-2 sm:max-w-none sm:grid-cols-3 lg:max-w-none">
-                {doctorsData.map((doctor) => (
+                {doctorsData.map((doctor) => {
+                  const doctorImageSrc = resolveMediaUrl(doctor.images?.[0] as ClinicImage | undefined);
+
+                  return (
                   <Link
                     key={doctor.id}
                     href={`/dentist/${doctor.slug}`}
                     prefetch={false}
                     className="group relative aspect-square min-w-0 overflow-hidden rounded-lg ring-1 ring-gray-200 transition hover:ring-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:ring-gray-700 dark:hover:ring-blue-500 dark:focus-visible:ring-offset-gray-900">
-                    {doctor.images?.[0] ? (
-                      <ImageKit
-                        src={(doctor.images[0] as unknown as ClinicImage).image_url}
+                    {doctorImageSrc ? (
+                      <MediaImage
+                        src={doctorImageSrc}
                         alt=""
-                        width={120}
-                        height={120}
+                        width={MEDIA.avatar.width}
+                        height={MEDIA.avatar.height}
+                        sizes={MEDIA.avatar.sizes}
                         priority
-                        sizes="(max-width: 1024px) 33vw, 120px"
                         className="size-full object-cover transition duration-150 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                       />
                     ) : (
@@ -120,7 +125,8 @@ export async function Hero() {
                       </span>
                     )}
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             ) : null}
 

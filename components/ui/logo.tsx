@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
-import { ImageKit } from '@/components/image/image-kit';
+import { MediaImage } from '@/components/image/media-image';
 
 const Logo: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   return (
@@ -15,12 +16,12 @@ const Logo: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...pr
         )}
         aria-hidden="true"
         {...props}>
-        <ImageKit
-          src="dental-clinics-my-v2.png"
-          directory="logos"
+        <MediaImage
+          src="https://ik.imagekit.io/yuurrific/dental-clinics-my/logos/dental-clinics-my-v2.png"
           alt="Dental Clinics Malaysia"
-          width={40}
-          height={40}
+          width={MEDIA.avatar.width}
+          height={MEDIA.avatar.height}
+          sizes={MEDIA.avatar.sizes}
           className="h-full w-auto object-contain"
           priority
         />
