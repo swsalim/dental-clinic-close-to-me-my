@@ -12,6 +12,7 @@ import { siteConfig } from '@/config/site';
 
 import { getAllServicesCached } from '@/lib/data';
 import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { MEDIA } from '@/lib/media-sizes';
 import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
 
@@ -19,8 +20,7 @@ import { getClinicByServiceId } from '@/helpers/clinics';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
-import { ImageCloudinary } from '@/components/image/image-cloudinary';
-import { ImageKit } from '@/components/image/image-kit';
+import { MediaImage } from '@/components/image/media-image';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import WebPageJsonLd from '@/components/structured-data/web-page-json-ld';
 import { buttonVariants } from '@/components/ui/button';
@@ -243,7 +243,7 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                           area={clinic.area?.name ?? ''}
                           image={
                             clinic.images?.[0]
-                              ? (clinic.images[0] as unknown as ClinicImage).image_url
+                              ? (clinic.images[0] as ClinicImage)
                               : undefined
                           }
                           rating={clinic.rating}
@@ -262,11 +262,12 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
             <div className="flex flex-col items-center justify-center gap-y-4">
               <div className="flex flex-col items-center justify-center">
                 <div className="relative size-64 md:size-96">
-                  <ImageCloudinary
-                    src="lost-boy.png"
+                  <MediaImage
+                    src="https://ik.imagekit.io/yuurrific/dental-clinics-my/lost-boy.png"
                     alt="No dental clinics found"
-                    width={500}
-                    height={500}
+                    width={MEDIA.gallery.width}
+                    height={MEDIA.gallery.height}
+                    sizes={MEDIA.gallery.sizes}
                     className="h-full w-full object-cover"
                   />
                 </div>

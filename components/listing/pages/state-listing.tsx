@@ -12,13 +12,15 @@ import { siteConfig } from '@/config/site';
 
 import { getStateAreasWithClinicsCached, getStateBySlugCached } from '@/lib/data';
 import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import { resolveMediaUrl } from '@/lib/media';
+import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getDoctorsByState } from '@/helpers/doctors';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
-import { ImageKit } from '@/components/image/image-kit';
+import { MediaImage } from '@/components/image/media-image';
 import {
   getFeaturedListingCardPlaceholder,
   getFeaturedPartnerCardPlaceholder,
@@ -154,6 +156,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
     },
   ];
 
+  const stateBackgroundSrc = resolveMediaUrl(stateData);
+
   return (
     <>
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
@@ -165,15 +169,14 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
       />
       <Wrapper className="relative overflow-hidden">
         {/* Optimized background image using Next.js Image */}
-        {stateData.image && (
-          <ImageKit
-            src={stateData.image}
+        {stateBackgroundSrc && (
+          <MediaImage
+            src={stateBackgroundSrc}
             alt={`${stateData.name} aesthetic clinics background`}
-            width={1920}
-            height={600}
+            width={MEDIA.hero.width}
+            height={MEDIA.hero.height}
             priority
-            quality={85}
-            sizes="100vw"
+            sizes={MEDIA.hero.sizes}
             className="absolute inset-0 h-full w-full object-cover"
             style={{
               objectPosition: 'center center',
@@ -242,14 +245,13 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                         href={`/dentist/${doctor.slug}`}
                         className="relative size-16 overflow-hidden rounded-full outline -outline-offset-1 outline-blue-200 ring-2 ring-blue-300"
                         key={`${doctor.id}-${index}`}>
-                        {doctor.images?.[0] && (
-                          <ImageKit
-                            src={doctor.images?.[0].image_url}
+                        {resolveMediaUrl(doctor.images?.[0]) && (
+                          <MediaImage
+                            src={resolveMediaUrl(doctor.images?.[0]) ?? ''}
                             alt={`Photo of ${doctor.name}`}
-                            width={100}
-                            height={100}
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            quality={85}
+                            width={MEDIA.avatar.width}
+                            height={MEDIA.avatar.height}
+                            sizes={MEDIA.avatar.sizes}
                             priority
                             className="h-full w-full object-cover"
                           />
@@ -339,11 +341,7 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                             postalCode={clinic.postal_code ?? ''}
                             state={clinic.state?.name ?? ''}
                             area={clinic.area?.name ?? ''}
-                            image={
-                              clinic.images?.[0]
-                                ? (clinic.images[0] as unknown as ClinicImage).image_url
-                                : undefined
-                            }
+                            image={clinic.images?.[0] as ClinicImage | undefined}
                             rating={clinic.rating}
                             isFeatured={clinic.is_featured ?? false}
                             hours={clinic.hours ?? []}
@@ -360,11 +358,12 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
               <div className="flex flex-col items-center justify-center gap-y-4">
                 <div className="flex flex-col items-center justify-center">
                   <div className="relative size-64 md:size-96">
-                    <ImageKit
-                      src="lost-boy.png"
+                    <MediaImage
+                      src="https://ik.imagekit.io/yuurrific/dental-clinics-my/lost-boy.png"
                       alt="No dental clinics found"
-                      width={500}
-                      height={500}
+                      width={MEDIA.gallery.width}
+                      height={MEDIA.gallery.height}
+                      sizes={MEDIA.gallery.sizes}
                       className="h-full w-full object-cover"
                     />
                   </div>

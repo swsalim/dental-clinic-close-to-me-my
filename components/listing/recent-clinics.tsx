@@ -26,7 +26,7 @@ const getRecentClinics = unstable_cache(
         phone,
         postal_code,
         rating,
-        images:clinic_images(image_url, imagekit_file_id),
+        images:clinic_images(id, r2_url, r2_key, image_url, display_order),
         is_permanently_closed,
         open_on_public_holidays,
         is_featured,
@@ -87,11 +87,7 @@ export async function RecentClinics() {
                     postalCode={clinic.postal_code || ''}
                     state={clinic.state?.name || ''}
                     area={clinic.area?.name || ''}
-                    image={
-                      clinic.images?.[0]
-                        ? (clinic.images[0] as unknown as ClinicImage).image_url
-                        : undefined
-                    }
+                    image={clinic.images?.[0] as ClinicImage | undefined}
                     rating={clinic.rating}
                     hours={clinic.hours || []}
                     specialHours={clinic.special_hours || []}

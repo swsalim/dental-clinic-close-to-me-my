@@ -11,6 +11,7 @@ export interface StateData {
   name: string;
   slug: string;
   image: string | null;
+  r2_url?: string | null;
   areas: Partial<ClinicArea>[];
   clinics: Partial<Clinic>[];
   total_clinics?: number;

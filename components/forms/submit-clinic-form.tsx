@@ -16,8 +16,8 @@ import {
 } from '@/lib/clinic-images';
 import { defaultBusinessHours } from '@/lib/listing/business-hours';
 import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
+import { uploadFileToR2 } from '@/lib/upload-r2-client';
 import type { PlaceLookupResult } from '@/services/google-maps.service';
-import { generateUniqueFilename } from '@/lib/utils';
 
 import { ClinicImageGallery } from '@/components/dashboard/clinic-image-gallery';
 import { BusinessHoursFields } from '@/components/forms/business-hours-fields';
@@ -185,9 +185,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
     }
   };
 
-  const uploadImageToImageKit = async (
-    imageFile: File,
-  ): Promise<{ url: string; fileId: string } | null> => {
+  const uploadImageToR2 = async (imageFile: File): Promise<{ url: string; key: string } | null> => {
     try {
       const maxSize = 2 * 1024 * 1024;
       if (imageFile.size > maxSize) {
@@ -198,32 +196,11 @@ export default function SubmitClinicForm({ states, areas }: Props) {
         throw new Error('Please select a valid image file');
       }
 
-      const formData = new FormData();
-      formData.append('file', imageFile);
-      formData.append('folder', 'dental-clinics-my/places');
-      formData.append('fileName', generateUniqueFilename(imageFile.name));
-
-      const response = await fetch('/api/upload-imagekit', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.message || `Upload failed with status: ${response.status}`);
+      const result = await uploadFileToR2(imageFile, 'places');
+      if (!result) {
+        throw new Error('Failed to upload image');
       }
-
-      const data = await response.json();
-
-      if (data.success && data.imagekit_file_id) {
-        return {
-          url:
-            data.url ||
-            `https://ik.imagekit.io/yuurrific/dental-clinics-my/places/${data.imagekit_file_id}`,
-          fileId: data.imagekit_file_id,
-        };
-      }
-      throw new Error('Invalid response from image upload');
+      return result;
     } catch (error) {
       console.error('Image upload error:', error);
       toast({
@@ -360,7 +337,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
       description: 'Please wait while we process your submission.',
     });
     try {
-      const newImages = await uploadOrderedNewImages(orderedImages, uploadImageToImageKit);
+      const newImages = await uploadOrderedNewImages(orderedImages, uploadImageToR2);
 
       const finalData = {
         ...formData,

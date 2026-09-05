@@ -5,12 +5,14 @@ import pluralize from 'pluralize';
 
 import { ArrowRightIcon } from 'lucide-react';
 
+import { resolveMediaUrl } from '@/lib/media';
+import { MEDIA } from '@/lib/media-sizes';
 import { createAdminClient } from '@/lib/supabase';
 
 import Container from '@/components/ui/container';
 import { Wrapper } from '@/components/ui/wrapper';
 
-import { ImageKit } from '../image/image-kit';
+import { MediaImage } from '../image/media-image';
 
 /* Hallmark · component: state-card-grid · genre: editorial · theme: site-native
  * states: default · hover · focus · active · disabled · loading · error · success
@@ -22,6 +24,7 @@ type PopularState = {
   name: string;
   slug: string;
   image: string | null;
+  r2_url: string | null;
   clinicCount: number;
 };
 
@@ -31,7 +34,7 @@ const getPopularStates = unstable_cache(
 
     const { data: statesData, error: statesError } = await supabase
       .from('states')
-      .select('id, name, slug, image, clinics(count)')
+      .select('id, name, slug, image, r2_url, clinics(count)')
       .eq('clinics.status', 'approved')
       .eq('clinics.is_active', true);
 
@@ -46,6 +49,7 @@ const getPopularStates = unstable_cache(
         name: state.name,
         slug: state.slug,
         image: state.image,
+        r2_url: state.r2_url,
         clinicCount: state.clinics?.[0]?.count ?? 0,
       }))
       .filter((state) => state.clinicCount > 0)
@@ -92,35 +96,41 @@ export async function ExploreStates() {
         </div>
 
         <ul className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {states.map((state) => (
-            <li key={state.id} className="min-w-0">
-              <Link
-                href={`/${state.slug}`}
-                prefetch={false}
-                className="group block min-w-0 overflow-hidden rounded-xl border border-gray-200 bg-white no-underline transition hover:border-blue-200 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-blue-700">
-                <div className="relative aspect-[16/9] overflow-hidden">
-                  <ImageKit
-                    src={state.image || 'placeholder-location.jpg'}
-                    alt={state.name}
-                    width={480}
-                    height={270}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/85 via-gray-900/25 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="font-display truncate text-base font-bold capitalize text-white md:text-lg">
-                      {state.name}
-                    </h3>
-                    <p className="mt-0.5 text-sm font-medium text-gray-200">
-                      {formatCount(state.clinicCount)}{' '}
-                      {pluralize('clinic', state.clinicCount)}
-                    </p>
+          {states.map((state) => {
+            const imageSrc =
+              resolveMediaUrl(state) ??
+              'https://ik.imagekit.io/yuurrific/dental-clinics-my/placeholder-location.jpg';
+
+            return (
+              <li key={state.id} className="min-w-0">
+                <Link
+                  href={`/${state.slug}`}
+                  prefetch={false}
+                  className="group block min-w-0 overflow-hidden rounded-xl border border-gray-200 bg-white no-underline transition hover:border-blue-200 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-gray-700 dark:bg-gray-900/40 dark:hover:border-blue-700">
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <MediaImage
+                      src={imageSrc}
+                      alt={state.name}
+                      width={MEDIA.landscapeMd.width}
+                      height={MEDIA.landscapeMd.height}
+                      sizes={MEDIA.landscapeMd.sizes}
+                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/85 via-gray-900/25 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="font-display truncate text-base font-bold capitalize text-white md:text-lg">
+                        {state.name}
+                      </h3>
+                      <p className="mt-0.5 text-sm font-medium text-gray-200">
+                        {formatCount(state.clinicCount)}{' '}
+                        {pluralize('clinic', state.clinicCount)}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </li>
-          ))}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </Container>
     </Wrapper>
