@@ -1,8 +1,10 @@
+import { unstable_cache } from 'next/cache';
+
 import { createAdminClient } from '@/lib/supabase';
 
 import * as Icons from '@/components/icons';
 
-export async function getAllServices() {
+async function fetchAllServices() {
   const supabase = createAdminClient();
 
   const { data: services } = await supabase
@@ -19,6 +21,14 @@ export async function getAllServices() {
     .order('modified_at', { ascending: false });
 
   return services ?? [];
+}
+
+/** Cross-request cached service catalog (2 weeks). */
+export async function getAllServices() {
+  return unstable_cache(fetchAllServices, ['all-services'], {
+    revalidate: 1_209_600,
+    tags: ['services'],
+  })();
 }
 
 const slugToIcon: Record<string, React.ReactNode> = {

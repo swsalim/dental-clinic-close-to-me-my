@@ -1,7 +1,3 @@
-'use client';
-
-import { memo } from 'react';
-
 import { StarIcon } from 'lucide-react';
 
 interface PartialStarProps {
@@ -28,7 +24,7 @@ interface StarRatingProps {
   className?: string;
 }
 
-export const StarRating = memo(function StarRating({
+export function StarRating({
   rating = 0,
   showValue = true,
   className = '',
@@ -50,11 +46,11 @@ export const StarRating = memo(function StarRating({
           return <StarIcon key={star} className="h-5 w-5 fill-gray-200 stroke-gray-200" />;
         })}
       </div>
-      {showValue && (
+      {showValue ? (
         <span className="ml-1 text-sm font-semibold text-gray-500 dark:text-gray-300">
           ({ratingValue.toFixed(1)})
         </span>
-      )}
+      ) : null}
     </div>
   );
-});
+}

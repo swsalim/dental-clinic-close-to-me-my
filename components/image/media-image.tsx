@@ -35,10 +35,16 @@ export function MediaImage({
   directory = null,
   width = MEDIA.gallery.width,
   height = MEDIA.gallery.height,
+  fill,
   ...props
 }: MediaImageProps) {
   const imageSrc = resolveSrc(src, directory);
   const useImageKit = isImageKitSrc(imageSrc);
+  const loaderProps = useImageKit ? { loader: imageKitLoader } : {};
+
+  if (fill) {
+    return <Image src={imageSrc} alt={alt} fill {...props} {...loaderProps} />;
+  }
 
   return (
     <Image
@@ -47,7 +53,7 @@ export function MediaImage({
       width={width}
       height={height}
       {...props}
-      {...(useImageKit ? { loader: imageKitLoader } : {})}
+      {...loaderProps}
     />
   );
 }

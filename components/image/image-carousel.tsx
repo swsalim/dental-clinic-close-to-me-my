@@ -34,9 +34,9 @@ function ImageSlide({ image, title, index }: { image: string; title: string; ind
         src={image}
         alt={`Photo ${index + 1} for ${title}`}
         priority={index === 0}
-        width={MEDIA.gallery.width}
-        height={MEDIA.gallery.height}
-        sizes={MEDIA.gallery.sizes}
+        width={MEDIA.carousel.width}
+        height={MEDIA.carousel.height}
+        sizes={MEDIA.carousel.sizes}
         className="h-full w-full transform bg-gray-100 dark:bg-gray-800 object-cover object-center"
       />
     </div>

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import nextDynamic from 'next/dynamic';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -16,6 +17,7 @@ import {
 import { siteConfig } from '@/config/site';
 
 import { getClinicBySlugCached } from '@/lib/data';
+import { MEDIA } from '@/lib/media-sizes';
 import { resolveMediaUrl } from '@/lib/media';
 import { absoluteUrl } from '@/lib/utils';
 
@@ -24,9 +26,8 @@ import { getServiceIcon } from '@/helpers/services';
 
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { ClinicStatus } from '@/components/clinic-status';
-import AddReviewForm from '@/components/forms/add-review-form';
 import TikTok from '@/components/icons/tiktok';
-import { ImageGallery } from '@/components/image/image-gallery';
+import { MediaImage } from '@/components/image/media-image';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import { ClinicSidebar } from '@/components/listing/clinic-sidebar';
 import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
@@ -45,6 +46,15 @@ import Prose from '@/components/ui/prose';
 import { StarRating } from '@/components/ui/star-rating';
 import { TruncatedHtml } from '@/components/ui/truncated-html';
 import { Wrapper } from '@/components/ui/wrapper';
+
+export const revalidate = 1_209_600;
+export const dynamic = 'force-static';
+export const dynamicParams = true;
+
+const AddReviewForm = nextDynamic(() => import('@/components/forms/add-review-form'));
+const ImageGallery = nextDynamic(() =>
+  import('@/components/image/image-gallery').then((m) => m.ImageGallery),
+);
 
 type ClinicPageProps = {
   params: Promise<{
@@ -309,15 +319,16 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
         reviews={parsedClinic.reviews?.slice(0, 5) ?? []}
       />
       {parsedClinic.images && parsedClinic.images.length > 0 && parsedClinic.images[0] && (
-        <Wrapper
-          style={{
-            backgroundImage: `url('${resolveMediaUrl(parsedClinic.images[0] as ClinicImage) ?? ''}')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
-            backgroundRepeat: 'no-repeat',
-            position: 'relative',
-          }}
-          className="h-56 md:h-96"></Wrapper>
+        <Wrapper className="relative h-56 overflow-hidden md:h-96">
+          <MediaImage
+            src={resolveMediaUrl(parsedClinic.images[0] as ClinicImage) ?? ''}
+            alt={parsedClinic.name}
+            fill
+            priority
+            sizes={MEDIA.hero.sizes}
+            className="object-cover object-center"
+          />
+        </Wrapper>
       )}
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
       <Wrapper className="pb-0 md:pb-0">

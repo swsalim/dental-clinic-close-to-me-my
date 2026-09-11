@@ -11,6 +11,7 @@ import { siteConfig } from '@/config/site';
 
 import { getStateMetadataBySlugCached } from '@/lib/data';
 import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, getPagination } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 
@@ -35,14 +36,16 @@ export async function generateStateDentistsListingMetadata(
   state: string,
   currentPage: number,
 ): Promise<Metadata> {
-  const stateData = await getStateMetadataBySlugCached(state);
+  const [stateData, doctorsResult] = await Promise.all([
+    getStateMetadataBySlugCached(state),
+    getDoctorsByState(state, 1, 0),
+  ]);
 
   if (!stateData) {
     console.error(`[DentistsByStatePage] State not found: "${state}"`);
     notFound();
   }
 
-  const doctorsResult = await getDoctorsByState(state, 1, 0);
   const totalDoctors = doctorsResult.count || 0;
 
   const title = `Top ${totalDoctors} Dentists in ${stateData.name}`;
@@ -228,11 +231,11 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
                                 <Image
                                   src="/images/total-image-2.jpg"
                                   alt="Total Image"
-                                  width={600}
-                                  height={600}
+                                  width={MEDIA.adGrid.width}
+                                  height={MEDIA.adGrid.height}
                                   priority
                                   quality={85}
-                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  sizes={MEDIA.adGrid.sizes}
                                   className="m-0 h-auto w-full object-cover"
                                   style={{
                                     objectPosition: 'center center',

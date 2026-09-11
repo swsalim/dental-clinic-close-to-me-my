@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google';
+import Script from 'next/script';
 
 import { siteConfig } from '@/config/site';
 
@@ -80,25 +81,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="" />
-        <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossOrigin="" />
-        <link rel="preconnect" href="https://app.tinyadz.com" />
         <link rel="preconnect" href="https://media.dentalclinicclosetome.my" />
         <link rel="dns-prefetch" href="https://media.dentalclinicclosetome.my" />
         <link rel="preconnect" href="//ik.imagekit.io" />
         <link rel="dns-prefetch" href="//ik.imagekit.io" />
-        <link rel="dns-prefetch" href="//www.google.com" />
-        <link rel="dns-prefetch" href="//www.gstatic.com" />
-        <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net" />
-        <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="oV+XGa0KW37ngKhI81Btzg"
-          async></script>
-        <script
-          src="https://stats.dentalclinicclosetome.my/ennui.js"
-          data-api-host="https://stats.dentalclinicclosetome.my"
-          data-token="1b7852c8a82b878"
-          async></script>
       </head>
       <body
         className={cn(
@@ -110,14 +96,29 @@ export default function RootLayout({
         <WebsiteJsonLd company="Dental Clinics Malaysia" url={absoluteUrl('/')} />
         {children}
         <Toaster />
-        <script
+        {/* Defer non-critical third-party scripts after hydration (bundle-defer-third-party) */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="oV+XGa0KW37ngKhI81Btzg"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://stats.dentalclinicclosetome.my/ennui.js"
+          data-api-host="https://stats.dentalclinicclosetome.my"
+          data-token="1b7852c8a82b878"
+          strategy="afterInteractive"
+        />
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3799479098488751"
-          crossOrigin="anonymous"></script>
-        <script
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+        />
+        <Script
           src="https://cdn.apitiny.net/scripts/v2.0/main.js"
           data-site-id="6835de6cc1d791d83e38d6d1"
-          async></script>
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

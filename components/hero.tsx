@@ -110,9 +110,9 @@ export async function Hero() {
                       <MediaImage
                         src={doctorImageSrc}
                         alt=""
-                        width={MEDIA.avatar.width}
-                        height={MEDIA.avatar.height}
-                        sizes={MEDIA.avatar.sizes}
+                        width={MEDIA.heroChip.width}
+                        height={MEDIA.heroChip.height}
+                        sizes={MEDIA.heroChip.sizes}
                         priority
                         className="size-full object-cover transition duration-150 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                       />

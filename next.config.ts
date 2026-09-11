@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'date-fns'],
   },
   async headers() {
     return [
@@ -63,6 +63,27 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     ];
+  },
+  async rewrites() {
+    // Formerly middleware category rewrites — static config avoids Edge Middleware cost.
+    const categories = [
+      '24-hour-clinic',
+      'general-practitioner',
+      'accident-and-emergency',
+      'hospital',
+      'paediatric',
+      'aesthetic',
+      'dental',
+      'womens-health-clinic',
+      'chinese-physician',
+      'chiropractic',
+      'physiotherapy',
+      'psychotherapy',
+    ];
+    return categories.map((slug) => ({
+      source: `/${slug}`,
+      destination: `/category/${slug}`,
+    }));
   },
 };
 

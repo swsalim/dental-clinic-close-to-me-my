@@ -119,17 +119,18 @@ export function ClinicImageGallery({
                   <Image
                     src={URL.createObjectURL(entry.file)}
                     alt={`New image ${index + 1}`}
-                    width={MEDIA.gallery.width}
-                    height={MEDIA.gallery.height}
+                    width={MEDIA.card.width}
+                    height={MEDIA.card.height}
+                    sizes={MEDIA.card.sizes}
                     className="object-cover"
                   />
                 ) : (
                   <MediaImage
                     src={resolveMediaUrl(entry) ?? ''}
                     alt={`Clinic image ${index + 1}`}
-                    width={MEDIA.gallery.width}
-                    height={MEDIA.gallery.height}
-                    sizes={MEDIA.gallery.sizes}
+                    width={MEDIA.card.width}
+                    height={MEDIA.card.height}
+                    sizes={MEDIA.card.sizes}
                     className="object-cover"
                   />
                 )}

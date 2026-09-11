@@ -1,22 +1,18 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-import { categoryList as categories } from '@/config/routes';
-
 import { parsePageParam } from '@/lib/listing/pagination';
 import { createMiddlewareClient } from '@/lib/supabase';
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * Feel free to modify this pattern to include more paths.
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    // Auth for dashboard only
+    '/dashboard',
+    '/dashboard/:path*',
+    // Markdown LLM rewrites
+    '/:path*.md',
+    // Legacy ?page= and /page/1 redirects (listing URLs)
+    '/((?!api|_next/static|_next/image|favicon.ico|dashboard|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
 
@@ -85,15 +81,10 @@ export async function middleware(req: NextRequest): Promise<NextResponse> {
     return pageOneRedirect;
   }
 
-  for (const [key, value] of Object.entries(categories)) {
-    if (value.is_active && pathname === `/${key}`) {
-      const url = req.nextUrl.clone();
-      url.pathname = `/category/${key}`;
-      return NextResponse.rewrite(url);
-    }
-  }
+  // Category rewrites live in next.config.ts (avoid middleware on every hit).
 
   if (!isDashboardPath(pathname)) {
+    // Fast path for public listing URLs that only needed redirect checks above
     return NextResponse.next();
   }
 

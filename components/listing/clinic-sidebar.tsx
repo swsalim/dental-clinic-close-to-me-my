@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ClinicService } from '@/types/clinic';
 import { MapPinIcon } from 'lucide-react';
 
+import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
 import { getServiceIcon } from '@/helpers/services';
@@ -93,11 +94,11 @@ export function ClinicSidebar({
           <Image
             src="/images/total-image-2.jpg"
             alt="Total Image"
-            width={600}
-            height={600}
+            width={MEDIA.adSidebar.width}
+            height={MEDIA.adSidebar.height}
             priority
             quality={85}
-            sizes="(max-width: 1024px) 100vw, 320px"
+            sizes={MEDIA.adSidebar.sizes}
             className="m-0 h-auto w-full object-cover"
             style={{ objectPosition: 'center center' }}
           />

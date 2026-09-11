@@ -79,6 +79,9 @@ export async function GET(req: NextRequest) {
             style: 'normal',
           },
         ],
+        headers: {
+          'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
+        },
       },
     );
   } catch (e: unknown) {

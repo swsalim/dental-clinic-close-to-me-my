@@ -155,26 +155,37 @@ export async function getClinicListings(status: string = 'approved'): Promise<Cl
 }
 
 /**
- * Fetches a clinic by its slug with all related data
+ * Fetches a clinic by its slug with all related data (cross-request Data Cache).
  */
 export async function getClinicBySlug(
   slug: string,
   status: string = 'approved',
 ): Promise<ClinicDetails | null> {
-  const supabase = createAdminClient();
+  const getCachedClinic = unstable_cache(
+    async () => {
+      const supabase = createAdminClient();
 
-  const { data, error } = await supabase.rpc('get_clinic_by_slug', {
-    slug_input: slug,
-    status_input: status,
-    review_limit: 6,
-  });
+      const { data, error } = await supabase.rpc('get_clinic_by_slug', {
+        slug_input: slug,
+        status_input: status,
+        review_limit: 6,
+      });
 
-  if (error) {
-    console.error('Error fetching clinic for static generation:', error);
-    return null;
-  }
+      if (error) {
+        console.error('Error fetching clinic for static generation:', error);
+        return null;
+      }
 
-  return data as unknown as ClinicDetails;
+      return data as unknown as ClinicDetails;
+    },
+    [`clinic-${slug}-${status}`],
+    {
+      revalidate: 1_209_600, // 2 weeks — match listing ISR
+      tags: ['clinics', `clinic-${slug}`],
+    },
+  );
+
+  return getCachedClinic();
 }
 
 export async function getClinicByServiceId(

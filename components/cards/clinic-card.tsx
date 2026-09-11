@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 
 import { ClinicHours, ClinicSpecialHours } from '@/types/clinic';
@@ -71,7 +69,7 @@ export function ClinicCard({
       )}
       role="article">
       <CardHeader className="relative h-48 overflow-hidden p-0">
-        {imageSrc && (
+        {imageSrc ? (
           <MediaImage
             src={imageSrc}
             alt={name}
@@ -81,43 +79,43 @@ export function ClinicCard({
             className="h-full w-full object-cover"
             priority={false}
           />
-        )}
+        ) : null}
         <div className="absolute right-2 top-2 flex flex-wrap justify-end gap-2">
-          {isPlaceholder && <Badge variant="gray">Sample</Badge>}
-          {isFeaturedPartner && (
+          {isPlaceholder ? <Badge variant="gray">Sample</Badge> : null}
+          {isFeaturedPartner ? (
             <span className="inline-flex items-center gap-1 rounded-full border border-amber-300/60 bg-gradient-to-r from-amber-500 to-amber-600 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-white shadow-sm">
               <SparklesIcon className="size-3 shrink-0" aria-hidden="true" />
               Featured partner
             </span>
-          )}
-          {isFeatured && !isFeaturedPartner && (
+          ) : null}
+          {isFeatured && !isFeaturedPartner ? (
             <span className="inline-flex items-center gap-1 rounded-md border border-blue-300/50 bg-blue-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-blue-700 dark:border-blue-800 dark:bg-blue-950/50 dark:text-blue-300">
               <AwardIcon className="size-3" aria-hidden="true" />
               Featured
             </span>
-          )}
-          {hours.length === 7 && hours.every((hour) => hour.open_time && hour.close_time) && (
+          ) : null}
+          {hours.length === 7 && hours.every((hour) => hour.open_time && hour.close_time) ? (
             <Badge variant="blue">
               <ClockIcon className="me-1 h-4 w-4" aria-hidden="true" />
               Open everyday
             </Badge>
-          )}
+          ) : null}
           <ClinicStatus hours={hours} specialHours={specialHours} />
-          {openOnPublicHolidays && <Badge variant="gray">Open on public holidays</Badge>}
+          {openOnPublicHolidays ? <Badge variant="gray">Open on public holidays</Badge> : null}
         </div>
         <div className="absolute bottom-2 right-2 flex flex-wrap justify-end gap-2">
-          {distance && distance > 0 && (
+          {distance && distance > 0 ? (
             <Badge variant="gray">Distance: {distance.toFixed(1)} km</Badge>
-          )}
+          ) : null}
         </div>
       </CardHeader>
       <CardContent className="p-6">
         <CardTitle className="mb-2 text-lg leading-tight">{name}</CardTitle>
-        {rating !== null && rating !== undefined && (
+        {rating !== null && rating !== undefined ? (
           <div className="mb-3 flex-shrink-0">
             <StarRating rating={rating} />
           </div>
-        )}
+        ) : null}
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <MapPinIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />

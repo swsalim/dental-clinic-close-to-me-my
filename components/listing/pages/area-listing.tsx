@@ -222,11 +222,11 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               <Image
                 src="/images/total-image-1.jpg"
                 alt="Total Image"
-                width={600}
-                height={600}
+                width={MEDIA.adLeaderboard.width}
+                height={MEDIA.adLeaderboard.height}
                 priority
                 quality={85}
-                sizes="(max-width: 672px) 100vw, 672px"
+                sizes={MEDIA.adLeaderboard.sizes}
                 className="m-0 h-auto w-full object-cover"
                 style={{
                   objectPosition: 'center center',
@@ -265,11 +265,11 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                                 <Image
                                   src="/images/total-image-2.jpg"
                                   alt="Total Image"
-                                  width={600}
-                                  height={600}
+                                  width={MEDIA.adGrid.width}
+                                  height={MEDIA.adGrid.height}
                                   priority
                                   quality={85}
-                                  sizes="(max-width: 672px) 100vw, 672px"
+                                  sizes={MEDIA.adGrid.sizes}
                                   className="m-0 h-auto w-full object-cover"
                                   style={{
                                     objectPosition: 'center center',
@@ -317,9 +317,9 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                   <MediaImage
                     src="https://ik.imagekit.io/yuurrific/dental-clinics-my/lost-boy.png"
                     alt="No dental clinics found"
-                    width={MEDIA.gallery.width}
-                    height={MEDIA.gallery.height}
-                    sizes={MEDIA.gallery.sizes}
+                    width={MEDIA.empty.width}
+                    height={MEDIA.empty.height}
+                    sizes={MEDIA.empty.sizes}
                     className="h-full w-full object-cover"
                   />
                 </div>

@@ -93,6 +93,8 @@ export async function generateStaticParams() {
 
 // Force static generation - this ensures the page is generated at build time
 export const dynamic = 'force-static';
+export const revalidate = 1_209_600;
+export const dynamicParams = true;
 
 export default async function DentistPage({ params }: DentistPageProps) {
   const { slug } = await params;
@@ -200,9 +202,9 @@ export default async function DentistPage({ params }: DentistPageProps) {
                     <MediaImage
                       src={profileImageSrc}
                       alt={`${doctor.name} - Profile Image`}
-                      width={MEDIA.gallery.width}
-                      height={MEDIA.gallery.height}
-                      sizes={MEDIA.thumb.sizes}
+                      width={MEDIA.profile.width}
+                      height={MEDIA.profile.height}
+                      sizes={MEDIA.profile.sizes}
                       className="h-full w-full rounded-lg object-cover"
                     />
                   </div>
