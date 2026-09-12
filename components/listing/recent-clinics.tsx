@@ -26,7 +26,7 @@ const getRecentClinics = unstable_cache(
         phone,
         postal_code,
         rating,
-        images:clinic_images(id, r2_url, r2_key, image_url, display_order),
+        images:clinic_images(id, image_url, imagekit_file_id, r2_url, r2_key, display_order),
         is_permanently_closed,
         open_on_public_holidays,
         is_featured,

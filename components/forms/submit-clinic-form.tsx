@@ -16,7 +16,8 @@ import {
 } from '@/lib/clinic-images';
 import { defaultBusinessHours } from '@/lib/listing/business-hours';
 import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
-import { uploadFileToR2 } from '@/lib/upload-r2-client';
+import { uploadFileToImageKit } from '@/lib/upload-imagekit-client';
+import { generateUniqueFilename } from '@/lib/utils';
 import type { PlaceLookupResult } from '@/services/google-maps.service';
 
 import { ClinicImageGallery } from '@/components/dashboard/clinic-image-gallery';
@@ -185,7 +186,9 @@ export default function SubmitClinicForm({ states, areas }: Props) {
     }
   };
 
-  const uploadImageToR2 = async (imageFile: File): Promise<{ url: string; key: string } | null> => {
+  const uploadImageToImageKit = async (
+    imageFile: File,
+  ): Promise<{ url: string; fileId: string } | null> => {
     try {
       const maxSize = 2 * 1024 * 1024;
       if (imageFile.size > maxSize) {
@@ -196,7 +199,11 @@ export default function SubmitClinicForm({ states, areas }: Props) {
         throw new Error('Please select a valid image file');
       }
 
-      const result = await uploadFileToR2(imageFile, 'places');
+      const result = await uploadFileToImageKit(
+        imageFile,
+        'dental-clinics-my/places',
+        generateUniqueFilename(imageFile.name),
+      );
       if (!result) {
         throw new Error('Failed to upload image');
       }
@@ -337,7 +344,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
       description: 'Please wait while we process your submission.',
     });
     try {
-      const newImages = await uploadOrderedNewImages(orderedImages, uploadImageToR2);
+      const newImages = await uploadOrderedNewImages(orderedImages, uploadImageToImageKit);
 
       const finalData = {
         ...formData,

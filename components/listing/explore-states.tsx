@@ -5,6 +5,7 @@ import pluralize from 'pluralize';
 
 import { ArrowRightIcon } from 'lucide-react';
 
+import { imageKitUrl } from '@/lib/imagekit-url';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { createAdminClient } from '@/lib/supabase';
@@ -99,7 +100,7 @@ export async function ExploreStates() {
           {states.map((state) => {
             const imageSrc =
               resolveMediaUrl(state) ??
-              'https://ik.imagekit.io/yuurrific/dental-clinics-my/placeholder-location.jpg';
+              imageKitUrl('dental-clinics-my/placeholder-location.jpg');
 
             return (
               <li key={state.id} className="min-w-0">

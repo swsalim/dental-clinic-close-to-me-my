@@ -9,6 +9,7 @@ import {
   SproutIcon,
 } from 'lucide-react';
 
+import { imageKitUrl } from '@/lib/imagekit-url';
 import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
@@ -222,7 +223,7 @@ function FeaturedListingPreview() {
       <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <figure className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900/60">
           <MediaImage
-            src="https://ik.imagekit.io/yuurrific/dental-clinics-my/images/sample-homepage-listing.png"
+            src={imageKitUrl('dental-clinics-my/images/sample-homepage-listing.png')}
             alt="Sample homepage featured listing placement"
             width={MEDIA.lightbox.width}
             height={MEDIA.lightbox.height}
@@ -236,7 +237,7 @@ function FeaturedListingPreview() {
 
         <figure className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900/60">
           <MediaImage
-            src="https://ik.imagekit.io/yuurrific/dental-clinics-my/images/sample-featured-listing.png"
+            src={imageKitUrl('dental-clinics-my/images/sample-featured-listing.png')}
             alt="Sample featured clinic card in listing page results"
             width={MEDIA.lightbox.width}
             height={MEDIA.lightbox.height}
