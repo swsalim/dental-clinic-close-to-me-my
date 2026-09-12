@@ -9,6 +9,7 @@ import pluralize from 'pluralize';
 
 import { siteConfig } from '@/config/site';
 
+import { imageKitUrl } from '@/lib/imagekit-url';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { createAdminClient } from '@/lib/supabase';
@@ -279,7 +280,7 @@ export default async function BrowsePage() {
                       <MediaImage
                         src={
                           resolveMediaUrl(state) ??
-                          'https://ik.imagekit.io/yuurrific/dental-clinics-my/placeholder-location.jpg'
+                          imageKitUrl('dental-clinics-my/placeholder-location.jpg')
                         }
                         alt={state.name}
                         width={MEDIA.landscapeLg.width}

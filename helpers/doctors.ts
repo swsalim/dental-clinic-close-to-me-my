@@ -29,7 +29,7 @@ export const DOCTOR_WITH_CLINICS_SELECT = `
   bio,
   specialty,
   qualification,
-  images:clinic_doctor_images(id, r2_url, r2_key, image_url),
+  images:clinic_doctor_images(id, image_url, imagekit_file_id, r2_url, r2_key),
   featured_video,
   is_active,
   is_featured,
@@ -51,7 +51,7 @@ export const DOCTOR_WITH_CLINICS_SELECT = `
       longitude,
       rating,
       review_count,
-      images:clinic_images(id, r2_url, r2_key, image_url),
+      images:clinic_images(id, image_url, imagekit_file_id, r2_url, r2_key),
       area:areas(name),
       state:states(name)
     )
@@ -68,9 +68,10 @@ type RawDoctorWithClinics = {
   qualification: string | null;
   images: {
     id: string;
+    image_url?: string | null;
+    imagekit_file_id?: string | null;
     r2_url?: string | null;
     r2_key?: string | null;
-    image_url?: string | null;
   }[] | null;
   featured_video: string | null;
   is_active: boolean | null;
@@ -94,9 +95,10 @@ type RawDoctorWithClinics = {
       review_count: number | null;
       images: {
         id: string;
+        image_url?: string | null;
+        imagekit_file_id?: string | null;
         r2_url?: string | null;
         r2_key?: string | null;
-        image_url?: string | null;
       }[] | null;
       area?: { name: string } | null;
       state?: { name: string } | null;

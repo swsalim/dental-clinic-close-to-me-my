@@ -30,6 +30,6 @@ export function imageKitLoader({ src, width, quality }: ImageLoaderProps): strin
   }
 
   const path = src.replace(/^\//, '');
-  const id = process.env.NEXT_PUBLIC_IMAGEKIT_ID || 'yuurrific';
+  const id = process.env.NEXT_PUBLIC_IMAGEKIT_ID || '8nt3mrojl';
   return `https://ik.imagekit.io/${id}/${path}?tr=${tr}`;
 }

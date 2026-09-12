@@ -15,6 +15,7 @@ interface AreaWithCount {
   id: string;
   name: string;
   slug: string;
+  image?: string | null;
   thumbnail_image: string | null;
   r2_url?: string | null;
   state: { slug: string } | null;

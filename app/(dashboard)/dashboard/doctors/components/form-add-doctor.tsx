@@ -16,8 +16,8 @@ import * as z from 'zod';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { createClient } from '@/lib/supabase/client';
-import { uploadFileToR2, deleteFileFromR2 } from '@/lib/upload-r2-client';
-import { cn, sanitizeHtmlField } from '@/lib/utils';
+import { uploadFileToImageKit, deleteFileFromImageKit } from '@/lib/upload-imagekit-client';
+import { cn, generateUniqueFilename, sanitizeHtmlField } from '@/lib/utils';
 
 import { MediaImage } from '@/components/image/media-image';
 
@@ -132,7 +132,9 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
     setCurrentImages((prev) => prev.filter((image) => image.id !== imageId));
   };
 
-  const uploadImageToR2 = async (imageFile: File): Promise<{ url: string; key: string } | null> => {
+  const uploadImageToImageKit = async (
+    imageFile: File,
+  ): Promise<{ url: string; fileId: string } | null> => {
     try {
       const maxSize = 3 * 1024 * 1024;
       if (imageFile.size > maxSize) {
@@ -143,7 +145,11 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
         throw new Error('Please select a valid image file');
       }
 
-      const result = await uploadFileToR2(imageFile, 'persons');
+      const result = await uploadFileToImageKit(
+        imageFile,
+        'dental-clinics-my/persons',
+        generateUniqueFilename(imageFile.name),
+      );
       if (!result) {
         throw new Error('Failed to upload image');
       }
@@ -226,7 +232,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
         try {
           const { data: imageRecord } = await supabase
             .from('clinic_doctor_images')
-            .select('r2_key')
+            .select('imagekit_file_id')
             .eq('id', imageId)
             .single();
 
@@ -239,22 +245,22 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
             console.error('Error deleting image record:', deleteError);
           }
 
-          if (imageRecord?.r2_key) {
-            await deleteFileFromR2(imageRecord.r2_key);
+          if (imageRecord?.imagekit_file_id) {
+            await deleteFileFromImageKit(imageRecord.imagekit_file_id);
           }
         } catch (error) {
           console.error('Error marking image for removal:', error);
         }
       }
 
-      // Upload new images to R2
-      const newImages: Array<{ url: string; key: string }> = [];
+      // Upload new images to ImageKit
+      const newImages: Array<{ url: string; fileId: string }> = [];
       if (watchImages && watchImages.length > 0) {
         for (const imageFile of watchImages) {
           if (imageFile instanceof File) {
-            const r2Result = await uploadImageToR2(imageFile);
-            if (r2Result) {
-              newImages.push(r2Result);
+            const uploadResult = await uploadImageToImageKit(imageFile);
+            if (uploadResult) {
+              newImages.push(uploadResult);
             }
           }
         }
@@ -295,8 +301,8 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
       if (newImages.length > 0 && newDoctor) {
         const clinicDoctorImageRecords = newImages.map((image) => ({
           doctor_id: newDoctor.id,
-          r2_url: image.url,
-          r2_key: image.key,
+          image_url: image.url,
+          imagekit_file_id: image.fileId,
         }));
 
         const { data: insertedImages, error: imageInsertError } = await supabase

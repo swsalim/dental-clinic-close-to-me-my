@@ -11,6 +11,7 @@ import { ArrowRightIcon } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 import { getAllServicesCached } from '@/lib/data';
+import { imageKitUrl } from '@/lib/imagekit-url';
 import { listingCanonicalPath } from '@/lib/listing/pagination';
 import { MEDIA } from '@/lib/media-sizes';
 import { cn, getPagination } from '@/lib/utils';
@@ -263,7 +264,7 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
               <div className="flex flex-col items-center justify-center">
                 <div className="relative size-64 md:size-96">
                   <MediaImage
-                    src="https://ik.imagekit.io/yuurrific/dental-clinics-my/lost-boy.png"
+                    src={imageKitUrl('dental-clinics-my/lost-boy.png')}
                     alt="No dental clinics found"
                     width={MEDIA.empty.width}
                     height={MEDIA.empty.height}
