@@ -5,16 +5,27 @@
  * ImageKit URLs still resize on ImageKit via a custom loader.
  * Presets keep call-site widths consistent across clinics / doctors / areas / states.
  *
+ * Keep deviceSizes + imageSizes lean: every unique width is a separate ImageKit
+ * transform (and Vercel Image Optimization variant). Cap at 1200 to stay on the
+ * ImageKit free-tier bandwidth budget; 1920px srcset entries are not worth it.
+ *
  * `sizes` must match the rendered CSS width (not the intrinsic `width` prop).
  * Overstated `sizes` (e.g. 100vw for a 1/4 grid card) force larger srcset picks
  * and raise Vercel Image Optimization + origin transfer cost.
+ *
+ * Usage mapping (approximate):
+ * - 64–128: icons, logos, small avatars
+ * - 200:    chips, ad logos, ~100–200px display
+ * - 400:    clinic/doctor cards, grid thumbs
+ * - 800:    carousels, galleries, 2x mobile / tablet
+ * - 1200:   heroes, lightbox, max content / retina-safe cap
  */
 
 /** Responsive srcset (`sizes` with vw/%). */
-export const MEDIA_DEVICE_SIZES = [640, 1080, 1200, 1920] as const;
+export const MEDIA_DEVICE_SIZES = [200, 400, 800, 1200] as const;
 
 /** Fixed / small `sizes` (avatars, cards). */
-export const MEDIA_IMAGE_SIZES = [128, 256, 384] as const;
+export const MEDIA_IMAGE_SIZES = [64, 128, 256] as const;
 
 export const MEDIA_QUALITY = 75;
 

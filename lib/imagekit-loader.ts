@@ -2,7 +2,9 @@ import type { ImageLoaderProps } from 'next/image';
 
 import { MEDIA_DEVICE_SIZES, MEDIA_IMAGE_SIZES, MEDIA_QUALITY } from '@/lib/media-sizes';
 
-const IMAGEKIT_WIDTHS = [...MEDIA_IMAGE_SIZES, ...MEDIA_DEVICE_SIZES];
+const IMAGEKIT_WIDTHS = [...new Set([...MEDIA_IMAGE_SIZES, ...MEDIA_DEVICE_SIZES])].sort(
+  (a, b) => a - b,
+);
 
 function snapWidth(width: number): number {
   return IMAGEKIT_WIDTHS.reduce((closest, candidate) =>
