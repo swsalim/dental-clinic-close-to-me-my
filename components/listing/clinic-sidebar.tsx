@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 
 import { ClinicService } from '@/types/clinic';
 import { MapPinIcon } from 'lucide-react';
 
-import { MEDIA } from '@/lib/media-sizes';
+// import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
 import { getServiceIcon } from '@/helpers/services';
@@ -82,7 +82,7 @@ export function ClinicSidebar({
 
       <DoctorPractice clinicSlug={clinicSlug} variant="sidebar" />
 
-      <figure className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950/40">
+      {/* <figure className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950/40">
         <figcaption className="border-b border-gray-100 px-3 py-2 text-center text-[10px] font-medium uppercase tracking-[0.14em] text-gray-400 dark:border-gray-800 dark:text-gray-500">
           Partner
         </figcaption>
@@ -103,7 +103,7 @@ export function ClinicSidebar({
             style={{ objectPosition: 'center center' }}
           />
         </a>
-      </figure>
+      </figure> */}
 
       {hasServices && (
         <SidebarPanel
