@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 import { seo } from '@/config/next-seo.config';
 
-import Logo from '../ui/logo';
+import { BadgeRelaySite } from '@/components/badge-relay-site';
+import Logo from '@/components/ui/logo';
 
 import { footerLinkGroups } from './site-links';
 
@@ -12,7 +13,9 @@ function FooterCopyright() {
   return (
     <div className="border-t border-gray-800 px-6 py-6">
       <p className="text-sm leading-relaxed text-gray-400">
-        <span>&copy; {currentYear} {seo.site_name}.</span>{' '}
+        <span>
+          &copy; {currentYear} {seo.site_name}.
+        </span>{' '}
         <span>
           Built by{' '}
           <a
@@ -40,49 +43,6 @@ function FooterCopyright() {
   );
 }
 
-function FooterBadges() {
-  return (
-    <div className="flex flex-row flex-wrap items-center justify-start gap-6 px-6 pb-8">
-      <a
-        href="https://productburst.com/product/dental-clinics-malaysia"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-        <img
-          src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747782156422x193143061268857820/pB-Badge-dark.png"
-          alt="Featured on ProductBurst"
-          width="147"
-          height="34"
-        />
-      </a>
-      <a
-        href="https://fazier.com/launches/www.dentalclinicclosetome.my"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-        <img
-          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
-          width="170"
-          height="34"
-          alt="Fazier badge"
-        />
-      </a>
-      <a
-        href="https://turbo0.com/item/dental-clinics-malaysia"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-        <img
-          src="https://img.turbo0.com/badge-listed-light.svg"
-          alt="Listed on Turbo0"
-          height="34"
-          width="101"
-        />
-      </a>
-    </div>
-  );
-}
-
 export default function Footer() {
   return (
     <footer className="border-t border-gray-800 bg-gray-950" aria-labelledby="footer-heading">
@@ -100,17 +60,15 @@ export default function Footer() {
               aria-label="Home">
               <Logo className="relative h-9 w-9 shrink-0" />
               <span>
-                <span className="font-display block text-lg leading-tight text-gray-100">
+                <span className="block font-display text-lg leading-tight text-gray-100">
                   Dental Clinics Malaysia
                 </span>
-                <span className="block text-sm text-gray-400">
-                  Find trusted care near you
-                </span>
+                <span className="block text-sm text-gray-400">Find trusted care near you</span>
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-6 text-gray-400">
-              Explore top-rated dental clinics across Malaysia. Search by location,
-              compare services, and book with confidence.
+              Explore top-rated dental clinics across Malaysia. Search by location, compare
+              services, and book with confidence.
             </p>
           </div>
 
@@ -151,7 +109,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <FooterBadges />
+      <div className="mx-auto max-w-7xl px-6 py-2">
+        <BadgeRelaySite
+          siteKey="site_live_3ql355Rp-SDgH-mqprfVHg"
+          apiBase="https://badgerelay.com"
+          revalidateSeconds={30}
+        />
+      </div>
 
       <div className="mx-auto max-w-7xl">
         <FooterCopyright />
