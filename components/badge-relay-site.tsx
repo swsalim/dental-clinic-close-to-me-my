@@ -35,7 +35,7 @@ export type BadgeRelaySiteProps = {
   siteKey: string;
   /** BadgeRelay origin, e.g. https://badgerelay.com or http://localhost:3000 */
   apiBase: string;
-  /** ISR / cache seconds. Keep short so publishes appear quickly. */
+  /** ISR / cache seconds. */
   revalidateSeconds?: number;
   className?: string;
 };
@@ -89,7 +89,7 @@ function BadgeLink({
 export async function BadgeRelaySite({
   siteKey,
   apiBase,
-  revalidateSeconds = 30,
+  revalidateSeconds = 2_592_000,
   className,
 }: BadgeRelaySiteProps) {
   if (!siteKey.startsWith('site_live_')) {

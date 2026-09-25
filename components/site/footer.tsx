@@ -113,7 +113,7 @@ export default function Footer() {
         <BadgeRelaySite
           siteKey="site_live_3ql355Rp-SDgH-mqprfVHg"
           apiBase="https://badgerelay.com"
-          revalidateSeconds={30}
+          revalidateSeconds={2_592_000}
         />
       </div>
 
