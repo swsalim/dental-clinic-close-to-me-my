@@ -7,7 +7,7 @@ import {
   ServiceListing,
 } from '@/components/listing/pages/service-listing';
 
-export const revalidate = 1_209_600;
+export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
 export const dynamicParams = true;
 

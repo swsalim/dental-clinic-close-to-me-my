@@ -1,5 +1,5 @@
-/** Two weeks. Page `export const revalidate` must be this numeric literal, not this import. */
-export const LISTING_REVALIDATE_SECONDS = 1_209_600;
+/** 30 days. Page `export const revalidate` must be this numeric literal, not this import. */
+export const LISTING_REVALIDATE_SECONDS = 2_592_000;
 export const MAX_INDEXED_LISTING_PAGE = 3;
 
 export function parsePageParam(page: string | string[] | undefined): number {

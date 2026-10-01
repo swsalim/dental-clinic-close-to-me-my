@@ -93,7 +93,7 @@ const getBrowseData = unstable_cache(
   },
   ['browse-data'],
   {
-    revalidate: 1_209_600,
+    revalidate: 2_592_000,
     tags: ['browse-data', 'states', 'areas', 'clinics'],
   },
 );

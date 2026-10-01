@@ -23,10 +23,10 @@ async function fetchAllServices() {
   return services ?? [];
 }
 
-/** Cross-request cached service catalog (2 weeks). */
+/** Cross-request cached service catalog (30 days). */
 export async function getAllServices() {
   return unstable_cache(fetchAllServices, ['all-services'], {
-    revalidate: 1_209_600,
+    revalidate: 2_592_000,
     tags: ['services'],
   })();
 }

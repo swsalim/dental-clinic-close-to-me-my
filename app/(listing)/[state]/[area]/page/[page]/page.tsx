@@ -5,7 +5,7 @@ import { parsePageParam } from '@/lib/listing/pagination';
 
 import { AreaListing, generateAreaListingMetadata } from '@/components/listing/pages/area-listing';
 
-export const revalidate = 1_209_600;
+export const revalidate = 2_592_000;
 export const dynamicParams = true;
 
 type AreaPaginatedPageProps = {

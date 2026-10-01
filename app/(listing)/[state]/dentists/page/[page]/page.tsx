@@ -8,7 +8,7 @@ import {
   StateDentistsListing,
 } from '@/components/listing/pages/state-dentists-listing';
 
-export const revalidate = 1_209_600;
+export const revalidate = 2_592_000;
 export const dynamicParams = true;
 
 type StateDentistsPaginatedPageProps = {

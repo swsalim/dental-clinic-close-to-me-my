@@ -4,7 +4,7 @@ import { absoluteUrl } from '@/lib/utils';
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-export const LLMS_REVALIDATE_SECONDS = 1_209_600;
+export const LLMS_REVALIDATE_SECONDS = 2_592_000;
 
 export function llmsTextResponse(body: string, status = 200) {
   return new Response(body, {

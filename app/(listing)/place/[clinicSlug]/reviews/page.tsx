@@ -20,7 +20,7 @@ import Container from '@/components/ui/container';
 import { Separator } from '@/components/ui/separator';
 import { StarRating } from '@/components/ui/star-rating';
 
-export const revalidate = 1_209_600;
+export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
 export const dynamicParams = true;
 

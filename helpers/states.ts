@@ -101,7 +101,7 @@ export const getStateAreasWithClinics = async (
     },
     [`state-areas-with-clinics-v1-${slug}`],
     {
-      revalidate: 1_209_600,
+      revalidate: 2_592_000,
       tags: ['areas', `state-${slug}`],
     },
   )();
@@ -133,7 +133,7 @@ export const getStateMetadataBySlug = async (stateSlug: string): Promise<StateMe
     },
     [`state-metadata-v1-${slug}`],
     {
-      revalidate: 1_209_600,
+      revalidate: 2_592_000,
       tags: ['states', `state-${slug}`],
     },
   )();
@@ -191,7 +191,7 @@ export const getStateBySlug = async (
     },
     [`state-by-slug-v2-${slug}-${fromIndex}-${toIndex}`],
     {
-      revalidate: 1_209_600, // Cache for 2 weeks
+      revalidate: 2_592_000, // Cache for 30 days
       tags: ['states', `state-${slug}`],
     },
   )();

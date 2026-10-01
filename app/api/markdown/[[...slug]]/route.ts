@@ -1,6 +1,6 @@
 import { getPageMarkdown, llmsTextResponse } from '@/lib/llms';
 
-export const revalidate = 1_209_600;
+export const revalidate = 2_592_000;
 
 export async function GET(_request: Request, { params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug } = await params;

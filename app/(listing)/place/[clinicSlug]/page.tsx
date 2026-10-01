@@ -47,7 +47,7 @@ import { StarRating } from '@/components/ui/star-rating';
 import { TruncatedHtml } from '@/components/ui/truncated-html';
 import { Wrapper } from '@/components/ui/wrapper';
 
-export const revalidate = 1_209_600;
+export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
 export const dynamicParams = true;
 

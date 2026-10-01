@@ -59,7 +59,7 @@ const getPopularStates = unstable_cache(
   },
   ['popular-states'],
   {
-    revalidate: 1_209_600,
+    revalidate: 2_592_000,
     tags: ['states', 'clinics'],
   },
 );
