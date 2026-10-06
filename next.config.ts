@@ -56,10 +56,61 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
+    // Listing redirects are static so public pages are not matched by middleware.
+    // Query rules are first: a redirect destination does not keep the original query.
+    const publicPath = '/:path((?!_next|api|dashboard).*)*';
+    const legacyPageQuery = '(?<page>[2-9]|[1-9][0-9]+)';
+
     return [
       {
         source: '/place/our-dental-clinic-masai',
         destination: '/place/our-dental-clinic-johor-bahru',
+        permanent: true,
+      },
+      {
+        source: '/page/:pageNum(\\d+)',
+        has: [{ type: 'query', key: 'page' }],
+        destination: '/page/:pageNum',
+        permanent: true,
+      },
+      {
+        source: '/:path+/page/:pageNum(\\d+)',
+        has: [{ type: 'query', key: 'page' }],
+        destination: '/:path*/page/:pageNum',
+        permanent: true,
+      },
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'page', value: legacyPageQuery }],
+        destination: '/page/:page',
+        permanent: true,
+      },
+      {
+        source: publicPath,
+        has: [{ type: 'query', key: 'page', value: legacyPageQuery }],
+        destination: '/:path*/page/:page',
+        permanent: true,
+      },
+      {
+        source: '/',
+        has: [{ type: 'query', key: 'page' }],
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: publicPath,
+        has: [{ type: 'query', key: 'page' }],
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
+        source: '/page/1',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/:path+/page/1',
+        destination: '/:path*',
         permanent: true,
       },
     ];
