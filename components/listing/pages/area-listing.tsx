@@ -56,8 +56,8 @@ export async function generateAreaListingMetadata(
     notFound();
   }
 
-  const LAST_UPDATED = 'November 2025';
-  const title = `Top ${areaData.total_clinics} Dental Clinics in ${areaData.name}, ${areaData.state.name} [${LAST_UPDATED}]`;
+  const clinicCount = areaData.total_clinics ?? 0;
+  const title = `Top ${clinicCount} Dental Clinics in ${areaData.name}, ${areaData.state.name}`;
   const description = `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
   const url = absoluteUrl(listingCanonicalPath(`/${state}/${area}`, currentPage));
 
@@ -104,7 +104,7 @@ export async function generateAreaListingMetadata(
       ],
     },
     robots: {
-      index: currentPage <= MAX_INDEXED_LISTING_PAGE,
+      index: clinicCount > 0 && currentPage <= MAX_INDEXED_LISTING_PAGE,
       follow: true,
     },
   };
@@ -204,7 +204,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               <Link
                 href={absoluteUrl(`/${areaData.state?.slug}`)}
                 className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
-                prefetch={false}>
+                prefetch={false}
+              >
                 {areaData.state?.name}
               </Link>
               . Find services, reviews, and opening hours.
@@ -219,7 +220,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               href="https://invl.me/clnlab2"
               className="hover:!border-b-transparent"
               target="_blank"
-              rel="nofollow noopener noreferrer">
+              rel="nofollow noopener noreferrer"
+            >
               <Image
                 src="/images/total-image-1.jpg"
                 alt="Total Image"
@@ -250,7 +252,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                   className={cn(
                     'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
                     !isJohorBahru && 'lg:grid-cols-4',
-                  )}>
+                  )}
+                >
                   {areaData.clinics
                     ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
                     .map((clinic, index) => {
@@ -262,7 +265,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                                 href="https://invl.me/clnlab2"
                                 className="hover:!border-b-transparent"
                                 target="_blank"
-                                rel="nofollow noopener noreferrer">
+                                rel="nofollow noopener noreferrer"
+                              >
                                 <Image
                                   src="/images/total-image-2.jpg"
                                   alt="Total Image"
@@ -333,14 +337,16 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                 <Link
                   href="/submit"
                   className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
-                  prefetch={false}>
+                  prefetch={false}
+                >
                   Add a clinic
                   <ArrowRightIcon className="size-4" />
                 </Link>
                 <Link
                   href="/"
                   className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
-                  prefetch={false}>
+                  prefetch={false}
+                >
                   Get back to homepage
                   <ArrowRightIcon className="size-4" />
                 </Link>
@@ -361,7 +367,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
                     className="py-1 hover:border-transparent"
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     {area.name}, {area.state?.name}
                   </Link>
                 </h3>

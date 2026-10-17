@@ -96,6 +96,10 @@ export async function generateMetadata({ params }: ReviewsPageProps): Promise<Me
         },
       ],
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 
@@ -164,7 +168,8 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
               <Link
                 href={`/place/${parsedClinic.slug}`}
                 className="inline-flex items-center gap-x-2"
-                prefetch={false}>
+                prefetch={false}
+              >
                 View clinic profile
                 <ArrowRightIcon className="size-4" />
               </Link>
