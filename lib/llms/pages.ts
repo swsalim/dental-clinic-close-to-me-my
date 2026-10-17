@@ -2,6 +2,7 @@ import { Clinic, ClinicDetails } from '@/types/clinic';
 
 import { siteConfig } from '@/config/site';
 
+import { getAllGuides, getGuide } from '@/lib/guides';
 import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import {
   escapeMd,
@@ -78,6 +79,11 @@ export async function markdownHome() {
     [
       listItem('Browse by location', mdUrl('/browse'), 'Dental clinics grouped by state and city'),
       listItem('Dentists', mdUrl('/dentists'), 'Dentists practising in Malaysia'),
+      listItem(
+        'Guides',
+        mdUrl('/guides'),
+        'How to compare a dental clinic, find one nearby, and handle an urgent visit',
+      ),
     ].join('\n'),
     '## States',
     states
@@ -555,5 +561,38 @@ export async function markdownServicesIndex() {
         ),
       )
       .join('\n'),
+  ]);
+}
+
+export function markdownGuidesIndex() {
+  const guides = getAllGuides();
+
+  return joinSections([
+    '# Guides',
+    '> Practical guides for comparing dental clinics in Malaysia, choosing a nearby clinic, and handling an urgent visit.',
+    'This page is general information, not medical advice. Consult a registered practitioner.',
+    guides
+      .map((guide) => listItem(guide.title, mdUrl(`/guides/${guide.slug}`), guide.description))
+      .join('\n'),
+    `HTML version: ${absoluteUrl('/guides')}`,
+  ]);
+}
+
+export function markdownGuide(slug: string) {
+  const guide = getGuide(slug);
+  if (!guide) {
+    return null;
+  }
+
+  return joinSections([
+    `# ${escapeMd(guide.title)}`,
+    `> ${guide.description}`,
+    'This page is general information, not medical advice. Consult a registered practitioner.',
+    guide.body,
+    '## Find a clinic',
+    guide.relatedLinks
+      .map((link) => listItem(link.label, mdUrl(link.href), link.description))
+      .join('\n'),
+    `HTML version: ${absoluteUrl(`/guides/${guide.slug}`)}`,
   ]);
 }

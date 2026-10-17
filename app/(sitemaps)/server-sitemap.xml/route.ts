@@ -1,5 +1,6 @@
 import { getServerSideSitemap } from 'next-sitemap';
 
+import { getAllGuides, getGuidesIndexLastmod } from '@/lib/guides';
 import { getLocationSignals, getStateDentistCounts } from '@/lib/sitemap/location-signals';
 import { createAdminClient } from '@/lib/supabase';
 import { absoluteUrl } from '@/lib/utils';
@@ -105,6 +106,18 @@ export async function GET() {
   });
 
   const staticPages = ['/', '/browse', '/dentists', '/about', '/submit', '/advertise-with-us'];
+
+  fields.push({
+    loc: absoluteUrl('/guides'),
+    lastmod: sitemapLastmod(getGuidesIndexLastmod()),
+  });
+
+  getAllGuides().forEach((guide) => {
+    fields.push({
+      loc: absoluteUrl(`/guides/${guide.slug}`),
+      lastmod: sitemapLastmod(guide.updatedAt),
+    });
+  });
 
   staticPages.forEach((page) => {
     fields.push({

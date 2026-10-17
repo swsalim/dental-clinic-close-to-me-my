@@ -5,12 +5,13 @@ import BrowseServices from '@/components/listing/browse-services';
 import { ExploreStates } from '@/components/listing/explore-states';
 import { FeaturedClinics } from '@/components/listing/featured-clinics';
 import { HomeCtaStrip } from '@/components/listing/home-cta-strip';
+import { HomeGuides } from '@/components/listing/home-guides';
 import { RecentClinics } from '@/components/listing/recent-clinics';
 import { Testimonials } from '@/components/listing/testimonials';
 import LogoJsonLd from '@/components/structured-data/logo-json-ld';
 
 /* Hallmark · macrostructure: Stat-Led · genre: editorial · tone: utilitarian
- * sections: Hero · States · Recent · Services · Reviews · CTA · enrichment: none
+ * sections: Hero · States · Recent · Services · Reviews · Guides · CTA · enrichment: none
  */
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <RecentClinics />
       <BrowseServices />
       <Testimonials />
+      <HomeGuides />
       <HomeCtaStrip />
     </>
   );
