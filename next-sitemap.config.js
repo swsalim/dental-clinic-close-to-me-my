@@ -1,5 +1,16 @@
 // Save crawling budget by not fetching SSG meta files
-const exclude = ['/dashboard*', '/404', '/api*', '/login', '/server-sitemap.xml', '/submit/success'];
+require('tsx/cjs/api').register();
+const { getEmptyLocationPaths } = require('./lib/sitemap/location-signals.ts');
+
+const staticExclude = [
+  '/dashboard*',
+  '/404',
+  '/api*',
+  '/login',
+  '/server-sitemap.xml',
+  '/submit/success',
+  '/place/*/reviews',
+];
 
 const siteUrl =
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
@@ -13,31 +24,33 @@ const config = {
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   sitemapSize: 7000,
-  exclude,
+  exclude: async () => {
+    const emptyLocations = await getEmptyLocationPaths();
+    return [...staticExclude, ...emptyLocations];
+  },
   robotsTxtOptions: {
     policies: [
       {
         userAgent: '*',
         disallow: [
-          '/*.json',
           '/*_buildManifest.js',
           '/*_middlewareManifest.js',
           '/*_ssgManifest.js',
-          '/*.js',
           '/dashboard',
           '/404',
           '/api',
           '/login',
-          '/submit/success'
-        ]
-      }
+          '/submit/success',
+        ],
+      },
     ],
     additionalSitemaps: [`${siteUrl}/server-sitemap.xml`],
-    host: process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL
-      : process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
-        ? process.env.NEXT_PUBLIC_VERCEL_URL
-        : process.env.NEXT_PUBLIC_BASE_URL?.replace(/^https?:\/\//, ''),
+    host:
+      process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
+        ? process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL
+        : process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
+          ? process.env.NEXT_PUBLIC_VERCEL_URL
+          : process.env.NEXT_PUBLIC_BASE_URL?.replace(/^https?:\/\//, ''),
   },
   transform: async (config, path) => {
     // Fix robots.txt after generation

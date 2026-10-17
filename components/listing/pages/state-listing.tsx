@@ -56,9 +56,9 @@ export async function generateStateListingMetadata(
 
   const featuredAreas = areasWithClinics.slice(0, 3);
   const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
+  const clinicCount = stateData.total_clinics ?? 0;
 
-  const LAST_UPDATED = 'November 2025';
-  const title = `Top ${stateData.total_clinics} Dental Clinics in ${stateData.name} [${LAST_UPDATED}]`;
+  const title = `Top ${clinicCount} Dental Clinics in ${stateData.name}`;
   const description = `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const url = absoluteUrl(listingCanonicalPath(`/${state}`, currentPage));
 
@@ -105,7 +105,7 @@ export async function generateStateListingMetadata(
       ],
     },
     robots: {
-      index: currentPage <= MAX_INDEXED_LISTING_PAGE,
+      index: clinicCount > 0 && currentPage <= MAX_INDEXED_LISTING_PAGE,
       follow: true,
     },
   };
@@ -197,7 +197,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                   <Link
                     href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)}
                     className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     {area.name}
                   </Link>
                   {index < nearbyAreasWithLinks.length - 2 && ', '}
@@ -217,7 +218,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
               href="https://invl.me/clnlab2"
               className="hover:!border-b-transparent"
               target="_blank"
-              rel="nofollow noopener noreferrer">
+              rel="nofollow noopener noreferrer"
+            >
               <Image
                 src="/images/total-image-1.jpg"
                 alt="Total Image"
@@ -245,7 +247,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                       <Link
                         href={`/dentist/${doctor.slug}`}
                         className="relative size-16 overflow-hidden rounded-full outline -outline-offset-1 outline-blue-200 ring-2 ring-blue-300"
-                        key={`${doctor.id}-${index}`}>
+                        key={`${doctor.id}-${index}`}
+                      >
                         {resolveMediaUrl(doctor.images?.[0]) && (
                           <MediaImage
                             src={resolveMediaUrl(doctor.images?.[0]) ?? ''}
@@ -271,7 +274,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                       buttonVariants({ variant: 'secondary' }),
                       'w-full border-blue-300 bg-blue-200/40 text-sm text-blue-800 hover:border-blue-400 hover:bg-blue-200/60 hover:text-blue-900 active:border-blue-400 active:bg-blue-200/80 active:text-blue-900 sm:w-auto dark:border-blue-600 dark:bg-blue-900/40 dark:text-blue-200 dark:hover:border-blue-500 dark:hover:bg-blue-900/60 dark:hover:text-blue-100',
                     )}
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     View All Dentists
                   </Link>
                 </div>
@@ -285,7 +289,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                 <div
                   className={cn(
                     'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4',
-                  )}>
+                  )}
+                >
                   {currentPage === 1 && (
                     <>
                       <ClinicCard
@@ -315,7 +320,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                                 href="https://invl.me/clnlab2"
                                 className="hover:!border-b-transparent"
                                 target="_blank"
-                                rel="nofollow noopener noreferrer">
+                                rel="nofollow noopener noreferrer"
+                              >
                                 <Image
                                   src="/images/total-image-2.jpg"
                                   alt="Total Image"
@@ -377,14 +383,16 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                   <Link
                     href="/submit"
                     className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     Add a clinic
                     <ArrowRightIcon className="size-4" />
                   </Link>
                   <Link
                     href="/"
                     className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     Get back to homepage
                     <ArrowRightIcon className="size-4" />
                   </Link>
@@ -407,7 +415,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                   <Link
                     href={absoluteUrl(`/${state}/${area.slug}`)}
                     className="py-1 hover:border-transparent"
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     {area.name}, {area.state?.name}
                   </Link>
                 </h3>

@@ -35,9 +35,7 @@ export async function generateMetadata({ params }: DentistPageProps): Promise<Me
   const doctor = await getDoctorBySlugCached(slug);
 
   if (!doctor) {
-    return {
-      title: 'Dentist Not Found',
-    };
+    notFound();
   }
 
   const config = {
@@ -292,11 +290,7 @@ export default async function DentistPage({ params }: DentistPageProps) {
                         postalCode={clinic.postal_code ?? ''}
                         state={clinic.state?.name ?? ''}
                         area={clinic.area?.name ?? ''}
-                        image={
-                          clinic.images?.[0]
-                            ? (clinic.images[0] as ClinicImage)
-                            : undefined
-                        }
+                        image={clinic.images?.[0] ? (clinic.images[0] as ClinicImage) : undefined}
                         isFeatured={false}
                         rating={clinic.rating}
                         hours={[]}
@@ -323,7 +317,8 @@ export default async function DentistPage({ params }: DentistPageProps) {
                         key={clinic.id}
                         href={`/place/${clinic.slug}`}
                         className={cn(buttonVariants({ variant: 'primary' }))}
-                        prefetch={false}>
+                        prefetch={false}
+                      >
                         Book at {clinic.name}
                       </Link>
                     ))}
