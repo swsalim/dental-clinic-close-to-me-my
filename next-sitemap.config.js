@@ -1,6 +1,9 @@
 // Save crawling budget by not fetching SSG meta files
 require('tsx/cjs/api').register();
-const { getEmptyLocationPaths } = require('./lib/sitemap/location-signals.ts');
+const {
+  getEmptyLocationPaths,
+  getEmptyDentistPaths,
+} = require('./lib/sitemap/location-signals.ts');
 
 const staticExclude = [
   '/dashboard*',
@@ -25,8 +28,11 @@ const config = {
   generateIndexSitemap: true,
   sitemapSize: 7000,
   exclude: async () => {
-    const emptyLocations = await getEmptyLocationPaths();
-    return [...staticExclude, ...emptyLocations];
+    const [emptyLocations, emptyDentists] = await Promise.all([
+      getEmptyLocationPaths(),
+      getEmptyDentistPaths(),
+    ]);
+    return [...staticExclude, ...emptyLocations, ...emptyDentists];
   },
   robotsTxtOptions: {
     policies: [

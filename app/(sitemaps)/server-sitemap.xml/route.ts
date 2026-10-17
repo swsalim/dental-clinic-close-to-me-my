@@ -1,6 +1,6 @@
 import { getServerSideSitemap } from 'next-sitemap';
 
-import { getLocationSignals } from '@/lib/sitemap/location-signals';
+import { getLocationSignals, getStateDentistCounts } from '@/lib/sitemap/location-signals';
 import { createAdminClient } from '@/lib/supabase';
 import { absoluteUrl } from '@/lib/utils';
 
@@ -38,13 +38,15 @@ function sitemapLastmod(...values: Array<string | null | undefined>): string {
 }
 
 export async function GET() {
-  const [states, areas, clinics, doctors, services, signals] = await Promise.all([
+  const supabase = createAdminClient();
+  const [states, areas, clinics, doctors, services, signals, dentistCounts] = await Promise.all([
     getStateListings(),
     getAreaListings(),
     getClinicListings(),
     getDoctorListings(),
     getAllServices(),
-    getLocationSignals(createAdminClient()),
+    getLocationSignals(supabase),
+    getStateDentistCounts(supabase),
   ]);
 
   const fields: SitemapEntry[] = [];
@@ -67,10 +69,13 @@ export async function GET() {
       });
     }
 
-    fields.push({
-      loc: absoluteUrl(`/${state.slug}/dentists`),
-      lastmod,
-    });
+    const dentistCount = dentistCounts ? (dentistCounts[state.slug] ?? 0) : null;
+    if (dentistCount !== 0) {
+      fields.push({
+        loc: absoluteUrl(`/${state.slug}/dentists`),
+        lastmod,
+      });
+    }
   });
 
   areas.forEach((area) => {
@@ -99,7 +104,7 @@ export async function GET() {
     });
   });
 
-  const staticPages = ['/', '/browse', '/dentists', '/submit', '/advertise-with-us'];
+  const staticPages = ['/', '/browse', '/dentists', '/about', '/submit', '/advertise-with-us'];
 
   staticPages.forEach((page) => {
     fields.push({

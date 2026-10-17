@@ -2,6 +2,7 @@ import { unstable_cache } from 'next/cache';
 
 import { siteConfig } from '@/config/site';
 
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import {
   htmlToText,
   joinSections,
@@ -10,6 +11,7 @@ import {
   mdUrl,
 } from '@/lib/llms/format';
 import {
+  markdownAbout,
   markdownAdvertise,
   markdownArea,
   markdownBrowse,
@@ -24,7 +26,6 @@ import {
   markdownStateDentists,
   markdownSubmit,
 } from '@/lib/llms/pages';
-import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getAllServices } from '@/helpers/services';
@@ -33,6 +34,7 @@ import { getStateListings } from '@/helpers/states';
 export { LLMS_REVALIDATE_SECONDS, llmsTextResponse, mdUrl } from '@/lib/llms/format';
 
 const STATIC_PAGES = new Set([
+  'about',
   'browse',
   'dentists',
   'submit',
@@ -56,6 +58,11 @@ async function buildLlmsIndex() {
     [
       listItem('Home', mdUrl('/'), 'Directory of dental clinics in Malaysia'),
       listItem(
+        'About',
+        mdUrl('/about'),
+        'What this dental clinic directory is, and how to contact or submit a listing',
+      ),
+      listItem(
         'Browse by location',
         mdUrl('/browse'),
         'States and cities with dental clinic listings',
@@ -64,7 +71,7 @@ async function buildLlmsIndex() {
       listItem(
         'Full content',
         absoluteUrl('/llms-full.txt'),
-        'Concatenated Markdown of hub pages (home, browse, dentists, services, submit, advertise)',
+        'Concatenated Markdown of hub pages (home, browse, dentists, services, about, submit, advertise)',
       ),
     ].join('\n'),
     '## States',
@@ -111,9 +118,15 @@ async function buildLlmsFull() {
     markdownServicesIndex(),
   ]);
 
-  return [home, browse, dentists, services, markdownSubmit(), markdownAdvertise()].join(
-    '\n\n---\n\n',
-  );
+  return [
+    home,
+    browse,
+    dentists,
+    services,
+    markdownAbout(),
+    markdownSubmit(),
+    markdownAdvertise(),
+  ].join('\n\n---\n\n');
 }
 
 export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v1'], {
@@ -145,6 +158,8 @@ export async function getPageMarkdown(slug: string[]): Promise<string | null> {
         return markdownSubmit();
       case 'advertise-with-us':
         return markdownAdvertise();
+      case 'about':
+        return markdownAbout();
       case 'services':
         return markdownServicesIndex();
       default:

@@ -11,6 +11,7 @@ import { siteConfig } from '@/config/site';
 
 import { getStateMetadataBySlugCached } from '@/lib/data';
 import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { stateDentistsCopy } from '@/lib/listing/state-dentists-copy';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, getPagination } from '@/lib/utils';
 import { cn } from '@/lib/utils';
@@ -47,9 +48,7 @@ export async function generateStateDentistsListingMetadata(
   }
 
   const totalDoctors = doctorsResult.count || 0;
-
-  const title = `Top ${totalDoctors} Dentists in ${stateData.name}`;
-  const description = `Discover ${totalDoctors} dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you. Information includes clinic locations and contact details.`;
+  const { title, description, index } = stateDentistsCopy(totalDoctors, stateData.name);
   const url = absoluteUrl(listingCanonicalPath(`/${state}/dentists`, currentPage));
 
   // Build the OG image URL
@@ -90,6 +89,10 @@ export async function generateStateDentistsListingMetadata(
           alt: title,
         },
       ],
+    },
+    robots: {
+      index,
+      follow: true,
     },
   };
 }
@@ -168,7 +171,7 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
   };
 
   const title = `Dentists in ${stateData.name}`;
-  const description = `Discover ${totalDoctors} dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you. Information includes clinic locations and contact details.`;
+  const { description } = stateDentistsCopy(totalDoctors, stateData.name);
 
   return (
     <>
@@ -191,8 +194,9 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
             <Prose>
               <h1 className="text-balance font-display text-4xl font-black">{title}</h1>
               <p className="text-balance text-lg font-medium text-gray-600 dark:text-gray-400">
-                Discover {totalDoctors} dentists in {stateData.name}. Browse by city or clinic to
-                find a dentist near you.
+                {totalDoctors > 0
+                  ? `Discover ${totalDoctors} dentists in ${stateData.name}. Browse by city or clinic to find a dentist near you.`
+                  : `Browse dentists in ${stateData.name}. Find a dentist by city or clinic.`}
               </p>
             </Prose>
 
@@ -213,9 +217,11 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
 
               {/* All Dentists */}
               <section>
-                <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
-                  All Dentists in {stateData.name} ({totalDoctors})
-                </h2>
+                {doctors.length > 0 ? (
+                  <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
+                    All Dentists in {stateData.name} ({totalDoctors})
+                  </h2>
+                ) : null}
                 {doctors.length > 0 ? (
                   <>
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -227,7 +233,8 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
                                 href="https://invl.me/clnlab2"
                                 className="hover:!border-b-transparent"
                                 target="_blank"
-                                rel="nofollow noopener noreferrer">
+                                rel="nofollow noopener noreferrer"
+                              >
                                 <Image
                                   src="/images/total-image-2.jpg"
                                   alt="Total Image"
@@ -265,7 +272,8 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
                         className={cn(
                           'inline-flex items-center gap-x-2 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300',
                         )}
-                        prefetch={false}>
+                        prefetch={false}
+                      >
                         Browse all dentists
                         <ArrowRightIcon className="h-4 w-4" />
                       </Link>
