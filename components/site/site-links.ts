@@ -3,7 +3,7 @@
  */
 import type { ElementType } from 'react';
 
-import { MapPinIcon, MegaphoneIcon, PlusIcon, StethoscopeIcon } from 'lucide-react';
+import { BookOpenIcon, MapPinIcon, MegaphoneIcon, PlusIcon, StethoscopeIcon } from 'lucide-react';
 
 export type SiteNavItem = {
   name: string;
@@ -38,6 +38,13 @@ export const primaryNavItems: SiteNavItem[] = [
     matchPaths: ['/dentists', '/dentist/'],
   },
   {
+    name: 'Guides',
+    href: '/guides',
+    description: 'How to compare clinics and plan a visit',
+    icon: BookOpenIcon,
+    matchPaths: ['/guides'],
+  },
+  {
     name: 'Submit',
     href: '/submit',
     description: 'Add or update a clinic listing',
@@ -54,6 +61,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       { label: 'About', href: '/about' },
       { label: 'Browse by location', href: '/browse' },
       { label: 'All dentists', href: '/dentists' },
+      { label: 'Guides', href: '/guides' },
     ],
   },
   {

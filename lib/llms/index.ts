@@ -19,6 +19,8 @@ import {
   markdownClinicReviews,
   markdownDentist,
   markdownDentists,
+  markdownGuide,
+  markdownGuidesIndex,
   markdownHome,
   markdownService,
   markdownServicesIndex,
@@ -43,6 +45,7 @@ const STATIC_PAGES = new Set([
   'place',
   'dentist',
   'index',
+  'guides',
 ]);
 
 async function buildLlmsIndex() {
@@ -69,9 +72,14 @@ async function buildLlmsIndex() {
       ),
       listItem('Dentists', mdUrl('/dentists'), 'Dentists practising in Malaysia'),
       listItem(
+        'Guides',
+        mdUrl('/guides'),
+        'How to compare a dental clinic, find one nearby, and handle an urgent visit',
+      ),
+      listItem(
         'Full content',
         absoluteUrl('/llms-full.txt'),
-        'Concatenated Markdown of hub pages (home, browse, dentists, services, about, submit, advertise)',
+        'Concatenated Markdown of hub pages (home, browse, dentists, services, about, guides, submit, advertise)',
       ),
     ].join('\n'),
     '## States',
@@ -124,17 +132,18 @@ async function buildLlmsFull() {
     dentists,
     services,
     markdownAbout(),
+    markdownGuidesIndex(),
     markdownSubmit(),
     markdownAdvertise(),
   ].join('\n\n---\n\n');
 }
 
-export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v1'], {
+export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v2'], {
   revalidate: LLMS_REVALIDATE_SECONDS,
   tags: ['clinics', 'states', 'areas', 'doctors'],
 });
 
-export const getLlmsFull = unstable_cache(buildLlmsFull, ['llms-full-v1'], {
+export const getLlmsFull = unstable_cache(buildLlmsFull, ['llms-full-v2'], {
   revalidate: LLMS_REVALIDATE_SECONDS,
   tags: ['clinics', 'states', 'areas', 'doctors'],
 });
@@ -162,6 +171,8 @@ export async function getPageMarkdown(slug: string[]): Promise<string | null> {
         return markdownAbout();
       case 'services':
         return markdownServicesIndex();
+      case 'guides':
+        return markdownGuidesIndex();
       default:
         if (STATIC_PAGES.has(first)) {
           return null;
@@ -172,6 +183,10 @@ export async function getPageMarkdown(slug: string[]): Promise<string | null> {
 
   if (first === 'services' && second && segments.length === 2) {
     return markdownService(second);
+  }
+
+  if (first === 'guides' && second && segments.length === 2) {
+    return markdownGuide(second);
   }
 
   if (first === 'place' && second && segments.length === 2) {

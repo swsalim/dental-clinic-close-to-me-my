@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Clock, phone, and emergency sign</title>
+  <desc id="desc">A clock beside a clinic phone and a hospital emergency cross.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <circle cx="330" cy="320" r="180" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <circle cx="330" cy="320" r="150" fill="#eff6ff"/>
+  <circle cx="330" cy="320" r="8" fill="#1e3a8a"/>
+  <path d="M330 320V210" stroke="#1e3a8a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M330 320l70 46" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+  <rect x="620" y="120" width="460" height="180" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="660" y="160" width="88" height="100" rx="18" fill="#2563eb"/>
+  <rect x="688" y="176" width="32" height="8" rx="4" fill="#dbeafe"/>
+  <rect x="688" y="196" width="32" height="40" rx="6" fill="#ffffff"/>
+  <rect x="770" y="176" width="250" height="16" rx="8" fill="#1e3a8a"/>
+  <rect x="770" y="210" width="200" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="770" y="236" width="160" height="12" rx="6" fill="#e5e7eb"/>
+  <rect x="620" y="340" width="460" height="180" rx="28" fill="#1e3a8a"/>
+  <rect x="700" y="390" width="36" height="90" rx="8" fill="#ffffff"/>
+  <rect x="674" y="416" width="88" height="36" rx="8" fill="#ffffff"/>
+  <rect x="800" y="400" width="220" height="16" rx="8" fill="#dbeafe"/>
+  <rect x="800" y="434" width="180" height="12" rx="6" fill="#93c5fd"/>
+  <rect x="800" y="462" width="140" height="12" rx="6" fill="#93c5fd"/>
+</svg>
