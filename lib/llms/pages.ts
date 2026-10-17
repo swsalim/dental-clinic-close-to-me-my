@@ -97,6 +97,12 @@ export async function markdownHome() {
         ),
       )
       .join('\n'),
+    '## About',
+    listItem(
+      `About ${siteConfig.siteName}`,
+      mdUrl('/about'),
+      'What this dental clinic directory is, and how to contact or submit a listing',
+    ),
     '## For clinic owners',
     [
       listItem(
@@ -175,6 +181,27 @@ export async function markdownDentists() {
       ? sorted.map((doctor) => listItem(doctor.name, mdUrl(`/dentist/${doctor.slug}`))).join('\n')
       : '- No dentist profiles yet.',
     `HTML version: ${absoluteUrl('/dentists')}`,
+  ]);
+}
+
+export function markdownAbout() {
+  return joinSections([
+    `# About ${siteConfig.siteName}`,
+    `> ${siteConfig.siteName} (dentalclinicclosetome.my) is a directory of dental clinics across Malaysia.`,
+    'Search by location, compare services and reviews, and book a dental appointment.',
+    '## Browse the directory',
+    [
+      listItem('Browse by location', mdUrl('/browse'), 'Dental clinics grouped by state and city'),
+      listItem('Dentists', mdUrl('/dentists'), 'Dentists practising in Malaysia'),
+    ].join('\n'),
+    '## List or advertise a clinic',
+    `Submit a listing for a one-time ${LISTING_FEE_LABEL} fee. Listings are reviewed within 24 hours and include a dofollow link to the clinic website.`,
+    listItem('Submit a listing', mdUrl('/submit')),
+    listItem('Advertise with us', mdUrl('/advertise-with-us')),
+    '## Contact',
+    'Email hello@dentalclinicclosetome.my about a listing or advertising.',
+    'The site is built by [Yuurrific](https://www.yuurrific.com?ref=dentalclinicclosetome.my).',
+    `HTML version: ${absoluteUrl('/about')}`,
   ]);
 }
 

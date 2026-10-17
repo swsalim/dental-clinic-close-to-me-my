@@ -1,7 +1,6 @@
 /* Hallmark · redesign: navbar + footer · nav: N6 Newspaper masthead · footer: Ft3 index (domain)
  * genre: editorial · tone: utilitarian · pre-emit critique: P4 H5 E5 S5 R4 V4
  */
-
 import type { ElementType } from 'react';
 
 import { MapPinIcon, MegaphoneIcon, PlusIcon, StethoscopeIcon } from 'lucide-react';
@@ -52,6 +51,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
     title: 'Explore',
     links: [
       { label: 'Home', href: '/' },
+      { label: 'About', href: '/about' },
       { label: 'Browse by location', href: '/browse' },
       { label: 'All dentists', href: '/dentists' },
     ],

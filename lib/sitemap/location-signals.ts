@@ -157,6 +157,48 @@ export async function getLocationSignals(
   }
 }
 
+type DoctorCountResult = {
+  count?: number | null;
+};
+
+/**
+ * Approved dentist counts keyed by state slug.
+ * Uses get_ranged_doctor_by_state_slug, the same RPC as getDoctorsByState.
+ * Returns null when the queries fail so sitemap generation can keep the previous entries.
+ */
+export async function getStateDentistCounts(
+  supabase: SupabaseClient,
+): Promise<Record<string, number> | null> {
+  try {
+    const states = await fetchPages<StateRow>((from, to) =>
+      supabase.from('states').select('id, slug').order('id').range(from, to),
+    );
+
+    const counts: Record<string, number> = {};
+
+    for (const state of states) {
+      const { data, error } = await supabase.rpc('get_ranged_doctor_by_state_slug', {
+        state_slug_param: state.slug,
+        from_index_param: 0,
+        to_index_param: 0,
+        status_param: 'approved',
+      });
+
+      if (error) {
+        throw new Error(error.message || `Dentist count failed for ${state.slug}`);
+      }
+
+      const count = (data as DoctorCountResult | null)?.count ?? 0;
+      counts[state.slug] = Number(count) || 0;
+    }
+
+    return counts;
+  } catch (error) {
+    console.error('Failed to load sitemap dentist counts:', error);
+    return null;
+  }
+}
+
 export async function getEmptyLocationPaths(): Promise<string[]> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -199,6 +241,32 @@ export async function getEmptyLocationPaths(): Promise<string[]> {
     return paths;
   } catch (error) {
     console.error('Failed to load empty location paths for sitemap:', error);
+    return [];
+  }
+}
+
+/** State dentist pages whose approved dentist count is 0. */
+export async function getEmptyDentistPaths(): Promise<string[]> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!url || !key) {
+    return [];
+  }
+
+  try {
+    const supabase = createClient(url, key);
+    const counts = await getStateDentistCounts(supabase);
+
+    if (!counts) {
+      return [];
+    }
+
+    return Object.entries(counts)
+      .filter(([, count]) => count === 0)
+      .map(([slug]) => `/${slug}/dentists`);
+  } catch (error) {
+    console.error('Failed to load empty dentist paths for sitemap:', error);
     return [];
   }
 }
