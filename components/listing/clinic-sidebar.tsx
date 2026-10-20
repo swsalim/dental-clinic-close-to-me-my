@@ -1,23 +1,43 @@
 import type { ReactNode } from 'react';
 
 // import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image';
 
 import { ClinicService } from '@/types/clinic';
-import { MapPin as MapPinIcon } from '@phosphor-icons/react/dist/ssr';
+import {
+  Envelope,
+  FacebookLogo,
+  Globe,
+  InstagramLogo,
+  MapPin as MapPinIcon,
+  Phone,
+  TiktokLogo,
+  YoutubeLogo,
+} from '@phosphor-icons/react/dist/ssr';
 
+import { MEDIA } from '@/lib/media-sizes';
 // import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
 import { getServiceIcon } from '@/helpers/services';
 
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
+import { buttonVariants } from '@/components/ui/button';
 
 import DoctorPractice from './doctor-practice';
+import { GetDirectionButton } from './get-direction-button';
 
 interface ClinicSidebarProps {
   clinicSlug: string;
   clinicName: string;
+  address?: string;
+  phone?: string | null;
+  email?: string | null;
+  website?: string | null;
+  facebookUrl?: string | null;
+  instagramUrl?: string | null;
+  youtubeUrl?: string | null;
+  tiktokUrl?: string | null;
   latitude: number;
   longitude: number;
   services?: Partial<ClinicService>[] | null;
@@ -52,16 +72,56 @@ function SidebarPanel({
 export function ClinicSidebar({
   clinicSlug,
   clinicName,
+  address,
+  phone,
+  email,
+  website,
+  facebookUrl,
+  instagramUrl,
+  youtubeUrl,
+  tiktokUrl,
   latitude,
   longitude,
-  services,
   className,
 }: ClinicSidebarProps) {
-  const hasServices = services && services.length > 0;
+  const socials = [
+    {
+      href: facebookUrl,
+      label: 'Facebook',
+      icon: FacebookLogo,
+      className:
+        '"flex-grow-0 justify-center p-3 text-[#1877f2] hover:text-[#1877f2] dark:text-[#1877f2] dark:hover:text-[#1877f2]"',
+    },
+    {
+      href: instagramUrl,
+      label: 'Instagram',
+      icon: InstagramLogo,
+      className:
+        'flex-grow-0 justify-center p-3 text-[#e1306c] hover:text-[#e1306c] dark:text-[#e1306c] dark:hover:text-[#e1306c]',
+    },
+    {
+      href: youtubeUrl,
+      label: 'YouTube',
+      icon: YoutubeLogo,
+      className:
+        'flex-grow-0 justify-center p-3 text-[#ff0000] hover:text-[#ff0000] dark:text-[#ff0000] dark:hover:text-[#ff0000]',
+    },
+    {
+      href: tiktokUrl,
+      label: 'TikTok',
+      icon: TiktokLogo,
+      className:
+        'flex-grow-0 justify-center p-3 text-black hover:text-black dark:text-black dark:hover:text-black',
+    },
+  ].filter((item): item is typeof item & { href: string } => Boolean(item.href));
+  const hasContact = Boolean(phone || email || website || socials.length > 0);
 
   return (
     <aside
-      className={cn('flex min-w-0 flex-col gap-6 lg:sticky lg:top-20 lg:self-start', className)}>
+      className={cn(
+        'flex min-w-0 flex-col gap-6 lg:sticky lg:top-20 lg:max-h-[calc(100dvh-6rem)] lg:self-start lg:overflow-y-auto',
+        className,
+      )}>
       <SidebarPanel id="sidebar-location" title="Location" className="hidden lg:block">
         <div className="overflow-hidden rounded-lg">
           <MapWrapper
@@ -75,60 +135,99 @@ export function ClinicSidebar({
           />
         </div>
         <p className="mt-3 flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
-          <MapPinIcon weight="duotone" className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
-          <span className="min-w-0 break-words">{clinicName}</span>
+          <MapPinIcon
+            weight="duotone"
+            className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+            aria-hidden="true"
+          />
+          <span className="min-w-0 break-words">{address || clinicName}</span>
         </p>
+        <GetDirectionButton
+          clinicSlug={clinicSlug}
+          name={address || clinicName}
+          variant="primary"
+          className="mt-3 w-full text-white hover:text-white"
+        />
       </SidebarPanel>
+
+      {hasContact && (
+        <SidebarPanel id="sidebar-contact" title="Contact" className="hidden lg:block">
+          <ul className="flex flex-col gap-3">
+            {phone && (
+              <li className="flex items-center gap-2 text-sm text-gray-700 no-underline hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300">
+                <Phone
+                  weight="duotone"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
+                <a href={`tel:${phone.replace(/\s/g, '')}`} className="">
+                  <span className="min-w-0 break-words">{phone}</span>
+                </a>
+              </li>
+            )}
+            {email && (
+              <li className="flex items-center gap-2 text-sm text-gray-700 no-underline hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300">
+                <Envelope
+                  weight="duotone"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
+                <a href={`mailto:${email}`} className="">
+                  <span className="min-w-0 break-all">{email}</span>
+                </a>
+              </li>
+            )}
+            {website && (
+              <li className="flex items-center gap-2 text-sm text-gray-700 no-underline hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-300">
+                <Globe
+                  weight="duotone"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
+                <a
+                  href={`${website}?utm_source=dentalclinicclosetome.my`}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="">
+                  <span className="min-w-0 break-all">{website}</span>
+                </a>
+              </li>
+            )}
+          </ul>
+          {socials.length > 0 && (
+            <div className="mt-4 flex gap-2">
+              {socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  aria-label={`Visit ${clinicName} on ${social.label}`}
+                  className={cn(buttonVariants({ variant: 'outline' }), social.className)}>
+                  <social.icon weight="duotone" className="size-6" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          )}
+        </SidebarPanel>
+      )}
 
       <DoctorPractice clinicSlug={clinicSlug} variant="sidebar" />
 
-      {/* <figure className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950/40">
-        <figcaption className="border-b border-gray-100 px-3 py-2 text-center text-[10px] font-medium uppercase tracking-[0.14em] text-gray-400 dark:border-gray-800 dark:text-gray-500">
-          Partner
-        </figcaption>
-        <a
-          href="https://invl.me/clnlab2"
-          className="block outline-none transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 active:opacity-90"
-          target="_blank"
-          rel="nofollow noopener noreferrer">
-          <Image
-            src="/images/total-image-2.jpg"
-            alt="Total Image"
-            width={MEDIA.adSidebar.width}
-            height={MEDIA.adSidebar.height}
-            priority
-            quality={85}
-            sizes={MEDIA.adSidebar.sizes}
-            className="m-0 h-auto w-full object-cover"
-            style={{ objectPosition: 'center center' }}
-          />
-        </a>
-      </figure> */}
-
-      {hasServices && (
-        <SidebarPanel
-          id="sidebar-services"
-          title={`${clinicName} Services`}
-          className="hidden lg:block">
-          <ul className="grid min-w-0 grid-cols-2 gap-2.5">
-            {services.map((service, index) => (
-              <li key={service.slug ?? service.name ?? String(index)} className="min-w-0">
-                <Link
-                  href={`/services/${service.slug}`}
-                  aria-label={service.name}
-                  className="dark:hover:bg-blue-950/40 group flex min-h-[5.5rem] min-w-0 flex-col items-center justify-center rounded-lg border border-gray-100 bg-gray-50/80 px-2 py-3 text-center text-gray-900 outline-none transition-[border-color,background-color,transform,box-shadow] duration-150 hover:border-blue-200 hover:bg-blue-50/60 hover:shadow-sm focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:scale-[0.98] dark:border-gray-800 dark:bg-gray-900/50 dark:text-gray-50 dark:hover:border-blue-800 dark:focus-visible:ring-offset-gray-900">
-                  <span className="text-blue-500 transition-colors group-hover:text-blue-600 dark:text-blue-300 dark:group-hover:text-blue-200">
-                    {getServiceIcon(service.slug ?? '')}
-                  </span>
-                  <span className="mt-2 line-clamp-2 min-w-0 text-xs font-medium leading-snug">
-                    {service.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </SidebarPanel>
-      )}
+      <a
+        href="https://invl.me/clo4xmy"
+        className="hover:!border-b-transparent"
+        target="_blank"
+        rel="nofollow noopener noreferrer">
+        <Image
+          src="/images/product-curaprox.webp"
+          alt="Curaprox Orthodontic Kits"
+          width={MEDIA.card.width}
+          height={MEDIA.card.height}
+          sizes={MEDIA.card.sizes}
+          className="m-0 h-auto w-full object-contain"
+        />
+      </a>
     </aside>
   );
 }

@@ -49,7 +49,7 @@ export async function Hero() {
         alt="Hero background"
         width={2080}
         height={1170}
-        className="absolute inset-0 h-full w-full object-cover object-bottom"
+        className="absolute inset-0 h-full w-full object-cover object-left md:object-center"
         loading="eager"
       />
       <Container className="relative z-10 min-w-0 pb-8 pt-10 md:pt-12 lg:pb-8 lg:pt-16">
@@ -99,11 +99,13 @@ export async function Hero() {
           <aside
             className="flex h-full min-w-0 flex-col items-start justify-start lg:items-end lg:justify-end"
             aria-label="Directory snapshot">
-            <div className="overflow-hidden rounded-lg bg-white/90 px-6 py-4">
+            <div className="w-full overflow-hidden rounded-lg bg-white/90 px-6 py-4">
               {proofStats.length > 0 && (
-                <dl className="grid min-w-0 grid-cols-3 gap-4">
+                <dl className="grid w-full min-w-0 grid-cols-1 gap-4 sm:grid-cols-3">
                   {proofStats.map((stat) => (
-                    <div key={stat.label} className="flex min-w-0 flex-row justify-center gap-x-2">
+                    <div
+                      key={stat.label}
+                      className="flex min-w-0 flex-row items-start justify-start gap-x-2">
                       <stat.icon
                         weight="duotone"
                         className="size-8 shrink-0 text-blue-600 dark:text-blue-400"
