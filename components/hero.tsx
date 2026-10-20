@@ -2,7 +2,6 @@
  * knobs: ratio=7/5 · right=proof-column · divider=vertical-rule · enrichment: none
  * pre-emit critique: P4 H5 E5 S5 R4 V5
  */
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { MapTrifold, Tooth, Users } from '@phosphor-icons/react/dist/ssr';

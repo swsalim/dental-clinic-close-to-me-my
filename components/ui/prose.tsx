@@ -13,10 +13,9 @@ export default function Prose({
   return (
     <Component
       className={cn(
-        className,
         'prose prose-gray max-w-none font-medium dark:prose-invert',
         // headings
-        'prose-headings:font-display prose-headings:relative prose-headings:scroll-mt-[6rem] prose-headings:capitalize prose-h1:mb-4 prose-h1:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-h3:text-lg prose-h3:font-medium md:prose-h2:text-2xl md:prose-h3:text-xl',
+        'prose-headings:relative prose-headings:scroll-mt-[6rem] prose-headings:font-display prose-headings:capitalize prose-h1:mb-4 prose-h1:font-black prose-h2:text-xl prose-h2:font-black prose-h3:text-lg prose-h3:font-black md:prose-h2:text-2xl md:prose-h3:text-xl',
         // lead
         'prose-lead:text-gray-500 dark:prose-lead:text-gray-400',
         // 'prose-p:mt-2 prose-p:mb-2',
@@ -25,6 +24,7 @@ export default function Prose({
         // pre
         'prose-pre:rounded-xl prose-pre:bg-gray-900 prose-pre:shadow-lg',
         'break-words',
+        className,
       )}
       {...props}
     />
