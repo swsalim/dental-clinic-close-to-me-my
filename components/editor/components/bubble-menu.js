@@ -1,7 +1,13 @@
 import { useState } from 'react';
 
 import { BubbleMenu } from '@tiptap/react';
-import { BoldIcon, CodeIcon, ItalicIcon, StrikethroughIcon, UnderlineIcon } from 'lucide-react';
+import {
+  TextB as BoldIcon,
+  Code as CodeIcon,
+  TextItalic as ItalicIcon,
+  TextStrikethrough as StrikethroughIcon,
+  TextUnderline as UnderlineIcon,
+} from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -96,6 +102,7 @@ export const EditorBubbleMenu = (props) => {
             className="p-2 text-gray-600 hover:bg-stone-100 active:bg-stone-200"
             type="button">
             <item.icon
+              weight="duotone"
               className={cn('h-4 w-4', {
                 'text-blue-500': item.isActive(),
               })}

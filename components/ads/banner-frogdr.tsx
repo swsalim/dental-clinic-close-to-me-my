@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from 'lucide-react';
+import { ArrowUpRight as ArrowUpRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { MEDIA } from '@/lib/media-sizes';
 
@@ -41,7 +41,7 @@ export default function BannerFrogDr() {
         </div>
         <div>
           <div className="rounded-md bg-yellow-200/50 p-3">
-            <ArrowUpRightIcon className="h-4 w-4 text-yellow-700" />
+            <ArrowUpRightIcon weight="duotone" className="h-4 w-4 text-yellow-700" />
           </div>
         </div>
       </div>

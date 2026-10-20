@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ClinicHours, ClinicReview } from '@/types/clinic';
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
@@ -171,7 +171,7 @@ export default async function ReviewsPage({ params }: ReviewsPageProps) {
                 prefetch={false}
               >
                 View clinic profile
-                <ArrowRightIcon className="size-4" />
+                <ArrowRightIcon weight="duotone" className="size-4" />
               </Link>
             </p>
           </div>

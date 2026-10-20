@@ -6,11 +6,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ClinicImage } from '@/types/clinic';
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
 import { getAreaBySlugCached } from '@/lib/data';
+import { getAllGuides } from '@/lib/guides';
 import { imageKitUrl } from '@/lib/imagekit-url';
 import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import { resolveMediaUrl } from '@/lib/media';
@@ -138,6 +139,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
   const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
 
+  const guides = getAllGuides().slice(0, 4);
+
   const breadcrumbItems = [
     {
       name: areaData.state?.name,
@@ -204,8 +207,7 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               <Link
                 href={absoluteUrl(`/${areaData.state?.slug}`)}
                 className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
-                prefetch={false}
-              >
+                prefetch={false}>
                 {areaData.state?.name}
               </Link>
               . Find services, reviews, and opening hours.
@@ -215,165 +217,232 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
       </Wrapper>
       <Wrapper size="sm">
         <Container>
-          <div className="mx-auto mb-10 max-w-2xl">
-            <a
-              href="https://invl.me/clnlab2"
-              className="hover:!border-b-transparent"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-            >
-              <Image
-                src="/images/total-image-1.jpg"
-                alt="Total Image"
-                width={MEDIA.adLeaderboard.width}
-                height={MEDIA.adLeaderboard.height}
-                priority
-                quality={85}
-                sizes={MEDIA.adLeaderboard.sizes}
-                className="m-0 h-auto w-full object-cover"
-                style={{
-                  objectPosition: 'center center',
-                }}
-              />
-            </a>
-          </div>
-          {isJohorBahru && (
-            <Prose className="mb-12 block lg:hidden">
-              <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} area={areaData.name} />
-            </Prose>
-          )}
-          <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
-            {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
-          </h2>
-          {areaData.clinics?.length > 0 ? (
-            <>
-              <div className={cn(isJohorBahru && 'grid grid-cols-1 gap-8 lg:grid-cols-sidebar')}>
-                <div
-                  className={cn(
-                    'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
-                    !isJohorBahru && 'lg:grid-cols-4',
-                  )}
-                >
-                  {areaData.clinics
-                    ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                    .map((clinic, index) => {
-                      return (
-                        <React.Fragment key={clinic.slug}>
-                          {index === 5 && (
-                            <div className="flex flex-col items-center justify-center gap-2 text-center">
-                              <a
-                                href="https://invl.me/clnlab2"
-                                className="hover:!border-b-transparent"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                              >
-                                <Image
-                                  src="/images/total-image-2.jpg"
-                                  alt="Total Image"
-                                  width={MEDIA.adGrid.width}
-                                  height={MEDIA.adGrid.height}
-                                  priority
-                                  quality={85}
-                                  sizes={MEDIA.adGrid.sizes}
-                                  className="m-0 h-auto w-full object-cover"
-                                  style={{
-                                    objectPosition: 'center center',
-                                  }}
-                                />
-                              </a>
-                            </div>
-                          )}
-                          {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
-                          <ClinicCard
-                            key={clinic.slug}
-                            slug={clinic.slug ?? ''}
-                            name={clinic.name ?? ''}
-                            address={clinic.address ?? ''}
-                            phone={clinic.phone ?? ''}
-                            image={clinic.images?.[0] as ClinicImage | undefined}
-                            postalCode={clinic.postal_code ?? ''}
-                            state={areaData.state?.name ?? ''}
-                            area={areaData.name ?? ''}
-                            rating={clinic.rating}
-                            isFeatured={clinic.is_featured ?? false}
-                            hours={clinic.hours ?? []}
-                            specialHours={clinic.special_hours ?? []}
-                            openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                          />
-                        </React.Fragment>
-                      );
-                    })}
-                </div>
+          <div className="py-8 md:gap-8 lg:grid lg:grid-cols-sidebar lg:gap-10">
+            <div>
+              <div className="mx-auto mb-10 max-w-2xl">
+                <a
+                  href="https://invl.me/clo4xl2"
+                  className="hover:!border-b-transparent"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer">
+                  <Image
+                    src="/images/product-philips-soniccare-wide.webp"
+                    alt="Philips Sonicare Wide"
+                    width={MEDIA.adLeaderboard.width}
+                    height={MEDIA.adLeaderboard.height}
+                    sizes={MEDIA.adLeaderboard.sizes}
+                    className="m-0 h-auto w-full object-contain"
+                  />
+                </a>
+              </div>
+
+              <div className="flex flex-col gap-y-6">
                 {isJohorBahru && (
-                  <Prose className="hidden lg:block">
+                  <Prose className="block lg:hidden">
                     <AddBookingForm
                       currentUrl={absoluteUrl(`/${state}/${area}`)}
                       area={areaData.name}
                     />
                   </Prose>
                 )}
+                <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
+                  {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
+                </h2>
+                {areaData.clinics?.length > 0 ? (
+                  <>
+                    <div
+                      className={cn(
+                        'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
+                      )}>
+                      {areaData.clinics
+                        ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
+                        .map((clinic, index) => {
+                          return (
+                            <React.Fragment key={clinic.slug}>
+                              {index === 5 && (
+                                <div className="flex flex-col items-center justify-center gap-2 text-center">
+                                  <a
+                                    href="https://invl.me/clnlab2"
+                                    className="hover:!border-b-transparent"
+                                    target="_blank"
+                                    rel="nofollow noopener noreferrer">
+                                    <Image
+                                      src="/images/total-image-2.jpg"
+                                      alt="Total Image"
+                                      width={MEDIA.adGrid.width}
+                                      height={MEDIA.adGrid.height}
+                                      priority
+                                      quality={85}
+                                      sizes={MEDIA.adGrid.sizes}
+                                      className="m-0 h-auto w-full object-cover"
+                                      style={{
+                                        objectPosition: 'center center',
+                                      }}
+                                    />
+                                  </a>
+                                </div>
+                              )}
+                              {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
+                              <ClinicCard
+                                key={clinic.slug}
+                                slug={clinic.slug ?? ''}
+                                name={clinic.name ?? ''}
+                                address={clinic.address ?? ''}
+                                phone={clinic.phone ?? ''}
+                                image={clinic.images?.[0] as ClinicImage | undefined}
+                                postalCode={clinic.postal_code ?? ''}
+                                state={areaData.state?.name ?? ''}
+                                area={areaData.name ?? ''}
+                                rating={clinic.rating}
+                                isFeatured={clinic.is_featured ?? false}
+                                hours={clinic.hours ?? []}
+                                specialHours={clinic.special_hours ?? []}
+                                openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
+                              />
+                            </React.Fragment>
+                          );
+                        })}
+                    </div>
+
+                    <Pagination currentPage={currentPage} totalPages={totalPages} />
+                  </>
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-y-4">
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="relative size-64 md:size-96">
+                        <MediaImage
+                          src={imageKitUrl('dental-clinics-my/lost-boy.png')}
+                          alt="No dental clinics found"
+                          width={MEDIA.empty.width}
+                          height={MEDIA.empty.height}
+                          sizes={MEDIA.empty.sizes}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">
+                      Oops!
+                    </h2>
+                    <p className="text-balance text-lg dark:text-gray-300">
+                      We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
+                    </p>
+                    <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                      <Link
+                        href="/submit"
+                        className={cn(
+                          buttonVariants({ variant: 'primary' }),
+                          'flex flex-row gap-x-2',
+                        )}
+                        prefetch={false}>
+                        Add a clinic
+                        <ArrowRightIcon weight="duotone" className="size-4" />
+                      </Link>
+                      <Link
+                        href="/"
+                        className={cn(
+                          buttonVariants({ variant: 'ghost' }),
+                          'flex flex-row gap-x-2',
+                        )}
+                        prefetch={false}>
+                        Get back to homepage
+                        <ArrowRightIcon weight="duotone" className="size-4" />
+                      </Link>
+                    </div>
+                  </div>
+                )}
               </div>
-              <Pagination currentPage={currentPage} totalPages={totalPages} />
-            </>
-          ) : (
-            <div className="flex flex-col items-center justify-center gap-y-4">
-              <div className="flex flex-col items-center justify-center">
-                <div className="relative size-64 md:size-96">
-                  <MediaImage
-                    src={imageKitUrl('dental-clinics-my/lost-boy.png')}
-                    alt="No dental clinics found"
-                    width={MEDIA.empty.width}
-                    height={MEDIA.empty.height}
-                    sizes={MEDIA.empty.sizes}
-                    className="h-full w-full object-cover"
+            </div>
+            <aside className="sticky top-20 flex flex-col gap-6 self-start">
+              {isJohorBahru && (
+                <Prose className="hidden lg:block">
+                  <AddBookingForm
+                    currentUrl={absoluteUrl(`/${state}/${area}`)}
+                    area={areaData.name}
                   />
-                </div>
-              </div>
-              <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">Oops!</h2>
-              <p className="text-balance text-lg dark:text-gray-300">
-                We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
-              </p>
-              <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
-                <Link
-                  href="/submit"
-                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
-                  prefetch={false}
-                >
-                  Add a clinic
-                  <ArrowRightIcon className="size-4" />
-                </Link>
-                <Link
-                  href="/"
-                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
-                  prefetch={false}
-                >
-                  Get back to homepage
-                  <ArrowRightIcon className="size-4" />
-                </Link>
-              </div>
-            </div>
-          )}
-        </Container>
-      </Wrapper>
-      <Wrapper size="sm">
-        <Container>
-          <div className="flex flex-col gap-y-6">
-            <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
-              Dental Clinics near {areaData.name}, {areaData.state?.name}
-            </h2>
-            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-              {stateData.areas?.map((area) => (
-                <h3 className="text-balance font-display text-base font-medium" key={area.slug}>
-                  <Link
-                    href={absoluteUrl(`/${state}/${area.slug}`)}
-                    className="py-1 hover:border-transparent"
-                    prefetch={false}
-                  >
-                    {area.name}, {area.state?.name}
-                  </Link>
-                </h3>
-              ))}
-            </div>
+                </Prose>
+              )}
+              <a
+                href="https://invl.me/clo4xmw"
+                className="hover:!border-b-transparent"
+                target="_blank"
+                rel="nofollow noopener noreferrer">
+                <Image
+                  src="/images/product-waterpik.webp"
+                  alt="Waterpik Water Flosser"
+                  width={MEDIA.card.width}
+                  height={MEDIA.card.height}
+                  sizes={MEDIA.card.sizes}
+                  className="m-0 h-auto w-full object-contain"
+                />
+              </a>
+
+              {guides.length > 0 && (
+                <section
+                  aria-labelledby="state-guides-heading"
+                  className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900">
+                  <div className="mb-1 flex items-center justify-between gap-3">
+                    <h2
+                      id="state-guides-heading"
+                      className="font-display text-base font-bold text-gray-900 dark:text-gray-50">
+                      Guides
+                    </h2>
+                    <Link
+                      href="/guides"
+                      prefetch={false}
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+                      All guides
+                      <ArrowRightIcon weight="duotone" className="size-3.5" aria-hidden="true" />
+                    </Link>
+                  </div>
+                  <ul className="flex flex-col divide-y divide-gray-200 dark:divide-gray-800">
+                    {guides.map((guide) => (
+                      <li key={guide.slug}>
+                        <Link
+                          href={`/guides/${guide.slug}`}
+                          prefetch={false}
+                          className="block py-2.5 no-underline hover:border-transparent">
+                          <span className="block text-sm font-medium text-gray-900 dark:text-gray-50">
+                            {guide.title}
+                          </span>
+                          <span className="mt-0.5 block text-xs text-gray-500 dark:text-gray-400">
+                            {guide.readingTimeMinutes} min read
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              <a
+                href="https://invl.me/clo4xmy"
+                className="hover:!border-b-transparent"
+                target="_blank"
+                rel="nofollow noopener noreferrer">
+                <Image
+                  src="/images/product-curaprox.webp"
+                  alt="Curaprox Orthodontic Kits"
+                  width={MEDIA.card.width}
+                  height={MEDIA.card.height}
+                  sizes={MEDIA.card.sizes}
+                  className="m-0 h-auto w-full object-contain"
+                />
+              </a>
+              <a
+                href="https://invl.me/clo4xl2"
+                className="hover:!border-b-transparent"
+                target="_blank"
+                rel="nofollow noopener noreferrer">
+                <Image
+                  src="/images/product-philips-soniccare.webp"
+                  alt="Philips Sonicare Wide"
+                  width={MEDIA.card.width}
+                  height={MEDIA.card.height}
+                  sizes={MEDIA.card.sizes}
+                  className="m-0 h-auto w-full object-contain"
+                />
+              </a>
+            </aside>
           </div>
         </Container>
       </Wrapper>

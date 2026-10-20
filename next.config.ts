@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'date-fns'],
+    optimizePackageImports: ['@phosphor-icons/react', '@radix-ui/react-icons', 'date-fns'],
   },
   async headers() {
     return [

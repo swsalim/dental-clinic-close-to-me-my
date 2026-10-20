@@ -3,7 +3,13 @@
  */
 import type { ElementType } from 'react';
 
-import { BookOpenIcon, MapPinIcon, MegaphoneIcon, PlusIcon, StethoscopeIcon } from 'lucide-react';
+import {
+  BookOpen as BookOpenIcon,
+  MapPin as MapPinIcon,
+  Megaphone as MegaphoneIcon,
+  Plus as PlusIcon,
+  Stethoscope as StethoscopeIcon,
+} from '@phosphor-icons/react/dist/ssr';
 
 export type SiteNavItem = {
   name: string;

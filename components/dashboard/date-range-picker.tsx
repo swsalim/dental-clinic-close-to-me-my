@@ -4,7 +4,7 @@ import * as React from 'react';
 import type { DateRange } from 'react-day-picker';
 
 import { format, isSameDay, startOfMonth, startOfToday, subDays } from 'date-fns';
-import { Calendar as CalendarIcon } from 'lucide-react';
+import { Calendar as CalendarIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -113,7 +113,7 @@ export const DatePickerWithRange: React.FC<DatePickerWithRangeProps> = ({
               'h-10 w-full justify-start text-left font-normal sm:w-[320px]',
               !value?.from && 'text-gray-500 dark:text-gray-400',
             )}>
-            <CalendarIcon className="mr-2 h-4 w-4 shrink-0" />
+            <CalendarIcon weight="duotone" className="mr-2 h-4 w-4 shrink-0" />
             <span className="truncate">{formatRangeLabel(value)}</span>
           </Button>
         </PopoverTrigger>

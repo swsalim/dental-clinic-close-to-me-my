@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
@@ -212,7 +212,7 @@ export async function DentistsListing({ currentPage }: DentistsListingProps) {
                     <span>
                       <span className="block font-medium">{link.title}</span>
                     </span>
-                    <ArrowRightIcon className="h-4 w-4" />
+                    <ArrowRightIcon weight="duotone" className="h-4 w-4" />
                   </Link>
                 ))}
               </div>

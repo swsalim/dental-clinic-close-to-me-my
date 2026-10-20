@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { Check, Minus, Star } from 'lucide-react';
+import { Check, Minus, Star } from '@phosphor-icons/react/dist/ssr';
 import { motion } from 'motion/react';
 
 import { cn } from '@/lib/utils';
@@ -137,12 +137,12 @@ function CellValue({
 }) {
   if (value === 'check') {
     return (
-      <Check className="mx-auto size-5 text-green-600 dark:text-green-400" aria-label="Included" />
+      <Check weight="duotone" className="mx-auto size-5 text-green-600 dark:text-green-400" aria-label="Included" />
     );
   }
   if (value === 'dash') {
     return (
-      <Minus
+      <Minus weight="duotone"
         className="mx-auto size-5 text-gray-300 dark:text-gray-600"
         aria-label="Not included"
       />
@@ -151,7 +151,7 @@ function CellValue({
   if (value === 'highest') {
     return (
       <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">
-        <Check
+        <Check weight="duotone"
           className="mr-1 inline size-4 text-green-600 dark:text-green-400"
           aria-hidden="true"
         />
@@ -162,7 +162,7 @@ function CellValue({
   if (value === 'partner') {
     return (
       <span className="inline-flex items-center gap-1 text-sm font-semibold text-amber-700 dark:text-amber-300">
-        <Star className="size-4 fill-amber-500 text-amber-500" aria-hidden="true" />
+        <Star weight="duotone" className="size-4 fill-amber-500 text-amber-500" aria-hidden="true" />
         Partner
       </span>
     );
@@ -296,7 +296,7 @@ export function PricingPlan() {
                   <ul className="space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature.text} className="flex min-w-0 items-start gap-2.5">
-                        <Check
+                        <Check weight="duotone"
                           className="mt-0.5 size-5 shrink-0 text-green-600 dark:text-green-400"
                           aria-hidden="true"
                         />

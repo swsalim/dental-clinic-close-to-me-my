@@ -19,13 +19,25 @@ export interface StateData {
 
 export type StateMetadata = Pick<StateData, 'id' | 'name' | 'slug'>;
 
-export type StateAreaWithClinics = Pick<ClinicArea, 'id' | 'name' | 'slug'> & {
+export type StateAreaWithClinics = Pick<
+  ClinicArea,
+  'id' | 'name' | 'slug' | 'image' | 'thumbnail_image'
+> & {
+  r2_url?: string | null;
   state?: { slug: string; name: string };
+  clinicCount: number;
 };
 
-function hasApprovedClinics(area: { clinics?: { count: number }[] | null }): boolean {
-  return (area.clinics?.[0]?.count ?? 0) > 0;
-}
+type StateAreaRow = {
+  id: string;
+  name: string;
+  slug: string;
+  image: string | null;
+  thumbnail_image: string | null;
+  r2_url: string | null;
+  state: { slug: string; name: string } | { slug: string; name: string }[] | null;
+  clinics: { count: number }[] | null;
+};
 
 async function fetchStateMetadataBySlug(slug: string): Promise<StateData | null> {
   const supabase = createAdminClient();
@@ -87,7 +99,9 @@ export const getStateAreasWithClinics = async (
 
       const { data: areas, error } = await supabase
         .from('areas')
-        .select('id, name, slug, state:states!inner(slug, name), clinics(count)')
+        .select(
+          'id, name, slug, image, thumbnail_image, r2_url, state:states!inner(slug, name), clinics(count)',
+        )
         .eq('state.slug', slug)
         .eq('clinics.status', 'approved')
         .eq('clinics.is_active', true);
@@ -97,9 +111,25 @@ export const getStateAreasWithClinics = async (
         return [];
       }
 
-      return (areas || []).filter(hasApprovedClinics) as unknown as StateAreaWithClinics[];
+      return ((areas || []) as unknown as StateAreaRow[])
+        .map((area) => {
+          const state = Array.isArray(area.state) ? area.state[0] : area.state;
+
+          return {
+            id: area.id,
+            name: area.name,
+            slug: area.slug,
+            image: area.image,
+            thumbnail_image: area.thumbnail_image,
+            r2_url: area.r2_url,
+            state: state ?? undefined,
+            clinicCount: area.clinics?.[0]?.count ?? 0,
+          };
+        })
+        .filter((area) => area.clinicCount > 0)
+        .sort((a, b) => b.clinicCount - a.clinicCount);
     },
-    [`state-areas-with-clinics-v1-${slug}`],
+    [`state-areas-with-clinics-v2-${slug}`],
     {
       revalidate: 2_592_000,
       tags: ['areas', `state-${slug}`],

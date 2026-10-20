@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { getAllGuides } from '@/lib/guides';
 
@@ -31,7 +31,7 @@ export function HomeGuides() {
             className="inline-flex min-h-11 items-center text-sm font-semibold"
           >
             All guides
-            <ArrowRightIcon className="ms-1 size-4" aria-hidden="true" />
+            <ArrowRightIcon weight="duotone" className="ms-1 size-4" aria-hidden="true" />
           </Link>
         </div>
         <ul className="mt-6 divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-800 dark:border-gray-800">

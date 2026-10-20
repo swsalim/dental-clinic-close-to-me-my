@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
+import { CaretLeft as ChevronLeftIcon, CaretRight as ChevronRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { listingPageHref } from '@/lib/listing/pagination';
 import { cn } from '@/lib/utils';
@@ -70,7 +70,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
               'flex items-center justify-center py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === 1 && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronLeftIcon className="h-5 w-5 text-blue-500 dark:text-blue-300" />
+            <ChevronLeftIcon weight="duotone" className="h-5 w-5 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
         {pageNumbers.map((page, idx) =>
@@ -114,7 +114,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
               'flex items-center justify-center rounded-full py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === totalPages && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronRightIcon className="h-5 w-5 text-blue-500 dark:text-blue-300" />
+            <ChevronRightIcon weight="duotone" className="h-5 w-5 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
       </div>
@@ -133,7 +133,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
               'flex items-center justify-center rounded-full py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === 1 && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronLeftIcon className="h-6 w-6 text-blue-500 dark:text-blue-300" />
+            <ChevronLeftIcon weight="duotone" className="h-6 w-6 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
         <span className="text-base font-semibold text-gray-700 dark:text-gray-300">
@@ -152,7 +152,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages 
               'flex items-center justify-center rounded-full py-4 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:bg-blue-900 dark:hover:text-blue-400',
               currentPage === totalPages && 'pointer-events-none cursor-not-allowed opacity-50',
             )}>
-            <ChevronRightIcon className="h-6 w-6 text-blue-500 dark:text-blue-300" />
+            <ChevronRightIcon weight="duotone" className="h-6 w-6 text-blue-500 dark:text-blue-300" />
           </Link>
         </Button>
       </div>

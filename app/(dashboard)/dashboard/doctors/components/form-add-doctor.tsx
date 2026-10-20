@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 import { ClinicImage } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CheckIcon, ChevronsUpDown, RefreshCwIcon, XIcon } from 'lucide-react';
+import { Check as CheckIcon, CaretUpDown as ChevronsUpDown, ArrowsClockwise as RefreshCwIcon, X as XIcon } from '@phosphor-icons/react/dist/ssr';
 import * as z from 'zod';
 
 // Lib imports
@@ -184,14 +184,14 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                   <button
                     className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                     onClick={() => handleImageRemove(index)}>
-                    <XIcon className="mx-auto h-6 w-6"></XIcon>
+                    <XIcon weight="duotone" className="mx-auto h-6 w-6"></XIcon>
                   </button>
                 )}
                 {isCurrentImage && (
                   <button
                     className="absolute left-auto right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                     onClick={(e) => handleExistingImageRemove(e, (image as ClinicImage).id)}>
-                    <XIcon className="mx-auto h-6 w-6"></XIcon>
+                    <XIcon weight="duotone" className="mx-auto h-6 w-6"></XIcon>
                   </button>
                 )}
                 {!isCurrentImage && imageSrc && (
@@ -566,7 +566,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                               {field.value?.length
                                 ? `${field.value.length} clinic${field.value.length === 1 ? '' : 's'} selected`
                                 : 'Select clinics'}
-                              <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                              <ChevronsUpDown weight="duotone" className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
@@ -592,7 +592,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                                         ];
                                     field.onChange(newValue);
                                   }}>
-                                  <CheckIcon
+                                  <CheckIcon weight="duotone"
                                     className={cn(
                                       'mr-2 h-4 w-4',
                                       field.value?.some((item) => item.clinic_id === clinic.id)
@@ -633,7 +633,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
                                         ),
                                       );
                                     }}>
-                                    <XIcon className="h-3 w-3" />
+                                    <XIcon weight="duotone" className="h-3 w-3" />
                                     <span className="sr-only">Remove {clinic?.name}</span>
                                   </Button>
                                 </div>
@@ -722,7 +722,7 @@ export default function FormAddDoctor({ clinics }: AddDoctorFormProps) {
           <Button type="submit" disabled={isSubmitting} className="flex items-center space-x-2">
             {isSubmitting ? (
               <>
-                <RefreshCwIcon className="h-4 w-4 animate-spin" />
+                <RefreshCwIcon weight="duotone" className="h-4 w-4 animate-spin" />
                 <span>Adding...</span>
               </>
             ) : (

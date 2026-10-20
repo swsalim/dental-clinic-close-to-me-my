@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { Table } from '@tanstack/react-table';
-import { XIcon } from 'lucide-react';
+import { X as XIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -62,7 +62,7 @@ export function DataTableToolbar<TData>({
             onClick={() => table.resetColumnFilters()}
             aria-label="Reset all filters">
             Reset
-            <XIcon className="ml-2 h-4 w-4" />
+            <XIcon weight="duotone" className="ml-2 h-4 w-4" />
           </Button>
         )}
       </div>

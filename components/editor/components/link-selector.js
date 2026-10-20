@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { Check, Trash } from 'lucide-react';
+import { Check, Trash } from '@phosphor-icons/react/dist/ssr';
 
 import { cn, getUrlFromString } from '@/lib/utils';
 
@@ -55,14 +55,14 @@ export const LinkSelector = ({ editor, isOpen, setIsOpen }) => {
                 setIsOpen(false);
               }}
               type="button">
-              <Trash className="h-4 w-4" />
+              <Trash weight="duotone" className="h-4 w-4" />
             </button>
           ) : (
             <button
               className="hover:bg-stone-100 flex items-center rounded-sm p-1 text-gray-600 transition-all"
               onClick={handleLinkSubmission}
               type="button">
-              <Check className="h-4 w-4" />
+              <Check weight="duotone" className="h-4 w-4" />
             </button>
           )}
         </div>

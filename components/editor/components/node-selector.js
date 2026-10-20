@@ -1,15 +1,16 @@
 import {
   Check,
   CheckSquare,
-  ChevronDown,
+  CaretDown as ChevronDown,
   Code,
-  Heading1,
-  Heading2,
-  Heading3,
-  ListOrdered,
-  TextIcon,
-  TextQuote,
-} from 'lucide-react';
+  TextHOne as Heading1,
+  TextHTwo as Heading2,
+  TextHThree as Heading3,
+  ListBullets,
+  ListNumbers as ListOrdered,
+  TextT as TextIcon,
+  Quotes as TextQuote,
+} from '@phosphor-icons/react/dist/ssr';
 
 export const NodeSelector = ({ editor, isOpen, setIsOpen }) => {
   const items = [
@@ -49,7 +50,7 @@ export const NodeSelector = ({ editor, isOpen, setIsOpen }) => {
     },
     {
       name: 'Bullet List',
-      icon: ListOrdered,
+      icon: ListBullets,
       command: () => editor.chain().focus().toggleBulletList().run(),
       isActive: () => editor.isActive('bulletList'),
     },
@@ -85,7 +86,7 @@ export const NodeSelector = ({ editor, isOpen, setIsOpen }) => {
         onClick={() => setIsOpen(!isOpen)}
         type="button">
         <span>{activeItem?.name}</span>
-        <ChevronDown className="h-4 w-4" />
+        <ChevronDown weight="duotone" className="h-4 w-4" />
       </button>
 
       {isOpen && (
@@ -101,11 +102,11 @@ export const NodeSelector = ({ editor, isOpen, setIsOpen }) => {
               type="button">
               <div className="flex items-center space-x-2">
                 <div className="rounded-sm border border-stone-200 p-1">
-                  <item.icon className="h-3 w-3" />
+                  <item.icon weight="duotone" className="h-3 w-3" />
                 </div>
                 <span>{item.name}</span>
               </div>
-              {activeItem.name === item.name && <Check className="h-4 w-4" />}
+              {activeItem.name === item.name && <Check weight="duotone" className="h-4 w-4" />}
             </button>
           ))}
         </section>

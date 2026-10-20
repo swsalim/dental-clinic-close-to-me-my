@@ -1,6 +1,6 @@
 'use client';
 
-import { CarIcon } from 'lucide-react';
+import { Car as CarIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { selineTrack } from '@/lib/analytics';
 
@@ -22,7 +22,7 @@ export function GetDirectionButton({ clinicSlug, name }: { clinicSlug: string; n
       variant="outline"
       className="flex flex-grow-0 items-center justify-center gap-x-2 p-3 text-blue-500 hover:text-blue-400 dark:text-blue-300 dark:hover:text-blue-400"
       onClick={handleClick}>
-      <CarIcon className="h-5 w-5" /> Get Directions
+      <CarIcon weight="duotone" className="h-5 w-5" /> Get Directions
     </Button>
   );
 }

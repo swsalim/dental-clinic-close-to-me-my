@@ -1,4 +1,4 @@
-import { Check, ChevronDown } from 'lucide-react';
+import { Check, CaretDown as ChevronDown } from '@phosphor-icons/react/dist/ssr';
 
 const TEXT_COLORS = [
   {
@@ -100,7 +100,7 @@ export const ColorSelector = ({ editor, isOpen, setIsOpen }) => {
           A
         </span>
 
-        <ChevronDown className="h-4 w-4" />
+        <ChevronDown weight="duotone" className="h-4 w-4" />
       </button>
 
       {isOpen && (
@@ -126,7 +126,7 @@ export const ColorSelector = ({ editor, isOpen, setIsOpen }) => {
                 </div>
                 <span>{name}</span>
               </div>
-              {editor.isActive('textStyle', { color }) && <Check className="h-4 w-4" />}
+              {editor.isActive('textStyle', { color }) && <Check weight="duotone" className="h-4 w-4" />}
             </button>
           ))}
 
@@ -152,7 +152,7 @@ export const ColorSelector = ({ editor, isOpen, setIsOpen }) => {
                 </div>
                 <span>{name}</span>
               </div>
-              {editor.isActive('highlight', { color }) && <Check className="h-4 w-4" />}
+              {editor.isActive('highlight', { color }) && <Check weight="duotone" className="h-4 w-4" />}
             </button>
           ))}
         </section>

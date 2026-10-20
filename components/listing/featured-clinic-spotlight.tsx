@@ -1,4 +1,4 @@
-import { ArrowRightIcon, MapPinIcon, SparklesIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon, MapPin as MapPinIcon, Sparkle as SparklesIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -100,7 +100,7 @@ function FeaturedBadge({ className }: { className?: string }) {
         'inline-flex items-center gap-1.5 rounded-full border border-amber-300/60 bg-gradient-to-r from-amber-500 to-amber-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-sm',
         className,
       )}>
-      <SparklesIcon className="size-3.5 shrink-0" aria-hidden="true" />
+      <SparklesIcon weight="duotone" className="size-3.5 shrink-0" aria-hidden="true" />
       Featured partner
     </span>
   );
@@ -137,7 +137,7 @@ export function FeaturedClinicSpotlight({ clinic }: { clinic: FeaturedClinicSpot
             </div>
 
             <p className="mt-3 flex min-w-0 items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
-              <MapPinIcon className="mt-0.5 size-4 shrink-0 text-blue-400" aria-hidden="true" />
+              <MapPinIcon weight="duotone" className="mt-0.5 size-4 shrink-0 text-blue-400" aria-hidden="true" />
               <span className="min-w-0">
                 {clinic.area}, {clinic.state}
               </span>
@@ -166,7 +166,7 @@ export function FeaturedClinicSpotlight({ clinic }: { clinic: FeaturedClinicSpot
               )}
               aria-disabled="true">
               View clinic profile
-              <ArrowRightIcon className="ms-2 size-4" aria-hidden="true" />
+              <ArrowRightIcon weight="duotone" className="ms-2 size-4" aria-hidden="true" />
             </span>
             <p className="text-xs text-gray-500 dark:text-gray-400">
               Placeholder — links go live with a real featured listing.

@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 
 import { ClinicService } from '@/types/clinic';
-import { MapPinIcon } from 'lucide-react';
+import { MapPin as MapPinIcon } from '@phosphor-icons/react/dist/ssr';
 
 // import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
@@ -75,7 +75,7 @@ export function ClinicSidebar({
           />
         </div>
         <p className="mt-3 flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
-          <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
+          <MapPinIcon weight="duotone" className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
           <span className="min-w-0 break-words">{clinicName}</span>
         </p>
       </SidebarPanel>

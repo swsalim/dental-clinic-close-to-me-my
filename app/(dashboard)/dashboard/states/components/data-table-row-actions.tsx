@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { Row } from '@tanstack/react-table';
-import { PencilIcon } from 'lucide-react';
+import { PencilSimple as PencilIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -25,7 +25,7 @@ export function DataTableRowActions<TData extends StateTableData>({
       <Link
         className={cn(buttonVariants({ variant: 'outline' }))}
         href={`/dashboard/states/edit/${state.id}`}>
-        <PencilIcon className="mr-2 h-4 w-4" />
+        <PencilIcon weight="duotone" className="mr-2 h-4 w-4" />
         Edit
       </Link>
     </>

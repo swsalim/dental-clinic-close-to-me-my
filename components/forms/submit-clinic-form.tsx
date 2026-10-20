@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 
 import type { ClinicArea, ClinicState } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Check, Loader2, MapPin } from 'lucide-react';
+import { Check, CircleNotch as Loader2, MapPin } from '@phosphor-icons/react/dist/ssr';
 import * as z from 'zod';
 
 import {
@@ -463,12 +463,12 @@ export default function SubmitClinicForm({ states, areas }: Props) {
           className="w-full">
           {lookupLoading ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 weight="duotone" className="mr-2 h-4 w-4 animate-spin" />
               Fetching clinic details...
             </>
           ) : (
             <>
-              <MapPin className="mr-2 h-4 w-4" />
+              <MapPin weight="duotone" className="mr-2 h-4 w-4" />
               Fetch clinic details
             </>
           )}
@@ -744,7 +744,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
                   'One-time payment — no subscription',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <Check
+                    <Check weight="duotone"
                       className="mt-0.5 size-4 shrink-0 text-green-600 dark:text-green-400"
                       aria-hidden="true"
                     />
@@ -756,7 +756,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
             <Button type="submit" disabled={submitting} className="w-full">
               {submitting ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 weight="duotone" className="mr-2 h-4 w-4 animate-spin" />
                   Submitting...
                 </>
               ) : (

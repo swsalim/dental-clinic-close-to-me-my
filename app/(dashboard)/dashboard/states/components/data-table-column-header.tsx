@@ -1,5 +1,5 @@
 import { Column } from '@tanstack/react-table';
-import { ArrowDownIcon, ArrowUpDownIcon, ArrowUpIcon, EyeOffIcon } from 'lucide-react';
+import { ArrowDown as ArrowDownIcon, ArrowsDownUp as ArrowUpDownIcon, ArrowUp as ArrowUpIcon, EyeSlash as EyeOffIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -34,26 +34,26 @@ export function DataTableColumnHeader<TData, TValue>({
           <Button variant="ghost" className="-ml-3 h-8 w-auto px-3 data-[state=open]:bg-gray-100 dark:bg-gray-800">
             <span>{title}</span>
             {column.getIsSorted() === 'desc' ? (
-              <ArrowDownIcon className="ml-2 h-4 w-4" />
+              <ArrowDownIcon weight="duotone" className="ml-2 h-4 w-4" />
             ) : column.getIsSorted() === 'asc' ? (
-              <ArrowUpIcon className="ml-2 h-4 w-4" />
+              <ArrowUpIcon weight="duotone" className="ml-2 h-4 w-4" />
             ) : (
-              <ArrowUpDownIcon className="ml-2 h-4 w-4" />
+              <ArrowUpDownIcon weight="duotone" className="ml-2 h-4 w-4" />
             )}
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
-            <ArrowUpIcon className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
+            <ArrowUpIcon weight="duotone" className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
             Asc
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
-            <ArrowDownIcon className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
+            <ArrowDownIcon weight="duotone" className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
             Desc
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => column.toggleVisibility(false)}>
-            <EyeOffIcon className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
+            <EyeOffIcon weight="duotone" className="mr-2 h-3.5 w-3.5 text-gray-500 dark:text-gray-400/70" />
             Hide
           </DropdownMenuItem>
         </DropdownMenuContent>

@@ -4,15 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ClinicDetails, ClinicHours, ClinicImage } from '@/types/clinic';
-import {
-  AwardIcon,
-  FacebookIcon,
-  GlobeIcon,
-  InstagramIcon,
-  MailIcon,
-  MapPinIcon,
-  YoutubeIcon,
-} from 'lucide-react';
+import { Medal as AwardIcon, FacebookLogo as FacebookIcon, Globe as GlobeIcon, InstagramLogo as InstagramIcon, Envelope as MailIcon, MapPin as MapPinIcon, YoutubeLogo as YoutubeIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
@@ -349,7 +341,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   <div className="flex items-center gap-x-2">
                     {parsedClinic.is_featured && (
                       <Badge variant="brand">
-                        <AwardIcon className="me-1 h-4 w-4" aria-hidden="true" />
+                        <AwardIcon weight="duotone" className="me-1 h-4 w-4" aria-hidden="true" />
                         Featured
                       </Badge>
                     )}
@@ -367,12 +359,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               </div>
               <div className="flex flex-col gap-x-4 gap-y-2">
                 <div className="flex items-center gap-x-2">
-                  <MapPinIcon className="h-5 w-5 text-blue-300" />
+                  <MapPinIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                   <span className="text-sm text-gray-500 dark:text-gray-300">{fullAddress}</span>
                 </div>
                 {parsedClinic.email && (
                   <div className="flex items-center gap-x-2">
-                    <MailIcon className="h-5 w-5 text-blue-300" />
+                    <MailIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                     <Link href={`mailto:${parsedClinic.email}`} prefetch={false}>
                       <span className="text-sm">{parsedClinic.email}</span>
                     </Link>
@@ -380,7 +372,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 )}
                 {parsedClinic.website && (
                   <div className="flex items-center gap-x-2">
-                    <GlobeIcon className="h-5 w-5 text-blue-300" />
+                    <GlobeIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                     <Link
                       href={`${parsedClinic.website}?utm_source=dentalclinicclosetome.my`}
                       rel="nofollow"
@@ -403,7 +395,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="Visit business Facebook page">
-                          <FacebookIcon className="h-5 w-5" />
+                          <FacebookIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit Facebook</span>
                         </a>
                       </Button>
@@ -418,7 +410,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="Visit business Instagram page">
-                          <InstagramIcon className="h-5 w-5" />
+                          <InstagramIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit Instagram</span>
                         </a>
                       </Button>
@@ -433,7 +425,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="Visit business YouTube channel">
-                          <YoutubeIcon className="h-5 w-5" />
+                          <YoutubeIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit YouTube</span>
                         </a>
                       </Button>

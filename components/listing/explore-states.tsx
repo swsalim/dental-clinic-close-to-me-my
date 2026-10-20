@@ -1,9 +1,8 @@
 import { unstable_cache } from 'next/cache';
 import Link from 'next/link';
 
+import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 import pluralize from 'pluralize';
-
-import { ArrowRightIcon } from 'lucide-react';
 
 import { imageKitUrl } from '@/lib/imagekit-url';
 import { resolveMediaUrl } from '@/lib/media';
@@ -78,29 +77,29 @@ export async function ExploreStates() {
   return (
     <Wrapper className="border-t border-gray-200 dark:border-gray-800">
       <Container className="min-w-0">
-        <div className="mb-8 flex min-w-0 flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
+        <div className="mb-8 flex min-w-0 flex-col gap-3 md:mb-10 md:flex-row md:items-center md:justify-between">
           <div className="min-w-0 max-w-2xl">
-            <h2 className="font-display text-balance text-2xl font-bold text-gray-900 md:text-3xl dark:text-gray-50">
+            <h2 className="text-balance font-display text-2xl font-bold text-gray-900 md:text-3xl dark:text-gray-50">
               Browse by state
             </h2>
             <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
-              States with the most listed clinics — open one to compare practices in your area.
+              Find dental clinics in your area. Select a state to view all clinics, or explore
+              popular locations.
             </p>
           </div>
           <Link
             href="/browse"
             prefetch={false}
-            className="inline-flex shrink-0 items-center gap-1.5 self-start text-sm font-semibold text-blue-600 no-underline transition hover:text-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:text-blue-400 dark:hover:text-blue-300 dark:focus-visible:outline-blue-400 md:self-auto">
-            Browse all locations
-            <ArrowRightIcon className="size-4" aria-hidden="true" />
+            className="inline-flex shrink-0 items-center gap-1.5 self-start text-sm font-semibold text-blue-600 no-underline transition hover:text-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 md:self-auto dark:text-blue-400 dark:hover:text-blue-300 dark:focus-visible:outline-blue-400">
+            View all states
+            <ArrowRightIcon weight="duotone" className="size-4" aria-hidden="true" />
           </Link>
         </div>
 
         <ul className="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {states.map((state) => {
             const imageSrc =
-              resolveMediaUrl(state) ??
-              imageKitUrl('dental-clinics-my/placeholder-location.jpg');
+              resolveMediaUrl(state) ?? imageKitUrl('dental-clinics-my/placeholder-location.jpg');
 
             return (
               <li key={state.id} className="min-w-0">
@@ -119,12 +118,11 @@ export async function ExploreStates() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/85 via-gray-900/25 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h3 className="font-display truncate text-base font-bold capitalize text-white md:text-lg">
+                      <h3 className="truncate font-display text-base font-bold capitalize text-white md:text-lg">
                         {state.name}
                       </h3>
                       <p className="mt-0.5 text-sm font-medium text-gray-200">
-                        {formatCount(state.clinicCount)}{' '}
-                        {pluralize('clinic', state.clinicCount)}
+                        {formatCount(state.clinicCount)} {pluralize('clinic', state.clinicCount)}
                       </p>
                     </div>
                   </div>

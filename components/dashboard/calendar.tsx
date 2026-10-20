@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { DayPicker } from 'react-day-picker';
 
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { CaretLeft as ChevronLeft, CaretRight as ChevronRight } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -54,9 +54,9 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
       components={{
         Chevron: ({ ...props }) =>
           props.orientation === 'right' ? (
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight weight="duotone" className="h-4 w-4" />
           ) : (
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft weight="duotone" className="h-4 w-4" />
           ),
       }}
       {...props}

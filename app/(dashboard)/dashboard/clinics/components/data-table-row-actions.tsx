@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 import { Row } from '@tanstack/react-table';
-import { MenuIcon } from 'lucide-react';
+import { List as MenuIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { createClient } from '@/lib/supabase/client';
 import { deleteFileFromImageKit } from '@/lib/upload-imagekit-client';
@@ -300,7 +300,7 @@ export function DataTableRowActions<TData extends ClinicTableData>({
           <Button
             variant="ghost"
             className="flex h-8 w-8 justify-center p-0 data-[state=open]:bg-gray-100 dark:bg-gray-800">
-            <MenuIcon className="h-4 w-4" />
+            <MenuIcon weight="duotone" className="h-4 w-4" />
             <span className="sr-only">Open menu</span>
           </Button>
         </DropdownMenuTrigger>

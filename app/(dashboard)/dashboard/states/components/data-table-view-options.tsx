@@ -2,7 +2,7 @@
 
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
 import { Table } from '@tanstack/react-table';
-import { Settings2Icon } from 'lucide-react';
+import { SlidersHorizontal as Settings2Icon } from '@phosphor-icons/react/dist/ssr';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -25,7 +25,7 @@ export function DataTableViewOptions<TData>({ table }: DataTableViewOptionsProps
           variant="outline"
           className="ml-auto hidden lg:flex"
           aria-label="Toggle column visibility">
-          <Settings2Icon className="mr-2 h-4 w-4" />
+          <Settings2Icon weight="duotone" className="mr-2 h-4 w-4" />
           View
         </Button>
       </DropdownMenuTrigger>

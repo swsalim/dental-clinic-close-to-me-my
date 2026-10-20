@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Column } from '@tanstack/react-table';
-import { CheckIcon, PlusCircleIcon } from 'lucide-react';
+import { Check as CheckIcon, PlusCircle as PlusCircleIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -42,7 +42,7 @@ export function DataTableFacetedFilter<TData, TValue>({
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="secondary" className="border-dashed">
-          <PlusCircleIcon className="mr-2 h-4 w-4" />
+          <PlusCircleIcon weight="duotone" className="mr-2 h-4 w-4" />
           {title}
           {selectedValues?.size > 0 && (
             <>
@@ -94,7 +94,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                           ? 'bg-gray-300 text-gray-500 dark:bg-gray-600 dark:text-gray-200'
                           : 'opacity-50 [&_svg]:invisible',
                       )}>
-                      <CheckIcon className={cn('h-4 w-4')} />
+                      <CheckIcon weight="duotone" className={cn('h-4 w-4')} />
                     </div>
                     <span>{option.name}</span>
                     {facets?.get(option.slug) && (
