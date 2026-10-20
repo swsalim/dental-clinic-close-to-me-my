@@ -10,7 +10,7 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
       {blocks.map((block, index) => {
         if (block.type === 'h2') {
           return (
-            <h2 key={block.id} id={block.id}>
+            <h2 key={block.id} id={block.id} className="normal-case">
               {block.text}
             </h2>
           );
@@ -18,7 +18,7 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
 
         if (block.type === 'h3') {
           return (
-            <h3 key={block.id} id={block.id}>
+            <h3 key={block.id} id={block.id} className="normal-case">
               {block.text}
             </h3>
           );
@@ -34,6 +34,35 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
                 </li>
               ))}
             </List>
+          );
+        }
+
+        if (block.type === 'table') {
+          return (
+            <div key={`table-${index}`} className="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    {block.headers.map((header, headerIndex) => (
+                      <th key={`${headerIndex}-${header}`}>
+                        <MarkdownText text={header} />
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row, rowIndex) => (
+                    <tr key={row.join('|') || rowIndex}>
+                      {row.map((cell, cellIndex) => (
+                        <td key={`${rowIndex}-${cellIndex}`}>
+                          <MarkdownText text={cell} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           );
         }
 

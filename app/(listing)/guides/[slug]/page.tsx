@@ -39,16 +39,17 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   }
 
   const canonical = `/guides/${guide.slug}`;
-  const ogImage = `/api/og?title=${encodeURIComponent(guide.title)}`;
+  const documentTitle = guide.metaTitle ?? guide.title;
+  const ogImage = `/api/og?title=${encodeURIComponent(documentTitle)}`;
 
   return {
-    title: guide.title,
+    title: guide.metaTitle ? { absolute: guide.metaTitle } : guide.title,
     description: guide.description,
     alternates: {
       canonical,
     },
     openGraph: {
-      title: guide.title,
+      title: documentTitle,
       description: guide.description,
       url: canonical,
       type: 'article',
@@ -67,7 +68,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     },
     twitter: {
       card: 'summary_large_image',
-      title: guide.title,
+      title: documentTitle,
       description: guide.description,
       creator: siteConfig.creator,
       images: [ogImage],
@@ -143,21 +144,23 @@ export default async function GuidePage({ params }: GuidePageProps) {
           ],
         }}
       />
-      <ServerJsonLd
-        id="guide-faq-jsonld"
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: guide.faq.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }}
-      />
+      {guide.faq.length > 0 ? (
+        <ServerJsonLd
+          id="guide-faq-jsonld"
+          data={{
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: guide.faq.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer,
+              },
+            })),
+          }}
+        />
+      ) : null}
 
       <article>
         <header className="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
@@ -234,26 +237,28 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <GuideBody blocks={guide.blocks} />
             </div>
 
-            <section aria-labelledby="guide-faq" className="mt-12">
-              <h2
-                id="guide-faq"
-                className="font-display text-2xl font-bold text-gray-900 dark:text-gray-50"
-              >
-                Common questions
-              </h2>
-              <div className="mt-4 divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-800 dark:border-gray-800">
-                {guide.faq.map((item) => (
-                  <details key={item.question} className="group py-4" open>
-                    <summary className="cursor-pointer text-base font-semibold text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-50">
-                      {item.question}
-                    </summary>
-                    <p className="mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-                      <MarkdownText text={item.answer} />
-                    </p>
-                  </details>
-                ))}
-              </div>
-            </section>
+            {guide.faq.length > 0 ? (
+              <section aria-labelledby="guide-faq" className="mt-12">
+                <h2
+                  id="guide-faq"
+                  className="font-display text-2xl font-bold text-gray-900 dark:text-gray-50"
+                >
+                  Common questions
+                </h2>
+                <div className="mt-4 divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-800 dark:border-gray-800">
+                  {guide.faq.map((item) => (
+                    <details key={item.question} className="group py-4" open>
+                      <summary className="cursor-pointer text-base font-semibold text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-50">
+                        {item.question}
+                      </summary>
+                      <p className="mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                        <MarkdownText text={item.answer} />
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             <FindAClinic guide={guide} />
           </div>

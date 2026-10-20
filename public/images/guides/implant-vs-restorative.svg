@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Two treatment plan cards</title>
+  <desc id="desc">Two listing cards side by side, one for an implant plan and one for repairing a tooth.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="12" fill="#2563eb"/>
+  <rect x="80" y="110" width="480" height="410" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="120" y="150" width="160" height="16" rx="8" fill="#2563eb"/>
+  <rect x="120" y="190" width="300" height="14" rx="7" fill="#d1d5db"/>
+  <rect x="120" y="250" width="400" height="180" rx="20" fill="#eff6ff"/>
+  <rect x="250" y="300" width="28" height="90" rx="8" fill="#2563eb"/>
+  <path d="M230 290h68c8 0 14 8 14 16v8H216v-8c0-8 6-16 14-16z" fill="#ffffff" stroke="#1d4ed8" stroke-width="4"/>
+  <rect x="640" y="110" width="480" height="410" rx="28" fill="#1e3a8a"/>
+  <rect x="680" y="150" width="160" height="16" rx="8" fill="#93c5fd"/>
+  <rect x="680" y="190" width="300" height="14" rx="7" fill="#bfdbfe"/>
+  <rect x="680" y="250" width="400" height="180" rx="20" fill="#1d4ed8"/>
+  <path d="M820 300c40-30 90-30 120 10-20 40-40 70-60 80-20-10-40-40-60-90z" fill="#ffffff"/>
+  <path d="M860 340c10 8 22 8 32 0" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+</svg>
