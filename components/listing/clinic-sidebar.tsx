@@ -119,7 +119,7 @@ export function ClinicSidebar({
   return (
     <aside
       className={cn(
-        'flex min-w-0 flex-col gap-6 lg:sticky lg:top-20 lg:max-h-[calc(100dvh-6rem)] lg:self-start lg:overflow-y-auto',
+        'flex min-w-0 flex-col gap-6 lg:sticky lg:top-20 lg:self-start lg:overflow-y-auto',
         className,
       )}>
       <SidebarPanel id="sidebar-location" title="Location" className="hidden lg:block">
