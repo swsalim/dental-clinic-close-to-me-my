@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Checklist beside review stars</title>
+  <desc id="desc">A simple checklist card next to five star outlines.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="80" y="90" width="620" height="450" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="130" y="140" width="220" height="18" rx="9" fill="#2563eb"/>
+  <rect x="130" y="190" width="480" height="12" rx="6" fill="#e5e7eb"/>
+  <rect x="130" y="230" width="420" height="12" rx="6" fill="#e5e7eb"/>
+  <rect x="130" y="270" width="450" height="12" rx="6" fill="#e5e7eb"/>
+  <rect x="130" y="310" width="380" height="12" rx="6" fill="#e5e7eb"/>
+  <g fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 390l18 18 32-36"/>
+    <path d="M150 450l18 18 32-36"/>
+  </g>
+  <rect x="220" y="384" width="280" height="12" rx="6" fill="#dbeafe"/>
+  <rect x="220" y="444" width="220" height="12" rx="6" fill="#dbeafe"/>
+  <g fill="#fbbf24" transform="translate(760 180)">
+    <polygon points="40,0 52,26 80,30 60,50 65,78 40,64 15,78 20,50 0,30 28,26"/>
+    <polygon points="150,0 162,26 190,30 170,50 175,78 150,64 125,78 130,50 110,30 138,26"/>
+    <polygon points="260,0 272,26 300,30 280,50 285,78 260,64 235,78 240,50 220,30 248,26"/>
+    <polygon points="95,110 107,136 135,140 115,160 120,188 95,174 70,188 75,160 55,140 83,136"/>
+    <polygon points="205,110 217,136 245,140 225,160 230,188 205,174 180,188 185,160 165,140 193,136"/>
+  </g>
+</svg>

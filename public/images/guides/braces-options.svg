@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Braces and a clear aligner</title>
+  <desc id="desc">A row of teeth with brackets beside a simple aligner outline.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="70" y="120" width="640" height="390" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <g fill="#ffffff" stroke="#cbd5e1" stroke-width="3">
+    <rect x="120" y="250" width="70" height="110" rx="18"/>
+    <rect x="210" y="230" width="70" height="130" rx="18"/>
+    <rect x="300" y="220" width="70" height="140" rx="18"/>
+    <rect x="390" y="230" width="70" height="130" rx="18"/>
+    <rect x="480" y="250" width="70" height="110" rx="18"/>
+    <rect x="570" y="270" width="70" height="90" rx="18"/>
+  </g>
+  <g fill="#2563eb">
+    <rect x="142" y="300" width="26" height="20" rx="4"/>
+    <rect x="232" y="290" width="26" height="20" rx="4"/>
+    <rect x="322" y="280" width="26" height="20" rx="4"/>
+    <rect x="412" y="290" width="26" height="20" rx="4"/>
+    <rect x="502" y="300" width="26" height="20" rx="4"/>
+    <rect x="592" y="310" width="26" height="20" rx="4"/>
+  </g>
+  <path d="M155 310h450" stroke="#93c5fd" stroke-width="6" stroke-linecap="round"/>
+  <rect x="760" y="160" width="360" height="310" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <path d="M820 250c40-70 120-70 160 0 30 50 80 70 120 40" fill="none" stroke="#2563eb" stroke-width="14" stroke-linecap="round"/>
+  <path d="M840 330c50 50 140 50 200-10" fill="none" stroke="#93c5fd" stroke-width="10" stroke-linecap="round"/>
+</svg>

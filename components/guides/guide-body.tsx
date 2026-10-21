@@ -37,6 +37,35 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
           );
         }
 
+        if (block.type === 'table') {
+          return (
+            <div key={`table-${index}`} className="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    {block.headers.map((header) => (
+                      <th key={header}>
+                        <MarkdownText text={header} />
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row, rowIndex) => (
+                    <tr key={row.join('|') || rowIndex}>
+                      {row.map((cell, cellIndex) => (
+                        <td key={`${rowIndex}-${cellIndex}`}>
+                          <MarkdownText text={cell} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+
         return (
           <p key={`p-${index}`}>
             <MarkdownText text={block.text} />

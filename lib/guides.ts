@@ -22,7 +22,8 @@ export type MarkdownBlock =
   | { type: 'h3'; id: string; text: string }
   | { type: 'p'; text: string }
   | { type: 'ul'; items: string[] }
-  | { type: 'ol'; items: string[] };
+  | { type: 'ol'; items: string[] }
+  | { type: 'table'; headers: string[]; rows: string[][] };
 
 export type Guide = {
   title: string;
@@ -33,6 +34,8 @@ export type Guide = {
   image: string;
   imageAlt: string;
   primaryKeyword: string;
+  /** Document title when it differs from the visible H1. */
+  metaTitle?: string;
   summary: string[];
   faq: GuideFaq[];
   relatedLinks: GuideLink[];
@@ -51,6 +54,8 @@ const GUIDE_ORDER = [
   'the-complete-guide-to-finding-and-comparing-a-dental-clinic',
   'how-to-find-a-nearby-dentist-clinic-that-fits-your-needs',
   'dental-clinic-open-now-common-questions-about-urgent-visits',
+  'dental-clinic-ratings-checklist',
+  'braces-options-compared',
 ];
 
 const WORDS_PER_MINUTE = 200;
@@ -153,6 +158,15 @@ function parseFrontmatter(source: string): Record<string, unknown> {
   return data;
 }
 
+function splitTableRow(line: string): string[] {
+  const trimmed = line.trim().replace(/^\|/, '').replace(/\|$/, '');
+  return trimmed.split('|').map((cell) => cell.trim());
+}
+
+function isTableSeparator(line: string): boolean {
+  return /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());
+}
+
 function slugifyHeading(text: string): string {
   return text
     .toLowerCase()
@@ -215,6 +229,22 @@ export function parseMarkdown(body: string): MarkdownBlock[] {
       continue;
     }
 
+    if (line.trim().startsWith('|')) {
+      const tableLines: string[] = [];
+      while (index < lines.length && lines[index].trim().startsWith('|')) {
+        tableLines.push(lines[index].trim());
+        index += 1;
+      }
+      const rows = tableLines
+        .filter((tableLine) => !isTableSeparator(tableLine))
+        .map(splitTableRow);
+      const [headers, ...bodyRows] = rows;
+      if (headers && headers.length > 0) {
+        blocks.push({ type: 'table', headers, rows: bodyRows });
+      }
+      continue;
+    }
+
     const paragraph = [line.trim()];
     index += 1;
     while (
@@ -222,6 +252,7 @@ export function parseMarkdown(body: string): MarkdownBlock[] {
       lines[index].trim() &&
       !lines[index].startsWith('#') &&
       !lines[index].startsWith('- ') &&
+      !lines[index].trim().startsWith('|') &&
       !/^\d+\.\s/.test(lines[index])
     ) {
       paragraph.push(lines[index].trim());
@@ -282,6 +313,9 @@ function requireStringList(data: Record<string, unknown>, key: string, file: str
 
 function requireFaq(data: Record<string, unknown>, file: string): GuideFaq[] {
   const value = data.faq;
+  if (value === undefined) {
+    return [];
+  }
   if (!Array.isArray(value) || value.length === 0) {
     throw new Error(`${file} is missing frontmatter faq`);
   }
@@ -359,6 +393,10 @@ function readGuideFile(filePath: string): Guide {
     image: requireString(data, 'image', file),
     imageAlt: requireString(data, 'imageAlt', file),
     primaryKeyword: requireString(data, 'primaryKeyword', file),
+    metaTitle:
+      typeof data.metaTitle === 'string' && data.metaTitle.trim()
+        ? data.metaTitle.trim()
+        : undefined,
     summary,
     faq: requireFaq(data, file),
     relatedLinks: requireLinks(data, file),
