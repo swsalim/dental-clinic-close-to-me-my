@@ -10,6 +10,12 @@ export const config = {
 export async function middleware(req: NextRequest): Promise<NextResponse> {
   const { pathname } = req.nextUrl;
 
+  // Static Open Knowledge Format files live in public/.well-known/okf/.
+  // Other .md URLs are rewritten to the dynamic Markdown API.
+  if (pathname === '/.well-known/okf' || pathname.startsWith('/.well-known/okf/')) {
+    return NextResponse.next();
+  }
+
   if (pathname.endsWith('.md')) {
     const url = req.nextUrl.clone();
     const withoutExtension = pathname.slice(0, -3);

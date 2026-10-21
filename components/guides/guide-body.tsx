@@ -10,7 +10,7 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
       {blocks.map((block, index) => {
         if (block.type === 'h2') {
           return (
-            <h2 key={block.id} id={block.id}>
+            <h2 key={block.id} id={block.id} className="normal-case">
               {block.text}
             </h2>
           );
@@ -18,7 +18,7 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
 
         if (block.type === 'h3') {
           return (
-            <h3 key={block.id} id={block.id}>
+            <h3 key={block.id} id={block.id} className="normal-case">
               {block.text}
             </h3>
           );

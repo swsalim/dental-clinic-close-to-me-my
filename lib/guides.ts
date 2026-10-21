@@ -58,6 +58,13 @@ const GUIDE_ORDER = [
   'braces-options-compared',
 ];
 
+/** Guides published 2026-10-20. Separate from GUIDE_ORDER so other guide lists can merge. */
+const GUIDE_ORDER_2026_10_20 = [
+  'dental-caries-questions',
+  'cbct-dental-scan-questions',
+  'dental-implant-vs-restorative-care',
+];
+
 const WORDS_PER_MINUTE = 200;
 
 const MONTHS = [
@@ -411,19 +418,27 @@ function readGuideFile(filePath: string): Guide {
   };
 }
 
+function guideOrderIndex(slug: string): number {
+  const primary = GUIDE_ORDER.indexOf(slug);
+  if (primary !== -1) {
+    return primary;
+  }
+
+  const published = GUIDE_ORDER_2026_10_20.indexOf(slug);
+  if (published !== -1) {
+    return GUIDE_ORDER.length + published;
+  }
+
+  return GUIDE_ORDER.length + GUIDE_ORDER_2026_10_20.length;
+}
+
 export function getAllGuides(): Guide[] {
   const files = fs
     .readdirSync(GUIDES_DIR)
     .filter((file) => file.endsWith('.md') || file.endsWith('.mdx'));
 
   const guides = files.map((file) => readGuideFile(path.join(GUIDES_DIR, file)));
-  guides.sort((a, b) => {
-    const aIndex = GUIDE_ORDER.indexOf(a.slug);
-    const bIndex = GUIDE_ORDER.indexOf(b.slug);
-    return (
-      (aIndex === -1 ? GUIDE_ORDER.length : aIndex) - (bIndex === -1 ? GUIDE_ORDER.length : bIndex)
-    );
-  });
+  guides.sort((a, b) => guideOrderIndex(a.slug) - guideOrderIndex(b.slug));
 
   return guides;
 }

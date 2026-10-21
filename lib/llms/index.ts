@@ -29,6 +29,8 @@ import {
   markdownStateDentists,
   markdownSubmit,
 } from '@/lib/llms/pages';
+import { getLocationSignals } from '@/lib/sitemap/location-signals';
+import { createAdminClient } from '@/lib/supabase';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getAllServices } from '@/helpers/services';
@@ -50,10 +52,18 @@ const STATIC_PAGES = new Set([
 ]);
 
 async function buildLlmsIndex() {
+  const signals = await getLocationSignals(createAdminClient());
   const [states, services] = await Promise.all([getStateListings(), getAllServices()]);
   const guides = getAllGuides();
 
-  const sortedStates = states.slice().sort((a, b) => a.name.localeCompare(b.name));
+  const sortedStates = states
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .filter((state) => {
+      // Same rule as server-sitemap.xml: drop a state only when its approved clinic count is 0.
+      const clinicCount = signals ? (signals.stateCount[state.id] ?? 0) : null;
+      return clinicCount !== 0;
+    });
 
   return joinSections([
     `# ${siteConfig.siteName}`,
@@ -144,7 +154,7 @@ async function buildLlmsFull() {
   ].join('\n\n---\n\n');
 }
 
-export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v3'], {
+export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v4'], {
   revalidate: LLMS_REVALIDATE_SECONDS,
   tags: ['clinics', 'states', 'areas', 'doctors'],
 });
