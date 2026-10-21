@@ -65,6 +65,13 @@ const GUIDE_ORDER_2026_10_20 = [
   'dental-implant-vs-restorative-care',
 ];
 
+/** Guides published 2026-10-21. */
+const GUIDE_ORDER_2026_10_21 = [
+  'conventional-vs-self-ligating-braces',
+  'plaque-on-teeth',
+  'sensitive-teeth',
+];
+
 const WORDS_PER_MINUTE = 200;
 
 const MONTHS = [
@@ -429,7 +436,12 @@ function guideOrderIndex(slug: string): number {
     return GUIDE_ORDER.length + published;
   }
 
-  return GUIDE_ORDER.length + GUIDE_ORDER_2026_10_20.length;
+  const publishedLater = GUIDE_ORDER_2026_10_21.indexOf(slug);
+  if (publishedLater !== -1) {
+    return GUIDE_ORDER.length + GUIDE_ORDER_2026_10_20.length + publishedLater;
+  }
+
+  return GUIDE_ORDER.length + GUIDE_ORDER_2026_10_20.length + GUIDE_ORDER_2026_10_21.length;
 }
 
 export function getAllGuides(): Guide[] {

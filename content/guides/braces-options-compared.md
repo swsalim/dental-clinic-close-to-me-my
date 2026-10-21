@@ -4,7 +4,7 @@ description: "Compare braces types, Malaysia cost factors, aligners vs braces, c
 metaTitle: "Braces Options Compared: Types, Costs and Clinic Care"
 slug: braces-options-compared
 publishedAt: 2026-10-19
-updatedAt: 2026-10-19
+updatedAt: 2026-10-21
 image: /images/guides/braces-options.svg
 imageAlt: "Illustration of fixed braces beside a clear aligner."
 primaryKeyword: braces
@@ -57,6 +57,7 @@ relatedLinks:
     label: Dental clinics in Sarawak
     description: Listings in Kuching and other Sarawak areas.
 relatedSlugs:
+  - conventional-vs-self-ligating-braces
   - the-complete-guide-to-finding-and-comparing-a-dental-clinic
   - dental-clinic-ratings-checklist
 ---
@@ -115,7 +116,7 @@ The main braces types differ in appearance, cleaning access, and bracket design.
 
 **Lingual braces** sit on the tongue side of the teeth. They may appeal to people who want a concealed fixed appliance, but speech adaptation, tongue irritation, cleaning access, and provider experience deserve a detailed discussion.
 
-**Self-ligating brackets** use a different method to hold the archwire in the bracket. Treat the term as a design description, not a promise. The AAO describes self-ligating brackets as an alternative option, but a clinic should explain the expected benefit for your case rather than rely on marketing claims about speed, comfort, or cost.
+**Self-ligating brackets** use a different method to hold the archwire in the bracket. Treat the term as a design description, not a promise. The AAO describes self-ligating brackets as an alternative option, but a clinic should explain the expected benefit for your case rather than rely on marketing claims about speed, comfort, or cost. For a closer look at elastic ties versus a built-in clip or door, read [Conventional braces vs self-ligating braces](/guides/conventional-vs-self-ligating-braces).
 
 ## Aligners vs braces: compare control, visibility, habits, and follow-up
 

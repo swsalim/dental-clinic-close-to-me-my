@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Tooth and toothbrush</title>
+  <desc id="desc">A tooth with a soft film along the gum line beside a toothbrush.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="80" y="110" width="480" height="410" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <circle cx="320" cy="300" r="140" fill="#eff6ff"/>
+  <path d="M250 270c0-46 32-80 70-80s70 34 70 80c0 32-12 54-26 80-10 16-14 32-14 46h-60c0-14-4-30-14-46-14-26-26-48-26-80z" fill="#ffffff" stroke="#2563eb" stroke-width="8"/>
+  <path d="M268 340c28 18 76 18 104 0" fill="none" stroke="#fde68a" stroke-width="14" stroke-linecap="round"/>
+  <rect x="620" y="160" width="500" height="310" rx="28" fill="#1e3a8a"/>
+  <rect x="700" y="250" width="340" height="36" rx="18" fill="#dbeafe"/>
+  <rect x="700" y="300" width="28" height="70" rx="8" fill="#ffffff"/>
+  <rect x="748" y="300" width="28" height="70" rx="8" fill="#ffffff"/>
+  <rect x="796" y="300" width="28" height="70" rx="8" fill="#ffffff"/>
+  <rect x="844" y="300" width="28" height="70" rx="8" fill="#ffffff"/>
+  <rect x="892" y="300" width="28" height="70" rx="8" fill="#ffffff"/>
+  <rect x="940" y="300" width="28" height="70" rx="8" fill="#ffffff"/>
+</svg>

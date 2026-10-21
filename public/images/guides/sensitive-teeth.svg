@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Tooth and a cold drink</title>
+  <desc id="desc">A tooth beside a glass of cold water and a short list of questions.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="80" y="120" width="460" height="390" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <circle cx="250" cy="300" r="110" fill="#eff6ff"/>
+  <path d="M200 270c0-40 24-70 50-70s50 30 50 70c0 26-8 46-18 66-6 12-10 24-10 36h-44c0-12-4-24-10-36-10-20-18-40-18-66z" fill="#ffffff" stroke="#2563eb" stroke-width="8"/>
+  <path d="M360 230h70v150a36 36 0 0 1-70 0z" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+  <path d="M372 250h46" stroke="#93c5fd" stroke-width="6" stroke-linecap="round"/>
+  <rect x="620" y="140" width="500" height="350" rx="28" fill="#1e3a8a"/>
+  <rect x="680" y="200" width="380" height="18" rx="9" fill="#ffffff"/>
+  <rect x="680" y="260" width="320" height="18" rx="9" fill="#bfdbfe"/>
+  <rect x="680" y="320" width="360" height="18" rx="9" fill="#ffffff"/>
+  <rect x="680" y="380" width="260" height="18" rx="9" fill="#bfdbfe"/>
+</svg>
