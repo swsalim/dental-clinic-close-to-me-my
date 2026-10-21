@@ -2,6 +2,7 @@ import { unstable_cache } from 'next/cache';
 
 import { siteConfig } from '@/config/site';
 
+import { getAllGuides } from '@/lib/guides';
 import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import {
   htmlToText,
@@ -53,6 +54,7 @@ const STATIC_PAGES = new Set([
 async function buildLlmsIndex() {
   const signals = await getLocationSignals(createAdminClient());
   const [states, services] = await Promise.all([getStateListings(), getAllServices()]);
+  const guides = getAllGuides();
 
   const sortedStates = states
     .slice()
@@ -84,7 +86,7 @@ async function buildLlmsIndex() {
       listItem(
         'Guides',
         mdUrl('/guides'),
-        'How to compare a dental clinic, find one nearby, and handle an urgent visit',
+        'How to compare a dental clinic, read ratings, compare braces, find one nearby, and handle an urgent visit',
       ),
       listItem(
         'Full content',
@@ -101,6 +103,10 @@ async function buildLlmsIndex() {
           `Clinics, cities, and dentists in ${state.name}`,
         ),
       )
+      .join('\n'),
+    '## Guides',
+    guides
+      .map((guide) => listItem(guide.title, mdUrl(`/guides/${guide.slug}`), guide.description))
       .join('\n'),
     '## Dental services',
     services
@@ -148,7 +154,7 @@ async function buildLlmsFull() {
   ].join('\n\n---\n\n');
 }
 
-export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v3'], {
+export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v4'], {
   revalidate: LLMS_REVALIDATE_SECONDS,
   tags: ['clinics', 'states', 'areas', 'doctors'],
 });

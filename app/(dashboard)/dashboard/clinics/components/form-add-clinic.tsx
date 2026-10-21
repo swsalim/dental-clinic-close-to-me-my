@@ -13,7 +13,7 @@ import type {
   ClinicState,
 } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CheckIcon, ChevronsUpDown, RefreshCwIcon, XIcon } from 'lucide-react';
+import { Check as CheckIcon, CaretUpDown as ChevronsUpDown, ArrowsClockwise as RefreshCwIcon, X as XIcon } from '@phosphor-icons/react/dist/ssr';
 import * as z from 'zod';
 
 // Lib imports
@@ -726,7 +726,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                               {field.value
                                 ? states.find((state) => state.id === field.value)?.name
                                 : 'Select a state'}
-                              <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                              <ChevronsUpDown weight="duotone" className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
@@ -742,7 +742,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                                   onSelect={() => {
                                     field.onChange(state.id);
                                   }}>
-                                  <CheckIcon
+                                  <CheckIcon weight="duotone"
                                     className={cn(
                                       'mr-2 h-4 w-4',
                                       state.id === field.value ? 'opacity-100' : 'opacity-0',
@@ -786,7 +786,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                               {field.value
                                 ? areas.find((area) => area.id === field.value)?.name
                                 : 'Select an area'}
-                              <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                              <ChevronsUpDown weight="duotone" className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
@@ -804,7 +804,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                                     onSelect={() => {
                                       field.onChange(area.id);
                                     }}>
-                                    <CheckIcon
+                                    <CheckIcon weight="duotone"
                                       className={cn(
                                         'mr-2 h-4 w-4',
                                         area.id === field.value ? 'opacity-100' : 'opacity-0',
@@ -1048,7 +1048,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
                                       variant="ghost"
                                       size="default"
                                       onClick={() => handleRemoveShift(day, index)}>
-                                      <XIcon className="h-4 w-4" />
+                                      <XIcon weight="duotone" className="h-4 w-4" />
                                     </Button>
                                   )}
                                 </div>
@@ -1511,7 +1511,7 @@ export default function FormAddClinic({ services, areas, states }: AddClinicForm
           <Button type="submit" disabled={isSubmitting} className="flex items-center space-x-2">
             {isSubmitting ? (
               <>
-                <RefreshCwIcon className="h-4 w-4 animate-spin" />
+                <RefreshCwIcon weight="duotone" className="h-4 w-4 animate-spin" />
                 <span>Updating...</span>
               </>
             ) : (

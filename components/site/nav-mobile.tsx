@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Menu, X } from 'lucide-react';
+import { List as Menu, X } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -40,9 +40,9 @@ export default function NavMobile() {
           'fixed right-3 top-3 z-50 inline-flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-700 shadow-sm backdrop-blur transition-colors duration-150 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-gray-100 dark:border-gray-700 dark:bg-gray-900/95 dark:text-gray-200 dark:hover:bg-gray-800 dark:focus-visible:ring-offset-gray-900 dark:active:bg-gray-700',
         )}>
         {open ? (
-          <X className="size-5" aria-hidden="true" />
+          <X weight="duotone" className="size-5" aria-hidden="true" />
         ) : (
-          <Menu className="size-5" aria-hidden="true" />
+          <Menu weight="duotone" className="size-5" aria-hidden="true" />
         )}
       </button>
 
@@ -81,7 +81,7 @@ export default function NavMobile() {
                   )}>
                   {Icon ? (
                     <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800">
-                      <Icon className="size-4" aria-hidden="true" />
+                      <Icon weight="duotone" className="size-4" aria-hidden="true" />
                     </span>
                   ) : null}
                   <span className="min-w-0">

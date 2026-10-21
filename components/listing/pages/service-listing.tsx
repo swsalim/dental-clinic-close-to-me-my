@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ClinicImage } from '@/types/clinic';
-import { ArrowRightIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
@@ -281,14 +281,14 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                   className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
                   prefetch={false}>
                   Add a clinic
-                  <ArrowRightIcon className="size-4" />
+                  <ArrowRightIcon weight="duotone" className="size-4" />
                 </Link>
                 <Link
                   href="/"
                   className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
                   prefetch={false}>
                   Get back to homepage
-                  <ArrowRightIcon className="size-4" />
+                  <ArrowRightIcon weight="duotone" className="size-4" />
                 </Link>
               </div>
             </div>

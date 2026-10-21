@@ -3,8 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { HospitalIcon } from 'lucide-react';
-
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 

@@ -106,7 +106,7 @@ export default function GuidesIndexPage() {
       <section className="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
         <Container className="py-10 md:py-14">
           <Breadcrumb items={breadcrumbItems} />
-          <h1 className="mt-4 max-w-3xl text-balance font-display text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.05] tracking-tight text-gray-900 dark:text-gray-50">
+          <h1 className="mt-4 max-w-3xl text-balance font-display text-[clamp(2rem,5vw,3.25rem)] font-black leading-[1.05] tracking-tight text-gray-900 dark:text-gray-50">
             Guides
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg dark:text-gray-300">
@@ -123,8 +123,7 @@ export default function GuidesIndexPage() {
               <Link
                 href={`/guides/${featured.slug}`}
                 prefetch={false}
-                className="relative block min-h-56 border-b-0 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-              >
+                className="relative block min-h-56 border-b-0 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
                 <Image
                   src={featured.image}
                   alt={featured.imageAlt}
@@ -139,12 +138,11 @@ export default function GuidesIndexPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700 dark:text-blue-300">
                   Featured
                 </p>
-                <h2 className="mt-3 font-display text-2xl font-bold text-gray-900 md:text-3xl dark:text-gray-50">
+                <h2 className="mt-3 font-display text-2xl font-black text-gray-900 md:text-3xl dark:text-gray-50">
                   <Link
                     href={`/guides/${featured.slug}`}
                     prefetch={false}
-                    className="hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-                  >
+                    className="!font-black hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
                     {featured.title}
                   </Link>
                 </h2>
@@ -168,9 +166,8 @@ export default function GuidesIndexPage() {
                 <Link
                   href={`/guides/${guide.slug}`}
                   prefetch={false}
-                  className="block py-6 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-                >
-                  <h2 className="font-display text-xl font-bold text-gray-900 dark:text-gray-50">
+                  className="block py-6 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
+                  <h2 className="font-display text-xl font-black text-gray-900 dark:text-gray-50">
                     {guide.title}
                   </h2>
                   <p className="mt-2 max-w-3xl text-base leading-relaxed text-gray-600 dark:text-gray-300">

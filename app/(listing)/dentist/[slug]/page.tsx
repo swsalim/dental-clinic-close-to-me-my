@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -301,14 +302,15 @@ export default async function DentistPage({ params }: DentistPageProps) {
                   </div>
                 </Prose>
               )}
-
+            </div>
+            <aside className="sticky top-20 flex flex-col gap-6 self-start">
               {/* Call to Action */}
               <div className="rounded-lg bg-blue-100 px-6 py-8 text-center dark:border dark:border-blue-800 dark:bg-blue-800/70">
                 <h2 className="mb-2 mt-0 font-display text-2xl font-semibold">
                   Book an Appointment
                 </h2>
                 <p className="mb-4 text-gray-600 dark:text-gray-300">
-                  Ready to schedule your dental appointment with {doctor.name}?
+                  Schedule your dental appointment with {doctor.name}
                 </p>
                 {doctor.clinics && doctor.clinics.length > 0 && (
                   <div className="not-prose flex flex-col items-center justify-center gap-4 md:flex-row">
@@ -316,20 +318,29 @@ export default async function DentistPage({ params }: DentistPageProps) {
                       <Link
                         key={clinic.id}
                         href={`/place/${clinic.slug}`}
-                        className={cn(buttonVariants({ variant: 'primary' }))}
-                        prefetch={false}
-                      >
+                        className={cn(buttonVariants({ variant: 'primary' }), 'text-sm')}
+                        prefetch={false}>
                         Book at {clinic.name}
                       </Link>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
-            <aside>
-              <div className="mt-8 lg:mt-0">
-                <LazyAdsSquare />
-              </div>
+              <LazyAdsSquare />
+              <a
+                href="https://invl.me/clo4xl2"
+                className="hover:!border-b-transparent"
+                target="_blank"
+                rel="nofollow noopener noreferrer">
+                <Image
+                  src="/images/product-philips-soniccare.webp"
+                  alt="Philips Sonicare Wide"
+                  width={MEDIA.card.width}
+                  height={MEDIA.card.height}
+                  sizes={MEDIA.card.sizes}
+                  className="m-0 h-auto w-full object-contain"
+                />
+              </a>
             </aside>
           </div>
         </Container>

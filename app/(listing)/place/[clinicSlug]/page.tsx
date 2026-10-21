@@ -1,30 +1,30 @@
 import { Metadata } from 'next';
 import nextDynamic from 'next/dynamic';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { ClinicDetails, ClinicHours, ClinicImage } from '@/types/clinic';
 import {
-  AwardIcon,
-  FacebookIcon,
-  GlobeIcon,
-  InstagramIcon,
-  MailIcon,
-  MapPinIcon,
-  YoutubeIcon,
-} from 'lucide-react';
+  Medal as AwardIcon,
+  FacebookLogo as FacebookIcon,
+  Globe as GlobeIcon,
+  InstagramLogo as InstagramIcon,
+  Envelope as MailIcon,
+  MapPin as MapPinIcon,
+  YoutubeLogo as YoutubeIcon,
+} from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
 import { getClinicBySlugCached } from '@/lib/data';
-import { MEDIA } from '@/lib/media-sizes';
 import { resolveMediaUrl } from '@/lib/media';
+import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl } from '@/lib/utils';
 
 import { getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
-import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { ClinicStatus } from '@/components/clinic-status';
 import TikTok from '@/components/icons/tiktok';
 import { MediaImage } from '@/components/image/media-image';
@@ -318,22 +318,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
         openingHoursSpecification={openingHoursSpecification}
         reviews={parsedClinic.reviews?.slice(0, 5) ?? []}
       />
-      {parsedClinic.images && parsedClinic.images.length > 0 && parsedClinic.images[0] && (
-        <Wrapper className="relative h-56 overflow-hidden md:h-96">
-          <MediaImage
-            src={resolveMediaUrl(parsedClinic.images[0] as ClinicImage) ?? ''}
-            alt={parsedClinic.name}
-            fill
-            priority
-            sizes={MEDIA.hero.sizes}
-            className="object-cover object-center"
-          />
-        </Wrapper>
-      )}
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
       <Wrapper className="pb-0 md:pb-0">
         <Container>
-          <div className="lg:flex lg:items-start lg:justify-between lg:gap-x-6">
+          <div className="lg:flex lg:items-center lg:justify-between lg:gap-x-6">
             {/* left column */}
             <div className="flex w-full min-w-0 flex-1 flex-col gap-y-4 lg:w-9/12">
               <div>
@@ -349,7 +337,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   <div className="flex items-center gap-x-2">
                     {parsedClinic.is_featured && (
                       <Badge variant="brand">
-                        <AwardIcon className="me-1 h-4 w-4" aria-hidden="true" />
+                        <AwardIcon weight="duotone" className="me-1 h-4 w-4" aria-hidden="true" />
                         Featured
                       </Badge>
                     )}
@@ -367,20 +355,20 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               </div>
               <div className="flex flex-col gap-x-4 gap-y-2">
                 <div className="flex items-center gap-x-2">
-                  <MapPinIcon className="h-5 w-5 text-blue-300" />
+                  <MapPinIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                   <span className="text-sm text-gray-500 dark:text-gray-300">{fullAddress}</span>
                 </div>
                 {parsedClinic.email && (
-                  <div className="flex items-center gap-x-2">
-                    <MailIcon className="h-5 w-5 text-blue-300" />
+                  <div className="flex items-center gap-x-2 md:hidden">
+                    <MailIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                     <Link href={`mailto:${parsedClinic.email}`} prefetch={false}>
                       <span className="text-sm">{parsedClinic.email}</span>
                     </Link>
                   </div>
                 )}
                 {parsedClinic.website && (
-                  <div className="flex items-center gap-x-2">
-                    <GlobeIcon className="h-5 w-5 text-blue-300" />
+                  <div className="flex items-center gap-x-2 md:hidden">
+                    <GlobeIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                     <Link
                       href={`${parsedClinic.website}?utm_source=dentalclinicclosetome.my`}
                       rel="nofollow"
@@ -390,7 +378,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   </div>
                 )}
               </div>
-              <div className="flex flex-col gap-y-2">
+              <div className="flex flex-col gap-y-2 md:hidden">
                 {hasSocialAccounts && (
                   <div className="flex gap-3">
                     {parsedClinic.facebook_url && (
@@ -403,7 +391,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="Visit business Facebook page">
-                          <FacebookIcon className="h-5 w-5" />
+                          <FacebookIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit Facebook</span>
                         </a>
                       </Button>
@@ -418,7 +406,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="Visit business Instagram page">
-                          <InstagramIcon className="h-5 w-5" />
+                          <InstagramIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit Instagram</span>
                         </a>
                       </Button>
@@ -433,7 +421,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="Visit business YouTube channel">
-                          <YoutubeIcon className="h-5 w-5" />
+                          <YoutubeIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit YouTube</span>
                         </a>
                       </Button>
@@ -453,14 +441,12 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                         </a>
                       </Button>
                     )}
-                    {/* add a button with a map icon that opens the map in a new tab and show directions to the clinic */}
-                    <GetDirectionButton clinicSlug={clinicSlug} name={parsedClinic.name} />
                   </div>
                 )}
               </div>
             </div>
             {/* right column */}
-            <div className="mt-5 flex w-full flex-col-reverse justify-between gap-x-4 gap-y-4 sm:flex-row lg:mt-0 lg:w-3/12">
+            <div className="mt-5 flex w-full flex-col justify-between gap-x-4 gap-y-4 lg:mt-0 lg:w-3/12">
               {!parsedClinic.is_permanently_closed && parsedClinic.phone && (
                 <>
                   <BookAppointmentButton
@@ -480,80 +466,108 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                   />
                 </>
               )}
+              <GetDirectionButton clinicSlug={clinicSlug} name={parsedClinic.name} />
             </div>
           </div>
 
-          <LazyAdsLeaderboard />
-
           {/* content */}
           <div className="py-8 md:gap-8 lg:grid lg:grid-cols-sidebar lg:gap-10">
-            <Prose className="space-y-8">
-              {parsedClinic.description && (
-                <article>
-                  <h2 className="my-0 font-display dark:text-gray-50">About {parsedClinic.name}</h2>
-                  <TruncatedHtml html={parsedClinic.description} limit={80} />
-                </article>
-              )}
-
-              <DoctorPracticeAvatar clinicSlug={clinicSlug} />
-
-              {parsedClinic.services && (
-                <article className="block lg:hidden">
-                  <h2 className="font-display dark:text-gray-50">{parsedClinic.name} Services</h2>
-                  <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 md:grid-cols-6">
-                    {parsedClinic.services.map((service, index) => (
-                      <div
-                        key={service.slug ?? service.name ?? String(index)}
-                        tabIndex={0}
-                        aria-label={service.name}
-                        className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-3 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
-                        role="button">
-                        {getServiceIcon(service.slug ?? '')}
-                        <div className="mt-4 text-center text-xs">{service.name}</div>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              )}
-
-              {parsedClinic.hours && parsedClinic.hours.length > 0 && (
-                <article>
-                  <h2 className="font-display dark:text-gray-50">
-                    {parsedClinic.name}&apos;s Opening Hours
+            <div>
+              {parsedClinic.images && (
+                <article className="mb-8">
+                  <h2 className="sr-only font-display dark:text-gray-50">
+                    Gallery of {parsedClinic.name}
                   </h2>
-                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
-                    {renderOpeningHours(parsedClinic)}
-                  </div>
-                </article>
-              )}
-
-              {parsedClinic.images && parsedClinic.images.length > 1 && (
-                <article>
-                  <h2 className="font-display dark:text-gray-50">Gallery of {parsedClinic.name}</h2>
                   <ImageGallery images={parsedClinic.images} title={parsedClinic.name || ''} />
                 </article>
               )}
 
-              <article className="block lg:hidden">
-                <Map
-                  latitude={parsedClinic.latitude ?? 0}
-                  longitude={parsedClinic.longitude ?? 0}
-                  name={parsedClinic.name ?? ''}
-                />
-              </article>
-              {parsedClinic.id && (
-                <>
-                  <AddReviewForm clinicId={parsedClinic.id} />
-                  <Reviews reviews={parsedClinic.reviews} clinicSlug={clinicSlug} />
-                </>
-              )}
-            </Prose>
+              <div className="mx-auto mb-10 max-w-2xl">
+                <a
+                  href="https://invl.me/clo4xl2"
+                  className="hover:!border-b-transparent"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer">
+                  <Image
+                    src="/images/product-philips-soniccare-wide.webp"
+                    alt="Philips Sonicare Wide"
+                    width={MEDIA.adLeaderboard.width}
+                    height={MEDIA.adLeaderboard.height}
+                    sizes={MEDIA.adLeaderboard.sizes}
+                    className="m-0 h-auto w-full object-contain"
+                  />
+                </a>
+              </div>
+              <Prose className="space-y-8">
+                {parsedClinic.description && (
+                  <article>
+                    <h2 className="my-0 font-display dark:text-gray-50">
+                      About {parsedClinic.name}
+                    </h2>
+                    <TruncatedHtml html={parsedClinic.description} limit={80} />
+                  </article>
+                )}
+
+                <DoctorPracticeAvatar clinicSlug={clinicSlug} />
+
+                {parsedClinic.hours && parsedClinic.hours.length > 0 && (
+                  <article>
+                    <h2 className="font-display dark:text-gray-50">
+                      {parsedClinic.name}&apos;s Opening Hours
+                    </h2>
+                    <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-950/40">
+                      {renderOpeningHours(parsedClinic)}
+                    </div>
+                  </article>
+                )}
+
+                {parsedClinic.services && (
+                  <article className="block">
+                    <h2 className="font-display dark:text-gray-50">{parsedClinic.name} Services</h2>
+                    <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 md:grid-cols-6">
+                      {parsedClinic.services.map((service, index) => (
+                        <div
+                          key={service.slug ?? service.name ?? String(index)}
+                          tabIndex={0}
+                          aria-label={service.name}
+                          className="flex cursor-pointer flex-col items-center justify-center rounded-xl bg-white p-3 text-gray-900 shadow-md outline-none transition hover:shadow-lg focus:ring-2 focus:ring-red-400 dark:bg-gray-950 dark:text-gray-50"
+                          role="button">
+                          {getServiceIcon(service.slug ?? '')}
+                          <div className="mt-4 text-center text-xs">{service.name}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+                )}
+
+                <article className="block lg:hidden">
+                  <Map
+                    latitude={parsedClinic.latitude ?? 0}
+                    longitude={parsedClinic.longitude ?? 0}
+                    name={parsedClinic.name ?? ''}
+                  />
+                </article>
+                {parsedClinic.id && (
+                  <>
+                    <AddReviewForm clinicId={parsedClinic.id} />
+                    <Reviews reviews={parsedClinic.reviews} clinicSlug={clinicSlug} />
+                  </>
+                )}
+              </Prose>
+            </div>
             <ClinicSidebar
               clinicSlug={clinicSlug}
               clinicName={parsedClinic.name ?? ''}
+              address={buildFullAddress(parsedClinic)}
+              phone={parsedClinic.phone}
+              email={parsedClinic.email}
+              website={parsedClinic.website}
+              facebookUrl={parsedClinic.facebook_url}
+              instagramUrl={parsedClinic.instagram_url}
+              youtubeUrl={parsedClinic.youtube_url}
+              tiktokUrl={parsedClinic.tiktok_url}
               latitude={parsedClinic.latitude ?? 0}
               longitude={parsedClinic.longitude ?? 0}
-              services={parsedClinic.services}
             />
           </div>
         </Container>

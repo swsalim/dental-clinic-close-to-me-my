@@ -7,7 +7,7 @@ import Image from 'next/image';
 import type { ClinicImageEntry } from '@/lib/clinic-images';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
-import { GripVertical, XIcon } from 'lucide-react';
+import { DotsSixVertical as GripVertical, X as XIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { MediaImage } from '@/components/image/media-image';
 import { cn } from '@/lib/utils';
@@ -101,14 +101,14 @@ export function ClinicImageGallery({
                   type="button"
                   className="absolute left-2 top-2 z-10 flex h-8 w-8 cursor-grab items-center justify-center rounded-full border-2 border-gray-700 bg-white active:cursor-grabbing dark:bg-gray-900/90"
                   aria-label={`Drag image ${index + 1}`}>
-                  <GripVertical className="h-4 w-4" />
+                  <GripVertical weight="duotone" className="h-4 w-4" />
                 </button>
                 <button
                   type="button"
                   className="absolute right-2 top-2 z-10 h-8 w-8 rounded-full border-2 border-gray-700 bg-white dark:bg-gray-900/90"
                   onClick={() => handleRemove(index)}
                   aria-label={`Remove image ${index + 1}`}>
-                  <XIcon className="mx-auto h-5 w-5" />
+                  <XIcon weight="duotone" className="mx-auto h-5 w-5" />
                 </button>
                 {index === 0 && (
                   <span className="absolute bottom-2 left-2 z-10 rounded bg-black/70 px-2 py-0.5 text-xs text-white">

@@ -1,10 +1,5 @@
 import { Table } from '@tanstack/react-table';
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ChevronsLeftIcon,
-  ChevronsRightIcon,
-} from 'lucide-react';
+import { CaretLeft as ChevronLeftIcon, CaretRight as ChevronRightIcon, CaretDoubleLeft as ChevronsLeftIcon, CaretDoubleRight as ChevronsRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import {
   Select,
@@ -73,7 +68,7 @@ export function DataTablePagination<TData>({
             onClick={() => table.setPageIndex(0)}
             disabled={!table.getCanPreviousPage()}
             aria-label="Go to first page">
-            <ChevronsLeftIcon className="h-4 w-4" />
+            <ChevronsLeftIcon weight="duotone" className="h-4 w-4" />
           </Button>
           <Button
             variant="secondary"
@@ -81,7 +76,7 @@ export function DataTablePagination<TData>({
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
             aria-label="Go to previous page">
-            <ChevronLeftIcon className="h-4 w-4" />
+            <ChevronLeftIcon weight="duotone" className="h-4 w-4" />
           </Button>
           <Button
             variant="secondary"
@@ -89,7 +84,7 @@ export function DataTablePagination<TData>({
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
             aria-label="Go to next page">
-            <ChevronRightIcon className="h-4 w-4" />
+            <ChevronRightIcon weight="duotone" className="h-4 w-4" />
           </Button>
           <Button
             variant="secondary"
@@ -97,7 +92,7 @@ export function DataTablePagination<TData>({
             onClick={() => table.setPageIndex(table.getPageCount() - 1)}
             disabled={!table.getCanNextPage()}
             aria-label="Go to last page">
-            <ChevronsRightIcon className="h-4 w-4" />
+            <ChevronsRightIcon weight="duotone" className="h-4 w-4" />
           </Button>
         </div>
       </div>

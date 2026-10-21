@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CalendarIcon, Loader2 } from 'lucide-react';
+import { Calendar as CalendarIcon, CircleNotch as Loader2 } from '@phosphor-icons/react/dist/ssr';
 import * as z from 'zod';
 
 import { cn } from '@/lib/utils';
@@ -273,7 +273,7 @@ export default function AddBookingForm({ clinicName, currentUrl, area }: Props) 
                             ) : (
                               <span>Pick a date</span>
                             )}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                            <CalendarIcon weight="duotone" className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
@@ -313,7 +313,7 @@ export default function AddBookingForm({ clinicName, currentUrl, area }: Props) 
               <Button type="submit" disabled={isSubmitting} className="w-full">
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 weight="duotone" className="mr-2 h-4 w-4 animate-spin" />
                     Submitting...
                   </>
                 ) : (

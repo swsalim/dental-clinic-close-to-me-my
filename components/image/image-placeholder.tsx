@@ -1,4 +1,4 @@
-import { CameraIcon } from 'lucide-react';
+import { Camera as CameraIcon } from '@phosphor-icons/react/dist/ssr';
 
 interface ImagePlaceholderProps {
   title?: string;
@@ -16,7 +16,7 @@ export function ImagePlaceholder({ title, isPerson = false, className }: ImagePl
       aria-label={title ? `Placeholder for ${title}` : 'Image placeholder'}>
       {!isPerson ? (
         <>
-          <CameraIcon className="h-10 w-10 text-gray-600 dark:text-gray-400" aria-hidden="true" />
+          <CameraIcon weight="duotone" className="h-10 w-10 text-gray-600 dark:text-gray-400" aria-hidden="true" />
           {title && (
             <p className="mb-0 mt-3 text-center text-gray-600 dark:text-gray-400">
               Add image for {title} <span className="sr-only">:)</span>

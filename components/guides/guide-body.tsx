@@ -43,8 +43,8 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
               <table>
                 <thead>
                   <tr>
-                    {block.headers.map((header, headerIndex) => (
-                      <th key={`${headerIndex}-${header}`}>
+                    {block.headers.map((header) => (
+                      <th key={header}>
                         <MarkdownText text={header} />
                       </th>
                     ))}

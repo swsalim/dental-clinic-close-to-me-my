@@ -33,79 +33,79 @@ export async function getAllServices() {
 
 const slugToIcon: Record<string, React.ReactNode> = {
   veneers: (
-    <Icons.DentalVeneer className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Veneer" />
+    <Icons.DentalVeneer className="mx-auto h-16 w-16 text-blue-100" aria-label="Dental Veneer" />
   ),
   invisalign: (
-    <Icons.Invisalign className="mx-auto h-16 w-16 text-blue-500" aria-label="Invisalign" />
+    <Icons.Invisalign className="mx-auto h-16 w-16 text-blue-100" aria-label="Invisalign" />
   ),
   'cosmetic-dentistry': (
     <Icons.CosmeticDentistry
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="Cosmetic Dentistry"
     />
   ),
   periodontics: (
-    <Icons.Periodontics className="mx-auto h-16 w-16 text-blue-500" aria-label="Periodontics" />
+    <Icons.Periodontics className="mx-auto h-16 w-16 text-blue-100" aria-label="Periodontics" />
   ),
   'general-dentistry': (
     <Icons.GeneralDentistry
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="General Dentistry"
     />
   ),
   'emergency-dentistry': (
     <Icons.EmergencyDentistry
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="Emergency Dentistry"
     />
   ),
   'root-canal': (
-    <Icons.RootCanal className="mx-auto h-16 w-16 text-blue-500" aria-label="Root Canal" />
+    <Icons.RootCanal className="mx-auto h-16 w-16 text-blue-100" aria-label="Root Canal" />
   ),
   endodontics: (
-    <Icons.RootCanal className="mx-auto h-16 w-16 text-blue-500" aria-label="Root Canal" />
+    <Icons.RootCanal className="mx-auto h-16 w-16 text-blue-100" aria-label="Root Canal" />
   ),
-  bacteria: <Icons.Bacteria className="mx-auto h-16 w-16 text-blue-500" aria-label="Bacteria" />,
+  bacteria: <Icons.Bacteria className="mx-auto h-16 w-16 text-blue-100" aria-label="Bacteria" />,
   'pediatric-dentistry': (
     <Icons.PaediatricDentistry
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="Paediatric Dentistry"
     />
   ),
   'dental-xrays': (
-    <Icons.DentalXrays className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Xrays" />
+    <Icons.DentalXrays className="mx-auto h-16 w-16 text-blue-100" aria-label="Dental Xrays" />
   ),
-  crowning: <Icons.Crowning className="mx-auto h-16 w-16 text-blue-500" aria-label="Crowning" />,
+  crowning: <Icons.Crowning className="mx-auto h-16 w-16 text-blue-100" aria-label="Crowning" />,
   prosthodontics: (
-    <Icons.Dentures className="mx-auto h-16 w-16 text-blue-500" aria-label="Dentures" />
+    <Icons.Dentures className="mx-auto h-16 w-16 text-blue-100" aria-label="Dentures" />
   ),
   'tooth-extraction': (
     <Icons.ToothExtraction
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="Tooth Extraction"
     />
   ),
   'wisdom-tooth-extraction': (
     <Icons.ToothExtraction
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="Tooth Extraction"
     />
   ),
   'dental-implants': (
-    <Icons.DentalImplant className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Implant" />
+    <Icons.DentalImplant className="mx-auto h-16 w-16 text-blue-100" aria-label="Dental Implant" />
   ),
   'oral-surgery': (
-    <Icons.DentalImplant className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Implant" />
+    <Icons.DentalImplant className="mx-auto h-16 w-16 text-blue-100" aria-label="Dental Implant" />
   ),
   orthodontics: (
-    <Icons.DentalBraces className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Braces" />
+    <Icons.DentalBraces className="mx-auto h-16 w-16 text-blue-100" aria-label="Dental Braces" />
   ),
   braces: (
-    <Icons.DentalBraces className="mx-auto h-16 w-16 text-blue-500" aria-label="Dental Braces" />
+    <Icons.DentalBraces className="mx-auto h-16 w-16 text-blue-100" aria-label="Dental Braces" />
   ),
   'teeth-whitening': (
     <Icons.TeethWhitening
-      className="mx-auto h-16 w-16 text-blue-500"
+      className="mx-auto h-16 w-16 text-blue-100"
       aria-label="Teeth Whitening"
     />
   ),

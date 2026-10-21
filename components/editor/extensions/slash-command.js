@@ -7,16 +7,16 @@ import { useCompletion } from 'ai/react';
 import {
   CheckSquare,
   Code,
-  Heading1,
-  Heading2,
-  Heading3,
+  TextHOne as Heading1,
+  TextHTwo as Heading2,
+  TextHThree as Heading3,
   Image as ImageIcon,
-  List,
-  ListOrdered,
-  MessageSquarePlus,
-  Text,
-  TextQuote,
-} from 'lucide-react';
+  ListBullets as List,
+  ListNumbers as ListOrdered,
+  ChatCircle as MessageSquarePlus,
+  TextT as Text,
+  Quotes as TextQuote,
+} from '@phosphor-icons/react/dist/ssr';
 import { toast } from 'sonner';
 import tippy from 'tippy.js';
 
@@ -59,7 +59,7 @@ const getSuggestionItems = ({ query }) => {
     {
       title: 'Send Feedback',
       description: 'Let us know how we can improve.',
-      icon: <MessageSquarePlus size={18} />,
+      icon: <MessageSquarePlus size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).run();
         window.open('/feedback', '_blank');
@@ -69,7 +69,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Text',
       description: 'Just start typing with plain text.',
       searchTerms: ['p', 'paragraph'],
-      icon: <Text size={18} />,
+      icon: <Text size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).toggleNode('paragraph', 'paragraph').run();
       },
@@ -78,7 +78,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'To-do List',
       description: 'Track tasks with a to-do list.',
       searchTerms: ['todo', 'task', 'list', 'check', 'checkbox'],
-      icon: <CheckSquare size={18} />,
+      icon: <CheckSquare size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).toggleTaskList().run();
       },
@@ -87,7 +87,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Heading 1',
       description: 'Big section heading.',
       searchTerms: ['title', 'big', 'large'],
-      icon: <Heading1 size={18} />,
+      icon: <Heading1 size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).setNode('heading', { level: 1 }).run();
       },
@@ -96,7 +96,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Heading 2',
       description: 'Medium section heading.',
       searchTerms: ['subtitle', 'medium'],
-      icon: <Heading2 size={18} />,
+      icon: <Heading2 size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).setNode('heading', { level: 2 }).run();
       },
@@ -105,7 +105,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Heading 3',
       description: 'Small section heading.',
       searchTerms: ['subtitle', 'small'],
-      icon: <Heading3 size={18} />,
+      icon: <Heading3 size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).setNode('heading', { level: 3 }).run();
       },
@@ -114,7 +114,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Bullet List',
       description: 'Create a simple bullet list.',
       searchTerms: ['unordered', 'point'],
-      icon: <List size={18} />,
+      icon: <List size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).toggleBulletList().run();
       },
@@ -123,7 +123,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Numbered List',
       description: 'Create a list with numbering.',
       searchTerms: ['ordered'],
-      icon: <ListOrdered size={18} />,
+      icon: <ListOrdered size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).toggleOrderedList().run();
       },
@@ -132,7 +132,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Quote',
       description: 'Capture a quote.',
       searchTerms: ['blockquote'],
-      icon: <TextQuote size={18} />,
+      icon: <TextQuote size={18} weight="duotone" />,
       command: ({ editor, range }) =>
         editor
           .chain()
@@ -146,7 +146,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Code',
       description: 'Capture a code snippet.',
       searchTerms: ['codeblock'],
-      icon: <Code size={18} />,
+      icon: <Code size={18} weight="duotone" />,
       command: ({ editor, range }) =>
         editor.chain().focus().deleteRange(range).toggleCodeBlock().run(),
     },
@@ -154,7 +154,7 @@ const getSuggestionItems = ({ query }) => {
       title: 'Image',
       description: 'Upload an image from your computer.',
       searchTerms: ['photo', 'picture', 'media'],
-      icon: <ImageIcon size={18} />,
+      icon: <ImageIcon size={18} weight="duotone" />,
       command: ({ editor, range }) => {
         editor.chain().focus().deleteRange(range).run();
         // upload image

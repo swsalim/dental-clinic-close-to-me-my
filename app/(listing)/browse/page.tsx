@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { ClinicArea } from '@/types/clinic';
 import { ClinicState } from '@/types/clinic';
-import { ArrowRightIcon, MapPinIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon, MapPin as MapPinIcon } from '@phosphor-icons/react/dist/ssr';
 import pluralize from 'pluralize';
 
 import { siteConfig } from '@/config/site';
@@ -303,7 +303,7 @@ export default async function BrowsePage() {
                         </div>
                         <span className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-white/30 bg-transparent px-3 py-2 text-sm font-semibold text-white backdrop-blur-sm transition group-hover:bg-white group-hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800/40 dark:group-hover:text-gray-800">
                           View all
-                          <ArrowRightIcon className="size-4" aria-hidden="true" />
+                          <ArrowRightIcon weight="duotone" className="size-4" aria-hidden="true" />
                         </span>
                       </div>
                     </Link>
@@ -315,7 +315,7 @@ export default async function BrowsePage() {
                             href={`/${state.slug}/${area.slug}`}
                             prefetch={false}
                             className="dark:bg-blue-950/40 dark:hover:bg-blue-950/30 group flex min-w-0 items-start gap-3 rounded-lg border border-transparent px-3 py-2.5 no-underline transition hover:border-blue-200 hover:bg-blue-50 dark:hover:border-blue-800">
-                            <MapPinIcon
+                            <MapPinIcon weight="duotone"
                               className="mt-0.5 size-4 shrink-0 text-gray-400 group-hover:text-blue-500 dark:text-gray-500 dark:group-hover:text-blue-400"
                               aria-hidden="true"
                             />

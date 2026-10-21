@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Clinic } from '@/types/clinic';
 import { ColumnDef } from '@tanstack/react-table';
-import { BadgeCheckIcon, XCircleIcon } from 'lucide-react';
+import { SealCheck as BadgeCheckIcon, XCircle as XCircleIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { absoluteUrl } from '@/lib/utils';
 
@@ -145,9 +145,9 @@ export const columns: ColumnDef<ClinicTableData>[] = [
       return (
         <div className="flex items-center">
           {isActive ? (
-            <BadgeCheckIcon className="mr-2 h-4 w-4 text-green-500" />
+            <BadgeCheckIcon weight="duotone" className="mr-2 h-4 w-4 text-green-500" />
           ) : (
-            <XCircleIcon className="mr-2 h-4 w-4 text-red-500" />
+            <XCircleIcon weight="duotone" className="mr-2 h-4 w-4 text-red-500" />
           )}
           <span>{isActive ? 'Active' : 'Not Active'}</span>
         </div>

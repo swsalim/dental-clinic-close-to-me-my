@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { ClinicDoctor } from '@/types/clinic';
 import { ColumnDef } from '@tanstack/react-table';
-import { BadgeCheckIcon, MedalIcon, XCircleIcon } from 'lucide-react';
+import { SealCheck as BadgeCheckIcon, Medal as MedalIcon, XCircle as XCircleIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { absoluteUrl } from '@/lib/utils';
 
@@ -81,7 +81,7 @@ export const columns: ColumnDef<DoctorTableData>[] = [
       const isFeatured = row.getValue('is_featured') as boolean;
       return (
         <div className="flex items-center">
-          {isFeatured && <MedalIcon className="mr-2 h-4 w-4 text-green-500" />}
+          {isFeatured && <MedalIcon weight="duotone" className="mr-2 h-4 w-4 text-green-500" />}
           <span>{isFeatured ? 'Yes' : 'No'}</span>
         </div>
       );
@@ -98,9 +98,9 @@ export const columns: ColumnDef<DoctorTableData>[] = [
       return (
         <div className="flex items-center">
           {isActive ? (
-            <BadgeCheckIcon className="mr-2 h-4 w-4 text-green-500" />
+            <BadgeCheckIcon weight="duotone" className="mr-2 h-4 w-4 text-green-500" />
           ) : (
-            <XCircleIcon className="mr-2 h-4 w-4 text-red-500" />
+            <XCircleIcon weight="duotone" className="mr-2 h-4 w-4 text-red-500" />
           )}
           <span>{isActive ? 'Active' : 'Not Active'}</span>
         </div>

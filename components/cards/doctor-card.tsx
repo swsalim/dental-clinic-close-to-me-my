@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { ClinicDoctor } from '@/types/clinic';
-import { AwardIcon, HospitalIcon, MapPinIcon, SquareUserRoundIcon } from 'lucide-react';
+import { Medal as AwardIcon, Hospital as HospitalIcon, MapPin as MapPinIcon, UserSquare as SquareUserRoundIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
@@ -40,13 +40,13 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-gray-100 dark:bg-gray-800">
-              <SquareUserRoundIcon className="h-12 w-12 text-gray-400 dark:text-gray-500" />
+              <SquareUserRoundIcon weight="duotone" className="h-12 w-12 text-gray-400 dark:text-gray-500" />
             </div>
           )}
           <div className="absolute right-2 top-2 flex flex-wrap justify-end gap-2">
             {doctor.is_featured && (
               <Badge variant="brand">
-                <AwardIcon className="me-1 h-4 w-4" aria-hidden="true" />
+                <AwardIcon weight="duotone" className="me-1 h-4 w-4" aria-hidden="true" />
                 Featured
               </Badge>
             )}
@@ -57,13 +57,13 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
           {primaryClinic && (
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <HospitalIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
+                <HospitalIcon weight="duotone" className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
                 <p className="line-clamp-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                   {primaryClinic.name}
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <MapPinIcon className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
+                <MapPinIcon weight="duotone" className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
                 <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-400">
                   {primaryClinic.address && `${primaryClinic.address}, `}
                   {primaryClinic.postal_code && `${primaryClinic.postal_code}, `}

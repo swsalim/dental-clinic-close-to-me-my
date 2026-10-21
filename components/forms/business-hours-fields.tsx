@@ -2,7 +2,7 @@
 
 import type { Control, UseFormGetValues, UseFormSetValue } from 'react-hook-form';
 
-import { XIcon } from 'lucide-react';
+import { X as XIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { DAYS_OF_WEEK, type BusinessHours, type DayOfWeek } from '@/lib/listing/business-hours';
 
@@ -155,7 +155,7 @@ export function BusinessHoursFields({ control, getValues, setValue }: Props) {
                         variant="ghost"
                         size="default"
                         onClick={() => handleRemoveShift(day, index)}>
-                        <XIcon className="h-4 w-4" />
+                        <XIcon weight="duotone" className="h-4 w-4" />
                       </Button>
                     )}
                   </div>

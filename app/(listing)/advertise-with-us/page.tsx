@@ -1,13 +1,5 @@
-import {
-  ChartNoAxesCombinedIcon,
-  CheckIcon,
-  HandCoinsIcon,
-  HeartHandshakeIcon,
-  type LucideIcon,
-  MapPinIcon,
-  ShieldCheckIcon,
-  SproutIcon,
-} from 'lucide-react';
+import { ChartLineUp as ChartNoAxesCombinedIcon, Check as CheckIcon, HandCoins as HandCoinsIcon, Handshake as HeartHandshakeIcon, MapPin as MapPinIcon, ShieldCheck as ShieldCheckIcon, Plant as SproutIcon } from '@phosphor-icons/react/dist/ssr';
+import type { Icon } from '@phosphor-icons/react';
 
 import { imageKitUrl } from '@/lib/imagekit-url';
 import { MEDIA } from '@/lib/media-sizes';
@@ -65,7 +57,7 @@ export const metadata = {
 const features: {
   title: string;
   description: string;
-  Icon: LucideIcon;
+  Icon: Icon;
   card: string;
   icon: string;
   titleColor: string;
@@ -153,15 +145,15 @@ function AdvertiseHero() {
       </p>
       <ul className="mx-auto mt-8 flex flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
         <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-          <CheckIcon className="size-5 text-violet-600 dark:text-violet-400" aria-hidden="true" />
+          <CheckIcon weight="duotone" className="size-5 text-violet-600 dark:text-violet-400" aria-hidden="true" />
           <span>Nationwide patient audience</span>
         </li>
         <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-          <CheckIcon className="size-5 text-violet-600 dark:text-violet-400" aria-hidden="true" />
+          <CheckIcon weight="duotone" className="size-5 text-violet-600 dark:text-violet-400" aria-hidden="true" />
           <span>Verified clinic listings</span>
         </li>
         <li className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-          <CheckIcon className="size-5 text-violet-600 dark:text-violet-400" aria-hidden="true" />
+          <CheckIcon weight="duotone" className="size-5 text-violet-600 dark:text-violet-400" aria-hidden="true" />
           <span>Priority city placement</span>
         </li>
       </ul>
@@ -188,7 +180,11 @@ function AdvertiseWhyUs() {
           <li
             key={feature.title}
             className={cn('flex min-w-0 flex-col gap-4 rounded-xl border p-5', feature.card)}>
-            <feature.Icon className={cn('size-7 shrink-0', feature.icon)} aria-hidden="true" />
+            <feature.Icon
+              weight="duotone"
+              className={cn('size-7 shrink-0', feature.icon)}
+              aria-hidden="true"
+            />
             <div className="min-w-0">
               <h3 className={cn('font-display text-lg font-bold leading-snug', feature.titleColor)}>
                 {feature.title}

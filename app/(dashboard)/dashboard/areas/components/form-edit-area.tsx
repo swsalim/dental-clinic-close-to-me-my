@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 
 import type { ClinicArea } from '@/types/clinic';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { RefreshCwIcon, XIcon } from 'lucide-react';
+import { ArrowsClockwise as RefreshCwIcon, X as XIcon } from '@phosphor-icons/react/dist/ssr';
 import * as z from 'zod';
 
 // Lib imports
@@ -117,7 +117,7 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
             }}
             aria-label="Remove image"
             tabIndex={0}>
-            <XIcon className="mx-auto h-6 w-6" />
+            <XIcon weight="duotone" className="mx-auto h-6 w-6" />
           </button>
           <Image
             className="h-full w-full object-cover"
@@ -386,7 +386,7 @@ export default function FormEditArea({ area }: EditAreaFormProps) {
           <Button type="submit" disabled={isSubmitting} className="flex items-center space-x-2">
             {isSubmitting ? (
               <>
-                <RefreshCwIcon className="h-4 w-4 animate-spin" />
+                <RefreshCwIcon weight="duotone" className="h-4 w-4 animate-spin" />
                 <span>Updating Area Info...</span>
               </>
             ) : (

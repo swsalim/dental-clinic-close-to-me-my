@@ -54,6 +54,8 @@ const GUIDE_ORDER = [
   'the-complete-guide-to-finding-and-comparing-a-dental-clinic',
   'how-to-find-a-nearby-dentist-clinic-that-fits-your-needs',
   'dental-clinic-open-now-common-questions-about-urgent-visits',
+  'dental-clinic-ratings-checklist',
+  'braces-options-compared',
 ];
 
 /** Guides published 2026-10-20. Separate from GUIDE_ORDER so other guide lists can merge. */

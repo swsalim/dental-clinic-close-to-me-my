@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
+import { CaretLeft as ChevronLeftIcon, CaretRight as ChevronRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -50,7 +50,7 @@ const Breadcrumb = ({ items, theme = 'light', routerCallback }: BreadcrumbProps)
               e.preventDefault();
               routerCallback();
             }}>
-            <ChevronLeftIcon
+            <ChevronLeftIcon weight="duotone"
               className={cn(
                 'ml-1 mr-1 h-5 w-5 flex-shrink-0 transition-colors',
                 styles[theme].icon,
@@ -80,7 +80,7 @@ const Breadcrumb = ({ items, theme = 'light', routerCallback }: BreadcrumbProps)
           </li>
           {items.map((item, index) => (
             <li key={`breadcrumb-item-${index}`} className="flex shrink-0 items-center">
-              <ChevronRightIcon
+              <ChevronRightIcon weight="duotone"
                 className={cn(
                   'h-5 w-5 flex-shrink-0 drop-shadow-sm transition-colors',
                   styles[theme].icon,

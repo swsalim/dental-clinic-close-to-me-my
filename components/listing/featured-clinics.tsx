@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { ArrowRightIcon, AwardIcon, MapPinIcon } from 'lucide-react';
+import { ArrowRight as ArrowRightIcon, Medal as AwardIcon, MapPin as MapPinIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { cn } from '@/lib/utils';
 
@@ -71,7 +71,7 @@ function SecondaryCard({ clinic }: { clinic: FeaturedClinicSpotlightData }) {
       <div className="flex min-w-0 flex-1 flex-col gap-3 p-5">
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-flex items-center gap-1 rounded-md border border-blue-300/50 bg-blue-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-blue-700 dark:border-blue-800 dark:bg-blue-950/50 dark:text-blue-300">
-            <AwardIcon className="size-3" aria-hidden="true" />
+            <AwardIcon weight="duotone" className="size-3" aria-hidden="true" />
             Featured
           </span>
           <span className="text-[10px] font-semibold uppercase tracking-wide text-gray-400">
@@ -86,7 +86,7 @@ function SecondaryCard({ clinic }: { clinic: FeaturedClinicSpotlightData }) {
         <StarRating rating={clinic.rating} className="text-sm" />
 
         <p className="flex min-w-0 items-start gap-1.5 text-sm text-gray-500 dark:text-gray-400">
-          <MapPinIcon className="mt-0.5 size-3.5 shrink-0 text-blue-300" aria-hidden="true" />
+          <MapPinIcon weight="duotone" className="mt-0.5 size-3.5 shrink-0 text-blue-300" aria-hidden="true" />
           <span className="min-w-0">
             {clinic.area}, {clinic.state}
           </span>
@@ -136,7 +136,7 @@ export function FeaturedClinics() {
             prefetch={false}
             className="inline-flex shrink-0 items-center gap-1.5 self-start rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-semibold text-blue-700 no-underline shadow-sm transition hover:border-blue-300 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 motion-reduce:transition-none dark:border-blue-800 dark:bg-gray-900 dark:text-blue-300 dark:hover:bg-blue-950/40 dark:focus-visible:outline-blue-400">
             List your clinic here
-            <ArrowRightIcon className="size-4" aria-hidden="true" />
+            <ArrowRightIcon weight="duotone" className="size-4" aria-hidden="true" />
           </Link>
         </div>
 
