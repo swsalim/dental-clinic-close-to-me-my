@@ -4,7 +4,7 @@ description: "Compare braces types, Malaysia cost factors, aligners vs braces, c
 metaTitle: "Braces Options Compared: Types, Costs and Clinic Care"
 slug: braces-options-compared
 publishedAt: 2026-10-19
-updatedAt: 2026-10-21
+updatedAt: 2026-10-22
 image: /images/guides/braces-options.svg
 imageAlt: "Illustration of fixed braces beside a clear aligner."
 primaryKeyword: braces
@@ -57,6 +57,8 @@ relatedLinks:
     label: Dental clinics in Sarawak
     description: Listings in Kuching and other Sarawak areas.
 relatedSlugs:
+  - dental-wax-for-braces
+  - braces-elastics
   - conventional-vs-self-ligating-braces
   - the-complete-guide-to-finding-and-comparing-a-dental-clinic
   - dental-clinic-ratings-checklist
@@ -83,6 +85,8 @@ This comparison covers four decisions: which appliance suits the planned movemen
 ## How braces move teeth and what an assessment checks
 
 Fixed braces use brackets attached to the teeth and archwires that guide movement. The system applies controlled pressure over time, while elastic bands may add force for particular tooth or bite movements. The orthodontic team checks progress and adjusts the appliance during review visits, as described by the [American Association of Orthodontists explanation of braces mechanics](https://aaoinfo.org/treatments/braces/).
+
+Two everyday parts of that appliance have their own pages. [Dental braces elastics](/guides/braces-elastics) is the rubber-band pattern an orthodontist prescribes, and the questions to settle before you leave the appointment. [Dental wax for braces](/guides/dental-wax-for-braces) is a temporary cover for a bracket or wire that rubs, and the point at which wax is no longer the right response.
 
 That process addresses more than a crooked front tooth. An assessment may consider:
 
