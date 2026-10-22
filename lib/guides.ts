@@ -72,6 +72,9 @@ const GUIDE_ORDER_2026_10_21 = [
   'sensitive-teeth',
 ];
 
+/** Guides published 2026-10-22. */
+const GUIDE_ORDER_2026_10_22 = ['dental-wax-for-braces', 'braces-elastics'];
+
 const WORDS_PER_MINUTE = 200;
 
 const MONTHS = [
@@ -426,22 +429,23 @@ function readGuideFile(filePath: string): Guide {
 }
 
 function guideOrderIndex(slug: string): number {
-  const primary = GUIDE_ORDER.indexOf(slug);
-  if (primary !== -1) {
-    return primary;
+  const lists = [
+    GUIDE_ORDER,
+    GUIDE_ORDER_2026_10_20,
+    GUIDE_ORDER_2026_10_21,
+    GUIDE_ORDER_2026_10_22,
+  ];
+  let offset = 0;
+
+  for (const list of lists) {
+    const index = list.indexOf(slug);
+    if (index !== -1) {
+      return offset + index;
+    }
+    offset += list.length;
   }
 
-  const published = GUIDE_ORDER_2026_10_20.indexOf(slug);
-  if (published !== -1) {
-    return GUIDE_ORDER.length + published;
-  }
-
-  const publishedLater = GUIDE_ORDER_2026_10_21.indexOf(slug);
-  if (publishedLater !== -1) {
-    return GUIDE_ORDER.length + GUIDE_ORDER_2026_10_20.length + publishedLater;
-  }
-
-  return GUIDE_ORDER.length + GUIDE_ORDER_2026_10_20.length + GUIDE_ORDER_2026_10_21.length;
+  return offset;
 }
 
 export function getAllGuides(): Guide[] {

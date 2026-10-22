@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Dental wax on a bracket</title>
+  <desc id="desc">A row of teeth with braces, and a piece of wax covering one bracket.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="140" y="130" width="920" height="370" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <g fill="#ffffff" stroke="#cbd5e1" stroke-width="3">
+    <rect x="230" y="250" width="80" height="130" rx="20"/>
+    <rect x="350" y="230" width="80" height="150" rx="20"/>
+    <rect x="470" y="220" width="80" height="160" rx="20"/>
+    <rect x="590" y="230" width="80" height="150" rx="20"/>
+    <rect x="710" y="250" width="80" height="130" rx="20"/>
+    <rect x="830" y="270" width="80" height="110" rx="20"/>
+  </g>
+  <path d="M250 320h680" stroke="#93c5fd" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#2563eb">
+    <rect x="252" y="308" width="28" height="22" rx="4"/>
+    <rect x="372" y="308" width="28" height="22" rx="4"/>
+    <rect x="612" y="308" width="28" height="22" rx="4"/>
+    <rect x="732" y="308" width="28" height="22" rx="4"/>
+    <rect x="852" y="308" width="28" height="22" rx="4"/>
+  </g>
+  <ellipse cx="510" cy="318" rx="42" ry="28" fill="#fde68a" stroke="#f59e0b" stroke-width="3"/>
+</svg>
