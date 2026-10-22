@@ -105,7 +105,7 @@ If one band is lost during the day, use a prescribed spare. Leave the other side
 
 ## Discomfort, and when to call
 
-Pressure, mild tenderness, or jaw fatigue can happen when elastics are first prescribed or when the pattern changes. The American Association of Orthodontists describes some discomfort at the start as common while the mouth gets used to the bands. Severe, worsening, or persistent pain needs the orthodontic team. Do not change the wear schedule on your own to chase the pain.
+Pressure, mild tenderness, or jaw fatigue can happen when elastics are first prescribed or when the pattern changes. The American Association of Orthodontists says you may feel some discomfort at the start, while your mouth gets used to the bands. Severe, worsening, or persistent pain needs the orthodontic team. Do not change the wear schedule on your own to chase the pain.
 
 Contact the clinic if:
 
