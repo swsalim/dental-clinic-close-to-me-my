@@ -40,7 +40,7 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
         if (block.type === 'table') {
           return (
             <div key={`table-${index}`} className="overflow-x-auto">
-              <table>
+              <table style={{ minWidth: '42rem' }}>
                 <thead>
                   <tr>
                     {block.headers.map((header) => (
