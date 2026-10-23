@@ -4,7 +4,7 @@ metaTitle: "Plaque teeth: how plaque differs from tartar"
 description: "Plaque teeth explained: what plaque is, how tartar and calculus differ, daily removal, and when a dentist may suggest scaling and cleaning."
 slug: plaque-on-teeth
 publishedAt: 2026-10-21
-updatedAt: 2026-10-21
+updatedAt: 2026-10-23
 image: /images/guides/plaque-on-teeth.svg
 imageAlt: "Illustration of a tooth with a soft film along the gum line beside a toothbrush."
 primaryKeyword: plaque teeth
@@ -21,6 +21,9 @@ faq:
   - question: "Can plaque cause cavities?"
     answer: "MouthHealthy explains that plaque contains bacteria which, after sugary food or drink, can release acids that attack enamel. Repeated attacks can lead to cavities. Sensitivity or a dark spot still needs a dentist to check the cause. Read [Caries dental care: questions to ask](/guides/dental-caries-questions) for cavity questions to take to a clinic."
 relatedLinks:
+  - href: /guides/teeth-stains
+    label: Teeth stains
+    description: How surface colour differs from tartar, and when to ask a dentist about a stain.
   - href: /guides/dental-caries-questions
     label: Caries dental care questions
     description: What to ask about tooth decay, examinations, and treatment choices.
@@ -46,6 +49,7 @@ relatedLinks:
     label: Dental clinics in Johor
     description: Listings in Johor Bahru and other Johor areas.
 relatedSlugs:
+  - teeth-stains
   - dental-caries-questions
   - the-complete-guide-to-finding-and-comparing-a-dental-clinic
 ---
@@ -64,7 +68,7 @@ Orthodontic brackets, crowded teeth, and a dry mouth can make the film harder to
 
 Tartar and calculus are two names for the same hardened deposit. MouthHealthy says plaque that is not removed with thorough daily brushing and cleaning between the teeth can eventually harden into calculus or tartar. Once it hardens, it makes the teeth more difficult to keep clean. A toothbrush and floss are meant for soft plaque. They do not reliably scrape off a hard deposit stuck to the enamel or the root.
 
-People often notice tartar as a hard, yellow or brown crust at the gum line, or as a rough edge the tongue keeps finding. A stain from tea, coffee, or tobacco can look similar and still be a surface stain rather than calculus. Only a dental examination can tell those apart. Do not try to chip a hard deposit off with a pin, a scaler bought online, or a fingernail. That can scratch the root or injure the gum.
+People often notice tartar as a hard, yellow or brown crust at the gum line, or as a rough edge the tongue keeps finding. A stain from tea, coffee, or tobacco can look similar and still be a surface stain rather than calculus. [Teeth stain: causes, prevention and when to see a dentist](/guides/teeth-stains) is about that colour change, including when whitening and a scale and clean are different questions. Only a dental examination can tell a stain and tartar apart. Do not try to chip a hard deposit off with a pin, a scaler bought online, or a fingernail. That can scratch the root or injure the gum.
 
 When tartar collects above the gum line, MouthHealthy says the gum can become swollen and may bleed easily. That early stage of gum disease is called gingivitis. Deposits can also sit below the gum line, where you cannot see them. Bleeding when you brush is a reason to book a dentist. It is not, by itself, a diagnosis, and brushing harder is not the answer this page can give you.
 
