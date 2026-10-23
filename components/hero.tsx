@@ -11,6 +11,12 @@ import { cn } from '@/lib/utils';
 
 import { getDoctors } from '@/helpers/doctors';
 
+import {
+  areaListingPath,
+  serviceListingPath,
+  stateListingPath,
+} from '@/lib/listing/paths';
+
 import { getHomeDirectoryStats } from '@/components/listing/home-stats';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
@@ -20,11 +26,11 @@ function formatStat(value: number) {
 }
 
 const popularSearches = [
-  { label: 'Kuala Lumpur', href: '/kuala-lumpur' },
-  { label: 'Johor Bahru', href: '/johor-bahru' },
-  { label: 'Penang', href: '/penang' },
-  { label: 'Dental Implants', href: '/services/dental-implants' },
-  { label: 'Braces', href: '/services/braces' },
+  { label: 'Kuala Lumpur', href: stateListingPath('kuala-lumpur') },
+  { label: 'Johor Bahru', href: areaListingPath('johor', 'johor-bahru') },
+  { label: 'Penang', href: stateListingPath('penang') },
+  { label: 'Dental Implants', href: serviceListingPath('dental-implants') },
+  { label: 'Braces', href: serviceListingPath('braces') },
 ];
 
 export async function Hero() {
