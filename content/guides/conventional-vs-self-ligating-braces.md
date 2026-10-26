@@ -4,7 +4,7 @@ metaTitle: "Conventional braces vs self ligating: what to ask"
 description: "Compare conventional braces vs self ligating: elastic ties or a clip, visits, cleaning, appearance, and cost factors. Questions for an orthodontist."
 slug: conventional-vs-self-ligating-braces
 publishedAt: 2026-10-21
-updatedAt: 2026-10-21
+updatedAt: 2026-10-26
 image: /images/guides/conventional-vs-self-ligating.svg
 imageAlt: "Illustration of a braces bracket with an elastic tie beside a bracket with a clip."
 primaryKeyword: conventional braces vs self ligating
@@ -21,6 +21,9 @@ faq:
   - question: "Can an adult ask about conventional braces vs self ligating?"
     answer: "Adults can discuss either bracket with a registered dentist or orthodontic provider. Suitability depends on the bite, gum health, existing dental work, and the movements the plan needs. This page cannot tell you which system fits you."
 relatedLinks:
+  - href: /guides/teeth-retainer
+    label: Teeth retainer
+    description: Hawley, clear, and bonded retainers after braces or aligners.
   - href: /guides/braces-options-compared
     label: Braces options compared
     description: Metal, ceramic, lingual, and self-ligating braces, plus aligners, costs, and retainers.
@@ -46,6 +49,7 @@ relatedLinks:
     label: Dental clinics in Johor
     description: Listings in Johor Bahru and other Johor areas.
 relatedSlugs:
+  - teeth-retainer
   - braces-options-compared
   - the-complete-guide-to-finding-and-comparing-a-dental-clinic
 ---
@@ -116,7 +120,7 @@ Take the same questions to each consultation so the answers are comparable. Clin
 
 A clear plan names the problem, the appliance, the review rhythm, and the fee. A slogan about speed or comfort is not a plan.
 
-This comparison is only the tie-versus-clip question. It does not choose a clinic for you, and it does not say that one bracket will finish sooner or feel easier. Book an examination, compare the written quotations, and confirm retainers before treatment starts.
+This comparison is only the tie-versus-clip question. It does not choose a clinic for you, and it does not say that one bracket will finish sooner or feel easier. Book an examination, compare the written quotations, and confirm retainers before treatment starts. [Teeth retainer](/guides/teeth-retainer) covers what happens after the brace comes off, including wear, cleaning, and a retainer that no longer fits.
 
 To find a dentist or orthodontic clinic, open [browse](/browse) and pick a state such as [Kuala Lumpur](/kuala-lumpur), [Selangor](/selangor), [Penang](/penang), or [Johor](/johor). Read the profiles, then call to confirm who will see you and what the visit includes.
 

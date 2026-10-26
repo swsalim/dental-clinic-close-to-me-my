@@ -4,7 +4,7 @@ metaTitle: "Dental Braces Elastics: What to Know Before Your Appointment"
 description: "How dental braces elastics add force to a brace, how to wear the pattern your orthodontist shows you, and when to call the clinic."
 slug: braces-elastics
 publishedAt: 2026-10-22
-updatedAt: 2026-10-22
+updatedAt: 2026-10-26
 image: /images/guides/braces-elastics.svg
 imageAlt: "Illustration of an upper tooth and a lower tooth joined by an orthodontic elastic."
 primaryKeyword: dental braces elastics
@@ -23,6 +23,9 @@ faq:
   - question: "What if I forget which hooks the elastics use?"
     answer: "Stop and check the written pattern or the photo the clinic allowed you to take. If you still are not sure, call the clinic. A missed band is safer to clarify than a guessed pattern or a doubled band."
 relatedLinks:
+  - href: /guides/teeth-retainer
+    label: Teeth retainer
+    description: Hawley, clear, and bonded retainers after braces or aligners.
   - href: /guides/braces-options-compared
     label: Braces options compared
     description: Metal, ceramic, lingual, and self-ligating braces, plus aligners, costs, and retainers.
@@ -54,6 +57,7 @@ relatedLinks:
     label: Dental clinics in Johor
     description: Listings in Johor Bahru and other Johor areas.
 relatedSlugs:
+  - teeth-retainer
   - dental-wax-for-braces
   - braces-options-compared
   - conventional-vs-self-ligating-braces
@@ -154,6 +158,8 @@ General advice does not fit when the hooks are unclear or the brace has changed.
 - you are unsure whether to wear, remove, or replace a band.
 
 To find a clinic that lists braces, open [browse](/browse) and a state page such as [Kuala Lumpur](/kuala-lumpur), [Selangor](/selangor), [Penang](/penang), or [Johor](/johor). Read the profile, then call and ask who will show you the elastic pattern and what the first visit includes.
+
+When the brace comes off, the next appliance is usually a retainer rather than another elastic. [Teeth retainer](/guides/teeth-retainer) covers removable and fixed retainers, and what to do if one breaks or no longer fits.
 
 ## References
 

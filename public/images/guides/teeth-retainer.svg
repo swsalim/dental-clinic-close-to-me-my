@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Clear retainer and bonded wire</title>
+  <desc id="desc">A clear retainer tray beside a row of teeth with a thin wire fixed behind them.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="80" y="110" width="480" height="410" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="640" y="110" width="480" height="410" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <path d="M170 250h300c28 0 48 22 48 52v70c0 46-40 84-90 84h-216c-50 0-90-38-90-84v-70c0-30 20-52 48-52z" fill="#eff6ff" stroke="#2563eb" stroke-width="8"/>
+  <path d="M210 300h40v90h-40zM270 286h46v104h-46zM336 300h40v90h-40zM396 286h46v104h-46z" fill="#ffffff" stroke="#93c5fd" stroke-width="6"/>
+  <g fill="#ffffff" stroke="#2563eb" stroke-width="6">
+    <rect x="720" y="250" width="52" height="120" rx="16"/>
+    <rect x="792" y="236" width="56" height="134" rx="16"/>
+    <rect x="868" y="250" width="52" height="120" rx="16"/>
+    <rect x="940" y="236" width="56" height="134" rx="16"/>
+    <rect x="1016" y="250" width="52" height="120" rx="16"/>
+  </g>
+  <path d="M746 340h296" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="746" cy="340" r="7" fill="#f59e0b"/>
+  <circle cx="820" cy="340" r="7" fill="#f59e0b"/>
+  <circle cx="894" cy="340" r="7" fill="#f59e0b"/>
+  <circle cx="968" cy="340" r="7" fill="#f59e0b"/>
+  <circle cx="1042" cy="340" r="7" fill="#f59e0b"/>
+</svg>

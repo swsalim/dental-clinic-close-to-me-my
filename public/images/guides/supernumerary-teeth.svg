@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Extra tooth behind the front teeth</title>
+  <desc id="desc">Three upper front teeth with a smaller extra tooth sitting behind them.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect width="1200" height="12" fill="#2563eb"/>
+  <rect x="160" y="90" width="880" height="450" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <path d="M250 250c0-46 36-82 80-82s80 36 80 82c0 32-12 56-26 82-10 16-14 32-14 46h-80c0-14-4-30-14-46-14-26-26-50-26-82z" fill="#ffffff" stroke="#2563eb" stroke-width="8"/>
+  <path d="M470 230c0-52 40-92 90-92s90 40 90 92c0 36-14 64-30 94-10 18-16 36-16 52h-88c0-16-6-34-16-52-16-30-30-58-30-94z" fill="#ffffff" stroke="#1d4ed8" stroke-width="8"/>
+  <path d="M710 250c0-46 36-82 80-82s80 36 80 82c0 32-12 56-26 82-10 16-14 32-14 46h-80c0-14-4-30-14-46-14-26-26-50-26-82z" fill="#ffffff" stroke="#2563eb" stroke-width="8"/>
+  <path d="M560 340c0-28 22-50 48-50s48 22 48 50c0 18-8 32-16 46-6 10-8 18-8 26h-48c0-8-2-16-8-26-8-14-16-28-16-46z" fill="#dbeafe" stroke="#f59e0b" stroke-width="8"/>
+  <rect x="220" y="460" width="280" height="18" rx="9" fill="#dbeafe"/>
+  <rect x="220" y="492" width="200" height="14" rx="7" fill="#e5e7eb"/>
+</svg>

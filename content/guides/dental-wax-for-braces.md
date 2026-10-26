@@ -4,7 +4,7 @@ metaTitle: "Dental Wax for Braces: Questions New Patients Often Ask"
 description: "How dental wax for braces covers a bracket or wire that rubs, how to apply it, and when to call the orthodontist instead of adding more wax."
 slug: dental-wax-for-braces
 publishedAt: 2026-10-22
-updatedAt: 2026-10-22
+updatedAt: 2026-10-26
 image: /images/guides/dental-wax-for-braces.svg
 imageAlt: "Illustration of a braces bracket covered by a small piece of dental wax."
 primaryKeyword: dental wax braces
@@ -23,6 +23,9 @@ faq:
   - question: "When should I call the orthodontist instead of using more wax?"
     answer: "Call the clinic that is treating you if a bracket is loose, a wire is broken or poking through the wax, pain is worsening, swelling develops, bleeding does not settle, or the same sore keeps returning. If swelling makes breathing or swallowing difficult, call 999 or go to a hospital emergency department."
 relatedLinks:
+  - href: /guides/teeth-retainer
+    label: Teeth retainer
+    description: Hawley, clear, and bonded retainers after braces or aligners.
   - href: /guides/braces-options-compared
     label: Braces options compared
     description: Metal, ceramic, lingual, and self-ligating braces, plus aligners, costs, and retainers.
@@ -54,6 +57,7 @@ relatedLinks:
     label: Dental clinics in Johor
     description: Listings in Johor Bahru and other Johor areas.
 relatedSlugs:
+  - teeth-retainer
   - braces-elastics
   - braces-options-compared
   - conventional-vs-self-ligating-braces
@@ -124,6 +128,8 @@ In Malaysia, ask whether the dentist you are booked with is registered with the 
 Swelling that makes breathing or swallowing difficult is a reason to call 999 or go to a hospital emergency department, as the [urgent visits guide](/guides/dental-clinic-open-now-common-questions-about-urgent-visits) explains. Wax and a routine orthodontic slot are the wrong response to that.
 
 Rubber bands that run between the jaws are a different part of treatment. Those are [dental braces elastics](/guides/braces-elastics). The tiny elastic ties around a conventional bracket are different again. Wax does not replace either of them.
+
+Wax is for the brace while it is still on. After the brace or aligners come off, the holding appliance is a [teeth retainer](/guides/teeth-retainer). That guide covers Hawley, clear, and bonded retainers, and what to do if one breaks.
 
 ## References
 

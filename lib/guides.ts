@@ -78,6 +78,9 @@ const GUIDE_ORDER_2026_10_22 = ['dental-wax-for-braces', 'braces-elastics'];
 /** Guides published 2026-10-23. */
 const GUIDE_ORDER_2026_10_23 = ['crown-teeth', 'teeth-stains'];
 
+/** Guides published 2026-10-26. */
+const GUIDE_ORDER_2026_10_26 = ['supernumerary-teeth', 'teeth-retainer'];
+
 const WORDS_PER_MINUTE = 200;
 
 const MONTHS = [
@@ -438,6 +441,7 @@ function guideOrderIndex(slug: string): number {
     GUIDE_ORDER_2026_10_21,
     GUIDE_ORDER_2026_10_22,
     GUIDE_ORDER_2026_10_23,
+    GUIDE_ORDER_2026_10_26,
   ];
   let offset = 0;
 

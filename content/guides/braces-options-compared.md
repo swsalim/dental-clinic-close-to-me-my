@@ -4,7 +4,7 @@ description: "Compare braces types, Malaysia cost factors, aligners vs braces, c
 metaTitle: "Braces Options Compared: Types, Costs and Clinic Care"
 slug: braces-options-compared
 publishedAt: 2026-10-19
-updatedAt: 2026-10-22
+updatedAt: 2026-10-26
 image: /images/guides/braces-options.svg
 imageAlt: "Illustration of fixed braces beside a clear aligner."
 primaryKeyword: braces
@@ -23,6 +23,9 @@ faq:
   - question: "What foods should be avoided with fixed braces?"
     answer: "Patients with fixed braces are commonly advised to avoid hard, sticky, or highly chewy foods that can damage brackets or wires. The treating clinic should provide specific food and cleaning instructions."
 relatedLinks:
+  - href: /guides/teeth-retainer
+    label: Teeth retainer
+    description: Hawley, clear, and bonded retainers after braces or aligners.
   - href: /services/braces
     label: Braces
     description: Clinics that list braces.
@@ -57,6 +60,7 @@ relatedLinks:
     label: Dental clinics in Sarawak
     description: Listings in Kuching and other Sarawak areas.
 relatedSlugs:
+  - teeth-retainer
   - dental-wax-for-braces
   - braces-elastics
   - conventional-vs-self-ligating-braces
@@ -195,7 +199,7 @@ Compare each option across:
 - what happens if it stops fitting;
 - replacement fees and follow-up checks.
 
-Ask whether retainers are included in the braces quotation, when they are provided, and what replacement may cost. A patient who stops wearing a removable retainer may notice movement later. If the appliance no longer fits, contacting the clinic is safer than forcing it into place.
+Ask whether retainers are included in the braces quotation, when they are provided, and what replacement may cost. A patient who stops wearing a removable retainer may notice movement later. If the appliance no longer fits, contacting the clinic is safer than forcing it into place. [Teeth retainer](/guides/teeth-retainer) goes further on Hawley, clear, and bonded retainers, including cleaning and what to do if one breaks.
 
 “Retainers after braces” should appear on the quotation and treatment plan before treatment starts. Retention can protect the result, but no plan promises that teeth will never move.
 
