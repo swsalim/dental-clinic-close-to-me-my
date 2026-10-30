@@ -68,6 +68,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/place/:clinicSlug/reviews',
+        destination: '/place/:clinicSlug#reviews',
+        permanent: true,
+      },
+      {
         source: '/page/:pageNum(\\d+)',
         has: [{ type: 'query', key: 'page' }],
         destination: '/page/:pageNum',

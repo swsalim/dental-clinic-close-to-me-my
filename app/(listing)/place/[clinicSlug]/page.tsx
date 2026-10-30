@@ -195,7 +195,13 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
   }
 
   const title = clinic.name;
-  const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}. View services, hours, and contact info.`;
+  const ratingSnippet =
+    clinic.rating && clinic.review_count
+      ? ` Rated ${clinic.rating.toFixed(1)}/5 from ${clinic.review_count} reviews.`
+      : clinic.review_count
+        ? ` ${clinic.review_count} patient reviews.`
+        : '';
+  const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}.${ratingSnippet} View services, hours, and contact info.`;
 
   // Build the OG image URL with optional background image
   const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
@@ -550,7 +556,10 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 {parsedClinic.id && (
                   <>
                     <AddReviewForm clinicId={parsedClinic.id} />
-                    <Reviews reviews={parsedClinic.reviews} clinicSlug={clinicSlug} />
+                    <Reviews
+                      reviews={parsedClinic.reviews}
+                      reviewCount={parsedClinic.review_count}
+                    />
                   </>
                 )}
               </Prose>

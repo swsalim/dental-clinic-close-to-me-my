@@ -17,7 +17,6 @@ import {
   markdownArea,
   markdownBrowse,
   markdownClinic,
-  markdownClinicReviews,
   markdownDentist,
   markdownDentists,
   markdownGuide,
@@ -210,7 +209,7 @@ export async function getPageMarkdown(slug: string[]): Promise<string | null> {
   }
 
   if (first === 'place' && second && third === 'reviews' && segments.length === 3) {
-    return markdownClinicReviews(second);
+    return markdownClinic(second);
   }
 
   if (first === 'dentist' && second && segments.length === 2) {
