@@ -47,7 +47,6 @@ const config = {
           '/api',
           '/login',
           '/submit/success',
-          '/place/*/reviews',
         ],
       },
     ],
