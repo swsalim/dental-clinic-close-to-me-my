@@ -1,11 +1,5 @@
-import Link from 'next/link';
-
 import { ClinicReview } from '@/types/clinic';
-import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
-import { cn } from '@/lib/utils';
-
-import { buttonVariants } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import { StarRating } from '../ui/star-rating';
 import { TruncatedText } from '../ui/truncated-text';
@@ -13,17 +7,25 @@ import { RelativeTime } from './relative-time';
 
 interface ReviewsProps {
   reviews: Partial<ClinicReview>[];
-  clinicSlug: string;
+  reviewCount?: number | null;
 }
 
-export default function Reviews({ reviews, clinicSlug }: ReviewsProps) {
+export default function Reviews({ reviews, reviewCount }: ReviewsProps) {
   if (!reviews || reviews.length === 0) {
     return null;
   }
 
+  const totalReviews = reviewCount ?? reviews.length;
+  const showingAll = reviews.length >= totalReviews;
+
   return (
-    <article>
+    <article id="reviews">
       <h2 className="font-display dark:text-gray-50">Reviews</h2>
+      {!showingAll && (
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          Showing the latest {reviews.length} of {totalReviews} reviews.
+        </p>
+      )}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map(({ author_name, rating, text, review_time }) => (
           <Card key={`${author_name}-${review_time}`}>
@@ -48,14 +50,6 @@ export default function Reviews({ reviews, clinicSlug }: ReviewsProps) {
             </CardFooter>
           </Card>
         ))}
-      </div>
-      <div className="mt-4 flex flex-row gap-x-2 md:mt-6">
-        <Link
-          href={`/place/${clinicSlug}/reviews`}
-          className={cn(buttonVariants({ variant: 'primary' }), 'not-prose flex flex-row gap-x-2')}>
-          View all reviews
-          <ArrowRightIcon weight="duotone" className="size-4" />
-        </Link>
       </div>
     </article>
   );

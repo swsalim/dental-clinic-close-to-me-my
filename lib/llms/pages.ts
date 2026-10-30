@@ -471,40 +471,9 @@ export async function markdownClinic(clinicSlug: string) {
       : null,
     hours.length > 0 ? joinSections([`## Opening hours`, hours.join('\n')]) : null,
     reviews.length > 0
-      ? joinSections([
-          '## Reviews',
-          reviews.join('\n'),
-          listItem('All reviews', mdUrl(`/place/${clinicSlug}/reviews`)),
-        ])
-      : listItem('Reviews', mdUrl(`/place/${clinicSlug}/reviews`)),
-    `HTML version: ${absoluteUrl(`/place/${clinicSlug}`)}`,
-  ]);
-}
-
-export async function markdownClinicReviews(clinicSlug: string) {
-  const clinic = await getClinicBySlug(clinicSlug);
-
-  if (!clinic) {
-    return null;
-  }
-
-  const reviews = (clinic.reviews ?? [])
-    .filter((review) => review.author_name)
-    .map((review) => {
-      const rating = review.rating ? `${review.rating}/5` : 'unrated';
-      const text = htmlToText(review.text);
-      return `### ${escapeMd(review.author_name as string)} — ${rating}\n\n${text || 'No written comment.'}`;
-    });
-
-  return joinSections([
-    `# Reviews for ${clinic.name}`,
-    `> Read reviews and ratings for ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}.`,
-    listItem(clinic.name, mdUrl(`/place/${clinicSlug}`), 'Clinic profile'),
-    clinic.rating
-      ? `Average rating: ${clinic.rating.toFixed(1)}${clinic.review_count ? ` from ${clinic.review_count} reviews` : ''}.`
+      ? joinSections(['## Reviews', reviews.join('\n')])
       : null,
-    reviews.length > 0 ? reviews.join('\n\n') : 'No reviews yet.',
-    `HTML version: ${absoluteUrl(`/place/${clinicSlug}/reviews`)}`,
+    `HTML version: ${absoluteUrl(`/place/${clinicSlug}`)}`,
   ]);
 }
 

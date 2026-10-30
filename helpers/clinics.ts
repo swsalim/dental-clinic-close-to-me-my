@@ -168,7 +168,7 @@ export async function getClinicBySlug(
       const { data, error } = await supabase.rpc('get_clinic_by_slug', {
         slug_input: slug,
         status_input: status,
-        review_limit: 6,
+        review_limit: 30,
       });
 
       if (error) {
