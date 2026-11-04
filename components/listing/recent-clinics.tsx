@@ -7,7 +7,6 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 import { createAdminClient } from '@/lib/supabase';
 
 import { ClinicCard } from '@/components/cards/clinic-card';
-import { Button } from '@/components/ui/button';
 
 import Container from '../ui/container';
 import { Wrapper } from '../ui/wrapper';

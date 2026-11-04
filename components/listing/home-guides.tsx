@@ -7,7 +7,7 @@ import { getAllGuides } from '@/lib/guides';
 import Container from '@/components/ui/container';
 
 export function HomeGuides() {
-  const guides = getAllGuides();
+  const guides = getAllGuides().slice(0, 8);
 
   if (guides.length === 0) {
     return null;
@@ -28,8 +28,7 @@ export function HomeGuides() {
           <Link
             href="/guides"
             prefetch={false}
-            className="inline-flex min-h-11 items-center text-sm font-semibold"
-          >
+            className="inline-flex min-h-11 items-center text-sm font-semibold">
             All guides
             <ArrowRightIcon weight="duotone" className="ms-1 size-4" aria-hidden="true" />
           </Link>
@@ -40,8 +39,7 @@ export function HomeGuides() {
               <Link
                 href={`/guides/${guide.slug}`}
                 prefetch={false}
-                className="flex min-h-11 flex-col gap-1 py-4 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 sm:flex-row sm:items-baseline sm:justify-between dark:focus-visible:ring-offset-gray-900"
-              >
+                className="flex min-h-11 flex-col gap-1 py-4 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 sm:flex-row sm:items-baseline sm:justify-between dark:focus-visible:ring-offset-gray-900">
                 <span className="font-medium text-gray-900 dark:text-gray-50">{guide.title}</span>
                 <span className="shrink-0 text-sm text-gray-500 dark:text-gray-400">
                   {guide.readingTimeMinutes} min read
