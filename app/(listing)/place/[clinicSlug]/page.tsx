@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ClinicDetails, ClinicHours, ClinicImage } from '@/types/clinic';
+import { ClinicDetails, ClinicHours } from '@/types/clinic';
 import {
   Medal as AwardIcon,
   FacebookLogo as FacebookIcon,
@@ -18,7 +18,7 @@ import {
 import { siteConfig } from '@/config/site';
 
 import { getClinicBySlugCached } from '@/lib/data';
-import { resolveMediaUrl } from '@/lib/media';
+import { buildFullAddress } from '@/lib/build-full-address';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl } from '@/lib/utils';
 
@@ -27,7 +27,6 @@ import { getServiceIcon } from '@/helpers/services';
 
 import { ClinicStatus } from '@/components/clinic-status';
 import TikTok from '@/components/icons/tiktok';
-import { MediaImage } from '@/components/image/media-image';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
 import { ClinicSidebar } from '@/components/listing/clinic-sidebar';
 import DoctorPracticeAvatar from '@/components/listing/doctor-practice-avatar';
@@ -138,18 +137,6 @@ const formatOpeningHoursForJsonLd = (hours: Partial<ClinicHours>[] | null) => {
       closes: closeTime,
     };
   });
-};
-
-// Helper function to build full address
-const buildFullAddress = (clinic: ClinicDetails) => {
-  return [
-    clinic.address,
-    clinic.neighborhood,
-    `${clinic.postal_code} ${clinic.area?.name}`,
-    clinic.state?.name,
-  ]
-    .filter(Boolean)
-    .join(', ');
 };
 
 const renderOpeningHours = (parsedClinic: ClinicDetails) => {

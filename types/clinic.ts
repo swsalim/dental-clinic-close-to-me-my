@@ -71,13 +71,15 @@ export interface ClinicDoctor {
   specialty: string | null;
   qualification: string | null;
   status: string | null;
-  images: {
-    id: string;
-    image_url?: string | null;
-    imagekit_file_id?: string | null;
-    r2_key?: string | null;
-    r2_url?: string | null;
-  }[] | null;
+  images:
+    | {
+        id: string;
+        image_url?: string | null;
+        imagekit_file_id?: string | null;
+        r2_key?: string | null;
+        r2_url?: string | null;
+      }[]
+    | null;
   featured_video: string | null;
   is_active: boolean | null;
   is_featured: boolean | null;
@@ -97,13 +99,15 @@ export interface ClinicDoctor {
         longitude: number | null;
         rating: number | null;
         review_count: number | null;
-        images: {
-          id: string;
-          image_url?: string | null;
-          imagekit_file_id?: string | null;
-          r2_key?: string | null;
-          r2_url?: string | null;
-        }[] | null;
+        images:
+          | {
+              id: string;
+              image_url?: string | null;
+              imagekit_file_id?: string | null;
+              r2_key?: string | null;
+              r2_url?: string | null;
+            }[]
+          | null;
         area?: { name: string } | null;
         state?: { name: string } | null;
       }[]
@@ -238,6 +242,7 @@ export interface ClinicDetails {
   postal_code: string;
   address: string;
   neighborhood: string;
+  city: string;
   phone: string;
   email: string;
   website: string;
@@ -245,13 +250,15 @@ export interface ClinicDetails {
   longitude: number;
   rating: number;
   review_count: number;
-  images: {
-    id: string;
-    image_url?: string | null;
-    imagekit_file_id?: string | null;
-    r2_key?: string | null;
-    r2_url?: string | null;
-  }[] | null;
+  images:
+    | {
+        id: string;
+        image_url?: string | null;
+        imagekit_file_id?: string | null;
+        r2_key?: string | null;
+        r2_url?: string | null;
+      }[]
+    | null;
   featured_video: string;
   youtube_url: string;
   facebook_url: string;

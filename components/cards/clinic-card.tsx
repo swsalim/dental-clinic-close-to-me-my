@@ -1,8 +1,15 @@
 import Link from 'next/link';
 
 import { ClinicHours, ClinicSpecialHours } from '@/types/clinic';
-import { Medal as AwardIcon, Clock as ClockIcon, MapPin as MapPinIcon, Phone as PhoneIcon, Sparkle as SparklesIcon } from '@phosphor-icons/react/dist/ssr';
+import {
+  Medal as AwardIcon,
+  Clock as ClockIcon,
+  MapPin as MapPinIcon,
+  Phone as PhoneIcon,
+  Sparkle as SparklesIcon,
+} from '@phosphor-icons/react/dist/ssr';
 
+import { buildFullAddress } from '@/lib/build-full-address';
 import { type MediaFields, resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
@@ -17,6 +24,8 @@ interface ClinicCardProps {
   slug: string;
   name: string;
   address: string;
+  neighborhood?: string;
+  city?: string;
   phone: string;
   postalCode: string;
   state: string;
@@ -36,6 +45,8 @@ export function ClinicCard({
   slug,
   name,
   address,
+  neighborhood = '',
+  city = '',
   phone,
   postalCode,
   state,
@@ -50,7 +61,15 @@ export function ClinicCard({
   distance,
   isPlaceholder,
 }: ClinicCardProps) {
-  const imageSrc = typeof image === 'string' ? image : resolveMediaUrl(image) ?? undefined;
+  const imageSrc = typeof image === 'string' ? image : (resolveMediaUrl(image) ?? undefined);
+
+  const fullAddress = buildFullAddress({
+    address,
+    neighborhood,
+    postal_code: postalCode,
+    city: city || area,
+    state: { name: state },
+  });
 
   const card = (
     <Card
@@ -83,7 +102,7 @@ export function ClinicCard({
             </span>
           ) : null}
           {isFeatured && !isFeaturedPartner ? (
-            <span className="inline-flex items-center gap-1 rounded-md border border-blue-300/50 bg-blue-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-blue-700 dark:border-blue-800 dark:bg-blue-950/50 dark:text-blue-300">
+            <span className="dark:bg-blue-950/50 inline-flex items-center gap-1 rounded-md border border-blue-300/50 bg-blue-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-blue-700 dark:border-blue-800 dark:text-blue-300">
               <AwardIcon weight="duotone" className="size-3" aria-hidden="true" />
               Featured
             </span>
@@ -103,8 +122,8 @@ export function ClinicCard({
           ) : null}
         </div>
       </CardHeader>
-      <CardContent className="p-6">
-        <CardTitle className="mb-2 text-lg leading-tight">{name}</CardTitle>
+      <CardContent className="p-3">
+        <CardTitle className="mb-2 text-lg font-bold leading-tight">{name}</CardTitle>
         {rating !== null && rating !== undefined ? (
           <div className="mb-3 flex-shrink-0">
             <StarRating rating={rating} />
@@ -112,13 +131,19 @@ export function ClinicCard({
         ) : null}
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
-            <MapPinIcon weight="duotone" className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
-            <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-300">
-              {address}, {postalCode}, {area}, {state}
-            </p>
+            <MapPinIcon
+              weight="duotone"
+              className="h-4 w-4 flex-shrink-0 text-blue-300"
+              aria-hidden="true"
+            />
+            <p className="line-clamp-2 text-sm text-gray-500 dark:text-gray-300">{fullAddress}</p>
           </div>
           <div className="flex items-center gap-2">
-            <PhoneIcon weight="duotone" className="h-4 w-4 flex-shrink-0 text-blue-300" aria-hidden="true" />
+            <PhoneIcon
+              weight="duotone"
+              className="h-4 w-4 flex-shrink-0 text-blue-300"
+              aria-hidden="true"
+            />
             <p className="text-sm text-gray-500 dark:text-gray-300">{phone}</p>
           </div>
         </div>

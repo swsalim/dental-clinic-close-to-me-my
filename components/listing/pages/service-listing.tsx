@@ -238,6 +238,8 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                           slug={clinic.slug ?? ''}
                           name={clinic.name ?? ''}
                           address={clinic.address ?? ''}
+                          neighborhood={clinic.neighborhood ?? ''}
+                          city={clinic.city ?? ''}
                           phone={clinic.phone ?? ''}
                           postalCode={clinic.postal_code ?? ''}
                           state={clinic.state?.name ?? ''}

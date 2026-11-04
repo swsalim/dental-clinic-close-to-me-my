@@ -384,6 +384,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                                 slug={clinic.slug ?? ''}
                                 name={clinic.name ?? ''}
                                 address={clinic.address ?? ''}
+                                neighborhood={clinic.neighborhood ?? ''}
+                                city={clinic.city ?? ''}
                                 phone={clinic.phone ?? ''}
                                 postalCode={clinic.postal_code ?? ''}
                                 state={clinic.state?.name ?? ''}
