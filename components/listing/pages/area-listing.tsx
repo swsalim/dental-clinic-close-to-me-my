@@ -14,6 +14,14 @@ import { getAreaBySlugCached } from '@/lib/data';
 import { getAllGuides } from '@/lib/guides';
 import { imageKitUrl } from '@/lib/imagekit-url';
 import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import {
+  isPastLastPage,
+  listingMetaTitle,
+  listingRobots,
+  listingTotalPages,
+  paginatedDescription,
+  paginatedTitle,
+} from '@/lib/listing/page-title';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
@@ -58,13 +66,26 @@ export async function generateAreaListingMetadata(
   }
 
   const clinicCount = areaData.total_clinics ?? 0;
-  const title = `Top ${clinicCount} Dental Clinics in ${areaData.name}, ${areaData.state.name}`;
-  const description = `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`;
+  if (isPastLastPage(currentPage, clinicCount, limit)) {
+    notFound();
+  }
+
+  const totalPages = listingTotalPages(clinicCount, limit);
+  const title = paginatedTitle(
+    `Top ${clinicCount} Dental Clinics in ${areaData.name}, ${areaData.state.name}`,
+    currentPage,
+    totalPages,
+  );
+  const description = paginatedDescription(
+    `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`,
+    currentPage,
+    { perPage: limit, totalItems: clinicCount, noun: 'clinics' },
+  );
   const url = absoluteUrl(listingCanonicalPath(`/${state}/${area}`, currentPage));
 
 
   return {
-    title,
+    title: listingMetaTitle(title, currentPage),
     description,
     alternates: {
       canonical: url,
@@ -98,10 +119,7 @@ export async function generateAreaListingMetadata(
         },
       ],
     },
-    robots: {
-      index: clinicCount > 0 && currentPage <= MAX_INDEXED_LISTING_PAGE,
-      follow: true,
-    },
+    robots: listingRobots(currentPage, clinicCount > 0, MAX_INDEXED_LISTING_PAGE),
   };
 }
 
@@ -129,6 +147,9 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
 
   const totalClinics = areaData.total_clinics || 0;
   const totalPages = Math.ceil(totalClinics / limit);
+  if (isPastLastPage(currentPage, totalClinics, limit)) {
+    notFound();
+  }
 
   const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;

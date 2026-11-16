@@ -10,7 +10,15 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 import { siteConfig } from '@/config/site';
 
 import { getStateMetadataBySlugCached } from '@/lib/data';
-import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import {
+  isPastLastPage,
+  listingMetaTitle,
+  listingRobots,
+  listingTotalPages,
+  paginatedDescription,
+  paginatedTitle,
+} from '@/lib/listing/page-title';
 import { stateDentistsCopy } from '@/lib/listing/state-dentists-copy';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, getPagination } from '@/lib/utils';
@@ -48,12 +56,27 @@ export async function generateStateDentistsListingMetadata(
   }
 
   const totalDoctors = doctorsResult.count || 0;
-  const { title, description, index } = stateDentistsCopy(totalDoctors, stateData.name);
+  const copy = stateDentistsCopy(totalDoctors, stateData.name);
+  // Must match the per-page limit used by StateDentistsListing.
+  const perPage = 20;
+  if (isPastLastPage(currentPage, totalDoctors, perPage)) {
+    notFound();
+  }
+  const title = paginatedTitle(
+    copy.title,
+    currentPage,
+    listingTotalPages(totalDoctors, perPage),
+  );
+  const description = paginatedDescription(copy.description, currentPage, {
+    perPage,
+    totalItems: totalDoctors,
+    noun: 'dentists',
+  });
   const url = absoluteUrl(listingCanonicalPath(`/${state}/dentists`, currentPage));
 
 
   return {
-    title,
+    title: listingMetaTitle(title, currentPage),
     description,
     alternates: {
       canonical: url,
@@ -87,10 +110,7 @@ export async function generateStateDentistsListingMetadata(
         },
       ],
     },
-    robots: {
-      index,
-      follow: true,
-    },
+    robots: listingRobots(currentPage, copy.index, MAX_INDEXED_LISTING_PAGE),
   };
 }
 

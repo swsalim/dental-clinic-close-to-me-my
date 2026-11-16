@@ -8,7 +8,15 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
-import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import {
+  isPastLastPage,
+  listingMetaTitle,
+  listingRobots,
+  listingTotalPages,
+  paginatedDescription,
+  paginatedTitle,
+} from '@/lib/listing/page-title';
 import { absoluteUrl, getPagination } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 
@@ -32,14 +40,26 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
 
   const totalDoctors = doctorsResult.count || 0;
 
-  const title = `Browse Top ${totalDoctors} Dentists in Malaysia`;
-  const description =
-    'Find dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details.';
+  // Must match the per-page limit used by DentistsListing.
+  const perPage = 20;
+  if (isPastLastPage(currentPage, totalDoctors, perPage)) {
+    notFound();
+  }
+  const title = paginatedTitle(
+    `Browse Top ${totalDoctors} Dentists in Malaysia`,
+    currentPage,
+    listingTotalPages(totalDoctors, perPage),
+  );
+  const description = paginatedDescription(
+    'Find dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details.',
+    currentPage,
+    { perPage, totalItems: totalDoctors, noun: 'dentists' },
+  );
   const url = absoluteUrl(listingCanonicalPath('/dentists', currentPage));
 
 
   return {
-    title,
+    title: listingMetaTitle(title, currentPage),
     description,
     alternates: {
       canonical: url,
@@ -73,12 +93,20 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
         },
       ],
     },
+    robots: listingRobots(currentPage, totalDoctors > 0, MAX_INDEXED_LISTING_PAGE),
   };
 }
 
 export async function DentistsListing({ currentPage }: DentistsListingProps) {
   const limit = 20;
   const { from } = getPagination(currentPage, limit);
+
+  // Check the range first: Supabase throws (PGRST103) for an offset past the
+  // last row, which would turn an out-of-range page into a 500 instead of a 404.
+  // getDoctors() is the same cached call generateMetadata uses.
+  if (currentPage > 1 && isPastLastPage(currentPage, (await getDoctors()).count || 0, limit)) {
+    notFound();
+  }
 
   // Fetch doctors with pagination
   const [doctorsResult] = await Promise.all([getDoctors({ limit, offset: from })]);

@@ -12,7 +12,8 @@ import {
 
 export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
-export const dynamicParams = false;
+// Pages 2–3 are pre-built; later pages render on demand (noindex, follow).
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const states = await getStateListings();

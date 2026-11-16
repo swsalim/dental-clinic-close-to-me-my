@@ -19,6 +19,7 @@ import { siteConfig } from '@/config/site';
 
 import { getClinicBySlugCached } from '@/lib/data';
 import { buildFullAddress } from '@/lib/build-full-address';
+import { buildClinicTitle, joinWords } from '@/lib/listing/page-title';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl } from '@/lib/utils';
 
@@ -181,18 +182,42 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
     notFound();
   }
 
-  const title = clinic.name;
+  // Only name what the page actually renders: the Opening Hours section needs
+  // hours rows, the map needs real coordinates, the Reviews section needs cards.
+  const hasHours = !!clinic.hours && clinic.hours.length > 0;
+  const hasMap = !!clinic.latitude && !!clinic.longitude;
+  const hasReviews = !!clinic.reviews && clinic.reviews.length > 0;
+  const hasServices = !!clinic.services && clinic.services.length > 0;
+  const title = buildClinicTitle({
+    name: clinic.name ?? '',
+    areaName: clinic.area?.name,
+    hasHours,
+    hasMap,
+    hasReviews,
+  });
   const ratingSnippet =
     clinic.rating && clinic.review_count
       ? ` Rated ${clinic.rating.toFixed(1)}/5 from ${clinic.review_count} reviews.`
       : clinic.review_count
         ? ` ${clinic.review_count} patient reviews.`
         : '';
-  const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}.${ratingSnippet} View services, hours, and contact info.`;
+  // Same rule as the title: only mention sections the page renders.
+  const sections = joinWords(
+    [
+      hasServices && 'services',
+      hasHours && 'opening hours',
+      hasMap && 'map',
+      hasReviews && 'patient reviews',
+      'contact info',
+    ].filter(Boolean) as string[],
+  );
+  const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}.${ratingSnippet} View ${sections}.`;
 
 
   return {
-    title,
+    // Absolute: the clinic title already carries the keywords, and the
+    // " · Dental Clinics Malaysia" template would push most past 60 chars.
+    title: { absolute: title },
     description,
     alternates: {
       canonical: absoluteUrl(`/place/${clinicSlug}`),

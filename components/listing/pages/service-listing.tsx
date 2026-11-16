@@ -12,7 +12,16 @@ import { siteConfig } from '@/config/site';
 
 import { getAllServicesCached } from '@/lib/data';
 import { imageKitUrl } from '@/lib/imagekit-url';
-import { listingCanonicalPath } from '@/lib/listing/pagination';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import {
+  isPastLastPage,
+  listingMetaTitle,
+  listingRobots,
+  listingTotalPages,
+  paginatedDescription,
+  paginatedTitle,
+  serviceListingDescription,
+} from '@/lib/listing/page-title';
 import { MEDIA } from '@/lib/media-sizes';
 import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
@@ -46,14 +55,30 @@ export async function generateServiceListingMetadata(
   }
 
   const serviceName = serviceData.name;
-  const serviceDescription = serviceData.description || serviceData.name;
 
-  const title = `${serviceName} - Find Top Dental Clinics`;
-  const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;
+  // Must match the per-page limit used by ServiceListing. Same cache key as the
+  // page's own query, so this does not add a database round trip.
+  const perPage = 20;
+  const { from, to } = getPagination(currentPage, perPage);
+  const totalClinics = (await getClinicByServiceId(serviceData.id, from, to)).count || 0;
+  if (isPastLastPage(currentPage, totalClinics, perPage)) {
+    notFound();
+  }
+
+  const title = paginatedTitle(
+    `${serviceName} - Find Top Dental Clinics`,
+    currentPage,
+    listingTotalPages(totalClinics, perPage),
+  );
+  const description = paginatedDescription(
+    serviceListingDescription(serviceName, serviceData.description),
+    currentPage,
+    { perPage, totalItems: totalClinics, noun: 'clinics' },
+  );
   const url = absoluteUrl(listingCanonicalPath(`/services/${serviceSlug}`, currentPage));
 
   return {
-    title,
+    title: listingMetaTitle(title, currentPage),
     description,
     alternates: {
       canonical: url,
@@ -87,6 +112,7 @@ export async function generateServiceListingMetadata(
         },
       ],
     },
+    robots: listingRobots(currentPage, totalClinics > 0, MAX_INDEXED_LISTING_PAGE),
   };
 }
 
@@ -106,11 +132,13 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
   const clinics = clinicsResult.clinics || [];
   const totalClinics = clinicsResult.count || 0;
   const totalPages = Math.ceil(totalClinics / limit);
+  if (isPastLastPage(currentPage, totalClinics, limit)) {
+    notFound();
+  }
   const { name: serviceName } = serviceData;
-  const serviceDescription = serviceData.description ?? serviceData.name;
 
   const title = `${serviceName} - Find Top Dental Clinics`;
-  const description = `Find qualified dental clinics offering ${serviceDescription.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`;
+  const description = serviceListingDescription(serviceName, serviceData.description);
 
   const JSONLDbreadcrumbs = [
     {

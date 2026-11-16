@@ -20,6 +20,14 @@ import { getStateAreasWithClinicsCached, getStateBySlugCached } from '@/lib/data
 import { getAllGuides } from '@/lib/guides';
 import { imageKitUrl } from '@/lib/imagekit-url';
 import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import {
+  isPastLastPage,
+  listingMetaTitle,
+  listingRobots,
+  listingTotalPages,
+  paginatedDescription,
+  paginatedTitle,
+} from '@/lib/listing/page-title';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
@@ -66,13 +74,26 @@ export async function generateStateListingMetadata(
   const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
   const clinicCount = stateData.total_clinics ?? 0;
 
-  const title = `Top ${clinicCount} Dental Clinics in ${stateData.name}`;
-  const description = `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
+  if (isPastLastPage(currentPage, clinicCount, limit)) {
+    notFound();
+  }
+
+  const totalPages = listingTotalPages(clinicCount, limit);
+  const title = paginatedTitle(
+    `Top ${clinicCount} Dental Clinics in ${stateData.name}`,
+    currentPage,
+    totalPages,
+  );
+  const description = paginatedDescription(
+    `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`,
+    currentPage,
+    { perPage: limit, totalItems: clinicCount, noun: 'clinics' },
+  );
   const url = absoluteUrl(listingCanonicalPath(`/${state}`, currentPage));
 
 
   return {
-    title,
+    title: listingMetaTitle(title, currentPage),
     description,
     alternates: {
       canonical: url,
@@ -106,10 +127,7 @@ export async function generateStateListingMetadata(
         },
       ],
     },
-    robots: {
-      index: clinicCount > 0 && currentPage <= MAX_INDEXED_LISTING_PAGE,
-      follow: true,
-    },
+    robots: listingRobots(currentPage, clinicCount > 0, MAX_INDEXED_LISTING_PAGE),
   };
 }
 
@@ -131,6 +149,9 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
 
   const totalClinics = stateData.total_clinics || 0;
   const totalPages = Math.ceil(totalClinics / limit);
+  if (isPastLastPage(currentPage, totalClinics, limit)) {
+    notFound();
+  }
 
   const topAreas = areasWithClinics.slice(0, 6);
   const guides = getAllGuides().slice(0, 4);
