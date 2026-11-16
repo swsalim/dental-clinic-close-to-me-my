@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { parsePageParam } from '@/lib/listing/pagination';
+import { extraListingPageParams, parsePageParam } from '@/lib/listing/pagination';
 
 import {
   DentistsListing,
@@ -9,7 +9,12 @@ import {
 } from '@/components/listing/pages/dentists-listing';
 
 export const revalidate = 2_592_000;
-export const dynamicParams = true;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return extraListingPageParams().map((page) => ({ page }));
+}
 
 type DentistsPaginatedPageProps = {
   params: Promise<{ page: string }>;

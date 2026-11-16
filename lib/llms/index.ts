@@ -155,12 +155,12 @@ async function buildLlmsFull() {
 
 export const getLlmsIndex = unstable_cache(buildLlmsIndex, ['llms-index-v4'], {
   revalidate: LLMS_REVALIDATE_SECONDS,
-  tags: ['clinics', 'states', 'areas', 'doctors'],
+  tags: ['states', 'areas', 'doctors'],
 });
 
 export const getLlmsFull = unstable_cache(buildLlmsFull, ['llms-full-v2'], {
   revalidate: LLMS_REVALIDATE_SECONDS,
-  tags: ['clinics', 'states', 'areas', 'doctors'],
+  tags: ['states', 'areas', 'doctors'],
 });
 
 export async function getPageMarkdown(slug: string[]): Promise<string | null> {

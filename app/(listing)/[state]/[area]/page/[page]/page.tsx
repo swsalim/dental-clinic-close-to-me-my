@@ -1,12 +1,32 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { parsePageParam } from '@/lib/listing/pagination';
+import { extraListingPageParams, parsePageParam } from '@/lib/listing/pagination';
+
+import { getAreaListings } from '@/helpers/areas';
 
 import { AreaListing, generateAreaListingMetadata } from '@/components/listing/pages/area-listing';
 
 export const revalidate = 2_592_000;
-export const dynamicParams = true;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const areas = await getAreaListings();
+
+  return areas.flatMap((area) => {
+    const state = area.state?.slug;
+    if (!state || !area.slug) {
+      return [];
+    }
+
+    return extraListingPageParams().map((page) => ({
+      state,
+      area: area.slug,
+      page,
+    }));
+  });
+}
 
 type AreaPaginatedPageProps = {
   params: Promise<{ state: string; area: string; page: string }>;

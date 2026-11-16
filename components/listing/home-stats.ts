@@ -39,6 +39,6 @@ export const getHomeDirectoryStats = unstable_cache(
   ['home-directory-stats'],
   {
     revalidate: 2_592_000,
-    tags: ['clinics', 'states', 'services'],
+    tags: ['states', 'services'],
   },
 );

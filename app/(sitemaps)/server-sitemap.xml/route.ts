@@ -16,7 +16,7 @@ interface SitemapEntry {
   lastmod: string;
 }
 
-export const revalidate = 86_400;
+export const revalidate = 2_592_000;
 
 function sitemapLastmod(...values: Array<string | null | undefined>): string {
   let latest = 0;
@@ -127,6 +127,9 @@ export async function GET() {
   });
 
   const sitemap = await getServerSideSitemap([...fields]);
-  sitemap.headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=86400');
+  sitemap.headers.set(
+    'Cache-Control',
+    'public, s-maxage=2592000, stale-while-revalidate=86400',
+  );
   return sitemap;
 }

@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
   siteName: 'Dental Clinics Malaysia',
   url: new URL(absoluteUrl()),
   openGraph: {
-    image: '/images/og-default.png',
+    image: '/images/hero-home.webp',
     imageAlt: 'Banner for dentalclinicclosetome.com',
     width: '1200',
     height: '630',

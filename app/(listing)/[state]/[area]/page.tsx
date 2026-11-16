@@ -6,7 +6,7 @@ import { AreaListing, generateAreaListingMetadata } from '@/components/listing/p
 
 export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 type AreaPageProps = {
   params: Promise<{ state: string; area: string }>;

@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: DentistPageProps): Promise<Me
       url: config.url,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${doctor.name}`),
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: doctor.name,
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: DentistPageProps): Promise<Me
       creator: siteConfig.creator,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${doctor.name}`),
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: doctor.name,
@@ -93,7 +93,7 @@ export async function generateStaticParams() {
 // Force static generation - this ensures the page is generated at build time
 export const dynamic = 'force-static';
 export const revalidate = 2_592_000;
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export default async function DentistPage({ params }: DentistPageProps) {
   const { slug } = await params;

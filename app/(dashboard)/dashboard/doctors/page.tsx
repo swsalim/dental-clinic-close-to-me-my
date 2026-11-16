@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: config.url,
     images: [
       {
-        url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${config.title}`),
+        url: siteConfig.openGraph.image,
         width: siteConfig.openGraph.width,
         height: siteConfig.openGraph.height,
         alt: config.title,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     creator: siteConfig.creator,
     images: [
       {
-        url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${config.title}`),
+        url: siteConfig.openGraph.image,
         width: siteConfig.openGraph.width,
         height: siteConfig.openGraph.height,
         alt: config.title,

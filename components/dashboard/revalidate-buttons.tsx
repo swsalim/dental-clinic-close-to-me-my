@@ -2,7 +2,6 @@
 
 import {
   revalidateAreas,
-  revalidateClinics,
   revalidateDoctors,
   revalidateStates,
 } from '@/lib/actions/revalidate';
@@ -32,9 +31,6 @@ export default function RevalidateButtons() {
 
   return (
     <div className="my-12 flex flex-row gap-6">
-      <Button variant="outline" onClick={() => handleRevalidate(revalidateClinics, 'Clinics')}>
-        Revalidate Clinics
-      </Button>
       <Button variant="outline" onClick={() => handleRevalidate(revalidateAreas, 'Areas')}>
         Revalidate Areas
       </Button>

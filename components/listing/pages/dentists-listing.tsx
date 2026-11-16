@@ -37,9 +37,6 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
     'Find dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you. Information includes clinic locations and contact details.';
   const url = absoluteUrl(listingCanonicalPath('/dentists', currentPage));
 
-  // Build the OG image URL
-  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
-  ogImageUrl.searchParams.set('title', title);
 
   return {
     title,
@@ -53,7 +50,7 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
       url,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,
@@ -69,7 +66,7 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
       creator: siteConfig.creator,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,

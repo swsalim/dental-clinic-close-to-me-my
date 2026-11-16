@@ -94,7 +94,7 @@ const getBrowseData = unstable_cache(
   ['browse-data'],
   {
     revalidate: 2_592_000,
-    tags: ['browse-data', 'states', 'areas', 'clinics'],
+    tags: ['browse-data', 'states', 'areas'],
   },
 );
 
@@ -125,8 +125,6 @@ function buildBrowseMetadata({
       : `Browse dental clinics across ${stateCount} states and ${areaCount} cities in Malaysia. Compare reviews, services, and opening hours.`;
 
   const url = absoluteUrl('/browse');
-  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
-  ogImageUrl.searchParams.set('title', title);
 
   const metadata: Metadata = {
     title,
@@ -140,7 +138,7 @@ function buildBrowseMetadata({
       url,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,
@@ -156,7 +154,7 @@ function buildBrowseMetadata({
       creator: siteConfig.creator,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,

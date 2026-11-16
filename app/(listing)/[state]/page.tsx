@@ -9,7 +9,7 @@ import {
 
 export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 type StatePageProps = {
   params: Promise<{ state: string }>;

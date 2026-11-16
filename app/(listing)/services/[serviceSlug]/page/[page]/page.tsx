@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { parsePageParam } from '@/lib/listing/pagination';
+import { extraListingPageParams, parsePageParam } from '@/lib/listing/pagination';
+
+import { getAllServices } from '@/helpers/services';
 
 import {
   generateServiceListingMetadata,
@@ -9,7 +11,19 @@ import {
 } from '@/components/listing/pages/service-listing';
 
 export const revalidate = 2_592_000;
-export const dynamicParams = true;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const services = await getAllServices();
+
+  return services.flatMap((service) =>
+    extraListingPageParams().map((page) => ({
+      serviceSlug: service.slug,
+      page,
+    })),
+  );
+}
 
 type ServicePaginatedPageProps = {
   params: Promise<{ serviceSlug: string; page: string }>;

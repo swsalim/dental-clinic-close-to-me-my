@@ -70,12 +70,6 @@ export async function generateStateListingMetadata(
   const description = `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const url = absoluteUrl(listingCanonicalPath(`/${state}`, currentPage));
 
-  // Build the OG image URL with optional background image
-  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og-list`);
-  ogImageUrl.searchParams.set('title', title);
-  if (stateData.image) {
-    ogImageUrl.searchParams.set('image', stateData.image);
-  }
 
   return {
     title,
@@ -89,7 +83,7 @@ export async function generateStateListingMetadata(
       url,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,
@@ -105,7 +99,7 @@ export async function generateStateListingMetadata(
       creator: siteConfig.creator,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,

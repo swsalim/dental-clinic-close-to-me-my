@@ -181,7 +181,7 @@ export async function getClinicBySlug(
     [`clinic-${slug}-${status}`],
     {
       revalidate: 2_592_000, // 30 days — match listing ISR
-      tags: ['clinics', `clinic-${slug}`],
+      tags: [`clinic-${slug}`],
     },
   );
 
@@ -237,7 +237,7 @@ export async function getClinicByServiceId(
     [`clinics-service-${serviceId}-${fromIndex}-${toIndex}-${statusParam}`],
     {
       revalidate: 2_592_000, // Cache for 30 days
-      tags: ['clinics', `service-${serviceId}`],
+      tags: [`service-${serviceId}`],
     },
   )();
 }
@@ -297,7 +297,7 @@ export const getClinicsNearLocation = async (
     [cacheKey],
     {
       revalidate: 2_592_000, // Cache for 30 days
-      tags: ['clinics', 'nearby-clinics'],
+      tags: ['nearby-clinics'],
     },
   )();
 };
@@ -323,7 +323,7 @@ export const getClinicReviews = unstable_cache(
   ['clinic-reviews'],
   {
     revalidate: 2_592_000, // Cache for 30 days
-    tags: ['reviews', 'clinics'],
+    tags: ['reviews'],
   },
 );
 

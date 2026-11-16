@@ -48,7 +48,7 @@ import { Wrapper } from '@/components/ui/wrapper';
 
 export const revalidate = 2_592_000;
 export const dynamic = 'force-static';
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 const AddReviewForm = nextDynamic(() => import('@/components/forms/add-review-form'));
 const ImageGallery = nextDynamic(() =>
@@ -190,9 +190,6 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
         : '';
   const description = `Learn more about ${clinic.name}, a dental clinic located in ${clinic.area?.name}, ${clinic.state?.name}.${ratingSnippet} View services, hours, and contact info.`;
 
-  // Build the OG image URL with optional background image
-  const ogImageUrl = new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og`);
-  ogImageUrl.searchParams.set('title', title);
 
   return {
     title,
@@ -206,7 +203,7 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
       url: absoluteUrl(`/place/${clinicSlug}`),
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: clinic?.name,
@@ -222,7 +219,7 @@ export async function generateMetadata({ params }: ClinicPageProps): Promise<Met
       creator: siteConfig.creator,
       images: [
         {
-          url: ogImageUrl,
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: clinic?.name,
@@ -296,7 +293,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
       <BusinessJsonLd
         name={parsedClinic.name}
         url={absoluteUrl(`/place/${parsedClinic.slug}`)}
-        image={absoluteUrl(`/api/og?title=${parsedClinic.name}`)}
+        image={absoluteUrl(siteConfig.openGraph.image)}
         phone={parsedClinic.phone}
         email={parsedClinic.email}
         location={{

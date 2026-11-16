@@ -99,9 +99,10 @@ export class CacheInvalidator {
   /**
    * Invalidate all clinic-related caches
    */
-  static async invalidateClinics() {
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
+  static async invalidateClinics(slug?: string) {
+    if (slug) {
+      await revalidateTag(`clinic-${slug}`);
+    }
   }
 
   /**

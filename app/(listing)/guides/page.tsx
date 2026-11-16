@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.siteName,
     images: [
       {
-        url: `/api/og?title=${encodeURIComponent(title)}`,
+        url: siteConfig.openGraph.image,
         width: 1200,
         height: 630,
         alt: title,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title,
     description,
     creator: siteConfig.creator,
-    images: [`/api/og?title=${encodeURIComponent(title)}`],
+    images: [siteConfig.openGraph.image],
   },
 };
 

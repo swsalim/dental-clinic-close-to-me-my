@@ -19,6 +19,7 @@ import { Check as CheckIcon, CaretUpDown as ChevronsUpDown, ArrowsClockwise as R
 import * as z from 'zod';
 
 // Lib imports
+import { revalidateEditedClinic } from '@/lib/actions/revalidate';
 import {
   clinicImagesToEntries,
   createNewImageEntries,
@@ -655,6 +656,15 @@ export default function FormEditClinic({
         });
 
       }
+
+      const stateSlug = states.find((state) => state.id === data.state_id)?.slug;
+      const areaSlug = areas.find((area) => area.id === data.area_id)?.slug;
+      await revalidateEditedClinic({
+        slug: data.slug,
+        previousSlug: clinic.slug,
+        stateSlug,
+        areaSlug,
+      });
 
       toast({
         title: 'Success',

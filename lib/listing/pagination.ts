@@ -2,6 +2,11 @@
 export const LISTING_REVALIDATE_SECONDS = 2_592_000;
 export const MAX_INDEXED_LISTING_PAGE = 3;
 
+/** Page segments after the first, matching the indexed listing window. */
+export function extraListingPageParams(): string[] {
+  return Array.from({ length: MAX_INDEXED_LISTING_PAGE - 1 }, (_, index) => String(index + 2));
+}
+
 export function parsePageParam(page: string | string[] | undefined): number {
   const raw = Array.isArray(page) ? page[0] : page;
   const parsed = Number(raw);

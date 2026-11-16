@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { parsePageParam } from '@/lib/listing/pagination';
+import { extraListingPageParams, parsePageParam } from '@/lib/listing/pagination';
+
+import { getStateListings } from '@/helpers/states';
 
 import {
   generateStateDentistsListingMetadata,
@@ -9,7 +11,19 @@ import {
 } from '@/components/listing/pages/state-dentists-listing';
 
 export const revalidate = 2_592_000;
-export const dynamicParams = true;
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const states = await getStateListings();
+
+  return states.flatMap((state) =>
+    extraListingPageParams().map((page) => ({
+      state: state.slug,
+      page,
+    })),
+  );
+}
 
 type StateDentistsPaginatedPageProps = {
   params: Promise<{ state: string; page: string }>;

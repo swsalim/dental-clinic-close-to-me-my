@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config/site';
 import { Clinic } from '@/types/clinic';
 
 import { absoluteUrl } from '@/lib/utils';
@@ -24,7 +25,7 @@ export default function CollectionPageJsonLd({
       '@type': 'Dentist',
       url: absoluteUrl(`/place/${clinic.slug}`),
       name: clinic.name,
-      image: absoluteUrl(`/api/og?title=${clinic.name}`),
+      image: absoluteUrl(siteConfig.openGraph.image),
       address: {
         '@type': 'PostalAddress',
         addressLocality: clinic.area?.name,

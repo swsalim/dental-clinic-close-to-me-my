@@ -64,7 +64,7 @@ export async function generateServiceListingMetadata(
       url,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,
@@ -80,7 +80,7 @@ export async function generateServiceListingMetadata(
       creator: siteConfig.creator,
       images: [
         {
-          url: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}`),
+          url: siteConfig.openGraph.image,
           width: siteConfig.openGraph.width,
           height: siteConfig.openGraph.height,
           alt: title,
@@ -138,7 +138,7 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
       '@type': 'Dentist',
       '@id': absoluteUrl(`/place/${clinic.slug}`),
       name: clinic.name,
-      image: absoluteUrl(`/api/og?title=${clinic.name}`),
+      image: absoluteUrl(siteConfig.openGraph.image),
       address: {
         '@type': 'PostalAddress',
         addressLocality: clinic.area?.name,

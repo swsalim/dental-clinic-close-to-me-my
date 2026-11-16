@@ -63,6 +63,16 @@ const nextConfig: NextConfig = {
 
     return [
       {
+        source: '/api/og',
+        destination: '/images/hero-home.webp',
+        permanent: true,
+      },
+      {
+        source: '/api/og-list',
+        destination: '/images/hero-home.webp',
+        permanent: true,
+      },
+      {
         source: '/place/our-dental-clinic-masai',
         destination: '/place/our-dental-clinic-johor-bahru',
         permanent: true,

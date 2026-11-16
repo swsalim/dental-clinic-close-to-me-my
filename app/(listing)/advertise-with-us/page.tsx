@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config/site';
 import { ChartLineUp as ChartNoAxesCombinedIcon, Check as CheckIcon, HandCoins as HandCoinsIcon, Handshake as HeartHandshakeIcon, MapPin as MapPinIcon, ShieldCheck as ShieldCheckIcon, Plant as SproutIcon } from '@phosphor-icons/react/dist/ssr';
 import type { Icon } from '@phosphor-icons/react';
 
@@ -22,7 +23,7 @@ const seo = {
   company: 'DentalClinicCloseToMe',
 };
 
-const ogImage = `/api/og?title=${seo.title}`;
+const ogImage = siteConfig.openGraph.image;
 
 export const metadata = {
   title: seo.title,

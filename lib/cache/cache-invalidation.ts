@@ -1,5 +1,7 @@
 import { revalidateTag } from 'next/cache';
 
+import { revalidateClinicPage } from '@/lib/listing/revalidate-clinic';
+
 import { CACHE_TAGS } from './supabase-cache';
 
 /**
@@ -10,19 +12,11 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when a clinic is created, updated, or deleted
    */
   static async onClinicChange(clinicSlug?: string) {
-    // Invalidate general clinic caches
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
-
-    // Invalidate specific clinic cache if slug provided
-    if (clinicSlug) {
-      await revalidateTag(`clinic-${clinicSlug}`);
+    if (!clinicSlug) {
+      return;
     }
 
-    // Invalidate related caches that might be affected
-    await revalidateTag(CACHE_TAGS.STATES);
-    await revalidateTag(CACHE_TAGS.AREAS);
-    await revalidateTag(CACHE_TAGS.SERVICES);
+    await revalidateClinicPage({ slug: clinicSlug });
   }
 
   /**
@@ -39,7 +33,6 @@ export class CacheInvalidationStrategies {
     }
 
     // Invalidate related caches that might be affected
-    await revalidateTag(CACHE_TAGS.CLINICS);
   }
 
   /**
@@ -47,8 +40,6 @@ export class CacheInvalidationStrategies {
    */
   static async onReviewChange(clinicId: string) {
     // Invalidate clinic-specific caches
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
     await revalidateTag(`clinic-reviews-${clinicId}`);
   }
 
@@ -56,8 +47,6 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when clinic hours are updated
    */
   static async onClinicHoursChange(clinicId: string) {
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
     await revalidateTag(`clinic-hours-${clinicId}`);
   }
 
@@ -65,8 +54,6 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when clinic special hours are updated
    */
   static async onClinicSpecialHoursChange(clinicId: string) {
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
     await revalidateTag(`clinic-special-hours-${clinicId}`);
   }
 
@@ -74,8 +61,6 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when clinic images are updated
    */
   static async onClinicImagesChange(clinicId: string) {
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
     await revalidateTag(`clinic-images-${clinicId}`);
   }
 
@@ -92,8 +77,6 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when clinic services are updated
    */
   static async onClinicServicesChange(clinicId: string) {
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
     await revalidateTag(CACHE_TAGS.SERVICES);
     await revalidateTag(`clinic-services-${clinicId}`);
   }
@@ -102,8 +85,6 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when clinic categories are updated
    */
   static async onClinicCategoriesChange(clinicId: string) {
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
     await revalidateTag(`clinic-categories-${clinicId}`);
   }
 
@@ -111,12 +92,6 @@ export class CacheInvalidationStrategies {
    * Invalidate caches when clinic status changes (approved/rejected)
    */
   static async onClinicStatusChange(clinicId: string, newStatus: string) {
-    // Invalidate all clinic-related caches since status affects visibility
-    await revalidateTag(CACHE_TAGS.CLINICS);
-    await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
-    await revalidateTag(CACHE_TAGS.STATES);
-    await revalidateTag(CACHE_TAGS.AREAS);
-    await revalidateTag(CACHE_TAGS.SERVICES);
     await revalidateTag(`clinic-status-${clinicId}-${newStatus}`);
   }
 
@@ -127,7 +102,6 @@ export class CacheInvalidationStrategies {
     // Invalidate all doctor-related caches since status affects visibility
     await revalidateTag(CACHE_TAGS.DOCTORS);
     await revalidateTag(CACHE_TAGS.DOCTOR_DETAILS);
-    await revalidateTag(CACHE_TAGS.CLINICS);
     await revalidateTag(`doctor-status-${doctorId}-${newStatus}`);
   }
 
@@ -176,19 +150,12 @@ export class CacheInvalidationUtils {
   static async onBulkOperation(operationType: 'clinic' | 'doctor' | 'review' | 'static') {
     switch (operationType) {
       case 'clinic':
-        await revalidateTag(CACHE_TAGS.CLINICS);
-        await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
-        await revalidateTag(CACHE_TAGS.STATES);
-        await revalidateTag(CACHE_TAGS.AREAS);
         break;
       case 'doctor':
         await revalidateTag(CACHE_TAGS.DOCTORS);
         await revalidateTag(CACHE_TAGS.DOCTOR_DETAILS);
-        await revalidateTag(CACHE_TAGS.CLINICS);
         break;
       case 'review':
-        await revalidateTag(CACHE_TAGS.CLINICS);
-        await revalidateTag(CACHE_TAGS.CLINIC_DETAILS);
         break;
       case 'static':
         await CacheInvalidationStrategies.onStaticDataChange();

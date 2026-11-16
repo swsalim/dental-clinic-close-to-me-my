@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 
   const canonical = `/guides/${guide.slug}`;
   const documentTitle = guide.metaTitle ?? guide.title;
-  const ogImage = `/api/og?title=${encodeURIComponent(documentTitle)}`;
+  const ogImage = siteConfig.openGraph.image;
 
   return {
     title: guide.metaTitle ? { absolute: guide.metaTitle } : guide.title,
