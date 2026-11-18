@@ -1,6 +1,7 @@
 import { revalidateTag } from 'next/cache';
 
 import { revalidateClinicPage } from '@/lib/listing/revalidate-clinic';
+import { revalidateReviewSurfaces } from '@/lib/listing/revalidate-review';
 
 import { CACHE_TAGS } from './supabase-cache';
 
@@ -38,9 +39,8 @@ export class CacheInvalidationStrategies {
   /**
    * Invalidate caches when a review is created, updated, or deleted
    */
-  static async onReviewChange(clinicId: string) {
-    // Invalidate clinic-specific caches
-    await revalidateTag(`clinic-reviews-${clinicId}`);
+  static async onReviewChange(clinicId: string, clinicSlug?: string) {
+    revalidateReviewSurfaces({ clinicId, clinicSlug });
   }
 
   /**
