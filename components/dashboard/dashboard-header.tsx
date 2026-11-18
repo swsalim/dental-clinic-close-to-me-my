@@ -30,6 +30,7 @@ const DashboardHeader = () => {
     { label: 'Areas', href: '/dashboard/areas' },
     { label: 'Clinics', href: '/dashboard/clinics' },
     { label: 'Doctors', href: '/dashboard/doctors' },
+    { label: 'Reviews', href: '/dashboard/reviews' },
     { label: 'Review Clinics', href: '/dashboard/clinics/review' },
   ];
 
