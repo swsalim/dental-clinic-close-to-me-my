@@ -2,6 +2,7 @@
 
 import { z } from 'zod';
 
+import { isAdminUser } from '@/lib/auth/is-admin';
 import { revalidateReviewSurfaces } from '@/lib/listing/revalidate-review';
 import { nextClinicAggregate, reviewVisibilityChange } from '@/lib/reviews/aggregate';
 import { createAdminClient, createServerClient } from '@/lib/supabase';
@@ -61,6 +62,10 @@ export async function moderateClinicReviews(
 
   if (!user) {
     return { ok: false, error: 'You need to be signed in to moderate reviews.' };
+  }
+
+  if (!isAdminUser(user.email)) {
+    return { ok: false, error: 'You do not have permission to moderate reviews.' };
   }
 
   const admin = createAdminClient();

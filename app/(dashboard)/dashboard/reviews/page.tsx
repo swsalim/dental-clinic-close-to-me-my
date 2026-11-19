@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 import { siteConfig } from '@/config/site';
 
+import { isAdminUser } from '@/lib/auth/is-admin';
+import { createServerClient } from '@/lib/supabase';
+
 import {
   DASHBOARD_REVIEW_PAGE_SIZE,
   getDashboardReviews,
@@ -82,6 +85,23 @@ export default async function DashboardReviewsPage({
 }: {
   searchParams: Promise<{ status?: string; page?: string }>;
 }) {
+  const supabase = await createServerClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!isAdminUser(user?.email)) {
+    return (
+      <div className="space-y-2">
+        <h1 className="font-display text-2xl font-bold text-gray-900 dark:text-gray-50">Reviews</h1>
+        <p className="max-w-2xl text-sm text-gray-600 dark:text-gray-300">
+          This page is limited to admin accounts. Review submissions stay hidden from other
+          signed-in users.
+        </p>
+      </div>
+    );
+  }
+
   const params = await searchParams;
   const { filter, page, reviews, counts } = await getDashboardReviews({
     status: params.status,
