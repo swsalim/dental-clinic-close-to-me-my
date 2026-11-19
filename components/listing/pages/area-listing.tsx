@@ -29,6 +29,7 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 import { getStateBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
+import { BackToFirstPage } from '@/components/listing/back-to-first-page';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
 import { MediaImage } from '@/components/image/media-image';
@@ -153,6 +154,15 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
 
   const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
+  const indexedTitle = `Top ${totalClinics} Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
+  const indexedDescription = `Explore ${totalClinics} trusted dental clinics located in ${areaData.name}, ${areaData.state?.name}. Find services, reviews, and opening hours.`;
+  const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
+  const documentDescription = paginatedDescription(indexedDescription, currentPage, {
+    perPage: limit,
+    totalItems: totalClinics,
+    noun: 'clinics',
+  });
+  const heading = currentPage > 1 ? documentTitle : title;
 
   const guides = getAllGuides().slice(0, 4);
 
@@ -190,9 +200,13 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
     <>
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
       <CollectionPageJsonLd
-        name={`Dental Clinics in ${areaData.name}, ${areaData.state?.name}`}
-        url={`/${state}/${area}`}
-        description={description}
+        name={
+          currentPage > 1
+            ? documentTitle
+            : `Dental Clinics in ${areaData.name}, ${areaData.state?.name}`
+        }
+        url={listingCanonicalPath(`/${state}/${area}`, currentPage)}
+        description={currentPage > 1 ? documentDescription : description}
         clinics={areaData.clinics ?? []}
       />
       <Wrapper className="relative overflow-hidden">
@@ -216,7 +230,12 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
         <Container className="relative z-10">
           <div className="flex flex-col gap-4 py-12 md:py-24">
             <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="text-balance font-display text-4xl font-black text-white">{title}</h1>
+            <h1 className="text-balance font-display text-4xl font-black text-white">{heading}</h1>
+            <BackToFirstPage
+              href={`/${state}/${area}`}
+              placeName={areaData.name ?? ''}
+              currentPage={currentPage}
+            />
             <p className="text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities in{' '}
               <Link

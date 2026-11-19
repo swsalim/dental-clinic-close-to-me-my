@@ -35,6 +35,7 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 import { getDoctorsByState } from '@/helpers/doctors';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
+import { BackToFirstPage } from '@/components/listing/back-to-first-page';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { MediaImage } from '@/components/image/media-image';
 import {
@@ -161,6 +162,14 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
 
   const title = `Top Dental Clinics in ${stateData.name}`;
   const description = `Explore ${totalClinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
+  const indexedTitle = `Top ${totalClinics} Dental Clinics in ${stateData.name}`;
+  const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
+  const documentDescription = paginatedDescription(description, currentPage, {
+    perPage: limit,
+    totalItems: totalClinics,
+    noun: 'clinics',
+  });
+  const heading = currentPage > 1 ? documentTitle : title;
 
   const breadcrumbItems = [
     {
@@ -187,9 +196,9 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
     <>
       <BreadcrumbJsonLd itemListElements={JSONLDbreadcrumbs} />
       <CollectionPageJsonLd
-        name={`Dental Clinics in ${stateData.name}`}
-        url={`/${state}`}
-        description={description}
+        name={currentPage > 1 ? documentTitle : `Dental Clinics in ${stateData.name}`}
+        url={listingCanonicalPath(`/${state}`, currentPage)}
+        description={currentPage > 1 ? documentDescription : description}
         clinics={stateData.clinics ?? []}
       />
       <Wrapper className="relative overflow-hidden">
@@ -213,7 +222,12 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
         <Container className="relative z-10">
           <div className="flex flex-col gap-4 py-12 md:py-24">
             <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="text-balance font-display text-4xl font-black text-white">{title}</h1>
+            <h1 className="text-balance font-display text-4xl font-black text-white">{heading}</h1>
+            <BackToFirstPage
+              href={`/${state}`}
+              placeName={stateData.name ?? ''}
+              currentPage={currentPage}
+            />
             <p className="max-w-lg text-balance text-lg font-medium text-white">
               Explore {totalClinics} trusted dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
