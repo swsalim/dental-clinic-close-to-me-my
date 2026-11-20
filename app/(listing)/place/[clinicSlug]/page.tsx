@@ -17,8 +17,9 @@ import {
 
 import { siteConfig } from '@/config/site';
 
-import { getClinicBySlugCached } from '@/lib/data';
 import { buildFullAddress } from '@/lib/build-full-address';
+import { getClinicBySlugCached } from '@/lib/data';
+import { getOutboundRel } from '@/lib/listing/outbound-rel';
 import { buildClinicDescription, buildClinicTitle } from '@/lib/listing/page-title';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl } from '@/lib/utils';
@@ -26,6 +27,7 @@ import { absoluteUrl } from '@/lib/utils';
 import { getClinicListings } from '@/helpers/clinics';
 import { getServiceIcon } from '@/helpers/services';
 
+import { AffiliateAd } from '@/components/ads/affiliate-ad';
 import { ClinicStatus } from '@/components/clinic-status';
 import TikTok from '@/components/icons/tiktok';
 import { BookAppointmentButton } from '@/components/listing/book-appointment-button';
@@ -263,6 +265,8 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
     notFound();
   }
 
+  const isFeatured = parsedClinic.is_featured === true;
+  const outboundRel = getOutboundRel(isFeatured);
   const memberOf: { '@type': string; '@id': string } | null = null;
 
   // Format opening hours for JSON-LD using OpeningHoursSpecification
@@ -377,8 +381,9 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                     <GlobeIcon weight="duotone" className="h-5 w-5 text-blue-300" />
                     <Link
                       href={`${parsedClinic.website}?utm_source=dentalclinicclosetome.my`}
-                      rel="nofollow"
-                      prefetch={false}>
+                      rel={outboundRel}
+                      prefetch={false}
+                    >
                       <span className="text-sm">{parsedClinic.website}</span>
                     </Link>
                   </div>
@@ -391,12 +396,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-[#1877f2] hover:text-[#1877f2] dark:text-[#1877f2] dark:hover:text-[#1877f2]">
+                        className="flex-grow-0 justify-center p-3 text-[#1877f2] hover:text-[#1877f2] dark:text-[#1877f2] dark:hover:text-[#1877f2]"
+                      >
                         <a
                           href={parsedClinic.facebook_url}
                           target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="Visit business Facebook page">
+                          rel={outboundRel}
+                          aria-label="Visit business Facebook page"
+                        >
                           <FacebookIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit Facebook</span>
                         </a>
@@ -406,12 +413,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-[#e1306c] hover:text-[#e1306c] dark:text-[#e1306c] dark:hover:text-[#e1306c]">
+                        className="flex-grow-0 justify-center p-3 text-[#e1306c] hover:text-[#e1306c] dark:text-[#e1306c] dark:hover:text-[#e1306c]"
+                      >
                         <a
                           href={parsedClinic.instagram_url}
                           target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="Visit business Instagram page">
+                          rel={outboundRel}
+                          aria-label="Visit business Instagram page"
+                        >
                           <InstagramIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit Instagram</span>
                         </a>
@@ -421,12 +430,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-[#ff0000] hover:text-[#ff0000] dark:text-[#ff0000] dark:hover:text-[#ff0000]">
+                        className="flex-grow-0 justify-center p-3 text-[#ff0000] hover:text-[#ff0000] dark:text-[#ff0000] dark:hover:text-[#ff0000]"
+                      >
                         <a
                           href={parsedClinic.youtube_url}
                           target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="Visit business YouTube channel">
+                          rel={outboundRel}
+                          aria-label="Visit business YouTube channel"
+                        >
                           <YoutubeIcon weight="duotone" className="h-5 w-5" />
                           <span className="sr-only">Visit YouTube</span>
                         </a>
@@ -436,12 +447,14 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                       <Button
                         variant="outline"
                         asChild
-                        className="flex-grow-0 justify-center p-3 text-black hover:text-black dark:text-black dark:hover:text-black">
+                        className="flex-grow-0 justify-center p-3 text-black hover:text-black dark:text-black dark:hover:text-black"
+                      >
                         <a
                           href={parsedClinic.tiktok_url}
                           target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="Visit business TikTok channel">
+                          rel={outboundRel}
+                          aria-label="Visit business TikTok channel"
+                        >
                           <TikTok className="h-5 w-5" />
                           <span className="sr-only">Visit TikTok</span>
                         </a>
@@ -488,22 +501,27 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
                 </article>
               )}
 
-              <div className="mx-auto mb-10 max-w-2xl">
-                <a
-                  href="https://invl.me/clo4xl2"
-                  className="hover:!border-b-transparent"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer">
-                  <Image
-                    src="/images/product-philips-soniccare-wide.webp"
-                    alt="Philips Sonicare Wide"
-                    width={MEDIA.adLeaderboard.width}
-                    height={MEDIA.adLeaderboard.height}
-                    sizes={MEDIA.adLeaderboard.sizes}
-                    className="m-0 h-auto w-full object-contain"
-                  />
-                </a>
-              </div>
+              {!isFeatured && (
+                <div className="mx-auto mb-10 max-w-2xl">
+                  <AffiliateAd>
+                    <a
+                      href="https://invl.me/clo4xl2"
+                      className="hover:!border-b-transparent"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <Image
+                        src="/images/product-philips-soniccare-wide.webp"
+                        alt="Philips Sonicare Wide"
+                        width={MEDIA.adLeaderboard.width}
+                        height={MEDIA.adLeaderboard.height}
+                        sizes={MEDIA.adLeaderboard.sizes}
+                        className="m-0 h-auto w-full object-contain"
+                      />
+                    </a>
+                  </AffiliateAd>
+                </div>
+              )}
               <Prose className="space-y-8">
                 {parsedClinic.description && (
                   <article>
@@ -577,6 +595,7 @@ export default async function ClinicPage({ params }: ClinicPageProps) {
               tiktokUrl={parsedClinic.tiktok_url}
               latitude={parsedClinic.latitude ?? 0}
               longitude={parsedClinic.longitude ?? 0}
+              isFeatured={isFeatured}
             />
           </div>
         </Container>

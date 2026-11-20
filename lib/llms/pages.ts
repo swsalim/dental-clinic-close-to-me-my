@@ -237,7 +237,7 @@ export function markdownAdvertise() {
     '## Plans',
     [
       '### Featured — RM 59/month or RM 565/year',
-      'Priority placement in your selected city or area, featured badge, ad-free profile, do-follow backlink, and 1 promotional image.',
+      'Priority placement in your selected city or area, featured badge, ad-free profile, and 1 promotional image.',
       '### Featured Plus — RM 89/month or RM 855/year',
       'Everything in Featured, plus up to 5 promotional images and rotation in the homepage Featured Clinics section.',
       '### Featured Partner — RM 149/month or RM 1,430/year',

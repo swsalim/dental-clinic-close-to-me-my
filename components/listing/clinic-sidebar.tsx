@@ -15,12 +15,14 @@ import {
   YoutubeLogo,
 } from '@phosphor-icons/react/dist/ssr';
 
+import { getOutboundRel } from '@/lib/listing/outbound-rel';
 import { MEDIA } from '@/lib/media-sizes';
 // import { MEDIA } from '@/lib/media-sizes';
 import { cn } from '@/lib/utils';
 
 import { getServiceIcon } from '@/helpers/services';
 
+import { AffiliateAd } from '@/components/ads/affiliate-ad';
 import MapWrapper from '@/components/mapbox-map/map-wrapper';
 import { buttonVariants } from '@/components/ui/button';
 
@@ -41,6 +43,7 @@ interface ClinicSidebarProps {
   latitude: number;
   longitude: number;
   services?: Partial<ClinicService>[] | null;
+  isFeatured: boolean;
   className?: string;
 }
 
@@ -82,8 +85,10 @@ export function ClinicSidebar({
   tiktokUrl,
   latitude,
   longitude,
+  isFeatured,
   className,
 }: ClinicSidebarProps) {
+  const outboundRel = getOutboundRel(isFeatured);
   const socials = [
     {
       href: facebookUrl,
@@ -187,8 +192,9 @@ export function ClinicSidebar({
                 <a
                   href={`${website}?utm_source=dentalclinicclosetome.my`}
                   target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  className="">
+                  rel={outboundRel}
+                  className=""
+                >
                   <span className="min-w-0 break-all">{website}</span>
                 </a>
               </li>
@@ -201,9 +207,10 @@ export function ClinicSidebar({
                   key={social.label}
                   href={social.href}
                   target="_blank"
-                  rel="nofollow noopener noreferrer"
+                  rel={outboundRel}
                   aria-label={`Visit ${clinicName} on ${social.label}`}
-                  className={cn(buttonVariants({ variant: 'outline' }), social.className)}>
+                  className={cn(buttonVariants({ variant: 'outline' }), social.className)}
+                >
                   <social.icon weight="duotone" className="size-6" aria-hidden="true" />
                 </a>
               ))}
@@ -214,20 +221,25 @@ export function ClinicSidebar({
 
       <DoctorPractice clinicSlug={clinicSlug} variant="sidebar" />
 
-      <a
-        href="https://invl.me/clo4xmy"
-        className="hover:!border-b-transparent"
-        target="_blank"
-        rel="nofollow noopener noreferrer">
-        <Image
-          src="/images/product-curaprox.webp"
-          alt="Curaprox Orthodontic Kits"
-          width={MEDIA.card.width}
-          height={MEDIA.card.height}
-          sizes={MEDIA.card.sizes}
-          className="m-0 h-auto w-full object-contain"
-        />
-      </a>
+      {!isFeatured && (
+        <AffiliateAd>
+          <a
+            href="https://invl.me/clo4xmy"
+            className="hover:!border-b-transparent"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <Image
+              src="/images/product-curaprox.webp"
+              alt="Curaprox Orthodontic Kits"
+              width={MEDIA.card.width}
+              height={MEDIA.card.height}
+              sizes={MEDIA.card.sizes}
+              className="m-0 h-auto w-full object-contain"
+            />
+          </a>
+        </AffiliateAd>
+      )}
     </aside>
   );
 }
