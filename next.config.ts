@@ -57,9 +57,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     // Listing redirects are static so public pages are not matched by middleware.
-    // `?page=` is not redirected here. Next 15 copies the original query onto the
-    // destination, so a redirect to `/page/N` comes back as `/page/N?page=N` and loops.
-    // A beforeFiles rewrite below matches only when `page` is present.
+    // Do not redirect `?page=`. Next copies the original query onto the destination,
+    // so `/services/invisalign?page=2` -> `/services/invisalign/page/2` comes back as
+    // `/services/invisalign/page/2?page=2` and 308-loops. The query is ignored and the
+    // static page renders. Its canonical is the clean path.
     return [
       {
         source: '/api/og',
@@ -92,24 +93,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     ];
-  },
-  async rewrites() {
-    // Only requests that still carry `?page=` hit the redirect route.
-    const publicPath = '/:path((?!_next|api|dashboard).*)*';
-    return {
-      beforeFiles: [
-        {
-          source: '/',
-          has: [{ type: 'query', key: 'page' }],
-          destination: '/api/listing-page-redirect',
-        },
-        {
-          source: publicPath,
-          has: [{ type: 'query', key: 'page' }],
-          destination: '/api/listing-page-redirect/:path*',
-        },
-      ],
-    };
   },
 };
 

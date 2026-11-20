@@ -204,7 +204,7 @@ export async function DentistsListing({ currentPage }: DentistsListingProps) {
           <div className="flex min-w-0 flex-1 flex-col gap-y-6 md:gap-y-12">
             <Prose>
               <h1 className="font-display text-balance text-4xl font-black">
-                Find the Best Dentists in Malaysia
+                Find Dentists in Malaysia
               </h1>
               <p className="text-balance text-lg font-medium text-gray-600 dark:text-gray-300">
                 Browse dentists by{' '}

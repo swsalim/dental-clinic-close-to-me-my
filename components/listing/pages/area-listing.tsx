@@ -86,7 +86,7 @@ export async function generateAreaListingMetadata(
     totalPages,
   );
   const description = paginatedDescription(
-    `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`,
+    `Explore ${areaData.total_clinics} dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`,
     currentPage,
     { perPage: limit, totalItems: clinicCount, noun: 'clinics' },
   );
@@ -184,9 +184,9 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
   }
 
   const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
-  const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
+  const description = `Explore ${totalClinics} dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
   const indexedTitle = `Top ${totalClinics} Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
-  const indexedDescription = `Explore ${totalClinics} trusted dental clinics located in ${areaData.name}, ${areaData.state?.name}. Find services, reviews, and opening hours.`;
+  const indexedDescription = `Explore ${totalClinics} dental clinics located in ${areaData.name}, ${areaData.state?.name}. Find services, reviews, and opening hours.`;
   const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
   const documentDescription = paginatedDescription(indexedDescription, currentPage, {
     perPage: limit,
@@ -268,7 +268,7 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               currentPage={currentPage}
             />
             <p className="text-balance text-lg font-medium text-white">
-              Explore {totalClinics} trusted dental clinics across cities in{' '}
+              Explore {totalClinics} dental clinics across cities in{' '}
               <Link
                 href={absoluteUrl(`/${areaData.state?.slug}`)}
                 className="text-blue-300 hover:border-blue-300 hover:text-blue-300"

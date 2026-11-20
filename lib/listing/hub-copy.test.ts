@@ -8,7 +8,6 @@ import {
   MIN_INDEXABLE_AREA_CLINICS,
   withMinimumHubLinks,
 } from './hub-copy';
-import { listingPageRedirectPath } from './page-query-redirect';
 import { TITLE_MAX_LENGTH } from './page-title';
 
 const klang = {
@@ -85,26 +84,6 @@ describe('hub links', () => {
     assert.ok(links.length >= 8);
     assert.equal(links[0].href, '/kedah');
     assert.equal(links[1].href, '/kedah/jitra');
-  });
-});
-
-describe('legacy page query redirect', () => {
-  it('sends page 2+ to /page/N and drops page 1', () => {
-    assert.equal(
-      listingPageRedirectPath('services/invisalign', '2'),
-      '/services/invisalign/page/2',
-    );
-    assert.equal(
-      listingPageRedirectPath('services/invisalign', '80'),
-      '/services/invisalign/page/80',
-    );
-    assert.equal(listingPageRedirectPath('services/invisalign', '1'), '/services/invisalign');
-    assert.equal(
-      listingPageRedirectPath('services/invisalign/page/80', '80'),
-      '/services/invisalign/page/80',
-    );
-    assert.equal(listingPageRedirectPath('', '2'), '/page/2');
-    assert.equal(listingPageRedirectPath('../secret', '2'), null);
   });
 });
 

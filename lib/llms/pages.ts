@@ -266,7 +266,7 @@ export async function markdownState(stateSlug: string) {
 
   return joinSections([
     `# Top ${totalClinics} dental clinics in ${stateData.name}`,
-    `> Explore ${totalClinics} trusted dental clinics${nearbyAreas ? ` across cities like ${nearbyAreas}` : ''} in ${stateData.name}. Find services, reviews, and opening hours.`,
+    `> Explore ${totalClinics} dental clinics${nearbyAreas ? ` across cities like ${nearbyAreas}` : ''} in ${stateData.name}. Find services, reviews, and opening hours.`,
     doctorsResult.count
       ? listItem(
           `Dentists in ${stateData.name}`,
@@ -346,7 +346,7 @@ export async function markdownArea(stateSlug: string, areaSlug: string) {
 
   return joinSections([
     `# Top ${areaData.total_clinics} dental clinics in ${areaData.name}, ${stateName}`,
-    `> Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${stateName}. Find services, reviews, and opening hours.`,
+    `> Explore ${areaData.total_clinics} dental clinics located in ${areaData.name}, ${stateName}. Find services, reviews, and opening hours.`,
     listItem(`All clinics in ${stateName}`, mdUrl(`/${stateSlug}`)),
     '## Clinics',
     areaData.clinics?.length

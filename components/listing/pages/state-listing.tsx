@@ -93,7 +93,7 @@ export async function generateStateListingMetadata(
     totalPages,
   );
   const description = paginatedDescription(
-    `Explore ${stateData.total_clinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`,
+    `Explore ${stateData.total_clinics} dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`,
     currentPage,
     { perPage: limit, totalItems: clinicCount, noun: 'clinics' },
   );
@@ -179,7 +179,7 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
   const nearbyAreasWithLinks = featuredAreas;
 
   const title = `Top Dental Clinics in ${stateData.name}`;
-  const description = `Explore ${totalClinics} trusted dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
+  const description = `Explore ${totalClinics} dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
   const indexedTitle = `Top ${totalClinics} Dental Clinics in ${stateData.name}`;
   const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
   const documentDescription = paginatedDescription(description, currentPage, {
@@ -247,7 +247,7 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
               currentPage={currentPage}
             />
             <p className="max-w-lg text-balance text-lg font-medium text-white">
-              Explore {totalClinics} trusted dental clinics across cities like{' '}
+              Explore {totalClinics} dental clinics across cities like{' '}
               {nearbyAreasWithLinks?.map((area, index) => (
                 <React.Fragment key={area.slug}>
                   <Link
