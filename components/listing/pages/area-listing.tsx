@@ -35,6 +35,7 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getStateBySlug } from '@/helpers/states';
 
+import { AffiliateAd } from '@/components/ads/affiliate-ad';
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
@@ -288,21 +289,23 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
           <div className="py-8 md:gap-8 lg:grid lg:grid-cols-sidebar lg:gap-10">
             <div>
               <div className="mx-auto mb-10 max-w-2xl">
-                <a
-                  href="https://invl.me/clo4xl2"
-                  className="hover:!border-b-transparent"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <Image
-                    src="/images/product-philips-soniccare-wide.webp"
-                    alt="Philips Sonicare Wide"
-                    width={MEDIA.adLeaderboard.width}
-                    height={MEDIA.adLeaderboard.height}
-                    sizes={MEDIA.adLeaderboard.sizes}
-                    className="m-0 h-auto w-full object-contain"
-                  />
-                </a>
+                <AffiliateAd>
+                  <a
+                    href="https://invl.me/clo4xl2"
+                    className="hover:!border-b-transparent"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <Image
+                      src="/images/product-philips-soniccare-wide.webp"
+                      alt="Philips Sonicare Wide"
+                      width={MEDIA.adLeaderboard.width}
+                      height={MEDIA.adLeaderboard.height}
+                      sizes={MEDIA.adLeaderboard.sizes}
+                      className="m-0 h-auto w-full object-contain"
+                    />
+                  </a>
+                </AffiliateAd>
               </div>
 
               <div className="flex flex-col gap-y-6">
@@ -337,26 +340,28 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                             <React.Fragment key={clinic.slug}>
                               {index === 5 && (
                                 <div className="flex flex-col items-center justify-center gap-2 text-center">
-                                  <a
-                                    href="https://invl.me/clnlab2"
-                                    className="hover:!border-b-transparent"
-                                    target="_blank"
-                                    rel="nofollow noopener noreferrer"
-                                  >
-                                    <Image
-                                      src="/images/total-image-2.jpg"
-                                      alt="Total Image"
-                                      width={MEDIA.adGrid.width}
-                                      height={MEDIA.adGrid.height}
-                                      priority
-                                      quality={85}
-                                      sizes={MEDIA.adGrid.sizes}
-                                      className="m-0 h-auto w-full object-cover"
-                                      style={{
-                                        objectPosition: 'center center',
-                                      }}
-                                    />
-                                  </a>
+                                  <AffiliateAd>
+                                    <a
+                                      href="https://invl.me/clnlab2"
+                                      className="hover:!border-b-transparent"
+                                      target="_blank"
+                                      rel="nofollow noopener noreferrer"
+                                    >
+                                      <Image
+                                        src="/images/total-image-2.jpg"
+                                        alt="Total Image"
+                                        width={MEDIA.adGrid.width}
+                                        height={MEDIA.adGrid.height}
+                                        priority
+                                        quality={85}
+                                        sizes={MEDIA.adGrid.sizes}
+                                        className="m-0 h-auto w-full object-cover"
+                                        style={{
+                                          objectPosition: 'center center',
+                                        }}
+                                      />
+                                    </a>
+                                  </AffiliateAd>
                                 </div>
                               )}
                               {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
@@ -442,21 +447,23 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                   />
                 </Prose>
               )}
-              <a
-                href="https://invl.me/clo4xmw"
-                className="hover:!border-b-transparent"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                <Image
-                  src="/images/product-waterpik.webp"
-                  alt="Waterpik Water Flosser"
-                  width={MEDIA.card.width}
-                  height={MEDIA.card.height}
-                  sizes={MEDIA.card.sizes}
-                  className="m-0 h-auto w-full object-contain"
-                />
-              </a>
+              <AffiliateAd>
+                <a
+                  href="https://invl.me/clo4xmw"
+                  className="hover:!border-b-transparent"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <Image
+                    src="/images/product-waterpik.webp"
+                    alt="Waterpik Water Flosser"
+                    width={MEDIA.card.width}
+                    height={MEDIA.card.height}
+                    sizes={MEDIA.card.sizes}
+                    className="m-0 h-auto w-full object-contain"
+                  />
+                </a>
+              </AffiliateAd>
 
               {guides.length > 0 && (
                 <section
@@ -500,36 +507,40 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                 </section>
               )}
 
-              <a
-                href="https://invl.me/clo4xmy"
-                className="hover:!border-b-transparent"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                <Image
-                  src="/images/product-curaprox.webp"
-                  alt="Curaprox Orthodontic Kits"
-                  width={MEDIA.card.width}
-                  height={MEDIA.card.height}
-                  sizes={MEDIA.card.sizes}
-                  className="m-0 h-auto w-full object-contain"
-                />
-              </a>
-              <a
-                href="https://invl.me/clo4xl2"
-                className="hover:!border-b-transparent"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                <Image
-                  src="/images/product-philips-soniccare.webp"
-                  alt="Philips Sonicare Wide"
-                  width={MEDIA.card.width}
-                  height={MEDIA.card.height}
-                  sizes={MEDIA.card.sizes}
-                  className="m-0 h-auto w-full object-contain"
-                />
-              </a>
+              <AffiliateAd>
+                <a
+                  href="https://invl.me/clo4xmy"
+                  className="hover:!border-b-transparent"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <Image
+                    src="/images/product-curaprox.webp"
+                    alt="Curaprox Orthodontic Kits"
+                    width={MEDIA.card.width}
+                    height={MEDIA.card.height}
+                    sizes={MEDIA.card.sizes}
+                    className="m-0 h-auto w-full object-contain"
+                  />
+                </a>
+              </AffiliateAd>
+              <AffiliateAd>
+                <a
+                  href="https://invl.me/clo4xl2"
+                  className="hover:!border-b-transparent"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <Image
+                    src="/images/product-philips-soniccare.webp"
+                    alt="Philips Sonicare Wide"
+                    width={MEDIA.card.width}
+                    height={MEDIA.card.height}
+                    sizes={MEDIA.card.sizes}
+                    className="m-0 h-auto w-full object-contain"
+                  />
+                </a>
+              </AffiliateAd>
             </aside>
           </div>
         </Container>

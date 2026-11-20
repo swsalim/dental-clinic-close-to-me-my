@@ -26,6 +26,7 @@ import { cn } from '@/lib/utils';
 
 import { getDoctorsByState } from '@/helpers/doctors';
 
+import { AffiliateAd } from '@/components/ads/affiliate-ad';
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
 import { DoctorCard } from '@/components/cards/doctor-card';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
@@ -246,26 +247,28 @@ export async function StateDentistsListing({ state, currentPage }: StateDentists
                         <React.Fragment key={doctor.id}>
                           {index === 5 && (
                             <div className="flex flex-col items-center justify-center gap-2 text-center">
-                              <a
-                                href="https://invl.me/clnlab2"
-                                className="hover:!border-b-transparent"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                              >
-                                <Image
-                                  src="/images/total-image-2.jpg"
-                                  alt="Total Image"
-                                  width={MEDIA.adGrid.width}
-                                  height={MEDIA.adGrid.height}
-                                  priority
-                                  quality={85}
-                                  sizes={MEDIA.adGrid.sizes}
-                                  className="m-0 h-auto w-full object-cover"
-                                  style={{
-                                    objectPosition: 'center center',
-                                  }}
-                                />
-                              </a>
+                              <AffiliateAd>
+                                <a
+                                  href="https://invl.me/clnlab2"
+                                  className="hover:!border-b-transparent"
+                                  target="_blank"
+                                  rel="nofollow noopener noreferrer"
+                                >
+                                  <Image
+                                    src="/images/total-image-2.jpg"
+                                    alt="Total Image"
+                                    width={MEDIA.adGrid.width}
+                                    height={MEDIA.adGrid.height}
+                                    priority
+                                    quality={85}
+                                    sizes={MEDIA.adGrid.sizes}
+                                    className="m-0 h-auto w-full object-cover"
+                                    style={{
+                                      objectPosition: 'center center',
+                                    }}
+                                  />
+                                </a>
+                              </AffiliateAd>
                             </div>
                           )}
                           {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}

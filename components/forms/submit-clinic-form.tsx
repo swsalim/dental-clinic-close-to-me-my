@@ -739,7 +739,7 @@ export default function SubmitClinicForm({ states, areas }: Props) {
               <ul className="space-y-2">
                 {[
                   'Reviewed and published within 24 hours',
-                  'Dofollow link to your website',
+                  'A link to your website',
                   'Profile with photos, contact details, and location',
                   'One-time payment — no subscription',
                 ].map((item) => (

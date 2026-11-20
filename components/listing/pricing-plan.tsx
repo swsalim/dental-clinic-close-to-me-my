@@ -45,7 +45,6 @@ const plans: Plan[] = [
       { text: 'Priority placement in your selected city or area' },
       { text: 'Featured badge on your clinic profile' },
       { text: 'Ad-free clinic profile' },
-      { text: 'Do-follow backlink to your website' },
       { text: '1 promotional image' },
       { text: 'Priority listing placement above standard listings' },
     ],
@@ -100,12 +99,6 @@ const comparisonRows = [
   },
   {
     feature: 'Ad-free clinic profile',
-    featured: 'check' as const,
-    plus: 'check' as const,
-    partner: 'check' as const,
-  },
-  {
-    feature: 'Do-follow website link',
     featured: 'check' as const,
     plus: 'check' as const,
     partner: 'check' as const,

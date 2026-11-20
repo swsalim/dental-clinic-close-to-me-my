@@ -188,7 +188,7 @@ export default function AboutPage() {
                 <p className="mt-3 max-w-xl text-base leading-relaxed text-gray-600 dark:text-blue-100">
                   Clinic owners can <Link href="/submit">submit a listing</Link> for a one-time{' '}
                   {LISTING_FEE_LABEL} fee. Listings are reviewed within 24 hours and include a
-                  dofollow link to the clinic website. Featured placement is described on{' '}
+                  link to the clinic website. Featured placement is described on{' '}
                   <Link href="/advertise-with-us">Advertise with us</Link>.
                 </p>
                 <Link

@@ -14,6 +14,7 @@ import { absoluteUrl, cn } from '@/lib/utils';
 
 import { getDoctorListings } from '@/helpers/doctors';
 
+import { AffiliateAd } from '@/components/ads/affiliate-ad';
 import { LazyAdsLeaderboard } from '@/components/ads/lazy-ads-leaderboard';
 import { LazyAdsSquare } from '@/components/ads/lazy-ads-square';
 import { ClinicCard } from '@/components/cards/clinic-card';
@@ -328,20 +329,23 @@ export default async function DentistPage({ params }: DentistPageProps) {
                 )}
               </div>
               <LazyAdsSquare />
-              <a
-                href="https://invl.me/clo4xl2"
-                className="hover:!border-b-transparent"
-                target="_blank"
-                rel="nofollow noopener noreferrer">
-                <Image
-                  src="/images/product-philips-soniccare.webp"
-                  alt="Philips Sonicare Wide"
-                  width={MEDIA.card.width}
-                  height={MEDIA.card.height}
-                  sizes={MEDIA.card.sizes}
-                  className="m-0 h-auto w-full object-contain"
-                />
-              </a>
+              <AffiliateAd>
+                <a
+                  href="https://invl.me/clo4xl2"
+                  className="hover:!border-b-transparent"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <Image
+                    src="/images/product-philips-soniccare.webp"
+                    alt="Philips Sonicare Wide"
+                    width={MEDIA.card.width}
+                    height={MEDIA.card.height}
+                    sizes={MEDIA.card.sizes}
+                    className="m-0 h-auto w-full object-contain"
+                  />
+                </a>
+              </AffiliateAd>
             </aside>
           </div>
         </Container>
