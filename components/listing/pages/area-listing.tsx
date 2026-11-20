@@ -10,11 +10,17 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
 
-import { getAreaBySlugCached } from '@/lib/data';
+import {
+  getAllServicesCached,
+  getAreaBySlugCached,
+  getStateAreasWithClinicsCached,
+} from '@/lib/data';
 import { getAllGuides } from '@/lib/guides';
 import { imageKitUrl } from '@/lib/imagekit-url';
-import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import { areaIsIndexable, withMinimumHubLinks } from '@/lib/listing/hub-copy';
+import { getHubGlance } from '@/lib/listing/hub-stats';
 import {
+  countedPlaceTitle,
   isPastLastPage,
   listingMetaTitle,
   listingRobots,
@@ -22,6 +28,7 @@ import {
   paginatedDescription,
   paginatedTitle,
 } from '@/lib/listing/page-title';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
@@ -29,10 +36,11 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 import { getStateBySlug } from '@/helpers/states';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
-import { BackToFirstPage } from '@/components/listing/back-to-first-page';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
 import { MediaImage } from '@/components/image/media-image';
+import { BackToFirstPage } from '@/components/listing/back-to-first-page';
+import { HubGlance } from '@/components/listing/hub-glance';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -70,20 +78,20 @@ export async function generateAreaListingMetadata(
   if (isPastLastPage(currentPage, clinicCount, limit)) {
     notFound();
   }
+  const glance = await getHubGlance('area', areaData.id);
 
   const totalPages = listingTotalPages(clinicCount, limit);
   const title = paginatedTitle(
-    `Top ${clinicCount} Dental Clinics in ${areaData.name}, ${areaData.state.name}`,
+    countedPlaceTitle(clinicCount, 'Dental Clinic', `${areaData.name}, ${areaData.state.name}`),
     currentPage,
     totalPages,
   );
   const description = paginatedDescription(
-    `Explore ${areaData.total_clinics} trusted dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`,
+    `Explore ${areaData.total_clinics} dental clinics located in ${areaData.name}, ${areaData.state.name}. Find services, reviews, and opening hours.`,
     currentPage,
     { perPage: limit, totalItems: clinicCount, noun: 'clinics' },
   );
   const url = absoluteUrl(listingCanonicalPath(`/${state}/${area}`, currentPage));
-
 
   return {
     title: listingMetaTitle(title, currentPage),
@@ -120,7 +128,11 @@ export async function generateAreaListingMetadata(
         },
       ],
     },
-    robots: listingRobots(currentPage, clinicCount > 0, MAX_INDEXED_LISTING_PAGE),
+    robots: listingRobots(
+      currentPage,
+      areaIsIndexable(glance.clinicCount),
+      MAX_INDEXED_LISTING_PAGE,
+    ),
   };
 }
 
@@ -131,9 +143,11 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch area metadata and clinics data in parallel
-  const [areaData, stateData] = await Promise.all([
+  const [areaData, stateData, areasInState, services] = await Promise.all([
     getAreaBySlugCached(area, from, to),
     getStateBySlug(state, from, to),
+    getStateAreasWithClinicsCached(state),
+    getAllServicesCached(),
   ]);
 
   // Early validation
@@ -147,15 +161,34 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
   }
 
   const totalClinics = areaData.total_clinics || 0;
+  const glance = await getHubGlance('area', areaData.id);
+  const hubLinks = withMinimumHubLinks([
+    {
+      href: `/${state}`,
+      label: `Dental clinics in ${areaData.state?.name ?? 'this state'}`,
+    },
+    ...areasInState
+      .filter((item) => item.slug !== area)
+      .slice(0, 8)
+      .map((item) => ({
+        href: `/${state}/${item.slug}`,
+        label: item.name,
+      })),
+    ...services.slice(0, 4).map((service) => ({
+      href: `/services/${service.slug}`,
+      label: service.name,
+    })),
+  ]);
   const totalPages = Math.ceil(totalClinics / limit);
   if (isPastLastPage(currentPage, totalClinics, limit)) {
     notFound();
   }
 
-  const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
-  const description = `Explore ${totalClinics} trusted dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
-  const indexedTitle = `Top ${totalClinics} Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
-  const indexedDescription = `Explore ${totalClinics} trusted dental clinics located in ${areaData.name}, ${areaData.state?.name}. Find services, reviews, and opening hours.`;
+  const place = `${areaData.name}, ${areaData.state?.name}`;
+  const title = `Dental Clinics in ${place}`;
+  const description = `Explore ${totalClinics} dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
+  const indexedTitle = countedPlaceTitle(totalClinics, 'Dental Clinic', place);
+  const indexedDescription = `Explore ${totalClinics} dental clinics located in ${areaData.name}, ${areaData.state?.name}. Find services, reviews, and opening hours.`;
   const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
   const documentDescription = paginatedDescription(indexedDescription, currentPage, {
     perPage: limit,
@@ -237,11 +270,12 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               currentPage={currentPage}
             />
             <p className="text-balance text-lg font-medium text-white">
-              Explore {totalClinics} trusted dental clinics across cities in{' '}
+              Explore {totalClinics} dental clinics across cities in{' '}
               <Link
                 href={absoluteUrl(`/${areaData.state?.slug}`)}
                 className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
-                prefetch={false}>
+                prefetch={false}
+              >
                 {areaData.state?.name}
               </Link>
               . Find services, reviews, and opening hours.
@@ -258,7 +292,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                   href="https://invl.me/clo4xl2"
                   className="hover:!border-b-transparent"
                   target="_blank"
-                  rel="nofollow noopener noreferrer">
+                  rel="nofollow noopener noreferrer"
+                >
                   <Image
                     src="/images/product-philips-soniccare-wide.webp"
                     alt="Philips Sonicare Wide"
@@ -279,15 +314,22 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                     />
                   </Prose>
                 )}
+                <HubGlance
+                  placeName={areaData.name}
+                  placeLabel={`${areaData.name}, ${areaData.state?.name ?? ''}`.replace(/, $/, '')}
+                  stats={glance}
+                  links={hubLinks}
+                />
                 <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
-                  {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
+                  {indexedTitle}
                 </h2>
                 {areaData.clinics?.length > 0 ? (
                   <>
                     <div
                       className={cn(
                         'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
-                      )}>
+                      )}
+                    >
                       {areaData.clinics
                         ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
                         .map((clinic, index) => {
@@ -299,7 +341,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                                     href="https://invl.me/clnlab2"
                                     className="hover:!border-b-transparent"
                                     target="_blank"
-                                    rel="nofollow noopener noreferrer">
+                                    rel="nofollow noopener noreferrer"
+                                  >
                                     <Image
                                       src="/images/total-image-2.jpg"
                                       alt="Total Image"
@@ -369,7 +412,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                           buttonVariants({ variant: 'primary' }),
                           'flex flex-row gap-x-2',
                         )}
-                        prefetch={false}>
+                        prefetch={false}
+                      >
                         Add a clinic
                         <ArrowRightIcon weight="duotone" className="size-4" />
                       </Link>
@@ -379,7 +423,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                           buttonVariants({ variant: 'ghost' }),
                           'flex flex-row gap-x-2',
                         )}
-                        prefetch={false}>
+                        prefetch={false}
+                      >
                         Get back to homepage
                         <ArrowRightIcon weight="duotone" className="size-4" />
                       </Link>
@@ -401,7 +446,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                 href="https://invl.me/clo4xmw"
                 className="hover:!border-b-transparent"
                 target="_blank"
-                rel="nofollow noopener noreferrer">
+                rel="nofollow noopener noreferrer"
+              >
                 <Image
                   src="/images/product-waterpik.webp"
                   alt="Waterpik Water Flosser"
@@ -415,17 +461,20 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
               {guides.length > 0 && (
                 <section
                   aria-labelledby="state-guides-heading"
-                  className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900">
+                  className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900"
+                >
                   <div className="mb-1 flex items-center justify-between gap-3">
                     <h2
                       id="state-guides-heading"
-                      className="font-display text-base font-bold text-gray-900 dark:text-gray-50">
+                      className="font-display text-base font-bold text-gray-900 dark:text-gray-50"
+                    >
                       Guides
                     </h2>
                     <Link
                       href="/guides"
                       prefetch={false}
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                    >
                       All guides
                       <ArrowRightIcon weight="duotone" className="size-3.5" aria-hidden="true" />
                     </Link>
@@ -436,7 +485,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                         <Link
                           href={`/guides/${guide.slug}`}
                           prefetch={false}
-                          className="block py-2.5 no-underline hover:border-transparent">
+                          className="block py-2.5 no-underline hover:border-transparent"
+                        >
                           <span className="block text-sm font-medium text-gray-900 dark:text-gray-50">
                             {guide.title}
                           </span>
@@ -454,7 +504,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                 href="https://invl.me/clo4xmy"
                 className="hover:!border-b-transparent"
                 target="_blank"
-                rel="nofollow noopener noreferrer">
+                rel="nofollow noopener noreferrer"
+              >
                 <Image
                   src="/images/product-curaprox.webp"
                   alt="Curaprox Orthodontic Kits"
@@ -468,7 +519,8 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                 href="https://invl.me/clo4xl2"
                 className="hover:!border-b-transparent"
                 target="_blank"
-                rel="nofollow noopener noreferrer">
+                rel="nofollow noopener noreferrer"
+              >
                 <Image
                   src="/images/product-philips-soniccare.webp"
                   alt="Philips Sonicare Wide"

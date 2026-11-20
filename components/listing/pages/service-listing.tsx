@@ -12,7 +12,6 @@ import { siteConfig } from '@/config/site';
 
 import { getAllServicesCached } from '@/lib/data';
 import { imageKitUrl } from '@/lib/imagekit-url';
-import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import {
   isPastLastPage,
   listingMetaTitle,
@@ -22,6 +21,7 @@ import {
   paginatedTitle,
   serviceListingDescription,
 } from '@/lib/listing/page-title';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import { MEDIA } from '@/lib/media-sizes';
 import { cn, getPagination } from '@/lib/utils';
 import { absoluteUrl } from '@/lib/utils';
@@ -66,7 +66,7 @@ export async function generateServiceListingMetadata(
   }
 
   const title = paginatedTitle(
-    `${serviceName} - Find Top Dental Clinics`,
+    `${serviceName}: Compare Dental Clinics`,
     currentPage,
     listingTotalPages(totalClinics, perPage),
   );
@@ -76,12 +76,16 @@ export async function generateServiceListingMetadata(
     { perPage, totalItems: totalClinics, noun: 'clinics' },
   );
   const url = absoluteUrl(listingCanonicalPath(`/services/${serviceSlug}`, currentPage));
+  // Pages 1–3 canonicalise to themselves (page 2–3 stay indexable, as in #18).
+  // Page 4+ is noindex and points its canonical at page 1.
+  const canonical =
+    currentPage > MAX_INDEXED_LISTING_PAGE ? absoluteUrl(`/services/${serviceSlug}`) : url;
 
   return {
     title: listingMetaTitle(title, currentPage),
     description,
     alternates: {
-      canonical: url,
+      canonical,
     },
     openGraph: {
       title,
@@ -137,7 +141,7 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
   }
   const { name: serviceName } = serviceData;
 
-  const title = `${serviceName} - Find Top Dental Clinics`;
+  const title = `${serviceName}: Compare Dental Clinics`;
   const description = serviceListingDescription(serviceName, serviceData.description);
 
   const JSONLDbreadcrumbs = [
@@ -216,7 +220,8 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                 href={absoluteUrl(`/services/${service.slug}`)}
                 className="text-balance py-1 text-base font-medium hover:border-transparent md:text-lg"
                 key={service.slug}
-                prefetch={false}>
+                prefetch={false}
+              >
                 {service.name}
               </Link>
             ))}
@@ -243,7 +248,8 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                               href="https://invl.me/clnlab2"
                               className="hover:!border-b-transparent"
                               target="_blank"
-                              rel="nofollow noopener noreferrer">
+                              rel="nofollow noopener noreferrer"
+                            >
                               <Image
                                 src="/images/total-image-2.jpg"
                                 alt="Total Image"
@@ -272,11 +278,7 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                           postalCode={clinic.postal_code ?? ''}
                           state={clinic.state?.name ?? ''}
                           area={clinic.area?.name ?? ''}
-                          image={
-                            clinic.images?.[0]
-                              ? (clinic.images[0] as ClinicImage)
-                              : undefined
-                          }
+                          image={clinic.images?.[0] ? (clinic.images[0] as ClinicImage) : undefined}
                           rating={clinic.rating}
                           isFeatured={clinic.is_featured ?? false}
                           hours={clinic.hours ?? []}
@@ -309,14 +311,16 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
                 <Link
                   href="/submit"
                   className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
-                  prefetch={false}>
+                  prefetch={false}
+                >
                   Add a clinic
                   <ArrowRightIcon weight="duotone" className="size-4" />
                 </Link>
                 <Link
                   href="/"
                   className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
-                  prefetch={false}>
+                  prefetch={false}
+                >
                   Get back to homepage
                   <ArrowRightIcon weight="duotone" className="size-4" />
                 </Link>

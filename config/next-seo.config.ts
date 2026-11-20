@@ -14,7 +14,7 @@ export const seo: SEOConfig = {
   site_name: 'dentalclinicclosetome.my',
   title: 'Find Dental Clinics Near You in Malaysia',
   description:
-    'Explore top-rated dental clinics across Malaysia. Search by location, compare services and reviews, and book your dental appointment with ease.!',
+    'Find dental clinics near you in Malaysia. Compare opening hours, services and contact details.',
   image: 'https://www.dentalclinicclosetome.my/images/og-default.png',
   locale: 'en',
   lang: 'en',

@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check-canonicals": "node scripts/check-canonicals.mjs",
     "postbuild": "next-sitemap && node scripts/fix-robots.js",
     "clean-data": "tsx ./tasks/clean-apify-data.ts",
     "filter-data": "tsx ./tasks/filter-apify-data.ts",

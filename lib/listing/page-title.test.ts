@@ -5,8 +5,10 @@ import { isAdminUser } from '../auth/is-admin';
 import {
   buildClinicDescription,
   buildClinicTitle,
+  countedPlaceTitle,
   listingMetaTitle,
   paginatedTitle,
+  serviceListingDescription,
   TITLE_MAX_LENGTH,
 } from './page-title';
 
@@ -154,27 +156,48 @@ describe('buildClinicDescription', () => {
   });
 });
 
+describe('service listing description', () => {
+  it('compares hours and contact details without a booking claim', () => {
+    assert.equal(
+      serviceListingDescription('Invisalign'),
+      'Compare dental clinics offering Invisalign: hours, services and contact details.',
+    );
+    assert.match(
+      serviceListingDescription('Orthodontics', 'Braces, aligners, and bite correction.'),
+      /^Compare dental clinics offering Orthodontics: braces, aligners, and bite correction\. Compare hours, services, and contact details\.$/,
+    );
+    assert.doesNotMatch(
+      serviceListingDescription('Invisalign', 'Clear aligners.'),
+      /book appointments online/i,
+    );
+  });
+});
+
+describe('counted place titles', () => {
+  it('uses the singular when the count is 1', () => {
+    assert.equal(countedPlaceTitle(1, 'Dental Clinic', 'Pendang, Kedah'), '1 Dental Clinic in Pendang, Kedah');
+    assert.equal(countedPlaceTitle(101, 'Dental Clinic', 'Klang, Selangor'), '101 Dental Clinics in Klang, Selangor');
+    assert.equal(countedPlaceTitle(1, 'Dentist', 'Selangor'), '1 Dentist in Selangor');
+    assert.equal(countedPlaceTitle(197, 'Dentist', 'Malaysia'), '197 Dentists in Malaysia');
+  });
+});
+
 describe('paginated listing titles', () => {
   it('leaves page 1 unchanged and leads page 2+ with the page number', () => {
-    const baseTitle = 'Top 101 Dental Clinics in Klang, Selangor';
+    const baseTitle = '101 Dental Clinics in Klang, Selangor';
     assert.equal(paginatedTitle(baseTitle, 1, 6), baseTitle);
 
     const page3 = paginatedTitle(baseTitle, 3, 6);
-    assert.equal(page3, 'Page 3 of 6: Top 101 Dental Clinics in Klang, Selangor');
+    assert.equal(page3, 'Page 3 of 6: 101 Dental Clinics in Klang, Selangor');
     assert.ok(page3.length <= TITLE_MAX_LENGTH);
     assert.deepEqual(listingMetaTitle(page3, 3), { absolute: page3 });
     assert.equal(listingMetaTitle(baseTitle, 1), baseTitle);
   });
 
   it('shortens a long area title without dropping the page number', () => {
-    const page2 = paginatedTitle(
-      'Top 21 Dental Clinics in Telok Panglima Garang, Selangor',
-      2,
-      2,
-    );
-    assert.match(page2, /^Page 2/);
+    const page2 = paginatedTitle('21 Dental Clinics in Telok Panglima Garang, Selangor', 2, 2);
+    assert.equal(page2, 'Page 2: 21 Dental Clinics in Telok Panglima Garang, Selangor');
     assert.ok(page2.length <= TITLE_MAX_LENGTH);
-    assert.doesNotMatch(page2, /Top 21/);
   });
 });
 

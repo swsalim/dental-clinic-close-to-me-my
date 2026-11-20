@@ -22,7 +22,8 @@ function FooterCopyright() {
             href="https://www.yuurrific.com?ref=dentalclinicclosetome.my"
             className="font-medium text-gray-300 underline decoration-gray-600 underline-offset-4 transition-colors duration-150 hover:text-white hover:decoration-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Yuurrific
           </a>
           .
@@ -33,7 +34,8 @@ function FooterCopyright() {
             href="https://go.yuurrific.com/seline"
             className="font-medium text-gray-300 underline decoration-gray-600 underline-offset-4 transition-colors duration-150 hover:text-white hover:decoration-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Seline
           </a>
           .
@@ -57,24 +59,26 @@ export default function Footer() {
               href="/"
               className="inline-flex items-center gap-3 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
               prefetch={false}
-              aria-label="Home">
+              aria-label="Home"
+            >
               <Logo className="relative h-9 w-9 shrink-0" />
               <span>
                 <span className="block font-display text-lg leading-tight text-gray-100">
                   Dental Clinics Malaysia
                 </span>
-                <span className="block text-sm text-gray-400">Find trusted care near you</span>
+                <span className="block text-sm text-gray-400">Dental clinics in Malaysia</span>
               </span>
             </Link>
             <p className="max-w-sm text-sm leading-6 text-gray-400">
-              Explore top-rated dental clinics across Malaysia. Search by location, compare
-              services, and book with confidence.
+              Find dental clinics near you in Malaysia. Compare opening hours, services and contact
+              details.
             </p>
           </div>
 
           <nav
             className="grid min-w-0 grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6"
-            aria-label="Footer">
+            aria-label="Footer"
+          >
             {footerLinkGroups.map((group) => (
               <div key={group.title} className="min-w-0">
                 <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-gray-500">
@@ -88,7 +92,8 @@ export default function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex min-h-11 items-center text-sm text-gray-300 transition-colors duration-150 hover:border-transparent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950">
+                          className="inline-flex min-h-11 items-center text-sm text-gray-300 transition-colors duration-150 hover:border-transparent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+                        >
                           {link.label}
                           <span className="sr-only"> (opens in new tab)</span>
                         </a>
@@ -96,7 +101,8 @@ export default function Footer() {
                         <Link
                           href={link.href}
                           prefetch={false}
-                          className="inline-flex min-h-11 items-center text-sm text-gray-300 transition-colors duration-150 hover:border-transparent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950">
+                          className="inline-flex min-h-11 items-center text-sm text-gray-300 transition-colors duration-150 hover:border-transparent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+                        >
                           {link.label}
                         </Link>
                       )}

@@ -31,7 +31,7 @@ const PLACEHOLDER_CLINICS: FeaturedClinicSpotlightData[] = [
     state: 'Penang',
     rating: 4.8,
     reviewCount: 96,
-    excerpt: 'Trusted for gentle cleanings, Invisalign, and restorative treatments in a calm setting.',
+    excerpt: 'Gentle cleanings, Invisalign, and restorative treatments in a calm setting.',
     specialties: ['Cleaning', 'Invisalign'],
     accent: 'from-violet-600/85 via-violet-500/65 to-blue-400/45',
   },
@@ -126,7 +126,7 @@ export function FeaturedClinics() {
               Featured dental clinics
             </h2>
             <p className="mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-              Premium placements for trusted dental practices — verified profiles, standout
+              Premium placements for dental practices — verified profiles, standout
               visibility, and priority placement on our homepage.
             </p>
           </div>

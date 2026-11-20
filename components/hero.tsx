@@ -7,15 +7,10 @@ import Link from 'next/link';
 import { MapTrifold, Tooth, Users } from '@phosphor-icons/react/dist/ssr';
 import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
+import { areaListingPath, serviceListingPath, stateListingPath } from '@/lib/listing/paths';
 import { cn } from '@/lib/utils';
 
 import { getDoctors } from '@/helpers/doctors';
-
-import {
-  areaListingPath,
-  serviceListingPath,
-  stateListingPath,
-} from '@/lib/listing/paths';
 
 import { getHomeDirectoryStats } from '@/components/listing/home-stats';
 import { buttonVariants } from '@/components/ui/button';
@@ -61,7 +56,7 @@ export async function Hero() {
         <div className="grid min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-12 xl:gap-16">
           <div className="min-h-48 min-w-0">
             <h1 className="max-w-xl text-balance font-display text-[clamp(2rem,5vw,3.25rem)] font-bold leading-[1.05] tracking-tight text-gray-900 dark:text-gray-50">
-              Find the right dental care near you
+              Find a dental clinic near you in Malaysia
             </h1>
 
             <p className="mt-4 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg dark:text-gray-300">
@@ -75,7 +70,8 @@ export async function Hero() {
                 className={cn(
                   buttonVariants({ variant: 'primary', size: 'large' }),
                   'inline-flex min-h-11 w-full items-center justify-center sm:w-auto',
-                )}>
+                )}
+              >
                 Browse by location
                 <ArrowRightIcon weight="duotone" className="ms-2 size-4" aria-hidden="true" />
               </Link>
@@ -93,7 +89,8 @@ export async function Hero() {
                     className={cn(
                       buttonVariants({ variant: 'secondary' }),
                       'rounded-full px-3 py-2 text-xs font-medium',
-                    )}>
+                    )}
+                  >
                     {search.label}
                   </Link>
                 ))}
@@ -103,14 +100,16 @@ export async function Hero() {
 
           <aside
             className="flex h-full min-w-0 flex-col items-start justify-start lg:items-end lg:justify-end"
-            aria-label="Directory snapshot">
+            aria-label="Directory snapshot"
+          >
             <div className="w-full overflow-hidden rounded-lg bg-white/90 px-6 py-4">
               {proofStats.length > 0 && (
                 <dl className="grid w-full min-w-0 grid-cols-1 gap-4 sm:grid-cols-3">
                   {proofStats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="flex min-w-0 flex-row items-start justify-start gap-x-2">
+                      className="flex min-w-0 flex-row items-start justify-start gap-x-2"
+                    >
                       <stat.icon
                         weight="duotone"
                         className="size-8 shrink-0 text-blue-600 dark:text-blue-400"

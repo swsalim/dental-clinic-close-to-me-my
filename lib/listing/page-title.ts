@@ -1,5 +1,12 @@
+import pluralize from 'pluralize';
+
 /** Soft limit for <title> length; Google typically truncates around here. */
 export const TITLE_MAX_LENGTH = 60;
+
+/** "101 Dental Clinics in Klang, Selangor" or "1 Dental Clinic in Pendang, Kedah". */
+export function countedPlaceTitle(count: number, singular: string, place: string): string {
+  return `${count} ${pluralize(singular, count)} in ${place}`;
+}
 
 /** Soft limit for meta descriptions; Google typically truncates around here. */
 export const DESCRIPTION_MAX_LENGTH = 160;
@@ -216,7 +223,7 @@ export function listingTotalPages(totalItems: number, perPage: number): number {
  * Page 1 keeps its title. Page 2+ leads with "Page 3 of 6:" so the page
  * number survives Google's truncation (a trailing marker was being cut,
  * and the result looked like the page-1 title). Drops "of N", then a
- * leading "Top {count} ", before trimming, to stay within TITLE_MAX_LENGTH.
+ * legacy leading "Top {count} ", before trimming, to stay within TITLE_MAX_LENGTH.
  */
 export function paginatedTitle(title: string, currentPage: number, totalPages?: number): string {
   if (currentPage <= 1) {
@@ -303,16 +310,16 @@ export function isPastLastPage(currentPage: number, totalItems: number, perPage:
 }
 
 /**
- * Service list description, e.g. "Find qualified dental clinics near you offering
- * Orthodontics: braces, aligners, and bite correction. Compare reviews, …".
+ * Service list description, e.g. "Compare dental clinics offering Orthodontics:
+ * braces, aligners, and bite correction. Compare hours, services, and contact details."
  * Service blurbs are stored as sentence fragments ending in a period.
  */
 export function serviceListingDescription(serviceName: string, blurb?: string | null): string {
-  const tail = 'Compare reviews, locations, and book appointments online.';
+  const tail = 'Compare hours, services, and contact details.';
   const cleaned = blurb?.trim().replace(/[.\s]+$/, '');
   if (!cleaned || cleaned.toLowerCase() === serviceName.trim().toLowerCase()) {
-    return `Find qualified dental clinics near you offering ${serviceName}. ${tail}`;
+    return `Compare dental clinics offering ${serviceName}: hours, services and contact details.`;
   }
   const fragment = cleaned.charAt(0).toLowerCase() + cleaned.slice(1);
-  return `Find qualified dental clinics near you offering ${serviceName}: ${fragment}. ${tail}`;
+  return `Compare dental clinics offering ${serviceName}: ${fragment}. ${tail}`;
 }

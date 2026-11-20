@@ -10,6 +10,7 @@ import { siteConfig } from '@/config/site';
 
 import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import {
+  countedPlaceTitle,
   isPastLastPage,
   listingMetaTitle,
   listingRobots,
@@ -46,7 +47,7 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
     notFound();
   }
   const title = paginatedTitle(
-    `Browse Top ${totalDoctors} Dentists in Malaysia`,
+    countedPlaceTitle(totalDoctors, 'Dentist', 'Malaysia'),
     currentPage,
     listingTotalPages(totalDoctors, perPage),
   );
@@ -204,7 +205,7 @@ export async function DentistsListing({ currentPage }: DentistsListingProps) {
           <div className="flex min-w-0 flex-1 flex-col gap-y-6 md:gap-y-12">
             <Prose>
               <h1 className="font-display text-balance text-4xl font-black">
-                Find the Best Dentists in Malaysia
+                Find Dentists in Malaysia
               </h1>
               <p className="text-balance text-lg font-medium text-gray-600 dark:text-gray-300">
                 Browse dentists by{' '}
