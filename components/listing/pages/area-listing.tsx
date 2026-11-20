@@ -1,11 +1,9 @@
-import React from 'react';
+import { Suspense } from 'react';
 
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { ClinicImage } from '@/types/clinic';
 import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { siteConfig } from '@/config/site';
@@ -19,6 +17,8 @@ import { getAllGuides } from '@/lib/guides';
 import { imageKitUrl } from '@/lib/imagekit-url';
 import { areaIsIndexable, withMinimumHubLinks } from '@/lib/listing/hub-copy';
 import { getHubGlance } from '@/lib/listing/hub-stats';
+import { getLocationFacetsSafe } from '@/lib/listing/location-clinic-index';
+import { listingClinicFromPage } from '@/lib/listing/location-filters';
 import {
   countedPlaceTitle,
   isPastLastPage,
@@ -35,21 +35,18 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 
 import { getStateBySlug } from '@/helpers/states';
 
-import { AffiliateAd } from '@/components/ads/affiliate-ad';
-import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
-import { ClinicCard } from '@/components/cards/clinic-card';
 import AddBookingForm from '@/components/forms/add-booking-form';
 import { MediaImage } from '@/components/image/media-image';
-import { BackToFirstPage } from '@/components/listing/back-to-first-page';
-import { HubGlance } from '@/components/listing/hub-glance';
+import { ClinicResultGrid } from '@/components/listing/location/clinic-result-grid';
+import { LocationBrowser } from '@/components/listing/location/location-browser';
+import { LocationHero, locationHeroStats } from '@/components/listing/location/location-hero';
+import { LocationSeo } from '@/components/listing/location/location-seo';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
-import Breadcrumb from '@/components/ui/breadcrumb';
 import { buttonVariants } from '@/components/ui/button';
 import Container from '@/components/ui/container';
 import { Pagination } from '@/components/ui/pagination';
 import Prose from '@/components/ui/prose';
-import { Wrapper } from '@/components/ui/wrapper';
 
 type AreaListingProps = {
   state: string;
@@ -144,11 +141,12 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
   const { from, to } = getPagination(currentPage, limit);
 
   // Fetch area metadata and clinics data in parallel
-  const [areaData, stateData, areasInState, services] = await Promise.all([
+  const [areaData, stateData, areasInState, services, facets] = await Promise.all([
     getAreaBySlugCached(area, from, to),
     getStateBySlug(state, from, to),
     getStateAreasWithClinicsCached(state),
     getAllServicesCached(),
+    getLocationFacetsSafe({ kind: 'area', stateSlug: state, areaSlug: area }),
   ]);
 
   // Early validation
@@ -173,7 +171,7 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
       .slice(0, 8)
       .map((item) => ({
         href: `/${state}/${item.slug}`,
-        label: item.name,
+        label: `${item.name} (${item.clinicCount.toLocaleString('en-MY')})`,
       })),
     ...services.slice(0, 4).map((service) => ({
       href: `/services/${service.slug}`,
@@ -229,6 +227,18 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
   ];
 
   const areaBackgroundSrc = resolveMediaUrl(areaData) || resolveMediaUrl(areaData.state);
+  const listingClinics = [...(areaData.clinics ?? [])]
+    .sort((left, right) => Number(right.is_featured) - Number(left.is_featured))
+    .map((clinic) =>
+      listingClinicFromPage(clinic, {
+        state: areaData.state?.name ?? '',
+        area: areaData.name,
+      }),
+    );
+  const heroStats = locationHeroStats(totalClinics, facets, glance);
+  const sundayCount = facets.total > 0 ? facets.sunday : glance.sundayOpenCount;
+  const whatsappCount = facets.total > 0 ? facets.whatsapp : glance.whatsappCount;
+  const placeLabel = `${areaData.name}, ${areaData.state?.name ?? ''}`.replace(/, $/, '');
 
   return (
     <>
@@ -243,308 +253,111 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
         description={currentPage > 1 ? documentDescription : description}
         clinics={areaData.clinics ?? []}
       />
-      <Wrapper className="relative overflow-hidden">
-        {/* Optimized background image using Next.js Image */}
-        {areaBackgroundSrc && (
-          <MediaImage
-            src={areaBackgroundSrc}
-            alt={`${areaData.name}, ${areaData.state?.name} aesthetic clinics background`}
-            width={MEDIA.hero.width}
-            height={MEDIA.hero.height}
-            priority
-            sizes={MEDIA.hero.sizes}
-            className="absolute inset-0 h-full w-full object-cover"
-            style={{
-              objectPosition: 'center center',
-            }}
-          />
-        )}
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50" />
-        <Container className="relative z-10">
-          <div className="flex flex-col gap-4 py-12 md:py-24">
-            <Breadcrumb items={breadcrumbItems} theme="dark" />
-            <h1 className="text-balance font-display text-4xl font-black text-white">{heading}</h1>
-            <BackToFirstPage
-              href={`/${state}/${area}`}
-              placeName={areaData.name ?? ''}
-              currentPage={currentPage}
-            />
-            <p className="text-balance text-lg font-medium text-white">
-              Explore {totalClinics} dental clinics across cities in{' '}
-              <Link
-                href={absoluteUrl(`/${areaData.state?.slug}`)}
-                className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
-                prefetch={false}
-              >
-                {areaData.state?.name}
-              </Link>
-              . Find services, reviews, and opening hours.
-            </p>
-          </div>
-        </Container>
-      </Wrapper>
-      <Wrapper size="sm">
-        <Container>
-          <div className="py-8 md:gap-8 lg:grid lg:grid-cols-sidebar lg:gap-10">
-            <div>
-              <div className="mx-auto mb-10 max-w-2xl">
-                <AffiliateAd>
-                  <a
-                    href="https://invl.me/clo4xl2"
-                    className="hover:!border-b-transparent"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                  >
-                    <Image
-                      src="/images/product-philips-soniccare-wide.webp"
-                      alt="Philips Sonicare Wide"
-                      width={MEDIA.adLeaderboard.width}
-                      height={MEDIA.adLeaderboard.height}
-                      sizes={MEDIA.adLeaderboard.sizes}
-                      className="m-0 h-auto w-full object-contain"
-                    />
-                  </a>
-                </AffiliateAd>
-              </div>
-
-              <div className="flex flex-col gap-y-6">
-                {isJohorBahru && (
-                  <Prose className="block lg:hidden">
-                    <AddBookingForm
-                      currentUrl={absoluteUrl(`/${state}/${area}`)}
-                      area={areaData.name}
-                    />
-                  </Prose>
-                )}
-                <HubGlance
-                  placeName={areaData.name}
-                  placeLabel={`${areaData.name}, ${areaData.state?.name ?? ''}`.replace(/, $/, '')}
-                  stats={glance}
-                  links={hubLinks}
-                />
-                <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
-                  {indexedTitle}
-                </h2>
-                {areaData.clinics?.length > 0 ? (
-                  <>
-                    <div
-                      className={cn(
-                        'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
-                      )}
-                    >
-                      {areaData.clinics
-                        ?.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0))
-                        .map((clinic, index) => {
-                          return (
-                            <React.Fragment key={clinic.slug}>
-                              {index === 5 && (
-                                <div className="flex flex-col items-center justify-center gap-2 text-center">
-                                  <AffiliateAd>
-                                    <a
-                                      href="https://invl.me/clnlab2"
-                                      className="hover:!border-b-transparent"
-                                      target="_blank"
-                                      rel="nofollow noopener noreferrer"
-                                    >
-                                      <Image
-                                        src="/images/total-image-2.jpg"
-                                        alt="Total Image"
-                                        width={MEDIA.adGrid.width}
-                                        height={MEDIA.adGrid.height}
-                                        priority
-                                        quality={85}
-                                        sizes={MEDIA.adGrid.sizes}
-                                        className="m-0 h-auto w-full object-cover"
-                                        style={{
-                                          objectPosition: 'center center',
-                                        }}
-                                      />
-                                    </a>
-                                  </AffiliateAd>
-                                </div>
-                              )}
-                              {index !== 5 && (index + 1) % 6 == 0 && <LazyAdsArticle />}
-                              <ClinicCard
-                                key={clinic.slug}
-                                slug={clinic.slug ?? ''}
-                                name={clinic.name ?? ''}
-                                address={clinic.address ?? ''}
-                                neighborhood={clinic.neighborhood ?? ''}
-                                city={clinic.city ?? ''}
-                                phone={clinic.phone ?? ''}
-                                image={clinic.images?.[0] as ClinicImage | undefined}
-                                postalCode={clinic.postal_code ?? ''}
-                                state={areaData.state?.name ?? ''}
-                                area={areaData.name ?? ''}
-                                rating={clinic.rating}
-                                isFeatured={clinic.is_featured ?? false}
-                                hours={clinic.hours ?? []}
-                                specialHours={clinic.special_hours ?? []}
-                                openOnPublicHolidays={clinic.open_on_public_holidays ?? false}
-                              />
-                            </React.Fragment>
-                          );
-                        })}
-                    </div>
-
-                    <Pagination currentPage={currentPage} totalPages={totalPages} />
-                  </>
-                ) : (
-                  <div className="flex flex-col items-center justify-center gap-y-4">
-                    <div className="flex flex-col items-center justify-center">
-                      <div className="relative size-64 md:size-96">
-                        <MediaImage
-                          src={imageKitUrl('dental-clinics-my/lost-boy.png')}
-                          alt="No dental clinics found"
-                          width={MEDIA.empty.width}
-                          height={MEDIA.empty.height}
-                          sizes={MEDIA.empty.sizes}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                    </div>
-                    <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">
-                      Oops!
-                    </h2>
-                    <p className="text-balance text-lg dark:text-gray-300">
-                      We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
-                    </p>
-                    <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
-                      <Link
-                        href="/submit"
-                        className={cn(
-                          buttonVariants({ variant: 'primary' }),
-                          'flex flex-row gap-x-2',
-                        )}
-                        prefetch={false}
-                      >
-                        Add a clinic
-                        <ArrowRightIcon weight="duotone" className="size-4" />
-                      </Link>
-                      <Link
-                        href="/"
-                        className={cn(
-                          buttonVariants({ variant: 'ghost' }),
-                          'flex flex-row gap-x-2',
-                        )}
-                        prefetch={false}
-                      >
-                        Get back to homepage
-                        <ArrowRightIcon weight="duotone" className="size-4" />
-                      </Link>
+      <LocationHero
+        breadcrumbItems={breadcrumbItems}
+        heading={heading}
+        intro={`Compare ${totalClinics.toLocaleString('en-MY')} dental clinics in ${placeLabel} by ratings, opening hours, services and contact options.`}
+        backHref={`/${state}/${area}`}
+        placeName={areaData.name}
+        currentPage={currentPage}
+        backgroundSrc={areaBackgroundSrc}
+        searchBasePath={`/${state}/${area}`}
+        searchPlaceholder={`Search clinics in ${areaData.name}...`}
+        stats={heroStats}
+      />
+      <section className="bg-white dark:bg-gray-900">
+        <Container className="py-8 md:py-10">
+          {isJohorBahru ? (
+            <Prose className="mb-8">
+              <AddBookingForm currentUrl={absoluteUrl(`/${state}/${area}`)} area={areaData.name} />
+            </Prose>
+          ) : null}
+          {listingClinics.length > 0 || currentPage > 1 ? (
+            <>
+              <Suspense
+                fallback={
+                  <div className="lg:grid lg:grid-cols-sidebar-left lg:items-start lg:gap-8">
+                    <div className="hidden lg:block" aria-hidden="true" />
+                    <div>
+                      <h2 className="mb-4 font-display text-xl font-bold md:text-2xl">
+                        {indexedTitle}
+                      </h2>
+                      <ClinicResultGrid clinics={listingClinics} />
+                      <Pagination currentPage={currentPage} totalPages={totalPages} />
                     </div>
                   </div>
-                )}
+                }
+              >
+                <LocationBrowser
+                  basePath={`/${state}/${area}`}
+                  scope={{ kind: 'area', stateSlug: state, areaSlug: area }}
+                  limit={limit}
+                  currentPage={currentPage}
+                  totalClinics={totalClinics}
+                  totalPages={totalPages}
+                  clinics={listingClinics}
+                  facets={facets}
+                  showSampleCards={false}
+                  sampleState={areaData.state?.name ?? ''}
+                  sampleArea={areaData.name}
+                  emptyHref={`/${state}/${area}`}
+                  listHeading={indexedTitle}
+                />
+              </Suspense>
+              {currentPage === 1 ? (
+                <LocationSeo
+                  placeName={areaData.name}
+                  placeLabel={placeLabel}
+                  clinicCount={totalClinics}
+                  stats={{
+                    clinicCount: totalClinics,
+                    sundayOpenCount: sundayCount,
+                    whatsappCount,
+                  }}
+                  links={hubLinks}
+                  guides={guides}
+                />
+              ) : null}
+            </>
+          ) : (
+            <div className="flex flex-col items-center justify-center gap-y-4 py-8">
+              <div className="relative size-64 md:size-96">
+                <MediaImage
+                  src={imageKitUrl('dental-clinics-my/lost-boy.png')}
+                  alt="No dental clinics found"
+                  width={MEDIA.empty.width}
+                  height={MEDIA.empty.height}
+                  sizes={MEDIA.empty.sizes}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <h2 className="text-balance font-display text-2xl font-bold md:text-4xl">Oops!</h2>
+              <p className="text-balance text-lg dark:text-gray-300">
+                We&apos;re not ready in {areaData.name}, {areaData.state?.name}.
+              </p>
+              <div className="flex flex-col gap-y-2 md:flex-row md:gap-x-3">
+                <Link
+                  href="/submit"
+                  className={cn(buttonVariants({ variant: 'primary' }), 'flex flex-row gap-x-2')}
+                  prefetch={false}
+                >
+                  Add a clinic
+                  <ArrowRightIcon weight="duotone" className="size-4" />
+                </Link>
+                <Link
+                  href="/"
+                  className={cn(buttonVariants({ variant: 'ghost' }), 'flex flex-row gap-x-2')}
+                  prefetch={false}
+                >
+                  Get back to homepage
+                  <ArrowRightIcon weight="duotone" className="size-4" />
+                </Link>
               </div>
             </div>
-            <aside className="sticky top-20 flex flex-col gap-6 self-start">
-              {isJohorBahru && (
-                <Prose className="hidden lg:block">
-                  <AddBookingForm
-                    currentUrl={absoluteUrl(`/${state}/${area}`)}
-                    area={areaData.name}
-                  />
-                </Prose>
-              )}
-              <AffiliateAd>
-                <a
-                  href="https://invl.me/clo4xmw"
-                  className="hover:!border-b-transparent"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <Image
-                    src="/images/product-waterpik.webp"
-                    alt="Waterpik Water Flosser"
-                    width={MEDIA.card.width}
-                    height={MEDIA.card.height}
-                    sizes={MEDIA.card.sizes}
-                    className="m-0 h-auto w-full object-contain"
-                  />
-                </a>
-              </AffiliateAd>
-
-              {guides.length > 0 && (
-                <section
-                  aria-labelledby="state-guides-heading"
-                  className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900"
-                >
-                  <div className="mb-1 flex items-center justify-between gap-3">
-                    <h2
-                      id="state-guides-heading"
-                      className="font-display text-base font-bold text-gray-900 dark:text-gray-50"
-                    >
-                      Guides
-                    </h2>
-                    <Link
-                      href="/guides"
-                      prefetch={false}
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-                    >
-                      All guides
-                      <ArrowRightIcon weight="duotone" className="size-3.5" aria-hidden="true" />
-                    </Link>
-                  </div>
-                  <ul className="flex flex-col divide-y divide-gray-200 dark:divide-gray-800">
-                    {guides.map((guide) => (
-                      <li key={guide.slug}>
-                        <Link
-                          href={`/guides/${guide.slug}`}
-                          prefetch={false}
-                          className="block py-2.5 no-underline hover:border-transparent"
-                        >
-                          <span className="block text-sm font-medium text-gray-900 dark:text-gray-50">
-                            {guide.title}
-                          </span>
-                          <span className="mt-0.5 block text-xs text-gray-500 dark:text-gray-400">
-                            {guide.readingTimeMinutes} min read
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              <AffiliateAd>
-                <a
-                  href="https://invl.me/clo4xmy"
-                  className="hover:!border-b-transparent"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <Image
-                    src="/images/product-curaprox.webp"
-                    alt="Curaprox Orthodontic Kits"
-                    width={MEDIA.card.width}
-                    height={MEDIA.card.height}
-                    sizes={MEDIA.card.sizes}
-                    className="m-0 h-auto w-full object-contain"
-                  />
-                </a>
-              </AffiliateAd>
-              <AffiliateAd>
-                <a
-                  href="https://invl.me/clo4xl2"
-                  className="hover:!border-b-transparent"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                >
-                  <Image
-                    src="/images/product-philips-soniccare.webp"
-                    alt="Philips Sonicare Wide"
-                    width={MEDIA.card.width}
-                    height={MEDIA.card.height}
-                    sizes={MEDIA.card.sizes}
-                    className="m-0 h-auto w-full object-contain"
-                  />
-                </a>
-              </AffiliateAd>
-            </aside>
-          </div>
+          )}
         </Container>
-      </Wrapper>
+      </section>
     </>
   );
 }
+

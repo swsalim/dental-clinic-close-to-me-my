@@ -18,10 +18,10 @@ export function BackToFirstPage({
   }
 
   return (
-    <p className="text-base font-medium text-white">
+    <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
       <Link
         href={href}
-        className="text-blue-200 underline decoration-blue-200 underline-offset-4 hover:text-white"
+        className="font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-300"
         prefetch={false}>
         Back to page 1
       </Link>
