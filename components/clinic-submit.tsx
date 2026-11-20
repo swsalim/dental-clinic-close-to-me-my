@@ -132,7 +132,7 @@ export function ClinicSubmit({
         <ul className="mb-4 space-y-2 text-sm text-green-700 dark:text-green-300">
           <li>• Our team will review your listing within 24 hours</li>
           <li>• You&apos;ll receive an email confirmation when it goes live</li>
-          <li>• Your listing will include a DoFollow backlink</li>
+          <li>• Your listing will include a link to your website</li>
         </ul>
 
         <div className="border-t border-green-200 pt-4 dark:border-green-800">

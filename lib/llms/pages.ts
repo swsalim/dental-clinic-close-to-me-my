@@ -202,7 +202,7 @@ export function markdownAbout() {
       listItem('Dentists', mdUrl('/dentists'), 'Dentists practising in Malaysia'),
     ].join('\n'),
     '## List or advertise a clinic',
-    `Submit a listing for a one-time ${LISTING_FEE_LABEL} fee. Listings are reviewed within 24 hours and include a dofollow link to the clinic website.`,
+    `Submit a listing for a one-time ${LISTING_FEE_LABEL} fee. Listings are reviewed within 24 hours and include a link to the clinic website.`,
     listItem('Submit a listing', mdUrl('/submit')),
     listItem('Advertise with us', mdUrl('/advertise-with-us')),
     '## Contact',
@@ -215,7 +215,7 @@ export function markdownAbout() {
 export function markdownSubmit() {
   return joinSections([
     `# List your clinic for ${LISTING_FEE_LABEL} | Reach more patients in Malaysia`,
-    `> List your dental clinic on DentalClinicCloseToMe.my for a one-time ${LISTING_FEE_LABEL} fee. Reviewed within 24 hours, with a dofollow link to your website.`,
+    `> List your dental clinic on DentalClinicCloseToMe.my for a one-time ${LISTING_FEE_LABEL} fee. Reviewed within 24 hours, with a link to your website.`,
     `Submit your clinic for a one-time ${LISTING_FEE_LABEL} fee and get exposure to patients searching for dental care near them.`,
     `HTML form: ${absoluteUrl('/submit')}`,
   ]);

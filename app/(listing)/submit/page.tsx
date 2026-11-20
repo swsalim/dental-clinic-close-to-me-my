@@ -11,7 +11,7 @@ import SubmitClinicForm from '@/components/forms/submit-clinic-form';
 
 const config = {
   title: `List Your Clinic for ${LISTING_FEE_LABEL} | Reach More Patients in Malaysia`,
-  description: `List your dental clinic on DentalClinicCloseToMe.my for a one-time ${LISTING_FEE_LABEL} fee. Reviewed within 24 hours, with a dofollow link to your website.`,
+  description: `List your dental clinic on DentalClinicCloseToMe.my for a one-time ${LISTING_FEE_LABEL} fee. Reviewed within 24 hours, with a link to your website.`,
   url: '/submit',
 };
 
@@ -77,8 +77,7 @@ export default async function SubmitClinicPage({
         List your clinic for {LISTING_FEE_LABEL}
       </h1>
       <p className="mb-6 text-gray-700 dark:text-gray-400">
-        One-time fee. We review your listing within 24 hours and include a dofollow link to your
-        website.
+        One-time fee. We review your listing within 24 hours and include a link to your website.
       </p>
       {canceled === '1' && (
         <p
