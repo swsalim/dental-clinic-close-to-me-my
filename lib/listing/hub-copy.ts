@@ -8,8 +8,6 @@ export type HubGlanceStats = {
   clinicCount: number;
   /** Distinct clinics with a non-blank Sunday `clinic_hours.open_time` (day_of_week 6). */
   sundayOpenCount: number;
-  /** Clinics with `open_on_public_holidays` true. */
-  publicHolidayOpenCount: number;
   /** Clinics with a non-blank `whatsapp` value. */
   whatsappCount: number;
 };
@@ -53,11 +51,6 @@ function sundaySentence(stats: HubGlanceStats): string {
   return `${formatCount(stats.sundayOpenCount)} ${verb} a Sunday opening time stored. Sunday is day 6 in clinic hours (Monday is 0). A clinic is counted only when that opening time is set.`;
 }
 
-function holidaySentence(stats: HubGlanceStats): string {
-  const verb = stats.publicHolidayOpenCount === 1 ? 'has' : 'have';
-  return `${formatCount(stats.publicHolidayOpenCount)} ${verb} open on public holidays set.`;
-}
-
 function whatsappSentence(stats: HubGlanceStats): string {
   const verb = stats.whatsappCount === 1 ? 'has' : 'have';
   return `${formatCount(stats.whatsappCount)} ${verb} a WhatsApp number stored.`;
@@ -73,30 +66,36 @@ export function buildHubCopy(placeName: string, placeLabel: string, stats: HubGl
       heading: `Which dental clinics in ${placeName} open on Sunday?`,
       answer: `${sundaySentence(stats)} Opening hours for a clinic are on its own page.`,
     },
-    {
-      heading: `Which dental clinics in ${placeName} are open on public holidays?`,
-      answer: holidaySentence(stats),
-    },
-    {
-      heading: `Which dental clinics in ${placeName} have WhatsApp?`,
-      answer: whatsappSentence(stats),
-    },
   ];
 
-  const faq = [
+  const faq: HubQuestion[] = [
     questions[0],
     {
       heading: `How many dental clinics in ${placeName} are open on Sunday?`,
       answer: sundaySentence(stats),
     },
-    {
-      heading: `How many dental clinics in ${placeName} are open on public holidays?`,
-      answer: holidaySentence(stats),
-    },
-    {
+  ];
+
+  const rows = [
+    { label: 'Active clinics', value: formatCount(stats.clinicCount) },
+    { label: 'Open on Sunday', value: formatCount(stats.sundayOpenCount) },
+  ];
+
+  // A WhatsApp count of 0 is missing contact data (most clinics have a null or
+  // blank number), so the hub does not print that zero. A stored number stays.
+  if (stats.whatsappCount > 0) {
+    questions.push({
+      heading: `Which dental clinics in ${placeName} have WhatsApp?`,
+      answer: whatsappSentence(stats),
+    });
+    faq.push({
       heading: `How many dental clinics in ${placeName} have a WhatsApp number?`,
       answer: whatsappSentence(stats),
-    },
+    });
+    rows.push({ label: 'With WhatsApp', value: formatCount(stats.whatsappCount) });
+  }
+
+  faq.push(
     {
       heading: `Where is the clinic list for ${placeName}?`,
       answer: `The clinics for ${placeLabel} are listed on this page. The counts above include every active approved clinic, including clinics on later pages.`,
@@ -106,16 +105,11 @@ export function buildHubCopy(placeName: string, placeLabel: string, stats: HubGl
       answer:
         'The related pages below link to the state, nearby areas, services, or other directory pages.',
     },
-  ];
+  );
 
   return {
     atAGlanceLabel: 'At a glance',
-    rows: [
-      { label: 'Active clinics', value: formatCount(stats.clinicCount) },
-      { label: 'Open on Sunday', value: formatCount(stats.sundayOpenCount) },
-      { label: 'Open on public holidays', value: formatCount(stats.publicHolidayOpenCount) },
-      { label: 'With WhatsApp', value: formatCount(stats.whatsappCount) },
-    ],
+    rows,
     questions,
     faqHeading: `Questions about dental clinics in ${placeName}`,
     faq,

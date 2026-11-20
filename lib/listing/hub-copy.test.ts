@@ -14,7 +14,6 @@ import { TITLE_MAX_LENGTH } from './page-title';
 const klang = {
   clinicCount: 101,
   sundayOpenCount: 58,
-  publicHolidayOpenCount: 0,
   whatsappCount: 3,
 };
 
@@ -29,23 +28,50 @@ describe('area index threshold', () => {
 });
 
 describe('hub copy', () => {
-  it('builds four question headings and six FAQ answers from the counts', () => {
+  it('builds question headings and FAQ answers from the stored counts', () => {
     const copy = buildHubCopy('Klang', 'Klang, Selangor', klang);
 
-    assert.equal(copy.questions.length, 4);
-    assert.equal(copy.faq.length, 6);
+    assert.equal(copy.questions.length, 3);
+    assert.equal(copy.faq.length, 5);
     assert.match(copy.questions[0].heading, /^How many dental clinics are in Klang\?$/);
     assert.match(
       copy.questions[0].answer,
       /101 active approved dental clinics are listed in Klang, Selangor/,
     );
     assert.match(copy.questions[1].answer, /58 have a Sunday opening time stored/);
-    assert.match(copy.questions[2].answer, /0 have open on public holidays set/);
-    assert.match(copy.questions[3].answer, /3 have a WhatsApp number stored/);
-    assert.match(copy.rows[1].label, /Open on Sunday/);
+    assert.match(copy.questions[2].answer, /3 have a WhatsApp number stored/);
+    assert.deepEqual(
+      copy.rows.map((row) => row.label),
+      ['Active clinics', 'Open on Sunday', 'With WhatsApp'],
+    );
 
     const text = JSON.stringify(copy);
+    assert.doesNotMatch(text, /public holiday/i);
     assert.doesNotMatch(text, /best|top-rated|trusted|official|government|private|price|RM\d/i);
+  });
+
+  it('keeps a Sunday count of 0 and omits WhatsApp when none is stored', () => {
+    const copy = buildHubCopy('Gurun', 'Gurun, Kedah', {
+      clinicCount: 2,
+      sundayOpenCount: 0,
+      whatsappCount: 0,
+    });
+
+    assert.match(copy.questions[1].answer, /0 have a Sunday opening time stored/);
+    assert.equal(
+      copy.questions.some((question) => /whatsapp/i.test(question.heading)),
+      false,
+    );
+    assert.equal(
+      copy.faq.some((item) => /whatsapp/i.test(item.heading)),
+      false,
+    );
+    assert.deepEqual(
+      copy.rows.map((row) => row.label),
+      ['Active clinics', 'Open on Sunday'],
+    );
+    assert.equal(copy.rows[1].value, '0');
+    assert.doesNotMatch(JSON.stringify(copy), /public holiday/i);
   });
 });
 

@@ -24,11 +24,9 @@ import { createAdminClient } from '@/lib/supabase';
  *     and h.open_time is not null
  *     and btrim(h.open_time) <> '';
  *
- * Public holidays:
- *   select count(*) from clinics
- *   where status = 'approved' and is_active = true
- *     and area_id = :id
- *     and open_on_public_holidays is true;
+ * Public holidays are not counted. `open_on_public_holidays` is the schema
+ * default `false` on nearly every row, so a hub total of 0 is not a measured
+ * "none open" result.
  *
  * WhatsApp:
  *   select count(*) from clinics
@@ -48,18 +46,14 @@ function locationColumn(scope: Scope): 'area_id' | 'state_id' {
   return scope.kind === 'area' ? 'area_id' : 'state_id';
 }
 
-async function countActiveApproved(scope: Scope, publicHolidayOnly: boolean): Promise<number> {
+async function countActiveApproved(scope: Scope): Promise<number> {
   const supabase = createAdminClient();
-  let query = supabase
+  const query = supabase
     .from('clinics')
     .select('id', { count: 'exact', head: true })
     .eq('status', 'approved')
     .eq('is_active', true)
     .eq(locationColumn(scope), scope.id);
-
-  if (publicHolidayOnly) {
-    query = query.eq('open_on_public_holidays', true);
-  }
 
   const { count, error } = (await query) as CountResult;
   if (error) {
@@ -139,19 +133,15 @@ export const getHubGlance = cache(
     }
 
     const scope: Scope = { kind, id };
-    const [clinicCount, publicHolidayOpenCount, sundayOpenCount, whatsappCount] = await Promise.all(
-      [
-        countActiveApproved(scope, false),
-        countActiveApproved(scope, true),
-        countSundayOpen(scope),
-        countWhatsApp(scope),
-      ],
-    );
+    const [clinicCount, sundayOpenCount, whatsappCount] = await Promise.all([
+      countActiveApproved(scope),
+      countSundayOpen(scope),
+      countWhatsApp(scope),
+    ]);
 
     return {
       clinicCount,
       sundayOpenCount,
-      publicHolidayOpenCount,
       whatsappCount,
     };
   },
