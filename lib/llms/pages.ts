@@ -374,7 +374,7 @@ export async function markdownService(serviceSlug: string) {
   const description = htmlToText(service.description) || service.name;
 
   return joinSections([
-    `# ${service.name} — find top dental clinics`,
+    `# ${service.name}: Compare Dental Clinics`,
     `> ${serviceListingDescription(service.name, description)}`,
     htmlToText(service.description) || null,
     '## Clinics',

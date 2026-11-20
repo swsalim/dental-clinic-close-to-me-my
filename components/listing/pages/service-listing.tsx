@@ -66,7 +66,7 @@ export async function generateServiceListingMetadata(
   }
 
   const title = paginatedTitle(
-    `${serviceName} - Find Top Dental Clinics`,
+    `${serviceName}: Compare Dental Clinics`,
     currentPage,
     listingTotalPages(totalClinics, perPage),
   );
@@ -141,7 +141,7 @@ export async function ServiceListing({ serviceSlug, currentPage }: ServiceListin
   }
   const { name: serviceName } = serviceData;
 
-  const title = `${serviceName} - Find Top Dental Clinics`;
+  const title = `${serviceName}: Compare Dental Clinics`;
   const description = serviceListingDescription(serviceName, serviceData.description);
 
   const JSONLDbreadcrumbs = [
