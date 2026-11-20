@@ -37,7 +37,8 @@ export function BookAppointmentButton({
           }
         }}
         variant="primary"
-        className={cn('flex w-full items-center gap-x-3')}>
+        className={cn('flex w-full items-center gap-x-3')}
+      >
         <PhoneIcon weight="duotone" className="h-5 w-5" /> Call Now
       </Button>
       {whatsapp && (
@@ -53,8 +54,9 @@ export function BookAppointmentButton({
             }
           }}
           variant="primary"
-          className={cn('flex w-full items-center gap-x-3 text-white')}>
-          <WhatsApp className="h-5 w-5" /> Book Now
+          className={cn('flex w-full items-center gap-x-3 text-white')}
+        >
+          <WhatsApp className="h-5 w-5" /> Call / WhatsApp
         </Button>
       )}
     </div>

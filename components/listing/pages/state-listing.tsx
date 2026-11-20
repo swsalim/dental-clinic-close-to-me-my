@@ -16,10 +16,15 @@ import pluralize from 'pluralize';
 
 import { siteConfig } from '@/config/site';
 
-import { getStateAreasWithClinicsCached, getStateBySlugCached } from '@/lib/data';
+import {
+  getAllServicesCached,
+  getStateAreasWithClinicsCached,
+  getStateBySlugCached,
+} from '@/lib/data';
 import { getAllGuides } from '@/lib/guides';
 import { imageKitUrl } from '@/lib/imagekit-url';
-import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
+import { withMinimumHubLinks } from '@/lib/listing/hub-copy';
+import { getHubGlance } from '@/lib/listing/hub-stats';
 import {
   isPastLastPage,
   listingMetaTitle,
@@ -28,6 +33,7 @@ import {
   paginatedDescription,
   paginatedTitle,
 } from '@/lib/listing/page-title';
+import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import { resolveMediaUrl } from '@/lib/media';
 import { MEDIA } from '@/lib/media-sizes';
 import { absoluteUrl, cn, getPagination } from '@/lib/utils';
@@ -35,14 +41,15 @@ import { absoluteUrl, cn, getPagination } from '@/lib/utils';
 import { getDoctorsByState } from '@/helpers/doctors';
 
 import { LazyAdsArticle } from '@/components/ads/lazy-ads-article';
-import { BackToFirstPage } from '@/components/listing/back-to-first-page';
 import { ClinicCard } from '@/components/cards/clinic-card';
 import { MediaImage } from '@/components/image/media-image';
+import { BackToFirstPage } from '@/components/listing/back-to-first-page';
 import {
   getFeaturedListingCardPlaceholder,
   getFeaturedPartnerCardPlaceholder,
 } from '@/components/listing/featured-clinic-spotlight';
 import { HomeCtaStrip } from '@/components/listing/home-cta-strip';
+import { HubGlance } from '@/components/listing/hub-glance';
 import BreadcrumbJsonLd from '@/components/structured-data/breadcrumb-json-ld';
 import CollectionPageJsonLd from '@/components/structured-data/collection-page-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -92,7 +99,6 @@ export async function generateStateListingMetadata(
   );
   const url = absoluteUrl(listingCanonicalPath(`/${state}`, currentPage));
 
-
   return {
     title: listingMetaTitle(title, currentPage),
     description,
@@ -136,10 +142,11 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
   const limit = 20;
   const { from, to } = getPagination(currentPage, limit);
 
-  const [stateData, areasWithClinics, doctorsResult] = await Promise.all([
+  const [stateData, areasWithClinics, doctorsResult, services] = await Promise.all([
     getStateBySlugCached(state, from, to),
     getStateAreasWithClinicsCached(state),
     getDoctorsByState(state, 5, 0),
+    getAllServicesCached(),
   ]);
 
   if (!stateData) {
@@ -149,6 +156,17 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
   const totalDoctors = doctorsResult.count || 0;
 
   const totalClinics = stateData.total_clinics || 0;
+  const glance = await getHubGlance('state', stateData.id);
+  const hubLinks = withMinimumHubLinks([
+    ...areasWithClinics.map((area) => ({
+      href: `/${state}/${area.slug}`,
+      label: area.name,
+    })),
+    ...services.slice(0, 4).map((service) => ({
+      href: `/services/${service.slug}`,
+      label: service.name,
+    })),
+  ]);
   const totalPages = Math.ceil(totalClinics / limit);
   if (isPastLastPage(currentPage, totalClinics, limit)) {
     notFound();
@@ -235,7 +253,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                   <Link
                     href={absoluteUrl(`/${area.state?.slug}/${area.slug}`)}
                     className="text-blue-300 hover:border-blue-300 hover:text-blue-300"
-                    prefetch={false}>
+                    prefetch={false}
+                  >
                     {area.name}
                   </Link>
                   {index < nearbyAreasWithLinks.length - 2 && ', '}
@@ -280,7 +299,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                   href="https://invl.me/clo4xl2"
                   className="hover:!border-b-transparent"
                   target="_blank"
-                  rel="nofollow noopener noreferrer">
+                  rel="nofollow noopener noreferrer"
+                >
                   <Image
                     src="/images/product-philips-soniccare-wide.webp"
                     alt="Philips Sonicare Wide"
@@ -291,13 +311,20 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                   />
                 </a>
               </div>
+              <HubGlance
+                placeName={stateData.name}
+                placeLabel={stateData.name}
+                stats={glance}
+                links={hubLinks}
+              />
               {topAreas.length > 0 && (
                 <section className="mb-10" aria-labelledby="browse-areas-heading">
                   <div className="mb-4 flex items-end justify-between gap-4">
                     <div className="min-w-0">
                       <h2
                         id="browse-areas-heading"
-                        className="text-balance font-display text-xl font-bold text-blue-900 md:text-2xl dark:text-blue-100">
+                        className="text-balance font-display text-xl font-bold text-blue-900 md:text-2xl dark:text-blue-100"
+                      >
                         Browse areas in {stateData.name}
                       </h2>
                       <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
@@ -308,7 +335,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                       <Link
                         href="#areas"
                         prefetch={false}
-                        className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+                        className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                      >
                         View all areas
                         <ArrowRightIcon weight="duotone" className="size-4" aria-hidden="true" />
                       </Link>
@@ -323,7 +351,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                           <Link
                             href={absoluteUrl(`/${state}/${area.slug}`)}
                             prefetch={false}
-                            className="bg-blue-950 group relative block aspect-[4/3] overflow-hidden rounded-xl no-underline">
+                            className="bg-blue-950 group relative block aspect-[4/3] overflow-hidden rounded-xl no-underline"
+                          >
                             {imageSrc && (
                               <MediaImage
                                 src={imageSrc}
@@ -360,7 +389,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                     <div
                       className={cn(
                         'grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8',
-                      )}>
+                      )}
+                    >
                       {currentPage === 1 && (
                         <>
                           <ClinicCard
@@ -390,7 +420,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                                     href="https://invl.me/clnlab2"
                                     className="hover:!border-b-transparent"
                                     target="_blank"
-                                    rel="nofollow noopener noreferrer">
+                                    rel="nofollow noopener noreferrer"
+                                  >
                                     <Image
                                       src="/images/total-image-2.jpg"
                                       alt="Total Image"
@@ -459,7 +490,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                           buttonVariants({ variant: 'primary' }),
                           'flex flex-row gap-x-2',
                         )}
-                        prefetch={false}>
+                        prefetch={false}
+                      >
                         Add a clinic
                         <ArrowRightIcon weight="duotone" className="size-4" />
                       </Link>
@@ -469,7 +501,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                           buttonVariants({ variant: 'ghost' }),
                           'flex flex-row gap-x-2',
                         )}
-                        prefetch={false}>
+                        prefetch={false}
+                      >
                         Get back to homepage
                         <ArrowRightIcon weight="duotone" className="size-4" />
                       </Link>
@@ -483,7 +516,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                 href="https://invl.me/clo4xmy"
                 className="hover:!border-b-transparent"
                 target="_blank"
-                rel="nofollow noopener noreferrer">
+                rel="nofollow noopener noreferrer"
+              >
                 <Image
                   src="/images/product-curaprox.webp"
                   alt="Curaprox Orthodontic Kits"
@@ -497,17 +531,20 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
               {guides.length > 0 && (
                 <section
                   aria-labelledby="state-guides-heading"
-                  className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900">
+                  className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-900"
+                >
                   <div className="mb-1 flex items-center justify-between gap-3">
                     <h2
                       id="state-guides-heading"
-                      className="font-display text-base font-bold text-gray-900 dark:text-gray-50">
+                      className="font-display text-base font-bold text-gray-900 dark:text-gray-50"
+                    >
                       Guides
                     </h2>
                     <Link
                       href="/guides"
                       prefetch={false}
-                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
+                      className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 no-underline hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                    >
                       All guides
                       <ArrowRightIcon weight="duotone" className="size-3.5" aria-hidden="true" />
                     </Link>
@@ -518,7 +555,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                         <Link
                           href={`/guides/${guide.slug}`}
                           prefetch={false}
-                          className="block py-2.5 no-underline hover:border-transparent">
+                          className="block py-2.5 no-underline hover:border-transparent"
+                        >
                           <span className="block text-sm font-medium text-gray-900 dark:text-gray-50">
                             {guide.title}
                           </span>
@@ -535,7 +573,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                 href="https://invl.me/clo4xmw"
                 className="hover:!border-b-transparent"
                 target="_blank"
-                rel="nofollow noopener noreferrer">
+                rel="nofollow noopener noreferrer"
+              >
                 <Image
                   src="/images/product-waterpik.webp"
                   alt="Waterpik Water Flosser"
@@ -549,7 +588,8 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
                 href="https://invl.me/clo4xl2"
                 className="hover:!border-b-transparent"
                 target="_blank"
-                rel="nofollow noopener noreferrer">
+                rel="nofollow noopener noreferrer"
+              >
                 <Image
                   src="/images/product-philips-soniccare.webp"
                   alt="Philips Sonicare Wide"

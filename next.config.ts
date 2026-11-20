@@ -57,10 +57,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     // Listing redirects are static so public pages are not matched by middleware.
-    // Query rules are first: a redirect destination does not keep the original query.
-    const publicPath = '/:path((?!_next|api|dashboard).*)*';
-    const legacyPageQuery = '(?<page>[2-9]|[1-9][0-9]+)';
-
+    // `?page=` is not redirected here. Next 15 copies the original query onto the
+    // destination, so a redirect to `/page/N` comes back as `/page/N?page=N` and loops.
+    // A beforeFiles rewrite below matches only when `page` is present.
     return [
       {
         source: '/api/og',
@@ -83,42 +82,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/page/:pageNum(\\d+)',
-        has: [{ type: 'query', key: 'page' }],
-        destination: '/page/:pageNum',
-        permanent: true,
-      },
-      {
-        source: '/:path+/page/:pageNum(\\d+)',
-        has: [{ type: 'query', key: 'page' }],
-        destination: '/:path*/page/:pageNum',
-        permanent: true,
-      },
-      {
-        source: '/',
-        has: [{ type: 'query', key: 'page', value: legacyPageQuery }],
-        destination: '/page/:page',
-        permanent: true,
-      },
-      {
-        source: publicPath,
-        has: [{ type: 'query', key: 'page', value: legacyPageQuery }],
-        destination: '/:path*/page/:page',
-        permanent: true,
-      },
-      {
-        source: '/',
-        has: [{ type: 'query', key: 'page' }],
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: publicPath,
-        has: [{ type: 'query', key: 'page' }],
-        destination: '/:path*',
-        permanent: true,
-      },
-      {
         source: '/page/1',
         destination: '/',
         permanent: true,
@@ -131,25 +94,22 @@ const nextConfig: NextConfig = {
     ];
   },
   async rewrites() {
-    // Formerly middleware category rewrites — static config avoids Edge Middleware cost.
-    const categories = [
-      '24-hour-clinic',
-      'general-practitioner',
-      'accident-and-emergency',
-      'hospital',
-      'paediatric',
-      'aesthetic',
-      'dental',
-      'womens-health-clinic',
-      'chinese-physician',
-      'chiropractic',
-      'physiotherapy',
-      'psychotherapy',
-    ];
-    return categories.map((slug) => ({
-      source: `/${slug}`,
-      destination: `/category/${slug}`,
-    }));
+    // Only requests that still carry `?page=` hit the redirect route.
+    const publicPath = '/:path((?!_next|api|dashboard).*)*';
+    return {
+      beforeFiles: [
+        {
+          source: '/',
+          has: [{ type: 'query', key: 'page' }],
+          destination: '/api/listing-page-redirect',
+        },
+        {
+          source: publicPath,
+          has: [{ type: 'query', key: 'page' }],
+          destination: '/api/listing-page-redirect/:path*',
+        },
+      ],
+    };
   },
 };
 

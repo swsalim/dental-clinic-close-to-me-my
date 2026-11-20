@@ -1,11 +1,11 @@
 import { SiteConfig } from '@/types';
 
+import { HOME_DESCRIPTION_FALLBACK, HOME_TITLE } from '@/lib/listing/home-meta';
 import { absoluteUrl } from '@/lib/utils';
 
 export const siteConfig: SiteConfig = {
-  title: 'Find Dental Clinics Near You in Malaysia | Compare & Book Appointments Easily',
-  description:
-    'Explore top-rated dental clinics across Malaysia. Search by location, compare services and reviews, and book your dental appointment with ease.',
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION_FALLBACK,
   siteName: 'Dental Clinics Malaysia',
   url: new URL(absoluteUrl()),
   openGraph: {

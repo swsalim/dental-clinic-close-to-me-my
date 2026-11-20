@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'DentalClinicCloseToMe',
     short_name: 'DentalClinicCloseToMe',
     description:
-      'Explore top-rated dental clinics across Malaysia. Search by location, compare services and reviews, and book your dental appointment with ease.!',
+      'Find dental clinics near you in Malaysia. Compare opening hours, services and contact details.',
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',

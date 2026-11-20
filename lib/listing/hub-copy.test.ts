@@ -1,0 +1,94 @@
+import assert from 'node:assert/strict';
+import { describe, it } from 'node:test';
+
+import { HOME_TITLE, homeMetaDescription } from './home-meta';
+import {
+  areaIsIndexable,
+  buildHubCopy,
+  MIN_INDEXABLE_AREA_CLINICS,
+  withMinimumHubLinks,
+} from './hub-copy';
+import { listingPageRedirectPath } from './page-query-redirect';
+import { TITLE_MAX_LENGTH } from './page-title';
+
+const klang = {
+  clinicCount: 101,
+  sundayOpenCount: 58,
+  publicHolidayOpenCount: 0,
+  whatsappCount: 3,
+};
+
+describe('area index threshold', () => {
+  it('indexes an area only when it has at least 3 active approved clinics', () => {
+    assert.equal(MIN_INDEXABLE_AREA_CLINICS, 3);
+    assert.equal(areaIsIndexable(0), false);
+    assert.equal(areaIsIndexable(2), false);
+    assert.equal(areaIsIndexable(3), true);
+    assert.equal(areaIsIndexable(4), true);
+  });
+});
+
+describe('hub copy', () => {
+  it('builds four question headings and six FAQ answers from the counts', () => {
+    const copy = buildHubCopy('Klang', 'Klang, Selangor', klang);
+
+    assert.equal(copy.questions.length, 4);
+    assert.equal(copy.faq.length, 6);
+    assert.match(copy.questions[0].heading, /^How many dental clinics are in Klang\?$/);
+    assert.match(
+      copy.questions[0].answer,
+      /101 active approved dental clinics are listed in Klang, Selangor/,
+    );
+    assert.match(copy.questions[1].answer, /58 have a Sunday opening time stored/);
+    assert.match(copy.questions[2].answer, /0 have open on public holidays set/);
+    assert.match(copy.questions[3].answer, /3 have a WhatsApp number stored/);
+    assert.match(copy.rows[1].label, /Open on Sunday/);
+
+    const text = JSON.stringify(copy);
+    assert.doesNotMatch(text, /best|top-rated|trusted|official|government|private|price|RM\d/i);
+  });
+});
+
+describe('hub links', () => {
+  it('fills related links up to 8 without dropping the ones provided', () => {
+    const links = withMinimumHubLinks([
+      { href: '/kedah', label: 'Dental clinics in Kedah' },
+      { href: '/kedah/jitra', label: 'Jitra' },
+    ]);
+
+    assert.ok(links.length >= 8);
+    assert.equal(links[0].href, '/kedah');
+    assert.equal(links[1].href, '/kedah/jitra');
+  });
+});
+
+describe('legacy page query redirect', () => {
+  it('sends page 2+ to /page/N and drops page 1', () => {
+    assert.equal(
+      listingPageRedirectPath('services/invisalign', '2'),
+      '/services/invisalign/page/2',
+    );
+    assert.equal(
+      listingPageRedirectPath('services/invisalign', '80'),
+      '/services/invisalign/page/80',
+    );
+    assert.equal(listingPageRedirectPath('services/invisalign', '1'), '/services/invisalign');
+    assert.equal(
+      listingPageRedirectPath('services/invisalign/page/80', '80'),
+      '/services/invisalign/page/80',
+    );
+    assert.equal(listingPageRedirectPath('', '2'), '/page/2');
+    assert.equal(listingPageRedirectPath('../secret', '2'), null);
+  });
+});
+
+describe('homepage meta', () => {
+  it('keeps the title within 60 characters and out of booking language', () => {
+    assert.ok(HOME_TITLE.length <= TITLE_MAX_LENGTH);
+    assert.doesNotMatch(HOME_TITLE, /book/i);
+    const description = homeMetaDescription(2641, 16);
+    assert.doesNotMatch(description, /book/i);
+    assert.match(description, /2,641 active clinics across 16 states/);
+    assert.doesNotMatch(homeMetaDescription(0, 0), /book/i);
+  });
+});
