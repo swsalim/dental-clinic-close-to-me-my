@@ -17,7 +17,7 @@ import { Wrapper } from '@/components/ui/wrapper';
 const seo = {
   title: 'Grow Your Dental Clinic with Us - Get More Patients',
   description:
-    "Join Malaysia's trusted dental clinic directory. Get featured listings to grow your practice with premium placement options.",
+    "Join Malaysia's dental clinic directory. Get featured listings to grow your practice with premium placement options.",
   url: '/advertise-with-us',
   creator: '@swsalim',
   company: 'DentalClinicCloseToMe',

@@ -10,6 +10,7 @@ import { siteConfig } from '@/config/site';
 
 import { listingCanonicalPath, MAX_INDEXED_LISTING_PAGE } from '@/lib/listing/pagination';
 import {
+  countedPlaceTitle,
   isPastLastPage,
   listingMetaTitle,
   listingRobots,
@@ -46,7 +47,7 @@ export async function generateDentistsListingMetadata(currentPage: number): Prom
     notFound();
   }
   const title = paginatedTitle(
-    `Browse Top ${totalDoctors} Dentists in Malaysia`,
+    countedPlaceTitle(totalDoctors, 'Dentist', 'Malaysia'),
     currentPage,
     listingTotalPages(totalDoctors, perPage),
   );

@@ -20,6 +20,7 @@ import { imageKitUrl } from '@/lib/imagekit-url';
 import { areaIsIndexable, withMinimumHubLinks } from '@/lib/listing/hub-copy';
 import { getHubGlance } from '@/lib/listing/hub-stats';
 import {
+  countedPlaceTitle,
   isPastLastPage,
   listingMetaTitle,
   listingRobots,
@@ -81,7 +82,7 @@ export async function generateAreaListingMetadata(
 
   const totalPages = listingTotalPages(clinicCount, limit);
   const title = paginatedTitle(
-    `Top ${clinicCount} Dental Clinics in ${areaData.name}, ${areaData.state.name}`,
+    countedPlaceTitle(clinicCount, 'Dental Clinic', `${areaData.name}, ${areaData.state.name}`),
     currentPage,
     totalPages,
   );
@@ -183,9 +184,10 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
     notFound();
   }
 
-  const title = `Top Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
+  const place = `${areaData.name}, ${areaData.state?.name}`;
+  const title = `Dental Clinics in ${place}`;
   const description = `Explore ${totalClinics} dental clinics across cities in ${areaData.state?.name}. Find services, reviews, and opening hours.`;
-  const indexedTitle = `Top ${totalClinics} Dental Clinics in ${areaData.name}, ${areaData.state?.name}`;
+  const indexedTitle = countedPlaceTitle(totalClinics, 'Dental Clinic', place);
   const indexedDescription = `Explore ${totalClinics} dental clinics located in ${areaData.name}, ${areaData.state?.name}. Find services, reviews, and opening hours.`;
   const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
   const documentDescription = paginatedDescription(indexedDescription, currentPage, {
@@ -319,7 +321,7 @@ export async function AreaListing({ state, area, currentPage }: AreaListingProps
                   links={hubLinks}
                 />
                 <h2 className="mb-6 text-balance font-display text-xl font-bold md:text-2xl">
-                  {totalClinics} Dental Clinics in {areaData.name}, {areaData.state?.name}
+                  {indexedTitle}
                 </h2>
                 {areaData.clinics?.length > 0 ? (
                   <>

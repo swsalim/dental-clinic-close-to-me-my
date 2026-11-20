@@ -26,6 +26,7 @@ import { imageKitUrl } from '@/lib/imagekit-url';
 import { withMinimumHubLinks } from '@/lib/listing/hub-copy';
 import { getHubGlance } from '@/lib/listing/hub-stats';
 import {
+  countedPlaceTitle,
   isPastLastPage,
   listingMetaTitle,
   listingRobots,
@@ -88,7 +89,7 @@ export async function generateStateListingMetadata(
 
   const totalPages = listingTotalPages(clinicCount, limit);
   const title = paginatedTitle(
-    `Top ${clinicCount} Dental Clinics in ${stateData.name}`,
+    countedPlaceTitle(clinicCount, 'Dental Clinic', stateData.name),
     currentPage,
     totalPages,
   );
@@ -178,9 +179,9 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
   const nearbyAreas = featuredAreas.map((area) => area.name).join(', ');
   const nearbyAreasWithLinks = featuredAreas;
 
-  const title = `Top Dental Clinics in ${stateData.name}`;
+  const title = `Dental Clinics in ${stateData.name}`;
   const description = `Explore ${totalClinics} dental clinics across cities like ${nearbyAreas} in ${stateData?.name}. Find services, reviews, and opening hours.`;
-  const indexedTitle = `Top ${totalClinics} Dental Clinics in ${stateData.name}`;
+  const indexedTitle = countedPlaceTitle(totalClinics, 'Dental Clinic', stateData.name);
   const documentTitle = paginatedTitle(indexedTitle, currentPage, totalPages);
   const documentDescription = paginatedDescription(description, currentPage, {
     perPage: limit,
@@ -382,7 +383,7 @@ export async function StateListing({ state, currentPage }: StateListingProps) {
               )}
               <div className="flex flex-col gap-y-6">
                 <h2 className="text-balance font-display text-xl font-bold md:text-2xl">
-                  {totalClinics} Dental Clinics in {stateData.name}
+                  {indexedTitle}
                 </h2>
                 {stateData.clinics?.length > 0 ? (
                   <>

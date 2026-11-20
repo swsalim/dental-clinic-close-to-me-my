@@ -3,6 +3,7 @@ import { Clinic, ClinicDetails } from '@/types/clinic';
 import { siteConfig } from '@/config/site';
 
 import { getAllGuides, getGuide } from '@/lib/guides';
+import { countedPlaceTitle, serviceListingDescription } from '@/lib/listing/page-title';
 import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import {
   escapeMd,
@@ -180,7 +181,7 @@ export async function markdownDentists() {
   const sorted = doctors.slice().sort((a, b) => a.name.localeCompare(b.name));
 
   return joinSections([
-    `# Browse top ${sorted.length} dentists in Malaysia`,
+    `# ${countedPlaceTitle(sorted.length, 'Dentist', 'Malaysia')}`,
     '> Find dentists across Malaysia. Browse by state, city, or clinic to find a dentist near you.',
     '## Dentists',
     sorted.length > 0
@@ -223,7 +224,7 @@ export function markdownSubmit() {
 export function markdownAdvertise() {
   return joinSections([
     '# Grow your dental clinic with us',
-    "> Join Malaysia's trusted dental clinic directory. Get featured listings to grow your practice with premium placement options.",
+    "> Join Malaysia's dental clinic directory. Get featured listings to grow your practice with premium placement options.",
     'Reach Malaysia’s dental patients directly. Showcase your clinic, highlight your expertise, and connect with patients searching for dental care.',
     '## Why list with us',
     [
@@ -265,7 +266,7 @@ export async function markdownState(stateSlug: string) {
     .join(', ');
 
   return joinSections([
-    `# Top ${totalClinics} dental clinics in ${stateData.name}`,
+    `# ${totalClinics} dental clinics in ${stateData.name}`,
     `> Explore ${totalClinics} dental clinics${nearbyAreas ? ` across cities like ${nearbyAreas}` : ''} in ${stateData.name}. Find services, reviews, and opening hours.`,
     doctorsResult.count
       ? listItem(
@@ -345,7 +346,7 @@ export async function markdownArea(stateSlug: string, areaSlug: string) {
   const stateName = areaData.state.name ?? stateSlug;
 
   return joinSections([
-    `# Top ${areaData.total_clinics} dental clinics in ${areaData.name}, ${stateName}`,
+    `# ${areaData.total_clinics} dental clinics in ${areaData.name}, ${stateName}`,
     `> Explore ${areaData.total_clinics} dental clinics located in ${areaData.name}, ${stateName}. Find services, reviews, and opening hours.`,
     listItem(`All clinics in ${stateName}`, mdUrl(`/${stateSlug}`)),
     '## Clinics',
@@ -374,7 +375,7 @@ export async function markdownService(serviceSlug: string) {
 
   return joinSections([
     `# ${service.name} — find top dental clinics`,
-    `> Find qualified dental clinics offering ${description.toLowerCase()} services near you. Compare reviews, locations, and book appointments online.`,
+    `> ${serviceListingDescription(service.name, description)}`,
     htmlToText(service.description) || null,
     '## Clinics',
     clinics?.length

@@ -70,7 +70,7 @@ export const EmailLayout: React.FC<LayoutProps> = ({ preview, children }) => {
                       Dental Clinic Malaysia
                     </Text>
                     <Text className="mb-0 mt-[4px] text-[16px] leading-[24px] text-gray-500">
-                      Malaysia&apos;s Most Trusted Dental Clinic Directory
+                      Malaysia&apos;s dental clinic directory
                     </Text>
                   </td>
                 </tr>

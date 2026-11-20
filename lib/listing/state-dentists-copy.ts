@@ -1,8 +1,10 @@
+import { countedPlaceTitle } from '@/lib/listing/page-title';
+
 export function stateDentistsCopy(totalDoctors: number, stateName: string) {
   if (totalDoctors > 0) {
     return {
       index: true,
-      title: `Top ${totalDoctors} Dentists in ${stateName}`,
+      title: countedPlaceTitle(totalDoctors, 'Dentist', stateName),
       description: `Discover ${totalDoctors} dentists in ${stateName}. Browse by city or clinic to find a dentist near you. Information includes clinic locations and contact details.`,
     };
   }
