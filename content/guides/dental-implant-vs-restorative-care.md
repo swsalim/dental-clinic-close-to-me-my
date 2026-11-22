@@ -5,8 +5,8 @@ description: 'Compare dental implant, dental veneer and onlay dental care. Learn
 slug: 'dental-implant-vs-restorative-care'
 publishedAt: '2026-10-20'
 updatedAt: '2026-10-20'
-image: '/images/guides/implant-vs-restorative.svg'
-imageAlt: 'Illustration comparing an implant plan and a tooth-repair plan on two listing cards.'
+image: /images/guides/dental-implant-vs-restorative-cover.webp
+imageAlt: "Titanium dental implant beside a ceramic crown, both centered on linen, the two options to compare when a tooth is damaged."
 primaryKeyword: 'dental implant'
 summary:
   - 'A missing tooth usually leads to a discussion about tooth replacement options, which can include an implant-supported crown, bridge or removable option.'
@@ -112,6 +112,8 @@ For example, a molar with a large old filling and a contained cusp fracture migh
 
 A dental veneer and an onlay solve different problems. MouthHealthy describes veneers as custom-made coverings placed on the front surface of teeth. They can address selected concerns such as staining, chips, gaps or an uneven shape. They do not replace a missing tooth.
 
+![Thin ceramic veneer shell centered on linen, the facing to compare with an onlay when a dentist is restoring a front tooth.](/images/guides/ceramic-dental-veneer.webp)
+
 An onlay dental restoration repairs a larger damaged section of an existing tooth, often including a chewing cusp. It is a structural restoration rather than a thin cosmetic shell. A veneer focuses mainly on the visible surface; an onlay must handle the demands placed on a working tooth.
 
 For a front tooth with a cosmetic concern, ask about shade, translucency, enamel preparation, bonding and bite pressure. MouthHealthy notes that veneer treatment can be irreversible when enamel is removed, and that veneers can chip, crack, wear or loosen. Existing decay or gum disease should be addressed before placing one.
@@ -139,6 +141,8 @@ Maintenance usually includes brushing, cleaning around implant-supported work, a
 ## Ask a Malaysian dental clinic for a complete treatment plan
 
 A dental implant clinic should explain the diagnosis and the full sequence before you consent. Use directories such as Dental Clinics Malaysia to compare clinics by location, listed services, opening information and available reviews, then use the consultation to verify the clinical details. The [complete guide to finding and comparing a dental clinic](/guides/the-complete-guide-to-finding-and-comparing-a-dental-clinic) walks through how to read those listings. Reviews can help you find a clinic; they cannot decide whether your tooth is restorable.
+
+![Blank clipboard centered on a wooden desk, the written treatment plan to request before choosing an implant or another restoration.](/images/guides/blank-treatment-clipboard.webp)
 
 Ask each dental clinic Malaysia listing or practice for a written plan that separates the relevant items. The exact fees and available services must come from the clinic and your examination.
 

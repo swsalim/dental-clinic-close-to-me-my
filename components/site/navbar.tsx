@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { guideCategories, guideCategoryHref } from '@/lib/guide-categories';
 import useScroll from '@/lib/hooks/use-scroll';
 import { cn } from '@/lib/utils';
 
@@ -44,19 +45,53 @@ export default function Navbar() {
             <ul className="flex min-w-0 items-center gap-0.5">
               {primaryNavItems.map((item) => {
                 const active = isNavItemActive(pathname, item);
+                const linkClass = cn(
+                  'inline-flex h-11 min-w-[4.5rem] items-center justify-center rounded-md px-3.5 text-sm font-medium text-gray-700 transition-colors duration-150 hover:border-transparent hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-offset-gray-900 dark:active:bg-gray-700',
+                  active && 'dark:bg-blue-950/40 bg-blue-50 text-blue-700 dark:text-blue-300',
+                );
+
+                if (item.href !== '/guides') {
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        prefetch={false}
+                        aria-current={active ? 'page' : undefined}
+                        className={linkClass}>
+                        {item.name}
+                      </Link>
+                    </li>
+                  );
+                }
 
                 return (
-                  <li key={item.href}>
+                  <li key={item.href} className="group relative">
                     <Link
                       href={item.href}
                       prefetch={false}
                       aria-current={active ? 'page' : undefined}
-                      className={cn(
-                        'inline-flex h-11 min-w-[4.5rem] items-center justify-center rounded-md px-3.5 text-sm font-medium text-gray-700 transition-colors duration-150 hover:border-transparent hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-offset-gray-900 dark:active:bg-gray-700',
-                        active && 'dark:bg-blue-950/40 bg-blue-50 text-blue-700 dark:text-blue-300',
-                      )}>
+                      className={linkClass}>
                       {item.name}
                     </Link>
+                    <div className="invisible absolute left-0 top-full z-20 w-72 pt-2 opacity-0 transition-opacity duration-150 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                      <ul className="rounded-lg border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-900">
+                        {guideCategories.map((category) => (
+                          <li key={category.id}>
+                            <Link
+                              href={guideCategoryHref(category.id)}
+                              prefetch={false}
+                              className="block rounded-md px-3 py-2 hover:border-transparent hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:hover:bg-gray-800">
+                              <span className="block text-sm font-semibold text-gray-900 dark:text-gray-50">
+                                {category.title}
+                              </span>
+                              <span className="mt-0.5 block text-xs leading-5 text-gray-500 dark:text-gray-400">
+                                {category.description}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </li>
                 );
               })}

@@ -4,9 +4,17 @@ import Link from 'next/link';
 
 import { siteConfig } from '@/config/site';
 
-import { formatGuideDate, getAllGuides, getGuidesIndexLastmod } from '@/lib/guides';
+import {
+  GUIDE_IMAGE_HEIGHT,
+  GUIDE_IMAGE_WIDTH,
+  formatGuideDate,
+  getAllGuides,
+  getGuideCategories,
+  getGuidesIndexLastmod,
+} from '@/lib/guides';
 import { absoluteUrl } from '@/lib/utils';
 
+import { GuideHashScroll } from '@/components/guides/guide-hash-scroll';
 import ServerJsonLd from '@/components/structured-data/server-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import Container from '@/components/ui/container';
@@ -48,13 +56,14 @@ export const metadata: Metadata = {
 
 export default function GuidesIndexPage() {
   const guides = getAllGuides();
-  const [featured, ...rest] = guides;
+  const categories = getGuideCategories();
   const pageUrl = absoluteUrl('/guides');
 
   const breadcrumbItems = [{ name: 'Guides' }];
 
   return (
     <>
+      <GuideHashScroll />
       <ServerJsonLd
         id="guides-collection-jsonld"
         data={{
@@ -113,77 +122,75 @@ export default function GuidesIndexPage() {
             Practical notes on comparing a dental clinic, choosing one nearby, and what to do on an
             urgent visit in Malaysia.
           </p>
+          <nav aria-label="Guide categories" className="mt-6">
+            <ul className="flex gap-2 overflow-x-auto pb-1">
+              {categories.map(({ category, guides: items }) => (
+                <li key={category.id} className="shrink-0">
+                    <a
+                    href={`#${category.id}`}
+                    className="inline-flex min-h-11 items-center rounded-full border border-gray-200 bg-white px-4 text-sm font-semibold text-gray-800 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-blue-700 dark:hover:bg-blue-950/40 dark:hover:text-blue-200">
+                    {category.title}
+                    <span className="ms-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+                      {items.length}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </Container>
       </section>
 
-      <Container className="py-10 md:py-14">
-        {featured ? (
-          <article className="overflow-hidden rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
-            <div className="grid min-w-0 items-stretch md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
-              <Link
-                href={`/guides/${featured.slug}`}
-                prefetch={false}
-                className="relative block min-h-56 border-b-0 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
-                <Image
-                  src={featured.image}
-                  alt={featured.imageAlt}
-                  width={1200}
-                  height={630}
-                  priority
-                  unoptimized
-                  className="h-full w-full object-cover"
-                />
-              </Link>
-              <div className="flex min-w-0 flex-col justify-center p-6 md:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700 dark:text-blue-300">
-                  Featured
-                </p>
-                <h2 className="mt-3 font-display text-2xl font-black text-gray-900 md:text-3xl dark:text-gray-50">
-                  <Link
-                    href={`/guides/${featured.slug}`}
-                    prefetch={false}
-                    className="!font-black hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
-                    {featured.title}
-                  </Link>
-                </h2>
-                <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-                  {featured.description}
-                </p>
-                <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-                  {featured.readingTimeMinutes} min read
-                  <span aria-hidden="true"> · </span>
-                  <time dateTime={featured.updatedAt}>{formatGuideDate(featured.updatedAt)}</time>
-                </p>
-              </div>
+      <div className="bg-white dark:bg-gray-950">
+      <Container className="space-y-14 py-10 md:py-14">
+        {categories.map(({ category, guides: items }, categoryIndex) => (
+          <section key={category.id} id={category.id} className="scroll-mt-28">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-2xl font-black text-gray-900 md:text-3xl dark:text-gray-50">
+                {category.title}
+              </h2>
+              <p className="mt-2 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                {category.description}
+              </p>
             </div>
-          </article>
-        ) : null}
-
-        {rest.length > 0 ? (
-          <ul className="mt-10 divide-y divide-gray-200 border-y border-gray-200 dark:divide-gray-800 dark:border-gray-800">
-            {rest.map((guide) => (
-              <li key={guide.slug}>
-                <Link
-                  href={`/guides/${guide.slug}`}
-                  prefetch={false}
-                  className="block py-6 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
-                  <h2 className="font-display text-xl font-black text-gray-900 dark:text-gray-50">
-                    {guide.title}
-                  </h2>
-                  <p className="mt-2 max-w-3xl text-base leading-relaxed text-gray-600 dark:text-gray-300">
-                    {guide.description}
-                  </p>
-                  <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
-                    {guide.readingTimeMinutes} min read
-                    <span aria-hidden="true"> · </span>
-                    <time dateTime={guide.updatedAt}>{formatGuideDate(guide.updatedAt)}</time>
-                  </p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        ) : null}
+            <ul className="mt-6 grid gap-5 sm:grid-cols-2">
+              {items.map((guide, index) => (
+                <li key={guide.slug}>
+                  <article className="h-full overflow-hidden rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
+                    <Link
+                      href={`/guides/${guide.slug}`}
+                      prefetch={false}
+                      className="block hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900">
+                      <Image
+                        src={guide.image}
+                        alt={guide.imageAlt}
+                        width={GUIDE_IMAGE_WIDTH}
+                        height={GUIDE_IMAGE_HEIGHT}
+                        priority={categoryIndex === 0 && index === 0}
+                        className="aspect-[16/9] w-full object-cover"
+                      />
+                      <div className="p-5">
+                        <h3 className="font-display text-xl font-black text-gray-900 dark:text-gray-50">
+                          {guide.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                          {guide.description}
+                        </p>
+                        <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
+                          {guide.readingTimeMinutes} min read
+                          <span aria-hidden="true"> · </span>
+                          <time dateTime={guide.updatedAt}>{formatGuideDate(guide.updatedAt)}</time>
+                        </p>
+                      </div>
+                    </Link>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </Container>
+      </div>
     </>
   );
 }

@@ -5,8 +5,8 @@ description: "Compare conventional braces vs self ligating: elastic ties or a cl
 slug: conventional-vs-self-ligating-braces
 publishedAt: 2026-10-21
 updatedAt: 2026-10-26
-image: /images/guides/conventional-vs-self-ligating.svg
-imageAlt: "Illustration of a braces bracket with an elastic tie beside a bracket with a clip."
+image: /images/guides/conventional-vs-self-ligating-braces-cover.webp
+imageAlt: "Two orthodontic brackets centered side by side, one held with a pink elastic tie and one with a metal clip."
 primaryKeyword: conventional braces vs self ligating
 summary:
   - "Conventional braces hold the archwire with elastic or wire ties. Self-ligating brackets hold it with a built-in clip or door."
@@ -60,6 +60,8 @@ Conventional braces vs self ligating is a comparison of how a fixed brace holds 
 
 Fixed braces use brackets on the teeth and an archwire that guides movement. The American Association of Orthodontists describes traditional braces as brackets and wires that put pressure on the teeth over time, with elastic bands sometimes added for extra force. The same page describes self-ligating braces as brackets with built-in clips or doors that hold the wire.
 
+![Stainless orthodontic pliers centered on a pale tray, the tool a clinician uses when seating an archwire into a tie or a clip.](/images/guides/orthodontic-pliers.webp)
+
 On a conventional bracket, a small elastic tie or a thin wire tie wraps over the archwire and keeps it in the slot. Those ties are changed when the clinic adjusts the brace. Elastic ties can be clear, silver-coloured, or a colour the patient chooses. The tie is a separate piece. It can loosen, stain, or collect food, and the clinic replaces it at a review.
 
 On a self-ligating bracket, the slot has its own clip, gate, or door. The clinician opens it, seats the archwire, and closes it. There is no elastic tie around that bracket. The American Association of Orthodontists says these brackets can be metal, such as stainless steel, or ceramic. The clip is part of the bracket, so a damaged clip is a bracket problem, not a tie that can simply be swapped for a new elastic.
@@ -77,6 +79,8 @@ Missed visits, broken brackets, and poor cleaning can change the plan whatever t
 ## Cleaning around ties and clips
 
 Both appliances stay on the teeth while you eat and sleep. You cannot take them out to brush. Food and plaque collect around brackets and under the wire. Conventional elastic ties add another small surface that can stain and hold debris. A closed clip has fewer elastic edges, but the bracket is still a ledge, and the wire still crosses the tooth.
+
+![Toothbrush centered against metal braces on a dental model, showing the ledges around ties and clips that daily cleaning has to reach.](/images/guides/brushing-around-braces.webp)
 
 Daily cleaning is still brushing with a fluoride toothpaste and cleaning between the teeth in the way the clinic shows you. Many patients are shown an interdental brush for the space under the wire. The clinic should demonstrate this on your own brace. A water flosser, if the clinic suggests one, does not replace that demonstration.
 

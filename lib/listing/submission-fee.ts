@@ -1,4 +1,4 @@
-export const LISTING_FEE_SEN = 9_900;
+export const LISTING_FEE_SEN = 24_900;
 export const LISTING_FEE_RM = LISTING_FEE_SEN / 100;
 export const LISTING_FEE_LABEL = `RM${LISTING_FEE_RM}`;
 

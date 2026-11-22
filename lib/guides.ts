@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
+import { guideCategories, type GuideCategory } from '@/lib/guide-categories';
+
 export type GuideFaq = {
   question: string;
   answer: string;
@@ -21,9 +23,14 @@ export type MarkdownBlock =
   | { type: 'h2'; id: string; text: string }
   | { type: 'h3'; id: string; text: string }
   | { type: 'p'; text: string }
+  | { type: 'img'; alt: string; src: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
   | { type: 'table'; headers: string[]; rows: string[][] };
+
+/** Intrinsic size of every guide photo produced by scripts/seo-image.mjs. */
+export const GUIDE_IMAGE_WIDTH = 1280;
+export const GUIDE_IMAGE_HEIGHT = 720;
 
 export type Guide = {
   title: string;
@@ -218,6 +225,13 @@ export function parseMarkdown(body: string): MarkdownBlock[] {
       continue;
     }
 
+    const image = /^!\[([^\]]*)\]\(([^)\s]+)\)$/.exec(line.trim());
+    if (image) {
+      blocks.push({ type: 'img', alt: image[1], src: image[2] });
+      index += 1;
+      continue;
+    }
+
     if (line.startsWith('## ')) {
       const text = line.slice(3).trim();
       blocks.push({ type: 'h2', id: headingId(text), text });
@@ -276,6 +290,7 @@ export function parseMarkdown(body: string): MarkdownBlock[] {
       !lines[index].startsWith('#') &&
       !lines[index].startsWith('- ') &&
       !lines[index].trim().startsWith('|') &&
+      !/^!\[([^\]]*)\]\(([^)\s]+)\)$/.test(lines[index].trim()) &&
       !/^\d+\.\s/.test(lines[index])
     ) {
       paragraph.push(lines[index].trim());
@@ -482,6 +497,36 @@ export function getRelatedGuides(guide: Guide): Guide[] {
   }
 
   return all.filter((item) => item.slug !== guide.slug);
+}
+
+export function getGuideCategories(): { category: GuideCategory; guides: Guide[] }[] {
+  const all = getAllGuides();
+  const bySlug = new Map(all.map((guide) => [guide.slug, guide]));
+  const used = new Set<string>();
+
+  const groups = guideCategories.map((category) => {
+    const guides = category.slugs.map((slug) => {
+      const guide = bySlug.get(slug);
+      if (!guide) {
+        throw new Error(`Unknown guide in category ${category.id}: ${slug}`);
+      }
+      if (used.has(slug)) {
+        throw new Error(`Guide is listed in more than one category: ${slug}`);
+      }
+      used.add(slug);
+      return guide;
+    });
+
+    return { category, guides };
+  });
+
+  for (const guide of all) {
+    if (!used.has(guide.slug)) {
+      throw new Error(`Guide is missing a category: ${guide.slug}`);
+    }
+  }
+
+  return groups;
 }
 
 export function getGuidesIndexLastmod(): string {

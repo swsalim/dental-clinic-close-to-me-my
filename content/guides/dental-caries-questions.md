@@ -5,8 +5,8 @@ description: 'Looking for caries dental care in Malaysia? Compare clinics, under
 slug: 'dental-caries-questions'
 publishedAt: '2026-10-20'
 updatedAt: '2026-10-20'
-image: '/images/guides/dental-caries.svg'
-imageAlt: 'Illustration of a tooth beside a short checklist of questions to ask a dental clinic.'
+image: /images/guides/dental-caries-questions-cover.webp
+imageAlt: "Single molar model centered on linen, a plain starting point for questions about tooth decay before any treatment is booked."
 primaryKeyword: 'caries dental'
 summary:
   - 'Dental caries means tooth decay caused by acids produced when mouth bacteria act on sugars.'
@@ -71,6 +71,8 @@ Ask the clinic:
 
 A useful dental caries diagnosis explains both the finding and the evidence behind it. The dentist may use a visual examination and other checks. A [dental X-ray](/services/dental-xrays) for cavities should depend on the dentist’s assessment, symptoms, history, and the tooth being evaluated, rather than being treated as necessary for every patient.
 
+![Round dental mouth mirror centered on linen, the instrument a dentist uses when examining a tooth for decay before recommending treatment.](/images/guides/dental-mouth-mirror.webp)
+
 For example, someone with brief sensitivity to cold can ask whether the symptom matches early decay, a deeper cavity, a cracked tooth, or another cause before agreeing to treatment. The clinic should explain what it found and what could happen if care is delayed. The CDC links untreated cavities with increasing pain, infection, and tooth loss.
 
 Ask the clinic:
@@ -83,6 +85,8 @@ Ask the clinic:
 ## What should you ask about cavity treatment options?
 
 Cavity treatment depends on the tooth’s condition. Ask whether preventive care could manage early damage or whether the tooth needs a restoration, such as a [dental filling](/services/general-dentistry). Request a plain-language reason for the recommendation, including how much tooth structure the procedure may affect and whether follow-up is needed.
+
+![Tooth-coloured filling syringe centered on a pale tray, one treatment option to ask about after a dentist finds a cavity.](/images/guides/tooth-filling-syringe.webp)
 
 For deep decay, ask whether the nerve may be involved and what findings would make root canal treatment or extraction necessary. Pain relief can reduce discomfort, but it does not remove decayed tissue or treat a possible infection.
 

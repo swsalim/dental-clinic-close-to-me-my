@@ -5,8 +5,8 @@ description: "Compare Malaysian dental clinics for crown teeth by location, serv
 slug: crown-teeth
 publishedAt: 2026-10-23
 updatedAt: 2026-10-23
-image: /images/guides/crown-teeth.svg
-imageAlt: "Illustration of a tooth beside a separate crown cap and a clinic checklist."
+image: /images/guides/crown-teeth-cover.webp
+imageAlt: "Ceramic dental crown held in tweezers and centered against linen, the cap a dentist places over a tooth that needs full coverage."
 primaryKeyword: crown teeth
 summary:
   - "Search this directory by state or area, then open clinic profiles and check whether crowns are among the listed services."
@@ -69,6 +69,8 @@ Dental Clinics Malaysia lists clinics and dentists. Open the live profile, then 
 
 The Leeds Teaching Hospitals NHS Trust describes a crown as a dental restoration that helps the appearance, strength, and function of a tooth. It fits over a tooth that a dentist has reshaped. The same patient page says a crown can rebuild a tooth that has been badly broken, or weakened by decay or a large filling, and that the dentist is the person who can say whether a crown is suitable. Read the [Leeds crowns explanation](https://www.leedsth.nhs.uk/patients/resources/crowns/) for that background. It is general information from an NHS hospital, not a treatment plan for a patient in Malaysia.
 
+![Ceramic crown seated on a single tooth model and centered on linen, showing the cap that covers the visible part of a prepared tooth.](/images/guides/crown-on-tooth-model.webp)
+
 Materials differ. Leeds lists porcelain with a metal lining, metal alloys, and all-ceramic porcelain, and says the dentist advises which option fits because some designs remove more tooth structure than others. The choice depends on the examination, including where the tooth sits and how it meets the other teeth.
 
 Malaysia’s Oral Health Programme lists crown and bridge work among restorative dentistry services, alongside fillings, root canal treatment, dentures, and dental implants. That list describes services the programme names. It does not say which one a particular tooth needs. See [Restorative dentistry](https://hq.moh.gov.my/ohp/en/component/content/article/140-restorative-dentistry?Itemid=101&catid=2). A registered dentist has to assess the tooth before recommending a crown, a filling, or another option.
@@ -86,6 +88,8 @@ If a tooth has already been removed, a dentist can still examine the area and ta
 ## Compare clinics for crown treatment
 
 Start with a place you can return to. Follow-up visits, travel, and opening hours can all affect which clinic is practical. Search [Kuala Lumpur](/kuala-lumpur) and [Selangor](/selangor) separately if you are in the Klang Valley. Patients in [Penang](/penang) and [Johor](/johor) can use the same state-and-area approach. Someone in Johor Bahru can start from [Johor Bahru](/johor/johor-bahru), open several profiles, and write down the same fields for each. Someone in Kota Kinabalu or Kuching should use [Kota Kinabalu](/sabah/kota-kinabalu) or [Kuching](/sarawak/kuching) rather than assume a Kuala Lumpur clinic is the practical choice. [Browse](/browse) lists the states and areas.
+
+![Metal dental impression tray centered on a clinic tray, one step to ask about when comparing clinics that make crowns.](/images/guides/dental-impression-tray.webp)
 
 Do not assume a clinic offers crowns because a nearby clinic does. Read the services on that profile, or ask the clinic.
 

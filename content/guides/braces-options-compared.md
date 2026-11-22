@@ -5,8 +5,8 @@ metaTitle: "Braces Options Compared: Types, Costs and Clinic Care"
 slug: braces-options-compared
 publishedAt: 2026-10-19
 updatedAt: 2026-10-26
-image: /images/guides/braces-options.svg
-imageAlt: "Illustration of fixed braces beside a clear aligner."
+image: /images/guides/braces-options-compared-cover.webp
+imageAlt: "Metal and ceramic orthodontic brackets lined up and centered on a pale tray, the main braces types to compare before treatment starts."
 primaryKeyword: braces
 summary:
   - "An orthodontic examination comes first. Online comparisons can explain the main options, but they can't assess your bite, gum health, jaw growth, or the records needed for a treatment plan."
@@ -90,6 +90,8 @@ This comparison covers four decisions: which appliance suits the planned movemen
 
 Fixed braces use brackets attached to the teeth and archwires that guide movement. The system applies controlled pressure over time, while elastic bands may add force for particular tooth or bite movements. The orthodontic team checks progress and adjusts the appliance during review visits, as described by the [American Association of Orthodontists explanation of braces mechanics](https://aaoinfo.org/treatments/braces/).
 
+![Dental mirror centered in front of a braces model, the kind of close look an orthodontic assessment takes before an appliance is chosen.](/images/guides/mirror-reflecting-braces.webp)
+
 Two everyday parts of that appliance have their own pages. [Dental braces elastics](/guides/braces-elastics) is the rubber-band pattern an orthodontist prescribes, and the questions to settle before you leave the appointment. [Dental wax for braces](/guides/dental-wax-for-braces) is a temporary cover for a bracket or wire that rubs, and the point at which wax is no longer the right response.
 
 That process addresses more than a crooked front tooth. An assessment may consider:
@@ -129,6 +131,8 @@ The main braces types differ in appearance, cleaning access, and bracket design.
 ## Aligners vs braces: compare control, visibility, habits, and follow-up
 
 The aligners vs braces decision often comes down to two daily realities: aligners depend on consistent patient use, while fixed braces stay attached but demand more attention to cleaning and food choices.
+
+![Clear aligner tray centered on a pale plate, the removable option to compare with fixed braces for visibility, wear time, and follow-up.](/images/guides/clear-aligner-tray.webp)
 
 Clear aligners can be removed for eating and brushing. That may make hygiene and meal planning easier, but the wearer must follow the clinic’s instructions and keep track of the appliance. Aligners may also require attachments or other aids, and regular reviews remain part of professional treatment.
 

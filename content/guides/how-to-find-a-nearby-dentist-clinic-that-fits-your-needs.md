@@ -4,8 +4,8 @@ description: "Find a nearby dentist clinic in Malaysia by starting from a state 
 slug: how-to-find-a-nearby-dentist-clinic-that-fits-your-needs
 publishedAt: 2026-10-17
 updatedAt: 2026-10-22
-image: /images/guides/nearby-clinic.svg
-imageAlt: "Illustration of a map of Malaysia with location pins linking to clinic listing cards."
+image: /images/guides/nearby-dentist-clinic-cover.webp
+imageAlt: "Bicycle centered on a shaded shophouse walkway, a practical way to picture reaching a nearby dental clinic before you call."
 primaryKeyword: nearby dentist clinic
 summary:
   - "Choose the state and city you can travel to, then open clinic profiles from that page."
@@ -95,6 +95,8 @@ If a profile says the clinic is permanently closed, leave it and go back to the 
 
 A shortlist is enough. More than three clinics turns into a pile of half-finished calls. Use one line per clinic:
 
+![Three blank cards standing in a row on linen, centered, for a shortlist of two or three nearby dental clinics to compare.](/images/guides/nearby-clinic-shortlist.webp)
+
 1. Name, area, and the link to the profile.
 2. The service you need, copied from the profile.
 3. The day and time the listing shows.
@@ -124,6 +126,8 @@ Dental pain with a fever, a broken tooth, or a lost filling, without those dange
 ## Call and confirm the fit
 
 Call during the hours the profile lists, and say you are checking those hours. Ask the receptionist to confirm three things: that the clinic is open on the day you want, which dentist will see you, and what kind of appointment they can offer.
+
+![Cream telephone handset centered on a wooden clinic desk, the call you make to confirm hours, fees, and whether the clinic can see you.](/images/guides/clinic-phone-confirmation.webp)
 
 Use a short script so the calls stay comparable:
 

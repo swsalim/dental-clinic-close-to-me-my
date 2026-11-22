@@ -4,8 +4,8 @@ description: "How to check whether a dental clinic is open now in Malaysia, why 
 slug: dental-clinic-open-now-common-questions-about-urgent-visits
 publishedAt: 2026-10-17
 updatedAt: 2026-10-17
-image: /images/guides/open-now.svg
-imageAlt: "Illustration of a clock beside a clinic phone and a hospital emergency sign."
+image: /images/guides/dental-clinic-open-now-cover.webp
+imageAlt: "Dental clinic doorway centered at dusk with warm interior light, a reminder to call and confirm the clinic is actually open."
 primaryKeyword: dental near me open now
 summary:
   - "Read the hours on the clinic profile, then call the clinic before you travel. Listing hours can change."
@@ -80,6 +80,8 @@ Ask for a written note of the fee if they can send one before you arrive. Urgent
 
 Some problems should not wait for a dental clinic to open. Go to a hospital emergency department or call 999 if you have:
 
+![Empty chair centered in a quiet hospital corridor, the setting for symptoms that need an emergency department rather than a dental listing.](/images/guides/urgent-hospital-chair.webp)
+
 - severe swelling in the face, jaw, or neck
 - bleeding that you cannot control
 - trauma to the mouth, teeth, or jaw
@@ -109,6 +111,8 @@ Public dental clinics under the Ministry of Health Malaysia have their own appoi
 ## What to have ready when the clinic answers
 
 Have these details in front of you so the call stays short:
+
+![Closed notebook and pen centered on a clinic desk, the notes to have ready when a dental clinic answers an urgent call.](/images/guides/urgent-visit-notes.webp)
 
 - Your name and a callback number.
 - The area you are in, so they know you can reach them.

@@ -5,8 +5,8 @@ description: "Plaque teeth explained: what plaque is, how tartar and calculus di
 slug: plaque-on-teeth
 publishedAt: 2026-10-21
 updatedAt: 2026-10-23
-image: /images/guides/plaque-on-teeth.svg
-imageAlt: "Illustration of a tooth with a soft film along the gum line beside a toothbrush."
+image: /images/guides/plaque-on-teeth-cover.webp
+imageAlt: "Toothbrush centered against a white tooth model, the daily cleaning that can disturb soft plaque but does not scrape off tartar."
 primaryKeyword: plaque teeth
 summary:
   - "Plaque is a soft, sticky film of bacteria on the teeth. It can contribute to decay and gum disease if it stays in place."
@@ -93,6 +93,8 @@ Swelling of the face, fever, pus, or trouble swallowing or breathing needs promp
 
 MouthHealthy’s prevention list is practical: visit a dentist regularly, brush twice a day with a fluoride toothpaste, and clean between the teeth with floss every day. That advice is about removing soft plaque and lowering the chance of cavities. It is not a promise that you will never need a filling or a gum appointment.
 
+![Dental floss centered between two tooth models, the between-teeth cleaning that disturbs soft plaque where a toothbrush does not reach.](/images/guides/dental-floss-between-teeth.webp)
+
 A useful routine is specific. Ask the dentist to watch you brush and to show the spots you miss, often the gum line, the tongue side of the lower front teeth, and the back molars. Ask whether floss, an interdental brush, or another cleaner fits the spaces between your teeth. Wider gaps and tighter contacts are not cleaned the same way. If your hands are stiff, say so. The clinic can suggest a grip that you can actually use.
 
 Fluoride toothpaste is the type MouthHealthy names for this daily habit. The amount, and any high-fluoride paste, is a decision for the dentist, especially for a child. Spit toothpaste out rather than swallowing it.
@@ -102,6 +104,8 @@ Frequent sugary snacks and sipping sweet drinks give plaque bacteria more chance
 ## When a professional scaling and cleaning is needed
 
 A dental cleaning, often called scaling and polishing, is how a clinic removes tartar on the teeth and stains that home care cannot. You cannot see every deposit, so “my teeth feel smooth” is not a test you can rely on. The dentist decides whether a cleaning is due from the examination, your gum health, and how quickly calculus forms for you. There is no single interval that fits every patient in Malaysia, and this page will not invent one.
+
+![Stainless dental scaler centered on a pale tray, the clinic instrument used when plaque has hardened into tartar that brushing cannot remove.](/images/guides/dental-scaler-instrument.webp)
 
 Book a dental visit for a cleaning assessment if you notice a hard deposit, bleeding gums, or it has been a long time since anyone examined your mouth. Also book if you are about to start braces or whitening, because those treatments are harder to manage when plaque and tartar are left in place. Ask the clinic:
 

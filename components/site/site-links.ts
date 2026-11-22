@@ -68,6 +68,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       { label: 'Browse by location', href: '/browse' },
       { label: 'All dentists', href: '/dentists' },
       { label: 'Guides', href: '/guides' },
+      { label: 'Finding a clinic', href: '/guides#finding-a-clinic' },
+      { label: 'Braces and retainers', href: '/guides#braces-and-retainers' },
+      { label: 'Tooth and gum care', href: '/guides#tooth-and-gum-care' },
+      { label: 'Treatment and scans', href: '/guides#treatment-and-scans' },
     ],
   },
   {

@@ -5,8 +5,8 @@ description: 'Compare CBCT dental clinics with questions about clinical need, ra
 slug: 'cbct-dental-scan-questions'
 publishedAt: '2026-10-20'
 updatedAt: '2026-10-20'
-image: '/images/guides/cbct-dental-scan.svg'
-imageAlt: 'Illustration of a dental imaging checklist beside a clinic listing card.'
+image: /images/guides/cbct-dental-scan-cover.webp
+imageAlt: "Empty dental CBCT scanner with the circular gantry centered in a bright clinic room, the machine to ask about before a scan is booked."
 primaryKeyword: 'cbct dental'
 summary:
   - 'Ask why a three-dimensional CBCT dental scan is needed and how it will change your treatment plan.'
@@ -81,6 +81,8 @@ Ask whether the clinic has reviewed your recent images before recommending anoth
 
 Ask whether the scan will cover only the area needed for treatment or a wider region. The field of view affects the examination, so a patient being assessed for one tooth may need a different scan area from someone receiving a jaw evaluation.
 
+![Small dental imaging sensor centered on a pale tray, a prompt to ask which scan area and settings the clinic will actually use.](/images/guides/dental-xray-sensor.webp)
+
 You can also ask how the clinic manages movement, metal artefacts, and unclear images. Find out what happens if the first scan cannot answer the clinical question and whether a repeat examination would create another charge. Equipment models differ between clinics, so compare the clinic’s operating process, calibration arrangements, and image-quality checks rather than choosing by machine brand alone.
 
 ## Who reviews the images, and when will I receive the report?
@@ -96,6 +98,8 @@ Ask how the clinic handles unexpected findings and whether you can access the or
 ### How should I prepare for a CBCT dental scan?
 
 Ask whether you need to remove glasses, jewellery, or removable dental appliances before the scan. Tell the clinic about pregnancy, recent imaging, medical conditions, and any difficulty standing or remaining still. These details can affect how staff prepare you and whether they need additional instructions.
+
+![Folded protective apron centered on a dental chair, a reminder to ask how the clinic prepares you for a CBCT scan.](/images/guides/dental-lead-apron.webp)
 
 A CBCT scan is generally non-invasive and usually requires you to remain still while the equipment captures images. The exact procedure and appointment process depend on the clinic. Follow the instructions provided rather than assuming preparation is identical everywhere. If you feel anxious, ask what will happen step by step before the scan begins.
 

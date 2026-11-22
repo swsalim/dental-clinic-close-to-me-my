@@ -6,6 +6,8 @@ import { notFound } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 
 import {
+  GUIDE_IMAGE_HEIGHT,
+  GUIDE_IMAGE_WIDTH,
   formatGuideDate,
   getAllGuides,
   getGuide,
@@ -15,6 +17,7 @@ import {
 import { absoluteUrl } from '@/lib/utils';
 
 import { GuideBody } from '@/components/guides/guide-body';
+import { GuideDesktopToc, GuideMobileToc, GuideTocProvider } from '@/components/guides/guide-toc';
 import { MarkdownText } from '@/components/guides/markdown-text';
 import ServerJsonLd from '@/components/structured-data/server-json-ld';
 import Breadcrumb from '@/components/ui/breadcrumb';
@@ -40,7 +43,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 
   const canonical = `/guides/${guide.slug}`;
   const documentTitle = guide.metaTitle ?? guide.title;
-  const ogImage = siteConfig.openGraph.image;
+  const ogImage = guide.image;
 
   return {
     title: guide.metaTitle ? { absolute: guide.metaTitle } : guide.title,
@@ -60,8 +63,8 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
+          width: GUIDE_IMAGE_WIDTH,
+          height: GUIDE_IMAGE_HEIGHT,
           alt: guide.imageAlt,
         },
       ],
@@ -162,6 +165,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         />
       ) : null}
 
+      <GuideTocProvider headings={guide.headings}>
       <article>
         <header className="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
           <Container className="py-10 md:py-14">
@@ -186,15 +190,16 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <Image
                 src={guide.image}
                 alt={guide.imageAlt}
-                width={1200}
-                height={630}
+                width={GUIDE_IMAGE_WIDTH}
+                height={GUIDE_IMAGE_HEIGHT}
                 priority
-                unoptimized
                 className="h-auto w-full rounded-lg border border-gray-200 dark:border-gray-800"
               />
             </div>
           </Container>
         </header>
+
+        <GuideMobileToc />
 
         <Container className="grid min-w-0 gap-10 py-10 lg:grid-cols-[minmax(0,1fr)_16rem] lg:py-14">
           <div className="min-w-0">
@@ -219,19 +224,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
               This page is general information, not medical advice — consult a registered
               practitioner.
             </p>
-
-            <nav aria-label="On this page" className="mt-8">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-gray-500">
-                On this page
-              </h2>
-              <ol className="mt-3 list-decimal space-y-2 pl-5 text-base">
-                {guide.headings.map((heading) => (
-                  <li key={heading.id}>
-                    <a href={`#${heading.id}`}>{heading.text}</a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
 
             <div className="mt-10">
               <GuideBody blocks={guide.blocks} />
@@ -263,8 +255,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <FindAClinic guide={guide} />
           </div>
 
-          <aside className="min-w-0 lg:pt-2">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-gray-500">
+          <aside className="min-w-0 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:self-start lg:overflow-y-auto lg:pb-4">
+            <div className="hidden lg:block">
+              <GuideDesktopToc />
+            </div>
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-gray-500 lg:mt-8">
               Directory
             </p>
             <ul className="mt-3 space-y-2">
@@ -310,6 +305,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </section>
         ) : null}
       </article>
+      </GuideTocProvider>
     </>
   );
 }

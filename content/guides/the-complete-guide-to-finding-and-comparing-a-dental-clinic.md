@@ -4,8 +4,8 @@ description: "How to compare a dental clinic in Malaysia using directory listing
 slug: the-complete-guide-to-finding-and-comparing-a-dental-clinic
 publishedAt: 2026-10-17
 updatedAt: 2026-10-23
-image: /images/guides/finding-a-clinic.svg
-imageAlt: "Illustration of a clinic listing card beside a map pin and a checklist of dental services."
+image: /images/guides/dental-clinic-treatment-room-cover.webp
+imageAlt: "Dental treatment chair and overhead light centered in a bright clinic room, the kind of practice this guide helps you find and compare."
 primaryKeyword: dental clinic
 summary:
   - "Open a state or city page, then compare each clinic profile for address, phone, hours, services, and the dentist names listed."
@@ -61,6 +61,8 @@ The pages below use the service names this site already publishes, including [Ge
 ## What Dental Care Does a Clinic Usually Provide?
 
 Dental care at a clinic is the set of services that clinic has chosen to list. A profile is a description of that practice, and two clinics on the same street can list different services. Read the services block on the profile and treat that list as the menu you can ask about. If a service is missing, ask the clinic whether they offer it or whether they refer patients elsewhere.
+
+![Mouth mirror, dental probe, and cotton rolls centered on a clinic tray, the basic setup for the checkup and cleaning a clinic usually provides.](/images/guides/dental-checkup-instrument-tray.webp)
 
 [General Dentistry](/services/general-dentistry) on this site covers routine checkups, cleaning, fillings, and basic dental care. That is the usual starting point when you want an examination and a plan, and you do not yet know which treatment you need. A first visit often begins with the dentist looking at your teeth and gums, asking what brought you in, and telling you what they can see. You can ask them to write down the findings and the next step.
 
@@ -124,6 +126,8 @@ If a clinic profile lists Dental X-rays and also lists [Endodontics](/services/e
 
 Compare profiles on the same fields. A star rating is one field among several, and it does not describe the treatment you need. Read the profile in this order.
 
+![Two blank clinic profiles with a phone and a dental mirror centered between them, the side-by-side check before you book a clinic.](/images/guides/compare-two-clinic-profiles.webp)
+
 **Place.** Check the area and the street address. A clinic in [George Town](/penang/george-town) is a different trip from a clinic in [Butterworth](/penang/butterworth), even though both sit under [Penang](/penang). The same applies to [Johor Bahru](/johor/johor-bahru) and the rest of [Johor](/johor). Use the map on the profile to see the pin, then decide whether you can reach it at the time of day you plan to go.
 
 **Phone and website.** The profile shows a phone number when the clinic has one on file. Some profiles also show a website. Call the phone number on the profile. Use the website if you want a second source for hours, and still confirm by phone. Listing hours can change.
@@ -154,6 +158,8 @@ Drop any clinic that cannot answer those points. Then book the one that fits the
 ## Check registration, contact details, and what a fee includes
 
 A directory profile is not a registration check. The Oral Health Programme, Ministry of Health Malaysia, states that the functions of the Malaysian Dental Council include registration of dental practitioners and maintenance of the Malaysian Dental Register. Ask the clinic for the full name of the dentist who will see you, then check that name on the Council's register. The programme's [Malaysian Dental Council](https://hq.moh.gov.my/ohp/en/component/content/article/9-malaysian-dental-council?Itemid=101&catid=2) page is the public description used here, and it points readers to the Council's website for further details. A star rating does not confirm registration. The name on a listing does not either.
+
+![Clinic telephone, pen, and a blank quote sheet centered on a wooden desk, the call and written fee to confirm before you agree to treatment.](/images/guides/clinic-phone-written-quote.webp)
 
 Before you send personal or health information, confirm that the phone number, address, and booking route belong to that clinic. Use the details on the live profile, and confirm them when you speak to the clinic. Share only what the clinic needs to arrange the appointment. Do not upload dental records, photographs of your teeth, or a medical history through a form until you know who receives it. This directory does not examine you, and a form is not a consultation.
 

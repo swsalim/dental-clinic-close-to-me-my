@@ -5,8 +5,8 @@ description: "How dental braces elastics add force to a brace, how to wear the p
 slug: braces-elastics
 publishedAt: 2026-10-22
 updatedAt: 2026-10-26
-image: /images/guides/braces-elastics.svg
-imageAlt: "Illustration of an upper tooth and a lower tooth joined by an orthodontic elastic."
+image: /images/guides/braces-elastics-cover.webp
+imageAlt: "Metal bracket centered on a pale tray with coloured rubber bands hooked on it, the bands an orthodontist sets rather than a pattern to invent."
 primaryKeyword: dental braces elastics
 summary:
   - "Dental braces elastics are rubber bands your orthodontist prescribes. They are not the tiny ties that hold a wire in a bracket."
@@ -73,6 +73,8 @@ These bands sit on top of the brace itself. [Braces options compared](/guides/br
 
 Orthodontic elastics, also called braces rubber bands, connect selected brackets, hooks, or other attachment points. The American Association of Orthodontists says they apply extra force in ways braces alone cannot. Hooks on selected upper and lower brackets are the usual attachment points. The pattern is chosen for your bite. A band may run from the upper jaw to the lower jaw, or between teeth in the same jaw.
 
+![Pink rubber band centered between two braces brackets on a tooth model, the extra force an orthodontist prescribes for a specific movement.](/images/guides/interarch-elastic-band.webp)
+
 These bands are different from the tiny elastic ligatures around individual brackets. Ligatures hold the archwire in a conventional bracket. Orthodontic elastics connect the points in your treatment plan. A self-ligating bracket can still need elastics between the jaws when the bite needs that force. The clip does not replace them.
 
 A new patient might be shown a hook on an upper canine bracket and a hook on a lower molar bracket. That is an example of why the pattern has to come from the treating orthodontist. Copying someone else's photo can pull in the wrong direction. The force follows the hooks you were actually given.
@@ -96,6 +98,8 @@ In Malaysia, ask whether the dentist adjusting the brace is registered with the 
 ## How to put them in and take them out
 
 Clean hands and a mirror make the first attempts easier. The American Association of Orthodontists advises washing your hands before putting elastics in or taking them out, removing them for eating or brushing, and putting fresh bands on afterwards. It also says elastics are single-use: if one falls out, use a fresh band rather than rinsing the old one and putting it back.
+
+![Clear case of coloured orthodontic bands centered on linen, the set the clinic gives you to place and remove on its pattern.](/images/guides/orthodontic-elastic-case.webp)
 
 1. Wash and dry your hands.
 2. Use a mirror and find the prescribed upper and lower hooks.

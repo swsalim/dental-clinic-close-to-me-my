@@ -1,4 +1,6 @@
-import type { MarkdownBlock } from '@/lib/guides';
+import Image from 'next/image';
+
+import { GUIDE_IMAGE_HEIGHT, GUIDE_IMAGE_WIDTH, type MarkdownBlock } from '@/lib/guides';
 
 import Prose from '@/components/ui/prose';
 
@@ -10,15 +12,30 @@ export function GuideBody({ blocks }: { blocks: MarkdownBlock[] }) {
       {blocks.map((block, index) => {
         if (block.type === 'h2') {
           return (
-            <h2 key={block.id} id={block.id} className="normal-case">
+            <h2 key={block.id} id={block.id} className="!scroll-mt-36 normal-case lg:!scroll-mt-28">
               {block.text}
             </h2>
           );
         }
 
+        if (block.type === 'img') {
+          return (
+            <Image
+              key={`${block.src}-${index}`}
+              src={block.src}
+              alt={block.alt}
+              width={GUIDE_IMAGE_WIDTH}
+              height={GUIDE_IMAGE_HEIGHT}
+              loading="lazy"
+              decoding="async"
+              className="my-6 h-auto w-full rounded-lg border border-gray-200 dark:border-gray-800"
+            />
+          );
+        }
+
         if (block.type === 'h3') {
           return (
-            <h3 key={block.id} id={block.id} className="normal-case">
+            <h3 key={block.id} id={block.id} className="!scroll-mt-36 normal-case lg:!scroll-mt-28">
               {block.text}
             </h3>
           );

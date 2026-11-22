@@ -5,8 +5,8 @@ description: "Learn what supernumerary teeth are, how they relate to primary tee
 slug: supernumerary-teeth
 publishedAt: 2026-10-26
 updatedAt: 2026-10-26
-image: /images/guides/supernumerary-teeth.svg
-imageAlt: "Illustration of upper front teeth with a smaller extra tooth behind them."
+image: /images/guides/supernumerary-teeth-cover.webp
+imageAlt: "Plaster dental model centered on linen, the full arch a dentist examines when an extra tooth may be present."
 primaryKeyword: supernumerary teeth
 summary:
   - "Supernumerary teeth are extra teeth beyond the usual primary or permanent set. A photograph or a general description cannot confirm one."
@@ -91,6 +91,8 @@ General guides do not replace an examination when a tooth causes pain, bleeding,
 
 Understanding the normal dental set helps explain why an extra tooth can be confusing. Primary teeth are the first set of teeth in childhood. Permanent teeth develop as the mouth changes and usually replace the primary teeth over time. The two sets have different names, shapes, and expected stages of eruption.
 
+![Smaller baby tooth model beside a larger adult tooth model, both centered, the two dentitions an extra tooth can affect.](/images/guides/primary-and-permanent-tooth.webp)
+
 Supernumerary teeth can relate to either set. An additional tooth may appear alongside primary teeth, permanent teeth, or remain within the jaw. A child with a tooth appearing behind another tooth may have several possible explanations, and a parent cannot determine the cause from position alone.
 
 For example, a child in Pahang may lose a primary tooth while another tooth appears in the same area. That observation does not prove the new tooth is supernumerary. The dentist will consider the child's dental history, the tooth's appearance, and its position before explaining what the finding means.
@@ -100,6 +102,8 @@ Bring earlier dental records or details about when teeth appeared and were lost.
 ## Using a teeth eruption chart as a general guide
 
 A teeth eruption chart shows the usual sequence and approximate age ranges associated with primary and permanent teeth. It can help parents understand why a child's tooth development is being discussed, but it cannot identify supernumerary teeth.
+
+![Child-sized plaster dental cast centered on linen, a general picture of a developing arch rather than a diagnosis of an extra tooth.](/images/guides/child-dental-cast.webp)
 
 Charts describe typical patterns. Individual children can develop on different schedules, and a chart cannot show the exact position of an unseen tooth. It also cannot distinguish every unusual tooth shape or confirm whether a visible tooth belongs to the normal set.
 

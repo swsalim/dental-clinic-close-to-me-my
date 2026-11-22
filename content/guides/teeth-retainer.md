@@ -5,8 +5,8 @@ description: "What a teeth retainer does after braces or aligners, how Hawley, c
 slug: teeth-retainer
 publishedAt: 2026-10-26
 updatedAt: 2026-10-26
-image: /images/guides/teeth-retainer.svg
-imageAlt: "Illustration of a clear retainer tray beside teeth with a thin wire bonded behind them."
+image: /images/guides/teeth-retainer-cover.webp
+imageAlt: "Clear plastic teeth retainer centered on a pale bathroom shelf in morning light, the tray worn after braces to hold the result."
 primaryKeyword: teeth retainer
 summary:
   - "A teeth retainer holds teeth in the position they reached after braces or aligners. Your orthodontist chooses the type and the wear schedule."
@@ -84,6 +84,8 @@ A retainer is not a brace, and it is not an aligner tray used to make new moveme
 
 The British Orthodontic Society describes three common types: a vacuum-formed retainer, a bonded retainer, and a Hawley retainer. The American Association of Orthodontists uses the same grouping and calls the clear plastic type an Essix retainer. Your orthodontist will advise which of these, or which combination, fits the result they are trying to keep.
 
+![Thin wire bonded across lower front teeth and centered in the frame, the fixed retainer that stays in place between dental visits.](/images/guides/lingual-retainer-wire.webp)
+
 | Feature | Hawley retainer | Clear retainer (Essix or vacuum-formed) | Fixed or bonded retainer |
 | --- | --- | --- | --- |
 | What it is | A removable acrylic base with a metal wire across the front teeth | A removable clear tray moulded to the teeth | A wire bonded to the inside of the teeth |
@@ -127,6 +129,8 @@ Treat those paragraphs as background for the conversation. Write down the hours,
 ## Cleaning and care
 
 The Malaysian Association of Orthodontists tells removable-retainer wearers to:
+
+![Clear retainer in an open case beside a glass with a fizzing cleaning tablet, both centered, for daily care of a removable retainer.](/images/guides/retainer-cleaning-tablet.webp)
 
 - wear them as the orthodontist instructed;
 - take them out for eating, contact sports, toothbrushing, and swimming, and any time they could be damaged;

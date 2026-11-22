@@ -5,8 +5,8 @@ description: "Sensitive teeth can follow enamel wear, gum recession, decay, or w
 slug: sensitive-teeth
 publishedAt: 2026-10-21
 updatedAt: 2026-10-21
-image: /images/guides/sensitive-teeth.svg
-imageAlt: "Illustration of a tooth beside a glass of cold water and a short list of questions."
+image: /images/guides/sensitive-teeth-cover.webp
+imageAlt: "Tooth model and a clear ice cube centered on linen, the cold contact people describe when they say a tooth is sensitive."
 primaryKeyword: sensitive teeth
 summary:
   - "Sensitive teeth often feel a short, sharp reaction to cold, heat, sweet food, or brushing. The cause still needs a dental examination."
@@ -71,6 +71,8 @@ Ask what they can see: a smooth cupped surface, a notch at the gum line, or a fl
 
 Gums can sit lower on the tooth than they used to, which exposes the root. MouthHealthy notes that dentine may be exposed when gums recede, and that gum disease is one possible cause of sensitivity. Brushing across the gum with a hard brush is another reason clinicians ask about your technique. Recession is not always painful. When the root is bare, cold air and cold water are common triggers.
 
+![Tooth model centered in a pink gum block with more of the tooth showing, the kind of exposed root people notice when gums recede.](/images/guides/exposed-tooth-root-model.webp)
+
 A dentist checks how much root is showing, whether the gum is inflamed, and whether plaque or tartar is sitting on it. Treatment depends on that finding. MouthHealthy says a dentist may suggest a fluoride application, a filling or bonding to cover a worn area, or a gum graft if tissue has been lost from the root. Those are examples of options a clinician might discuss. They are not a menu you can choose from a webpage, and none of them is guaranteed to stop the feeling.
 
 Tell the clinic if your teeth look longer than before, if food packs between them, or if the gums bleed. Bleeding needs an examination. Clinics that list routine care are under [General Dentistry](/services/general-dentistry). If the dentist thinks the gums need specialist care, ask what the referral is for and what happens while you wait.
@@ -86,6 +88,8 @@ If pain is severe and persistent and other care will not settle it, MouthHealthy
 ## Recent whitening
 
 Whitening is a frequent reason people search for sensitive teeth. MouthHealthy says some people who use tooth whiteners get sensitivity because peroxide in the product passes through enamel to the dentine and irritates the tooth. It says this sensitivity is often temporary, and that you can pause and try again later. It also says overuse can damage enamel or gums, so the directions matter, and a dentist should be involved.
+
+![Empty clear whitening tray centered on a bathroom shelf, a recent whitening visit that can leave teeth reacting to cold for a while.](/images/guides/empty-whitening-tray.webp)
 
 Sensitivity after an in-clinic whitening visit, a take-home tray, or a shop-bought strip is a reason to contact the clinic that provided it or your own dentist. Do not add a second product on top. Ask how long they expect the feeling to last, what should prompt a review, and whether your enamel and gums were suitable for whitening in the first place. Whitening does not treat decay or a receding gum. If the tooth was already sensitive, ask for an examination before any bleaching.
 

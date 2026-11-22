@@ -4,8 +4,8 @@ description: "Learn what causes a teeth stain, how to prevent surface discoloura
 slug: teeth-stains
 publishedAt: 2026-10-23
 updatedAt: 2026-10-23
-image: /images/guides/teeth-stains.svg
-imageAlt: "Illustration of a tooth with a mark near the gum line beside a cup."
+image: /images/guides/teeth-stains-cover.webp
+imageAlt: "Cup of black coffee and a tooth shade tab centered on marble, a common drink stain set beside the colour of a natural tooth."
 primaryKeyword: teeth stain
 summary:
   - "A teeth stain is a change in colour you can see. It may sit on the surface or be inside the tooth. Appearance does not show the cause."
@@ -80,6 +80,8 @@ The American Dental Association’s whitening topic says whitening can be effect
 
 Several causes can overlap. People who often drink kopi, teh tarik, or other strongly coloured drinks may notice gradual darkening, particularly where brushing misses the gum line or the spaces between teeth. That is a description of how surface colour collects. It is not a finding about any one person.
 
+![Glass of milky pulled tea centered on a wooden table, one everyday drink that can darken the outer surface of teeth over time.](/images/guides/pulled-tea-glass.webp)
+
 Cleveland Clinic lists smoking and other tobacco use, dental trauma, poor oral hygiene, and certain foods, drinks, and medications among contributors to tooth discolouration. It also says stains cling to dental plaque, so plaque left in place makes discolouration more likely. Its [tooth discolouration page](https://my.clevelandclinic.org/health/symptoms/10958-tooth-discoloration) is general background.
 
 Other everyday reasons people notice a difference:
@@ -118,6 +120,8 @@ Home care is the wrong tool in these situations:
 ## Scaling and whitening are different
 
 Scaling is the professional removal of plaque and hardened tartar. A dentist or other dental professional examines the mouth first and decides what cleaning is suitable. Cleaning may make a surface look better when the colour was coming from deposits. It is not automatically a whitening procedure. It will not necessarily change colour inside a tooth, the shade of a filling, or the colour of a crown.
+
+![Yellowed tooth model beside a bright white tooth model, both centered, showing a colour change that scaling and whitening treat differently.](/images/guides/stained-and-clean-tooth-models.webp)
 
 A person with brown buildup behind the lower front teeth may see a cleaner surface after tartar is removed. A grey area inside one tooth may remain and need its own assessment. Those are examples of why the two findings are not interchangeable. They are not a prediction for your mouth.
 

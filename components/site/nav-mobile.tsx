@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 import { List as Menu, X } from '@phosphor-icons/react/dist/ssr';
 
+import { guideCategories, guideCategoryHref } from '@/lib/guide-categories';
 import { cn } from '@/lib/utils';
 
 import { advertiseNavItem, isNavItemActive, primaryNavItems } from './site-links';
@@ -93,6 +94,21 @@ export default function NavMobile() {
                     ) : null}
                   </span>
                 </Link>
+                {item.href === '/guides' ? (
+                  <ul className="mb-2 ms-12">
+                    {guideCategories.map((category) => (
+                      <li key={category.id}>
+                        <Link
+                          href={guideCategoryHref(category.id)}
+                          onClick={() => setOpen(false)}
+                          prefetch={false}
+                          className="flex min-h-11 items-center text-sm font-medium text-gray-700 hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-gray-300">
+                          {category.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
             );
           })}

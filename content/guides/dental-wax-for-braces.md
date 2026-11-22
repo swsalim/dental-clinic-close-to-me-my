@@ -5,8 +5,8 @@ description: "How dental wax for braces covers a bracket or wire that rubs, how 
 slug: dental-wax-for-braces
 publishedAt: 2026-10-22
 updatedAt: 2026-10-26
-image: /images/guides/dental-wax-for-braces.svg
-imageAlt: "Illustration of a braces bracket covered by a small piece of dental wax."
+image: /images/guides/dental-wax-for-braces-cover.webp
+imageAlt: "Orthodontic wax pressed onto a metal bracket and centered in the frame, a temporary cover for a wire or bracket that is rubbing."
 primaryKeyword: dental wax braces
 summary:
   - "Dental wax covers a bracket or wire that rubs the cheek, lip, or tongue. It does not repair the brace."
@@ -81,6 +81,8 @@ Wax cannot tighten a loose bracket, close a broken wire, or correct an appliance
 
 Wax usually stays put better on a clean, dry bracket than on a wet one. The American Association of Orthodontists describes rolling a small amount between the fingers to soften it, then pressing it onto the bracket or wire.
 
+![Stick of pale orthodontic wax centered on linen, the piece you soften and press over a bracket or wire that is rubbing.](/images/guides/orthodontic-wax-stick.webp)
+
 1. Wash your hands.
 2. Brush or rinse if you can.
 3. Dry the bracket or wire gently with clean tissue or gauze.
@@ -95,6 +97,8 @@ One upper bracket rubbing the inside of the cheek is a typical first-week exampl
 ## Meals, brushing, drinks, and sleep
 
 Wax can shift or fall off during a meal. Read the packet before you eat with it in place. If the packet says to take it out, remove it before the meal and follow the instructions for putting a fresh piece on afterwards. Products differ. Do not assume every wax has the same advice about a piece that is swallowed by accident.
+
+![Glass of water and a bowl of rice centered on a wooden table, the meals and drinks to think about while dental wax is on a bracket.](/images/guides/meal-beside-braces-wax.webp)
 
 Cleaning around the brackets still matters. The American Association of Orthodontists [oral hygiene notes for between visits](https://aaoinfo.org/whats-trending/orthodontic-care-between-visits/) say plaque collects in the extra spaces braces create, and they advise brushing, cleaning hard-to-reach spaces, flossing, and calling the orthodontist when something is loose or broken. That page also suggests keeping wax with you after an adjustment, for a spot that makes the mouth sore. Wax is part of that kit. It is not a substitute for the brushing.
 

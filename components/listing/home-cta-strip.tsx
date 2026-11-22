@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { LISTING_FEE_LABEL } from '@/lib/listing/submission-fee';
 import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '@/components/ui/button';
@@ -25,7 +26,7 @@ export function HomeCtaStrip() {
               buttonVariants({ variant: 'primary', size: 'large' }),
               'inline-flex min-h-11 w-full items-center justify-center sm:w-auto',
             )}>
-            List your clinic for RM99
+            List your clinic for {LISTING_FEE_LABEL}
           </Link>
         </div>
       </Container>
