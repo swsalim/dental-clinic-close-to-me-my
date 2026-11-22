@@ -48,7 +48,7 @@ function listedSentence(stats: HubGlanceStats, placeLabel: string): string {
 
 function sundaySentence(stats: HubGlanceStats): string {
   const verb = stats.sundayOpenCount === 1 ? 'has' : 'have';
-  return `${formatCount(stats.sundayOpenCount)} ${verb} a Sunday opening time stored. Sunday is day 6 in clinic hours (Monday is 0). A clinic is counted only when that opening time is set.`;
+  return `${formatCount(stats.sundayOpenCount)} ${verb} a Sunday opening time stored.`;
 }
 
 function whatsappSentence(stats: HubGlanceStats): string {

@@ -1,5 +1,7 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
+import { MIN_INDEXABLE_AREA_CLINICS } from '../listing/hub-copy';
+
 const PAGE_SIZE = 1000;
 
 type PageResult<T> = {
@@ -232,7 +234,9 @@ export async function getEmptyLocationPaths(): Promise<string[]> {
 
     for (const area of areas) {
       const stateSlug = stateSlugOf(area);
-      if (!stateSlug || signals.areaCount[area.id]) {
+      const clinicCount = signals.areaCount[area.id] ?? 0;
+      // Same cutoff as the area page: under 3 clinics is noindex, so it stays out of the sitemap.
+      if (!stateSlug || clinicCount >= MIN_INDEXABLE_AREA_CLINICS) {
         continue;
       }
       paths.push(`/${stateSlug}/${area.slug}`);

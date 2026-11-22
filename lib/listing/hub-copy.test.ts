@@ -45,6 +45,7 @@ describe('hub copy', () => {
     );
 
     const text = JSON.stringify(copy);
+    assert.doesNotMatch(text, /day 6|Monday is 0/);
     assert.doesNotMatch(text, /public holiday/i);
     assert.doesNotMatch(text, /best|top-rated|trusted|official|government|private|price|RM\d/i);
   });

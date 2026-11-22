@@ -39,9 +39,6 @@ const config = {
       {
         userAgent: '*',
         disallow: [
-          '/*_buildManifest.js',
-          '/*_middlewareManifest.js',
-          '/*_ssgManifest.js',
           '/dashboard',
           '/404',
           '/api',
