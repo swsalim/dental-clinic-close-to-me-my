@@ -4,7 +4,7 @@ metaTitle: "Teeth Retainer After Braces: Types, Wear and Care"
 description: "What a teeth retainer does after braces or aligners, how Hawley, clear and bonded retainers differ, and how to find a Malaysian clinic to make or replace one."
 slug: teeth-retainer
 publishedAt: 2026-10-26
-updatedAt: 2026-10-26
+updatedAt: 2026-11-22
 image: /images/guides/teeth-retainer-cover.webp
 imageAlt: "Clear plastic teeth retainer centered on a pale bathroom shelf in morning light, the tray worn after braces to hold the result."
 primaryKeyword: teeth retainer
@@ -66,7 +66,7 @@ relatedSlugs:
   - dental-wax-for-braces
 ---
 
-A teeth retainer is the appliance that comes after the moving part of treatment. Braces and aligners shift teeth. A retainer is made to hold the position those teeth have reached. Retainers after braces, and retainers after aligners, are part of the same idea: without something to hold them, teeth can move back.
+A teeth retainer is the appliance that comes after the moving part of treatment. Braces and aligners shift teeth. A retainer holds the position those teeth have reached, and the usual advice is to keep wearing it at night for the long term, on the schedule your orthodontist writes down. If only one row of teeth moved, ask whether both the upper and the lower teeth still need a retainer. The bite is two arches. Retainers after braces, and retainers after aligners, are part of the same idea: without something to hold them, teeth can move back.
 
 This page is general information about the types you will hear named, why clinics prescribe them, and what to ask when one is made or replaced in Malaysia. It is not a wear schedule for your mouth. Your orthodontist will advise which retainer you need and when you wear it.
 

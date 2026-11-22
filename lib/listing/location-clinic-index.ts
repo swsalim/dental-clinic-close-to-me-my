@@ -74,9 +74,9 @@ export function isLocationScope(scope: LocationScope): boolean {
   return true;
 }
 
-function hasSundayHours(hours: ClinicRow['hours']): boolean {
+function hasOpenTime(hours: ClinicRow['hours'], day: number): boolean {
   return (hours ?? []).some(
-    (hour) => hour.day_of_week === 6 && (hour.open_time ?? '').trim() !== '',
+    (hour) => hour.day_of_week === day && (hour.open_time ?? '').trim() !== '',
   );
 }
 
@@ -132,7 +132,8 @@ function mapClinic(row: ClinicRow): { clinic: IndexClinic; serviceNames: Record<
       close_time: hour.close_time,
     })),
     openOnPublicHolidays: row.open_on_public_holidays ?? false,
-    hasSundayHours: hasSundayHours(row.hours),
+    hasSundayHours: hasOpenTime(row.hours, 6),
+    hasWeekendHours: hasOpenTime(row.hours, 5) || hasOpenTime(row.hours, 6),
     hasWhatsapp: (row.whatsapp ?? '').trim() !== '',
     serviceSlugs,
     modifiedAt: row.modified_at ?? '',
@@ -206,7 +207,7 @@ async function loadLocationCatalog(scope: LocationScope): Promise<LocationCatalo
 
 function cacheKey(scope: LocationScope): string[] {
   return [
-    'location-clinic-index-v1',
+    'location-clinic-index-v2',
     scope.kind,
     scope.stateSlug,
     scope.kind === 'area' ? scope.areaSlug : '',

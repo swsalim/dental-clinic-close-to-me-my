@@ -1,3 +1,5 @@
+import { getClinicAvailability, matchesHoursFilter } from '@/lib/listing/clinic-availability';
+
 export const LOCATION_RATING_OPTIONS = [
   { value: '4.5', score: 4.5, label: '4.5+' },
   { value: '4', score: 4, label: '4.0+' },
@@ -7,6 +9,7 @@ export const LOCATION_RATING_OPTIONS = [
 
 export type LocationRating = (typeof LOCATION_RATING_OPTIONS)[number]['value'];
 export type LocationSort = 'featured' | 'rating' | 'rating-asc' | 'name' | 'name-desc';
+export type LocationHours = '' | 'open' | 'closed';
 
 export type LocationScope =
   | { kind: 'state'; stateSlug: string }
@@ -14,8 +17,8 @@ export type LocationScope =
 
 export type LocationFilters = {
   q: string;
-  sunday: boolean;
-  whatsapp: boolean;
+  hours: LocationHours;
+  weekends: boolean;
   rating: LocationRating | '';
   services: string[];
   sort: LocationSort;
@@ -32,9 +35,15 @@ export type LocationFacets = {
   total: number;
   sunday: number;
   whatsapp: number;
+  weekends: number;
   ratings: Record<LocationRating, number>;
   averageRating: number | null;
   services: LocationServiceFacet[];
+};
+
+export type LocationAvailabilityCounts = {
+  open: number;
+  closed: number;
 };
 
 export type ListingClinic = {
@@ -71,6 +80,7 @@ export type ListingClinic = {
 
 export type IndexClinic = ListingClinic & {
   hasSundayHours: boolean;
+  hasWeekendHours: boolean;
   hasWhatsapp: boolean;
   serviceSlugs: string[];
   modifiedAt: string;
@@ -78,8 +88,8 @@ export type IndexClinic = ListingClinic & {
 
 export const DEFAULT_LOCATION_FILTERS: LocationFilters = {
   q: '',
-  sunday: false,
-  whatsapp: false,
+  hours: '',
+  weekends: false,
   rating: '',
   services: [],
   sort: 'featured',
@@ -90,6 +100,7 @@ export const EMPTY_LOCATION_FACETS: LocationFacets = {
   total: 0,
   sunday: 0,
   whatsapp: 0,
+  weekends: 0,
   ratings: { '4.5': 0, '4': 0, '3.5': 0, '3': 0 },
   averageRating: null,
   services: [],
@@ -101,8 +112,8 @@ const RATING_VALUES = new Set<string>(LOCATION_RATING_OPTIONS.map((option) => op
 export function hasActiveLocationFilters(filters: LocationFilters): boolean {
   return Boolean(
     filters.q.trim() ||
-      filters.sunday ||
-      filters.whatsapp ||
+      filters.hours ||
+      filters.weekends ||
       filters.rating ||
       filters.services.length > 0 ||
       filters.sort !== 'featured',
@@ -119,11 +130,12 @@ export function parseLocationFilters(params: URLSearchParams): LocationFilters {
     .slice(0, 12);
 
   const page = Number(params.get('page'));
+  const hours = params.get('hours');
 
   return {
     q: (params.get('q') ?? '').trim().slice(0, 80),
-    sunday: params.get('sunday') === '1',
-    whatsapp: params.get('whatsapp') === '1',
+    hours: hours === 'open' || hours === 'closed' ? hours : '',
+    weekends: params.get('weekends') === '1',
     rating: RATING_VALUES.has(rating) ? (rating as LocationRating) : '',
     services: [...new Set(services)],
     sort:
@@ -139,8 +151,8 @@ export function locationFilterSearchParams(filters: LocationFilters): URLSearchP
   const query = filters.q.trim();
 
   if (query) params.set('q', query);
-  if (filters.sunday) params.set('sunday', '1');
-  if (filters.whatsapp) params.set('whatsapp', '1');
+  if (filters.hours) params.set('hours', filters.hours);
+  if (filters.weekends) params.set('weekends', '1');
   if (filters.rating) params.set('rating', filters.rating);
   filters.services.forEach((service) => params.append('service', service));
   if (filters.sort !== 'featured') params.set('sort', filters.sort);
@@ -167,19 +179,34 @@ export function locationListingRequest(
   return `/api/listings/location?${params.toString()}`;
 }
 
+export function clinicOpenOnWeekends(clinic: Pick<IndexClinic, 'hours' | 'hasWeekendHours'>): boolean {
+  if (clinic.hasWeekendHours) return true;
+  return clinic.hours.some(
+    (hour) =>
+      (hour.day_of_week === 5 || hour.day_of_week === 6) && (hour.open_time ?? '').trim() !== '',
+  );
+}
+
 function ratingFloor(rating: LocationRating | ''): number | null {
   if (!rating) return null;
   return Number(rating);
 }
 
-export function filterLocationClinics(clinics: IndexClinic[], filters: LocationFilters): IndexClinic[] {
+export function filterLocationClinics(
+  clinics: IndexClinic[],
+  filters: LocationFilters,
+  now: Date = new Date(),
+): IndexClinic[] {
   const query = filters.q.trim().toLowerCase();
   const minimumRating = ratingFloor(filters.rating);
   const selectedServices = new Set(filters.services);
 
   const matched = clinics.filter((clinic) => {
-    if (filters.sunday && !clinic.hasSundayHours) return false;
-    if (filters.whatsapp && !clinic.hasWhatsapp) return false;
+    if (filters.hours) {
+      const status = getClinicAvailability(clinic.hours, clinic.specialHours, now);
+      if (!matchesHoursFilter(status, filters.hours)) return false;
+    }
+    if (filters.weekends && !clinicOpenOnWeekends(clinic)) return false;
     if (minimumRating != null && (clinic.rating == null || clinic.rating < minimumRating)) {
       return false;
     }
@@ -196,6 +223,22 @@ export function filterLocationClinics(clinics: IndexClinic[], filters: LocationF
 
   matched.sort((left, right) => compareClinics(left, right, filters.sort));
   return matched;
+}
+
+export function countClinicAvailability(
+  clinics: IndexClinic[],
+  now: Date = new Date(),
+): LocationAvailabilityCounts {
+  let open = 0;
+  let closed = 0;
+
+  for (const clinic of clinics) {
+    const status = getClinicAvailability(clinic.hours, clinic.specialHours, now);
+    if (matchesHoursFilter(status, 'open')) open += 1;
+    if (matchesHoursFilter(status, 'closed')) closed += 1;
+  }
+
+  return { open, closed };
 }
 
 function compareName(left: IndexClinic, right: IndexClinic, direction: 1 | -1): number {
@@ -262,11 +305,13 @@ export function buildLocationFacets(
   const serviceCounts = new Map<string, number>();
   let sunday = 0;
   let whatsapp = 0;
+  let weekends = 0;
   let ratingSum = 0;
   let ratingCount = 0;
 
   for (const clinic of clinics) {
     if (clinic.hasSundayHours) sunday += 1;
+    if (clinicOpenOnWeekends(clinic)) weekends += 1;
     if (clinic.hasWhatsapp) whatsapp += 1;
     if (clinic.rating != null && clinic.rating > 0) {
       ratingSum += clinic.rating;
@@ -292,6 +337,7 @@ export function buildLocationFacets(
     total: clinics.length,
     sunday,
     whatsapp,
+    weekends,
     ratings,
     averageRating: ratingCount > 0 ? Math.round((ratingSum / ratingCount) * 10) / 10 : null,
     services,

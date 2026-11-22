@@ -4,7 +4,7 @@ metaTitle: "Sensitive teeth: common causes and when to book"
 description: "Sensitive teeth can follow enamel wear, gum recession, decay, or whitening. What to ask a dentist in Malaysia, and when to book promptly."
 slug: sensitive-teeth
 publishedAt: 2026-10-21
-updatedAt: 2026-10-21
+updatedAt: 2026-11-22
 image: /images/guides/sensitive-teeth-cover.webp
 imageAlt: "Tooth model and a clear ice cube centered on linen, the cold contact people describe when they say a tooth is sensitive."
 primaryKeyword: sensitive teeth
@@ -112,7 +112,13 @@ If you do not understand the finding, ask the dentist to repeat it in plain lang
 
 ## When to book promptly
 
-Arrange a dental visit soon if sensitive teeth is new, getting worse, or limited to one tooth. Book promptly, and tell the clinic it is painful, if:
+Arrange a dental visit soon if sensitive teeth is new, getting worse, or limited to one tooth. A brief zing that fades in a second is different from pain that stays after the cold drink is gone.
+
+| What you notice | What to do |
+| --- | --- |
+| A short zing with cold, on several teeth, that fades at once | Book a routine examination and mention it |
+| Pain that lingers, wakes you, or sits in one tooth | Tell the clinic it is painful and ask for a prompt visit |
+| Swelling that affects breathing or swallowing | Hospital emergency department, or call 999 |
 
 - the pain is strong, lasts after the cold drink is gone, or wakes you at night;
 - you cannot chew on one side;

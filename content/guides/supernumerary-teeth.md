@@ -4,7 +4,7 @@ metaTitle: "Supernumerary Teeth: Meaning and When to See a Dentist"
 description: "Learn what supernumerary teeth are, how they relate to primary teeth and eruption charts, and how to find a registered dentist in Malaysia."
 slug: supernumerary-teeth
 publishedAt: 2026-10-26
-updatedAt: 2026-10-26
+updatedAt: 2026-11-22
 image: /images/guides/supernumerary-teeth-cover.webp
 imageAlt: "Plaster dental model centered on linen, the full arch a dentist examines when an extra tooth may be present."
 primaryKeyword: supernumerary teeth
@@ -130,6 +130,12 @@ A clear list of questions helps you leave the appointment with an accurate recor
 Bring the date you first noticed the tooth, any symptoms, previous dental notes, and a list of relevant questions. A photo can show how the tooth looked on a particular day, but it does not replace an examination.
 
 Ask the clinic to explain the next step in plain language. Do not assume that every extra-looking tooth needs the same response. The dentist's recommendation depends on the individual examination and available clinical information.
+
+| What the dentist finds | What is often discussed |
+| --- | --- |
+| An extra tooth that is not blocking another tooth, with no pain or swelling | Watching it, with a review date written down |
+| An extra tooth that is blocking a permanent tooth, sitting in the wrong place, or causing a cyst or swelling | A referral, imaging, or a plan to remove it |
+| You are matching a photo to an eruption chart | A chart is a general guide. It cannot say whether this tooth is extra |
 
 ## Finding a dentist in Malaysia
 

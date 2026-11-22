@@ -4,7 +4,7 @@ metaTitle: 'Dental Implants vs Restorative Care: How to Compare'
 description: 'Compare dental implant, dental veneer and onlay dental care. Learn which questions to ask about suitability, materials, risks, maintenance and clinic selection.'
 slug: 'dental-implant-vs-restorative-care'
 publishedAt: '2026-10-20'
-updatedAt: '2026-10-20'
+updatedAt: '2026-11-22'
 image: /images/guides/dental-implant-vs-restorative-cover.webp
 imageAlt: "Titanium dental implant beside a ceramic crown, both centered on linen, the two options to compare when a tooth is damaged."
 primaryKeyword: 'dental implant'
@@ -55,7 +55,7 @@ Compare complete written plans rather than isolated terms such as “implant” 
 
 - Do not assume a missing or painful tooth needs an implant without an examination.
 - Do not choose a dental veneer before the dentist checks for decay, gum disease, enamel limitations and bite pressure.
-- Do not accept a quote that lists only an implant fixture without asking about the abutment, crown, imaging, laboratory work and follow-up.
+- Do not accept a quote that lists only an implant fixture without asking about the abutment, crown, imaging, laboratory work and follow-up. Clinic price lists in Malaysia often put the implant body on one line and the crown on another. Ask which line you are reading.
 - Do not compare clinics by review scores alone when the proposed diagnoses and treatment stages differ.
 
 ## Start with the dental problem, not the treatment name

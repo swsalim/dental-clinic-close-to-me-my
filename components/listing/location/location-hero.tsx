@@ -19,14 +19,14 @@ type BreadcrumbItem = {
 };
 
 export type LocationHeroStat = {
-  key: 'clinics' | 'sunday' | 'whatsapp' | 'rating';
+  key: 'clinics' | 'weekends' | 'whatsapp' | 'rating';
   value: string;
   label: string;
 };
 
 const STAT_ICONS = {
   clinics: Tooth,
-  sunday: CalendarBlank,
+  weekends: CalendarBlank,
   whatsapp: WhatsappLogo,
   rating: Star,
 } as const;
@@ -36,12 +36,18 @@ export function locationHeroStats(
   facets: LocationFacets,
   glance: HubGlanceStats,
 ): LocationHeroStat[] {
-  const sunday = facets.total > 0 ? facets.sunday : glance.sundayOpenCount;
   const whatsapp = facets.total > 0 ? facets.whatsapp : glance.whatsappCount;
   const stats: LocationHeroStat[] = [
     { key: 'clinics', value: clinicCount.toLocaleString('en-MY'), label: 'Clinics' },
-    { key: 'sunday', value: sunday.toLocaleString('en-MY'), label: 'Sunday hours' },
   ];
+
+  if (facets.total > 0) {
+    stats.push({
+      key: 'weekends',
+      value: facets.weekends.toLocaleString('en-MY'),
+      label: 'Open on weekends',
+    });
+  }
 
   if (whatsapp > 0) {
     stats.push({
@@ -104,7 +110,7 @@ export function LocationHero({
         </div>
       ) : null}
       <Container className="relative">
-        <div className="flex max-w-xl flex-col gap-4 py-8 md:max-w-2xl md:py-10">
+        <div className="flex max-w-3xl flex-col gap-4 py-8 md:max-w-4xl md:py-10">
           <Breadcrumb items={breadcrumbItems} />
           <div className="flex flex-col gap-2">
             <h1 className="text-balance font-display text-3xl font-black text-gray-950 md:text-4xl dark:text-white">

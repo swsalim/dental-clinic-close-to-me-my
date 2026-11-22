@@ -3,7 +3,7 @@ title: "The Complete Guide to Finding and Comparing a Dental Clinic"
 description: "How to compare a dental clinic in Malaysia using directory listings: services, cleaning, x-rays, calculus treatment, and surgery, then ask the clinic for a written quote."
 slug: the-complete-guide-to-finding-and-comparing-a-dental-clinic
 publishedAt: 2026-10-17
-updatedAt: 2026-10-23
+updatedAt: 2026-11-22
 image: /images/guides/dental-clinic-treatment-room-cover.webp
 imageAlt: "Dental treatment chair and overhead light centered in a bright clinic room, the kind of practice this guide helps you find and compare."
 primaryKeyword: dental clinic
@@ -157,7 +157,9 @@ Drop any clinic that cannot answer those points. Then book the one that fits the
 
 ## Check registration, contact details, and what a fee includes
 
-A directory profile is not a registration check. The Oral Health Programme, Ministry of Health Malaysia, states that the functions of the Malaysian Dental Council include registration of dental practitioners and maintenance of the Malaysian Dental Register. Ask the clinic for the full name of the dentist who will see you, then check that name on the Council's register. The programme's [Malaysian Dental Council](https://hq.moh.gov.my/ohp/en/component/content/article/9-malaysian-dental-council?Itemid=101&catid=2) page is the public description used here, and it points readers to the Council's website for further details. A star rating does not confirm registration. The name on a listing does not either.
+A directory profile is not a registration check. The Oral Health Programme, Ministry of Health Malaysia, states that the functions of the Malaysian Dental Council include registration of dental practitioners and maintenance of the Malaysian Dental Register. Ask the clinic for the full name of the dentist who will see you, then check that name on the Ministry of Health [Malaysian Healthcare Practitioners System](https://mhps.moh.gov.my/). The programme's [Malaysian Dental Council](https://hq.moh.gov.my/ohp/en/component/content/article/9-malaysian-dental-council?Itemid=101&catid=2) page is the public description used here. A star rating does not confirm registration. The name on a listing does not either.
+
+If the treatment is specialised, ask whether that dentist is a registered specialist or a general dentist who offers the service. You can take a written plan to a second clinic before you agree. A second opinion is a normal question, not a refusal of care.
 
 ![Clinic telephone, pen, and a blank quote sheet centered on a wooden desk, the call and written fee to confirm before you agree to treatment.](/images/guides/clinic-phone-written-quote.webp)
 

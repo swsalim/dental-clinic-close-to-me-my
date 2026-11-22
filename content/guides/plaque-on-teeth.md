@@ -4,7 +4,7 @@ metaTitle: "Plaque teeth: how plaque differs from tartar"
 description: "Plaque teeth explained: what plaque is, how tartar and calculus differ, daily removal, and when a dentist may suggest scaling and cleaning."
 slug: plaque-on-teeth
 publishedAt: 2026-10-21
-updatedAt: 2026-10-23
+updatedAt: 2026-11-22
 image: /images/guides/plaque-on-teeth-cover.webp
 imageAlt: "Toothbrush centered against a white tooth model, the daily cleaning that can disturb soft plaque but does not scrape off tartar."
 primaryKeyword: plaque teeth
@@ -66,7 +66,15 @@ Orthodontic brackets, crowded teeth, and a dry mouth can make the film harder to
 
 ## How plaque differs from tartar and calculus
 
-Tartar and calculus are two names for the same hardened deposit. MouthHealthy says plaque that is not removed with thorough daily brushing and cleaning between the teeth can eventually harden into calculus or tartar. Once it hardens, it makes the teeth more difficult to keep clean. A toothbrush and floss are meant for soft plaque. They do not reliably scrape off a hard deposit stuck to the enamel or the root.
+Tartar and calculus are two names for the same hardened deposit. MouthHealthy says plaque that is not removed with thorough daily brushing and cleaning between the teeth can eventually harden into calculus or tartar.
+
+| | Plaque | Tartar, also called calculus |
+| --- | --- | --- |
+| Feel | Soft film | Hard crust |
+| Home cleaning | Brushing and cleaning between the teeth can disturb it | A toothbrush does not reliably scrape it off |
+| Who removes it | You, every day | A dentist or dental hygienist, usually by scaling |
+
+Once it hardens, it makes the teeth more difficult to keep clean. A toothbrush and floss are meant for soft plaque. They do not reliably scrape off a hard deposit stuck to the enamel or the root.
 
 People often notice tartar as a hard, yellow or brown crust at the gum line, or as a rough edge the tongue keeps finding. A stain from tea, coffee, or tobacco can look similar and still be a surface stain rather than calculus. [Teeth stain: causes, prevention and when to see a dentist](/guides/teeth-stains) is about that colour change, including when whitening and a scale and clean are different questions. Only a dental examination can tell a stain and tartar apart. Do not try to chip a hard deposit off with a pin, a scaler bought online, or a fingernail. That can scratch the root or injure the gum.
 

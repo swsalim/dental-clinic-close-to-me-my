@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import {
   LOCATION_RATING_OPTIONS,
+  type LocationAvailabilityCounts,
   type LocationFacets,
   type LocationFilters,
 } from '@/lib/listing/location-filters';
@@ -16,20 +17,22 @@ export function LocationFilterPanel({
   idPrefix,
   facets,
   filters,
+  availability,
   onChange,
   showHeading = true,
 }: {
   idPrefix: string;
   facets: LocationFacets;
   filters: LocationFilters;
+  availability: LocationAvailabilityCounts | null;
   onChange: (next: LocationFilters) => void;
   showHeading?: boolean;
 }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const visibleServices = servicesOpen ? facets.services : facets.services.slice(0, SERVICE_PREVIEW);
   const filtersSelected =
-    filters.sunday ||
-    filters.whatsapp ||
+    Boolean(filters.hours) ||
+    filters.weekends ||
     Boolean(filters.rating) ||
     filters.services.length > 0 ||
     filters.sort !== 'featured';
@@ -59,8 +62,8 @@ export function LocationFilterPanel({
               onClick={() =>
                 onChange({
                   ...filters,
-                  sunday: false,
-                  whatsapp: false,
+                  hours: '',
+                  weekends: false,
                   rating: '',
                   services: [],
                   sort: 'featured',
@@ -80,8 +83,8 @@ export function LocationFilterPanel({
             onClick={() =>
               onChange({
                 ...filters,
-                sunday: false,
-                whatsapp: false,
+                hours: '',
+                weekends: false,
                 rating: '',
                 services: [],
                 sort: 'featured',
@@ -97,31 +100,29 @@ export function LocationFilterPanel({
       <div className="flex flex-col gap-6">
         <fieldset>
           <legend className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-50">
-            Quick filters
+            Hours
           </legend>
           <div className="flex flex-col gap-2.5">
             <FilterCheck
-              id={`${idPrefix}-sunday`}
-              checked={filters.sunday}
-              onChange={() => update({ sunday: !filters.sunday })}
-              label="Sunday hours"
-              count={facets.sunday}
+              id={`${idPrefix}-open`}
+              checked={filters.hours === 'open'}
+              onChange={() => update({ hours: filters.hours === 'open' ? '' : 'open' })}
+              label="Open"
+              count={availability?.open ?? null}
             />
-            {facets.whatsapp > 0 ? (
-              <FilterCheck
-                id={`${idPrefix}-whatsapp`}
-                checked={filters.whatsapp}
-                onChange={() => update({ whatsapp: !filters.whatsapp })}
-                label="Has WhatsApp"
-                count={facets.whatsapp}
-              />
-            ) : null}
             <FilterCheck
-              id={`${idPrefix}-rating-45`}
-              checked={filters.rating === '4.5'}
-              onChange={() => update({ rating: filters.rating === '4.5' ? '' : '4.5' })}
-              label="4.5+ rating"
-              count={facets.ratings['4.5']}
+              id={`${idPrefix}-closed`}
+              checked={filters.hours === 'closed'}
+              onChange={() => update({ hours: filters.hours === 'closed' ? '' : 'closed' })}
+              label="Closed"
+              count={availability?.closed ?? null}
+            />
+            <FilterCheck
+              id={`${idPrefix}-weekends`}
+              checked={filters.weekends}
+              onChange={() => update({ weekends: !filters.weekends })}
+              label="Open on weekends"
+              count={facets.weekends}
             />
           </div>
         </fieldset>
@@ -198,7 +199,7 @@ function FilterCheck({
   checked: boolean;
   onChange: () => void;
   label: string;
-  count: number;
+  count: number | null;
 }) {
   return (
     <label
@@ -213,8 +214,10 @@ function FilterCheck({
         onChange={onChange}
       />
       <span>
-        {label}{' '}
-        <span className="text-gray-500 dark:text-gray-400">({count.toLocaleString('en-MY')})</span>
+        {label}
+        {count == null ? null : (
+          <span className="text-gray-500 dark:text-gray-400"> ({count.toLocaleString('en-MY')})</span>
+        )}
       </span>
     </label>
   );

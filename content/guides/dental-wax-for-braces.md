@@ -4,7 +4,7 @@ metaTitle: "Dental Wax for Braces: Questions New Patients Often Ask"
 description: "How dental wax for braces covers a bracket or wire that rubs, how to apply it, and when to call the orthodontist instead of adding more wax."
 slug: dental-wax-for-braces
 publishedAt: 2026-10-22
-updatedAt: 2026-10-26
+updatedAt: 2026-11-22
 image: /images/guides/dental-wax-for-braces-cover.webp
 imageAlt: "Orthodontic wax pressed onto a metal bracket and centered in the frame, a temporary cover for a wire or bracket that is rubbing."
 primaryKeyword: dental wax braces
@@ -90,7 +90,7 @@ Wax usually stays put better on a clean, dry bracket than on a wet one. The Amer
 5. Warm and soften it between your fingers.
 6. Press it directly over the bracket, wire, or edge that is rubbing.
 
-Cover the point that rubs. A large lump can feel unstable or get in the way of your bite. Wax can loosen while you eat, brush, or talk. Remove and replace it as the label and your orthodontist say.
+Cover the point that rubs. A large lump can feel unstable or get in the way of your bite. Wax can loosen while you eat, brush, or talk. Remove and replace it as the label and your orthodontist say. If the same wire keeps poking through the wax, that is a clinic visit. Adding more wax does not fix a wire that needs to be trimmed.
 
 One upper bracket rubbing the inside of the cheek is a typical first-week example. Wash your hands, dry that bracket, soften a small piece, and press it on. After a meal, look to see whether the wax has moved. Clean the area again and replace the wax only as directed.
 

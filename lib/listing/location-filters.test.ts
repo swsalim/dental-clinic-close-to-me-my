@@ -3,6 +3,7 @@ import { describe, it } from 'node:test';
 
 import {
   buildLocationFacets,
+  countClinicAvailability,
   filterLocationClinics,
   hasActiveLocationFilters,
   locationFilterHref,
@@ -28,8 +29,9 @@ function clinic(overrides: Partial<IndexClinic> = {}): IndexClinic {
     hours: [],
     specialHours: [],
     openOnPublicHolidays: false,
-    hasSundayHours: false,
-    hasWhatsapp: false,
+  hasSundayHours: false,
+  hasWeekendHours: false,
+  hasWhatsapp: false,
     serviceSlugs: [],
     modifiedAt: '2026-01-01T00:00:00.000Z',
     ...overrides,
@@ -40,13 +42,13 @@ describe('location filter query', () => {
   it('round-trips the filters that change the listing', () => {
     const parsed = parseLocationFilters(
       new URLSearchParams(
-        'q=smile&sunday=1&whatsapp=1&rating=4.5&service=braces&service=implants&sort=rating&page=2',
+        'q=smile&hours=open&weekends=1&rating=4.5&service=braces&service=implants&sort=rating&page=2',
       ),
     );
 
     assert.equal(hasActiveLocationFilters(parsed), true);
     assert.equal(locationFilterHref('/selangor', parsed),
-      '/selangor?q=smile&sunday=1&whatsapp=1&rating=4.5&service=braces&service=implants&sort=rating&page=2',
+      '/selangor?q=smile&hours=open&weekends=1&rating=4.5&service=braces&service=implants&sort=rating&page=2',
     );
   });
 
@@ -64,6 +66,7 @@ describe('location clinic filtering', () => {
       name: 'Sunday Smile',
       rating: 4.6,
       hasSundayHours: true,
+      hasWeekendHours: true,
       hasWhatsapp: true,
       serviceSlugs: ['braces'],
       isFeatured: true,
@@ -99,10 +102,10 @@ describe('location clinic filtering', () => {
       );
   });
 
-  it('applies Sunday hours, WhatsApp, rating, and name search together', () => {
+  it('applies weekend hours, rating, and name search together', () => {
     const matched = filterLocationClinics(clinics, {
       ...parseLocationFilters(
-        new URLSearchParams('sunday=1&whatsapp=1&rating=4.5&q=smile&sort=rating'),
+        new URLSearchParams('weekends=1&rating=4.5&q=smile&sort=rating'),
       ),
     });
 
@@ -163,6 +166,7 @@ describe('location clinic filtering', () => {
 
     assert.equal(facets.total, 3);
     assert.equal(facets.sunday, 1);
+    assert.equal(facets.weekends, 1);
     assert.equal(facets.whatsapp, 2);
     assert.equal(facets.ratings['4.5'], 1);
     assert.equal(facets.ratings['4'], 2);
@@ -176,5 +180,50 @@ describe('location clinic filtering', () => {
     assert.equal(page.page, 2);
     assert.equal(page.totalPages, 2);
     assert.equal(page.clinics.length, 1);
+  });
+
+  it('treats closing soon as open and opening soon as closed', () => {
+    const now = new Date('2026-11-22T07:00:00.000Z');
+    const hoursClinics = [
+      clinic({
+        slug: 'open',
+        hours: [{ day_of_week: 6, open_time: '09:00', close_time: '18:00' }],
+      }),
+      clinic({
+        slug: 'closing',
+        hours: [{ day_of_week: 6, open_time: '09:00', close_time: '15:20' }],
+      }),
+      clinic({
+        slug: 'opening',
+        hasWeekendHours: true,
+        hours: [{ day_of_week: 6, open_time: '15:20', close_time: '18:00' }],
+      }),
+      clinic({
+        slug: 'weekday',
+        hasWeekendHours: false,
+        hours: [{ day_of_week: 0, open_time: '09:00', close_time: '18:00' }],
+      }),
+    ];
+
+    const openNow = filterLocationClinics(
+      hoursClinics,
+      parseLocationFilters(new URLSearchParams('hours=open')),
+      now,
+    );
+    const closedNow = filterLocationClinics(
+      hoursClinics,
+      parseLocationFilters(new URLSearchParams('hours=closed&weekends=1')),
+      now,
+    );
+
+    assert.deepEqual(
+      openNow.map((item) => item.slug),
+      ['open', 'closing'],
+    );
+    assert.deepEqual(
+      closedNow.map((item) => item.slug),
+      ['opening'],
+    );
+    assert.deepEqual(countClinicAvailability(hoursClinics, now), { open: 2, closed: 2 });
   });
 });

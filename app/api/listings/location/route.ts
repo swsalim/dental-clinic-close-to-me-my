@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { getLocationCatalog, isLocationScope } from '@/lib/listing/location-clinic-index';
 import {
+  countClinicAvailability,
   filterLocationClinics,
   paginateClinics,
   parseLocationFilters,
@@ -34,9 +35,18 @@ export async function GET(request: Request) {
 
   const limit = Math.min(Math.max(Number(url.searchParams.get('limit')) || 20, 1), 24);
   const filters = parseLocationFilters(url.searchParams);
+  const countsOnly = url.searchParams.get('counts') === '1';
 
   try {
     const catalog = await getLocationCatalog(scope);
+    const availability = countClinicAvailability(catalog.clinics);
+
+    if (countsOnly) {
+      return NextResponse.json(availability, {
+        headers: { 'Cache-Control': 'private, no-store' },
+      });
+    }
+
     const matched = filterLocationClinics(catalog.clinics, filters);
     const page = paginateClinics(matched, filters.page, limit);
 
@@ -46,10 +56,13 @@ export async function GET(request: Request) {
         total: page.total,
         page: page.page,
         totalPages: page.totalPages,
+        availability,
       },
       {
         headers: {
-          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+          'Cache-Control': filters.hours
+            ? 'private, no-store'
+            : 'public, s-maxage=3600, stale-while-revalidate=86400',
         },
       },
     );

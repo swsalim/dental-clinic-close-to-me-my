@@ -4,7 +4,7 @@ metaTitle: "Dental Braces Elastics: What to Know Before Your Appointment"
 description: "How dental braces elastics add force to a brace, how to wear the pattern your orthodontist shows you, and when to call the clinic."
 slug: braces-elastics
 publishedAt: 2026-10-22
-updatedAt: 2026-10-26
+updatedAt: 2026-11-22
 image: /images/guides/braces-elastics-cover.webp
 imageAlt: "Metal bracket centered on a pale tray with coloured rubber bands hooked on it, the bands an orthodontist sets rather than a pattern to invent."
 primaryKeyword: dental braces elastics
@@ -63,7 +63,7 @@ relatedSlugs:
   - conventional-vs-self-ligating-braces
 ---
 
-A small rubber band is easy to mix up once you are home, standing at a mirror, trying to remember which upper hook meets which lower hook. The wrong pattern, an extra band, or a damaged bracket is a reason to stop and check, not a reason to improvise. Dental braces elastics are prescribed bands that apply a specific force. Leave the appointment knowing where they attach, when you wear them, when you take them out, and what to do if one snaps.
+A small rubber band is easy to mix up once you are home, standing at a mirror, trying to remember which upper hook meets which lower hook. Wear only the pattern the orthodontist showed you. Do not add a second band to "speed it up." The [American Association of Orthodontists](https://aaoinfo.org/treatments/orthodontic-elastics/) says extra elastics can harm teeth and jaws or slow movement. Tell the clinic if you have a latex allergy before they hand you the bands. The wrong pattern, an extra band, or a damaged bracket is a reason to stop and call, not a reason to improvise. Dental braces elastics are prescribed bands that apply a specific force. Leave the appointment knowing where they attach, when you wear them, when you take them out, and what to do if one snaps.
 
 Your orthodontist chooses the strength, the attachment pattern, the wear schedule, and how often you replace each band. Ask for a demonstration, write down the exact hooks, and use only the elastics the clinic supplies or approves. A diagram on the internet is not your prescription.
 

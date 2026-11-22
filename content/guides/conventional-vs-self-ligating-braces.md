@@ -4,7 +4,7 @@ metaTitle: "Conventional braces vs self ligating: what to ask"
 description: "Compare conventional braces vs self ligating: elastic ties or a clip, visits, cleaning, appearance, and cost factors. Questions for an orthodontist."
 slug: conventional-vs-self-ligating-braces
 publishedAt: 2026-10-21
-updatedAt: 2026-10-26
+updatedAt: 2026-11-22
 image: /images/guides/conventional-vs-self-ligating-braces-cover.webp
 imageAlt: "Two orthodontic brackets centered side by side, one held with a pink elastic tie and one with a metal clip."
 primaryKeyword: conventional braces vs self ligating
@@ -54,7 +54,7 @@ relatedSlugs:
   - the-complete-guide-to-finding-and-comparing-a-dental-clinic
 ---
 
-Conventional braces vs self ligating is a comparison of how a fixed brace holds the archwire, not a ranking of which smile is better. Both are fixed braces. A registered dentist or orthodontic provider has to examine the bite before either one is a sensible choice. This page goes deeper on that one difference. For metal, ceramic, lingual, and aligner options side by side, start with [Braces options compared](/guides/braces-options-compared).
+Conventional braces vs self ligating is a comparison of how a fixed brace holds the archwire, not a ranking of which smile is better. The [British Orthodontic Society](https://bos.org.uk/conventional/) says a clip can make a wire change quicker, and that there is no evidence it produces a better result than elastic ties. Both are fixed braces. A registered dentist or orthodontic provider has to examine the bite before either one is a sensible choice. This page goes deeper on that one difference. For metal, ceramic, lingual, and aligner options side by side, start with [Braces options compared](/guides/braces-options-compared).
 
 ## How the archwire is held
 
@@ -130,5 +130,6 @@ To find a dentist or orthodontic clinic, open [browse](/browse) and pick a state
 
 ## References
 
+- [Fixed braces](https://bos.org.uk/conventional/), British Orthodontic Society
 - [How Do Braces Work?](https://aaoinfo.org/treatments/braces/)
 - [How Much Do Braces Cost? Factors, Insurance, & Savings](https://aaoinfo.org/whats-trending/how-much-do-braces-cost/)

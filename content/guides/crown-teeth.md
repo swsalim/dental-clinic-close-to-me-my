@@ -4,7 +4,7 @@ metaTitle: "Crown Teeth in Malaysia: Find Clinics and Book"
 description: "Compare Malaysian dental clinics for crown teeth by location, services, reviews and contact details, then arrange a consultation with a registered dentist."
 slug: crown-teeth
 publishedAt: 2026-10-23
-updatedAt: 2026-10-23
+updatedAt: 2026-11-22
 image: /images/guides/crown-teeth-cover.webp
 imageAlt: "Ceramic dental crown held in tweezers and centered against linen, the cap a dentist places over a tooth that needs full coverage."
 primaryKeyword: crown teeth
@@ -77,7 +77,13 @@ Malaysia’s Oral Health Programme lists crown and bridge work among restorative
 
 ## How a crown differs from a filling or an implant
 
-A filling and a crown are both ways to restore a damaged tooth, and they are not the same restoration. Leeds describes a crown as a cover for a tooth that has been weakened by a large filling or decay. Whether a filling is enough, or a crown is being discussed because so much of the tooth is already gone, is a question for the dentist who can see it.
+A filling and a crown are both ways to restore a damaged tooth, and they are not the same restoration. A crown covers a tooth you still have. An implant replaces a missing tooth, and the visible crown on an implant is a separate piece. Leeds describes a crown as a cover for a tooth that has been weakened by a large filling or decay. Whether a filling is enough, or a crown is being discussed because so much of the tooth is already gone, is a question for the dentist who can see it.
+
+| Problem | What people often compare | What to ask the clinic to write down |
+| --- | --- | --- |
+| A damaged tooth you still have | Filling or a crown | Which tooth, how much structure remains, and whether the fee is for a filling or a crown |
+| A missing tooth | Implant, bridge, or denture | Whether the quoted implant fee includes the crown, or only the implant body |
+| A front tooth that looks wrong but is still strong | Veneer or a crown | Whether the tooth needs strength, or only a change to the visible surface |
 
 Replacing a missing tooth is a different question from covering a tooth you still have. [Dental implants](/services/dental-implants) on this directory are listed as their own service. MouthHealthy, from the American Dental Association, also says a crown can be used to cover a dental implant, and to cover a tooth that is discoloured or badly shaped, protect a weak tooth, or restore a broken one. Those are examples of why a dentist might discuss a crown, not a menu you can choose from a search result. The [implant and restorative care](/guides/dental-implant-vs-restorative-care) guide sets out how to compare a written plan for a missing tooth with a plan that repairs a tooth.
 

@@ -4,9 +4,14 @@ import { ArrowRight } from '@phosphor-icons/react/dist/ssr';
 
 import { buildHubCopy, type HubGlanceStats, type HubLink } from '@/lib/listing/hub-copy';
 
+import { GuideCoverCard } from '@/components/guides/guide-cover-card';
+
 type GuideLink = {
   slug: string;
   title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
   readingTimeMinutes: number;
 };
 
@@ -97,19 +102,17 @@ export function LocationSeo({
               <ArrowRight className="size-3.5" aria-hidden="true" />
             </Link>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-2">
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {guides.map((guide) => (
-              <li key={guide.slug}>
-                <Link
+              <li key={guide.slug} className="min-w-0">
+                <GuideCoverCard
                   href={`/guides/${guide.slug}`}
-                  prefetch={false}
-                  className="block rounded-xl border border-gray-200 px-4 py-3 no-underline hover:border-blue-300 dark:border-gray-700"
-                >
-                  <span className="block text-sm font-semibold text-gray-950 dark:text-white">
-                    {guide.title}
-                  </span>
-                  <span className="mt-1 block text-xs text-gray-500">{guide.readingTimeMinutes} min read</span>
-                </Link>
+                  image={guide.image}
+                  imageAlt={guide.imageAlt}
+                  title={guide.title}
+                  description={guide.description}
+                  meta={`${guide.readingTimeMinutes} min read`}
+                />
               </li>
             ))}
           </ul>

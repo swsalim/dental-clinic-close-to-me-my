@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 import { guideCategoryHref } from '@/lib/guide-categories';
-import { GUIDE_IMAGE_HEIGHT, GUIDE_IMAGE_WIDTH, getGuideCategories } from '@/lib/guides';
+import { getGuideCategories } from '@/lib/guides';
 
+import { GuideCoverCard } from '@/components/guides/guide-cover-card';
 import Container from '@/components/ui/container';
 
 export function HomeGuides() {
@@ -41,30 +41,14 @@ export function HomeGuides() {
             if (!cover) return null;
 
             return (
-              <li key={category.id}>
-                <Link
+              <li key={category.id} className="min-w-0">
+                <GuideCoverCard
                   href={guideCategoryHref(category.id)}
-                  prefetch={false}
-                  className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white hover:border-blue-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:border-gray-800 dark:bg-gray-950 dark:hover:border-blue-700 dark:focus-visible:ring-offset-gray-900">
-                  <Image
-                    src={cover.image}
-                    alt=""
-                    width={GUIDE_IMAGE_WIDTH}
-                    height={GUIDE_IMAGE_HEIGHT}
-                    className="aspect-[16/9] w-full object-cover"
-                  />
-                  <span className="flex flex-1 flex-col p-4">
-                    <span className="font-display text-lg font-bold text-gray-900 dark:text-gray-50">
-                      {category.title}
-                    </span>
-                    <span className="mt-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                      {category.description}
-                    </span>
-                    <span className="mt-3 text-sm font-semibold text-blue-700 dark:text-blue-300">
-                      {guides.length} guides
-                    </span>
-                  </span>
-                </Link>
+                  image={cover.image}
+                  title={category.title}
+                  description={category.description}
+                  meta={`${guides.length} guides`}
+                />
               </li>
             );
           })}

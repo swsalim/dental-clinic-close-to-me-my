@@ -4,7 +4,7 @@ metaTitle: 'CBCT Dental Scans: Questions to Ask Before Booking'
 description: 'Compare CBCT dental clinics with questions about clinical need, radiation, scan settings, reports, records, preparation, and the full fee.'
 slug: 'cbct-dental-scan-questions'
 publishedAt: '2026-10-20'
-updatedAt: '2026-10-20'
+updatedAt: '2026-11-22'
 image: /images/guides/cbct-dental-scan-cover.webp
 imageAlt: "Empty dental CBCT scanner with the circular gantry centered in a bright clinic room, the machine to ask about before a scan is booked."
 primaryKeyword: 'cbct dental'
@@ -42,7 +42,7 @@ relatedSlugs:
 - Confirm who reviews the images, whether you receive a written report, and how unexpected findings are explained.
 - Compare the full fee, image access, reporting, consultation, and repeat-scan policy before booking.
 
-A CBCT dental scan can give a dentist a three-dimensional view of the teeth, jaw, and surrounding structures. It still isn’t automatically the right test for every patient. Before choosing a listed clinic in Malaysia, ask the same practical questions at each clinic so you can compare the clinical reason, imaging process, records, and fee clearly. The [complete guide to finding and comparing a dental clinic](/guides/the-complete-guide-to-finding-and-comparing-a-dental-clinic) shows how to read a listing before you book.
+A CBCT dental scan can give a dentist a three-dimensional view of the teeth, jaw, and surrounding structures. The [U.S. Food and Drug Administration](https://www.fda.gov/radiation-emitting-products/medical-x-ray-imaging/dental-cone-beam-computed-tomography) says the scan should be used when a conventional dental X-ray cannot answer the question. A CBCT uses more radiation than a small dental X-ray and less than a medical CT scan, and children need a tighter reason for the extra dose. It still isn’t automatically the right test for every patient. Before choosing a listed clinic in Malaysia, ask the same practical questions at each clinic so you can compare the clinical reason, imaging process, records, and fee clearly. The [complete guide to finding and comparing a dental clinic](/guides/the-complete-guide-to-finding-and-comparing-a-dental-clinic) shows how to read a listing before you book.
 
 ## CBCT dental scan questions to ask before you book
 

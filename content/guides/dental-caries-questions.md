@@ -4,7 +4,7 @@ metaTitle: 'Caries dental care: questions to ask before choosing'
 description: 'Looking for caries dental care in Malaysia? Compare clinics, understand cavity checks and treatment choices, and prepare questions before booking care.'
 slug: 'dental-caries-questions'
 publishedAt: '2026-10-20'
-updatedAt: '2026-10-20'
+updatedAt: '2026-11-22'
 image: /images/guides/dental-caries-questions-cover.webp
 imageAlt: "Single molar model centered on linen, a plain starting point for questions about tooth decay before any treatment is booked."
 primaryKeyword: 'caries dental'
@@ -51,7 +51,14 @@ relatedSlugs:
 - Dental caries means tooth decay caused by acids produced when mouth bacteria act on sugars.
 - Ask the dentist to explain the diagnosis, stage of decay, treatment choices, risks, and expected follow-up.
 - Compare clinics using qualifications, communication, accessibility, written estimates, and emergency arrangements.
-- Swelling, fever, pus, difficulty swallowing, or difficulty breathing need prompt dental attention.
+- Swelling with difficulty swallowing or difficulty breathing needs a hospital emergency department or a 999 call, not another directory search.
+- Early decay and a cavity that already needs a filling are different stages. Ask which one the dentist is describing.
+
+| Stage the dentist describes | What is often discussed | What it is not |
+| --- | --- | --- |
+| Very early decay, enamel only | Fluoride, cleaning, and a review | A promise that a home remedy will reverse it |
+| A cavity | A filling, and sometimes a crown if a lot of tooth is gone | A reason to pick the cheapest clinic from a listing |
+| Pain, swelling, or a bad taste | An urgent dental visit | A reason to wait for a routine checkup |
 
 Caries dental care starts with confirming the diagnosis and understanding the treatment choices. Dental caries, also called tooth decay or cavities, can begin quietly, so a dental examination matters even when discomfort seems minor. Before you book a clinic in Malaysia, use the questions below to compare how clearly each clinic explains its findings and costs. The [complete guide to finding and comparing a dental clinic](/guides/the-complete-guide-to-finding-and-comparing-a-dental-clinic) walks through how to compare a listing before you call.
 

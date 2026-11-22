@@ -3,7 +3,7 @@ title: "Teeth Stain: Causes, Prevention and When to See a Dentist"
 description: "Learn what causes a teeth stain, how to prevent surface discolouration, when scaling may help and how to find a dental clinic in Malaysia."
 slug: teeth-stains
 publishedAt: 2026-10-23
-updatedAt: 2026-10-23
+updatedAt: 2026-11-22
 image: /images/guides/teeth-stains-cover.webp
 imageAlt: "Cup of black coffee and a tooth shade tab centered on marble, a common drink stain set beside the colour of a natural tooth."
 primaryKeyword: teeth stain
@@ -70,7 +70,15 @@ This guide explains, in general terms, how a teeth stain differs from plaque and
 
 ## What a teeth stain is
 
-A teeth stain is a visible change in tooth colour. It may look yellow, brown, grey, white, or darker than the tooth beside it. Colour on the outer surface often relates to food, drinks, tobacco, or plaque. Colour from inside the tooth is a different finding and needs a professional assessment.
+A teeth stain is a visible change in tooth colour. Surface colour and colour from inside the tooth are different findings.
+
+| Kind of colour change | Where it sits | What usually changes it |
+| --- | --- | --- |
+| Extrinsic | On the enamel, often from coffee, tea, tobacco, or plaque | Brushing, cleaning between the teeth, and a professional clean |
+| Intrinsic | Inside the tooth, in enamel or dentin | A dentist has to find the cause. Whitening does not fix a dead nerve, a filling, or a crown |
+| One tooth only | Often that tooth, not the whole smile | Book an examination rather than starting a whitening product |
+
+It may look yellow, brown, grey, white, or darker than the tooth beside it. Colour on the outer surface often relates to food, drinks, tobacco, or plaque. Colour from inside the tooth is a different finding and needs a professional assessment.
 
 Plaque is a soft film. Tartar is plaque that has hardened. Tartar can look yellow or brown near the gum line, and it is a deposit stuck to the tooth, not a simple colour change. A toothbrush does not reliably scrape it off. [Plaque on teeth: how it differs from tartar](/guides/plaque-on-teeth) sets out that difference, including why a tea or coffee stain can look like calculus when it is not. Only an examination can tell them apart.
 

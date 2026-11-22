@@ -5,13 +5,14 @@ import { type ReactNode, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-import { SlidersHorizontal, Star } from '@phosphor-icons/react';
+import { SlidersHorizontal } from '@phosphor-icons/react';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 
 import {
   hasActiveLocationFilters,
   type ListingClinic,
   listingResultRange,
+  type LocationAvailabilityCounts,
   type LocationFacets,
   locationFilterHref,
   type LocationFilters,
@@ -83,6 +84,7 @@ export function LocationBrowser({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [availability, setAvailability] = useState<LocationAvailabilityCounts | null>(null);
   const stateSlug = scope.kind === 'state' ? scope.stateSlug : scope.stateSlug;
   const areaSlug = scope.kind === 'area' ? scope.areaSlug : '';
 
@@ -118,6 +120,30 @@ export function LocationBrowser({
     return () => controller.abort();
   }, [areaSlug, limit, scope, search, stateSlug]);
 
+  useEffect(() => {
+    const countParams = new URLSearchParams({
+      kind: scope.kind,
+      state: stateSlug,
+      counts: '1',
+    });
+    if (areaSlug) countParams.set('area', areaSlug);
+
+    const controller = new AbortController();
+    fetch(`/api/listings/location?${countParams.toString()}`, { signal: controller.signal })
+      .then(async (response) => {
+        if (!response.ok) throw new Error('counts failed');
+        return (await response.json()) as LocationAvailabilityCounts;
+      })
+      .then((counts) => {
+        if (Number.isFinite(counts.open) && Number.isFinite(counts.closed)) setAvailability(counts);
+      })
+      .catch((fetchError: unknown) => {
+        if (fetchError instanceof DOMException && fetchError.name === 'AbortError') return;
+      });
+
+    return () => controller.abort();
+  }, [areaSlug, scope.kind, stateSlug]);
+
   const replaceFilters = (next: LocationFilters) => {
     router.replace(locationFilterHref(basePath, next), { scroll: false });
   };
@@ -129,8 +155,8 @@ export function LocationBrowser({
   const range = listingResultRange(shownPage, limit, shownTotal);
   const waiting = active && loading && !filtered;
   const chipCount =
-    Number(filters.sunday) +
-    Number(filters.whatsapp) +
+    Number(Boolean(filters.hours)) +
+    Number(filters.weekends) +
     Number(Boolean(filters.rating)) +
     filters.services.length;
 
@@ -142,6 +168,7 @@ export function LocationBrowser({
             idPrefix="desktop"
             facets={facets}
             filters={filters}
+            availability={availability}
             onChange={replaceFilters}
           />
         </div>
@@ -153,28 +180,27 @@ export function LocationBrowser({
         </h2>
         <div className="scrollbar-none mb-4 flex gap-2 overflow-x-auto pb-1 lg:hidden [&::-webkit-scrollbar]:hidden">
           <FilterChip
-            pressed={filters.sunday}
-            onClick={() => replaceFilters({ ...filters, sunday: !filters.sunday, page: 1 })}>
-            Sunday hours ({facets.sunday.toLocaleString('en-MY')})
+            pressed={filters.hours === 'open'}
+            onClick={() =>
+              replaceFilters({ ...filters, hours: filters.hours === 'open' ? '' : 'open', page: 1 })
+            }>
+            Open{availability ? ` (${availability.open.toLocaleString('en-MY')})` : ''}
           </FilterChip>
-          {facets.whatsapp > 0 ? (
-            <FilterChip
-              pressed={filters.whatsapp}
-              onClick={() => replaceFilters({ ...filters, whatsapp: !filters.whatsapp, page: 1 })}>
-              WhatsApp ({facets.whatsapp.toLocaleString('en-MY')})
-            </FilterChip>
-          ) : null}
           <FilterChip
-            pressed={filters.rating === '4.5'}
+            pressed={filters.hours === 'closed'}
             onClick={() =>
               replaceFilters({
                 ...filters,
-                rating: filters.rating === '4.5' ? '' : '4.5',
+                hours: filters.hours === 'closed' ? '' : 'closed',
                 page: 1,
               })
             }>
-            <Star weight="fill" className="size-3.5 text-amber-400" aria-hidden="true" />
-            4.5+
+            Closed{availability ? ` (${availability.closed.toLocaleString('en-MY')})` : ''}
+          </FilterChip>
+          <FilterChip
+            pressed={filters.weekends}
+            onClick={() => replaceFilters({ ...filters, weekends: !filters.weekends, page: 1 })}>
+            Open on weekends ({facets.weekends.toLocaleString('en-MY')})
           </FilterChip>
           <button
             type="button"
@@ -291,6 +317,7 @@ export function LocationBrowser({
             idPrefix="mobile"
             facets={facets}
             filters={filters}
+            availability={availability}
             onChange={replaceFilters}
             showHeading={false}
           />

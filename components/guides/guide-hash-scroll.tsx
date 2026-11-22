@@ -24,7 +24,7 @@ export function GuideHashScroll() {
       }
 
       const anchor = (event.target as Element | null)?.closest?.('a[href]');
-      if (!anchor) return;
+      if (!(anchor instanceof HTMLAnchorElement)) return;
 
       const url = new URL(anchor.href, window.location.href);
       if (url.origin !== window.location.origin || url.pathname !== '/guides' || !url.hash) {

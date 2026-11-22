@@ -16,6 +16,7 @@ import {
 } from '@/lib/guides';
 import { absoluteUrl } from '@/lib/utils';
 
+import { GuideCoverCard } from '@/components/guides/guide-cover-card';
 import { GuideBody } from '@/components/guides/guide-body';
 import { GuideDesktopToc, GuideMobileToc, GuideTocProvider } from '@/components/guides/guide-toc';
 import { MarkdownText } from '@/components/guides/markdown-text';
@@ -280,24 +281,17 @@ export default async function GuidePage({ params }: GuidePageProps) {
               <h2 className="font-display text-2xl font-bold text-gray-900 dark:text-gray-50">
                 Related guides
               </h2>
-              <ul className="mt-6 grid gap-6 md:grid-cols-2">
+              <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {related.map((item) => (
                   <li key={item.slug} className="min-w-0">
-                    <Link
+                    <GuideCoverCard
                       href={`/guides/${item.slug}`}
-                      prefetch={false}
-                      className="block hover:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-                    >
-                      <h3 className="font-display text-lg font-bold text-gray-900 dark:text-gray-50">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                        {item.description}
-                      </p>
-                      <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                        {item.readingTimeMinutes} min read
-                      </p>
-                    </Link>
+                      image={item.image}
+                      imageAlt={item.imageAlt}
+                      title={item.title}
+                      description={item.description}
+                      meta={`${item.readingTimeMinutes} min read`}
+                    />
                   </li>
                 ))}
               </ul>
